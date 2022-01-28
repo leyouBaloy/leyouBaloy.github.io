@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>AutoReport - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="AutoReport" />
+<meta property="og:description" content="疫情防控通自动填报教程 前言 “天下苦疫情防控通久矣！”作为UPC学子，每天都要做一件“无聊”的事情——填报疫情防控通。如果哪天忘了填报，就会被" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/autoreport/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-04-05T13:18:35+00:00" />
+<meta property="article:modified_time" content="2021-04-05T13:18:35+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AutoReport"/>
+<meta name="twitter:description" content="疫情防控通自动填报教程 前言 “天下苦疫情防控通久矣！”作为UPC学子，每天都要做一件“无聊”的事情——填报疫情防控通。如果哪天忘了填报，就会被"/>
+<meta name="application-name" content="孙百乐的编程学习">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/autoreport/" /><link rel="prev" href="http://example.org/posts/matplotlib%E4%BD%9C%E7%83%AD%E6%9C%BA%E6%95%88%E7%8E%87%E9%9A%8F%E8%B4%9F%E8%BD%BD%E5%A4%A7%E5%B0%8F%E5%8F%98%E5%8C%96%E6%9B%B2%E7%BA%BF%E5%9B%BE/" /><link rel="next" href="http://example.org/posts/%E8%8F%8A%E6%AC%A1%E9%83%8E%E7%9A%84%E5%A4%8F%E5%A4%A9%E8%A7%82%E5%90%8E%E6%84%9F/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "AutoReport",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/autoreport\/"
+        },"genre": "posts","wordcount":  1901 ,
+        "url": "http:\/\/example.org\/posts\/autoreport\/","datePublished": "2021-04-05T13:18:35+00:00","dateModified": "2021-04-05T13:18:35+00:00","publisher": {
+            "@type": "Organization",
+            "name": "孙百乐"},"author": {
+                "@type": "Person",
+                "name": "孙百乐"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB"> 技能分享 </a><a class="menu-item" href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95"> 书影记录 </a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0"> 随笔杂记 </a><a class="menu-item" href="/categories/"> 文章分类 </a><a class="menu-item" href="/about/"> 关于我 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB" title="">技能分享</a><a class="menu-item" href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95" title="">书影记录</a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0" title="">随笔杂记</a><a class="menu-item" href="/categories/" title="">文章分类</a><a class="menu-item" href="/about/" title="">关于我</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">AutoReport</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-05">2021-04-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1901 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/autoreport/" class="leancloud_visitors" data-flag-title="AutoReport">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#原理简介">原理简介</a></li>
+        <li><a href="#下载程序并进行配置">下载程序并进行配置</a></li>
+        <li><a href="#上传到腾讯云函数并设置触发器">上传到腾讯云函数并设置触发器</a></li>
+        <li><a href="#tips">Tips</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>疫情防控通自动填报教程</p>
+<h3 id="前言">前言</h3>
+<p>“天下苦疫情防控通久矣！”作为UPC学子，每天都要做一件“无聊”的事情——填报疫情防控通。如果哪天忘了填报，就会被导员无情通报批评。</p>
+<p>为什么不做一个自动填报的工具呢？</p>
+<p>毕竟 “有需求就有市场”，有了自动填报疫情防控通的需求，当然就有大佬基于计算机知识做出了这样的工具。切实解决了同学们痛点需求，就其实用性来说，应当得到推广。但考虑到非计算机专业的学生使用起来有一定的门槛，于是本人写下这篇详细教程来教大家使用这个程序。</p>
+<p>首先感谢作者：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image.png" /></p>
+<p>作者</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-1.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-1.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-1.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-1.png" /></p>
+<p>作者的免责声明</p>
+<h3 id="原理简介">原理简介</h3>
+<p>我们在微信里打开“疫情防控通”时，实际上是打开了一个网页（此时的微信只是相当于一个浏览器），用其它浏览器一样可以访问。该网页的地址可以通过抓包获得，网址如下：</p>
+<p><a href="https://app.upc.edu.cn/ncov/wap/default/index" target="_blank" rel="noopener noreffer">https://app.upc.edu.cn/ncov/wap/default/index</a></p>
+<p>打开后填入数字石大的账号和密码就可以进入如下页面：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-2-1-1024x895.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-2-1-1024x895.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-2-1-1024x895.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-2-1-1024x895.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-2-1-1024x895.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-2-1-1024x895.png" /></p>
+<p>那么，我们就可以跳过微信，直接通过编写程序打开这个页面，登录完成后通过代码实现自动化操作，进行填报。</p>
+<p>大佬已经编写好这样的程序了，使用的语言是js，每次执行这个程序，就可以完成自动填报。那么，如何让这个程序每天自己自动执行一次呢？</p>
+<p>大佬提出了解决方案，借助外界工具“腾讯云函数”来实现这个程序的每天定时执行。腾讯云函数服务就相当于你把你的程序放在了一台24小时不关机的电脑上，这台电脑位于“云端”，你看不见也摸不着，只能通过远程访问。之后你在这台电脑上设定一个“触发器”，让它在指定的时间周期触发这个程序运行。从此以后，你将不再需要手动进行任何操作，这台云端上的电脑，会坚持不懈地，准时无误地完成你让它执行的任务。而且，目前“腾讯云函数”功能是免费的哦~当然，它和普通电脑还是有很大差别的，你不能把它当成一台真正的电脑，但是完成咱们的疫情防控通自动填报任务还是绰绰有余的。</p>
+<h3 id="下载程序并进行配置">下载程序并进行配置</h3>
+<p>下面进入教程环节：</p>
+<p>首先打开github上的项目地址：</p>
+<p><a href="https://github.com/tienskowl/AutoReport" target="_blank" rel="noopener noreffer">https://github.com/tienskowl/AutoReport</a></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-3-1024x446.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-3-1024x446.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-3-1024x446.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-3-1024x446.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-3-1024x446.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-3-1024x446.png" /></p>
+<p>点击download ZIP 下载压缩文件，然后解压（不会吧不会吧，不会真有人连解压都不会吧?(阴阳怪气)）</p>
+<p>解压完的样子：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-6.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-6.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-6.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-6.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-6.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-6.png" /></p>
+<p>点进去之后有个index.js文件，这个文件需要安装Nodejs环境才可以执行，我们不需要在自己的电脑上执行这个文件，只要修改其中的代码就可以。所以点击右键，选择打开方式，用记事本打开就可以。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-7.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-7.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-7.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-7.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-7.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-7.png" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-8-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-8-1.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-8-1.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-8-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-8-1.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-8-1.png" /></p>
+<p>然后你就可以看到具体的代码内容啦，看不懂不要紧，我们只要修改“学号”、“密码”。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-9-944x1024.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-9-944x1024.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-9-944x1024.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-9-944x1024.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-9-944x1024.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-9-944x1024.png" /></p>
+<p>将“学号”、“密码”替换成你数字石大的学号和密码。</p>
+<p>这里有几个问题，你可能会问到：</p>
+<ul>
+<li>问：这个程序会不会有病毒，作者会不会窃取我的数字石大账号密码？</li>
+</ul>
+<p>答：不会。这个程序是完全开源的，你可以看到它所有的源代码，就像是你把一个人全身的衣服都扒光了看，你觉得他可能藏有武器吗？</p>
+<ul>
+<li>问：下面还有第三个参数“Server酱APIKEY”，这个要不要填写？</li>
+</ul>
+<p>答：这个“Server酱”可以帮助这个程序实现微信推送功能。个人建议最好去搞一个Server酱的apikey填在这里。至于这个apikey如何获得，请参考server酱官网 <a href="http://sc.ftqq.com/3.version" target="_blank" rel="noopener noreffer">http://sc.ftqq.com/3.version</a>，本教程不作详细说明。这就相当于你买了一辆汽车，建议你再安装一个车载导航，但是你具体买哪个牌子的车道导航就看你自己的决定了。</p>
+<p>修改完之后大概是这个样子：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-11-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-11-1.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-11-1.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-11-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-11-1.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-11-1.png" /></p>
+<p>保存后关闭，一定要保存！</p>
+<h3 id="上传到腾讯云函数并设置触发器">上传到腾讯云函数并设置触发器</h3>
+<p>打开腾讯云函数官网：</p>
+<p><a href="https://console.cloud.tencent.com/scf" target="_blank" rel="noopener noreffer">https://console.cloud.tencent.com/scf</a></p>
+<p>在“函数服务”里点“新建”</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-13-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-13-1.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-13-1.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-13-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-13-1.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-13-1.png" /></p>
+<p>创建方式“自定义创建”，函数名称随意，运行环境选择“nodejs12.16”，提交方法选择“本地上传文件夹”，点击“上传”</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-14-1-914x1024.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-14-1-914x1024.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-14-1-914x1024.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-14-1-914x1024.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-14-1-914x1024.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-14-1-914x1024.png" /></p>
+<p>可能会弹出这样的消息，点上传就可：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-15.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-15.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-15.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-15.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-15.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-15.png" /></p>
+<p>如果上传失败了，也可以把AutoReport-master文件夹压缩后选择“本地上传zip包”提交。</p>
+<p>然后点击“完成”</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-16.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-16.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-16.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-16.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-16.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-16.png" /></p>
+<p>之后就能看见这个函数创建完成，点进去进行测试</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-17-2-1024x251.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-17-2-1024x251.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-17-2-1024x251.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-17-2-1024x251.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-17-2-1024x251.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-17-2-1024x251.png" /></p>
+<p>腾讯云提供了在线编辑器，如果想修改代码，可以直接在这里改，确实很方便。<br>
+这里我们一定要把“自动安装依赖”打开，然后点“部署”，再点“测试”</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-18-1-1024x738.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-18-1-1024x738.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-18-1-1024x738.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-18-1-1024x738.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-18-1-1024x738.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-18-1-1024x738.png" /></p>
+<p>预期的测试结果</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-19.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-19.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-19.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-19.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-19.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-19.png" /></p>
+<p>如果你填了Server酱的APIKEY，应该还能收到微信发的推送通知。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-20-1-892x1024.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-20-1-892x1024.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-20-1-892x1024.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-20-1-892x1024.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-20-1-892x1024.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-20-1-892x1024.png" /></p>
+<p>好啦，最后一步，设置触发器</p>
+<p>如下图，点左侧“触发管理”、“创建触发器”</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-21.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-21.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-21.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-21.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-21.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-21.png" /></p>
+<p>选择“自定义触发周期”，填写Cron表达式，推荐使用 0 1 1,8 * * * *</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-22-2-1024x643.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-22-2-1024x643.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-22-2-1024x643.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-22-2-1024x643.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-22-2-1024x643.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/image-22-2-1024x643.png" /></p>
+<p>该表达式是作者推荐的一个表达式，它所表达的意思就是每天触发两次，时间为每天的01:01和08:01</p>
+<p>提交之后，就大功告成啦！你可以过上“从此君王不早朝”的生活啦！（误）</p>
+<h3 id="tips">Tips</h3>
+<p>Question: 这个程序是如何填写定位信息的？</p>
+<p>Answer: 通过返回昨天填报的地点填写到今天的位置。从这里可以看出这个程序真的很巧妙，如果你的位置发生了改变（比如从学校回家），你可以在回家之后，抢在程序自动填报之前，手动填报一次。</p>
+<p>如果有问题请在下方评论区提出，谢谢！</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-04-05</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/matplotlib%E4%BD%9C%E7%83%AD%E6%9C%BA%E6%95%88%E7%8E%87%E9%9A%8F%E8%B4%9F%E8%BD%BD%E5%A4%A7%E5%B0%8F%E5%8F%98%E5%8C%96%E6%9B%B2%E7%BA%BF%E5%9B%BE/" class="prev" rel="prev" title="matplotlib作热机效率随负载大小变化曲线图"><i class="fas fa-angle-left fa-fw"></i>matplotlib作热机效率随负载大小变化曲线图</a>
+            <a href="/posts/%E8%8F%8A%E6%AC%A1%E9%83%8E%E7%9A%84%E5%A4%8F%E5%A4%A9%E8%A7%82%E5%90%8E%E6%84%9F/" class="next" rel="next" title="《菊次郎的夏天》观后感">《菊次郎的夏天》观后感<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">鲁ICP备2020039365号-1</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"7d4uuBoHJjcoTArKAPbPhRVC-gzGzoHsz","appKey":"6KLJGiDyLqts0JE077ta5vKm","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-QCNX590TTL', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-QCNX590TTL" async></script></body>
+</html>

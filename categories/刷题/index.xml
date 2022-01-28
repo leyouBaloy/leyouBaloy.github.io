@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>刷题 - 分类 - 孙百乐的编程学习</title>
+        <link>http://example.org/categories/%E5%88%B7%E9%A2%98/</link>
+        <description>刷题 - 分类 - 孙百乐的编程学习</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 29 Sep 2021 23:37:12 &#43;0000</lastBuildDate><atom:link href="http://example.org/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>全国高校AI知识竞赛UPC赛区获奖通知</title>
+    <link>http://example.org/posts/%E5%85%A8%E5%9B%BD%E9%AB%98%E6%A0%A1ai%E7%9F%A5%E8%AF%86%E7%AB%9E%E8%B5%9Bupc%E8%B5%9B%E5%8C%BA%E8%8E%B7%E5%A5%96%E9%80%9A%E7%9F%A5/</link>
+    <pubDate>Wed, 29 Sep 2021 23:37:12 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E5%85%A8%E5%9B%BD%E9%AB%98%E6%A0%A1ai%E7%9F%A5%E8%AF%86%E7%AB%9E%E8%B5%9Bupc%E8%B5%9B%E5%8C%BA%E8%8E%B7%E5%A5%96%E9%80%9A%E7%9F%A5/</guid>
+    <description><![CDATA[获奖名单： 排名不分先后，恭喜以上获奖同学。 领奖须知： **第一步：**扫描二维码，注册飞桨人工智能训练平台aistudio（需要手机号） **第]]></description>
+</item><item>
+    <title>python面向对象课程</title>
+    <link>http://example.org/posts/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AF%BE%E7%A8%8B/</link>
+    <pubDate>Tue, 02 Feb 2021 10:33:46 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AF%BE%E7%A8%8B/</guid>
+    <description><![CDATA[https://www.bilibili.com/video/BV1A4411v7b2?p=34&amp;spm_id_from=pageDriver 这个课讲得真是太好了，很少能有把复杂抽象的知识讲得这么清楚的老师 打算一口气把这个看完 2月3日 现在看到62集了，看到这个人的笔记记得还不错，]]></description>
+</item><item>
+    <title>字符串与数字之间的转换</title>
+    <link>http://example.org/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%AD%97%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/</link>
+    <pubDate>Fri, 01 Jan 2021 21:15:27 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%AD%97%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/</guid>
+    <description><![CDATA[方法一（利用的stringstream，可以是浮点数） 数字to字符串 #include &lt;iostream&gt; #include &lt;sstream&gt; using namespace std; int main() { double x; string str; stringstream ss; cin &gt;&gt; x; ss &lt;&lt; x; ss &gt;&gt; str; cout &lt;&lt; str; return 0; } 字符串to]]></description>
+</item><item>
+    <title>给string对象插入字符</title>
+    <link>http://example.org/posts/%E7%BB%99string%E5%AF%B9%E8%B1%A1%E6%8F%92%E5%85%A5%E5%AD%97%E7%AC%A6/</link>
+    <pubDate>Mon, 28 Dec 2020 16:52:10 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E7%BB%99string%E5%AF%B9%E8%B1%A1%E6%8F%92%E5%85%A5%E5%AD%97%E7%AC%A6/</guid>
+    <description><![CDATA[#include &lt;bits/stdc++.h&gt; using namespace std; int main() { string s; s = &quot;123456&quot;; string::iterator it; it=s.begin(); s.insert(it+1,'p'); //把p插到第1个字符前，从0开始计数 cout &lt;&lt; s &lt;&lt; endl; return 0; } 运行结果 1p23456 Process returned 0 (0x0) execution time : 0.011 s Press any key to continue. 看了课本后面的]]></description>
+</item><item>
+    <title>使用sort算法对向量元素排列</title>
+    <link>http://example.org/posts/%E4%BD%BF%E7%94%A8sort%E7%AE%97%E6%B3%95%E5%AF%B9%E5%90%91%E9%87%8F%E5%85%83%E7%B4%A0%E6%8E%92%E5%88%97/</link>
+    <pubDate>Mon, 28 Dec 2020 16:26:38 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E4%BD%BF%E7%94%A8sort%E7%AE%97%E6%B3%95%E5%AF%B9%E5%90%91%E9%87%8F%E5%85%83%E7%B4%A0%E6%8E%92%E5%88%97/</guid>
+    <description><![CDATA[#include &lt;bits/stdc++.h&gt; using namespace std; int main() { srand(time(NULL)); vector&lt;int&gt;v; int i; for(int i=0;i&lt;10;i++) { v.push_back(rand()%100); } for(i=0;i&lt;10;i++) { cout &lt;&lt; v[i] &lt;&lt; &quot; &quot;; } cout &lt;&lt; endl; sort(v.begin(),v.end()); //升序排列 for(i=0;i&lt;10;i++) { cout &lt;&lt; v[i] &lt;&lt; ' '; } cout &lt;&lt; endl; return 0; } 结果： 13 32 13 85 48 99 36 53 18 16 13 13 16 18 32 36]]></description>
+</item><item>
+    <title>使用reverse反向排列算法</title>
+    <link>http://example.org/posts/%E4%BD%BF%E7%94%A8reverse%E5%8F%8D%E5%90%91%E6%8E%92%E5%88%97%E7%AE%97%E6%B3%95/</link>
+    <pubDate>Mon, 28 Dec 2020 16:21:28 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E4%BD%BF%E7%94%A8reverse%E5%8F%8D%E5%90%91%E6%8E%92%E5%88%97%E7%AE%97%E6%B3%95/</guid>
+    <description><![CDATA[#include &lt;bits/stdc++.h&gt; using namespace std; int main() { srand(time(NULL)); vector&lt;int&gt;v(10); for(int i=0;i&lt;10;i++) { v[i] = rand()%100; } vector&lt;int&gt;::iterator it; for(it=v.begin();it!=v.end();it++) { cout &lt;&lt; *it &lt;&lt; &quot; &quot;; } cout &lt;&lt; endl; reverse(v.begin(),v.end()); for(it=v.begin();it!=v.end();it++) { cout &lt;&lt; *it &lt;&lt; ' '; } cout &lt;&lt; endl; return 0; } 运行结果 94 66 52 71 33 43 91 59 78 69 69 78 59 91 43 33 71 52 66]]></description>
+</item><item>
+    <title>字符处理软件-substr-insert-find</title>
+    <link>http://example.org/posts/%E5%AD%97%E7%AC%A6%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6-substr-insert-find/</link>
+    <pubDate>Thu, 17 Dec 2020 21:10:39 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E5%AD%97%E7%AC%A6%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6-substr-insert-find/</guid>
+    <description><![CDATA[题目描述 你需要开发一款文字处理软件。最开始时输入一个字符串（不超过 100 个字符）作为初始文档。可以认为文档开头是第 0 个字符。需要支持以下操作： 1]]></description>
+</item><item>
+    <title>requests爬表情包</title>
+    <link>http://example.org/posts/requests%E7%88%AC%E8%A1%A8%E6%83%85%E5%8C%85/</link>
+    <pubDate>Sun, 13 Dec 2020 17:23:02 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/requests%E7%88%AC%E8%A1%A8%E6%83%85%E5%8C%85/</guid>
+    <description><![CDATA[需要的库： !pip install lxml !pip install request !pip install pathlib 代码： import time #代码合集并修改为下载多页表情 import requests from bs4 import BeautifulSoup from pathlib import Path for i in range(1,4): url = f'https://www.fabiaoqing.com/biaoqing/lists/page/{i}.html' response = requests.get(url) time.sleep(3) soup = BeautifulSoup(response.content,'lxml') img_list = soup.find_all('img', class_=&quot;ui image lazy&quot;) for index,img in enumerate(img_list): image =]]></description>
+</item><item>
+    <title>判断回文数</title>
+    <link>http://example.org/posts/%E5%88%A4%E6%96%AD%E5%9B%9E%E6%96%87%E6%95%B0/</link>
+    <pubDate>Fri, 04 Dec 2020 09:05:15 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E5%88%A4%E6%96%AD%E5%9B%9E%E6%96%87%E6%95%B0/</guid>
+    <description><![CDATA[一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++]]></description>
+</item><item>
+    <title>c&#43;&#43;比较字典序的三种方法</title>
+    <link>http://example.org/posts/c&#43;&#43;%E6%AF%94%E8%BE%83%E5%AD%97%E5%85%B8%E5%BA%8F%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
+    <pubDate>Fri, 04 Dec 2020 08:04:09 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/c&#43;&#43;%E6%AF%94%E8%BE%83%E5%AD%97%E5%85%B8%E5%BA%8F%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
+    <description><![CDATA[比较字符串字典序的三种方法【C++】 - 知乎 (zhihu.com) #include &lt;iostream&gt; using namespace std; int main() { char s1[2] = &quot;a&quot;; char s2[2] = &quot;b&quot;; cout &lt;&lt; strcmp(s1, s2) &lt;&lt; endl; //-1 cout &lt;&lt; strcmp(s2, s1) &lt;&lt; endl; //1 cout &lt;&lt; strcmp(s1, s1) &lt;&lt; endl; //0 return 0; } #include &lt;iostream&gt; #include &lt;string&gt; using namespace std; int]]></description>
+</item></channel>
+</rss>

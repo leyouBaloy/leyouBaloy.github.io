@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示" />
+<meta property="og:description" content="视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm_id_from=" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89image%E5%9B%BE%E7%89%87-3d%E6%95%B0%E6%8D%AE-subplot-%E5%A4%9A%E5%90%88%E4%B8%80%E6%98%BE%E7%A4%BA-subplot%E5%88%86%E6%A0%BC%E6%98%BE%E7%A4%BA/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-26T12:06:38+00:00" />
+<meta property="article:modified_time" content="2021-02-26T12:06:38+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示"/>
+<meta name="twitter:description" content="视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm_id_from="/>
+<meta name="application-name" content="孙百乐的编程学习">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89image%E5%9B%BE%E7%89%87-3d%E6%95%B0%E6%8D%AE-subplot-%E5%A4%9A%E5%90%88%E4%B8%80%E6%98%BE%E7%A4%BA-subplot%E5%88%86%E6%A0%BC%E6%98%BE%E7%A4%BA/" /><link rel="prev" href="http://example.org/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8Clegend%E5%9B%BE%E4%BE%8B-annotation%E6%A0%87%E6%B3%A8-tick%E8%83%BD%E8%A7%81%E5%BA%A6-scatter%E6%95%A3%E7%82%B9%E5%9B%BE-bar%E6%9F%B1%E7%8A%B6%E5%9B%BE-contours%E7%AD%89%E9%AB%98%E7%BA%BF%E5%9B%BE/" /><link rel="next" href="http://example.org/posts/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%A4%A9%E6%98%8E%E7%A1%AE%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89image%E5%9B%BE%E7%89%87-3d%E6%95%B0%E6%8D%AE-subplot-%E5%A4%9A%E5%90%88%E4%B8%80%E6%98%BE%E7%A4%BA-subplot%E5%88%86%E6%A0%BC%E6%98%BE%E7%A4%BA\/"
+        },"genre": "posts","wordcount":  1073 ,
+        "url": "http:\/\/example.org\/posts\/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89image%E5%9B%BE%E7%89%87-3d%E6%95%B0%E6%8D%AE-subplot-%E5%A4%9A%E5%90%88%E4%B8%80%E6%98%BE%E7%A4%BA-subplot%E5%88%86%E6%A0%BC%E6%98%BE%E7%A4%BA\/","datePublished": "2021-02-26T12:06:38+00:00","dateModified": "2021-02-26T12:06:38+00:00","publisher": {
+            "@type": "Organization",
+            "name": "孙百乐"},"author": {
+                "@type": "Person",
+                "name": "孙百乐"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB"> 技能分享 </a><a class="menu-item" href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95"> 书影记录 </a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0"> 随笔杂记 </a><a class="menu-item" href="/categories/"> 文章分类 </a><a class="menu-item" href="/about/"> 关于我 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB" title="">技能分享</a><a class="menu-item" href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95" title="">书影记录</a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0" title="">随笔杂记</a><a class="menu-item" href="/categories/" title="">文章分类</a><a class="menu-item" href="/about/" title="">关于我</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-26">2021-02-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1073 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89image%E5%9B%BE%E7%89%87-3d%E6%95%B0%E6%8D%AE-subplot-%E5%A4%9A%E5%90%88%E4%B8%80%E6%98%BE%E7%A4%BA-subplot%E5%88%86%E6%A0%BC%E6%98%BE%E7%A4%BA/" class="leancloud_visitors" data-flag-title="matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#image图片">image图片</a></li>
+        <li><a href="#3d数据">3D数据</a></li>
+        <li><a href="#subplot-多合一显示">Subplot 多合一显示</a></li>
+        <li><a href="#subplot分格显示">Subplot分格显示</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm_id_from=pageDriver<br>
+仅用于学习<br>
+感谢莫烦up主</p>
+<h3 id="image图片">image图片</h3>
+<pre tabindex="0"><code>import matplotlib.pyplot as plt
+import numpy as np
+
+# image data
+a = np.array([0.313660827978, 0.365348418405, 0.423733120134,
+              0.365348418405, 0.439599930621, 0.525083754405,
+              0.423733120134, 0.525083754405, 0.651536351379]).reshape(3,3)
+
+&quot;&quot;&quot;
+for the value of &quot;interpolation&quot;, check this:
+http://matplotlib.org/examples/images_contours_and_fields/interpolation_methods.html
+参数interpolation见下图
+for the value of &quot;origin&quot;= ['upper', 'lower'], check this:
+http://matplotlib.org/examples/pylab_examples/image_origin.html
+参数origin如果为'upper'图像就会反过来
+&quot;&quot;&quot;
+plt.imshow(a, interpolation='nearest', cmap='bone', origin='lower')
+plt.colorbar(shrink=.92) #shrink压缩到百分之九十二
+
+plt.xticks(())
+plt.yticks(())
+plt.show()
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1024x631.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1024x631.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1024x631.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1024x631.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1024x631.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1024x631.png" /></p>
+<p>interpolation参数有这些</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png" /></p>
+<h3 id="3d数据">3D数据</h3>
+<pre tabindex="0"><code>import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D #添加3D坐标轴显示
+
+fig = plt.figure()
+ax = Axes3D(fig) #在figure上加一个3D的Axes
+# X, Y value
+X = np.arange(-4, 4, 0.25)
+Y = np.arange(-4, 4, 0.25)
+X, Y = np.meshgrid(X, Y)
+R = np.sqrt(X ** 2 + Y ** 2)
+# height value 高度是Z轴
+Z = np.sin(R)
+
+#创建3D图
+ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.get_cmap('rainbow'))
+&quot;&quot;&quot;
+r代表row, c代表col， rstride和cstride都是控制跨度的参数，简单理解，就是控制这个3D图像的稠密程度
+============= ================================================
+        Argument      Description
+        ============= ================================================
+        *X*, *Y*, *Z* Data values as 2D arrays
+        *rstride*     Array row stride (step size), defaults to 10
+        *cstride*     Array column stride (step size), defaults to 10
+        *color*       Color of the surface patches
+        *cmap*        A colormap for the surface patches.
+        *facecolors*  Face colors for the individual patches
+        *norm*        An instance of Normalize to map values to colors
+        *vmin*        Minimum value to map
+        *vmax*        Maximum value to map
+        *shade*       Whether to shade the facecolors
+        ============= ================================================
+&quot;&quot;&quot;
+
+# I think this is different from plt12_contours
+#在3D图下面创建一个等高线图
+ax.contourf(X, Y, Z, zdir='z', offset=-2, cmap=plt.get_cmap('rainbow'))
+&quot;&quot;&quot;
+zdir='z'表示这个等高线图是从z轴压下去的，offset表示把等高线图放到-2这个位置
+==========  ================================================
+        Argument    Description
+        ==========  ================================================
+        *X*, *Y*,   Data values as numpy.arrays
+        *Z*
+        *zdir*      The direction to use: x, y or z (default)
+        *offset*    If specified plot a projection of the filled contour
+                    on this position in plane normal to zdir
+        ==========  ================================================
+&quot;&quot;&quot;
+
+ax.set_zlim(-2, 2)
+
+plt.show()
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-2.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-2.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-2.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-2.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-2.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-2.png" /></p>
+<h3 id="subplot-多合一显示">Subplot 多合一显示</h3>
+<pre tabindex="0"><code>import matplotlib.pyplot as plt
+
+# example 1:
+###############################
+plt.figure(figsize=(6, 4))
+# plt.subplot(n_rows, n_cols, plot_num)
+plt.subplot(2, 2, 1)
+#2行2列，共4张图，编辑第1张图
+plt.plot([0, 1], [0, 1])
+
+plt.subplot(222)
+#2行2列，共4张图，编辑第2张图，这里不写逗号也可以识别（惊了）
+plt.plot([0, 1], [0, 2])
+
+plt.subplot(223)
+#2行2列，共4张图，编辑第3张图
+plt.plot([0, 1], [0, 3])
+
+plt.subplot(224)
+#2行2列，共4张图，编辑第4张图
+plt.plot([0, 1], [0, 4])
+
+plt.tight_layout()
+
+# example 2:
+###############################
+plt.figure(figsize=(6, 4))
+# plt.subplot(n_rows, n_cols, plot_num)
+plt.subplot(2, 1, 1)
+# figure splits into 2 rows, 1 col, plot to the 1st sub-fig
+plt.plot([0, 1], [0, 1])
+
+plt.subplot(234)
+# figure splits into 2 rows, 3 col, plot to the 4th sub-fig
+plt.plot([0, 1], [0, 2])
+
+plt.subplot(235)
+# figure splits into 2 rows, 3 col, plot to the 5th sub-fig
+plt.plot([0, 1], [0, 3])
+
+plt.subplot(236)
+# figure splits into 2 rows, 3 col, plot to the 6th sub-fig
+plt.plot([0, 1], [0, 4])
+
+
+plt.tight_layout()
+plt.show()
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png" /></p>
+<p>figure1</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png" /></p>
+<p>figure2</p>
+<h3 id="subplot分格显示">Subplot分格显示</h3>
+<pre tabindex="0"><code>import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
+
+# 方法一：method 1: subplot2grid
+##########################
+plt.figure()
+ax1 = plt.subplot2grid((3, 3), (0, 0), colspan=3)  # 分3行3列的格子，从(0,0)开始，跨列=3,跨行colspan默认为1
+ax1.plot([1, 2], [1, 2])
+ax1.set_title('ax1_title')
+ax2 = plt.subplot2grid((3, 3), (1, 0), colspan=2)
+ax3 = plt.subplot2grid((3, 3), (1, 2), rowspan=2)
+ax4 = plt.subplot2grid((3, 3), (2, 0))
+ax4.scatter([1, 2], [2, 2])
+ax4.set_xlabel('ax4_x')
+ax4.set_ylabel('ax4_y')
+ax5 = plt.subplot2grid((3, 3), (2, 1))
+
+# 方法二：method 2: gridspec
+#########################
+plt.figure()
+gs = gridspec.GridSpec(3, 3)
+# use index from 0
+ax6 = plt.subplot(gs[0, :])
+ax7 = plt.subplot(gs[1, :2])
+ax8 = plt.subplot(gs[1:, 2])
+ax9 = plt.subplot(gs[-1, 0])
+ax10 = plt.subplot(gs[-1, -2])
+
+# 方法三：method 3: easy to define structure
+####################################
+f, ((ax11, ax12), (ax13, ax14)) = plt.subplots(2, 2, sharex=True, sharey=True)
+#用ax11,ax12,ax13,ax14接收返回的第一行第一列图，第一行第二列图，第二行第一列图，第二行第二列图
+ax11.scatter([1,2], [1,2])
+
+plt.tight_layout()
+plt.show()
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-5-1.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-5-1.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-5-1.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-5-1.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-5-1.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-5-1.png" /></p>
+<p>method1和method2效果图</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png"
+        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png" /></p>
+<p>method2</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-02-26</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8Clegend%E5%9B%BE%E4%BE%8B-annotation%E6%A0%87%E6%B3%A8-tick%E8%83%BD%E8%A7%81%E5%BA%A6-scatter%E6%95%A3%E7%82%B9%E5%9B%BE-bar%E6%9F%B1%E7%8A%B6%E5%9B%BE-contours%E7%AD%89%E9%AB%98%E7%BA%BF%E5%9B%BE/" class="prev" rel="prev" title="matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图"><i class="fas fa-angle-left fa-fw"></i>matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图</a>
+            <a href="/posts/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%A4%A9%E6%98%8E%E7%A1%AE%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/" class="next" rel="next" title="开学第二天明确学习方向">开学第二天明确学习方向<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">鲁ICP备2020039365号-1</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"7d4uuBoHJjcoTArKAPbPhRVC-gzGzoHsz","appKey":"6KLJGiDyLqts0JE077ta5vKm","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-QCNX590TTL', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-QCNX590TTL" async></script></body>
+</html>

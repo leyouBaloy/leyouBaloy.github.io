@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>技能分享 - 分类 - 孙百乐的编程学习</title>
+        <link>http://example.org/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/</link>
+        <description>技能分享 - 分类 - 孙百乐的编程学习</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</lastBuildDate><atom:link href="http://example.org/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>gitee webhooks&#43;nodejs实现自动拉取代码</title>
+    <link>http://example.org/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
+    <pubDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
+    <description><![CDATA[需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都]]></description>
+</item><item>
+    <title>python脚本批量替换hexo博客中的图片链接</title>
+    <link>http://example.org/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</link>
+    <pubDate>Sat, 15 Jan 2022 23:10:24 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</guid>
+    <description><![CDATA[前言 最近想把wordpress上的文章迁移到hexo，图片从原服务器迁移到GitHub图床。所以文章中的图片需要重新下载，上传到GitHub]]></description>
+</item><item>
+    <title>数值计算方法</title>
+    <link>http://example.org/posts/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</link>
+    <pubDate>Wed, 01 Dec 2021 18:31:18 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</guid>
+    <description><![CDATA[包含几乎所有课堂上讲的题目]]></description>
+</item><item>
+    <title>Mac上自动连接校园网的脚本</title>
+    <link>http://example.org/posts/mac%E4%B8%8A%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%9A%84%E8%84%9A%E6%9C%AC/</link>
+    <pubDate>Wed, 24 Nov 2021 18:58:03 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/mac%E4%B8%8A%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%9A%84%E8%84%9A%E6%9C%AC/</guid>
+    <description><![CDATA[起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，]]></description>
+</item><item>
+    <title>github推送出现fatal:&#34;XXX&#34; 鉴权失败解决方案</title>
+    <link>http://example.org/posts/github%E6%8E%A8%E9%80%81%E5%87%BA%E7%8E%B0fatalxxx-%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+    <pubDate>Sun, 21 Nov 2021 09:04:54 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/github%E6%8E%A8%E9%80%81%E5%87%BA%E7%8E%B0fatalxxx-%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+    <description><![CDATA[问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案]]></description>
+</item><item>
+    <title>macOS下matplotlib无法显示中文字体问题解决</title>
+    <link>http://example.org/posts/macos%E4%B8%8Bmatplotlib%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+    <pubDate>Fri, 12 Nov 2021 16:57:43 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/macos%E4%B8%8Bmatplotlib%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+    <description><![CDATA[网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matp]]></description>
+</item><item>
+    <title>如何在英语朗读视频中添加文稿</title>
+    <link>http://example.org/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%8B%B1%E8%AF%AD%E6%9C%97%E8%AF%BB%E8%A7%86%E9%A2%91%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%96%87%E7%A8%BF/</link>
+    <pubDate>Thu, 04 Nov 2021 17:15:40 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%8B%B1%E8%AF%AD%E6%9C%97%E8%AF%BB%E8%A7%86%E9%A2%91%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%96%87%E7%A8%BF/</guid>
+    <description><![CDATA[如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读]]></description>
+</item><item>
+    <title>ubuntu安装Python3的曲折之路</title>
+    <link>http://example.org/posts/ubuntu%E5%AE%89%E8%A3%85python3%E7%9A%84%E6%9B%B2%E6%8A%98%E4%B9%8B%E8%B7%AF/</link>
+    <pubDate>Sat, 30 Oct 2021 13:58:01 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/ubuntu%E5%AE%89%E8%A3%85python3%E7%9A%84%E6%9B%B2%E6%8A%98%E4%B9%8B%E8%B7%AF/</guid>
+    <description><![CDATA[思路 先安装Python版本管理器pyenv 再用Pyenv安装Python 安装pyenv 标准安装：找到项目地址pyenv/pyenv: Simple Python version management]]></description>
+</item><item>
+    <title>浏览器不支持getUserMedia</title>
+    <link>http://example.org/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8D%E6%94%AF%E6%8C%81getusermedia/</link>
+    <pubDate>Thu, 23 Sep 2021 15:58:12 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8D%E6%94%AF%E6%8C%81getusermedia/</guid>
+    <description><![CDATA[现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支]]></description>
+</item><item>
+    <title>certbot自动配置nginx给wordpress站点加https</title>
+    <link>http://example.org/posts/certbot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AEnginx%E7%BB%99wordpress%E7%AB%99%E7%82%B9%E5%8A%A0https/</link>
+    <pubDate>Wed, 08 Sep 2021 22:42:40 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/posts/certbot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AEnginx%E7%BB%99wordpress%E7%AB%99%E7%82%B9%E5%8A%A0https/</guid>
+    <description><![CDATA[思路 安装snap 安装certbot 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置]]></description>
+</item></channel>
+</rss>
