@@ -7,15 +7,15 @@ path = "/Users/sunbaile/myBlog/content/posts"
 cnt = 0
 
 for file in os.listdir(path):
-    if file[-3:]==".md" :
+    if file[-3:]==".md" : #判断是否为md文件
         cnt += 1
         print(cnt,file)
 
         with open(os.path.join(path,file),"r+") as f:
             all_text = f.read()
 
-        yaml_text = re.findall("---([\s\S]*?)---",all_text)[0]
-        old_dic = yaml.load(yaml_text)
+        yaml_text = re.findall("---([\s\S]*?)---",all_text)[0] #找到yaml字符串
+        old_dic = yaml.load(yaml_text)  # 用yaml库转字典对象
         # print("categories:",old_dic["categories"])
         if old_dic["categories"][0] == "生活":
             old_dic["categories"] = ["随笔杂记"]
@@ -34,7 +34,7 @@ for file in os.listdir(path):
             "date": old_dic["date"]
         }
         # print("new_dic",new_dic)
-        yaml_res = yaml.dump(new_dic,allow_unicode=True)
+        yaml_res = yaml.dump(new_dic,allow_unicode=True)    #用yaml库将字典解析为yaml字符串
         # print("***",yaml_res,"***")
 
         res = all_text.replace(yaml_text,"\n"+yaml_res)
