@@ -25,6 +25,7 @@ hugo
 
 echo "Updating gh-pages branch"
 cd public
+git pull
 touch CNAME
 echo "www.leyoubaloy.xyz" >> CNAME
 git add --all
