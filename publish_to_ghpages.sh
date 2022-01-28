@@ -1,4 +1,6 @@
 #!/bin/sh
+git add -A
+git commit -m "更新"
 
 if [ "`git status -s`" ]
 then

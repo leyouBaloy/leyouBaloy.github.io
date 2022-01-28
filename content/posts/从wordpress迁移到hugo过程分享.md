@@ -2,7 +2,8 @@
 title: "从wordpress迁移到hugo过程分享"
 date: 2022-01-28T15:52:50+08:00
 draft: false
-categories: 技能分享
+categories: 
+- 技能分享
 ---
 
 ### 为什么抛弃wordpress选择hugo
