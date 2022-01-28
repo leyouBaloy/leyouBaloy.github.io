@@ -1,77 +1,77 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - 孙百乐的编程学习</title>
-        <link>http://example.org/posts/</link>
+        <link>http://leyoubaloy.github.io/posts/</link>
         <description>所有文章 | 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</lastBuildDate><atom:link href="http://leyoubaloy.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>gitee webhooks&#43;nodejs实现自动拉取代码</title>
-    <link>http://example.org/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
+    <link>http://leyoubaloy.github.io/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
     <pubDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
+    <guid>http://leyoubaloy.github.io/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
     <description><![CDATA[需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都]]></description>
 </item><item>
     <title>年度总结</title>
-    <link>http://example.org/posts/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+    <link>http://leyoubaloy.github.io/posts/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 21 Jan 2022 11:35:06 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+    <guid>http://leyoubaloy.github.io/posts/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[读书和锻炼 书大概看了15本。书\影评10个。 书看的多没用，写书评才是有用的，明年多写书评。 跑步202公里。明年继续。 明年的计划 没什么计划， 就]]></description>
 </item><item>
     <title>《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴</title>
-    <link>http://example.org/posts/%E6%98%8E%E5%A4%A9%E4%B9%9F%E6%98%AF%E5%B0%8F%E6%98%A5%E6%97%A5%E5%92%8C%E9%82%A3%E5%B9%B6%E4%B8%8D%E8%80%80%E7%9C%BC%E7%9A%84%E5%88%9D%E5%86%AC%E6%9A%96%E9%98%B3%E6%81%B0%E4%BC%BC%E4%BD%A0%E6%97%A5%E5%A4%8D%E4%B8%80%E6%97%A5%E6%9C%80%E9%95%BF%E6%83%85%E7%9A%84%E9%99%AA%E4%BC%B4/</link>
+    <link>http://leyoubaloy.github.io/posts/%E6%98%8E%E5%A4%A9%E4%B9%9F%E6%98%AF%E5%B0%8F%E6%98%A5%E6%97%A5%E5%92%8C%E9%82%A3%E5%B9%B6%E4%B8%8D%E8%80%80%E7%9C%BC%E7%9A%84%E5%88%9D%E5%86%AC%E6%9A%96%E9%98%B3%E6%81%B0%E4%BC%BC%E4%BD%A0%E6%97%A5%E5%A4%8D%E4%B8%80%E6%97%A5%E6%9C%80%E9%95%BF%E6%83%85%E7%9A%84%E9%99%AA%E4%BC%B4/</link>
     <pubDate>Mon, 17 Jan 2022 00:11:13 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/%E6%98%8E%E5%A4%A9%E4%B9%9F%E6%98%AF%E5%B0%8F%E6%98%A5%E6%97%A5%E5%92%8C%E9%82%A3%E5%B9%B6%E4%B8%8D%E8%80%80%E7%9C%BC%E7%9A%84%E5%88%9D%E5%86%AC%E6%9A%96%E9%98%B3%E6%81%B0%E4%BC%BC%E4%BD%A0%E6%97%A5%E5%A4%8D%E4%B8%80%E6%97%A5%E6%9C%80%E9%95%BF%E6%83%85%E7%9A%84%E9%99%AA%E4%BC%B4/</guid>
+    <guid>http://leyoubaloy.github.io/posts/%E6%98%8E%E5%A4%A9%E4%B9%9F%E6%98%AF%E5%B0%8F%E6%98%A5%E6%97%A5%E5%92%8C%E9%82%A3%E5%B9%B6%E4%B8%8D%E8%80%80%E7%9C%BC%E7%9A%84%E5%88%9D%E5%86%AC%E6%9A%96%E9%98%B3%E6%81%B0%E4%BC%BC%E4%BD%A0%E6%97%A5%E5%A4%8D%E4%B8%80%E6%97%A5%E6%9C%80%E9%95%BF%E6%83%85%E7%9A%84%E9%99%AA%E4%BC%B4/</guid>
     <description><![CDATA[明天也是小春日和 英子内心一直有一个田园梦，他的丈夫修一是建筑师，年轻时工作十分忙碌，但她始终支持丈夫的志愿。退休后，修一履行他的承诺，带着英]]></description>
 </item><item>
     <title>跟基友玩双人成行这辈子没这么开心过</title>
-    <link>http://example.org/posts/%E8%B7%9F%E5%9F%BA%E5%8F%8B%E7%8E%A9%E5%8F%8C%E4%BA%BA%E6%88%90%E8%A1%8C%E8%BF%99%E8%BE%88%E5%AD%90%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E8%BF%87/</link>
+    <link>http://leyoubaloy.github.io/posts/%E8%B7%9F%E5%9F%BA%E5%8F%8B%E7%8E%A9%E5%8F%8C%E4%BA%BA%E6%88%90%E8%A1%8C%E8%BF%99%E8%BE%88%E5%AD%90%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E8%BF%87/</link>
     <pubDate>Sat, 15 Jan 2022 23:11:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/%E8%B7%9F%E5%9F%BA%E5%8F%8B%E7%8E%A9%E5%8F%8C%E4%BA%BA%E6%88%90%E8%A1%8C%E8%BF%99%E8%BE%88%E5%AD%90%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E8%BF%87/</guid>
+    <guid>http://leyoubaloy.github.io/posts/%E8%B7%9F%E5%9F%BA%E5%8F%8B%E7%8E%A9%E5%8F%8C%E4%BA%BA%E6%88%90%E8%A1%8C%E8%BF%99%E8%BE%88%E5%AD%90%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E8%BF%87/</guid>
     <description><![CDATA[今天跟基友探店，找到一家主机游戏。 我俩对着超大屏幕玩双人成行玩一个小时笑一个小时。 老板说别人玩这个都对骂，就你俩一直笑。 我跟老板说这才是男人]]></description>
 </item><item>
     <title>python脚本批量替换hexo博客中的图片链接</title>
-    <link>http://example.org/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</link>
+    <link>http://leyoubaloy.github.io/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</link>
     <pubDate>Sat, 15 Jan 2022 23:10:24 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</guid>
+    <guid>http://leyoubaloy.github.io/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</guid>
     <description><![CDATA[前言 最近想把wordpress上的文章迁移到hexo，图片从原服务器迁移到GitHub图床。所以文章中的图片需要重新下载，上传到GitHub]]></description>
 </item><item>
     <title>把功夫用在平时</title>
-    <link>http://example.org/posts/%E6%8A%8A%E5%8A%9F%E5%A4%AB%E7%94%A8%E5%9C%A8%E5%B9%B3%E6%97%B6/</link>
+    <link>http://leyoubaloy.github.io/posts/%E6%8A%8A%E5%8A%9F%E5%A4%AB%E7%94%A8%E5%9C%A8%E5%B9%B3%E6%97%B6/</link>
     <pubDate>Sat, 15 Jan 2022 23:09:38 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/%E6%8A%8A%E5%8A%9F%E5%A4%AB%E7%94%A8%E5%9C%A8%E5%B9%B3%E6%97%B6/</guid>
+    <guid>http://leyoubaloy.github.io/posts/%E6%8A%8A%E5%8A%9F%E5%A4%AB%E7%94%A8%E5%9C%A8%E5%B9%B3%E6%97%B6/</guid>
     <description><![CDATA[2020期末复习有感： 每门课复习时都要有一个抓手，这个抓手一定要足够可靠可信赖，它是你复习最主要的线索，当你把这条线索都走一遍后你要能自信的]]></description>
 </item><item>
     <title>百度寄的证书和礼品，惊喜！</title>
-    <link>http://example.org/posts/%E7%99%BE%E5%BA%A6%E5%AF%84%E7%9A%84%E8%AF%81%E4%B9%A6%E5%92%8C%E7%A4%BC%E5%93%81%E6%83%8A%E5%96%9C/</link>
+    <link>http://leyoubaloy.github.io/posts/%E7%99%BE%E5%BA%A6%E5%AF%84%E7%9A%84%E8%AF%81%E4%B9%A6%E5%92%8C%E7%A4%BC%E5%93%81%E6%83%8A%E5%96%9C/</link>
     <pubDate>Fri, 14 Jan 2022 10:00:39 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/%E7%99%BE%E5%BA%A6%E5%AF%84%E7%9A%84%E8%AF%81%E4%B9%A6%E5%92%8C%E7%A4%BC%E5%93%81%E6%83%8A%E5%96%9C/</guid>
+    <guid>http://leyoubaloy.github.io/posts/%E7%99%BE%E5%BA%A6%E5%AF%84%E7%9A%84%E8%AF%81%E4%B9%A6%E5%92%8C%E7%A4%BC%E5%93%81%E6%83%8A%E5%96%9C/</guid>
     <description><![CDATA[十分精美的证书+《深度学习》+一双蓝色的袜子+单片机身份卡 最最最帅的就是这个单片机身份卡，太你妈的炸裂帅了 说实话，我真没给百度做过什么事情，]]></description>
 </item><item>
     <title>复习周苦不堪言</title>
-    <link>http://example.org/posts/%E5%A4%8D%E4%B9%A0%E5%91%A8%E8%8B%A6%E4%B8%8D%E5%A0%AA%E8%A8%80/</link>
+    <link>http://leyoubaloy.github.io/posts/%E5%A4%8D%E4%B9%A0%E5%91%A8%E8%8B%A6%E4%B8%8D%E5%A0%AA%E8%A8%80/</link>
     <pubDate>Wed, 05 Jan 2022 10:51:42 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/%E5%A4%8D%E4%B9%A0%E5%91%A8%E8%8B%A6%E4%B8%8D%E5%A0%AA%E8%A8%80/</guid>
+    <guid>http://leyoubaloy.github.io/posts/%E5%A4%8D%E4%B9%A0%E5%91%A8%E8%8B%A6%E4%B8%8D%E5%A0%AA%E8%A8%80/</guid>
     <description><![CDATA[今年过年早，复习周被压缩到了元旦三天，接下来一个星期要考5门试。分别是大物、线代、数电、英语、Java。后两者还好说，比较容易复习。前三者真]]></description>
 </item><item>
     <title>学会拥有爱的能力</title>
-    <link>http://example.org/posts/%E5%AD%A6%E4%BC%9A%E6%8B%A5%E6%9C%89%E7%88%B1%E7%9A%84%E8%83%BD%E5%8A%9B/</link>
+    <link>http://leyoubaloy.github.io/posts/%E5%AD%A6%E4%BC%9A%E6%8B%A5%E6%9C%89%E7%88%B1%E7%9A%84%E8%83%BD%E5%8A%9B/</link>
     <pubDate>Mon, 20 Dec 2021 18:49:05 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/%E5%AD%A6%E4%BC%9A%E6%8B%A5%E6%9C%89%E7%88%B1%E7%9A%84%E8%83%BD%E5%8A%9B/</guid>
+    <guid>http://leyoubaloy.github.io/posts/%E5%AD%A6%E4%BC%9A%E6%8B%A5%E6%9C%89%E7%88%B1%E7%9A%84%E8%83%BD%E5%8A%9B/</guid>
     <description><![CDATA[从小到大，我都生活在家人为我打造的蜜罐温床里。他们爱我，处处为我考虑，给予我他们所拥有的一切，而我一味的索取，从不想过回报，把被爱当作了一种]]></description>
 </item><item>
     <title>《史蒂夫·乔布斯传》读书笔记</title>
-    <link>http://example.org/posts/%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+    <link>http://leyoubaloy.github.io/posts/%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
     <pubDate>Thu, 16 Dec 2021 22:57:46 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/posts/%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+    <guid>http://leyoubaloy.github.io/posts/%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/12/image-1-1024x344.png" referrerpolicy="no-referrer">
             </div>图书简介 《史蒂夫·乔布斯传》是美国作家沃尔特·艾萨克森为苹果公司创始人史蒂夫·乔布斯所作的传记，记录了乔布斯从童年开始，到卸任苹果公司CEO]]></description>

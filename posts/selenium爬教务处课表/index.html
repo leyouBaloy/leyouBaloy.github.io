@@ -8,7 +8,7 @@
         <title>selenium爬教务处课表 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="selenium爬教务处课表" />
 <meta property="og:description" content="from selenium import webdriver from bs4 import BeautifulSoup from selenium.webdriver import ActionChains import time from selenium.webdriver.common.by import By from selenium.webdriver.support.ui import WebDriverWait from selenium.webdriver.support import expected_conditions as EC def wait(xpath,driver): WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, xpath))) #登录： def login(driver): id_box = &#39;//*[@id=&quot;userAccount&quot;]&#39; wait(id_box,driver) driver.find_element_by_xpath(id_box).send_keys(&#39;2007010218&#39;) password_box = &#39;//*[@id=&quot;userPassword&quot;]&#39; driver.find_element_by_xpath(password_box).send_keys(&#39;2007010218&#39;) yan_zhen = &#39;//*[@id=&quot;RANDOMCODE&quot;]&#39; driver.find_element_by_xpath(yan_zhen).click() time.sleep(5) login_btn = &#39;//*[@id=&quot;btnSubmit&quot;]&#39; driver.find_element_by_xpath(login_btn).click() time.sleep(2) ke_biao = &#39;/html/body/div[5]/a[2]/div&#39; driver.find_element_by_xpath(ke_biao).click() time.sleep(2) #执行 driver = webdriver.Chrome() url" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/posts/selenium%E7%88%AC%E6%95%99%E5%8A%A1%E5%A4%84%E8%AF%BE%E8%A1%A8/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://leyoubaloy.github.io/posts/selenium%E7%88%AC%E6%95%99%E5%8A%A1%E5%A4%84%E8%AF%BE%E8%A1%A8/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-11-16T20:45:35+00:00" />
 <meta property="article:modified_time" content="2020-11-16T20:45:35+00:00" />
 
@@ -18,7 +18,7 @@
 <meta name="application-name" content="孙百乐的编程学习">
 <meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/selenium%E7%88%AC%E6%95%99%E5%8A%A1%E5%A4%84%E8%AF%BE%E8%A1%A8/" /><link rel="prev" href="http://example.org/posts/python%E7%88%AC%E8%99%AB-selenium-request/" /><link rel="next" href="http://example.org/posts/%E9%80%92%E5%BD%92%E6%B3%95%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://leyoubaloy.github.io/posts/selenium%E7%88%AC%E6%95%99%E5%8A%A1%E5%A4%84%E8%AF%BE%E8%A1%A8/" /><link rel="prev" href="http://leyoubaloy.github.io/posts/python%E7%88%AC%E8%99%AB-selenium-request/" /><link rel="next" href="http://leyoubaloy.github.io/posts/%E9%80%92%E5%BD%92%E6%B3%95%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,9 +26,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.org\/posts\/selenium%E7%88%AC%E6%95%99%E5%8A%A1%E5%A4%84%E8%AF%BE%E8%A1%A8\/"
+            "@id": "http:\/\/leyoubaloy.github.io\/posts\/selenium%E7%88%AC%E6%95%99%E5%8A%A1%E5%A4%84%E8%AF%BE%E8%A1%A8\/"
         },"genre": "posts","wordcount":  161 ,
-        "url": "http:\/\/example.org\/posts\/selenium%E7%88%AC%E6%95%99%E5%8A%A1%E5%A4%84%E8%AF%BE%E8%A1%A8\/","datePublished": "2020-11-16T20:45:35+00:00","dateModified": "2020-11-16T20:45:35+00:00","publisher": {
+        "url": "http:\/\/leyoubaloy.github.io\/posts\/selenium%E7%88%AC%E6%95%99%E5%8A%A1%E5%A4%84%E8%AF%BE%E8%A1%A8\/","datePublished": "2020-11-16T20:45:35+00:00","dateModified": "2020-11-16T20:45:35+00:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
