@@ -1,4 +1,4 @@
-baseURL = "http://leyoubaloy.github.io/"
+baseURL = "http://www.leyoubaloy.xyz/"
 # [en, zh-cn, fr, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
 # 网站语言, 仅在这里 CN 大写
@@ -165,7 +165,7 @@ theme = "LoveIt"
     enable = true
     # Google Analytics
     [params.analytics.google]
-      id = "G-QCNX590TTL"
+      id = "G-F8M14S7QCM"
       # 是否匿名化用户 IP
       anonymizeIP = true
 

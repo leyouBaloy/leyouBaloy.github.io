@@ -4,6 +4,7 @@ date: 2022-01-28T15:52:50+08:00
 draft: false
 categories: 
 - 技能分享
+featuredImage: https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg
 ---
 
 ### 为什么抛弃wordpress选择hugo
@@ -151,7 +152,9 @@ for file in os.listdir(path):
             f.write(res)
 ```
 
+### 视频教程：
 
+{{< bilibili BV18S4y1y7jo >}}
 
 
 
