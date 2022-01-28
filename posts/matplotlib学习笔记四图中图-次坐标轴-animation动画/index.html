@@ -8,7 +8,7 @@
         <title>matplotlib学习笔记（四）图中图-次坐标轴-Animation动画 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="matplotlib学习笔记（四）图中图-次坐标轴-Animation动画" />
 <meta property="og:description" content="视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm_id_from=" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.leyoubaloy.xyz/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-03-03T20:46:14+00:00" />
 <meta property="article:modified_time" content="2021-03-03T20:46:14+00:00" />
 
@@ -18,7 +18,7 @@
 <meta name="application-name" content="孙百乐的编程学习">
 <meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://www.leyoubaloy.xyz/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB/" /><link rel="prev" href="http://www.leyoubaloy.xyz/posts/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%A4%A9%E6%98%8E%E7%A1%AE%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/" /><link rel="next" href="http://www.leyoubaloy.xyz/posts/pandas%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%A4%A9%E6%98%8E%E7%A1%AE%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/pandas%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,9 +26,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/www.leyoubaloy.xyz\/posts\/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB\/"
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB\/"
         },"genre": "posts","wordcount":  496 ,
-        "url": "http:\/\/www.leyoubaloy.xyz\/posts\/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB\/","datePublished": "2021-03-03T20:46:14+00:00","dateModified": "2021-03-03T20:46:14+00:00","publisher": {
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB\/","datePublished": "2021-03-03T20:46:14+00:00","dateModified": "2021-03-03T20:46:14+00:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
