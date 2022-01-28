@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>笔记 - 分类 - 孙百乐的编程学习</title>
+        <link>https://leyoubaloy.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
+        <description>笔记 - 分类 - 孙百乐的编程学习</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 05 Dec 2021 23:28:56 &#43;0000</lastBuildDate><atom:link href="https://leyoubaloy.github.io/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>参加ccf csp认证考试有感</title>
+    <link>https://leyoubaloy.github.io/posts/%E5%8F%82%E5%8A%A0ccf-csp%E8%AE%A4%E8%AF%81%E8%80%83%E8%AF%95%E6%9C%89%E6%84%9F/</link>
+    <pubDate>Sun, 05 Dec 2021 23:28:56 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/%E5%8F%82%E5%8A%A0ccf-csp%E8%AE%A4%E8%AF%81%E8%80%83%E8%AF%95%E6%9C%89%E6%84%9F/</guid>
+    <description><![CDATA[起因 从大一我刚做昕哥的学生开始，他就建议刚学完c程序设计的我趁热打铁，去考一个ccf csp认证。我当时对算法不感兴趣，也没参加acm，就没有]]></description>
+</item><item>
+    <title>讲一个能满足和感动自己的故事！</title>
+    <link>https://leyoubaloy.github.io/posts/%E8%AE%B2%E4%B8%80%E4%B8%AA%E8%83%BD%E6%BB%A1%E8%B6%B3%E5%92%8C%E6%84%9F%E5%8A%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%85%E4%BA%8B/</link>
+    <pubDate>Wed, 24 Nov 2021 21:25:56 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/%E8%AE%B2%E4%B8%80%E4%B8%AA%E8%83%BD%E6%BB%A1%E8%B6%B3%E5%92%8C%E6%84%9F%E5%8A%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%85%E4%BA%8B/</guid>
+    <description><![CDATA[今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。 如何写好论文 细节，careful 不要有typo 不要用长句 避免过度修饰，]]></description>
+</item><item>
+    <title>python时间遇到的坑</title>
+    <link>https://leyoubaloy.github.io/posts/python%E6%97%B6%E9%97%B4%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</link>
+    <pubDate>Sun, 22 Aug 2021 15:21:03 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/python%E6%97%B6%E9%97%B4%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</guid>
+    <description><![CDATA[python中与时间相关的标准库有三个： time datetime calendar 吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会 时区坑 查看时间的方式有很多 法一： from datetime import datetime print(datetime.now())]]></description>
+</item><item>
+    <title>linux学习笔记</title>
+    <link>https://leyoubaloy.github.io/posts/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Sun, 08 Aug 2021 11:09:47 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[安装python 1）安装依赖包 安装 “Development tools” 软件组： sudo yum groupinstall &quot;Development tools&quot; 因为 Python 3.7 源文件使用 zlib 格式打包，所以需要安装 zlib 软件包；]]></description>
+</item><item>
+    <title>django笔记进阶</title>
+    <link>https://leyoubaloy.github.io/posts/django%E7%AC%94%E8%AE%B0%E8%BF%9B%E9%98%B6/</link>
+    <pubDate>Sun, 08 Aug 2021 11:08:25 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/django%E7%AC%94%E8%AE%B0%E8%BF%9B%E9%98%B6/</guid>
+    <description><![CDATA[models 写入新数据，返回此条新数据 `new_data = Queue.objects.create(**queue_dic)` 访问新写入数据的id字段 `new_data.id` 查询数据 查询一条数据 `student = Student.objects.get(name='django')` 查看字典类型 `student.__dict__(前后两]]></description>
+</item><item>
+    <title>NGINX学习笔记</title>
+    <link>https://leyoubaloy.github.io/posts/nginx%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Mon, 02 Aug 2021 17:35:49 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/nginx%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[NGINX nginx常用命令 whereis nginx #找到nginx目录 cd /usr/local/nginx/sbin #sbin是存放命令的目录 ./nginx #启动nginx ./nginx -s stop #停止 ./nginx -s quit #优雅退出 ./nginx -s reload #重新加载配置]]></description>
+</item><item>
+    <title>暑期实习项目-onlinejudge在线测试平台</title>
+    <link>https://leyoubaloy.github.io/posts/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%A1%B9%E7%9B%AE-onlinejudge%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95%E5%B9%B3%E5%8F%B0/</link>
+    <pubDate>Wed, 28 Jul 2021 14:58:29 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%A1%B9%E7%9B%AE-onlinejudge%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95%E5%B9%B3%E5%8F%B0/</guid>
+    <description><![CDATA[展示 概括来说，就是用django开发的web项目。相当于一个学生管理系统＋评测系统，开发完成后部署。这个项目，在一起参与暑期实习的很多同学看]]></description>
+</item><item>
+    <title>docker笔记</title>
+    <link>https://leyoubaloy.github.io/posts/docker%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Mon, 19 Jul 2021 20:57:21 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/docker%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[打开docker服务 systemctl start docker docker一直在后台运行 `docker run -dit judge:0.2 /bin/bash` 复制 `docker cp 容器id:容器内路径 目的主机路径` `docker cp /root/testPython/test01/ $(docker ps -q):/usr/src/app` `docker cp /root/testPython/judge_file_o.py $(docker ps -q):/usr/src/app/test01/judge` 容器外执行命]]></description>
+</item><item>
+    <title>《概率论与数理统计》结课总结</title>
+    <link>https://leyoubaloy.github.io/posts/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%BB%93%E8%AF%BE%E6%80%BB%E7%BB%93/</link>
+    <pubDate>Thu, 17 Jun 2021 20:33:22 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%BB%93%E8%AF%BE%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[课程时长 这门课上的不长，就大半个学期。任课教师王老师，是一位教学经验丰富的老师。也是统计学方面的专家，跟着他学习，感觉在很短的时间内学到了很]]></description>
+</item><item>
+    <title>本学期“人工智能”学习结束总结</title>
+    <link>https://leyoubaloy.github.io/posts/%E6%9C%AC%E5%AD%A6%E6%9C%9F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E7%BB%93%E6%9D%9F%E6%80%BB%E7%BB%93/</link>
+    <pubDate>Sun, 13 Jun 2021 23:16:09 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://leyoubaloy.github.io/posts/%E6%9C%AC%E5%AD%A6%E6%9C%9F%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0%E7%BB%93%E6%9D%9F%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[现在人工智能真是火到了极点，各个专业都想转行搞人工智能。作为本来就是人工智能专业的学生，更是要趁早开始。所以，大一下学期，在老师的指导，以及]]></description>
+</item></channel>
+</rss>
