@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>从wordpress迁移到hugo过程分享 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="从wordpress迁移到hugo过程分享" />
+<meta property="og:description" content="为什么抛弃wordpress选择hugo 不用买服务器了 wordpress经常奔溃，易受攻击 hugo编译速度真tm快 有一款钟爱的hugo主题 文" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://leyoubaloy.github.io/posts/%E4%BB%8Ewordpress%E8%BF%81%E7%A7%BB%E5%88%B0hugo%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-28T15:52:50+08:00" />
+<meta property="article:modified_time" content="2022-01-28T15:52:50+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从wordpress迁移到hugo过程分享"/>
+<meta name="twitter:description" content="为什么抛弃wordpress选择hugo 不用买服务器了 wordpress经常奔溃，易受攻击 hugo编译速度真tm快 有一款钟爱的hugo主题 文"/>
+<meta name="application-name" content="孙百乐的编程学习">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://leyoubaloy.github.io/posts/%E4%BB%8Ewordpress%E8%BF%81%E7%A7%BB%E5%88%B0hugo%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/" /><link rel="prev" href="http://leyoubaloy.github.io/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "从wordpress迁移到hugo过程分享",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/leyoubaloy.github.io\/posts\/%E4%BB%8Ewordpress%E8%BF%81%E7%A7%BB%E5%88%B0hugo%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB\/"
+        },"genre": "posts","wordcount":  943 ,
+        "url": "http:\/\/leyoubaloy.github.io\/posts\/%E4%BB%8Ewordpress%E8%BF%81%E7%A7%BB%E5%88%B0hugo%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB\/","datePublished": "2022-01-28T15:52:50+08:00","dateModified": "2022-01-28T15:52:50+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB"> 技能分享 </a><a class="menu-item" href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95"> 书影记录 </a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0"> 随笔杂记 </a><a class="menu-item" href="/categories/"> 文章分类 </a><a class="menu-item" href="/about/"> 关于我 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB" title="">技能分享</a><a class="menu-item" href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95" title="">书影记录</a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0" title="">随笔杂记</a><a class="menu-item" href="/categories/" title="">文章分类</a><a class="menu-item" href="/about/" title="">关于我</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">从wordpress迁移到hugo过程分享</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-28">2022-01-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 943 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E4%BB%8Ewordpress%E8%BF%81%E7%A7%BB%E5%88%B0hugo%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/" class="leancloud_visitors" data-flag-title="从wordpress迁移到hugo过程分享">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#为什么抛弃wordpress选择hugo">为什么抛弃wordpress选择hugo</a></li>
+        <li><a href="#文章迁移">文章迁移</a></li>
+        <li><a href="#修改文章的属性">修改文章的属性</a></li>
+        <li><a href="#图片迁移">图片迁移</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="为什么抛弃wordpress选择hugo">为什么抛弃wordpress选择hugo</h3>
+<ul>
+<li>不用买服务器了</li>
+<li>wordpress经常奔溃，易受攻击</li>
+<li>hugo编译速度真tm快</li>
+<li>有一款钟爱的hugo主题</li>
+</ul>
+<h3 id="文章迁移">文章迁移</h3>
+<p>文章迁移使用一个hexo插件（你没看错，就是hexo插件）。</p>
+<p>首先新建一个hexo博客（用完就可以删了）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ hexo init &lt;folder&gt;
+$ <span class="nb">cd</span> &lt;folder&gt;
+$ npm install
+</code></pre></div><p>再安装 <code>hexo-migrator-wordpress</code> 插件。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ npm install hexo-migrator-wordpress --save
+</code></pre></div><p>在 WordPress 仪表盘中导出数据(“Tools” → “Export” → “WordPress”)</p>
+<p>插件安装完成后，执行下列命令来迁移所有文章。<code>source</code> 可以是 WordPress 导出的文件路径或网址。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ hexo migrate wordpress &lt;source&gt;
+</code></pre></div><p>文章很快就能出现在source/_posts目录下，转换效果特别棒。</p>
+<h3 id="修改文章的属性">修改文章的属性</h3>
+<p>刚迁移完的每篇文章都有yaml配置，像这样：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">年度总结</span><span class="w">
+</span><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="w"></span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;1191&#39;</span><span class="w">
+</span><span class="w"></span><span class="nt">categories</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- - <span class="l">生活</span><span class="w">
+</span><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2022-01-21 11:35:06</span><span class="w">
+</span></code></pre></div><p>其实直接丢到hugo的posts文件夹里也没问题，但咱最好还是自己改一下。比如改成这样：</p>
+<pre tabindex="0"><code>author: sunbaile
+categories:
+- 随笔杂记
+date: 2022-01-21 11:35:06
+draft: false
+title: 年度总结
+</code></pre><p>写了一个python脚本，100多篇文章，1秒钟全搞定（写脚本写了一下午qwq)：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&#34;/Users/sunbaile/myBlog/content/posts&#34;</span>
+<span class="c1"># path = &#34;/Users/sunbaile/myBlog/python脚本&#34;</span>
+<span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">==</span><span class="s2">&#34;.md&#34;</span> <span class="p">:</span> <span class="c1">#判断是否为md文件</span>
+        <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cnt</span><span class="p">,</span><span class="n">file</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">file</span><span class="p">),</span><span class="s2">&#34;r+&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">all_text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="n">yaml_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&#34;---([\s\S]*?)---&#34;</span><span class="p">,</span><span class="n">all_text</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#找到yaml字符串</span>
+        <span class="n">old_dic</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">yaml_text</span><span class="p">)</span>  <span class="c1"># 用yaml库转字典对象</span>
+        <span class="c1"># print(&#34;categories:&#34;,old_dic[&#34;categories&#34;])</span>
+        
+        <span class="n">new_dic</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&#34;title&#34;</span><span class="p">:</span> <span class="n">old_dic</span><span class="p">[</span><span class="s2">&#34;title&#34;</span><span class="p">],</span>
+            <span class="s2">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;sunbaile&#34;</span><span class="p">,</span>
+            <span class="s2">&#34;draft&#34;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&#34;categories&#34;</span><span class="p">:</span> <span class="n">old_dic</span><span class="p">[</span><span class="s1">&#39;categories&#39;</span><span class="p">],</span>
+            <span class="s2">&#34;date&#34;</span><span class="p">:</span> <span class="n">old_dic</span><span class="p">[</span><span class="s2">&#34;date&#34;</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="c1"># print(&#34;new_dic&#34;,new_dic)</span>
+        <span class="n">yaml_res</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">new_dic</span><span class="p">,</span><span class="n">allow_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>    <span class="c1">#用yaml库将字典解析为yaml字符串</span>
+        <span class="c1"># print(&#34;***&#34;,yaml_res,&#34;***&#34;)</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="n">all_text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">yaml_text</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="o">+</span><span class="n">yaml_res</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">file</span><span class="p">),</span><span class="s2">&#34;w+&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</code></pre></div><h3 id="图片迁移">图片迁移</h3>
+<p>如果你打算用github+jsdelivr做图床，迁移图片更简单。思路就是先从服务器上把wordpress的wp-content目录（里面有个uploads文件夹存了你所有的图片）下载下来，然后原封不动的丢到github仓库里，最后把文章中的路径改一下就可以啦。</p>
+<blockquote>
+<p>注意：每张图片都是由<code>固定链接</code>+<code>路径</code>+<code>名字</code>组成。</p>
+</blockquote>
+<p>比如说原来文章的图片链接是这样的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">![](https://www.leyoubaloy.xyz/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)
+或者是这样的：
+![](/wp-content/uploads/2021/02/image-1-1024x431.png)
+</code></pre></div><p>要替换成这样：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)
+和这样
+![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/02/image-1-1024x431.png)
+</code></pre></div><p>那肯定还是用python脚本啦，python，yyds!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&#34;/Users/sunbaile/myBlog/content/posts&#34;</span>
+<span class="c1"># path = &#34;/Users/sunbaile/myBlog/python脚本&#34;</span>
+<span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">file</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">==</span><span class="s2">&#34;.md&#34;</span> <span class="p">:</span>
+        <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cnt</span><span class="p">,</span><span class="n">file</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">file</span><span class="p">),</span><span class="s2">&#34;r+&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">all_text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&#34;\((\/wp-content\/uploads)&#34;</span><span class="p">,</span><span class="s2">&#34;(https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/&#34;</span><span class="p">,</span><span class="n">all_text</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;www.leyoubaloy.xyz&#34;</span><span class="p">,</span><span class="s2">&#34;cdn.jsdelivr.net/gh/leyouBaloy/mypic&#34;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">file</span><span class="p">),</span><span class="s2">&#34;w+&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-01-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/" class="prev" rel="prev" title="gitee webhooks&#43;nodejs实现自动拉取代码"><i class="fas fa-angle-left fa-fw"></i>gitee webhooks&#43;nodejs实现自动拉取代码</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">鲁ICP备2020039365号-1</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"7d4uuBoHJjcoTArKAPbPhRVC-gzGzoHsz","appKey":"6KLJGiDyLqts0JE077ta5vKm","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-QCNX590TTL', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-QCNX590TTL" async></script></body>
+</html>
