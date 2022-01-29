@@ -26,7 +26,7 @@ theme = "LoveIt"
       weight = 1
   [[menu.main]]
     identifier = "tech"
-    pre = ""
+    pre = "<i class='fas fa-desktop'></i>"
     post = ""
     name = "技能分享"
     url = "/categories/技能分享"
@@ -34,7 +34,7 @@ theme = "LoveIt"
     weight = 2
   [[menu.main]]
     identifier = "books"
-    pre = ""
+    pre = "<i class='fas fa-book'></i>"
     post = ""
     name = "书影记录"
     url = "/categories/书影记录"
@@ -61,7 +61,7 @@ theme = "LoveIt"
   #   weight = 3
   [[menu.main]]
     identifier = "free"
-    pre = ""
+    pre = "<i class='fas fa-pen-nib'></i>"
     post = ""
     name = "随笔杂记"
     url = "/categories/随笔杂记"
@@ -69,7 +69,7 @@ theme = "LoveIt"
     weight = 4
   [[menu.main]]
     identifier = "categories"
-    pre = ""
+    pre = "<i class='fas fa-archive'></i>"
     post = ""
     name = "文章分类"
     url = "/categories/"
