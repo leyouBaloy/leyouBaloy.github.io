@@ -13,19 +13,12 @@
                 <img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg" referrerpolicy="no-referrer">
             </div>为什么抛弃wordpress选择hugo 不用买服务器了 wordpress经常奔溃，易受攻击 hugo编译速度真tm快 有一款钟爱的hugo主题 文]]></description>
 </item><item>
-    <title>gitee webhooks&#43;nodejs实现自动拉取代码</title>
+    <title>gitee/github webhooks&#43;nodejs实现自动拉取代码</title>
     <link>https://www.leyoubaloy.xyz/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
     <pubDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
     <description><![CDATA[需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都]]></description>
-</item><item>
-    <title>python脚本批量替换hexo博客中的图片链接</title>
-    <link>https://www.leyoubaloy.xyz/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</link>
-    <pubDate>Sat, 15 Jan 2022 23:10:24 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</guid>
-    <description><![CDATA[前言 最近想把wordpress上的文章迁移到hexo，图片从原服务器迁移到GitHub图床。所以文章中的图片需要重新下载，上传到GitHub]]></description>
 </item><item>
     <title>数值计算方法</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</link>
@@ -75,5 +68,12 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8D%E6%94%AF%E6%8C%81getusermedia/</guid>
     <description><![CDATA[现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支]]></description>
+</item><item>
+    <title>certbot自动配置nginx给wordpress站点加https</title>
+    <link>https://www.leyoubaloy.xyz/posts/certbot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AEnginx%E7%BB%99wordpress%E7%AB%99%E7%82%B9%E5%8A%A0https/</link>
+    <pubDate>Wed, 08 Sep 2021 22:42:40 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/certbot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AEnginx%E7%BB%99wordpress%E7%AB%99%E7%82%B9%E5%8A%A0https/</guid>
+    <description><![CDATA[思路 安装snap 安装certbot 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置]]></description>
 </item></channel>
 </rss>

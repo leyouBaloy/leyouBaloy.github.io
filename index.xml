@@ -15,7 +15,7 @@
                 <img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg" referrerpolicy="no-referrer">
             </div>为什么抛弃wordpress选择hugo 不用买服务器了 wordpress经常奔溃，易受攻击 hugo编译速度真tm快 有一款钟爱的hugo主题 文]]></description>
 </item><item>
-    <title>gitee webhooks&#43;nodejs实现自动拉取代码</title>
+    <title>gitee/github webhooks&#43;nodejs实现自动拉取代码</title>
     <link>https://www.leyoubaloy.xyz/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
     <pubDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</pubDate>
     <author>作者</author>
@@ -42,13 +42,6 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E8%B7%9F%E5%9F%BA%E5%8F%8B%E7%8E%A9%E5%8F%8C%E4%BA%BA%E6%88%90%E8%A1%8C%E8%BF%99%E8%BE%88%E5%AD%90%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E8%BF%87/</guid>
     <description><![CDATA[今天跟基友探店，找到一家主机游戏。 我俩对着超大屏幕玩双人成行玩一个小时笑一个小时。 老板说别人玩这个都对骂，就你俩一直笑。 我跟老板说这才是男人]]></description>
-</item><item>
-    <title>python脚本批量替换hexo博客中的图片链接</title>
-    <link>https://www.leyoubaloy.xyz/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</link>
-    <pubDate>Sat, 15 Jan 2022 23:10:24 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/python%E8%84%9A%E6%9C%AC%E6%89%B9%E9%87%8F%E6%9B%BF%E6%8D%A2hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</guid>
-    <description><![CDATA[前言 最近想把wordpress上的文章迁移到hexo，图片从原服务器迁移到GitHub图床。所以文章中的图片需要重新下载，上传到GitHub]]></description>
 </item><item>
     <title>把功夫用在平时</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%8A%8A%E5%8A%9F%E5%A4%AB%E7%94%A8%E5%9C%A8%E5%B9%B3%E6%97%B6/</link>
@@ -77,5 +70,14 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%AD%A6%E4%BC%9A%E6%8B%A5%E6%9C%89%E7%88%B1%E7%9A%84%E8%83%BD%E5%8A%9B/</guid>
     <description><![CDATA[从小到大，我都生活在家人为我打造的蜜罐温床里。他们爱我，处处为我考虑，给予我他们所拥有的一切，而我一味的索取，从不想过回报，把被爱当作了一种]]></description>
+</item><item>
+    <title>《史蒂夫·乔布斯传》读书笔记</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Thu, 16 Dec 2021 22:57:46 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/12/image-1-1024x344.png" referrerpolicy="no-referrer">
+            </div>图书简介 《史蒂夫·乔布斯传》是美国作家沃尔特·艾萨克森为苹果公司创始人史蒂夫·乔布斯所作的传记，记录了乔布斯从童年开始，到卸任苹果公司CEO]]></description>
 </item></channel>
 </rss>
