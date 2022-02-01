@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 28 Jan 2022 15:52:50 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 01 Feb 2022 21:52:23 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>《半泽直树》观后有感</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%8D%8A%E6%B3%BD%E7%9B%B4%E6%A0%91%E8%A7%82%E5%90%8E%E6%9C%89%E6%84%9F/</link>
+    <pubDate>Tue, 01 Feb 2022 21:52:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%8D%8A%E6%B3%BD%E7%9B%B4%E6%A0%91%E8%A7%82%E5%90%8E%E6%9C%89%E6%84%9F/</guid>
+    <description><![CDATA[半泽直树 半泽直树是日本电视剧《半泽直树》中的主人公。半泽的家族经营了一家小公司，在半泽年幼时，日本遇到了经济泡沫，公司急需贷款，但银行对此不]]></description>
+</item><item>
     <title>从wordpress迁移到hugo过程分享</title>
     <link>https://www.leyoubaloy.xyz/posts/%E4%BB%8Ewordpress%E8%BF%81%E7%A7%BB%E5%88%B0hugo%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/</link>
     <pubDate>Fri, 28 Jan 2022 15:52:50 &#43;0800</pubDate>
@@ -70,14 +77,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%AD%A6%E4%BC%9A%E6%8B%A5%E6%9C%89%E7%88%B1%E7%9A%84%E8%83%BD%E5%8A%9B/</guid>
     <description><![CDATA[从小到大，我都生活在家人为我打造的蜜罐温床里。他们爱我，处处为我考虑，给予我他们所拥有的一切，而我一味的索取，从不想过回报，把被爱当作了一种]]></description>
-</item><item>
-    <title>《史蒂夫·乔布斯传》读书笔记</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Thu, 16 Dec 2021 22:57:46 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%8F%B2%E8%92%82%E5%A4%AB%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/12/image-1-1024x344.png" referrerpolicy="no-referrer">
-            </div>图书简介 《史蒂夫·乔布斯传》是美国作家沃尔特·艾萨克森为苹果公司创始人史蒂夫·乔布斯所作的传记，记录了乔布斯从童年开始，到卸任苹果公司CEO]]></description>
 </item></channel>
 </rss>
