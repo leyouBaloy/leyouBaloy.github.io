@@ -50,7 +50,7 @@ theme = "LoveIt"
     pre = "<i class='fas fa-book'></i>"
     post = ""
     name = "书影记录"
-    url = "/categories/书影记录"
+    url = "/bookshelf"
     title = ""
     weight = 3
   # [[menu.main]]
