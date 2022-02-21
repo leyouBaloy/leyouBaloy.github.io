@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>又到了立flag的时候啦 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="又到了立flag的时候啦" />
-<meta property="og:description" content="今天是大二下学期开学第一天。恭喜我，又是孤单一人了。既然是一个人，那就要自己对自己好好负责咯，一个人的话，立的flag其实更能坚持下去！ 把自" />
+        <title>租用游艇——动态规划 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="租用游艇——动态规划" />
+<meta property="og:description" content="洛谷P1359 租用游艇 https://www.luogu.com.cn/problem/solution/P1359 题目描述 长江游艇俱乐部在长江上设置了 nn 个游艇出租站 1,2,\cdots,n1,2,⋯,n。游客可在这些游艇出租站租用" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%8F%88%E5%88%B0%E4%BA%86%E7%AB%8Bflag%E7%9A%84%E6%97%B6%E5%80%99%E5%95%A6/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-02-21T17:46:45+08:00" />
-<meta property="article:modified_time" content="2022-02-21T17:46:45+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E7%A7%9F%E7%94%A8%E6%B8%B8%E8%89%87%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-21T20:19:11+08:00" />
+<meta property="article:modified_time" content="2022-02-21T20:19:11+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="又到了立flag的时候啦"/>
-<meta name="twitter:description" content="今天是大二下学期开学第一天。恭喜我，又是孤单一人了。既然是一个人，那就要自己对自己好好负责咯，一个人的话，立的flag其实更能坚持下去！ 把自"/>
+<meta name="twitter:title" content="租用游艇——动态规划"/>
+<meta name="twitter:description" content="洛谷P1359 租用游艇 https://www.luogu.com.cn/problem/solution/P1359 题目描述 长江游艇俱乐部在长江上设置了 nn 个游艇出租站 1,2,\cdots,n1,2,⋯,n。游客可在这些游艇出租站租用"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%8F%88%E5%88%B0%E4%BA%86%E7%AB%8Bflag%E7%9A%84%E6%97%B6%E5%80%99%E5%95%A6/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E4%B8%8E%E8%87%AD%E5%AE%9D%E5%92%8C%E5%88%98%E9%91%AB%E5%AE%87%E7%9A%84%E5%BF%AB%E4%B9%90%E5%81%87%E6%9C%9F/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E7%A7%9F%E7%94%A8%E6%B8%B8%E8%89%87%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E7%A7%9F%E7%94%A8%E6%B8%B8%E8%89%87%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%8F%88%E5%88%B0%E4%BA%86%E7%AB%8Bflag%E7%9A%84%E6%97%B6%E5%80%99%E5%95%A6/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "又到了立flag的时候啦",
+        "headline": "租用游艇——动态规划",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%8F%88%E5%88%B0%E4%BA%86%E7%AB%8Bflag%E7%9A%84%E6%97%B6%E5%80%99%E5%95%A6\/"
-        },"genre": "posts","wordcount":  991 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%8F%88%E5%88%B0%E4%BA%86%E7%AB%8Bflag%E7%9A%84%E6%97%B6%E5%80%99%E5%95%A6\/","datePublished": "2022-02-21T17:46:45+08:00","dateModified": "2022-02-21T17:46:45+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E7%A7%9F%E7%94%A8%E6%B8%B8%E8%89%87%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92\/"
+        },"genre": "posts","wordcount":  553 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E7%A7%9F%E7%94%A8%E6%B8%B8%E8%89%87%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92\/","datePublished": "2022-02-21T20:19:11+08:00","dateModified": "2022-02-21T20:19:11+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">又到了立flag的时候啦</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>随笔杂记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-21">2022-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 991 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E5%8F%88%E5%88%B0%E4%BA%86%E7%AB%8Bflag%E7%9A%84%E6%97%B6%E5%80%99%E5%95%A6/" class="leancloud_visitors" data-flag-title="又到了立flag的时候啦">
+        </div><article class="page single"><h1 class="single-title animated flipInX">租用游艇——动态规划</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-21">2022-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 553 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E7%A7%9F%E7%94%A8%E6%B8%B8%E8%89%87%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="leancloud_visitors" data-flag-title="租用游艇——动态规划">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,40 +113,54 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#把自己打扮的干净整洁">把自己打扮的干净整洁</a></li>
-    <li><a href="#做算法题">做算法题</a></li>
-    <li><a href="#继续锻炼">继续锻炼</a></li>
-    <li><a href="#读书并写读书笔记">读书并写读书笔记</a></li>
-    <li><a href="#背单词">背单词</a></li>
+    <li><a href="#题目描述">题目描述</a></li>
+    <li><a href="#输入格式">输入格式</a></li>
+    <li><a href="#输出格式">输出格式</a></li>
+    <li><a href="#输入输出样例">输入输出样例</a></li>
+    <li><a href="#说明提示">说明/提示</a></li>
+    <li><a href="#解法">解法</a></li>
+    <li><a href="#感受">感受</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>今天是大二下学期开学第一天。恭喜我，又是孤单一人了。既然是一个人，那就要自己对自己好好负责咯，一个人的话，立的flag其实更能坚持下去！</p>
-<h2 id="把自己打扮的干净整洁">把自己打扮的干净整洁</h2>
-<p>把自己打扮的干净整洁是我这学期立的第一个flag。每次我从学校回家时我妈都会说一句：“你怎么搞糟的这么脏！” 上学期我确实不注重卫生，一天只刷一次牙，洗脸不用毛巾也不用洗面奶，内衣攒够一盆才洗&hellip;不脏才怪，我才20岁，看起来却像28岁，走进店里营业员叫我 “先生您好”。造成这个的原因有两个，一方面是我缺少生活经验，另一方面是我太懒。</p>
-<ul>
-<li>用白泥面膜，好好洗脸。</li>
-<li>衣服挂在衣柜里，不要随便扔床上或者板凳上。</li>
-<li>勤打热水，勤洗衣服。</li>
-</ul>
-<h2 id="做算法题">做算法题</h2>
-<p>每次一想到算法我都特别愧疚。大一没进入acm社团，大二csp认证没考过，数据结构学的也一般。算法可能是区分普通程序员和高级程序员的最重要指标，可我却一次又一次错过提升算法能力的机会。</p>
-<p>定个小目标：</p>
-<ul>
-<li>每次去图书馆自习的时候做一道算法题。</li>
-</ul>
-<p>这个目标只要稍微踮一踮脚尖就能够得到，我不想把目标定的太高让自己很快就放弃。为什么是去图书馆呢？因为这学期课很少，不在上课的话，我基本都会去图书馆，在图书馆呆的时间应该会非常长。</p>
-<h2 id="继续锻炼">继续锻炼</h2>
-<p>我还记得我上大学第一堂体育课，那个教篮球的白发苍苍的老教练跟我们说：“大学四年，你呆的最多的地方应该是图书馆和体育场。” 如果图书馆能按去的次数评等级的话，那我一定是黄金vip。体育场也要坚持去呀。表哥是我非常崇拜的人，他也鼓励我让我多锻炼。我最喜欢的锻炼就是跑步，跑步的时候大脑放空，跑完3公里，大汗淋漓，感觉自己的身心都得到了净化，感觉自己更强了，更有力量了，就像被充了电一样。</p>
-<ul>
-<li>这学期的目标是跑150公里。</li>
-</ul>
-<h2 id="读书并写读书笔记">读书并写读书笔记</h2>
-<ul>
-<li>这一年要读25本书。</li>
-</ul>
-<p>读书既是对自己长期的投资，也是消磨时间的好方法。光读书不做笔记就像光吃饭不消化一样没用，不能陷入只读书的死循环。一本书带给人的影响是暂时的，读完之后记忆会慢慢淡忘，但是一旦拿起笔记录下来，那书中的知识才会悄无声息的变成自己的知识。书读的好，不代表读书笔记写的好，但读书笔记写的好，书读的一定好。因此，我以后要花很多精力放在写读书笔记上面，力求写出高质量的读书笔记。</p>
-<h2 id="背单词">背单词</h2>
-<p>这个就没啥好说的，以后读论文，写论文都是全英文，英文太重要了。况且英语也不是一天两天学成的，每天背单词就对了。另外，用百词斩太被动了，墨墨背单词比较主动，更有用。</p>
+            </div><div class="content" id="content"><blockquote>
+<p>洛谷P1359 租用游艇</p>
+<p><a href="https://www.luogu.com.cn/problem/solution/P1359" target="_blank" rel="noopener noreffer">https://www.luogu.com.cn/problem/solution/P1359</a></p>
+</blockquote>
+<h2 id="题目描述">题目描述</h2>
+<p>长江游艇俱乐部在长江上设置了 n<em>n</em> 个游艇出租站 1,2,\cdots,n1,2,⋯,<em>n</em>。游客可在这些游艇出租站租用游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站 i<em>i</em> 到游艇出租站 j<em>j</em> 之间的租金为 r(i,j)<em>r</em>(<em>i</em>,<em>j</em>)（1\le i\lt j\le n1≤<em>i</em>&lt;<em>j</em>≤<em>n</em>）。试设计一个算法，计算出从游艇出租站 11 到游艇出租站 n<em>n</em> 所需的最少租金。</p>
+<h2 id="输入格式">输入格式</h2>
+<p>第一行中有一个正整数 n<em>n</em>，表示有 n<em>n</em> 个游艇出租站。接下来的 n-1<em>n</em>−1 行是一个半矩阵 r(i,j)<em>r</em>(<em>i</em>,<em>j</em>)（1\le i&lt;j\le n1≤<em>i</em>&lt;<em>j</em>≤<em>n</em>）。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>输出计算出的从游艇出租站 11 到游艇出租站 n<em>n</em> 所需的最少租金。</p>
+<h2 id="输入输出样例">输入输出样例</h2>
+<p><strong>输入 #1</strong>复制</p>
+<pre tabindex="0"><code>3
+5 15
+7
+</code></pre><p><strong>输出 #1</strong>复制</p>
+<pre tabindex="0"><code>12
+</code></pre><h2 id="说明提示">说明/提示</h2>
+<p>n\le 200<em>n</em>≤200，保证计算过程中任何时刻数值都不超过 10^6106。</p>
+<h2 id="解法">解法</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">201</span><span class="p">][</span><span class="mi">201</span><span class="p">],</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">dp</span><span class="p">[</span><span class="mi">201</span><span class="p">];</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+		<span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mf">1e9</span><span class="p">;</span><span class="c1">//初始化数组dp，使它
+</span><span class="c1"></span>	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="c1">//跑n上流的中转站
+</span><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="c1">//跑i下流的所有中转站
+</span><span class="c1"></span>			<span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span><span class="c1">//记录
+</span><span class="c1"></span>	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="感受">感受</h2>
+<p>第一次做动态规划，没啥思路，代码是复制别人的题解，代码很巧妙，当n=3时，dp[3]=0，从后往前找最短路径，使得代码很简洁。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -170,8 +184,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E4%B8%8E%E8%87%AD%E5%AE%9D%E5%92%8C%E5%88%98%E9%91%AB%E5%AE%87%E7%9A%84%E5%BF%AB%E4%B9%90%E5%81%87%E6%9C%9F/" class="prev" rel="prev" title="与臭宝和刘鑫宇的快乐假期"><i class="fas fa-angle-left fa-fw"></i>与臭宝和刘鑫宇的快乐假期</a>
-            <a href="/posts/%E7%A7%9F%E7%94%A8%E6%B8%B8%E8%89%87%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="next" rel="next" title="租用游艇——动态规划">租用游艇——动态规划<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%8F%88%E5%88%B0%E4%BA%86%E7%AB%8Bflag%E7%9A%84%E6%97%B6%E5%80%99%E5%95%A6/" class="prev" rel="prev" title="又到了立flag的时候啦"><i class="fas fa-angle-left fa-fw"></i>又到了立flag的时候啦</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
