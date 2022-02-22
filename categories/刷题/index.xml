@@ -3,7 +3,14 @@
         <title>刷题 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/</link>
         <description>刷题 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 21 Feb 2022 20:19:11 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 22 Feb 2022 16:42:16 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>01背包问题——动态规划</title>
+    <link>https://www.leyoubaloy.xyz/posts/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+    <pubDate>Tue, 22 Feb 2022 16:42:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+    <description><![CDATA[题目来自：https://www.acwing.com/problem/search/1/?csrfmiddlewaretoken=UwJf]]></description>
+</item><item>
     <title>租用游艇——动态规划</title>
     <link>https://www.leyoubaloy.xyz/posts/%E7%A7%9F%E7%94%A8%E6%B8%B8%E8%89%87%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
     <pubDate>Mon, 21 Feb 2022 20:19:11 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/requests%E7%88%AC%E8%A1%A8%E6%83%85%E5%8C%85/</guid>
     <description><![CDATA[需要的库： !pip install lxml !pip install request !pip install pathlib 代码： import time #代码合集并修改为下载多页表情 import requests from bs4 import BeautifulSoup from pathlib import Path for i in range(1,4): url = f'https://www.fabiaoqing.com/biaoqing/lists/page/{i}.html' response = requests.get(url) time.sleep(3) soup = BeautifulSoup(response.content,'lxml') img_list = soup.find_all('img', class_=&quot;ui image lazy&quot;) for index,img in enumerate(img_list): image =]]></description>
-</item><item>
-    <title>判断回文数</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%88%A4%E6%96%AD%E5%9B%9E%E6%96%87%E6%95%B0/</link>
-    <pubDate>Fri, 04 Dec 2020 09:05:15 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%88%A4%E6%96%AD%E5%9B%9E%E6%96%87%E6%95%B0/</guid>
-    <description><![CDATA[一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++]]></description>
 </item></channel>
 </rss>
