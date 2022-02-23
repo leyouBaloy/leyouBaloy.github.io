@@ -3,7 +3,14 @@
         <title>所有文章 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 22 Feb 2022 16:42:16 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 23 Feb 2022 19:24:06 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>完全背包问题——动态规划——这道题解是认真写的qwq</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+    <pubDate>Wed, 23 Feb 2022 19:24:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+    <description><![CDATA[完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。 题目链接：https://www.acwing.com/problem/c]]></description>
+</item><item>
     <title>01背包问题——动态规划</title>
     <link>https://www.leyoubaloy.xyz/posts/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
     <pubDate>Tue, 22 Feb 2022 16:42:16 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
     <description><![CDATA[需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都]]></description>
-</item><item>
-    <title>年度总结</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
-    <pubDate>Fri, 21 Jan 2022 11:35:06 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[读书和锻炼 书大概看了15本。书\影评10个。 书看的多没用，写书评才是有用的，明年多写书评。 跑步202公里。明年继续。 明年的计划 没什么计划， 就]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,14 @@
         <title>刷题 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/</link>
         <description>刷题 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 22 Feb 2022 16:42:16 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 23 Feb 2022 19:24:06 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>完全背包问题——动态规划——这道题解是认真写的qwq</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+    <pubDate>Wed, 23 Feb 2022 19:24:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+    <description><![CDATA[完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。 题目链接：https://www.acwing.com/problem/c]]></description>
+</item><item>
     <title>01背包问题——动态规划</title>
     <link>https://www.leyoubaloy.xyz/posts/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
     <pubDate>Tue, 22 Feb 2022 16:42:16 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%AD%97%E7%AC%A6%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6-substr-insert-find/</guid>
     <description><![CDATA[题目描述 你需要开发一款文字处理软件。最开始时输入一个字符串（不超过 100 个字符）作为初始文档。可以认为文档开头是第 0 个字符。需要支持以下操作： 1]]></description>
-</item><item>
-    <title>requests爬表情包</title>
-    <link>https://www.leyoubaloy.xyz/posts/requests%E7%88%AC%E8%A1%A8%E6%83%85%E5%8C%85/</link>
-    <pubDate>Sun, 13 Dec 2020 17:23:02 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/requests%E7%88%AC%E8%A1%A8%E6%83%85%E5%8C%85/</guid>
-    <description><![CDATA[需要的库： !pip install lxml !pip install request !pip install pathlib 代码： import time #代码合集并修改为下载多页表情 import requests from bs4 import BeautifulSoup from pathlib import Path for i in range(1,4): url = f'https://www.fabiaoqing.com/biaoqing/lists/page/{i}.html' response = requests.get(url) time.sleep(3) soup = BeautifulSoup(response.content,'lxml') img_list = soup.find_all('img', class_=&quot;ui image lazy&quot;) for index,img in enumerate(img_list): image =]]></description>
 </item></channel>
 </rss>
