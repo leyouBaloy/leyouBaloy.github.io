@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 author: 孙百乐
 date: {{ .Date }}
-draft: true
+draft: false
 categories: 
 - 随笔杂记
 ---
