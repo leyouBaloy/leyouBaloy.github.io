@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 23 Feb 2022 19:24:06 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 25 Feb 2022 18:49:18 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>找到小镇的法官——图论入门</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</link>
+    <pubDate>Fri, 25 Feb 2022 18:49:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</guid>
+    <description><![CDATA[题目 来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/find-the-town-jud]]></description>
+</item><item>
     <title>完全背包问题——动态规划——这道题解是认真写的qwq</title>
     <link>https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
     <pubDate>Wed, 23 Feb 2022 19:24:06 &#43;0800</pubDate>
@@ -70,12 +77,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg" referrerpolicy="no-referrer">
             </div>为什么抛弃wordpress选择hugo 不用买服务器了 wordpress经常奔溃，易受攻击 hugo编译速度真tm快 有一款钟爱的hugo主题 文]]></description>
-</item><item>
-    <title>gitee/github webhooks&#43;nodejs实现自动拉取代码</title>
-    <link>https://www.leyoubaloy.xyz/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
-    <pubDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
-    <description><![CDATA[需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都]]></description>
 </item></channel>
 </rss>
