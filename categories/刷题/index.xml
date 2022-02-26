@@ -3,7 +3,14 @@
         <title>刷题 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/</link>
         <description>刷题 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 25 Feb 2022 18:49:18 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 26 Feb 2022 19:22:16 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>存在重复元素——排序、哈希</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/</link>
+    <pubDate>Sat, 26 Feb 2022 19:22:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/</guid>
+    <description><![CDATA[题目 该题来自：https://leetcode-cn.com/problems/contains-duplicate/ [217. 存在重复元素] 难度简]]></description>
+</item><item>
     <title>找到小镇的法官——图论入门</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</link>
     <pubDate>Fri, 25 Feb 2022 18:49:18 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8sort%E7%AE%97%E6%B3%95%E5%AF%B9%E5%90%91%E9%87%8F%E5%85%83%E7%B4%A0%E6%8E%92%E5%88%97/</guid>
     <description><![CDATA[#include &lt;bits/stdc++.h&gt; using namespace std; int main() { srand(time(NULL)); vector&lt;int&gt;v; int i; for(int i=0;i&lt;10;i++) { v.push_back(rand()%100); } for(i=0;i&lt;10;i++) { cout &lt;&lt; v[i] &lt;&lt; &quot; &quot;; } cout &lt;&lt; endl; sort(v.begin(),v.end()); //升序排列 for(i=0;i&lt;10;i++) { cout &lt;&lt; v[i] &lt;&lt; ' '; } cout &lt;&lt; endl; return 0; } 结果： 13 32 13 85 48 99 36 53 18 16 13 13 16 18 32 36]]></description>
-</item><item>
-    <title>使用reverse反向排列算法</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8reverse%E5%8F%8D%E5%90%91%E6%8E%92%E5%88%97%E7%AE%97%E6%B3%95/</link>
-    <pubDate>Mon, 28 Dec 2020 16:21:28 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8reverse%E5%8F%8D%E5%90%91%E6%8E%92%E5%88%97%E7%AE%97%E6%B3%95/</guid>
-    <description><![CDATA[#include &lt;bits/stdc++.h&gt; using namespace std; int main() { srand(time(NULL)); vector&lt;int&gt;v(10); for(int i=0;i&lt;10;i++) { v[i] = rand()%100; } vector&lt;int&gt;::iterator it; for(it=v.begin();it!=v.end();it++) { cout &lt;&lt; *it &lt;&lt; &quot; &quot;; } cout &lt;&lt; endl; reverse(v.begin(),v.end()); for(it=v.begin();it!=v.end();it++) { cout &lt;&lt; *it &lt;&lt; ' '; } cout &lt;&lt; endl; return 0; } 运行结果 94 66 52 71 33 43 91 59 78 69 69 78 59 91 43 33 71 52 66]]></description>
 </item></channel>
 </rss>

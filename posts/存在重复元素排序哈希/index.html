@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>找到小镇的法官——图论入门 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="找到小镇的法官——图论入门" />
-<meta property="og:description" content="题目 来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/find-the-town-jud" />
+        <title>存在重复元素——排序、哈希 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="存在重复元素——排序、哈希" />
+<meta property="og:description" content="题目 该题来自：https://leetcode-cn.com/problems/contains-duplicate/ [217. 存在重复元素] 难度简" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-02-25T18:49:18+08:00" />
-<meta property="article:modified_time" content="2022-02-25T18:49:18+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-26T19:22:16+08:00" />
+<meta property="article:modified_time" content="2022-02-26T19:22:16+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="找到小镇的法官——图论入门"/>
-<meta name="twitter:description" content="题目 来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/find-the-town-jud"/>
+<meta name="twitter:title" content="存在重复元素——排序、哈希"/>
+<meta name="twitter:description" content="题目 该题来自：https://leetcode-cn.com/problems/contains-duplicate/ [217. 存在重复元素] 难度简"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "找到小镇的法官——图论入门",
+        "headline": "存在重复元素——排序、哈希",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8\/"
-        },"genre": "posts","wordcount":  593 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8\/","datePublished": "2022-02-25T18:49:18+08:00","dateModified": "2022-02-25T18:49:18+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C\/"
+        },"genre": "posts","wordcount":  1061 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C\/","datePublished": "2022-02-26T19:22:16+08:00","dateModified": "2022-02-26T19:22:16+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">找到小镇的法官——图论入门</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">存在重复元素——排序、哈希</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-25">2022-02-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 593 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" class="leancloud_visitors" data-flag-title="找到小镇的法官——图论入门">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-26">2022-02-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1061 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/" class="leancloud_visitors" data-flag-title="存在重复元素——排序、哈希">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,60 +113,88 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题目">题目</a></li>
+    <li><a href="#题目">题目</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
     <li><a href="#题解">题解</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
 <blockquote>
-<p>来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/find-the-town-judge
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>该题来自：https://leetcode-cn.com/problems/contains-duplicate/</p>
 </blockquote>
-<p>小镇里有 n 个人，按从 1 到 n 的顺序编号。传言称，这些人中有一个暗地里是小镇法官。</p>
-<p>如果小镇法官真的存在，那么：</p>
-<p>小镇法官不会信任任何人。
-每个人（除了小镇法官）都信任这位小镇法官。
-只有一个人同时满足属性 1 和属性 2 。
-给你一个数组 trust ，其中 trust[i] = [ai, bi] 表示编号为 ai 的人信任编号为 bi 的人。</p>
-<p>如果小镇法官存在并且可以确定他的身份，请返回该法官的编号；否则，返回 -1 。</p>
-<p>示例 1：</p>
-<p>输入：n = 2, trust = [[1,2]]
-输出：2
-示例 2：</p>
-<p>输入：n = 3, trust = [[1,3],[2,3]]
-输出：3
-示例 3：</p>
-<p>输入：n = 3, trust = [[1,3],[2,3],[3,1]]
-输出：-1</p>
+<h4 id="217-存在重复元素">[217. 存在重复元素]</h4>
+<p>难度简单635收藏分享切换为英文接收动态反馈</p>
+<p>给你一个整数数组 <code>nums</code> 。如果任一值在数组中出现 <strong>至少两次</strong> ，返回 <code>true</code> ；如果数组中每个元素互不相同，返回 <code>false</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre tabindex="0"><code>输入：nums = [1,2,3,1]
+输出：true
+</code></pre><p><strong>示例 2：</strong></p>
+<pre tabindex="0"><code>输入：nums = [1,2,3,4]
+输出：false
+</code></pre><p><strong>示例 3：</strong></p>
+<pre tabindex="0"><code>输入：nums = [1,1,1,3,3,4,3,2,4,2]
+输出：true
+</code></pre><p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
+</ul>
 <h2 id="题解">题解</h2>
-<p>先吐槽一下：今天是开学第五天，是我第五次来图书馆。没办法，像我这种生活极不充实的人就只能在图书馆消磨时光。</p>
-<p>回到正题：这是一道图论入门题目。把小镇上的每个人作为一个节点，信任关系作为边，那么所谓的“法官”其实就是出度为0，入度为n-1的节点。所以解体思路就是通过遍历trust数组把每个节点的出度和入度统计出来就可以啦。</p>
+<blockquote>
+<p>作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/contains-duplicate/solution/cun-zai-zhong-fu-yuan-su-by-leetcode-sol-iedd/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<p>法一：最慢的方法，把nums中的每个元素都拿出来，遍历nums数组找一下看有没有跟它相同的元素。时间复杂度O(n^2)</p>
+<p>法二：用sort函数排个序，相同的元素会被排到一块儿，遍历一遍nums数组就找到了。思路很简单，但还是不够优雅。时间复杂度O(nlogn)</p>
+<blockquote>
+<p><strong>补充一下c++中的sort函数：</strong></p>
+<p>sort(first_pointer,first_pointer+n,cmp)</p>
+<p>该函数可以给数组，或者链表list、向量排序。</p>
+<p>实现原理：sort并不是简单的快速排序，它对普通的快速排序进行了优化，此外，它还结合了插入排序和推排序。系统会根据你的数据形式和数据量自动选择合适的排序方法，这并不是说它每次排序只选择一种方法，它是在一次完整排序中不同的情况选用不同方法，比如给一个数据量较大的数组排序，开始采用快速排序，分段递归，分段之后每一段的数据量达到一个较小值后它就不继续往下递归，而是选择插入排序，如果递归的太深，他会选择推排序。</p>
+<p>此函数有3个参数：</p>
+<p>参数1：第一个参数是数组的首地址，一般写上数组名就可以，因为数组名是一个指针常量。</p>
+<p>参数2：第二个参数相对较好理解，即首地址加上数组的长度n（代表尾地址的下一地址）。</p>
+<p>参数3：默认可以不填，如果不填sort会默认按数组升序排序。也就是1,2,3,4排序。也可以自定义一个排序函数，改排序方式为降序什么的，也就是4,3,2,1这样。</p>
+</blockquote>
 <p>代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="n">findJudge</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">trust</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">inDegrees</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">outDegrees</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">edge</span> <span class="p">:</span> <span class="n">trust</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span> <span class="o">=</span> <span class="n">edge</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-            <span class="o">++</span><span class="n">inDegrees</span><span class="p">[</span><span class="n">y</span><span class="p">];</span>
-            <span class="o">++</span><span class="n">outDegrees</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
-        <span class="p">}</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">inDegrees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">outDegrees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">containsDuplicate</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">};</span>
-</code></pre></div><p>其中auto的意思是自动确定变量类型。关于“&amp;”的用法我还没搞明白。</p>
-</div><div class="post-footer" id="post-footer">
+</code></pre></div><p>法三（最优）：将nums数组中的每个元素插入哈希表，如果发现已存在，则说明有重复。时间复杂度O(N)</p>
+<p>代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">containsDuplicate</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">x</span><span class="p">:</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-02-25</span>
+                <span>更新于 2022-02-26</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -185,8 +213,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="prev" rel="prev" title="完全背包问题——动态规划——这道题解是认真写的qwq"><i class="fas fa-angle-left fa-fw"></i>完全背包问题——动态规划——这道题解是认真写的qwq</a>
-            <a href="/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/" class="next" rel="next" title="存在重复元素——排序、哈希">存在重复元素——排序、哈希<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/" class="prev" rel="prev" title="找到小镇的法官——图论入门"><i class="fas fa-angle-left fa-fw"></i>找到小镇的法官——图论入门</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
