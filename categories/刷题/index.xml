@@ -3,7 +3,14 @@
         <title>刷题 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/</link>
         <description>刷题 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 26 Feb 2022 19:22:16 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 28 Feb 2022 19:35:21 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>最大子数组和——动态规划、分治</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%86%E6%B2%BB/</link>
+    <pubDate>Mon, 28 Feb 2022 19:35:21 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%86%E6%B2%BB/</guid>
+    <description><![CDATA[题目 来自：https://leetcode-cn.com/problems/maximum-subarray/ 53. 最大子数组和 难度简单4424]]></description>
+</item><item>
     <title>存在重复元素——排序、哈希</title>
     <link>https://www.leyoubaloy.xyz/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/</link>
     <pubDate>Sat, 26 Feb 2022 19:22:16 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E7%BB%99string%E5%AF%B9%E8%B1%A1%E6%8F%92%E5%85%A5%E5%AD%97%E7%AC%A6/</guid>
     <description><![CDATA[#include &lt;bits/stdc++.h&gt; using namespace std; int main() { string s; s = &quot;123456&quot;; string::iterator it; it=s.begin(); s.insert(it+1,'p'); //把p插到第1个字符前，从0开始计数 cout &lt;&lt; s &lt;&lt; endl; return 0; } 运行结果 1p23456 Process returned 0 (0x0) execution time : 0.011 s Press any key to continue. 看了课本后面的]]></description>
-</item><item>
-    <title>使用sort算法对向量元素排列</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8sort%E7%AE%97%E6%B3%95%E5%AF%B9%E5%90%91%E9%87%8F%E5%85%83%E7%B4%A0%E6%8E%92%E5%88%97/</link>
-    <pubDate>Mon, 28 Dec 2020 16:26:38 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8sort%E7%AE%97%E6%B3%95%E5%AF%B9%E5%90%91%E9%87%8F%E5%85%83%E7%B4%A0%E6%8E%92%E5%88%97/</guid>
-    <description><![CDATA[#include &lt;bits/stdc++.h&gt; using namespace std; int main() { srand(time(NULL)); vector&lt;int&gt;v; int i; for(int i=0;i&lt;10;i++) { v.push_back(rand()%100); } for(i=0;i&lt;10;i++) { cout &lt;&lt; v[i] &lt;&lt; &quot; &quot;; } cout &lt;&lt; endl; sort(v.begin(),v.end()); //升序排列 for(i=0;i&lt;10;i++) { cout &lt;&lt; v[i] &lt;&lt; ' '; } cout &lt;&lt; endl; return 0; } 结果： 13 32 13 85 48 99 36 53 18 16 13 13 16 18 32 36]]></description>
 </item></channel>
 </rss>
