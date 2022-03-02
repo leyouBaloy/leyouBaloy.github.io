@@ -3,7 +3,14 @@
         <title>刷题 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/</link>
         <description>刷题 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 28 Feb 2022 19:35:21 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 02 Mar 2022 19:25:55 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>由和找到两数——数组、哈希表</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8/</link>
+    <pubDate>Wed, 02 Mar 2022 19:25:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8/</guid>
+    <description><![CDATA[题目 该题目来自：https://leetcode-cn.com/problems/two-sum/ 1. 两数之和 难度简单13591收藏分享切换为]]></description>
+</item><item>
     <title>最大子数组和——动态规划、分治</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%86%E6%B2%BB/</link>
     <pubDate>Mon, 28 Feb 2022 19:35:21 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%AD%97%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/</guid>
     <description><![CDATA[方法一（利用的stringstream，可以是浮点数） 数字to字符串 #include &lt;iostream&gt; #include &lt;sstream&gt; using namespace std; int main() { double x; string str; stringstream ss; cin &gt;&gt; x; ss &lt;&lt; x; ss &gt;&gt; str; cout &lt;&lt; str; return 0; } 字符串to]]></description>
-</item><item>
-    <title>给string对象插入字符</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E7%BB%99string%E5%AF%B9%E8%B1%A1%E6%8F%92%E5%85%A5%E5%AD%97%E7%AC%A6/</link>
-    <pubDate>Mon, 28 Dec 2020 16:52:10 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E7%BB%99string%E5%AF%B9%E8%B1%A1%E6%8F%92%E5%85%A5%E5%AD%97%E7%AC%A6/</guid>
-    <description><![CDATA[#include &lt;bits/stdc++.h&gt; using namespace std; int main() { string s; s = &quot;123456&quot;; string::iterator it; it=s.begin(); s.insert(it+1,'p'); //把p插到第1个字符前，从0开始计数 cout &lt;&lt; s &lt;&lt; endl; return 0; } 运行结果 1p23456 Process returned 0 (0x0) execution time : 0.011 s Press any key to continue. 看了课本后面的]]></description>
 </item></channel>
 </rss>

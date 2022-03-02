@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Yolov5训练自己的目标检测模型 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Yolov5训练自己的目标检测模型" />
-<meta property="og:description" content="yolov5训练自己的目标检测模型 yolov5 yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代" />
+        <title>由和找到两数——数组、哈希表 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="由和找到两数——数组、哈希表" />
+<meta property="og:description" content="题目 该题目来自：https://leetcode-cn.com/problems/two-sum/ 1. 两数之和 难度简单13591收藏分享切换为" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-02-28T22:34:57+08:00" />
-<meta property="article:modified_time" content="2022-02-28T22:34:57+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-02T19:25:55+08:00" />
+<meta property="article:modified_time" content="2022-03-02T19:25:55+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Yolov5训练自己的目标检测模型"/>
-<meta name="twitter:description" content="yolov5训练自己的目标检测模型 yolov5 yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代"/>
+<meta name="twitter:title" content="由和找到两数——数组、哈希表"/>
+<meta name="twitter:description" content="题目 该题目来自：https://leetcode-cn.com/problems/two-sum/ 1. 两数之和 难度简单13591收藏分享切换为"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%86%E6%B2%BB/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Yolov5训练自己的目标检测模型",
+        "headline": "由和找到两数——数组、哈希表",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B\/"
-        },"genre": "posts","wordcount":  901 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B\/","datePublished": "2022-02-28T22:34:57+08:00","dateModified": "2022-02-28T22:34:57+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8\/"
+        },"genre": "posts","wordcount":  818 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8\/","datePublished": "2022-03-02T19:25:55+08:00","dateModified": "2022-03-02T19:25:55+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Yolov5训练自己的目标检测模型</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-28">2022-02-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 901 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/" class="leancloud_visitors" data-flag-title="Yolov5训练自己的目标检测模型">
+        </div><article class="page single"><h1 class="single-title animated flipInX">由和找到两数——数组、哈希表</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-02">2022-03-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 818 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8/" class="leancloud_visitors" data-flag-title="由和找到两数——数组、哈希表">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,80 +113,93 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#yolov5">yolov5</a></li>
-    <li><a href="#制作数据集">制作数据集</a></li>
-    <li><a href="#训练">训练</a></li>
-    <li><a href="#推理">推理</a></li>
-    <li><a href="#参考资料">参考资料</a></li>
+    <li><a href="#题目">题目</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#题解">题解</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="yolov5训练自己的目标检测模型">yolov5训练自己的目标检测模型</h1>
-<h2 id="yolov5">yolov5</h2>
-<p>yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代模型。</p>
-<p>项目地址：<a href="https://github.com/ultralytics/yolov5" target="_blank" rel="noopener noreffer">https://github.com/ultralytics/yolov5</a></p>
-<p>克隆下来之后，用<code>pycharm</code>打开，选择3.8版本的python解释器，自动安装依赖。</p>
-<h2 id="制作数据集">制作数据集</h2>
-<p>数据集在线打标网站：<a href="https://www.makesense.ai/" target="_blank" rel="noopener noreffer">https://www.makesense.ai/</a></p>
-<p>打标完成后可以下载符合yolo格式的txt文件。</p>
-<p>然后需要对数据集进行组织。</p>
-<p>我的数据集目录如下：</p>
-<pre tabindex="0"><code>screwdata
-├── images
-│   ├── test
-│   │   ├── 若干测试图片.jpg
-│   └── train
-│       ├── 若干训练图片.jpg
-└── labels
-    ├── test
-    │   ├── 若干测试图片的标签.txt
-    ├── train
-    │   ├── 若干训练图片的标签.txt
-</code></pre><p>注意：images目录下的图片文件名需和labels目录下的文件名保持一致（后缀名不同）</p>
-<p>其中测试/训练图片的标签文件为文本文件，其格式如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">0 0.991121 0.932710 0.017757 0.059813
-</code></pre></div><p>0表示类别，这里我只用到一个类别，后面四个数字表示矩形选框四个顶点的位置。</p>
-<p>还需准备一个yaml配置文件：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># screwdata.yaml</span><span class="w">
-</span><span class="w"></span><span class="nt">train</span><span class="p">:</span><span class="w"> </span><span class="l">/Users/sunbaile/yolov5/screw/images/train</span><span class="w"> </span><span class="c"># 训练集path</span><span class="w">
-</span><span class="w"></span><span class="nt">val</span><span class="p">:</span><span class="w"> </span><span class="l">/Users/sunbaile/yolov5/screw/images/test</span><span class="w"> </span><span class="c"># 验证集path</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="c"># Classes</span><span class="w">
-</span><span class="w"></span><span class="nt">nc</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
-</span><span class="w"></span><span class="nt">names</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;screw_missing&#39;</span><span class="p">]</span><span class="w"> </span><span class="c"># class names</span><span class="w">
-</span></code></pre></div><h2 id="训练">训练</h2>
-<p>在yolov5根目录下有<code>train.py</code>文件，修改其data字段：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--data&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">ROOT</span> <span class="o">/</span> <span class="s1">&#39;data/screwdata.yaml&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;dataset.yaml path&#39;</span><span class="p">)</span> <span class="c1"># screwdata.yaml就是前面配置的数据集配置文件</span>
-</code></pre></div><p>右键运行即可开始训练，训练结果会保存到runs/train目录下。</p>
-<p>可以使用colab提供的免费gpu算力进行训练，亲测很好用：</p>
-<p><a href="https://colab.research.google.com/" target="_blank" rel="noopener noreffer">https://colab.research.google.com/</a></p>
-<p>训练完把权重下载下来即可。</p>
-<h2 id="推理">推理</h2>
-<p>负责推理的文件是<code>detect.py</code>。</p>
-<p>使用命令行工具进行推理，在终端键入：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">python detect.py --source 图片路径 --weights 权重路径
-</code></pre></div><p>举个例子：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">python detect.py --source /Users/sunbaile/yolov5/screw/images/test/CPU风扇-缺2颗螺丝2.jpg --weights /Users/sunbaile/yolov5/runs/train/exp/weights/best.pt --conf-thres 0.5
-<span class="c1"># 这里我加了一个conf-thres 0.5 表示置信度高于0.5才标记</span>
-</code></pre></div><p>推理结果保存在<code>runs/detect/exp</code></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220228223237431.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220228223237431.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220228223237431.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220228223237431.png 2x"
-        data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220228223237431.png"
-        title="image-20220228223237431" /></p>
-<p>效果不错！</p>
-<h2 id="参考资料">参考资料</h2>
+            </div><div class="content" id="content"><h2 id="题目">题目</h2>
 <blockquote>
-<p>目标检测 YOLOv5 开源代码项目调试与讲解实战【土堆 x 布尔艺数】: <a href="https://www.bilibili.com/video/BV1tf4y1t7ru?p=8&amp;spm_id_from=333.1007.top_right_bar_window_history.content.click" target="_blank" rel="noopener noreffer">https://www.bilibili.com/video/BV1tf4y1t7ru?p=8&spm_id_from=333.1007.top_right_bar_window_history.content.click</a></p>
-<p>感谢土老师的教学视频。</p>
+<p>该题目来自：https://leetcode-cn.com/problems/two-sum/</p>
 </blockquote>
+<h4 id="1-两数之和httpsleetcode-cncomproblemstwo-sum"><a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener noreffer">1. 两数之和</a></h4>
+<p>难度简单13591收藏分享切换为英文接收动态反馈</p>
+<p>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 <strong>和为目标值</strong> <em><code>target</code></em> 的那 <strong>两个</strong> 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<p><strong>示例 1</strong>：</p>
+<pre tabindex="0"><code>输入：nums = [2,7,11,15], target = 9
+输出：[0,1]
+解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+</code></pre><p><strong>示例 2</strong>：</p>
+<pre tabindex="0"><code>输入：nums = [3,2,4], target = 6
+输出：[1,2]
+</code></pre><p><strong>示例 3</strong>：</p>
+<pre tabindex="0"><code>输入：nums = [3,3], target = 6
+输出：[0,1]
+</code></pre><p><strong>提示</strong>：</p>
+<ul>
+<li><code>2 &lt;= nums.length &lt;= 104</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
+<li><code>-109 &lt;= target &lt;= 109</code></li>
+<li><strong>只会存在一个有效答案</strong></li>
+</ul>
+<p><strong>进阶</strong>：你可以想出一个时间复杂度小于 <code>O(n2)</code> 的算法吗？</p>
+<h2 id="题解">题解</h2>
+<ul>
+<li>最简单的暴力：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">){</span>
+                    <span class="k">return</span> <span class="p">{</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">};</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">{};</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>时间复杂度：O(N^2)</p>
+<p>空间复杂度：O(1)</p>
+<ul>
+<li>哈希表：</li>
+</ul>
+<blockquote>
+<p>作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-solution/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<p>可以优化的地方就是对于每个元素x，寻找target-x可以改用哈希表寻找，速度可以从O(N)降到O(1)。</p>
+<p>只遍历一遍nums数组，对于每个x，寻找target-x是否在哈希表中，如果不在就把x插入到哈希表中。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">hashtable</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">hashtable</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">hashtable</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="p">{</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">,</span> <span class="n">i</span><span class="p">};</span>
+            <span class="p">}</span>
+            <span class="n">hashtable</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">{};</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p><strong>代码解释</strong>：</p>
+<p><code>hashtable</code>: 由键-值组成（都是int类型）在这道题里键是nums[i]，值是索引i。</p>
+<p><code>it-&gt;second</code>: it是迭代器，it-&gt;second表示访问值，同理it-&gt;first访问键，也可以写成<code>(*it).second</code>，<code>(*it).first</code>。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-02-28</span>
+                <span>更新于 2022-03-02</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -205,8 +218,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%86%E6%B2%BB/" class="prev" rel="prev" title="最大子数组和——动态规划、分治"><i class="fas fa-angle-left fa-fw"></i>最大子数组和——动态规划、分治</a>
-            <a href="/posts/%E7%94%B1%E5%92%8C%E6%89%BE%E5%88%B0%E4%B8%A4%E6%95%B0%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8/" class="next" rel="next" title="由和找到两数——数组、哈希表">由和找到两数——数组、哈希表<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/" class="prev" rel="prev" title="Yolov5训练自己的目标检测模型"><i class="fas fa-angle-left fa-fw"></i>Yolov5训练自己的目标检测模型</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
