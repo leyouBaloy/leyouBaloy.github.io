@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Mar 2022 16:08:03 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 06 Mar 2022 16:00:46 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>两个数组的交集——数组、哈希、双指针</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+    <pubDate>Sun, 06 Mar 2022 16:00:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
+    <description><![CDATA[题目 本题来自：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/]]></description>
+</item><item>
     <title>环形链表——哈希、链表、双指针</title>
     <link>https://www.leyoubaloy.xyz/posts/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E9%93%BE%E8%A1%A8%E5%8F%8C%E6%8C%87%E9%92%88/</link>
     <pubDate>Sat, 05 Mar 2022 16:08:03 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
     <description><![CDATA[完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。 题目链接：https://www.acwing.com/problem/c]]></description>
-</item><item>
-    <title>01背包问题——动态规划</title>
-    <link>https://www.leyoubaloy.xyz/posts/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
-    <pubDate>Tue, 22 Feb 2022 16:42:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
-    <description><![CDATA[题目来自：https://www.acwing.com/problem/search/1/?csrfmiddlewaretoken=UwJf]]></description>
 </item></channel>
 </rss>
