@@ -3,9 +3,23 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 06 Mar 2022 16:00:46 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Mar 2022 17:15:10 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>C语言中值传递、指针传递和引用传递</title>
+    <link>https://www.leyoubaloy.xyz/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%80%BC%E4%BC%A0%E9%80%92%E6%8C%87%E9%92%88%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/</link>
+    <pubDate>Mon, 07 Mar 2022 17:15:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%80%BC%E4%BC%A0%E9%80%92%E6%8C%87%E9%92%88%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/</guid>
+    <description><![CDATA[2022年我才搞懂这个！ 比较 传递方式 函数定义 函数调用 函数内对a修改的影响 值传递 fun(int a) fun(x) 外部x不变 指针传递 fun(int *a) fun(&amp;x) 外部x同步更改 引用传递 fun(int &amp;a) fun(x) 外部]]></description>
+</item><item>
+    <title>二叉树的前中后序遍历</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/</link>
+    <pubDate>Mon, 07 Mar 2022 16:33:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/</guid>
+    <description><![CDATA[题目 前序遍历：https://leetcode-cn.com/problems/binary-tree-preorder-traversal]]></description>
+</item><item>
     <title>两个数组的交集——数组、哈希、双指针</title>
     <link>https://www.leyoubaloy.xyz/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/</link>
     <pubDate>Sun, 06 Mar 2022 16:00:46 &#43;0800</pubDate>
@@ -61,19 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%E6%8E%92%E5%BA%8F%E5%93%88%E5%B8%8C/</guid>
     <description><![CDATA[题目 该题来自：https://leetcode-cn.com/problems/contains-duplicate/ [217. 存在重复元素] 难度简]]></description>
-</item><item>
-    <title>找到小镇的法官——图论入门</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</link>
-    <pubDate>Fri, 25 Feb 2022 18:49:18 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E6%89%BE%E5%88%B0%E5%B0%8F%E9%95%87%E7%9A%84%E6%B3%95%E5%AE%98%E5%9B%BE%E8%AE%BA%E5%85%A5%E9%97%A8/</guid>
-    <description><![CDATA[题目 来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/find-the-town-jud]]></description>
-</item><item>
-    <title>完全背包问题——动态规划——这道题解是认真写的qwq</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
-    <pubDate>Wed, 23 Feb 2022 19:24:06 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
-    <description><![CDATA[完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。 题目链接：https://www.acwing.com/problem/c]]></description>
 </item></channel>
 </rss>

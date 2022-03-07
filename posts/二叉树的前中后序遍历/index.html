@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>两个数组的交集——数组、哈希、双指针 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="两个数组的交集——数组、哈希、双指针" />
-<meta property="og:description" content="题目 本题来自：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/" />
+        <title>二叉树的前中后序遍历 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="二叉树的前中后序遍历" />
+<meta property="og:description" content="题目 前序遍历：https://leetcode-cn.com/problems/binary-tree-preorder-traversal" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-06T16:00:46+08:00" />
-<meta property="article:modified_time" content="2022-03-06T16:00:46+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-07T16:33:28+08:00" />
+<meta property="article:modified_time" content="2022-03-07T16:33:28+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="两个数组的交集——数组、哈希、双指针"/>
-<meta name="twitter:description" content="题目 本题来自：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/"/>
+<meta name="twitter:title" content="二叉树的前中后序遍历"/>
+<meta name="twitter:description" content="题目 前序遍历：https://leetcode-cn.com/problems/binary-tree-preorder-traversal"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E9%93%BE%E8%A1%A8%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%80%BC%E4%BC%A0%E9%80%92%E6%8C%87%E9%92%88%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "两个数组的交集——数组、哈希、双指针",
+        "headline": "二叉树的前中后序遍历",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88\/"
-        },"genre": "posts","wordcount":  711 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88\/","datePublished": "2022-03-06T16:00:46+08:00","dateModified": "2022-03-06T16:00:46+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86\/"
+        },"genre": "posts","wordcount":  460 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86\/","datePublished": "2022-03-07T16:33:28+08:00","dateModified": "2022-03-07T16:33:28+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">两个数组的交集——数组、哈希、双指针</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">二叉树的前中后序遍历</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-06">2022-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 711 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" class="leancloud_visitors" data-flag-title="两个数组的交集——数组、哈希、双指针">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-07">2022-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 460 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" class="leancloud_visitors" data-flag-title="二叉树的前中后序遍历">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,79 +113,70 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题目">题目</a>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
       <ul>
-        <li></li>
+        <li><a href="#前序遍历">前序遍历</a></li>
+        <li><a href="#中序遍历">中序遍历</a></li>
+        <li><a href="#后序遍历">后序遍历</a></li>
       </ul>
     </li>
-    <li><a href="#题解">题解</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
 <blockquote>
-<p>本题来自：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/</p>
+<p>前序遍历：https://leetcode-cn.com/problems/binary-tree-preorder-traversal/</p>
+<p>中序遍历：https://leetcode-cn.com/problems/binary-tree-inorder-traversal/</p>
+<p>后序遍历：https://leetcode-cn.com/problems/binary-tree-postorder-traversal/</p>
 </blockquote>
-<h4 id="350-两个数组的交集-ii">[350. 两个数组的交集 II]</h4>
-<p>难度简单670收藏分享切换为英文接收动态反馈</p>
-<p>给你两个整数数组 <code>nums1</code> 和 <code>nums2</code> ，请你以数组形式返回两数组的交集。返回结果中每个元素出现的次数，应与元素在两个数组中都出现的次数一致（如果出现次数不一致，则考虑取较小值）。可以不考虑输出结果的顺序。</p>
-<p><strong>示例 1：</strong></p>
-<pre tabindex="0"><code>输入：nums1 = [1,2,2,1], nums2 = [2,2]
-输出：[2,2]
-</code></pre><p><strong>示例 2:</strong></p>
-<pre tabindex="0"><code>输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
-输出：[4,9]
-</code></pre><p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>
-<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 1000</code></li>
-</ul>
-<p><strong><em>*进阶*</em>：</strong></p>
-<ul>
-<li>如果给定的数组已经排好序呢？你将如何优化你的算法？</li>
-<li>如果 <code>nums1</code> 的大小比 <code>nums2</code> 小，哪种方法更优？</li>
-<li>如果 <code>nums2</code> 的元素存储在磁盘上，内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？</li>
-</ul>
-<h2 id="题解">题解</h2>
-<p>用hashmap解决。今天忙着训练模型，懒得写题解了。</p>
+<p>树的定义：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cm">/**
+</span><span class="cm"> * Definition for a binary tree node.
+</span><span class="cm"> * struct TreeNode {
+</span><span class="cm"> *     int val;
+</span><span class="cm"> *     TreeNode *left;
+</span><span class="cm"> *     TreeNode *right;
+</span><span class="cm"> *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+</span><span class="cm"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+</span><span class="cm"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+</span><span class="cm"> * };
+</span><span class="cm"> */</span>
+</code></pre></div><h2 id="题解">题解</h2>
+<h3 id="前序遍历">前序遍历</h3>
+<p>前序遍历的顺序是：根 -&gt; 左 -&gt; 右。（这个顺序一开始还被我记错了qwq）</p>
+<p>用递归的方式很简单：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">intersect</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums1</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">nums1</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">nums2</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nf">intersect</span><span class="p">(</span><span class="n">nums2</span><span class="p">,</span> <span class="n">nums1</span><span class="p">);</span>
+    <span class="kt">void</span> <span class="n">preorder</span><span class="p">(</span><span class="n">TreeNode</span> <span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">res</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">){</span>
+            <span class="k">return</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="n">unordered_map</span> <span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">m</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">num</span> <span class="p">:</span> <span class="n">nums1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="o">++</span><span class="n">m</span><span class="p">[</span><span class="n">num</span><span class="p">];</span>
-        <span class="p">}</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">intersection</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">num</span> <span class="p">:</span> <span class="n">nums2</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">num</span><span class="p">))</span> <span class="p">{</span>
-                <span class="n">intersection</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
-                <span class="o">--</span><span class="n">m</span><span class="p">[</span><span class="n">num</span><span class="p">];</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">m</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">intersection</span><span class="p">;</span>
+        <span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
+        <span class="n">preorder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+        <span class="n">preorder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">preorderTraversal</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">;</span>
+        <span class="n">preorder</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">};</span>
-
-<span class="err">作者：</span><span class="n">LeetCode</span><span class="o">-</span><span class="n">Solution</span>
-<span class="err">链接：</span><span class="nl">https</span><span class="p">:</span><span class="c1">//leetcode-cn.com/problems/intersection-of-two-arrays-ii/solution/liang-ge-shu-zu-de-jiao-ji-ii-by-leetcode-solution/
-</span><span class="c1"></span><span class="err">来源：力扣（</span><span class="n">LeetCode</span><span class="err">）</span>
-<span class="err">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span>
-</code></pre></div><p>回答一下进阶的那几个问题吧：</p>
-<ul>
-<li>已经排好序的话，用双指针做比较好。</li>
-<li>用小的数组产生hashmap比较好。</li>
-<li>存在磁盘上，每次只能读一部分数据，就不能排序了，得用方法1.</li>
-</ul>
+</code></pre></div><p>递归的本质是使用了栈。如果不想用递归，也可以显式地使用栈来做。但是看懂了递归后再看这种方法会觉得脑子疼。</p>
+<h3 id="中序遍历">中序遍历</h3>
+<p>改一下输出顺序就可以啦。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">inorder</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+<span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
+<span class="n">inorder</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+</code></pre></div><h3 id="后序遍历">后序遍历</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">postorder</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+<span class="n">postorder</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">res</span><span class="p">);</span>
+<span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
+</code></pre></div><p>话说今天是思美节诶，图书馆的女生打扮的都好漂亮呀～祝节日快乐！</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-03-06</span>
+                <span>更新于 2022-03-07</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -204,8 +195,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E9%93%BE%E8%A1%A8%E5%8F%8C%E6%8C%87%E9%92%88/" class="prev" rel="prev" title="环形链表——哈希、链表、双指针"><i class="fas fa-angle-left fa-fw"></i>环形链表——哈希、链表、双指针</a>
-            <a href="/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/" class="next" rel="next" title="二叉树的前中后序遍历">二叉树的前中后序遍历<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" class="prev" rel="prev" title="两个数组的交集——数组、哈希、双指针"><i class="fas fa-angle-left fa-fw"></i>两个数组的交集——数组、哈希、双指针</a>
+            <a href="/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%80%BC%E4%BC%A0%E9%80%92%E6%8C%87%E9%92%88%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/" class="next" rel="next" title="C语言中值传递、指针传递和引用传递">C语言中值传递、指针传递和引用传递<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
