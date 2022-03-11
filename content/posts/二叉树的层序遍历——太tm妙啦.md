@@ -159,10 +159,10 @@ public:
         q.push(root);
         while (!q.empty()) {
             int currentLevelSize = q.size();
-            ret.push_back(vector <int> ());
+            ret.push_back(vector <int> ()); // 先往ret里压一个空vector
             for (int i = 1; i <= currentLevelSize; ++i) {
-                auto node = q.front(); q.pop();
-                ret.back().push_back(node->val);
+                auto node = q.front(); q.pop(); // q.fron()取第一个元素，q.pop()删除第一个元素
+                ret.back().push_back(node->val); // ret.back()取到最后一个vector，再往里push_back
                 if (node->left) q.push(node->left);
                 if (node->right) q.push(node->right);
             }
