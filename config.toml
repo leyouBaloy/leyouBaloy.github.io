@@ -20,7 +20,7 @@ theme = "LoveIt"
         # 是否隐藏网站图标资源链接
         noFavicon = false
         # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
-        svgFavicon = "/images/avatar.jpg"
+        svgFavicon = "https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq头像.jpg"
         # Android 浏览器主题色
         themeColor = "#ffffff"
         # Safari 图标颜色
@@ -138,7 +138,7 @@ theme = "LoveIt"
       # Gravatar 邮箱，用于优先在主页显示的头像
       gravatarEmail = ""
       # 主页显示头像的 URL
-      avatarURL = "/images/avatar.jpg"
+      avatarURL = "https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq头像.jpg"
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # 主页显示的网站副标题
