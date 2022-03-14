@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 13 Mar 2022 16:48:06 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 14 Mar 2022 19:15:57 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Leetcode206:反转链表</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+    <pubDate>Mon, 14 Mar 2022 19:15:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+    <description><![CDATA[一件事情只有做了一段时间之后才能找到方向。前段时间随便找了一些题刷，开始逐渐了解数据结构和算法。最近在知乎上看到一篇文章，列举了400道数据]]></description>
+</item><item>
     <title>三数之和——双指针——好难</title>
     <link>https://www.leyoubaloy.xyz/posts/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C%E5%8F%8C%E6%8C%87%E9%92%88%E5%A5%BD%E9%9A%BE/</link>
     <pubDate>Sun, 13 Mar 2022 16:48:06 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%8F%8C%E6%8C%87%E9%92%88%E6%8E%92%E5%BA%8F%E8%BF%99%E9%A2%98%E7%9A%84%E9%A2%98%E8%A7%A3%E7%BB%9D%E4%BA%86/</guid>
     <description><![CDATA[题目 该题来自：https://leetcode-cn.com/problems/merge-sorted-array/ 88. 合并两个有序数组 难度]]></description>
-</item><item>
-    <title>有效的数独——数组、哈希表、矩阵</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E6%9C%89%E6%95%88%E7%9A%84%E6%95%B0%E7%8B%AC%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9F%A9%E9%98%B5/</link>
-    <pubDate>Thu, 03 Mar 2022 16:46:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E6%9C%89%E6%95%88%E7%9A%84%E6%95%B0%E7%8B%AC%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9F%A9%E9%98%B5/</guid>
-    <description><![CDATA[该题目来自：https://leetcode-cn.com/problems/valid-sudoku/ 题目 36. 有效的数独 难度中等786收藏分]]></description>
 </item></channel>
 </rss>
