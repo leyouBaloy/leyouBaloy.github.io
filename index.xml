@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 14 Mar 2022 19:15:57 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 16 Mar 2022 18:14:14 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>mac m1 安装sqlserver踩坑经历</title>
+    <link>https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/</link>
+    <pubDate>Wed, 16 Mar 2022 18:14:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/</guid>
+    <description><![CDATA[为什么安装sqlserver 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我]]></description>
+</item><item>
     <title>Leetcode206:反转链表</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
     <pubDate>Mon, 14 Mar 2022 19:15:57 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E9%93%BE%E8%A1%A8%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
     <description><![CDATA[题目 题目来自：https://leetcode-cn.com/problems/linked-list-cycle/ 141. 环形链表 难度简单137]]></description>
-</item><item>
-    <title>合并两个有序数组——数组、双指针、排序——这题的题解绝了</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%8F%8C%E6%8C%87%E9%92%88%E6%8E%92%E5%BA%8F%E8%BF%99%E9%A2%98%E7%9A%84%E9%A2%98%E8%A7%A3%E7%BB%9D%E4%BA%86/</link>
-    <pubDate>Fri, 04 Mar 2022 15:32:13 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%8F%8C%E6%8C%87%E9%92%88%E6%8E%92%E5%BA%8F%E8%BF%99%E9%A2%98%E7%9A%84%E9%A2%98%E8%A7%A3%E7%BB%9D%E4%BA%86/</guid>
-    <description><![CDATA[题目 该题来自：https://leetcode-cn.com/problems/merge-sorted-array/ 88. 合并两个有序数组 难度]]></description>
 </item></channel>
 </rss>
