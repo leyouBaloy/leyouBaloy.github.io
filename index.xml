@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 16 Mar 2022 18:14:14 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 16 Mar 2022 20:06:00 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Leetcode160:相交链表——哈希、双指针</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+    <pubDate>Wed, 16 Mar 2022 20:06:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/ 题解 法一：哈希表 先把一个链表放到哈希表里，再遍历另一个链表。 class Solution { public: ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) { unordered_set&lt;ListNode *&gt; visited; ListNode *temp = headA; while (temp != nullptr) { visited.insert(temp); temp = temp-&gt;next; } temp = headB; while (temp != nullptr) { if (visited.count(temp))]]></description>
+</item><item>
     <title>mac m1 安装sqlserver踩坑经历</title>
     <link>https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/</link>
     <pubDate>Wed, 16 Mar 2022 18:14:14 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
     <description><![CDATA[题目 本题来自：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/]]></description>
-</item><item>
-    <title>环形链表——哈希、链表、双指针</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E9%93%BE%E8%A1%A8%E5%8F%8C%E6%8C%87%E9%92%88/</link>
-    <pubDate>Sat, 05 Mar 2022 16:08:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E9%93%BE%E8%A1%A8%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
-    <description><![CDATA[题目 题目来自：https://leetcode-cn.com/problems/linked-list-cycle/ 141. 环形链表 难度简单137]]></description>
 </item></channel>
 </rss>

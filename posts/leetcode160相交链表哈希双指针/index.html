@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>mac m1 安装sqlserver踩坑经历 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="mac m1 安装sqlserver踩坑经历" />
-<meta property="og:description" content="为什么安装sqlserver 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我" />
+        <title>Leetcode160:相交链表——哈希、双指针 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode160:相交链表——哈希、双指针" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/ 题解 法一：哈希表 先把一个链表放到哈希表里，再遍历另一个链表。 class Solution { public: ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) { unordered_set&lt;ListNode *&gt; visited; ListNode *temp = headA; while (temp != nullptr) { visited.insert(temp); temp = temp-&gt;next; } temp = headB; while (temp != nullptr) { if (visited.count(temp))" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-16T18:14:14+08:00" />
-<meta property="article:modified_time" content="2022-03-16T18:14:14+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-16T20:06:00+08:00" />
+<meta property="article:modified_time" content="2022-03-16T20:06:00+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="mac m1 安装sqlserver踩坑经历"/>
-<meta name="twitter:description" content="为什么安装sqlserver 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我"/>
+<meta name="twitter:title" content="Leetcode160:相交链表——哈希、双指针"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/ 题解 法一：哈希表 先把一个链表放到哈希表里，再遍历另一个链表。 class Solution { public: ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) { unordered_set&lt;ListNode *&gt; visited; ListNode *temp = headA; while (temp != nullptr) { visited.insert(temp); temp = temp-&gt;next; } temp = headB; while (temp != nullptr) { if (visited.count(temp))"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "mac m1 安装sqlserver踩坑经历",
+        "headline": "Leetcode160:相交链表——哈希、双指针",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86\/"
-        },"genre": "posts","wordcount":  1568 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86\/","datePublished": "2022-03-16T18:14:14+08:00","dateModified": "2022-03-16T18:14:14+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88\/"
+        },"genre": "posts","wordcount":  367 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88\/","datePublished": "2022-03-16T20:06:00+08:00","dateModified": "2022-03-16T20:06:00+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">mac m1 安装sqlserver踩坑经历</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-16">2022-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1568 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/" class="leancloud_visitors" data-flag-title="mac m1 安装sqlserver踩坑经历">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode160:相交链表——哈希、双指针</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-16">2022-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 367 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" class="leancloud_visitors" data-flag-title="Leetcode160:相交链表——哈希、双指针">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,42 +113,71 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#为什么安装sqlserver">为什么安装sqlserver</a></li>
-    <li><a href="#法一云数据库">法一：云数据库（❌</a></li>
-    <li><a href="#法二在本地安装">法二：在本地安装（❌</a></li>
-    <li><a href="#法三云服务器上使用docker勉强">法三：云服务器上使用docker（勉强✅</a></li>
-    <li><a href="#总结">总结</a></li>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="为什么安装sqlserver">为什么安装sqlserver</h2>
-<p>上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。</p>
-<h2 id="法一云数据库">法一：云数据库（❌</h2>
-<p>在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所周知，像阿里云、腾讯云等服务商经常有云数据库优惠活动，购买一个1核1G的mysql数据库一年的时间也用不到10元，性价比拉满。</p>
-<p>但是sqlserver数据库贵的要死啊，可能是因为比较小众而且微软要从中赚授权费吧。</p>
-<p>于是我又想到了微软自家不是有个云平台Azure吗，以前白嫖过他家的服务器，体验蛮不错。满怀期待登上去看，需要外币信用卡才能注册，对国内用户极不友好。</p>
-<p>正当我灰心丧气打算关闭页面时，突然发现Azure有学生套餐！看了下介绍，好像福利挺多的，优惠时间也蛮长，在我的印象中国外这种大厂还是很大气的。然后我就兴高采烈的用学校邮箱注册了学生账户（不需要外币信用卡）。进去一看，哟吼～，产品还挺多，有一堆不认识的。我赶紧搞了一个sqlserver，过程也并不复杂，唯一的缺点是服务器只能选择在美国东部，裸连速度很慢。不过我有代理，供学习使用应该够了。</p>
-<p>气人的是，过了两天微软给我发邮件，说我的学生账户可以使用的免费额度没了&hellip;白嫖失败。对于穷学生来说，这个法子行不通。</p>
-<h2 id="法二在本地安装">法二：在本地安装（❌</h2>
-<p>我发现sqlserver可以使用docker安装。我对docker印象蛮好的，认为它可以解决大多环境问题。 我的本来想法是这个方案应该非常easy，两步就能搞定，第一步安装docker，第二步run个镜像就能用了。但是，在m1的mac上，docker已经不是原来的那个docker了。</p>
-<p>安装docker desktop确实非常方便，只要在官网下载，然后点下一步就能装好，比windows方便多了（在win上你得先跑一个linux虚拟机）。</p>
-<p>第二步拉取镜像，跑容器发现跑不起来，会报错，怀疑是m1芯片问题。</p>
-<p>为了确认我不是个例，我还去dockerhub看了下，果然评论里都是说这个问题的。它就是不支持m1芯片。</p>
-<p>从此之后，我再也不吹docker了，看来它并不能解决所有环境问题。</p>
-<p>有人倒是成功了，先跑一个pd虚拟机，再在虚拟机里跑docker，搁这套娃呢？看来在本地安装是指望不上了。</p>
-<h2 id="法三云服务器上使用docker勉强">法三：云服务器上使用docker（勉强✅</h2>
-<p>不能在m1的mac上的docker里安装，在传统的linux上总可以安装吧？</p>
-<p>这个方案确实可行，但也遇到了小坑。</p>
-<p>众所周知，便宜点云服务器有很多，10多块钱就能搞一个1核2G的linux云服务器。执行和法二相同的操作：</p>
-<pre tabindex="0"><code>sudo docker run -e &quot;ACCEPT_EULA=Y&quot; -e &quot;SA_PASSWORD=密码&quot;    -p 1433:1433 --name sql1 --hostname sql1 -d mcr.microsoft.com/mssql/server:2019-latest
-</code></pre><p>没报错，看来要成功了？真是踏破铁鞋无觅处，得来全不费功夫呀，哈哈～</p>
-<p>然后再打<code>docker ps -a</code>，看下容器跑起来没有。结果发现没有，看来高兴早了qwq。</p>
-<p>为什么呢，打<code>docker logs 容器ID</code>看下原因，他娘的，说内存至少要2000mb才能运行。</p>
-<p>我的云服务器内存就是2G，实际使用时系统和其他服务会占用一些内存，所以留给sqlserver的内存肯定不足2G了。但我还是抱着侥幸心理，在docker启动容器的命令里分配了2000mb的内存，仍然不行，我试了阿里云，腾讯云的1核2G轻量化应用服务器，都是不行的。</p>
-<p>组里面有个2核4G的腾讯云轻量化应用服务器，可以运行！但这服务器是组里的&hellip;算了，直接拿来用吧。</p>
-<p>麻烦就是端口开不了，自己电脑的navicat连不上，只能ssh到服务器上用命令行工具。</p>
-<p>哭了，折腾两节课也没能很好解决这个问题。</p>
-<h2 id="总结">总结</h2>
-<p>如果说windows能做100%的事情，那么M1 Mac 只能做80%。但是我还是会选择m1 mac，因为在它能做的事情范围之内，你能体验到极致的丝滑。</p>
+            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+<p><a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/intersection-of-two-linked-lists/</a></p>
+<h2 id="题解">题解</h2>
+<p><strong>法一：哈希表</strong></p>
+<p>先把一个链表放到哈希表里，再遍历另一个链表。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">ListNode</span> <span class="o">*</span><span class="n">getIntersectionNode</span><span class="p">(</span><span class="n">ListNode</span> <span class="o">*</span><span class="n">headA</span><span class="p">,</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">headB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">ListNode</span> <span class="o">*&gt;</span> <span class="n">visited</span><span class="p">;</span>
+        <span class="n">ListNode</span> <span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="n">headA</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">temp</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">visited</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">headB</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">temp</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="n">temp</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>时间复杂度O(m+n)</p>
+<p>空间复杂度O(m)</p>
+<p><strong>法二：双指针</strong></p>
+<p>这个方法还是很巧妙的！</p>
+<p>两个指针分别指向headA和headB，然后同时同速向后移动，A指针到结尾了就转移到headB，B指针到结尾了就转移到headA。</p>
+<p>如果两个链表相交，那一定可以在第二次遍历时指向同一个节点。如果不相交，一定会同时指向nullptr。</p>
+<p>详情请看官方题解的证明，不难理解。</p>
+<p>自己写的垃圾代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">ListNode</span> <span class="o">*</span><span class="n">getIntersectionNode</span><span class="p">(</span><span class="n">ListNode</span> <span class="o">*</span><span class="n">headA</span><span class="p">,</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">headB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ListNode</span> <span class="o">*</span><span class="n">A</span> <span class="o">=</span> <span class="n">headA</span><span class="p">;</span>
+        <span class="n">ListNode</span> <span class="o">*</span><span class="n">B</span> <span class="o">=</span> <span class="n">headB</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">headA</span><span class="o">!=</span><span class="k">nullptr</span> <span class="o">||</span> <span class="n">headB</span><span class="o">!=</span><span class="k">nullptr</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">==</span><span class="n">B</span><span class="p">){</span>
+                <span class="k">return</span> <span class="n">A</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">==</span><span class="k">nullptr</span><span class="p">){</span>
+                <span class="n">A</span> <span class="o">=</span> <span class="n">headB</span><span class="p">;</span>
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="n">A</span> <span class="o">=</span> <span class="n">A</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">B</span><span class="o">==</span><span class="k">nullptr</span><span class="p">){</span>
+                <span class="n">B</span> <span class="o">=</span> <span class="n">headA</span><span class="p">;</span>
+            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                <span class="n">B</span> <span class="o">=</span> <span class="n">B</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
+        
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>看到一条评论：</p>
+<blockquote>
+<p>错的人就算走过了对方的路也还是会错过😔 这题我希望大家都返回<code>true</code></p>
+</blockquote>
+<p>蚌埠住了兄弟们，刷个算法题都能emo。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -172,8 +201,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" class="prev" rel="prev" title="Leetcode206:反转链表"><i class="fas fa-angle-left fa-fw"></i>Leetcode206:反转链表</a>
-            <a href="/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" class="next" rel="next" title="Leetcode160:相交链表——哈希、双指针">Leetcode160:相交链表——哈希、双指针<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/" class="prev" rel="prev" title="mac m1 安装sqlserver踩坑经历"><i class="fas fa-angle-left fa-fw"></i>mac m1 安装sqlserver踩坑经历</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
