@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Leetcode160:相交链表——哈希、双指针 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode160:相交链表——哈希、双指针" />
-<meta property="og:description" content="题目 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/ 题解 法一：哈希表 先把一个链表放到哈希表里，再遍历另一个链表。 class Solution { public: ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) { unordered_set&lt;ListNode *&gt; visited; ListNode *temp = headA; while (temp != nullptr) { visited.insert(temp); temp = temp-&gt;next; } temp = headB; while (temp != nullptr) { if (visited.count(temp))" />
+        <title>Leetcode455:分发饼干——排序、贪心 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode455:分发饼干——排序、贪心" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/assign-cookies/ 题解 为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-16T20:06:00+08:00" />
-<meta property="article:modified_time" content="2022-03-16T20:06:00+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-18T16:01:16+08:00" />
+<meta property="article:modified_time" content="2022-03-18T16:01:16+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode160:相交链表——哈希、双指针"/>
-<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/ 题解 法一：哈希表 先把一个链表放到哈希表里，再遍历另一个链表。 class Solution { public: ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) { unordered_set&lt;ListNode *&gt; visited; ListNode *temp = headA; while (temp != nullptr) { visited.insert(temp); temp = temp-&gt;next; } temp = headB; while (temp != nullptr) { if (visited.count(temp))"/>
+<meta name="twitter:title" content="Leetcode455:分发饼干——排序、贪心"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/assign-cookies/ 题解 为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode160:相交链表——哈希、双指针",
+        "headline": "Leetcode455:分发饼干——排序、贪心",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88\/"
-        },"genre": "posts","wordcount":  387 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88\/","datePublished": "2022-03-16T20:06:00+08:00","dateModified": "2022-03-16T20:06:00+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83\/"
+        },"genre": "posts","wordcount":  357 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83\/","datePublished": "2022-03-18T16:01:16+08:00","dateModified": "2022-03-18T16:01:16+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode160:相交链表——哈希、双指针</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode455:分发饼干——排序、贪心</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-16">2022-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 387 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" class="leancloud_visitors" data-flag-title="Leetcode160:相交链表——哈希、双指针">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-18">2022-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 357 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" class="leancloud_visitors" data-flag-title="Leetcode455:分发饼干——排序、贪心">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -118,73 +118,66 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p><a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/intersection-of-two-linked-lists/</a></p>
+<p><a href="https://leetcode-cn.com/problems/assign-cookies/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/assign-cookies/</a></p>
 <h2 id="题解">题解</h2>
-<p><strong>法一：哈希表</strong></p>
-<p>先把一个链表放到哈希表里，再遍历另一个链表。</p>
+<p>为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子）</p>
+<p>然后对于每个胃口小的孩子，找到一个能刚好满足他的饼干。</p>
+<p>思路很简单，我是个菜鸡，看了题解才想出来qwq</p>
+<p>这是我第一次写的代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="n">ListNode</span> <span class="o">*</span><span class="n">getIntersectionNode</span><span class="p">(</span><span class="n">ListNode</span> <span class="o">*</span><span class="n">headA</span><span class="p">,</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">headB</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">ListNode</span> <span class="o">*&gt;</span> <span class="n">visited</span><span class="p">;</span>
-        <span class="n">ListNode</span> <span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="n">headA</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">temp</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">visited</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
-            <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="n">temp</span> <span class="o">=</span> <span class="n">headB</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">temp</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">temp</span><span class="p">))</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="n">temp</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div><p>时间复杂度O(m+n)</p>
-<p>空间复杂度O(m)</p>
-<p><strong>法二：双指针</strong></p>
-<p>这个方法还是很巧妙的！</p>
-<p>两个指针分别指向headA和headB，然后同时同速向后移动，A指针到结尾了就转移到headB，B指针到结尾了就转移到headA。</p>
-<p>如果两个链表相交，那一定可以在第二次遍历时指向同一个节点。如果不相交，一定会同时指向nullptr。</p>
-<p>详情请看官方题解的证明，不难理解。</p>
-<p>自己写的垃圾代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">ListNode</span> <span class="o">*</span><span class="n">getIntersectionNode</span><span class="p">(</span><span class="n">ListNode</span> <span class="o">*</span><span class="n">headA</span><span class="p">,</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">headB</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ListNode</span> <span class="o">*</span><span class="n">A</span> <span class="o">=</span> <span class="n">headA</span><span class="p">;</span>
-        <span class="n">ListNode</span> <span class="o">*</span><span class="n">B</span> <span class="o">=</span> <span class="n">headB</span><span class="p">;</span>
-        <span class="k">while</span><span class="p">(</span><span class="n">headA</span><span class="o">!=</span><span class="k">nullptr</span> <span class="o">||</span> <span class="n">headB</span><span class="o">!=</span><span class="k">nullptr</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">==</span><span class="n">B</span><span class="p">){</span>
-                <span class="k">return</span> <span class="n">A</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">==</span><span class="k">nullptr</span><span class="p">){</span>
-                <span class="n">A</span> <span class="o">=</span> <span class="n">headB</span><span class="p">;</span>
-            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                <span class="n">A</span> <span class="o">=</span> <span class="n">A</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">B</span><span class="o">==</span><span class="k">nullptr</span><span class="p">){</span>
-                <span class="n">B</span> <span class="o">=</span> <span class="n">headA</span><span class="p">;</span>
-            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                <span class="n">B</span> <span class="o">=</span> <span class="n">B</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">findContentChildren</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">g</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">g</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">g</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+                    <span class="n">cnt</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
+                    <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="k">nullptr</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">cnt</span><span class="p">;</span>
         
+
     <span class="p">}</span>
 <span class="p">};</span>
-</code></pre></div><p>时间复杂度O(m+n)</p>
-<p>空间复杂度O(1)</p>
-<p>看到一条评论：</p>
-<blockquote>
-<p>错的人就算走过了对方的路也还是会错过😔 这题我希望大家都返回<code>true</code></p>
-</blockquote>
-<p>蚌埠住了兄弟们，刷个算法题都能emo。</p>
+</code></pre></div><p><code>i</code>和<code>j</code>分别是孩子和饼干的指针，由于<code>j</code>指针有回溯，所以效率很低。776ms</p>
+<p>改进一下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">findContentChildren</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">g</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">g</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">g</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
+                    <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                    <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">cnt</span><span class="p">;</span>
+        
+
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>如果饼干不能满足小胃口的孩子，那么大胃口的孩子肯定也满足不了。不让<code>j</code>指针回溯，效率一下子提上来了，20ms</p>
+<p>时间复杂度：O(mlogm+nlogn)主要是排序的时间复杂度。</p>
+<p>空间复杂度：O(logm+logn)主要是排序的空间复杂度。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-03-16</span>
+                <span>更新于 2022-03-18</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -203,8 +196,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/" class="prev" rel="prev" title="mac m1 安装sqlserver踩坑经历"><i class="fas fa-angle-left fa-fw"></i>mac m1 安装sqlserver踩坑经历</a>
-            <a href="/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" class="next" rel="next" title="Leetcode455:分发饼干——排序、贪心">Leetcode455:分发饼干——排序、贪心<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" class="prev" rel="prev" title="Leetcode160:相交链表——哈希、双指针"><i class="fas fa-angle-left fa-fw"></i>Leetcode160:相交链表——哈希、双指针</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
