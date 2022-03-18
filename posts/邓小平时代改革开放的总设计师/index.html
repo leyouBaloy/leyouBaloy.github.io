@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Leetcode455:分发饼干——排序、贪心 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode455:分发饼干——排序、贪心" />
-<meta property="og:description" content="题目 https://leetcode-cn.com/problems/assign-cookies/ 题解 为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的" />
+        <title>《邓小平时代》——改革开放的总设计师 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="《邓小平时代》——改革开放的总设计师" />
+<meta property="og:description" content="邓小平时代 所有中国人都知道，1949年建国时中国是一个落后封闭的社会主义国家（和现在的朝鲜差不多）。但是在80年代，社会主义市场经济取代了计" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-18T16:01:16+08:00" />
-<meta property="article:modified_time" content="2022-03-18T16:01:16+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-18T18:32:09+08:00" />
+<meta property="article:modified_time" content="2022-03-18T18:32:09+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode455:分发饼干——排序、贪心"/>
-<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/assign-cookies/ 题解 为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的"/>
+<meta name="twitter:title" content="《邓小平时代》——改革开放的总设计师"/>
+<meta name="twitter:description" content="邓小平时代 所有中国人都知道，1949年建国时中国是一个落后封闭的社会主义国家（和现在的朝鲜差不多）。但是在80年代，社会主义市场经济取代了计"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode455:分发饼干——排序、贪心",
+        "headline": "《邓小平时代》——改革开放的总设计师",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83\/"
-        },"genre": "posts","wordcount":  357 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83\/","datePublished": "2022-03-18T16:01:16+08:00","dateModified": "2022-03-18T16:01:16+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88\/"
+        },"genre": "posts","wordcount":  1824 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88\/","datePublished": "2022-03-18T18:32:09+08:00","dateModified": "2022-03-18T18:32:09+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode455:分发饼干——排序、贪心</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-18">2022-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 357 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" class="leancloud_visitors" data-flag-title="Leetcode455:分发饼干——排序、贪心">
+        </div><article class="page single"><h1 class="single-title animated flipInX">《邓小平时代》——改革开放的总设计师</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>书影记录</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-18">2022-03-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1824 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88/" class="leancloud_visitors" data-flag-title="《邓小平时代》——改革开放的总设计师">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,66 +113,62 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题目">题目</a></li>
-    <li><a href="#题解">题解</a></li>
+    <li><a href="#邓小平时代">邓小平时代</a></li>
+    <li><a href="#傅高义">傅高义</a></li>
+    <li><a href="#版本">版本</a></li>
+    <li><a href="#邓小平改革开放的总设计师">邓小平——改革开放的总设计师</a></li>
+    <li><a href="#梳理中国现代史">梳理中国现代史</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p><a href="https://leetcode-cn.com/problems/assign-cookies/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/assign-cookies/</a></p>
-<h2 id="题解">题解</h2>
-<p>为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子）</p>
-<p>然后对于每个胃口小的孩子，找到一个能刚好满足他的饼干。</p>
-<p>思路很简单，我是个菜鸡，看了题解才想出来qwq</p>
-<p>这是我第一次写的代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="n">findContentChildren</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">g</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">sort</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">g</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-        <span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-        <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            </div><div class="content" id="content"><h2 id="邓小平时代">邓小平时代</h2>
+<p>所有中国人都知道，1949年建国时中国是一个落后封闭的社会主义国家（和现在的朝鲜差不多）。但是在80年代，社会主义市场经济取代了计划经济，对外封闭变成了改革开放。90年代，中国经济一路起飞，国际地位迅速提高。直到现在，中国已经成为世界最强的国家之一。</p>
+<p>中国是如何崛起的？在大一时，孙运雷老师向我们提出过这个问题，让我们阅读一些书籍去寻找答案。当时我阅读了陈经的《中国的官办经济》，对这个问题已经有初步认识。现在再读傅高义的《邓小平时代》，算是进一步找到了答案。正如傅高义在序中所说：</p>
+<blockquote>
+<p>我认为，要想了解今日之中国，很重要的一点是了解历史，特别是自 1978 年邓小平开始领导造就了当下中国的一系列进程之后的历史。</p>
+</blockquote>
+<p>除此之外，作为一个中国人，作为一个充满好奇心年轻人，我们对自己的党，自己的国家都有许多疑问：毛泽东时代怎样进入到邓小平时代？我们国家曾经有哪些最高领导人？为什么有的领导人被称为领导核心，有的却不是？他们执政时发生了哪些事情？中国共产党执政时出现过哪些危机？为什么历史教材上很少提到？大陆和台湾关系有哪些细节？国家与国家的交往是怎么样的？&hellip;如果你在境外网站检索这些问题，你会得到充满偏见的、有诬蔑性的答案。不妨读一读这本书，从一个外国人的视角，真实客观的解读现代中国。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/%e9%82%93%e5%b0%8f%e5%b9%b3%e6%97%b6%e4%bb%a3%e5%9b%be%e4%b9%a6%e9%a6%86.jpeg"/><figcaption>
+            <h4>《邓小平时代》</h4>
+        </figcaption>
+</figure>
 
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">g</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
-                    <span class="n">cnt</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
-                    <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-                    <span class="k">break</span><span class="p">;</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">cnt</span><span class="p">;</span>
-        
-
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div><p><code>i</code>和<code>j</code>分别是孩子和饼干的指针，由于<code>j</code>指针有回溯，所以效率很低。776ms</p>
-<p>改进一下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">int</span> <span class="n">findContentChildren</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">g</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">sort</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">g</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-        <span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-        <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">g</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">g</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span>
-                    <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
-                    <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-                    <span class="k">break</span><span class="p">;</span>
-                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                    <span class="n">j</span><span class="o">++</span><span class="p">;</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">cnt</span><span class="p">;</span>
-        
-
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div><p>如果饼干不能满足小胃口的孩子，那么大胃口的孩子肯定也满足不了。不让<code>j</code>指针回溯，效率一下子提上来了，20ms</p>
-<p>时间复杂度：O(mlogm+nlogn)主要是排序的时间复杂度。</p>
-<p>空间复杂度：O(logm+logn)主要是排序的空间复杂度。</p>
+<h2 id="傅高义">傅高义</h2>
+<p>傅高义是土生土长的美国人，30岁时在哈佛大学开始研究中国，同时精通中文和日文，是著名的中国和日本问题专家，被称为“中国先生”。1979年出版《日本第一》，正值日本经济崛起，使他名声大噪。但很快日本经济泡沫破灭，开始衰败。2000年他又出版了《日本仍是第一吗？》，颇具争议。</p>
+<p>2011年在美国出版《邓小平时代》，引起广泛关注。2013年此书在中国出版，首印50万册发行一空。</p>
+<p>傅高义老先生德高望重，是倡导美国应以更理性和平衡方式思考中国的主要支持者。是中国的知己而不是中国的敌人。他于2020年在美国去世，享年90岁。</p>
+<h2 id="版本">版本</h2>
+<p>《邓小平时代》是一本面向大众的通俗读物。书很厚，大陆版全书700多页，定价88元，有点小贵。</p>
+<p>即使大陆版相比港版略有删节，但大陆版的内容还是让人直呼大胆，能够在中国大陆出版我觉得也是一种奇迹。</p>
+<p>大陆版可以在图书馆借到，港版可以下载到手机上看。我粗略的比较了一下大陆版和港版，只有第<code>20章：北京</code>删节较多，其它基本无异。</p>
+<h2 id="邓小平改革开放的总设计师">邓小平——改革开放的总设计师</h2>
+<p>邓小平有一句经典的话：“摸着石头过河。“ 最初实行改革开放时，他也没有想好伟大宏图。他是实干家，不搞花架子，讲话通俗易懂，集中注意力解决实际问题。与其说他是改革开放的总设计师，不如说是改革开放的总经理，带着北京的领导班子，带领全国人民，披荆斩棘，野蛮生长，开拓出自己的一条道路。</p>
+<p>邓小平上台时，中国是一个“烂摊子”，国家仍因“文革”的混乱而步履蹒跚。工业、农业、教育、社会制度、科技、经济、外交&hellip;中国全方位落后。但是邓小平是一位出色的改革家，他和其它领导人找到了一条富国强民的道路，提出了改革开放，引领了中国的根本转型。书中称之为自两千多年前汉帝国形成以来，中国最根本的变化。</p>
+<p>借鉴书中观点，我把邓小平的伟大贡献概括如下：</p>
+<ul>
+<li>
+<p>改革开放使中国开放拥抱世界，使中国富起来了，国际地位大大提高，从“亚洲文明的中心”走向“世界大国”。同时国内的开放程度也大大提高，中国更像一个整体了。</p>
+</li>
+<li>
+<p>邓小平维护了党的集体领导，化解了像东欧剧变、苏联解体等对中国的冲击，拯救国家于危难之中。</p>
+</li>
+<li>
+<p>促使教育、科技业的发展，如恢复高考，善待科技工作者，向国外派遣大量留学生，这是他刚上台就在做的事情。为未来培养了人才。</p>
+</li>
+</ul>
+<p>但也留下了许多问题：</p>
+<ul>
+<li>全民社会保障和公共医疗欠佳。</li>
+<li>腐败问题，这是高速发展的社会不可避免的。</li>
+<li>法治建设。</li>
+<li>环境问题等。</li>
+</ul>
+<p>这些问题都受到了继任的领导人的重视，正在一点一点解决。生长在这个时代我感到非常幸运，看到自己的国家由飞速发展，变为精细提高人民的生活水平。现在在习近平总书记领导下，中国已经成长的非常健壮了，希望在未来能创造出更多奇迹！</p>
+<h2 id="梳理中国现代史">梳理中国现代史</h2>
+<p>在《如何阅读一本书》中提到了一种阅读方法：<strong>主题阅读</strong>。简单来说，就是如果你对一类问题很感兴趣，那就针对这类问题去找几本书阅读。这种阅读的效率被认为是最高的。中国的现代史（1949年新中国成立至今这一段历史）我们好像都了解的不多，也比较感兴趣。读了几本书后，对中国现代史作一个简单梳理：</p>
+<ul>
+<li>1949年：毛主席在全国人民的热烈欢呼下在北京天安门宣布新中国成立。</li>
+<li>未完待续</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -196,8 +192,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/" class="prev" rel="prev" title="Leetcode160:相交链表——哈希、双指针"><i class="fas fa-angle-left fa-fw"></i>Leetcode160:相交链表——哈希、双指针</a>
-            <a href="/posts/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88/" class="next" rel="next" title="《邓小平时代》——改革开放的总设计师">《邓小平时代》——改革开放的总设计师<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/" class="prev" rel="prev" title="Leetcode455:分发饼干——排序、贪心"><i class="fas fa-angle-left fa-fw"></i>Leetcode455:分发饼干——排序、贪心</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
