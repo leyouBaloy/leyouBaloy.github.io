@@ -3,7 +3,14 @@
         <title>技能分享 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/</link>
         <description>技能分享 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 16 Mar 2022 18:14:14 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 19 Mar 2022 13:37:49 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>Roboflow&#43;colab优雅地训练yolov5模型</title>
+    <link>https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/</link>
+    <pubDate>Sat, 19 Mar 2022 13:37:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/</guid>
+    <description><![CDATA[roboflow roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理]]></description>
+</item><item>
     <title>mac m1 安装sqlserver踩坑经历</title>
     <link>https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/</link>
     <pubDate>Wed, 16 Mar 2022 18:14:14 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/macos%E4%B8%8Bmatplotlib%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
     <description><![CDATA[网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matp]]></description>
-</item><item>
-    <title>如何在英语朗读视频中添加文稿</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%8B%B1%E8%AF%AD%E6%9C%97%E8%AF%BB%E8%A7%86%E9%A2%91%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%96%87%E7%A8%BF/</link>
-    <pubDate>Thu, 04 Nov 2021 17:15:40 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%8B%B1%E8%AF%AD%E6%9C%97%E8%AF%BB%E8%A7%86%E9%A2%91%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%96%87%E7%A8%BF/</guid>
-    <description><![CDATA[如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读]]></description>
 </item></channel>
 </rss>
