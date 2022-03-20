@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Leetcode240:搜索二维矩阵——二分、矩阵 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode240:搜索二维矩阵——二分、矩阵" />
-<meta property="og:description" content="题目 https://leetcode-cn.com/problems/search-a-2d-matrix-ii/ 题解 法一：逐行二分 没啥好说的，代码可以参考一下 class Solution { public: bool searchMatrix(vector&lt;vector&lt;int&gt;&gt;&amp; matrix, int target) { for (const auto&amp; row: matrix) { auto it = lower_bound(row.begin(), row.end(), target); if (it != row.end() &amp;&amp; *it == target) { return true; } } return false; } }; 作者：Le" />
+        <title>Leetcode435:重叠区间——动态规划、贪心 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode435:重叠区间——动态规划、贪心" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/non-overlapping-intervals/ 这题我竟然一年前做过，第二遍再做的时候一点印象都没有。 看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-19T17:55:44+08:00" />
-<meta property="article:modified_time" content="2022-03-19T17:55:44+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode435%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%B4%AA%E5%BF%83/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-20T17:41:58+08:00" />
+<meta property="article:modified_time" content="2022-03-20T17:41:58+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode240:搜索二维矩阵——二分、矩阵"/>
-<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/search-a-2d-matrix-ii/ 题解 法一：逐行二分 没啥好说的，代码可以参考一下 class Solution { public: bool searchMatrix(vector&lt;vector&lt;int&gt;&gt;&amp; matrix, int target) { for (const auto&amp; row: matrix) { auto it = lower_bound(row.begin(), row.end(), target); if (it != row.end() &amp;&amp; *it == target) { return true; } } return false; } }; 作者：Le"/>
+<meta name="twitter:title" content="Leetcode435:重叠区间——动态规划、贪心"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/non-overlapping-intervals/ 这题我竟然一年前做过，第二遍再做的时候一点印象都没有。 看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode435%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%B4%AA%E5%BF%83/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode435%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%B4%AA%E5%BF%83/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode240:搜索二维矩阵——二分、矩阵",
+        "headline": "Leetcode435:重叠区间——动态规划、贪心",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5\/"
-        },"genre": "posts","wordcount":  623 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5\/","datePublished": "2022-03-19T17:55:44+08:00","dateModified": "2022-03-19T17:55:44+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode435%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%B4%AA%E5%BF%83\/"
+        },"genre": "posts","wordcount":  845 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode435%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%B4%AA%E5%BF%83\/","datePublished": "2022-03-20T17:41:58+08:00","dateModified": "2022-03-20T17:41:58+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode240:搜索二维矩阵——二分、矩阵</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode435:重叠区间——动态规划、贪心</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-19">2022-03-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 623 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5/" class="leancloud_visitors" data-flag-title="Leetcode240:搜索二维矩阵——二分、矩阵">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-20">2022-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 845 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode435%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%B4%AA%E5%BF%83/" class="leancloud_visitors" data-flag-title="Leetcode435:重叠区间——动态规划、贪心">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -114,76 +114,56 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#题解">题解</a>
-      <ul>
-        <li><a href="#法一逐行二分">法一：逐行二分</a></li>
-        <li><a href="#法二巧妙的利用性质">法二：巧妙的利用性质</a></li>
-      </ul>
-    </li>
+    <li><a href="#题解">题解</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p><a href="https://leetcode-cn.com/problems/search-a-2d-matrix-ii/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/search-a-2d-matrix-ii/</a></p>
+<p><a href="https://leetcode-cn.com/problems/non-overlapping-intervals/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/non-overlapping-intervals/</a></p>
+<p>这题我竟然一年前做过，第二遍再做的时候一点印象都没有。</p>
+<p>看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算法水平还不如一年前？？？</p>
 <h2 id="题解">题解</h2>
-<h3 id="法一逐行二分">法一：逐行二分</h3>
-<p>没啥好说的，代码可以参考一下</p>
+<p>做的时候思路跑偏了，总想着把有重叠的区间找出来剔除掉。换一个思路，可以去寻找不重叠的最大区间数<code>n</code>，然后拿<code>all-n</code>就是最小重叠区间的数量。</p>
+<p>贪心的解法其实不难理解，只是不太容易想到（因为我是菜鸡qwq）：</p>
+<p>思路：可以把这题的情境想象成一个<code>预定会议</code>问题，区间的左右两端就是会议的开始时间和结束时间，要求会议时间不能重叠，寻找一个能安排最多会议次数的序列。那么我们先找到最先结束的那个会议，放在最开头。然后从剩下的会议里找到最先结束的，同时开始时间不早于第一个会议结束时间的那个会议，放在第二个。以此类推&hellip;就完成啦。</p>
+<p>实际做题的时候有个技巧，就是可以先按照会议结束的时间（即区间右端点）进行排序。这样代码会好写很多。</p>
+<p><strong>上不是自己写的代码：</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="kt">bool</span> <span class="n">searchMatrix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">matrix</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">row</span><span class="p">:</span> <span class="n">matrix</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">lower_bound</span><span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">row</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">target</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">row</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">*</span><span class="n">it</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">eraseOverlapIntervals</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">intervals</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="n">sort</span><span class="p">(</span><span class="n">intervals</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">intervals</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">,</span> <span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+        <span class="p">});</span>
+
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">intervals</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">right</span> <span class="o">=</span> <span class="n">intervals</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+                <span class="o">++</span><span class="n">ans</span><span class="p">;</span>
+                <span class="n">right</span> <span class="o">=</span> <span class="n">intervals</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">-</span> <span class="n">ans</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">};</span>
 
 <span class="err">作者：</span><span class="n">LeetCode</span><span class="o">-</span><span class="n">Solution</span>
-<span class="err">链接：</span><span class="nl">https</span><span class="p">:</span><span class="c1">//leetcode-cn.com/problems/search-a-2d-matrix-ii/solution/sou-suo-er-wei-ju-zhen-ii-by-leetcode-so-9hcx/
+<span class="err">链接：</span><span class="nl">https</span><span class="p">:</span><span class="c1">//leetcode-cn.com/problems/non-overlapping-intervals/solution/wu-zhong-die-qu-jian-by-leetcode-solutio-cpsb/
 </span><span class="c1"></span><span class="err">来源：力扣（</span><span class="n">LeetCode</span><span class="err">）</span>
 <span class="err">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span>
-</code></pre></div><p>对一行使用二分查找时间复杂度O(logm)，对n行使用二分查找时间复杂度O(nlogm)。</p>
-<h3 id="法二巧妙的利用性质">法二：巧妙的利用性质</h3>
-<p>观察矩阵最右上角的元素：</p>
-<ul>
-<li>它是所在行最大的元素</li>
-<li>它是所在列最小的元素</li>
-</ul>
-<p>这就有点像二分法了。对于一个目标数<code>target</code>，如果<code>target&lt;matrix[row][col]</code>，则<code>target</code>一定不在第<code>col</code>列。如果<code>target&gt;matrix[row][col]</code>，则它一定不在第<code>row</code>行。</p>
-<p>所以我们只要判断<code>target</code>和<code>matrix[row][col]</code>的大小，就能排除某一行或某一列的所有元素。</p>
-<p>上代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">bool</span> <span class="n">searchMatrix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">matrix</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="k">while</span><span class="p">(</span><span class="n">row</span><span class="o">&lt;</span><span class="n">matrix</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">col</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">target</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]){</span>
-                <span class="n">col</span><span class="o">--</span><span class="p">;</span>
-            <span class="p">}</span><span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">target</span> <span class="o">&gt;</span> <span class="n">matrix</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]){</span>
-                <span class="n">row</span><span class="o">++</span><span class="p">;</span>
-            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div><p>最多把所有的行和列都排除一遍，时间复杂度只有O(m+n)。这个方法很巧妙！</p>
-<p>其实关注左下角的元素也是一样的：</p>
-<ul>
-<li>它是所在行最小的元素</li>
-<li>它是所在列最大的元素</li>
-</ul>
-<p>明白了就不觉得难了。</p>
+</code></pre></div><p>复杂度分析：排序nlogn+遍历n，因为nlogn的幂次高，所以O(nlogn+n)=O(nlogn)，故时间复杂度O(nlogn)</p>
+<p>空间复杂度：O(logn)，排序所需要的栈空间</p>
+<p>还有一种<strong>动态规划</strong>的方法，是按照左端点进行排序，然后用<code>f[i]</code>表示「以区间 <em>i</em> 为最后一个区间，可以选出的区间数量的最大值」来进行状态转移。</p>
+<p>代码比贪心复杂，时间复杂度也大一点，懒得去研究了。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-03-19</span>
+                <span>更新于 2022-03-20</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -202,8 +182,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/" class="prev" rel="prev" title="Roboflow&#43;colab优雅地训练yolov5模型"><i class="fas fa-angle-left fa-fw"></i>Roboflow&#43;colab优雅地训练yolov5模型</a>
-            <a href="/posts/leetcode435%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%B4%AA%E5%BF%83/" class="next" rel="next" title="Leetcode435:重叠区间——动态规划、贪心">Leetcode435:重叠区间——动态规划、贪心<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5/" class="prev" rel="prev" title="Leetcode240:搜索二维矩阵——二分、矩阵"><i class="fas fa-angle-left fa-fw"></i>Leetcode240:搜索二维矩阵——二分、矩阵</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
