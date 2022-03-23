@@ -3,7 +3,14 @@
         <title>所有文章 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 22 Mar 2022 17:50:53 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 23 Mar 2022 20:35:46 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode977:有序数组的平方——双指针</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+    <pubDate>Wed, 23 Mar 2022 20:35:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/squares-of-a-sorted-array/ 题解 先平方再排序 class Solution { public: vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) { for(int i=0;i&lt;nums.size();i++){ nums[i] = nums[i]*nums[i]; } sort(nums.begin(),nums.end()); return nums; } }; 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后]]></description>
+</item><item>
     <title>Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98/</link>
     <pubDate>Tue, 22 Mar 2022 17:50:53 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/</guid>
     <description><![CDATA[为什么安装sqlserver 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我]]></description>
-</item><item>
-    <title>Leetcode206:反转链表</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
-    <pubDate>Mon, 14 Mar 2022 19:15:57 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
-    <description><![CDATA[一件事情只有做了一段时间之后才能找到方向。前段时间随便找了一些题刷，开始逐渐了解数据结构和算法。最近在知乎上看到一篇文章，列举了400道数据]]></description>
 </item></channel>
 </rss>

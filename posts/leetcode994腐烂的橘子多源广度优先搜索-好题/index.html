@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目"/>
 <meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/rotting-oranges/ 这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。 题解 解题思路 这道题很明显要使用广度优先搜"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode733%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode733%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -25,7 +25,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98\/"
-        },"genre": "posts","wordcount":  567 ,
+        },"genre": "posts","wordcount":  749 ,
         "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98\/","datePublished": "2022-03-22T17:50:53+08:00","dateModified": "2022-03-22T17:50:53+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
@@ -102,7 +102,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-22">2022-03-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 567 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-22">2022-03-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 749 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98/" class="leancloud_visitors" data-flag-title="Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -176,7 +176,12 @@
 </span><span class="c1"></span>        <span class="k">return</span> <span class="nf">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">minute</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">};</span>
-</code></pre></div><p>看了下其他人的题解没有用我这种双队列方法的，哈哈，还特意发了个题解显摆一下，作者竟我自己</p>
+</code></pre></div><p>细节：</p>
+<ul>
+<li>最开始把坏橘子找出来的同时顺便可以把新鲜橘子的总数找出来。在搜索时顺便统计一下坏掉橘子的数量，相减后就能知道几轮下来还有没有新鲜的橘子了。</li>
+<li>我这样写代码把最初坏的橘子也算上消耗了一分钟时间，等于多算了一分钟，最后要把minute-1。但由于minute初值设置为0，所以可能会有-1的情况，此时取0就可。（我现在写题解的时候突然发现这个-1貌似没影响qwq）</li>
+</ul>
+<p>看了下其他人的题解没有用我这种双队列方法的，哈哈，还特意发了个题解显摆一下，作者竟我自己😂</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -200,7 +205,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode733%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" class="prev" rel="prev" title="Leetcode733:图像渲染——搜索算法"><i class="fas fa-angle-left fa-fw"></i>Leetcode733:图像渲染——搜索算法</a></div>
+    <div class="post-nav"><a href="/posts/leetcode733%E5%9B%BE%E5%83%8F%E6%B8%B2%E6%9F%93%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" class="prev" rel="prev" title="Leetcode733:图像渲染——搜索算法"><i class="fas fa-angle-left fa-fw"></i>Leetcode733:图像渲染——搜索算法</a>
+            <a href="/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/" class="next" rel="next" title="Leetcode977:有序数组的平方——双指针">Leetcode977:有序数组的平方——双指针<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
