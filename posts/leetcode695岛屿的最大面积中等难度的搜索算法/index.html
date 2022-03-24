@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Leetcode977:有序数组的平方——双指针 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode977:有序数组的平方——双指针" />
-<meta property="og:description" content="题目 https://leetcode-cn.com/problems/squares-of-a-sorted-array/ 题解 先平方再排序 class Solution { public: vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) { for(int i=0;i&lt;nums.size();i&#43;&#43;){ nums[i] = nums[i]*nums[i]; } sort(nums.begin(),nums.end()); return nums; } }; 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后" />
+        <title>Leetcode695:岛屿的最大面积——中等难度的搜索算法 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode695:岛屿的最大面积——中等难度的搜索算法" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/max-area-of-island/ leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-23T20:35:46+08:00" />
-<meta property="article:modified_time" content="2022-03-23T20:35:46+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-24T15:47:10+08:00" />
+<meta property="article:modified_time" content="2022-03-24T15:47:10+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode977:有序数组的平方——双指针"/>
-<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/squares-of-a-sorted-array/ 题解 先平方再排序 class Solution { public: vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) { for(int i=0;i&lt;nums.size();i&#43;&#43;){ nums[i] = nums[i]*nums[i]; } sort(nums.begin(),nums.end()); return nums; } }; 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后"/>
+<meta name="twitter:title" content="Leetcode695:岛屿的最大面积——中等难度的搜索算法"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/max-area-of-island/ leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode977:有序数组的平方——双指针",
+        "headline": "Leetcode695:岛屿的最大面积——中等难度的搜索算法",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88\/"
-        },"genre": "posts","wordcount":  349 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88\/","datePublished": "2022-03-23T20:35:46+08:00","dateModified": "2022-03-23T20:35:46+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95\/"
+        },"genre": "posts","wordcount":  545 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95\/","datePublished": "2022-03-24T15:47:10+08:00","dateModified": "2022-03-24T15:47:10+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode977:有序数组的平方——双指针</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode695:岛屿的最大面积——中等难度的搜索算法</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-23">2022-03-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 349 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/" class="leancloud_visitors" data-flag-title="Leetcode977:有序数组的平方——双指针">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-24">2022-03-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 545 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" class="leancloud_visitors" data-flag-title="Leetcode695:岛屿的最大面积——中等难度的搜索算法">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -114,64 +114,77 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#题目">题目</a></li>
-    <li><a href="#题解">题解</a>
-      <ul>
-        <li><a href="#先平方再排序">先平方再排序</a></li>
-        <li><a href="#双指针">双指针</a></li>
-      </ul>
-    </li>
+    <li><a href="#题解">题解</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p><a href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/squares-of-a-sorted-array/</a></p>
+<p><a href="https://leetcode-cn.com/problems/max-area-of-island/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/max-area-of-island/</a></p>
+<p>leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。</p>
 <h2 id="题解">题解</h2>
-<h3 id="先平方再排序">先平方再排序</h3>
+<p>这道题相较于Leetcode994:腐烂的橘子，有哪些不一样呢？</p>
+<ul>
+<li>994题给了你几个源点，而这题你需要从每个连通图里自己选择一个源点，才能进行搜索。</li>
+<li>994题要统计的是轮数，而这题在搜索时你需要统计节点总共的数量。</li>
+</ul>
+<p>解决方案：</p>
+<ul>
+<li>初始时遍历整个图，一旦遇到岛屿就开始做搜索。为了避免重复搜索，可以把已搜索节点标为0。</li>
+<li>带有返回值的递归。把整个递归过程看成一颗树，那么叶节点返回应该为1，其他节点返回应该是1+所有子节点。</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/%e5%b8%a6%e6%9c%89%e8%bf%94%e5%9b%9e%e5%80%bc%e7%9a%84%e9%80%92%e5%bd%92.jpg"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/%e5%b8%a6%e6%9c%89%e8%bf%94%e5%9b%9e%e5%80%bc%e7%9a%84%e9%80%92%e5%bd%92.jpg, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/%e5%b8%a6%e6%9c%89%e8%bf%94%e5%9b%9e%e5%80%bc%e7%9a%84%e9%80%92%e5%bd%92.jpg 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/%e5%b8%a6%e6%9c%89%e8%bf%94%e5%9b%9e%e5%80%bc%e7%9a%84%e9%80%92%e5%bd%92.jpg 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/带有返回值的递归.jpg"
+        title="带有返回值的递归" /></p>
+<p>上面这个图是我随手画的，只是便于理解，跟这个测试案例没啥关系😂。</p>
+<p>上代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortedSquares</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">get_area</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">grid</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="kt">int</span> <span class="n">j</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">i</span><span class="o">&gt;</span><span class="n">grid</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">j</span><span class="o">&gt;</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="n">sort</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-        <span class="k">return</span> <span class="n">nums</span><span class="p">;</span>
-
+        <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">di</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dj</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">next_i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="n">di</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
+            <span class="kt">int</span> <span class="n">next_j</span> <span class="o">=</span> <span class="n">j</span><span class="o">+</span><span class="n">dj</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
+            <span class="n">ans</span> <span class="o">+=</span> <span class="n">get_area</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">next_i</span><span class="p">,</span> <span class="n">next_j</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div><p>没啥好说的，打败40%的用户😂</p>
-<h3 id="双指针">双指针</h3>
-<p>不难发现，一个一般的nums数组前面是负数后面是正数，nums数组平方后的最大值一是第一个元素或最后一个元素。所以在第一位和最后一位分别放两个指针<code>i</code>和<code>j</code>。</p>
-<p>判断<code>if nums[i]*nums[i] &gt; nums[j]*nums[j]</code>，则把<code>nums[i]*nums[i]</code>放到<code>res</code>数组最后一位，否则把<code>nums[j]*nums[j]</code>放到最后一位。然后往前移动<code>i</code>，或者往后移动<code>j</code>。</p>
-<p>这里有个动画：<a href="https://code-thinking.cdn.bcebos.com/gifs/977.%e6%9c%89%e5%ba%8f%e6%95%b0%e7%bb%84%e7%9a%84%e5%b9%b3%e6%96%b9.gif" target="_blank" rel="noopener noreffer">977.有序数组的平方.gif</a></p>
-<p>代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sortedSquares</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
-        <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">j</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
-                <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="o">--</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
-                <span class="n">j</span><span class="o">--</span><span class="p">;</span>
-            <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-                <span class="n">res</span><span class="p">[</span><span class="n">k</span><span class="o">--</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-                <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="nf">maxAreaOfIsland</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">grid</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">maxarea</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">grid</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                    <span class="kt">int</span> <span class="n">area</span>  <span class="o">=</span> <span class="n">get_area</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">);</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">maxarea</span> <span class="o">&lt;</span> <span class="n">area</span><span class="p">){</span>
+                        <span class="n">maxarea</span> <span class="o">=</span> <span class="n">area</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">}</span>
-    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">maxarea</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div><p>细节：</p>
 <ul>
-<li>因为可能<code>i</code>和<code>j</code>所指的元素相等，所以判断里要加个等于</li>
-<li>while循环停止的条件，可以是<code>i&lt;=j</code>，或许也可以是<code>k&gt;=0</code>  ?</li>
+<li>搜索一个节点的时候先判断传入的坐标是否越界，如果越界了，或者所搜索的节点是0，直接return 0;因为只有1才有必要进行下一步操作。</li>
+<li>ans这个变量就很关键了，先赋初值为0，再累加。结合上面的图思考。</li>
+<li><code>di</code>和<code>dj</code>这两个数组的定义就是节省了代码，上一道搜索算法的题目我也是这样写的。</li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-03-23</span>
+                <span>更新于 2022-03-24</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -190,8 +203,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98/" class="prev" rel="prev" title="Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目"><i class="fas fa-angle-left fa-fw"></i>Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目</a>
-            <a href="/posts/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" class="next" rel="next" title="Leetcode695:岛屿的最大面积——中等难度的搜索算法">Leetcode695:岛屿的最大面积——中等难度的搜索算法<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/" class="prev" rel="prev" title="Leetcode977:有序数组的平方——双指针"><i class="fas fa-angle-left fa-fw"></i>Leetcode977:有序数组的平方——双指针</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

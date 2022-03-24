@@ -3,7 +3,14 @@
         <title>刷题 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/</link>
         <description>刷题 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 23 Mar 2022 20:35:46 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 24 Mar 2022 15:47:10 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode695:岛屿的最大面积——中等难度的搜索算法</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</link>
+    <pubDate>Thu, 24 Mar 2022 15:47:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode695%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/max-area-of-island/ leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多]]></description>
+</item><item>
     <title>Leetcode977:有序数组的平方——双指针</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/</link>
     <pubDate>Wed, 23 Mar 2022 20:35:46 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C%E5%8F%8C%E6%8C%87%E9%92%88%E5%A5%BD%E9%9A%BE/</guid>
     <description><![CDATA[题目 [15. 三数之和] 难度中等4464收藏分享切换为英文接收动态反馈 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 *a，b，c ，*使]]></description>
-</item><item>
-    <title>二叉树的层序遍历——太tm妙啦</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86%E5%A4%AAtm%E5%A6%99%E5%95%A6/</link>
-    <pubDate>Fri, 11 Mar 2022 17:57:18 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86%E5%A4%AAtm%E5%A6%99%E5%95%A6/</guid>
-    <description><![CDATA[题目 本题来自：https://leetcode-cn.com/problems/binary-tree-level-order-traver]]></description>
 </item></channel>
 </rss>
