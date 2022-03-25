@@ -1,0 +1,79 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>技能分享 - 分类 - 孙百乐的编程学习</title>
+        <link>https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/</link>
+        <description>技能分享 - 分类 - 孙百乐的编程学习</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 19 Mar 2022 13:37:49 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>Roboflow&#43;colab优雅地训练yolov5模型</title>
+    <link>https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/</link>
+    <pubDate>Sat, 19 Mar 2022 13:37:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/</guid>
+    <description><![CDATA[roboflow roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理]]></description>
+</item><item>
+    <title>mac m1 安装sqlserver踩坑经历</title>
+    <link>https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/</link>
+    <pubDate>Wed, 16 Mar 2022 18:14:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/macm1%E5%AE%89%E8%A3%85sqlserver%E8%B8%A9%E5%9D%91%E7%BB%8F%E5%8E%86/</guid>
+    <description><![CDATA[为什么安装sqlserver 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我]]></description>
+</item><item>
+    <title>C语言中值传递、指针传递和引用传递</title>
+    <link>https://www.leyoubaloy.xyz/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%80%BC%E4%BC%A0%E9%80%92%E6%8C%87%E9%92%88%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/</link>
+    <pubDate>Mon, 07 Mar 2022 17:15:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/c%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%80%BC%E4%BC%A0%E9%80%92%E6%8C%87%E9%92%88%E4%BC%A0%E9%80%92%E5%92%8C%E5%BC%95%E7%94%A8%E4%BC%A0%E9%80%92/</guid>
+    <description><![CDATA[2022年我才搞懂这个！ 比较 传递方式 函数定义 函数调用 函数内对a修改的影响 值传递 fun(int a) fun(x) 外部x不变 指针传递 fun(int *a) fun(&amp;x) 外部x同步更改 引用传递 fun(int &amp;a) fun(x) 外部]]></description>
+</item><item>
+    <title>Yolov5训练自己的目标检测模型</title>
+    <link>https://www.leyoubaloy.xyz/posts/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/</link>
+    <pubDate>Mon, 28 Feb 2022 22:34:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/yolov5%E8%AE%AD%E7%BB%83%E8%87%AA%E5%B7%B1%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/</guid>
+    <description><![CDATA[yolov5训练自己的目标检测模型 yolov5 yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代]]></description>
+</item><item>
+    <title>从wordpress迁移到hugo过程分享</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E4%BB%8Ewordpress%E8%BF%81%E7%A7%BB%E5%88%B0hugo%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/</link>
+    <pubDate>Fri, 28 Jan 2022 15:52:50 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E4%BB%8Ewordpress%E8%BF%81%E7%A7%BB%E5%88%B0hugo%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg" referrerpolicy="no-referrer">
+            </div>为什么抛弃wordpress选择hugo 不用买服务器了 wordpress经常奔溃，易受攻击 hugo编译速度真tm快 有一款钟爱的hugo主题 文]]></description>
+</item><item>
+    <title>gitee/github webhooks&#43;nodejs实现自动拉取代码</title>
+    <link>https://www.leyoubaloy.xyz/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</link>
+    <pubDate>Tue, 25 Jan 2022 20:50:41 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/gitee-webhooks&#43;nodejs%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81/</guid>
+    <description><![CDATA[需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都]]></description>
+</item><item>
+    <title>数值计算方法</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</link>
+    <pubDate>Wed, 01 Dec 2021 18:31:18 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</guid>
+    <description><![CDATA[包含几乎所有课堂上讲的题目]]></description>
+</item><item>
+    <title>Mac上自动连接校园网的脚本</title>
+    <link>https://www.leyoubaloy.xyz/posts/mac%E4%B8%8A%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%9A%84%E8%84%9A%E6%9C%AC/</link>
+    <pubDate>Wed, 24 Nov 2021 18:58:03 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/mac%E4%B8%8A%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%9A%84%E8%84%9A%E6%9C%AC/</guid>
+    <description><![CDATA[起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，]]></description>
+</item><item>
+    <title>github推送出现fatal:&#34;XXX&#34; 鉴权失败解决方案</title>
+    <link>https://www.leyoubaloy.xyz/posts/github%E6%8E%A8%E9%80%81%E5%87%BA%E7%8E%B0fatalxxx-%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+    <pubDate>Sun, 21 Nov 2021 09:04:54 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/github%E6%8E%A8%E9%80%81%E5%87%BA%E7%8E%B0fatalxxx-%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+    <description><![CDATA[问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案]]></description>
+</item><item>
+    <title>macOS下matplotlib无法显示中文字体问题解决</title>
+    <link>https://www.leyoubaloy.xyz/posts/macos%E4%B8%8Bmatplotlib%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+    <pubDate>Fri, 12 Nov 2021 16:57:43 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/macos%E4%B8%8Bmatplotlib%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+    <description><![CDATA[网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matp]]></description>
+</item></channel>
+</rss>
