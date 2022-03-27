@@ -3,7 +3,14 @@
         <title>刷题 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/</link>
         <description>刷题 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 26 Mar 2022 17:02:51 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 27 Mar 2022 19:36:29 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E5%88%B7%E9%A2%98/" rel="self" type="application/rss+xml" /><item>
+    <title>二叉树的锯齿形层序遍历</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%94%AF%E9%BD%BF%E5%BD%A2%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</link>
+    <pubDate>Sun, 27 Mar 2022 19:36:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%94%AF%E9%BD%BF%E5%BD%A2%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/ 做过102题后这题可以轻松做出来 题解 复习一下[102. 二叉树的层序遍历]： 首先根节点入队 当队列不为空： 求队列长度s 依次从队列中取s个元]]></description>
+</item><item>
     <title>Leetcode105:从前序与中序遍历序列构造二叉树</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode105%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
     <pubDate>Sat, 26 Mar 2022 17:02:51 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode455%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%E6%8E%92%E5%BA%8F%E8%B4%AA%E5%BF%83/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/assign-cookies/ 题解 为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的]]></description>
-</item><item>
-    <title>Leetcode160:相交链表——哈希、双指针</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/</link>
-    <pubDate>Wed, 16 Mar 2022 20:06:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode160%E7%9B%B8%E4%BA%A4%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/ 题解 法一：哈希表 先把一个链表放到哈希表里，再遍历另一个链表。 class Solution { public: ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) { unordered_set&lt;ListNode *&gt; visited; ListNode *temp = headA; while (temp != nullptr) { visited.insert(temp); temp = temp-&gt;next; } temp = headB; while (temp != nullptr) { if (visited.count(temp))]]></description>
 </item></channel>
 </rss>
