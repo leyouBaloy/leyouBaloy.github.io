@@ -22,7 +22,7 @@ https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/
 - 若其左子树存在，则其左子树中每个节点的值都不大于该节点值；
 - 若其右子树存在，则其右子树中每个节点的值都不小于该节点值。
 
-{{< image src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/webp" >}}
+{{< figure src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/webp" >}}
 
 性质：
 
