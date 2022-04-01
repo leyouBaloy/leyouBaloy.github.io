@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Leetcode198:打家劫舍——动态规划 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode198:打家劫舍——动态规划" />
-<meta property="og:description" content="题目 https://leetcode-cn.com/problems/house-robber/ 题解 看官方题解吧，官方题解写的真好。 感想 我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了" />
+        <title>Leetcode55:跳跃游戏——贪心 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode55:跳跃游戏——贪心" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/jump-game/ 题解 所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。 那么这道题可以有这样的思路：从前往后遍历nums的元素，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-31T16:20:49+08:00" />
-<meta property="article:modified_time" content="2022-03-31T16:20:49+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-01T16:03:13+08:00" />
+<meta property="article:modified_time" content="2022-04-01T16:03:13+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode198:打家劫舍——动态规划"/>
-<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/house-robber/ 题解 看官方题解吧，官方题解写的真好。 感想 我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了"/>
+<meta name="twitter:title" content="Leetcode55:跳跃游戏——贪心"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/jump-game/ 题解 所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。 那么这道题可以有这样的思路：从前往后遍历nums的元素，"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8Ciidfs%E5%9B%9E%E6%BA%AF/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode198:打家劫舍——动态规划",
+        "headline": "Leetcode55:跳跃游戏——贪心",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92\/"
-        },"genre": "posts","wordcount":  126 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92\/","datePublished": "2022-03-31T16:20:49+08:00","dateModified": "2022-03-31T16:20:49+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83\/"
+        },"genre": "posts","wordcount":  263 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83\/","datePublished": "2022-04-01T16:03:13+08:00","dateModified": "2022-04-01T16:03:13+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode198:打家劫舍——动态规划</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode55:跳跃游戏——贪心</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-31">2022-03-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 126 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="leancloud_visitors" data-flag-title="Leetcode198:打家劫舍——动态规划">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-01">2022-04-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 263 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/" class="leancloud_visitors" data-flag-title="Leetcode55:跳跃游戏——贪心">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -115,20 +115,33 @@
   <ul>
     <li><a href="#题目">题目</a></li>
     <li><a href="#题解">题解</a></li>
-    <li><a href="#感想">感想</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p><a href="https://leetcode-cn.com/problems/house-robber/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/house-robber/</a></p>
+<p><a href="https://leetcode-cn.com/problems/jump-game/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/jump-game/</a></p>
 <h2 id="题解">题解</h2>
-<p>看官方题解吧，官方题解写的真好。</p>
-<h2 id="感想">感想</h2>
-<p>我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动态规划是很灵活的算法，很多题目想不到可以用动态规划来解决。要多练习才能融会贯通。</p>
+<p>所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。</p>
+<p>那么这道题可以有这样的思路：从前往后遍历<code>nums</code>的元素，实时维护<strong>最远可以到达的位置</strong> <code>far</code>。</p>
+<p>对于当前遍历的位置<code>i</code>，先判断<code>i&lt;=far</code>，再有<code>far = max(far, i+nums[i])</code></p>
+<p>直到<code>far&gt;=len(nums)</code>，则返回True，否则返回False。</p>
+<p>代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">canJump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">far</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">far</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="n">far</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">far</span><span class="p">,</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">far</span> <span class="o">&gt;=</span> <span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div><p>ps:因为前面做了几题递归，所以本来想用递归做，尝试一下代码不太会写，但我觉得思路上应该是行得通的。看来我的技术还有很大的提升空间呀！</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-03-31</span>
+                <span>更新于 2022-04-01</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -147,8 +160,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8Ciidfs%E5%9B%9E%E6%BA%AF/" class="prev" rel="prev" title="Leetcode113:路径总和——dfs、回溯"><i class="fas fa-angle-left fa-fw"></i>Leetcode113:路径总和——dfs、回溯</a>
-            <a href="/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/" class="next" rel="next" title="Leetcode55:跳跃游戏——贪心">Leetcode55:跳跃游戏——贪心<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="prev" rel="prev" title="Leetcode198:打家劫舍——动态规划"><i class="fas fa-angle-left fa-fw"></i>Leetcode198:打家劫舍——动态规划</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

@@ -3,7 +3,14 @@
         <title>所有文章 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 31 Mar 2022 16:20:49 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 01 Apr 2022 16:03:13 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode55:跳跃游戏——贪心</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/</link>
+    <pubDate>Fri, 01 Apr 2022 16:03:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/jump-game/ 题解 所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。 那么这道题可以有这样的思路：从前往后遍历nums的元素，]]></description>
+</item><item>
     <title>Leetcode198:打家劫舍——动态规划</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
     <pubDate>Thu, 31 Mar 2022 16:20:49 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode977%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/squares-of-a-sorted-array/ 题解 先平方再排序 class Solution { public: vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) { for(int i=0;i&lt;nums.size();i++){ nums[i] = nums[i]*nums[i]; } sort(nums.begin(),nums.end()); return nums; } }; 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后]]></description>
-</item><item>
-    <title>Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98/</link>
-    <pubDate>Tue, 22 Mar 2022 17:50:53 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode994%E8%85%90%E7%83%82%E7%9A%84%E6%A9%98%E5%AD%90%E5%A4%9A%E6%BA%90%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-%E5%A5%BD%E9%A2%98/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/rotting-oranges/ 这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。 题解 解题思路 这道题很明显要使用广度优先搜]]></description>
 </item></channel>
 </rss>
