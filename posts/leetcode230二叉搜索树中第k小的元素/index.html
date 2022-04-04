@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Leetcode450:删除二叉搜索树中的节点 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode450:删除二叉搜索树中的节点" />
-<meta property="og:description" content="题目 https://leetcode-cn.com/problems/delete-node-in-a-bst/ 这道题完全可以当作一个知识点来对待。 题解 思路 众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。 某个节点" />
+        <title>Leetcode230:二叉搜索树中第K小的元素 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode230:二叉搜索树中第K小的元素" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/ 这是一道可拓展性很高的题目 题解 中序遍历递归法 最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第k-1个元素。 可是我们只需要第k个" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-04-02T10:20:05+08:00" />
-<meta property="article:modified_time" content="2022-04-02T10:20:05+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-04T15:26:44+08:00" />
+<meta property="article:modified_time" content="2022-04-04T15:26:44+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode450:删除二叉搜索树中的节点"/>
-<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/delete-node-in-a-bst/ 这道题完全可以当作一个知识点来对待。 题解 思路 众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。 某个节点"/>
+<meta name="twitter:title" content="Leetcode230:二叉搜索树中第K小的元素"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/ 这是一道可拓展性很高的题目 题解 中序遍历递归法 最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第k-1个元素。 可是我们只需要第k个"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode450:删除二叉搜索树中的节点",
+        "headline": "Leetcode230:二叉搜索树中第K小的元素",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9\/"
-        },"genre": "posts","wordcount":  1045 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9\/","datePublished": "2022-04-02T10:20:05+08:00","dateModified": "2022-04-02T10:20:05+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0\/"
+        },"genre": "posts","wordcount":  636 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0\/","datePublished": "2022-04-04T15:26:44+08:00","dateModified": "2022-04-04T15:26:44+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode450:删除二叉搜索树中的节点</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode230:二叉搜索树中第K小的元素</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-02">2022-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1045 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" class="leancloud_visitors" data-flag-title="Leetcode450:删除二叉搜索树中的节点">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-04">2022-04-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 636 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" class="leancloud_visitors" data-flag-title="Leetcode230:二叉搜索树中第K小的元素">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,38 +113,24 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题目">题目</a></li>
-    <li><a href="#题解">题解</a>
+    <li>
       <ul>
-        <li><a href="#思路">思路</a></li>
-        <li><a href="#代码">代码</a></li>
+        <li><a href="#中序遍历递归法">中序遍历递归法</a></li>
+        <li><a href="#中序遍历迭代法">中序遍历迭代法</a></li>
+        <li><a href="#记录子树的节点">记录子树的节点</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p><a href="https://leetcode-cn.com/problems/delete-node-in-a-bst/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/delete-node-in-a-bst/</a></p>
-<p>这道题完全可以当作一个知识点来对待。</p>
-<h2 id="题解">题解</h2>
-<h3 id="思路">思路</h3>
-<p>众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。</p>
-<p>某个节点<code>node</code>的后继节点<code>successor</code>，就是中序遍历中仅次于<code>node</code>的后一个节点，是比<code>node</code>大的节点当中最小的节点。<code>node</code>的右子树中最左边那个节点就是<code>successor</code>。</p>
-<p>某个节点<code>node</code>的前继节点<code>predecessor</code>，就是中序遍历中稍大于<code>node</code>的前一个节点，是比<code>node</code>小的节点当中最大的节点。<code>node</code>的左子树中最右边那个节点就是<code>successor</code>。</p>
-<p>我们要维护这个性质，所以，当删除一个节点时，我们要拿这个节点的后继节点<code>successor</code>或者前继节点<code>predecessor</code>来替换它，然后递归的删除它的后继节点或者前继节点。比如删除[1,2,3,4,5]中的3，我们就拿4来替换它（或者拿2替换）。然后为了删除4，拿5来替换。5后面没有节点了，就直接删除5。</p>
-<p>删除的时候可能有三种情况：</p>
-<ol>
-<li>要删除节点是叶节点。直接删除就好了。</li>
-<li>要删除的节点只有左子树，或者只有右子树。如果是左子树，就找前继节点替换；如果是右子树，就找后继节点替换。</li>
-<li>要删除的节点既有左子树又有右子树。前继，后继都可以。一般我们选择后继。</li>
-</ol>
-<p>上面的描述比较易于理解，但为了写代码方便，我们稍作改变：</p>
-<ol>
-<li>要删除节点是叶节点。直接删除。</li>
-<li>要删除的节点有右子树，就拿后继替换。</li>
-<li>否则，拿左继替换。</li>
-</ol>
-<h3 id="代码">代码</h3>
-<p>先看下ac的代码吧：</p>
+            </div><div class="content" id="content"><h1 id="题目">题目</h1>
+<p><a href="https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/</a></p>
+<p>这是一道可拓展性很高的题目</p>
+<h1 id="题解">题解</h1>
+<h3 id="中序遍历递归法">中序遍历递归法</h3>
+<p>最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第<code>k-1</code>个元素。</p>
+<p>可是我们只需要第<code>k</code>个元素，不用把所有元素都遍历完再返回结果，那么如何优化呢？</p>
+<p>那就让它遍历到第k个元素时就终止递归，返回结果呗。但是递归不是想终止就终止的，它会有“惯性”～</p>
+<p>比如下面的代码：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Definition for a binary tree node.</span>
 <span class="c1"># class TreeNode:</span>
 <span class="c1">#     def __init__(self, val=0, left=None, right=None):</span>
@@ -152,53 +138,57 @@
 <span class="c1">#         self.left = left</span>
 <span class="c1">#         self.right = right</span>
 <span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">get_successor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span>
-        <span class="k">while</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span>
-        <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">val</span>
-      
-    <span class="k">def</span> <span class="nf">get_predecessor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">left</span>
-        <span class="k">while</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-            <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span>
-        <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">val</span>
-      
-    <span class="k">def</span> <span class="nf">deleteNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">],</span> <span class="n">key</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">]:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">None</span>
-        <span class="k">if</span> <span class="n">key</span> <span class="o">&gt;</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
-            <span class="n">root</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deleteNode</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">key</span> <span class="o">&lt;</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">:</span>
-            <span class="n">root</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deleteNode</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">):</span>
-                <span class="n">root</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="k">elif</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-                <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_successor</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-                <span class="n">root</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deleteNode</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span> <span class="c1"># 从root.right开始删除，</span>
-                <span class="c1"># 如果从当前root删除，会死循环</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_predecessor</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-                <span class="n">root</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deleteNode</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">root</span>
-</code></pre></div><p>为什么非要优先找后继节点呢？其实你优先找前继节点也可以，把这段代码改成这样：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python">            <span class="k">elif</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-                <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_predecessor</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-                <span class="n">root</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deleteNode</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_successor</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-                <span class="n">root</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deleteNode</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
-</code></pre></div><p>为什么非要写成<code>root.left = xxx</code>，<code>root.right = xxx</code>呢？</p>
-<p>我把<code>root.right = self.deleteNode(root.right, key)</code>改成<code>self.deleteNode(root.right, key)</code>；</p>
-<p>以及后面三处的赋值语句都改成了直接递归，结果只和正确答案差了一点，就是在递归的末端的叶子节点当中<code>root=None</code>没有生效。也就是说叶子节点没有成功删除。</p>
-<p>我猜想可能是因为python的引用传递有关，这条赋值语句修改的只是形参而不是实参，所以无效！</p>
-<p>总之递归的代码好难写qwq，孩子根本想不到&hellip;</p>
+    <span class="k">def</span> <span class="nf">kthSmallest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">def</span> <span class="nf">inorder</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">root</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">&gt;</span><span class="n">k</span><span class="p">):</span>
+                <span class="k">return</span>
+            <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+                <span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+            <span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+                <span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+        <span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div><p>对于k=1，我们想让<code>len(nums)&gt;1</code>时就终止，实际上它一直运行到了<code>nums=3</code>。所以这种解法不够优雅。</p>
+<h3 id="中序遍历迭代法">中序遍历迭代法</h3>
+<p>中序遍历还有一个用栈实现的迭代法，其代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">while</span> <span class="n">root</span> <span class="ow">or</span> <span class="n">stack</span><span class="p">:</span>
+  <span class="k">while</span> <span class="n">root</span><span class="p">:</span>
+    <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span>
+</code></pre></div><p>迭代法相比递归法的优势就是随时可以终止，只需加上两句就可以啦。下面是完整代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">kthSmallest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="n">root</span> <span class="ow">or</span> <span class="n">stack</span><span class="p">:</span>
+            <span class="k">while</span> <span class="n">root</span><span class="p">:</span>
+                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+                <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">k</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">right</span>
+</code></pre></div><p>时间复杂度：O(H+k)；空间复杂度：O(H)</p>
+<h3 id="记录子树的节点">记录子树的节点</h3>
+<p>这个方法适用于频繁地查找第k个最小的值。</p>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yua-8o07/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-04-02</span>
+                <span>更新于 2022-04-04</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -217,8 +207,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/" class="prev" rel="prev" title="Leetcode55:跳跃游戏——贪心"><i class="fas fa-angle-left fa-fw"></i>Leetcode55:跳跃游戏——贪心</a>
-            <a href="/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" class="next" rel="next" title="Leetcode230:二叉搜索树中第K小的元素">Leetcode230:二叉搜索树中第K小的元素<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" class="prev" rel="prev" title="Leetcode450:删除二叉搜索树中的节点"><i class="fas fa-angle-left fa-fw"></i>Leetcode450:删除二叉搜索树中的节点</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
