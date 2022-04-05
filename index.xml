@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 04 Apr 2022 15:26:44 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 05 Apr 2022 16:50:12 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Leetcode2:两数相加——链表</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode2%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E9%93%BE%E8%A1%A8/</link>
+    <pubDate>Tue, 05 Apr 2022 16:50:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode2%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E9%93%BE%E8%A1%A8/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/add-two-numbers/ 这道题主要是debug 题解 我自己写的代码： /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode*]]></description>
+</item><item>
     <title>Leetcode230:二叉搜索树中第K小的元素</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/</link>
     <pubDate>Mon, 04 Apr 2022 15:26:44 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode105%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ 上数据结构这门课时研究过这个问题，思路很快就有，难在debug 题解 递归法 众所周知，只有前序遍历或中序遍历的结果是推演不出原树的。但是前]]></description>
-</item><item>
-    <title>Leetcode108:将有序数组转换为二叉搜索树</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode108%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</link>
-    <pubDate>Fri, 25 Mar 2022 15:36:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode108%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</guid>
-    <description><![CDATA[题目 从今天开始多做一点关于数据结构“树”的题目。 https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/ 题解 知识点：二叉搜索树 定义很简单： 若其左子树存在，则其左子树中每个节点的值都不大于该节点值]]></description>
 </item></channel>
 </rss>
