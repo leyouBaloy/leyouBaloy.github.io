@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 06 Apr 2022 15:07:06 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 07 Apr 2022 10:31:40 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>测试文章</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</link>
+    <pubDate>Thu, 07 Apr 2022 10:31:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</guid>
+    <description><![CDATA[巴拉巴拉]]></description>
+</item><item>
     <title>Leetcode310:最小高度树</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode310%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91/</link>
     <pubDate>Wed, 06 Apr 2022 15:07:06 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E4%BB%8A%E5%A4%A9%E9%80%83%E8%AF%BE%E8%BF%98%E8%A2%AB%E7%82%B9%E5%90%8D%E4%BA%86qwq/</guid>
     <description><![CDATA[疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最]]></description>
-</item><item>
-    <title>Leetcode103:二叉树的锯齿形层序遍历</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode103%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%94%AF%E9%BD%BF%E5%BD%A2%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</link>
-    <pubDate>Sun, 27 Mar 2022 19:36:29 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode103%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%94%AF%E9%BD%BF%E5%BD%A2%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/ 做过102题后这题可以轻松做出来 题解 复习一下[102. 二叉树的层序遍历]： 首先根节点入队 当队列不为空： 求队列长度s 依次从队列中取s个元]]></description>
 </item></channel>
 </rss>
