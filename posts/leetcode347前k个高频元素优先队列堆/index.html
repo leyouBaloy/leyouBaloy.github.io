@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Leetcode347:前K个高频元素——优先队列、堆 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode347:前K个高频元素——优先队列、堆" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/top-k-frequent-elements/ 从这题开始学会使用堆 题解 堆（heap） 大顶堆：父节点的值大于子节点的值。 小顶堆：父节点的值小于子节点的值。 性质：根节点一定是最大（最小" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode347%E5%89%8Dk%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E5%A0%86/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-07T16:55:15+08:00" />
+<meta property="article:modified_time" content="2022-04-07T16:55:15+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode347:前K个高频元素——优先队列、堆"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/top-k-frequent-elements/ 从这题开始学会使用堆 题解 堆（heap） 大顶堆：父节点的值大于子节点的值。 小顶堆：父节点的值小于子节点的值。 性质：根节点一定是最大（最小"/>
+<meta name="application-name" content="孙百乐的编程学习">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode347%E5%89%8Dk%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E5%A0%86/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode310%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Leetcode347:前K个高频元素——优先队列、堆",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode347%E5%89%8Dk%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E5%A0%86\/"
+        },"genre": "posts","wordcount":  1442 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode347%E5%89%8Dk%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E5%A0%86\/","datePublished": "2022-04-07T16:55:15+08:00","dateModified": "2022-04-07T16:55:15+08:00","publisher": {
+            "@type": "Organization",
+            "name": "孙百乐"},"author": {
+                "@type": "Person",
+                "name": "孙百乐"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB"><i class='fas fa-desktop'></i> 技能分享 </a><a class="menu-item" href="/bookshelf"><i class='fas fa-book'></i> 书影记录 </a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0"><i class='fas fa-pen-nib'></i> 随笔杂记 </a><a class="menu-item" href="/categories/"><i class='fas fa-archive'></i> 文章分类 </a><a class="menu-item" href="/about/"> 关于我 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB" title=""><i class='fas fa-desktop'></i>技能分享</a><a class="menu-item" href="/bookshelf" title=""><i class='fas fa-book'></i>书影记录</a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0" title=""><i class='fas fa-pen-nib'></i>随笔杂记</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-archive'></i>文章分类</a><a class="menu-item" href="/about/" title="">关于我</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode347:前K个高频元素——优先队列、堆</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-07">2022-04-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1442 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/leetcode347%E5%89%8Dk%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E5%A0%86/" class="leancloud_visitors" data-flag-title="Leetcode347:前K个高频元素——优先队列、堆">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#堆heap">堆（heap）</a></li>
+    <li><a href="#优先队列priority_queue">优先队列（priority_queue）</a></li>
+    <li><a href="#排序大法和大顶堆法">排序大法和大顶堆法</a></li>
+    <li><a href="#小顶堆法">小顶堆法</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="题目">题目</h1>
+<p><a href="https://leetcode-cn.com/problems/top-k-frequent-elements/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/top-k-frequent-elements/</a></p>
+<p>从这题开始学会使用堆</p>
+<h1 id="题解">题解</h1>
+<h2 id="堆heap">堆（heap）</h2>
+<p>大顶堆：父节点的值大于子节点的值。</p>
+<p>小顶堆：父节点的值小于子节点的值。</p>
+<p>性质：根节点一定是最大（最小）值</p>
+<p>这是一个小顶堆的例子：</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/webp-20220407170224537"/><figcaption>
+            <h4>小顶堆例子</h4>
+        </figcaption>
+</figure>
+
+<p>参考：https://www.cnblogs.com/wmyskxz/p/9301021.html</p>
+<p>ps：会有人把上学期刚学的东西忘得一干二净吗？会，是谁我不说😂。</p>
+<h2 id="优先队列priority_queue">优先队列（priority_queue）</h2>
+<p>优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个堆实现的。</p>
+<p>直接看c++ STL</p>
+<p>头文件： <code>#include&lt;queue&gt;</code></p>
+<p>定义：<code>priority_queue&lt;int&gt; p;</code> 默认为大顶堆</p>
+<p>或priority_queue&lt;Type, Container, Functional&gt; Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。</p>
+<p>如<code>priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, decltype(&amp;cmp)&gt; q(cmp);</code></p>
+<p>其中比较函数为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">static</span> <span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">m</span><span class="p">,</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">m</span><span class="p">.</span><span class="n">second</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div><p>这里定义的是一个储存pair&lt;int,int&gt;的小顶堆。</p>
+<p>操作（和队列基本操作相同：</p>
+<ul>
+<li>top 访问队头元素</li>
+<li>empty 队列是否为空</li>
+<li>size 返回队列内元素个数</li>
+<li>push 插入元素到队尾 (并排序)</li>
+<li>emplace 原地构造一个元素并插入队列</li>
+<li>pop 弹出队头元素</li>
+<li>swap 交换内容</li>
+</ul>
+<p>参考：https://blog.csdn.net/weixin_36888577/article/details/79937886</p>
+<h2 id="排序大法和大顶堆法">排序大法和大顶堆法</h2>
+<p>先搞清楚这些咱们才开始做题：</p>
+<p>首先最容易想到的，就是统计次数，时间复杂度O(n)。再排序，时间复杂度O(nlogn)。总时间复杂度O(nlogn)</p>
+<p>下面是自己写的代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">topKFrequent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">s1</span> <span class="o">=</span> <span class="p">[(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="n">s2</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">s2</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">)]</span>
+</code></pre></div><p>同样的，如果用大顶堆把所有<code>[数字,出现次数]</code>加入进去，然后k次返回堆顶元素，时间复杂度也是O(nlogn)。涉及到数据结构的话，最好还是用c艹来写：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">static</span> <span class="kt">bool</span> <span class="n">cmp</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="n">m</span><span class="p">,</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="n">n</span><span class="p">){</span>
+        <span class="k">return</span> <span class="n">m</span><span class="p">.</span><span class="n">second</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">topKFrequent</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">occur</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">v</span><span class="p">:</span><span class="n">nums</span><span class="p">){</span>
+            <span class="n">occur</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="k">decltype</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cmp</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">(</span><span class="n">cmp</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="p">[</span><span class="n">num</span><span class="p">,</span><span class="n">count</span><span class="p">]</span><span class="o">:</span><span class="n">occur</span><span class="p">){</span>
+            <span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">k</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+            <span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">first</span><span class="p">);</span>
+            <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="n">k</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">};</span>
+</code></pre></div><p>以上两种方法时间复杂度为O(nlogn)，都不符合题目要求。那么要做到“优于O(nlogn)”用什么方法呢？</p>
+<h2 id="小顶堆法">小顶堆法</h2>
+<p>取自官方题解：</p>
+<blockquote>
+<p>在这里，我们可以利用堆的思想：建立一个小顶堆，然后遍历「出现次数数组」：</p>
+<ul>
+<li>如果堆的元素个数小于 k，就可以直接插入堆中。</li>
+<li>如果堆的元素个数等于 k，则检查堆顶与当前出现次数的大小。如果堆顶更大，说明至少有 k 个数字的出现次数比当前值大，故舍弃当前值；否则，就弹出堆顶，并将当前值插入堆中。</li>
+</ul>
+<p>遍历完成后，堆中的元素就代表了「出现次数数组」中前 k 大的值。</p>
+</blockquote>
+<p>代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">static</span> <span class="kt">bool</span> <span class="n">cmp</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">m</span><span class="p">,</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">m</span><span class="p">.</span><span class="n">second</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">topKFrequent</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">occurrences</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">occurrences</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// pair 的第一个元素代表数组的值，第二个元素代表了该值出现的次数
+</span><span class="c1"></span>        <span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cmp</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">(</span><span class="n">cmp</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="p">[</span><span class="n">num</span><span class="p">,</span> <span class="n">count</span><span class="p">]</span> <span class="o">:</span> <span class="n">occurrences</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                    <span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ret</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">ret</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">first</span><span class="p">);</span>
+            <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="err">作者：</span><span class="n">LeetCode</span><span class="o">-</span><span class="n">Solution</span>
+<span class="err">链接：</span><span class="nl">https</span><span class="p">:</span><span class="c1">//leetcode-cn.com/problems/top-k-frequent-elements/solution/qian-k-ge-gao-pin-yuan-su-by-leetcode-solution/
+</span><span class="c1"></span><span class="err">来源：力扣（</span><span class="n">LeetCode</span><span class="err">）</span>
+<span class="err">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span>
+</code></pre></div><p>由于只需要维护大小为k的堆，所以空间复杂度会小。而且不用对于所有的元素都执行插入堆的操作，所以时间复杂度也优于上面的方法。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-04-07</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/leetcode310%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91/" class="prev" rel="prev" title="Leetcode310:最小高度树"><i class="fas fa-angle-left fa-fw"></i>Leetcode310:最小高度树</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">鲁ICP备2020039365号-1</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"7d4uuBoHJjcoTArKAPbPhRVC-gzGzoHsz","appKey":"6KLJGiDyLqts0JE077ta5vKm","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-FWJQFY04TK', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-FWJQFY04TK" async></script></body>
+</html>

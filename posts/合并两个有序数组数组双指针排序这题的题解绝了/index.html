@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>合并两个有序数组——数组、双指针、排序——这题的题解绝了 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="合并两个有序数组——数组、双指针、排序——这题的题解绝了" />
+<meta property="og:description" content="题目 该题来自：https://leetcode-cn.com/problems/merge-sorted-array/ 88. 合并两个有序数组 难度" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%8F%8C%E6%8C%87%E9%92%88%E6%8E%92%E5%BA%8F%E8%BF%99%E9%A2%98%E7%9A%84%E9%A2%98%E8%A7%A3%E7%BB%9D%E4%BA%86/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-04T15:32:13+08:00" />
+<meta property="article:modified_time" content="2022-03-04T15:32:13+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="合并两个有序数组——数组、双指针、排序——这题的题解绝了"/>
+<meta name="twitter:description" content="题目 该题来自：https://leetcode-cn.com/problems/merge-sorted-array/ 88. 合并两个有序数组 难度"/>
+<meta name="application-name" content="孙百乐的编程学习">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%8F%8C%E6%8C%87%E9%92%88%E6%8E%92%E5%BA%8F%E8%BF%99%E9%A2%98%E7%9A%84%E9%A2%98%E8%A7%A3%E7%BB%9D%E4%BA%86/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%9C%89%E6%95%88%E7%9A%84%E6%95%B0%E7%8B%AC%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9F%A9%E9%98%B5/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E9%93%BE%E8%A1%A8%E5%8F%8C%E6%8C%87%E9%92%88/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "合并两个有序数组——数组、双指针、排序——这题的题解绝了",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%8F%8C%E6%8C%87%E9%92%88%E6%8E%92%E5%BA%8F%E8%BF%99%E9%A2%98%E7%9A%84%E9%A2%98%E8%A7%A3%E7%BB%9D%E4%BA%86\/"
+        },"genre": "posts","wordcount":  1698 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%8F%8C%E6%8C%87%E9%92%88%E6%8E%92%E5%BA%8F%E8%BF%99%E9%A2%98%E7%9A%84%E9%A2%98%E8%A7%A3%E7%BB%9D%E4%BA%86\/","datePublished": "2022-03-04T15:32:13+08:00","dateModified": "2022-03-04T15:32:13+08:00","publisher": {
+            "@type": "Organization",
+            "name": "孙百乐"},"author": {
+                "@type": "Person",
+                "name": "孙百乐"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB"><i class='fas fa-desktop'></i> 技能分享 </a><a class="menu-item" href="/bookshelf"><i class='fas fa-book'></i> 书影记录 </a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0"><i class='fas fa-pen-nib'></i> 随笔杂记 </a><a class="menu-item" href="/categories/"><i class='fas fa-archive'></i> 文章分类 </a><a class="menu-item" href="/about/"> 关于我 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB" title=""><i class='fas fa-desktop'></i>技能分享</a><a class="menu-item" href="/bookshelf" title=""><i class='fas fa-book'></i>书影记录</a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0" title=""><i class='fas fa-pen-nib'></i>随笔杂记</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-archive'></i>文章分类</a><a class="menu-item" href="/about/" title="">关于我</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">合并两个有序数组——数组、双指针、排序——这题的题解绝了</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-04">2022-03-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1698 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%BB%84%E5%8F%8C%E6%8C%87%E9%92%88%E6%8E%92%E5%BA%8F%E8%BF%99%E9%A2%98%E7%9A%84%E9%A2%98%E8%A7%A3%E7%BB%9D%E4%BA%86/" class="leancloud_visitors" data-flag-title="合并两个有序数组——数组、双指针、排序——这题的题解绝了">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目">题目</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#题解">题解</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+<blockquote>
+<p>该题来自：https://leetcode-cn.com/problems/merge-sorted-array/</p>
+</blockquote>
+<h4 id="88-合并两个有序数组httpsleetcode-cncomproblemsmerge-sorted-array"><a href="https://leetcode-cn.com/problems/merge-sorted-array/" target="_blank" rel="noopener noreffer">88. 合并两个有序数组</a></h4>
+<p>难度简单1308收藏分享切换为英文接收动态反馈</p>
+<p>给你两个按 <strong>非递减顺序</strong> 排列的整数数组 <code>nums1</code> 和 <code>nums2</code>，另有两个整数 <code>m</code> 和 <code>n</code> ，分别表示 <code>nums1</code> 和 <code>nums2</code> 中的元素数目。</p>
+<p>请你 <strong>合并</strong> <code>nums2</code> 到 <code>nums1</code> 中，使合并后的数组同样按 <strong>非递减顺序</strong> 排列。</p>
+<p>**注意：**最终，合并后数组不应由函数返回，而是存储在数组 <code>nums1</code> 中。为了应对这种情况，<code>nums1</code> 的初始长度为 <code>m + n</code>，其中前 <code>m</code> 个元素表示应合并的元素，后 <code>n</code> 个元素为 <code>0</code> ，应忽略。<code>nums2</code> 的长度为 <code>n</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre tabindex="0"><code>输入：nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+输出：[1,2,2,3,5,6]
+解释：需要合并 [1,2,3] 和 [2,5,6] 。
+合并结果是 [1,2,2,3,5,6] ，其中斜体加粗标注的为 nums1 中的元素。
+</code></pre><p><strong>示例 2：</strong></p>
+<pre tabindex="0"><code>输入：nums1 = [1], m = 1, nums2 = [], n = 0
+输出：[1]
+解释：需要合并 [1] 和 [] 。
+合并结果是 [1] 。
+</code></pre><p><strong>示例 3：</strong></p>
+<pre tabindex="0"><code>输入：nums1 = [0], m = 0, nums2 = [1], n = 1
+输出：[1]
+解释：需要合并的数组是 [] 和 [1] 。
+合并结果是 [1] 。
+注意，因为 m = 0 ，所以 nums1 中没有元素。nums1 中仅存的 0 仅仅是为了确保合并结果可以顺利存放到 nums1 中。
+</code></pre><p><strong>提示：</strong></p>
+<ul>
+<li><code>nums1.length == m + n</code></li>
+<li><code>nums2.length == n</code></li>
+<li><code>0 &lt;= m, n &lt;= 200</code></li>
+<li><code>1 &lt;= m + n &lt;= 200</code></li>
+<li><code>-109 &lt;= nums1[i], nums2[j] &lt;= 109</code></li>
+</ul>
+<h2 id="题解">题解</h2>
+<p><strong>法一：直接合并后用sort()排序</strong></p>
+<p>本来以为会禁用STL，但是竟然没有，这种方法能过也是出乎我的意料。代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">merge</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">m</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">nums1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">nums1</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>而且还超过了百分之百的用户，笑死，赶紧截图纪念。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/leetcode%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E7%BB%93%E6%9E%9C.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/leetcode%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E7%BB%93%E6%9E%9C.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/leetcode%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E7%BB%93%E6%9E%9C.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/leetcode%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E7%BB%93%E6%9E%9C.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/leetcode%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E7%BB%93%E6%9E%9C.png"
+        title="leetcode代码提交结果" /></p>
+<p>sort()函数可以套用快速排序的时间复杂度和空间复杂度，都为O((m+n)log(m+n))。</p>
+<p><strong>法二：双指针</strong></p>
+<p>利用一个重要性质：nums1和nums2都是有序数组。</p>
+<p>用两个指针p1和p2分别指向nums1和num2的头部，然后比较nums[p1]和nums[p2]，将较小的那个数的指针（比如p1）往后移（p1++）。有点像归并排序。</p>
+<p>这个图非常生动形象：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/1.gif"
+        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/1.gif, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/1.gif 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/1.gif 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/1.gif"
+        title="gif1" /></p>
+<p>代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">merge</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">p1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">sorted</span><span class="p">[</span><span class="n">m</span> <span class="o">+</span> <span class="n">n</span><span class="p">];</span>
+        <span class="kt">int</span> <span class="n">cur</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">p1</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="o">||</span> <span class="n">p2</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">p1</span> <span class="o">==</span> <span class="n">m</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="o">++</span><span class="p">];</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">p2</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">[</span><span class="n">p1</span><span class="o">++</span><span class="p">];</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">[</span><span class="n">p1</span><span class="o">++</span><span class="p">];</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="o">++</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="n">sorted</span><span class="p">[</span><span class="n">p1</span> <span class="o">+</span> <span class="n">p2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">cur</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">m</span> <span class="o">+</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">nums1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="err">作者：</span><span class="n">LeetCode</span><span class="o">-</span><span class="n">Solution</span>
+<span class="err">链接：</span><span class="nl">https</span><span class="p">:</span><span class="c1">//leetcode-cn.com/problems/merge-sorted-array/solution/he-bing-liang-ge-you-xu-shu-zu-by-leetco-rrb0/
+</span><span class="c1"></span><span class="err">来源：力扣（</span><span class="n">LeetCode</span><span class="err">）</span>
+<span class="err">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span>
+</code></pre></div><p>两指针最多移动m+n次，因此时间复杂度O(m+n)。为防止覆盖，需要新建m+n长度的数组，因此空间复杂度为O(m+n)。</p>
+<p><strong>法三：逆向双指针</strong></p>
+<p>怎么样不建立新的数组，直接利用nums1后面空余的部分呢？我们想到了让p1和p2两指针从后向前遍历，每次取最大的那个数放在nums1的最后面。</p>
+<p>但是有一个前提，在从后向前填的过程中会不会覆盖nums1前面的数字呢？答案是不会，下面证明：</p>
+<p>在遍历的任一时刻，<code>nums1</code>数组中有<code>m-p1-1</code>个元素被放入<code>nums1</code>的最后面，<code>nums2</code>数组中有<code>n-p2-1</code>个元素被放入<code>nums1</code>的最后面。而在指针p1的后面，<code>nums1</code>数组有<code>m+n-p1-1</code>个位置。</p>
+<p>由于</p>
+<p>$$ m+n-p1-1 &gt;= m-p1-1+n-p2-1 $$</p>
+<p>等价于</p>
+<p>$$ p2&gt;-1 $$</p>
+<p>永远成立。所以不会被覆盖。</p>
+<p>代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">merge</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">p1</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">cur</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">p1</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">p2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">p1</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="o">--</span><span class="p">];</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">p2</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">[</span><span class="n">p1</span><span class="o">--</span><span class="p">];</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">nums1</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="p">])</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">[</span><span class="n">p1</span><span class="o">--</span><span class="p">];</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="o">--</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="n">nums1</span><span class="p">[</span><span class="n">tail</span><span class="o">--</span><span class="p">]</span> <span class="o">=</span> <span class="n">cur</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="err">作者：</span><span class="n">LeetCode</span><span class="o">-</span><span class="n">Solution</span>
+<span class="err">链接：</span><span class="nl">https</span><span class="p">:</span><span class="c1">//leetcode-cn.com/problems/merge-sorted-array/solution/he-bing-liang-ge-you-xu-shu-zu-by-leetco-rrb0/
+</span><span class="c1"></span><span class="err">来源：力扣（</span><span class="n">LeetCode</span><span class="err">）</span>
+<span class="err">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span>
+</code></pre></div><p>看完这个题解我真是觉得太牛逼了。</p>
+<p>时间复杂度O(m+n)，因为不需要额外数组，所以空间复杂度O(1)。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-03-04</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E6%9C%89%E6%95%88%E7%9A%84%E6%95%B0%E7%8B%AC%E6%95%B0%E7%BB%84%E5%93%88%E5%B8%8C%E8%A1%A8%E7%9F%A9%E9%98%B5/" class="prev" rel="prev" title="有效的数独——数组、哈希表、矩阵"><i class="fas fa-angle-left fa-fw"></i>有效的数独——数组、哈希表、矩阵</a>
+            <a href="/posts/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E9%93%BE%E8%A1%A8%E5%8F%8C%E6%8C%87%E9%92%88/" class="next" rel="next" title="环形链表——哈希、链表、双指针">环形链表——哈希、链表、双指针<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">鲁ICP备2020039365号-1</span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"7d4uuBoHJjcoTArKAPbPhRVC-gzGzoHsz","appKey":"6KLJGiDyLqts0JE077ta5vKm","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-FWJQFY04TK', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-FWJQFY04TK" async></script></body>
+</html>
