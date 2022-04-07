@@ -25,7 +25,7 @@ https://leetcode-cn.com/problems/top-k-frequent-elements/
 
 这是一个小顶堆的例子：
 
-{{< img src"https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/webp-20220407170224537" caption="小顶堆例子" >}}
+{{< figure src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/webp-20220407170224537"  title="小顶堆例子" >}}
 
 参考：https://www.cnblogs.com/wmyskxz/p/9301021.html
 
