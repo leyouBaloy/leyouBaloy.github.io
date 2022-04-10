@@ -3,7 +3,14 @@
         <title>所有文章 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 09 Apr 2022 12:08:07 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 10 Apr 2022 23:05:16 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>成功主持150人参会的讲座！</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%88%90%E5%8A%9F%E4%B8%BB%E6%8C%81150%E4%BA%BA%E5%8F%82%E4%BC%9A%E7%9A%84%E8%AE%B2%E5%BA%A7/</link>
+    <pubDate>Sun, 10 Apr 2022 23:05:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%88%90%E5%8A%9F%E4%B8%BB%E6%8C%81150%E4%BA%BA%E5%8F%82%E4%BC%9A%E7%9A%84%E8%AE%B2%E5%BA%A7/</guid>
+    <description><![CDATA[腾讯会议截图 最好的会议软件 参会人数150 每一次在公开场合的讲话对我都是一次极大的锻炼提高！担任活动策划、组织者非常不容易，要考虑每一个细节，]]></description>
+</item><item>
     <title>Leetcode560:和为K的子数组——前缀和、哈希表</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode560%E5%92%8C%E4%B8%BAk%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E5%89%8D%E7%BC%80%E5%92%8C%E5%93%88%E5%B8%8C%E8%A1%A8/</link>
     <pubDate>Sat, 09 Apr 2022 12:08:07 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode55%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%E8%B4%AA%E5%BF%83/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/jump-game/ 题解 所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。 那么这道题可以有这样的思路：从前往后遍历nums的元素，]]></description>
-</item><item>
-    <title>Leetcode198:打家劫舍——动态规划</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
-    <pubDate>Thu, 31 Mar 2022 16:20:49 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/house-robber/ 题解 看官方题解吧，官方题解写的真好。 感想 我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了]]></description>
 </item></channel>
 </rss>
