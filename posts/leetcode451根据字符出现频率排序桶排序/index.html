@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>《失乐园》读后有感 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="《失乐园》读后有感" />
-<meta property="og:description" content="故事简叙 《失乐园》 久木是一家出版社的编辑，人到中年，事业不会有进一步发展了，对家人的感情也是平平淡淡的，生活只是一日复一日，清闲无聊得很。 一" />
+        <title>Leetcode451:根据字符出现频率排序——桶排序 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode451:根据字符出现频率排序——桶排序" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/sort-characters-by-frequency/ 题解 思路 用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-04-15T16:38:22+08:00" />
-<meta property="article:modified_time" content="2022-04-15T16:38:22+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-15T18:00:29+08:00" />
+<meta property="article:modified_time" content="2022-04-15T18:00:29+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="《失乐园》读后有感"/>
-<meta name="twitter:description" content="故事简叙 《失乐园》 久木是一家出版社的编辑，人到中年，事业不会有进一步发展了，对家人的感情也是平平淡淡的，生活只是一日复一日，清闲无聊得很。 一"/>
+<meta name="twitter:title" content="Leetcode451:根据字符出现频率排序——桶排序"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/sort-characters-by-frequency/ 题解 思路 用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个"/>
 <meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%88%90%E5%8A%9F%E4%B8%BB%E6%8C%81150%E4%BA%BA%E5%8F%82%E4%BC%9A%E7%9A%84%E8%AE%B2%E5%BA%A7/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "《失乐园》读后有感",
+        "headline": "Leetcode451:根据字符出现频率排序——桶排序",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F\/"
-        },"genre": "posts","wordcount":  1366 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F\/","datePublished": "2022-04-15T16:38:22+08:00","dateModified": "2022-04-15T16:38:22+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F\/"
+        },"genre": "posts","wordcount":  716 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F\/","datePublished": "2022-04-15T18:00:29+08:00","dateModified": "2022-04-15T18:00:29+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">《失乐园》读后有感</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>书影记录</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-15">2022-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1366 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" class="leancloud_visitors" data-flag-title="《失乐园》读后有感">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode451:根据字符出现频率排序——桶排序</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-15">2022-04-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 716 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/" class="leancloud_visitors" data-flag-title="Leetcode451:根据字符出现频率排序——桶排序">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,46 +113,69 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#故事简叙">故事简叙</a></li>
-    <li><a href="#日本人对死的看法">日本人对死的看法</a></li>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
+      <ul>
+        <li><a href="#思路">思路</a></li>
+        <li><a href="#桶排序">桶排序</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="故事简叙">故事简叙</h2>
-<figure><img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220415165918989.png"/><figcaption>
-            <h4>《失乐园》</h4>
-        </figcaption>
-</figure>
+            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+<p><a href="https://leetcode-cn.com/problems/sort-characters-by-frequency/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/sort-characters-by-frequency/</a></p>
+<h2 id="题解">题解</h2>
+<h3 id="思路">思路</h3>
+<p>用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个大写，0-9数字），所以使用桶排序是最好的选择。</p>
+<h3 id="桶排序">桶排序</h3>
+<p>假设你对2，5，3三个数字排序，最大的数字是5，所以你拿来五个桶，从头到尾遍历这三个数字。然后把数字放在相同标号的桶里，比如第一个数字是2，就把它放在标号为2的桶里，5就放在标号为5的桶，3就放在标号为3的桶里。最后再把1号到5号桶遍历，空的跳过，就完成了排序。典型的空间换时间，当已知不会消耗很大的空间时，桶排序无非是效率最高的。</p>
+<p>具体做法如下：</p>
+<ul>
+<li>
+<p>遍历字符串，统计每个字符出现的频率，同时记录最高频率maxFreq；</p>
+</li>
+<li>
+<p>创建桶，存储从 11 到 maxFreq 的每个出现频率的字符；</p>
+</li>
+<li>
+<p>按照出现频率从大到小的顺序遍历桶，对于每个出现频率，获得对应的字符，然后将每个字符按照出现频率拼接到排序后的字符串。</p>
+</li>
+</ul>
+<p>代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">frequencySort</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">char</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">mp</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">maxFreq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">ch</span> <span class="p">:</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">maxFreq</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">maxFreq</span><span class="p">,</span> <span class="o">++</span><span class="n">mp</span><span class="p">[</span><span class="n">ch</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">buckets</span><span class="p">(</span><span class="n">maxFreq</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="p">[</span><span class="n">ch</span><span class="p">,</span> <span class="n">num</span><span class="p">]</span> <span class="o">:</span> <span class="n">mp</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">buckets</span><span class="p">[</span><span class="n">num</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">string</span> <span class="n">ret</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">maxFreq</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">string</span> <span class="o">&amp;</span><span class="n">bucket</span> <span class="o">=</span> <span class="n">buckets</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">ch</span> <span class="p">:</span> <span class="n">bucket</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">ret</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">ch</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 
-<p>久木是一家出版社的编辑，人到中年，事业不会有进一步发展了，对家人的感情也是平平淡淡的，生活只是一日复一日，清闲无聊得很。</p>
-<p>一次偶然的工作聚会上，久木认识了凛子，对她产生了兴趣。凛子30岁，正是端庄美丽之时，但她的婚姻生活并不美好，丈夫忙于工作，无论是在感情上还是在性上都不能满足凛子。但凛子并不是淫荡的女人，在认识久木之前，她也秉持着传统东方女人的内敛，羞涩与神秘，还有坚韧和倔强，直到认识久木之后，是久木带着她闯入了性爱的乐园唤醒了她对性与爱的渴望，坠入深渊之后，便一去不复返了。</p>
-<p>两人最初是在镰仓旅馆里做云雨之事，这个时候久木是进攻者，凛子是防守者。看着凛子破防是久木的享受：</p>
-<blockquote>
-<p>“和女性同时达到高潮固然不错，但眼看着女性一步步走向顶点也另有其美妙的感觉。前者沉浸在自己的快乐中，后者则享有把所爱的女人送入极乐的境地，令她充分满足的握有主动权的喜悦。”</p>
+</code></pre></div><blockquote>
+<p>作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/sort-characters-by-frequency/solution/gen-ju-zi-fu-chu-xian-pin-lu-pai-xu-by-l-zmvy/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 </blockquote>
-<p>凛子的父亲去世了，呆在娘家守丧。久木按耐不住自己的欲望，死乞白赖地请求凛子抽空跟他见一面，凛子穿着丧服赴约后，久木命令她撩开裙摆插入…如此背德的事情，让性爱的快感更强烈了。二人就像同谋罪犯一样，命运更紧密地联合在一起了。</p>
-<blockquote>
-<p>“男人和女人都清楚，眼前这无与伦比的美，发源于稀世罕见的粗俗和淫靡，而他们却甘愿堕人到那淫荡的世界中去。”</p>
-</blockquote>
-<p>本来二人都以为这次偷情只是昙花一现，很快就能恢复原本的生活，结果却越陷越深，难以割舍。频繁的幽会，自然引起了家人的怀疑，久木的妻子提出离婚，而久木犹豫不决。凛子的丈夫则不同意离婚，他想把凛子限制在婚姻的枷锁内惩罚她，悲剧的发生似乎是不可阻挡了。同时久木的同事水口去世，还有两人反复聊到阿部定情杀的故事，在性爱时掐住脖子体验濒死的感觉，暗示着最终走向死亡的结局。</p>
-<blockquote>
-<p>“刚才凛子说“我好难受”时掐住了他脖子，久木以为她是闹着玩儿，没想到凛子会来真格的。被她扼住喉咙时，久木真切地感受到了被带往遥远的世界去的不安，也品味到了某种甘美的感觉。”</p>
-</blockquote>
-<p>凛子打算彻底与丈夫断绝关系，更多的时间是跟久木厮混在一起。她的身体更加丰满，更有韵味，在性爱中变得更加主动，或者说更加淫荡。</p>
-<blockquote>
-<p>“这回没忍住吧?”
-望着笑眯眯的凛子，久木再次品尝了失败的滋味。”</p>
-</blockquote>
-<p>二人在欲乐园里贪恋不可自拔，为了追求更高的刺激，她们变换不同的姿势，用不同的体位，还购买了工具。而来自家庭，工作的恶意让他们难以在现实生活中立足，只能彼此依靠。所以活着有什么意思呢？还不如就在欢娱达到顶点之时死去算了。</p>
-<blockquote>
-<p>“女人是在晕眩般极度快乐中梦见死，相比之下，男人则是在坠落下去的虚脱感中被死的阴影所缚，两者真是天壤之别啊！”</p>
-</blockquote>
-<blockquote>
-<p>“在人生态度上，久木渐渐开始倾向于要全力以赴地把握现在的刹那主义，这也是凛子的影响。”</p>
-</blockquote>
-<p>最终的结局，是二人在别墅中自杀。被发现时身体还紧紧的结合在一起。</p>
-<h2 id="日本人对死的看法">日本人对死的看法</h2>
-<p>日本文学中出现了很多关于死的想法，很多日本知名作家都选择自杀，比如有岛武郎（小说中有提到），芥川龙之介，太宰治，三岛由纪夫，川端康成（小说中也提到了），樱花精神和武士精神也都是一种崇尚“高贵的死”的精神，这一点和中国古代的文人把精神看作比生命更重要是类似的，可能也是因为日本的文化来源于中国文化，但是日本人把这种精神发展到极致了。</p>
-<p>很明显我们现在的价值观是不认同这种的，中国有句话叫“好死不如赖活着”，中国的自杀率也远低于日本。</p>
+<p>时间复杂度：O*(<em>n</em>+*k)，其中 <em>n</em> 是字符串 <em>s</em> 的长度，<em>k</em> 是字符串 <em>s</em> 包含的不同字符的个数。</p>
+<p>空间复杂度：O*(<em>n</em>+*k)</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -176,8 +199,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E6%88%90%E5%8A%9F%E4%B8%BB%E6%8C%81150%E4%BA%BA%E5%8F%82%E4%BC%9A%E7%9A%84%E8%AE%B2%E5%BA%A7/" class="prev" rel="prev" title="成功主持150人参会的讲座！"><i class="fas fa-angle-left fa-fw"></i>成功主持150人参会的讲座！</a>
-            <a href="/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/" class="next" rel="next" title="Leetcode451:根据字符出现频率排序——桶排序">Leetcode451:根据字符出现频率排序——桶排序<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" class="prev" rel="prev" title="《失乐园》读后有感"><i class="fas fa-angle-left fa-fw"></i>《失乐园》读后有感</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

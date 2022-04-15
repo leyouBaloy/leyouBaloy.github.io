@@ -3,9 +3,16 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Apr 2022 16:38:22 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Apr 2022 18:00:29 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Leetcode451:根据字符出现频率排序——桶排序</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/</link>
+    <pubDate>Fri, 15 Apr 2022 18:00:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/sort-characters-by-frequency/ 题解 思路 用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个]]></description>
+</item><item>
     <title>《失乐园》读后有感</title>
     <link>https://www.leyoubaloy.xyz/posts/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</link>
     <pubDate>Fri, 15 Apr 2022 16:38:22 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/ 这是一道可拓展性很高的题目 题解 中序遍历递归法 最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第k-1个元素。 可是我们只需要第k个]]></description>
-</item><item>
-    <title>Leetcode450:删除二叉搜索树中的节点</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</link>
-    <pubDate>Sat, 02 Apr 2022 10:20:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode450%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/delete-node-in-a-bst/ 这道题完全可以当作一个知识点来对待。 题解 思路 众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。 某个节点]]></description>
 </item></channel>
 </rss>
