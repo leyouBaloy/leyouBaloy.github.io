@@ -3,9 +3,23 @@
         <title>孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Apr 2022 18:00:29 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Apr 2022 20:23:57 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Git撤销版本</title>
+    <link>https://www.leyoubaloy.xyz/posts/git%E6%92%A4%E9%94%80%E7%89%88%E6%9C%AC/</link>
+    <pubDate>Sat, 16 Apr 2022 20:23:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/git%E6%92%A4%E9%94%80%E7%89%88%E6%9C%AC/</guid>
+    <description><![CDATA[Git如何撤回远程仓库已经提交的版本？ 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 执行 git log]]></description>
+</item><item>
+    <title>Pandas使用技巧</title>
+    <link>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+    <pubDate>Sat, 16 Apr 2022 15:42:08 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+    <description><![CDATA[read_csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行]]></description>
+</item><item>
     <title>Leetcode451:根据字符出现频率排序——桶排序</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/</link>
     <pubDate>Fri, 15 Apr 2022 18:00:29 &#43;0800</pubDate>
@@ -61,19 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode310%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/minimum-height-trees/ 这是一道理论性很强，代码也很有技巧性的“中等”难度题目。 题解 暴力法 献上我的超时代码： class Solution: def findMinHeightTrees(self, n: int, edges: List[List[int]]) -&gt; List[int]: find = {} for edge in edges: if edge[0] in find.keys(): find[edge[0]].append(edge[1]) else: find[edge[0]] =]]></description>
-</item><item>
-    <title>Leetcode2:两数相加——链表</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode2%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E9%93%BE%E8%A1%A8/</link>
-    <pubDate>Tue, 05 Apr 2022 16:50:12 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode2%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0%E9%93%BE%E8%A1%A8/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/add-two-numbers/ 这道题主要是debug 题解 我自己写的代码： /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode*]]></description>
-</item><item>
-    <title>Leetcode230:二叉搜索树中第K小的元素</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/</link>
-    <pubDate>Mon, 04 Apr 2022 15:26:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode230%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%AC%ACk%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/ 这是一道可拓展性很高的题目 题解 中序遍历递归法 最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第k-1个元素。 可是我们只需要第k个]]></description>
 </item></channel>
 </rss>

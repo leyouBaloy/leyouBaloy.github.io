@@ -3,7 +3,21 @@
         <title>笔记 - 分类 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/</link>
         <description>笔记 - 分类 - 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 08 Apr 2022 20:23:24 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Apr 2022 20:23:57 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>Git撤销版本</title>
+    <link>https://www.leyoubaloy.xyz/posts/git%E6%92%A4%E9%94%80%E7%89%88%E6%9C%AC/</link>
+    <pubDate>Sat, 16 Apr 2022 20:23:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/git%E6%92%A4%E9%94%80%E7%89%88%E6%9C%AC/</guid>
+    <description><![CDATA[Git如何撤回远程仓库已经提交的版本？ 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 执行 git log]]></description>
+</item><item>
+    <title>Pandas使用技巧</title>
+    <link>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+    <pubDate>Sat, 16 Apr 2022 15:42:08 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+    <description><![CDATA[read_csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行]]></description>
+</item><item>
     <title>C&#43;&#43;和python常用函数</title>
     <link>https://www.leyoubaloy.xyz/posts/c&#43;&#43;%E5%92%8Cpython%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</link>
     <pubDate>Fri, 08 Apr 2022 20:23:24 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%A1%B9%E7%9B%AE-onlinejudge%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%95%E5%B9%B3%E5%8F%B0/</guid>
     <description><![CDATA[展示 概括来说，就是用django开发的web项目。相当于一个学生管理系统＋评测系统，开发完成后部署。这个项目，在一起参与暑期实习的很多同学看]]></description>
-</item><item>
-    <title>docker笔记</title>
-    <link>https://www.leyoubaloy.xyz/posts/docker%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Mon, 19 Jul 2021 20:57:21 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/docker%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[打开docker服务 systemctl start docker docker一直在后台运行 `docker run -dit judge:0.2 /bin/bash` 复制 `docker cp 容器id:容器内路径 目的主机路径` `docker cp /root/testPython/test01/ $(docker ps -q):/usr/src/app` `docker cp /root/testPython/judge_file_o.py $(docker ps -q):/usr/src/app/test01/judge` 容器外执行命]]></description>
-</item><item>
-    <title>《概率论与数理统计》结课总结</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%BB%93%E8%AF%BE%E6%80%BB%E7%BB%93/</link>
-    <pubDate>Thu, 17 Jun 2021 20:33:22 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%BB%93%E8%AF%BE%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[课程时长 这门课上的不长，就大半个学期。任课教师王老师，是一位教学经验丰富的老师。也是统计学方面的专家，跟着他学习，感觉在很短的时间内学到了很]]></description>
 </item></channel>
 </rss>
