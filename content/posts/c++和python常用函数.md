@@ -135,6 +135,12 @@ static bool cmp(pair<int, int>& m, pair<int, int>& n) {        return m.second >
 
 
 
+### vector<>
+
+创建一个n*n的二维数组：`vector<vector<int>> dp(n, vector<int>(n));`
+
+
+
 ## python常用函数
 
 ### sorted()
