@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>matplotlib学习笔记（四）图中图-次坐标轴-Animation动画 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="matplotlib学习笔记（四）图中图-次坐标轴-Animation动画" />
+        <title>matplotlib学习笔记（四）图中图-次坐标轴-Animation动画 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="matplotlib学习笔记（四）图中图-次坐标轴-Animation动画" />
 <meta property="og:description" content="视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm_id_from=" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.leyoubaloy.xyz/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB/" /><meta property="article:section" content="posts" />
@@ -15,8 +15,8 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="matplotlib学习笔记（四）图中图-次坐标轴-Animation动画"/>
 <meta name="twitter:description" content="视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm_id_from="/>
-<meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%A4%A9%E6%98%8E%E7%A1%AE%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/pandas%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="application-name" content="百乐的编程学习">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/matplotlib%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B%E5%9B%BE%E4%B8%AD%E5%9B%BE-%E6%AC%A1%E5%9D%90%E6%A0%87%E8%BD%B4-animation%E5%8A%A8%E7%94%BB/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%BC%80%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%A4%A9%E6%98%8E%E7%A1%AE%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/pandas%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -39,7 +39,7 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+            <a href="/" title="百乐的编程学习">百乐的编程学习</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB"><i class='fas fa-desktop'></i> 技能分享 </a><a class="menu-item" href="/bookshelf"><i class='fas fa-book'></i> 书影记录 </a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0"><i class='fas fa-pen-nib'></i> 随笔杂记 </a><a class="menu-item" href="/categories/"><i class='fas fa-archive'></i> 文章分类 </a><a class="menu-item" href="/about/"> 关于我 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -63,7 +63,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+                <a href="/" title="百乐的编程学习">百乐的编程学习</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>

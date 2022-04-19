@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Roboflow&#43;colab优雅地训练yolov5模型 - 孙百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Roboflow&#43;colab优雅地训练yolov5模型" />
+        <title>Roboflow&#43;colab优雅地训练yolov5模型 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Roboflow&#43;colab优雅地训练yolov5模型" />
 <meta property="og:description" content="roboflow roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/" /><meta property="article:section" content="posts" />
@@ -15,8 +15,8 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Roboflow&#43;colab优雅地训练yolov5模型"/>
 <meta name="twitter:description" content="roboflow roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理"/>
-<meta name="application-name" content="孙百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="孙百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="application-name" content="百乐的编程学习">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E9%82%93%E5%B0%8F%E5%B9%B3%E6%97%B6%E4%BB%A3%E6%94%B9%E9%9D%A9%E5%BC%80%E6%94%BE%E7%9A%84%E6%80%BB%E8%AE%BE%E8%AE%A1%E5%B8%88/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E4%BA%8C%E5%88%86%E7%9F%A9%E9%98%B5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -39,7 +39,7 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+            <a href="/" title="百乐的编程学习">百乐的编程学习</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB"><i class='fas fa-desktop'></i> 技能分享 </a><a class="menu-item" href="/bookshelf"><i class='fas fa-book'></i> 书影记录 </a><a class="menu-item" href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0"><i class='fas fa-pen-nib'></i> 随笔杂记 </a><a class="menu-item" href="/categories/"><i class='fas fa-archive'></i> 文章分类 </a><a class="menu-item" href="/about/"> 关于我 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
@@ -63,7 +63,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="孙百乐的编程学习">孙百乐的编程学习</a>
+                <a href="/" title="百乐的编程学习">百乐的编程学习</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>

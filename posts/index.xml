@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - 孙百乐的编程学习</title>
+        <title>所有文章 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
-        <description>所有文章 | 孙百乐的编程学习</description>
+        <description>所有文章 | 百乐的编程学习</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 19 Apr 2022 16:45:09 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Leetcode821:字符的最短距离——两次遍历</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86/</link>
