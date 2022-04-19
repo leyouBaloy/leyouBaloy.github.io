@@ -3,7 +3,14 @@
         <title>所有文章 - 孙百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 孙百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 18 Apr 2022 17:26:02 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 19 Apr 2022 16:45:09 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode821:字符的最短距离——两次遍历</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86/</link>
+    <pubDate>Tue, 19 Apr 2022 16:45:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/shortest-distance-to-a-character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然]]></description>
+</item><item>
     <title>Leetcode386:字典序排数——dfs、迭代</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode386%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0dfs%E8%BF%AD%E4%BB%A3/</link>
     <pubDate>Mon, 18 Apr 2022 17:26:02 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/c&#43;&#43;%E5%92%8Cpython%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</guid>
     <description><![CDATA[c++常用函数 sort(v.begin(),v.end()) // 向量v vector&lt;int&gt; v; sort(v.begin(),v.end()) // 数组a sort(a,a+n); // 可以加参数cmp // 比如对intervals = [[1,2],[2,3],[3,4],[1,3]] 中每个向量第一个元素按从小到大排序 sort(intervals.begin(), intervals.end(), [](const auto&amp; u, const auto&amp; v) {]]></description>
-</item><item>
-    <title>Leetcode3:无重复字符的最长子串——滑动窗口</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode3%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
-    <pubDate>Fri, 08 Apr 2022 19:59:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode3%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/ 乍一看好像做过，再一看好像不会😂 题解 暴力法 设字符串为s，假如我们要找的这段没有重复字符的序列是从i起始，到rk结束（即s[i:rk]）]]></description>
 </item></channel>
 </rss>
