@@ -6,7 +6,7 @@ languageCode = "zh-CN"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 # 网站标题
-title = "孙百乐的编程学习"
+title = "百乐的编程学习"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "LoveIt"
@@ -16,7 +16,7 @@ theme = "LoveIt"
   version = "0.2.X"
 [languages.zh-cn.params.app]
         # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-        title = "孙百乐的编程学习"
+        title = "百乐的编程学习"
         # 是否隐藏网站图标资源链接
         noFavicon = false
         # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
