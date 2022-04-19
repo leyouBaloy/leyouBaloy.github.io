@@ -139,6 +139,10 @@ static bool cmp(pair<int, int>& m, pair<int, int>& n) {        return m.second >
 
 创建一个n*n的二维数组：`vector<vector<int>> dp(n, vector<int>(n));`
 
+创建变量并赋初始值：`vector<int>  v(10,1)` 长度为10，初值1
+
+`dp.push_back()`，添加一个元素
+
 
 
 ## python常用函数
