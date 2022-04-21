@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Leetcode821:字符的最短距离——两次遍历 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode821:字符的最短距离——两次遍历" />
-<meta property="og:description" content="题目 https://leetcode-cn.com/problems/shortest-distance-to-a-character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()&#43;1就够了）。首先遍历一遍s，记录下每个c的位置ci。然" />
+        <title>Leetcode743:网络延迟时间——dijkstra算法 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode743:网络延迟时间——dijkstra算法" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/network-delay-time/ 关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。 题解 关于dijkstr" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-04-19T16:45:09+08:00" />
-<meta property="article:modified_time" content="2022-04-19T16:45:09+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-21T17:35:07+08:00" />
+<meta property="article:modified_time" content="2022-04-21T17:35:07+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode821:字符的最短距离——两次遍历"/>
-<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/shortest-distance-to-a-character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()&#43;1就够了）。首先遍历一遍s，记录下每个c的位置ci。然"/>
+<meta name="twitter:title" content="Leetcode743:网络延迟时间——dijkstra算法"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/network-delay-time/ 关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。 题解 关于dijkstr"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode386%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0dfs%E8%BF%AD%E4%BB%A3/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E5%88%A4%E6%96%AD%E4%B8%A4%E6%9D%A1%E7%BA%BF%E6%AE%B5%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4%E5%BF%AB%E9%80%9F%E6%8E%92%E6%96%A5%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%B7%A8%E7%AB%8B%E5%AE%9E%E9%AA%8C/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%88%A4%E6%96%AD%E4%B8%A4%E6%9D%A1%E7%BA%BF%E6%AE%B5%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4%E5%BF%AB%E9%80%9F%E6%8E%92%E6%96%A5%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%B7%A8%E7%AB%8B%E5%AE%9E%E9%AA%8C/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode821:字符的最短距离——两次遍历",
+        "headline": "Leetcode743:网络延迟时间——dijkstra算法",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86\/"
-        },"genre": "posts","wordcount":  716 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86\/","datePublished": "2022-04-19T16:45:09+08:00","dateModified": "2022-04-19T16:45:09+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95\/"
+        },"genre": "posts","wordcount":  817 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95\/","datePublished": "2022-04-21T17:35:07+08:00","dateModified": "2022-04-21T17:35:07+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode821:字符的最短距离——两次遍历</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode743:网络延迟时间——dijkstra算法</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-19">2022-04-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 716 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86/" class="leancloud_visitors" data-flag-title="Leetcode821:字符的最短距离——两次遍历">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-21">2022-04-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 817 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95/" class="leancloud_visitors" data-flag-title="Leetcode743:网络延迟时间——dijkstra算法">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -116,84 +116,66 @@
     <li><a href="#题目">题目</a></li>
     <li><a href="#题解">题解</a>
       <ul>
-        <li><a href="#遍历k次取最小">遍历k次，取最小</a></li>
-        <li><a href="#两次遍历">两次遍历</a></li>
+        <li><a href="#代码">代码</a></li>
+        <li><a href="#代码详解">代码详解</a></li>
+        <li><a href="#用小根堆优化">用小根堆优化</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p><a href="https://leetcode-cn.com/problems/shortest-distance-to-a-character/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/shortest-distance-to-a-character/</a></p>
+<p><a href="https://leetcode-cn.com/problems/network-delay-time/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/network-delay-time/</a></p>
+<p>关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。</p>
 <h2 id="题解">题解</h2>
-<h3 id="遍历k次取最小">遍历k次，取最小</h3>
-<p>思路：创建结果数组<code>v</code>，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍<code>s</code>，记录下每个<code>c</code>的位置<code>ci</code>。然后对于每个<code>ci</code>遍历一次<code>s</code>，如果<code>abs(ci-当前位置) &lt; v[i]</code>，那么就令<code>v[i] = ci</code>。最后得到的答案就是距离最近的。</p>
-<p>代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">shortestToChar</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">cv</span><span class="p">;</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">c</span><span class="p">){</span>
-                <span class="n">cv</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="c1">// cout &lt;&lt; &#34;cv:&#34;;
-</span><span class="c1"></span>        <span class="c1">// for(int i=0;i&lt;cv.size();i++){
-</span><span class="c1"></span>        <span class="c1">//     cout &lt;&lt; cv[i] &lt;&lt; &#34;,&#34;;
-</span><span class="c1"></span>        <span class="c1">// }
-</span><span class="c1"></span>        <span class="k">for</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="nl">ccv</span><span class="p">:</span><span class="n">cv</span><span class="p">){</span>
-            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">size</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">ccv</span><span class="o">-</span><span class="n">j</span><span class="p">)</span><span class="o">&lt;</span><span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
-                    <span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">abs</span><span class="p">(</span><span class="n">ccv</span><span class="o">-</span><span class="n">j</span><span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">v</span><span class="p">;</span>
+<p>关于dijkstra算法具体内容就不在这里细说了，网上一大堆，这里主要关注代码。</p>
+<h3 id="代码">代码</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">networkDelayTime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">times</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)]</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">time</span> <span class="ow">in</span> <span class="n">times</span><span class="p">:</span>
+            <span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span>
 
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div><p>如果有k个c，那么就要遍历k+1遍。时间复杂度O((k+1)*n)。空间复杂度O(1)，返回数组不计入。</p>
-<h3 id="两次遍历">两次遍历</h3>
-<p>事实上，只需要两次遍历，一次从左到右遍历<code>s</code>，若 s[i]=c 则记录下此时字符 c 的的下标 idx。遍历的同时更新 answer[i]=i-idx。</p>
-<p>从右往左遍历 s，若 s[i]=c 则记录下此时字符 c 的的下标 idx。遍历的同时更新 answer[i]=min(answer[i],idx−i)。</p>
-<p>代码实现时，在开始遍历的时候 idx 可能不存在，为了简化逻辑，我们可以用 −n 或 2n 表示，这里 n 是 s 的长度。</p>
-<p>代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">shortestToChar</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="o">-</span><span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">idx</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">idx</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">idx</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">idx</span> <span class="o">-</span> <span class="n">i</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div><blockquote>
-<p>作者：LeetCode-Solution
-链接：https://leetcode-cn.com/problems/shortest-distance-to-a-character/solution/zi-fu-de-zui-duan-ju-chi-by-leetcode-sol-2t49/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</blockquote>
-<p>虽然是道简单题，但我还是被秀了一脸。</p>
+        <span class="n">dist</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)]</span> <span class="o">*</span> <span class="n">n</span>
+        <span class="n">dist</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">used</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="k">for</span> <span class="n">y</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">used</span><span class="p">):</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">u</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">dist</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">x</span><span class="p">]):</span>
+                    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
+            <span class="n">used</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">for</span> <span class="n">y</span><span class="p">,</span><span class="n">time</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">]):</span>
+                <span class="n">dist</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">dist</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">+</span><span class="n">time</span><span class="p">)</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ans</span> <span class="k">if</span> <span class="n">ans</span> <span class="o">&lt;</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div><h3 id="代码详解">代码详解</h3>
+<p><code>g[][]</code>：用<code>邻接矩阵</code>来储存这个图。<code>g[x][y]</code>表示从节点<code>x</code>到节点<code>y</code>的距离。如果不能到达，储存距离为无穷大。注意这段代码中把所有的节点都-1，这只是表示方式的问题，不重要。</p>
+<p>这段代码就是在构建<code>g</code>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">g</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)]</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">time</span> <span class="ow">in</span> <span class="n">times</span><span class="p">:</span>
+  <span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span>
+</code></pre></div><p><code>dist[]</code>：<code>dist[i]</code>表示从起点<code>k</code>到节点<code>i</code>的最短距离（当前已知）。赋初值为无穷大。</p>
+<p><code>used[]</code>：记录算法运行时使用过的节点。初值是把起始节点赋值为True，其余False。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">y</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">used</span><span class="p">):</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">u</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">dist</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">x</span><span class="p">]):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
+  <span class="n">used</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div><p>上面这段代码，每次从「未确定节点」中取一个与起点距离最短的点，将它归类为「已确定节点」，并用它「更新」从起点到其他所有「未确定节点」的距离。直到所有点都被归类为「已确定节点」。<code>x</code>就是要找的那个已确定节点，第一次x=k。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">y</span><span class="p">,</span><span class="n">time</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="n">x</span><span class="p">]):</span>
+	<span class="n">dist</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">dist</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">+</span><span class="n">time</span><span class="p">)</span>
+</code></pre></div><p>用节点 A「更新」节点 B 的意思是，用起点到节点 A 的最短路长度加上从节点 A 到节点 B 的边的长度，去比较起点到节点 B 的最短路长度，如果前者小于后者，就用前者更新后者。这种操作也被叫做「松弛」。这里节点A就是<code>x</code>，节点B就是<code>y</code>。</p>
+<p>最后根据这题的要求，找<code>dist[]</code>里最大的返回就行了。</p>
+<p>时间复杂度：O(n^2+m)，其中 m 是数组times 的长度。</p>
+<p>空间复杂度：O(n^2)。邻接矩阵需占用 O(n^2)的空间。</p>
+<p>dijkstra算法的时间复杂度为O(n^2)</p>
+<h3 id="用小根堆优化">用小根堆优化</h3>
+<p>可以使用一个小根堆来寻找「未确定节点」中与起点距离最近的点。</p>
+<p>这个具体就不研究了，能把基本算法搞明白就不错了😂。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-04-19</span>
+                <span>更新于 2022-04-21</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -212,8 +194,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode386%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0dfs%E8%BF%AD%E4%BB%A3/" class="prev" rel="prev" title="Leetcode386:字典序排数——dfs、迭代"><i class="fas fa-angle-left fa-fw"></i>Leetcode386:字典序排数——dfs、迭代</a>
-            <a href="/posts/%E5%88%A4%E6%96%AD%E4%B8%A4%E6%9D%A1%E7%BA%BF%E6%AE%B5%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4%E5%BF%AB%E9%80%9F%E6%8E%92%E6%96%A5%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%B7%A8%E7%AB%8B%E5%AE%9E%E9%AA%8C/" class="next" rel="next" title="判断两条线段是否相交——快速排斥实验和跨立实验">判断两条线段是否相交——快速排斥实验和跨立实验<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%88%A4%E6%96%AD%E4%B8%A4%E6%9D%A1%E7%BA%BF%E6%AE%B5%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4%E5%BF%AB%E9%80%9F%E6%8E%92%E6%96%A5%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%B7%A8%E7%AB%8B%E5%AE%9E%E9%AA%8C/" class="prev" rel="prev" title="判断两条线段是否相交——快速排斥实验和跨立实验"><i class="fas fa-angle-left fa-fw"></i>判断两条线段是否相交——快速排斥实验和跨立实验</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
