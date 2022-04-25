@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 21 Apr 2022 17:35:07 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 25 Apr 2022 17:26:41 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Leetcode11:盛水最多的容器——双指针</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode11%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+    <pubDate>Mon, 25 Apr 2022 17:26:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode11%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/container-with-most-water/ 每次看题解：“我又会了！” 下一题：“我是废物。” 题解 双指针 定义两个指针left和right分别在最左边和最右边，指向两个柱子，那么面积]]></description>
+</item><item>
     <title>Leetcode743:网络延迟时间——dijkstra算法</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95/</link>
     <pubDate>Thu, 21 Apr 2022 17:35:07 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%A4%B1%E4%B9%90%E5%9B%AD%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</guid>
     <description><![CDATA[故事简叙 《失乐园》 久木是一家出版社的编辑，人到中年，事业不会有进一步发展了，对家人的感情也是平平淡淡的，生活只是一日复一日，清闲无聊得很。 一]]></description>
-</item><item>
-    <title>成功主持150人参会的讲座！</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E6%88%90%E5%8A%9F%E4%B8%BB%E6%8C%81150%E4%BA%BA%E5%8F%82%E4%BC%9A%E7%9A%84%E8%AE%B2%E5%BA%A7/</link>
-    <pubDate>Sun, 10 Apr 2022 23:05:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E6%88%90%E5%8A%9F%E4%B8%BB%E6%8C%81150%E4%BA%BA%E5%8F%82%E4%BC%9A%E7%9A%84%E8%AE%B2%E5%BA%A7/</guid>
-    <description><![CDATA[腾讯会议截图 最好的会议软件 参会人数150 每一次在公开场合的讲话对我都是一次极大的锻炼提高！担任活动策划、组织者非常不容易，要考虑每一个细节，]]></description>
 </item></channel>
 </rss>
