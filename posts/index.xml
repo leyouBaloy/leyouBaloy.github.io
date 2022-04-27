@@ -3,7 +3,14 @@
         <title>所有文章 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 26 Apr 2022 18:58:23 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 27 Apr 2022 15:36:14 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode17:电话号码的字母组合——回溯</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/</link>
+    <pubDate>Wed, 27 Apr 2022 15:36:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/ 终于能自己做出一道题了😭，之前的回溯题没白刷 题解 回溯 思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径。 画个图帮助理解： 代码]]></description>
+</item><item>
     <title>Leetcode16:最接近的三数之和——排序、双指针</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode16%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88/</link>
     <pubDate>Tue, 26 Apr 2022 18:58:23 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
     <description><![CDATA[read_csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行]]></description>
-</item><item>
-    <title>Leetcode451:根据字符出现频率排序——桶排序</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/</link>
-    <pubDate>Fri, 15 Apr 2022 18:00:29 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode451%E6%A0%B9%E6%8D%AE%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%8E%92%E5%BA%8F%E6%A1%B6%E6%8E%92%E5%BA%8F/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/sort-characters-by-frequency/ 题解 思路 用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个]]></description>
 </item></channel>
 </rss>
