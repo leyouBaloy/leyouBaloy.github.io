@@ -3,7 +3,14 @@
         <title>所有文章 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 27 Apr 2022 15:36:14 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 29 Apr 2022 17:22:24 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Leetcode46:全排列——交换、回溯</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/</link>
+    <pubDate>Fri, 29 Apr 2022 17:22:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/permutations/ 全排列问题也是比较经典的问题，其所用的交换法也很巧妙。 题解 纯dfs 首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大]]></description>
+</item><item>
     <title>Leetcode17:电话号码的字母组合——回溯</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/</link>
     <pubDate>Wed, 27 Apr 2022 15:36:14 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/git%E6%92%A4%E9%94%80%E7%89%88%E6%9C%AC/</guid>
     <description><![CDATA[Git如何撤回远程仓库已经提交的版本？ 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 执行 git log]]></description>
-</item><item>
-    <title>Pandas使用技巧</title>
-    <link>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
-    <pubDate>Sat, 16 Apr 2022 15:42:08 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
-    <description><![CDATA[read_csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行]]></description>
 </item></channel>
 </rss>
