@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Leetcode46:全排列——交换、回溯 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode46:全排列——交换、回溯" />
-<meta property="og:description" content="题目 https://leetcode-cn.com/problems/permutations/ 全排列问题也是比较经典的问题，其所用的交换法也很巧妙。 题解 纯dfs 首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大" />
+        <title>《无人生还》读后有感 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="《无人生还》读后有感" />
+<meta property="og:description" content="作者 《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-04-29T17:22:24+08:00" />
-<meta property="article:modified_time" content="2022-04-29T17:22:24+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-30T17:58:36+08:00" />
+<meta property="article:modified_time" content="2022-04-30T17:58:36+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode46:全排列——交换、回溯"/>
-<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/permutations/ 全排列问题也是比较经典的问题，其所用的交换法也很巧妙。 题解 纯dfs 首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大"/>
+<meta name="twitter:title" content="《无人生还》读后有感"/>
+<meta name="twitter:description" content="作者 《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Leetcode46:全排列——交换、回溯",
+        "headline": "《无人生还》读后有感",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF\/"
-        },"genre": "posts","wordcount":  379 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF\/","datePublished": "2022-04-29T17:22:24+08:00","dateModified": "2022-04-29T17:22:24+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F\/"
+        },"genre": "posts","wordcount":  650 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F\/","datePublished": "2022-04-30T17:58:36+08:00","dateModified": "2022-04-30T17:58:36+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode46:全排列——交换、回溯</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-29">2022-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 379 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/" class="leancloud_visitors" data-flag-title="Leetcode46:全排列——交换、回溯">
+        </div><article class="page single"><h1 class="single-title animated flipInX">《无人生还》读后有感</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>书影记录</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-30">2022-04-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 650 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" class="leancloud_visitors" data-flag-title="《无人生还》读后有感">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,72 +113,35 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题目">题目</a></li>
-    <li><a href="#题解">题解</a>
-      <ul>
-        <li><a href="#纯dfs">纯dfs</a></li>
-        <li><a href="#交换回溯">交换、回溯</a></li>
-      </ul>
-    </li>
+    <li><a href="#作者">作者</a></li>
+    <li><a href="#情节">情节</a></li>
+    <li><a href="#阅读感受">阅读感受</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="题目">题目</h2>
-<p><a href="https://leetcode-cn.com/problems/permutations/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/permutations/</a></p>
-<p>全排列问题也是比较经典的问题，其所用的交换法也很巧妙。</p>
-<h2 id="题解">题解</h2>
-<h3 id="纯dfs">纯dfs</h3>
-<p>首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大，但是时间复杂度和回溯法是相同的（应该）。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">permute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">recursion</span><span class="p">(</span><span class="n">leftnums</span><span class="p">,</span><span class="n">path</span><span class="p">):</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">==</span><span class="n">size</span><span class="p">:</span>
-                <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">leftnums</span><span class="p">:</span>
-                    <span class="n">new_path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-                    <span class="n">new_path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-                    <span class="n">new_leftnums</span> <span class="o">=</span> <span class="n">leftnums</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-                    <span class="n">new_leftnums</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-                    <span class="n">recursion</span><span class="p">(</span><span class="n">new_leftnums</span><span class="p">,</span> <span class="n">new_path</span><span class="p">)</span>
-        <span class="n">recursion</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">res</span>
-</code></pre></div><h3 id="交换回溯">交换、回溯</h3>
-<p>在前面做过的回溯题中，比如Leetcode17:电话号码的字母组合、Leetcode113:路径总和，我们都是用栈来维护储存路径的数组，但是在这题当中我们用交换的方法来维护，很巧妙啊！</p>
-<p>有两个变量<code>first</code>和<code>i</code>。在每一次递归当中，<code>0～first</code>是已确定的路径，<code>i</code>是与<code>first</code>交换的数的位置。看下图：</p>
-<figure><img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/fig14.PNG"/>
+            </div><div class="content" id="content"><h2 id="作者">作者</h2>
+<p>《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写于1939年。</p>
+<figure><img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/%E3%80%8A%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E3%80%8B.jpeg"/>
 </figure>
 
-<p>代码（c++的stl里有swap函数，写出的代码更简洁）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="kt">void</span> <span class="n">backtrack</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">res</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">output</span><span class="p">,</span> <span class="kt">int</span> <span class="n">first</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">){</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">first</span><span class="o">==</span><span class="n">len</span><span class="p">){</span>
-            <span class="n">res</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">output</span><span class="p">);</span>
-            <span class="k">return</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">first</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="c1">// 动态维护数组
-</span><span class="c1"></span>            <span class="n">swap</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">output</span><span class="p">[</span><span class="n">first</span><span class="p">]);</span>
-            <span class="c1">// 继续递归填下一个数
-</span><span class="c1"></span>            <span class="n">backtrack</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">first</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">);</span>
-            <span class="c1">// 撤销操作
-</span><span class="c1"></span>            <span class="n">swap</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">output</span><span class="p">[</span><span class="n">first</span><span class="p">]);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">permute</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">res</span><span class="p">;</span>
-        <span class="n">backtrack</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">nums</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
-        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+<h2 id="情节">情节</h2>
+<p>小说是以上帝视角叙述的，开头首先介绍了十位被“欧文”邀请到岛上的客人，他们的背景都截然不同，有法官、医生、警督等等，但他们有个共同的特点，就是这十位都是曾经有过命案但是逃脱法律制裁。他们彼此互不相识，无冤无仇，但是到达岛上的第二天就开始离奇的死人，大家既谨慎地保全自己，又想找到最终的凶手。</p>
+<p>小说的标题以及故事开头出现的“童谣”都暗示了最后无人生还的结局。凶手究竟是谁呢？最后的花絮揭示了答案。</p>
+<h2 id="阅读感受">阅读感受</h2>
+<p>五一假期，难得有一下午的时间坐在图书馆的沙发上一口气三个半小时看完这本悬疑推理小说。朋友对它评价很高，我看完之后感觉确实很有意思。对于这种小说，真正吸引人的地方不是严谨的推理，而是它所描绘的那种复杂的人物心理，和充满未知的剧情。现在有很多的影视作品都是类似“孤岛生存”的主题，比如<em>饥饿游戏</em>，<em>鱿鱼游戏</em>，这些可能或多或少都有借鉴这部将近100年前的作品。</p>
+<p>最后一部分犯人的陈述中有一句耐人寻味：</p>
+<blockquote>
+<p>我要写完了。我要把它密封进一个瓶子里,然后将这个瓶子抛人大海。
+为什么要这么做呢？
+是呀，为什么呢？
+我的目的就是要发明一桩谁也解不开的谋杀谜。
+但是，我现在意识到，面对艺术，没有一个艺术家愿意孤芳自赏的。不可否认，这里面有一种渴望得到别人认可和赏识的正常心理。</p>
+</blockquote>
+<p>这种心理可能跟我写博客一样，我不想自己把文章拿给别人去炫耀，而是写好了放在博客上，等待有心人去欣赏。</p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-04-29</span>
+                <span>更新于 2022-04-30</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -197,8 +160,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/" class="prev" rel="prev" title="Leetcode17:电话号码的字母组合——回溯"><i class="fas fa-angle-left fa-fw"></i>Leetcode17:电话号码的字母组合——回溯</a>
-            <a href="/posts/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" class="next" rel="next" title="《无人生还》读后有感">《无人生还》读后有感<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/" class="prev" rel="prev" title="Leetcode46:全排列——交换、回溯"><i class="fas fa-angle-left fa-fw"></i>Leetcode46:全排列——交换、回溯</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
