@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 30 Apr 2022 17:58:36 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 May 2022 17:44:40 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>期中梳理以及规划</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92/</link>
+    <pubDate>Tue, 03 May 2022 17:44:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92/</guid>
+    <description><![CDATA[前言 今年影响我们最大的事情就是疫情的反弹，导致学期初无法正常上课。等到课程恢复时又到了期中，体测、考试等都被推迟，本来就漫长煎熬的期中阶段变]]></description>
+</item><item>
     <title>《无人生还》读后有感</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</link>
     <pubDate>Sat, 30 Apr 2022 17:58:36 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode386%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0dfs%E8%BF%AD%E4%BB%A3/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/lexicographical-numbers/ 日常做不出来😭 题解 什么是字典序？（原谅我到了大二才搞明白什么是字典序😂） 对于字符串，先按首字符排序，如果首字符相同，再按第二个字符排序]]></description>
-</item><item>
-    <title>Leetcode5:最长回文子串——中心扩展法</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode5%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2%E4%B8%AD%E5%BF%83%E6%89%A9%E5%B1%95%E6%B3%95/</link>
-    <pubDate>Sun, 17 Apr 2022 10:36:32 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode5%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2%E4%B8%AD%E5%BF%83%E6%89%A9%E5%B1%95%E6%B3%95/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/longest-palindromic-substring/ 题解 中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟&hellip;.debug总是出问题&hellip; 这道题需要注意的]]></description>
 </item></channel>
 </rss>
