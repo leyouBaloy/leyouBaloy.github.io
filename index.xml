@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 May 2022 17:44:40 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 May 2022 16:24:22 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Leetcode1823:找出游戏的获胜者——约瑟夫环</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/</link>
+    <pubDate>Wed, 04 May 2022 16:24:22 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/ 约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。 题解 朴素的模拟法 即真正按照题目的]]></description>
+</item><item>
     <title>期中梳理以及规划</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92/</link>
     <pubDate>Tue, 03 May 2022 17:44:40 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode821%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%9D%E7%A6%BB%E4%B8%A4%E6%AC%A1%E9%81%8D%E5%8E%86/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/shortest-distance-to-a-character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然]]></description>
-</item><item>
-    <title>Leetcode386:字典序排数——dfs、迭代</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode386%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0dfs%E8%BF%AD%E4%BB%A3/</link>
-    <pubDate>Mon, 18 Apr 2022 17:26:02 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode386%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E6%95%B0dfs%E8%BF%AD%E4%BB%A3/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/lexicographical-numbers/ 日常做不出来😭 题解 什么是字典序？（原谅我到了大二才搞明白什么是字典序😂） 对于字符串，先按首字符排序，如果首字符相同，再按第二个字符排序]]></description>
 </item></channel>
 </rss>

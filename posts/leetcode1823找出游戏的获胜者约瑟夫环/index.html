@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>期中梳理以及规划 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="期中梳理以及规划" />
-<meta property="og:description" content="前言 今年影响我们最大的事情就是疫情的反弹，导致学期初无法正常上课。等到课程恢复时又到了期中，体测、考试等都被推迟，本来就漫长煎熬的期中阶段变" />
+        <title>Leetcode1823:找出游戏的获胜者——约瑟夫环 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Leetcode1823:找出游戏的获胜者——约瑟夫环" />
+<meta property="og:description" content="题目 https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/ 约瑟夫环问题非常经典，记得大一学c&#43;&#43;程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。 题解 朴素的模拟法 即真正按照题目的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-05-03T17:44:40+08:00" />
-<meta property="article:modified_time" content="2022-05-03T17:44:40+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-04T16:24:22+08:00" />
+<meta property="article:modified_time" content="2022-05-04T16:24:22+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="期中梳理以及规划"/>
-<meta name="twitter:description" content="前言 今年影响我们最大的事情就是疫情的反弹，导致学期初无法正常上课。等到课程恢复时又到了期中，体测、考试等都被推迟，本来就漫长煎熬的期中阶段变"/>
+<meta name="twitter:title" content="Leetcode1823:找出游戏的获胜者——约瑟夫环"/>
+<meta name="twitter:description" content="题目 https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/ 约瑟夫环问题非常经典，记得大一学c&#43;&#43;程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。 题解 朴素的模拟法 即真正按照题目的"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq%e5%a4%b4%e5%83%8f.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "期中梳理以及规划",
+        "headline": "Leetcode1823:找出游戏的获胜者——约瑟夫环",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92\/"
-        },"genre": "posts","wordcount":  824 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92\/","datePublished": "2022-05-03T17:44:40+08:00","dateModified": "2022-05-03T17:44:40+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF\/"
+        },"genre": "posts","wordcount":  706 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF\/","datePublished": "2022-05-04T16:24:22+08:00","dateModified": "2022-05-04T16:24:22+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">期中梳理以及规划</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>随笔杂记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-03">2022-05-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 824 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92/" class="leancloud_visitors" data-flag-title="期中梳理以及规划">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Leetcode1823:找出游戏的获胜者——约瑟夫环</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-04">2022-05-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 706 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" class="leancloud_visitors" data-flag-title="Leetcode1823:找出游戏的获胜者——约瑟夫环">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,55 +113,66 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#梳理上半学期">梳理上半学期</a>
+    <li><a href="#题目">题目</a></li>
+    <li><a href="#题解">题解</a>
       <ul>
-        <li><a href="#学习工作以及生活">学习、工作以及生活</a></li>
-        <li><a href="#心态">心态</a></li>
-      </ul>
-    </li>
-    <li><a href="#规划下半学期">规划下半学期</a>
-      <ul>
-        <li><a href="#学习">学习</a></li>
-        <li><a href="#工作">工作</a></li>
-        <li><a href="#生活">生活</a></li>
+        <li><a href="#朴素的模拟法">朴素的模拟法</a></li>
+        <li><a href="#模拟队列">模拟+队列</a></li>
+        <li><a href="#直接pop">直接pop</a></li>
+        <li><a href="#数学递归数学迭代">数学+递归/数学+迭代</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="前言">前言</h2>
-<p>今年影响我们最大的事情就是疫情的反弹，导致学期初无法正常上课。等到课程恢复时又到了期中，体测、考试等都被推迟，本来就漫长煎熬的期中阶段变得更加漫长煎熬了。学期初的时候我写了篇blog，当时立的flag完成的不错，所以今天再立一次。</p>
-<h2 id="梳理上半学期">梳理上半学期</h2>
-<h3 id="学习工作以及生活">学习、工作以及生活</h3>
-<p>这学期的学习我更加注重培养自己的基本能力，比如编程能力，数学能力。最值得拿出来说的一件事就是我坚持每天做一道编程题已经坚持了50天，我感觉我的算法能力在潜移默化中已经有了质的提升。</p>
-<p>工作方面，社团的学生工作、导师的任务、竞赛、入党的事务、班级事务、英语作业、毛概视频等等，我唯恐避之不及。我觉得这些都是一些无聊的琐事。这样说未免有些太极端了，但我的心态确实如此。</p>
-<p>生活方面，这学期因为疫情的影响，我两个半月都没有出校门，整天过着四点一线的生活（教室、食堂、寝室、操场）。甚至有一个多月连外卖都点不了，可以说是没有任何生活的情趣了。</p>
-<h3 id="心态">心态</h3>
-<p>心情真的很低沉，主要三点原因，一是跟我一个同导师同班级的女生关系闹的很僵，我作为男生，在表面上要保持大度，但心里其实很不爽。（多说一句，通过这件事我明白从此之后跟女生打交道要慎重！）二是长期的疫情导致的封校把我的生活压缩到极简，让我的思维也变得闭塞起来，就像上高中的时候一样压抑。三是恶心的、漫长的期中时期（4月份左右）让人窒息，期中时期有各种打扰人的杂事、工作、应酬，就像漫长的中世纪一样，只有等待它的结束才能看到曙光。</p>
-<h2 id="规划下半学期">规划下半学期</h2>
-<p>立flag吧：</p>
-<h3 id="学习">学习</h3>
+            </div><div class="content" id="content"><h2 id="题目">题目</h2>
+<p><a href="https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/" target="_blank" rel="noopener noreffer">https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/</a></p>
+<p>约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。</p>
+<h2 id="题解">题解</h2>
+<h3 id="朴素的模拟法">朴素的模拟法</h3>
+<p>即真正按照题目的描述，维护一个初始长度为<code>n</code>的数组和计数变量<code>cnt</code>，迭代找到最终解。最朴素的方法，一般都会超时。</p>
+<h3 id="模拟队列">模拟+队列</h3>
+<p>使用队列来模拟这个过程，首先创建一个双端队列（python中有此数据结构），包括<code>n</code>个数。然后在接下来的<code>n-1</code>次迭代中每次从队首pop出<code>k-1</code>个数到队尾。最终剩下的数就是答案。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findTheWinner</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">popleft</span><span class="p">())</span>
+            <span class="n">q</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div><p>因为要执行<code>n-1</code>轮，每轮把<code>k-1</code>个数从队首拿到队尾，所以时间复杂度为O(nk)。和第一种方法差不多，但代码更简洁。</p>
+<h3 id="直接pop">直接pop</h3>
+<p>对上面的方法进行优化，也是我采用的方法。就是在每轮迭代中省去计数这个过程，直接找到要pop的数。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findTheWinner</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">people</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+        <span class="n">kick</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">while</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">)</span><span class="o">!=</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">kick</span> <span class="o">=</span> <span class="p">(</span><span class="n">kick</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">k</span><span class="p">)</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">kick</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span><span class="n">kick</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+            <span class="n">people</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">kick</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">kick</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34; &#34;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div><p>细节：</p>
 <ul>
-<li>《可视化导论》这本书在期末前读完。要做读书笔记。</li>
-<li>开始读论文。读的时候记一些东西，方便组会检查。这也和这学期学术英语课的要求一致，所以要把这件事的优先级提高。</li>
-<li>学习机器学习。注重数学基础。</li>
-<li>做题。优先级降低，大概是三天做一道中等题，写题解。</li>
+<li>记录上一次杀掉的人的位置为kick（从1开始计数），那么下一次从第kick人开始计k个数，它的位置是<code>kick+k-1</code>。</li>
+<li>但考虑到是一个环，所以要把位置mod当前数组的长度。</li>
+<li>mod时有一个问题，如果位置恰好是最后一个元素，mod结果为0，所以加一个判断条件，如果结果为0，就令它等于len(people)。</li>
+<li>因为我们分析的位置是从1开始计数，所以pop的时候要-1</li>
 </ul>
-<h3 id="工作">工作</h3>
-<ul>
-<li>能推就推，能混就混。</li>
-</ul>
-<h3 id="生活">生活</h3>
-<ul>
-<li>读一些有意思的书，比如科普、哲学、思辩的，少读感伤的小说。</li>
-<li>坚持锻炼，可以多跑跑步。</li>
-<li>尽量在寝室里读一些书（虽然寝室很吵，但是能读多少是多少）。</li>
-</ul>
+<p>由于pop的时间复杂度比较高，所以这也不是一种十分优雅的方法。</p>
+<h3 id="数学递归数学迭代">数学+递归/数学+迭代</h3>
+<p>递归公式</p>
+<pre tabindex="0"><code>f(n,m)=(f(n-1,m)+m)%n
+f(n,m)指n个人，报第m个编号出列最终编号
+</code></pre><p>这个推理没搞懂&hellip;题解：https://leetcode-cn.com/circle/article/BOoxAL/</p>
+<p>时间复杂度O(n)</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-05-03</span>
+                <span>更新于 2022-05-04</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -180,8 +191,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E6%97%A0%E4%BA%BA%E7%94%9F%E8%BF%98%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/" class="prev" rel="prev" title="《无人生还》读后有感"><i class="fas fa-angle-left fa-fw"></i>《无人生还》读后有感</a>
-            <a href="/posts/leetcode1823%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" class="next" rel="next" title="Leetcode1823:找出游戏的获胜者——约瑟夫环">Leetcode1823:找出游戏的获胜者——约瑟夫环<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E6%9C%9F%E4%B8%AD%E6%A2%B3%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%84%E5%88%92/" class="prev" rel="prev" title="期中梳理以及规划"><i class="fas fa-angle-left fa-fw"></i>期中梳理以及规划</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
