@@ -89,13 +89,22 @@ theme = "LoveIt"
     title = ""
     weight = 5
   [[menu.main]]
+    identifier = "url"
+    pre = ""
+    post = ""
+    name = "Vis"
+    url = "https://www.yuque.com/leyoubaloy/ev6tnq"
+    title = ""
+    weight = 6
+  [[menu.main]]
     identifier = "about"
     pre = ""
     post = ""
     name = "关于我"
     url = "/about/"
     title = ""
-    weight = 6
+    weight = 7
+  
 
 # Hugo 解析文档的配置
 [markup]
