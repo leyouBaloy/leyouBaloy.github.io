@@ -3,10 +3,17 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 06 May 2022 17:09:58 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 06 May 2022 17:32:20 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Leetcode39:组合总和</title>
+    <title>《从零开始的女性主义》读后有感</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%A5%B3%E6%80%A7%E4%B8%BB%E4%B9%89%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</link>
+    <pubDate>Fri, 06 May 2022 17:32:20 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%A5%B3%E6%80%A7%E4%B8%BB%E4%B9%89%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</guid>
+    <description><![CDATA[《从零开始的女性主义》 “女性主义”其实就是“女权主义”，只不过后者在大家的印象里有贬义的意味，所以换了一种说法。“女权”这个词在近几年特别火]]></description>
+</item><item>
+    <title>Leetcode39:组合总和——回溯</title>
     <link>https://www.leyoubaloy.xyz/posts/leetcode39%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C%E5%9B%9E%E6%BA%AF/</link>
     <pubDate>Fri, 06 May 2022 17:09:58 &#43;0800</pubDate>
     <author>作者</author>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/network-delay-time/ 关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。 题解 关于dijkstr]]></description>
-</item><item>
-    <title>判断两条线段是否相交——快速排斥实验和跨立实验</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%88%A4%E6%96%AD%E4%B8%A4%E6%9D%A1%E7%BA%BF%E6%AE%B5%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4%E5%BF%AB%E9%80%9F%E6%8E%92%E6%96%A5%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%B7%A8%E7%AB%8B%E5%AE%9E%E9%AA%8C/</link>
-    <pubDate>Wed, 20 Apr 2022 19:01:29 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%88%A4%E6%96%AD%E4%B8%A4%E6%9D%A1%E7%BA%BF%E6%AE%B5%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4%E5%BF%AB%E9%80%9F%E6%8E%92%E6%96%A5%E5%AE%9E%E9%AA%8C%E5%92%8C%E8%B7%A8%E7%AB%8B%E5%AE%9E%E9%AA%8C/</guid>
-    <description><![CDATA[题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。]]></description>
 </item></channel>
 </rss>
