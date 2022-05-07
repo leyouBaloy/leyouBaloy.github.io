@@ -3,7 +3,21 @@
         <title>所有文章 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 06 May 2022 17:32:20 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 07 May 2022 20:12:51 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>《学术研究，你的成功之道》</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%AD%A6%E6%9C%AF%E7%A0%94%E7%A9%B6%E4%BD%A0%E7%9A%84%E6%88%90%E5%8A%9F%E4%B9%8B%E9%81%93/</link>
+    <pubDate>Sat, 07 May 2022 20:12:51 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%AD%A6%E6%9C%AF%E7%A0%94%E7%A9%B6%E4%BD%A0%E7%9A%84%E6%88%90%E5%8A%9F%E4%B9%8B%E9%81%93/</guid>
+    <description><![CDATA[《学术研究，你的成功之道》 格雷准则 如何判断一个好问题？ 格雷准则是由图灵奖得主Jim Gary, 在1999年图灵奖颁奖典礼上提出的一个好的问题应该具备的]]></description>
+</item><item>
+    <title>心态的重要性</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%BF%83%E6%80%81%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/</link>
+    <pubDate>Sat, 07 May 2022 18:07:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%BF%83%E6%80%81%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/</guid>
+    <description><![CDATA[好心态的学姐 导师找人的时候也是想招开朗一点的。]]></description>
+</item><item>
     <title>《从零开始的女性主义》读后有感</title>
     <link>https://www.leyoubaloy.xyz/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%A5%B3%E6%80%A7%E4%B8%BB%E4%B9%89%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</link>
     <pubDate>Fri, 06 May 2022 17:32:20 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode16%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/3sum-closest/ 题解 排序+双指针 这道题的官方题解写的太好了：https://leetcode-cn.com/problems/3sum-closest]]></description>
-</item><item>
-    <title>Leetcode11:盛水最多的容器——双指针</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode11%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8%E5%8F%8C%E6%8C%87%E9%92%88/</link>
-    <pubDate>Mon, 25 Apr 2022 17:26:41 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode11%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/container-with-most-water/ 每次看题解：“我又会了！” 下一题：“我是废物。” 题解 双指针 定义两个指针left和right分别在最左边和最右边，指向两个柱子，那么面积]]></description>
-</item><item>
-    <title>Leetcode743:网络延迟时间——dijkstra算法</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95/</link>
-    <pubDate>Thu, 21 Apr 2022 17:35:07 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode743%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4dijkstra%E7%AE%97%E6%B3%95/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/network-delay-time/ 关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。 题解 关于dijkstr]]></description>
 </item></channel>
 </rss>
