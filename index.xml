@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 15 May 2022 23:41:05 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 22 May 2022 13:00:39 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Flask&#43;vue使用jwt验证</title>
+    <link>https://www.leyoubaloy.xyz/posts/flask&#43;vue%E4%BD%BF%E7%94%A8jwt%E9%AA%8C%E8%AF%81/</link>
+    <pubDate>Sun, 22 May 2022 13:00:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/flask&#43;vue%E4%BD%BF%E7%94%A8jwt%E9%AA%8C%E8%AF%81/</guid>
+    <description><![CDATA[为什么要使用jwt验证？ jwt（json web token）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫]]></description>
+</item><item>
     <title>解锁新技术栈vue&#43;flask前后端分离</title>
     <link>https://www.leyoubaloy.xyz/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</link>
     <pubDate>Sun, 15 May 2022 23:41:05 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/ 终于能自己做出一道题了😭，之前的回溯题没白刷 题解 回溯 思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径。 画个图帮助理解： 代码]]></description>
-</item><item>
-    <title>Leetcode16:最接近的三数之和——排序、双指针</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode16%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88/</link>
-    <pubDate>Tue, 26 Apr 2022 18:58:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode16%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C%E6%8E%92%E5%BA%8F%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/3sum-closest/ 题解 排序+双指针 这道题的官方题解写的太好了：https://leetcode-cn.com/problems/3sum-closest]]></description>
 </item></channel>
 </rss>
