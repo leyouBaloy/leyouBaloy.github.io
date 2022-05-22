@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 22 May 2022 13:00:39 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 22 May 2022 23:37:01 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>最近的游离状态</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%9C%80%E8%BF%91%E7%9A%84%E6%B8%B8%E7%A6%BB%E7%8A%B6%E6%80%81/</link>
+    <pubDate>Sun, 22 May 2022 23:37:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%9C%80%E8%BF%91%E7%9A%84%E6%B8%B8%E7%A6%BB%E7%8A%B6%E6%80%81/</guid>
+    <description><![CDATA[最近在读《挪威的森林》，可能是受主人公渡边漫无目的的生活态度所影响，我也变得很佛系，不想把大量时间放在学习和工作上，没有期中会儿那种争分夺秒]]></description>
+</item><item>
     <title>Flask&#43;vue使用jwt验证</title>
     <link>https://www.leyoubaloy.xyz/posts/flask&#43;vue%E4%BD%BF%E7%94%A8jwt%E9%AA%8C%E8%AF%81/</link>
     <pubDate>Sun, 22 May 2022 13:00:39 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/permutations/ 全排列问题也是比较经典的问题，其所用的交换法也很巧妙。 题解 纯dfs 首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大]]></description>
-</item><item>
-    <title>Leetcode17:电话号码的字母组合——回溯</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/</link>
-    <pubDate>Wed, 27 Apr 2022 15:36:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/ 终于能自己做出一道题了😭，之前的回溯题没白刷 题解 回溯 思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径。 画个图帮助理解： 代码]]></description>
 </item></channel>
 </rss>
