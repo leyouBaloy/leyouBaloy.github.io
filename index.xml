@@ -20,13 +20,6 @@
     <guid>https://www.leyoubaloy.xyz/posts/flask&#43;vue%E4%BD%BF%E7%94%A8jwt%E9%AA%8C%E8%AF%81/</guid>
     <description><![CDATA[为什么要使用jwt验证？ jwt（json web token）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫]]></description>
 </item><item>
-    <title>解锁新技术栈vue&#43;flask前后端分离</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</link>
-    <pubDate>Sun, 15 May 2022 23:41:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</guid>
-    <description><![CDATA[Vue 之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档]]></description>
-</item><item>
     <title>《学术研究，你的成功之道》</title>
     <link>https://www.leyoubaloy.xyz/posts/%E5%AD%A6%E6%9C%AF%E7%A0%94%E7%A9%B6%E4%BD%A0%E7%9A%84%E6%88%90%E5%8A%9F%E4%B9%8B%E9%81%93/</link>
     <pubDate>Sat, 07 May 2022 20:12:51 &#43;0800</pubDate>
@@ -75,5 +68,12 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/leetcode46%E5%85%A8%E6%8E%92%E5%88%97%E5%9B%9E%E6%BA%AF/</guid>
     <description><![CDATA[题目 https://leetcode-cn.com/problems/permutations/ 全排列问题也是比较经典的问题，其所用的交换法也很巧妙。 题解 纯dfs 首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大]]></description>
+</item><item>
+    <title>Leetcode17:电话号码的字母组合——回溯</title>
+    <link>https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/</link>
+    <pubDate>Wed, 27 Apr 2022 15:36:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/leetcode17%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88%E5%9B%9E%E6%BA%AF/</guid>
+    <description><![CDATA[题目 https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/ 终于能自己做出一道题了😭，之前的回溯题没白刷 题解 回溯 思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径。 画个图帮助理解： 代码]]></description>
 </item></channel>
 </rss>
