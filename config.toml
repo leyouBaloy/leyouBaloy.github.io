@@ -20,7 +20,7 @@ theme = "LoveIt"
         # 是否隐藏网站图标资源链接
         noFavicon = false
         # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
-        svgFavicon = "https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq头像.jpg"
+        svgFavicon = "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"
         # Android 浏览器主题色
         themeColor = "#ffffff"
         # Safari 图标颜色
