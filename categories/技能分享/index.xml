@@ -3,7 +3,14 @@
         <title>技能分享 - 分类 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/</link>
         <description>技能分享 - 分类 - 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 22 May 2022 13:00:39 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 24 May 2022 23:41:05 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>解锁新技术栈vue&#43;flask前后端分离</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</link>
+    <pubDate>Tue, 24 May 2022 23:41:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</guid>
+    <description><![CDATA[Vue 之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档]]></description>
+</item><item>
     <title>Flask&#43;vue使用jwt验证</title>
     <link>https://www.leyoubaloy.xyz/posts/flask&#43;vue%E4%BD%BF%E7%94%A8jwt%E9%AA%8C%E8%AF%81/</link>
     <pubDate>Sun, 22 May 2022 13:00:39 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/</guid>
     <description><![CDATA[包含几乎所有课堂上讲的题目]]></description>
-</item><item>
-    <title>Mac上自动连接校园网的脚本</title>
-    <link>https://www.leyoubaloy.xyz/posts/mac%E4%B8%8A%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%9A%84%E8%84%9A%E6%9C%AC/</link>
-    <pubDate>Wed, 24 Nov 2021 18:58:03 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/mac%E4%B8%8A%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5%E6%A0%A1%E5%9B%AD%E7%BD%91%E7%9A%84%E8%84%9A%E6%9C%AC/</guid>
-    <description><![CDATA[起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，]]></description>
 </item></channel>
 </rss>
