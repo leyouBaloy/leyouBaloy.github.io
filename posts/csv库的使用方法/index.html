@@ -211,11 +211,11 @@ with open('test_dict_writer.csv', 'r', newline='', encoding='utf-8') as csvfile:
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png"
-        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png 2x"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png"
-        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png" /></p>
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png"
+        title="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png" /></p>
 <p>观察打印出的结果我们发现，reader读取的内容打印出来后还是列表格式，而 DictReader读取的内容却变为了列表加元组的格式，显然和我们刚开时传入的字典格式很不同。</p>
 <p>而我们总是希望输入和输出能够一致，但是 csv模块并没有提供这样的方法，所以我们需要自己将 csv模块再进行一次封装，封装后的包应该满足下面的标准：</p>
 <ol>

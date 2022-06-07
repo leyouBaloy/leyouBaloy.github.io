@@ -109,11 +109,11 @@
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg"
-        data-srcset="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg 1.5x, https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg 2x"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/hugologo.jpeg"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/hugologo.jpeg, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/hugologo.jpeg 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/hugologo.jpeg 2x"
         data-sizes="auto"
-        alt="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg"
-        title="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg" /></div><div class="details toc" id="toc-static"  kept="">
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/hugologo.jpeg"
+        title="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/hugologo.jpeg" /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -210,9 +210,9 @@ title: 年度总结
 或者是这样的：
 ![](/wp-content/uploads/2021/02/image-1-1024x431.png)
 </code></pre></div><p>要替换成这样：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)
 和这样
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/02/image-1-1024x431.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/02/image-1-1024x431.png)
 </code></pre></div><p>那肯定还是用python脚本啦，python，yyds!</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">re</span>
@@ -228,7 +228,7 @@ title: 年度总结
 
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">file</span><span class="p">),</span><span class="s2">&#34;r+&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">all_text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&#34;\((\/wp-content\/uploads)&#34;</span><span class="p">,</span><span class="s2">&#34;(https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/&#34;</span><span class="p">,</span><span class="n">all_text</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&#34;\((\/wp-content\/uploads)&#34;</span><span class="p">,</span><span class="s2">&#34;(https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/&#34;</span><span class="p">,</span><span class="n">all_text</span><span class="p">)</span>
         <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;www.leyoubaloy.xyz&#34;</span><span class="p">,</span><span class="s2">&#34;cdn.jsdelivr.net/gh/leyouBaloy/mypic&#34;</span><span class="p">)</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">file</span><span class="p">),</span><span class="s2">&#34;w+&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>

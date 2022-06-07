@@ -148,7 +148,7 @@
 </code></pre></div><h3 id="交换回溯">交换、回溯</h3>
 <p>在前面做过的回溯题中，比如Leetcode17:电话号码的字母组合、Leetcode113:路径总和，我们都是用栈来维护储存路径的数组，但是在这题当中我们用交换的方法来维护，很巧妙啊！</p>
 <p>有两个变量<code>first</code>和<code>i</code>。在每一次递归当中，<code>0～first</code>是已确定的路径，<code>i</code>是与<code>first</code>交换的数的位置。看下图：</p>
-<figure><img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/fig14.PNG"/>
+<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/fig14.PNG"/>
 </figure>
 
 <p>代码（c++的stl里有swap函数，写出的代码更简洁）</p>
