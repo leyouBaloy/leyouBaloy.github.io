@@ -122,7 +122,7 @@ with open('test_dict_writer.csv', 'r', newline='', encoding='utf-8') as csvfile:
 
 打印结果：
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-efdf5e1a0252d666-1024x144.png)
 
 观察打印出的结果我们发现，reader读取的内容打印出来后还是列表格式，而 DictReader读取的内容却变为了列表加元组的格式，显然和我们刚开时传入的字典格式很不同。
 

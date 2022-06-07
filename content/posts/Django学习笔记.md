@@ -41,7 +41,7 @@ code . #用vscode启动
 python manage.py runserver #启动服务器
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-9.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-9.png)
 
 解决报错信息
 
@@ -208,7 +208,7 @@ link1link2link3
 
 上述代码也粘贴到<body>下面
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-10-1024x184.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-10-1024x184.png)
 
 效果图
 
@@ -249,7 +249,7 @@ return render(request,'home.html',{"api":api})
 <p>{{api}}</p>
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-11-2-1024x433.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-11-2-1024x433.png)
 
 成功！
 
@@ -290,7 +290,7 @@ return render(request,'home.html',{"api":api})
 </div>
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-13-2-1024x576.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-13-2-1024x576.png)
 
 ### 搜索页面跳转
 
@@ -318,7 +318,7 @@ def user(request):
   {% endblock %}
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-12.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-12.png)
 
 成功
 

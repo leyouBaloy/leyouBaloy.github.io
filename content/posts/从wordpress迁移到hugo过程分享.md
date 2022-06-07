@@ -4,7 +4,7 @@ date: 2022-01-28T15:52:50+08:00
 draft: false
 categories: 
 - 技能分享
-featuredImage: https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/hugologo.jpeg
+featuredImage: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/hugologo.jpeg
 ---
 
 ### 为什么抛弃wordpress选择hugo
@@ -124,9 +124,9 @@ for file in os.listdir(path):
 要替换成这样：
 
 ```markdown
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)
 和这样
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/02/image-1-1024x431.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/02/image-1-1024x431.png)
 ```
 
 那肯定还是用python脚本啦，python，yyds!
@@ -146,7 +146,7 @@ for file in os.listdir(path):
 
         with open(os.path.join(path,file),"r+") as f:
             all_text = f.read()
-        res = re.sub("\((\/wp-content\/uploads)","(https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/",all_text)
+        res = re.sub("\((\/wp-content\/uploads)","(https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/",all_text)
         res = res.replace("www.leyoubaloy.xyz","cdn.jsdelivr.net/gh/leyouBaloy/mypic")
         with open(os.path.join(path,file),"w+") as f:
             f.write(res)

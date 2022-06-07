@@ -36,7 +36,7 @@ roboflow是一个支持数据集在线打标，在线导出的网站。除此之
 
 1. 在roboflow上标好数据，点export导出，不用下载，只要复制这段代码就可以了
 
-![image-20220319133335481](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220319133335481.png)
+![image-20220319133335481](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220319133335481.png)
 
 2. 打开https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb
 

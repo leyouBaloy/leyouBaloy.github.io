@@ -29,31 +29,31 @@ title: 叮~我们的MC服务器终于到货啦！
 
 下载完成后，是一个压缩包，需要解压。电脑里没有解压软件的同学，可以下载好压软件，或者360zip
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/01/image-14.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-14.png)
 
 解压后的样子
 
 解压完成后，打开文件夹里的这个启动器：
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/01/image-15.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-15.png)
 
 进去之后把用户名填了
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/01/image-16.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-16.png)
 
 （你他娘的可别填leyou1，那是我的账号。）
 
 点击确定之后，就可以启动游戏啦
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/01/image-17.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-17.png)
 
 之后点多人游戏
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/01/image-18.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-18.png)
 
 就可以进服玩啦
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/01/image-19.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-19.png)
 
 服务器现有的Mod是魔法金属，可以在网上搜一搜教程，或者在b站看看视频。
 
@@ -72,4 +72,4 @@ title: 叮~我们的MC服务器终于到货啦！
 
 4.QQ群：
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/01/image-20.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-20.png)

@@ -98,7 +98,7 @@ python detect.py --source /Users/sunbaile/yolov5/screw/images/test/CPU风扇-缺
 
 推理结果保存在`runs/detect/exp`
 
-![image-20220228223237431](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220228223237431.png)
+![image-20220228223237431](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220228223237431.png)
 
 效果不错！
 

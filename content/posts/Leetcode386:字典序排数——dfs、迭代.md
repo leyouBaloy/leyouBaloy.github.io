@@ -32,7 +32,7 @@ https://leetcode-cn.com/problems/lexicographical-numbers/
 
 第四层及往后层都同第三层
 
-![image.png](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/1650246458-ahFpqe-image.png)
+![image.png](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/1650246458-ahFpqe-image.png)
 
 深度优先遍历这棵树，记录路径就是答案啦。
 
@@ -70,7 +70,7 @@ class Solution:
 
 很有思维的一种方法！
 
-![image-20220418173712075](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220418173712075.png)
+![image-20220418173712075](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220418173712075.png)
 
 
 

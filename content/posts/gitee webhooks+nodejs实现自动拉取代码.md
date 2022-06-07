@@ -33,7 +33,7 @@ webhook也叫钩子。粗浅的来说，就是你写一个小脚本，每次提�
 
 有个小坑：配完公钥后git仓库地址一定要用ssh，而不是https
 
-![image-20220125201303579](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220125201303579.png)
+![image-20220125201303579](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220125201303579.png)
 
 成功的结果就是你打git clone的时候不用输入密码了
 
@@ -94,7 +94,7 @@ try {
 
 还有个小坑，如果你用gitee的话，push代码和点击“测试”的时候name的值是不一样的。前者是"Gitee FeedBack"，后者是仓库名。（我的仓库名xaiweb
 
-![image-20220125202515465](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220125202515465.png)
+![image-20220125202515465](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220125202515465.png)
 
 gitee和github应该也不一样，总之，测试的时候多看日志，就能发现问题。（日志下面有
 
@@ -143,7 +143,7 @@ location ^~ /webhooks_push {
 
 ### gitee配置
 
-![在这里插入图片描述](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNjY3NzE1,size_16,color_FFFFFF,t_70.png)密码就是跟上面那个对应的。
+![在这里插入图片描述](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNjY3NzE1,size_16,color_FFFFFF,t_70.png)密码就是跟上面那个对应的。
 
 大功告成。
 

@@ -54,5 +54,5 @@ class Solution:
 
 再看这张图就能理解了：
 
-{{< figure src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/39_fig1.png" >}}
+{{< figure src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/39_fig1.png" >}}
 

@@ -9,17 +9,17 @@ title: 暑期实习项目-onlinejudge在线测试平台
 
 ### 展示
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/07/QQ截图20210727201920.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/QQ截图20210727201920.png)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/07/WGWBNRA0LF39BW8QX_2BB7.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/WGWBNRA0LF39BW8QX_2BB7.png)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/07/aiplatform.xyz_2021_-486x1024.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/aiplatform.xyz_2021_-486x1024.png)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/07/aiplatform.xyz_2021_onlinejudge_list_problems__course_idall-1024x824.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/aiplatform.xyz_2021_onlinejudge_list_problems__course_idall-1024x824.png)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/07/aiplatform.xyz_2021_visualization_ranking_-993x1024.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/aiplatform.xyz_2021_visualization_ranking_-993x1024.png)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/07/判题流程.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/判题流程.png)
 
   概括来说，就是用django开发的web项目。相当于一个学生管理系统＋评测系统，开发完成后部署。这个项目，在一起参与暑期实习的很多同学看来，应该是很牛很牛的项目了。牛在哪里呢？牛在我们真正把东西做出来，部署好，让每个人打开浏览器就能访问，让大家都能体验到我们做的这个项目是实实在在的，不是只会做ppt，纸上空谈。
 
@@ -35,7 +35,7 @@ title: 暑期实习项目-onlinejudge在线测试平台
 
   廖集秀，性格很好。虽然是后期加入的，但是很好学，很快就跟上了我们的进度。很负责，为了做好自己的内容主动加班，点赞。
 
-  王文婕，挺能干的，一个人，光是views.py里就写了700多行代码。性格比较活泼，活跃气氛很好。 ![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/07/together-300x225.jpg)
+  王文婕，挺能干的，一个人，光是views.py里就写了700多行代码。性格比较活泼，活跃气氛很好。 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/together-300x225.jpg)
 
 ### 未来
 

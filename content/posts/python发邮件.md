@@ -9,7 +9,7 @@ title: python发邮件
 
 ### QQ邮箱设置
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/08/QQ截图20210808081637.jpg) ![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/08/QQ截图20210808081707.jpg) ![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/08/QQ截图20210808081720.jpg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081637.jpg) ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081707.jpg) ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081720.jpg)
 
 ### python代码
 

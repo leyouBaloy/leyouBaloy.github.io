@@ -54,4 +54,4 @@ plt.savefig('./热机效率随负载大小变化曲线图.png',dpi=200) #保存�
 
 效果
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/04/热机效率随负载大小变化曲线图-1024x683.jpg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/04/热机效率随负载大小变化曲线图-1024x683.jpg)

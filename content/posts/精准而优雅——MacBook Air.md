@@ -30,4 +30,4 @@ title: 精准而优雅——MacBook Air
 
 对于计算机专业的学生来说，电脑就是老婆。而这台macbook就如一个俄罗斯美人，不仅干活猛，还好看。希望使用这台优雅的电脑能帮助我改掉以前在windows上养成的坏习惯，比如资料胡乱放。
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/11/macbook-1024x768.jpg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/macbook-1024x768.jpg)

@@ -57,7 +57,7 @@ class Solution:
 
 有如下结论：
 
-![最小高度树](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91.png)
+![最小高度树](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91.png)
 
 用反证法证明，证明过程挺复杂的。
 

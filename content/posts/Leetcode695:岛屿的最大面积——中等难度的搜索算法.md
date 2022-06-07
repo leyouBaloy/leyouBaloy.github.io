@@ -27,7 +27,7 @@ leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能
 
 
 
-![带有返回值的递归](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/带有返回值的递归.jpg)
+![带有返回值的递归](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/带有返回值的递归.jpg)
 
 上面这个图是我随手画的，只是便于理解，跟这个测试案例没啥关系😂。
 

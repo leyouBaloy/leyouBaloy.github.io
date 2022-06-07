@@ -73,4 +73,4 @@ ipython notebook
 
 Kernel => Change kernel => 环境名
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/08/image-20210813181313433-1024x634.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/image-20210813181313433-1024x634.png)

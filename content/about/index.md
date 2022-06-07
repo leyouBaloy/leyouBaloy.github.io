@@ -6,7 +6,7 @@ qq：1942956063，欢迎给我打钱。
 
 
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/叛逆表情包.jpeg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/叛逆表情包.jpeg)
 
 
 

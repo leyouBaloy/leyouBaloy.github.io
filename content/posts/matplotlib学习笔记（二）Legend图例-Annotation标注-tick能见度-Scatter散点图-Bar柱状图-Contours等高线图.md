@@ -57,7 +57,7 @@ plt.legend(loc='upper right')
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-12.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-12.png)
 
 #### 简单省事儿的写法
 
@@ -138,7 +138,7 @@ for label in ax.get_xticklabels() + ax.get_yticklabels():
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-13.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-13.png)
 
 ### Scatter散点图
 
@@ -161,7 +161,7 @@ plt.yticks(())  # ignore yticks
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-14-1.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-14-1.png)
 
 ### Bar柱状图
 
@@ -197,7 +197,7 @@ plt.yticks(())
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-15.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-15.png)
 
 演示中的柱状图有两条，实际中一般用的用一条就够了
 
@@ -230,4 +230,4 @@ plt.yticks(())
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-16-2.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-16-2.png)

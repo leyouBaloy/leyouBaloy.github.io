@@ -13,19 +13,19 @@ title: certbot自动配置nginx给wordpress站点加https
 2.  安装certbot
 3.  自动配置nginx
 
-完事儿了，确实很方便。具体执行语句访问 [https://certbot.eff.org/](https://certbot.eff.org/) 按下图选择环境后就能看到所有执行语句 ![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/09/certbot选择环境-1024x222.png)
+完事儿了，确实很方便。具体执行语句访问 [https://certbot.eff.org/](https://certbot.eff.org/) 按下图选择环境后就能看到所有执行语句 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/certbot选择环境-1024x222.png)
 
 # 踩过的坑
 
 ### 配置nginx的时候报错如图
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/09/certbot报错-1024x432.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/certbot报错-1024x432.png)
 
 报错的意思就是说，在nginx的配置文件中server\_name字段不正确。我把它修改成了aiupc.xyz，仍然报错。
 
 后来问了我哥，才知道nginx配置文件最底下有一行：
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/09/includevhost.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/includevhost.png)
 
 wordpress真正的配置文件其实是在/usr/local/nginx/conf/vhost文件夹里。把这个里面的server\_name改一下就OK了。
 

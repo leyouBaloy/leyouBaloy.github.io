@@ -12,21 +12,21 @@ github地址：[https://github.com/MorvanZhou/tutorials/tree/master/matplotlibTU
 
 ### 基本语法
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-4.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-4.png)
 
   
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-5.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-5.png)
 
 ### 一个figure就是一张图片
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-7.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-7.png)
 
 这里有两个figure(两张图)，其中第二个figure有两个plot(两条线)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-9-1-1024x811.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-9-1-1024x811.png)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-8-1-1024x636.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-8-1-1024x636.png)
 
 ### 设置坐标轴
 
@@ -58,7 +58,7 @@ plt.yticks([-2, -1.8, -1, 1.22, 3],
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-10-1024x743.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-10-1024x743.png)
 
 移动坐标轴
 
@@ -106,4 +106,4 @@ ax.spines['left'].set_position(('data',0)) #把y轴位置设置在x轴的0刻度
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/image-11-1.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-11-1.png)

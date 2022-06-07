@@ -21,12 +21,12 @@ l4d2这个游戏，就是LOL的互补品，有的时候玩LOL玩得便秘，就�
 
 ### 炸鸡
 
-炸鸡配菠萝啤——金童玉女 ![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/08/IMG_20210809_214229-300x225.jpg)  
+炸鸡配菠萝啤——金童玉女 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/IMG_20210809_214229-300x225.jpg)  
 
-炸鸡配可乐——两小无猜 ![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/08/IMG_20210810_190758-300x225.jpg)  
+炸鸡配可乐——两小无猜 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/IMG_20210810_190758-300x225.jpg)  
 
-单点炸鸡——玉体横陈 ![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/08/IMG_20210811_184832-225x300.jpg)
+单点炸鸡——玉体横陈 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/IMG_20210811_184832-225x300.jpg)
 
 ### 华莱士
 
-别跟我说吃华莱士成喷射战士，上20块钱网吃20块钱华莱士不香么。它卖的确实是泻药，你看不起泻药？泻药也是药。治便秘，不含糖。 ![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/08/1610250727-210x300.jpeg)
+别跟我说吃华莱士成喷射战士，上20块钱网吃20块钱华莱士不香么。它卖的确实是泻药，你看不起泻药？泻药也是药。治便秘，不含糖。 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/1610250727-210x300.jpeg)

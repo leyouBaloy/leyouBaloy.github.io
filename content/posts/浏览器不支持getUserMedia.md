@@ -15,6 +15,6 @@ chrome
 
 地址栏输入：chrome://flags/#unsafely-treat-insecure-origin-as-secure
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/09/chromegetmedia-1024x570.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/chromegetmedia-1024x570.png)
 
 然后就ok了

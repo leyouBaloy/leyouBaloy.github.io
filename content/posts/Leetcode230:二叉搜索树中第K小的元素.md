@@ -87,7 +87,7 @@ class Solution:
 
 这个方法适用于频繁地查找第k个最小的值。
 
-<img src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220404154420485.png" alt="image-20220404154420485" style="zoom: 50%;" />
+<img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220404154420485.png" alt="image-20220404154420485" style="zoom: 50%;" />
 
 > 作者：LeetCode-Solution
 > 链接：https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yua-8o07/

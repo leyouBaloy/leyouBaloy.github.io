@@ -7,4 +7,4 @@ draft: false
 title: Python爬虫-selenium-request
 ---
 
-[seleniumrequest](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2020/11/seleniumrequest.zip)[下载](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2020/11/seleniumrequest.zip)
+[seleniumrequest](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/11/seleniumrequest.zip)[下载](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/11/seleniumrequest.zip)

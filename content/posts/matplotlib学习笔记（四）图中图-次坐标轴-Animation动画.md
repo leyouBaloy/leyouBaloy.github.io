@@ -46,7 +46,7 @@ plt.title('title inside 2')
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-7-1024x813.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-7-1024x813.png)
 
 ### 次坐标轴
 
@@ -71,7 +71,7 @@ ax2.set_ylabel('Y2 data', color='b')
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-8-2.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-8-2.png)
 
 ### Animation动画
 

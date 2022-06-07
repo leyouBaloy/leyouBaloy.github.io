@@ -21,7 +21,7 @@ categories:
 
 **示例 1：**
 
-![img](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/tree1.jpg)
+![img](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/tree1.jpg)
 
 ```
 输入：root = [3,9,20,null,null,15,7]
@@ -132,17 +132,17 @@ public:
 
 **先看一种朴素的方法（虽然是“朴素”的方法，但也比我的方法要巧妙，它在进行广度优先搜索时就解决了层数的问题）**：
 
-![image-20220311181248284](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220311181248284.png)
+![image-20220311181248284](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220311181248284.png)
 
 **然后针对这题，可以进行如下优化，概括来说就是每次拓展一层的节点（“拓展”这个词用的真好）**：
 
-![image-20220311181308253](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220311181308253.png)
+![image-20220311181308253](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220311181308253.png)
 
 
 
 **数学证明，其实这个也很容易想通**：
 
-![image-20220311181322717](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220311181322717.png)
+![image-20220311181322717](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220311181322717.png)
 
 **代码**：
 

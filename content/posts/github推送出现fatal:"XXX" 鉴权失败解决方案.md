@@ -9,7 +9,7 @@ title: github推送出现fatal:"XXX" 鉴权失败解决方案
 
 ### 问题描述
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/11/image-3-1024x215.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-3-1024x215.png)
 
 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。
 

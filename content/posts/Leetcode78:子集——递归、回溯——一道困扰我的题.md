@@ -79,7 +79,7 @@ public:
 
 画一颗树，数根为`[]`，对于子集中的某个元素，左子树是添加这个元素，右子树是不加这个元素。构造这棵树如图（自己画的图有点丑）：
 
-{{< figure src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/%E5%AD%90%E9%9B%86%E9%80%92%E5%BD%92%E6%A0%91.jpg" title="子集递归树" >}}
+{{< figure src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E5%AD%90%E9%9B%86%E9%80%92%E5%BD%92%E6%A0%91.jpg" title="子集递归树" >}}
 
 最后叶节点就是所需答案。
 

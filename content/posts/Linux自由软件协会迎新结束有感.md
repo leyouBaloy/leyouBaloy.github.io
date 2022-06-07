@@ -17,7 +17,7 @@ title: Linux自由软件协会迎新结束有感
 
 现实真的比小说还魔幻，小说是讲逻辑的，现实不讲逻辑。
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/10/1634568930141-1-1024x768.jpeg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/1634568930141-1-1024x768.jpeg)
 
 换届现场
 
@@ -25,9 +25,9 @@ title: Linux自由软件协会迎新结束有感
 
 然后就顺理成章的搞了百团大战活动，搞活动之前我还被社团管理部的老师约谈，因为学校不允许和外部企业合作，让我避讳“百度”。我照做了，不过从此之后我也下定决心不想再给百度干活了。
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/10/IMG_20211023_122634-1024x768.jpg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/IMG_20211023_122634-1024x768.jpg)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/10/2933d0f5f0353c10-1024x768.jpg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/2933d0f5f0353c10-1024x768.jpg)
 
 然后紧接着下周就要准备新生见面会。由我来主持，顺便讲一节课。
 
@@ -37,9 +37,9 @@ title: Linux自由软件协会迎新结束有感
 
 我表现的也很不错，讲了一节课，全称吹牛逼吹得都很流畅。
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/10/DA38396616F297717D1378B129227152.jpg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/DA38396616F297717D1378B129227152.jpg)
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2021/10/EF6521E6B51F7E58F9364B58F38D0048.jpg)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/EF6521E6B51F7E58F9364B58F38D0048.jpg)
 
 为一件事准备的越多，收获的也越多。不能做“佛系青年”，不愿意挑战自己。也不要给自己增加焦虑，什么都想做好，搞太大压力。要践行一种中庸之道，有的放矢，分清主次。
 

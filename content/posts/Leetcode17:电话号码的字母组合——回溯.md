@@ -21,7 +21,7 @@ https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
 
 画个图帮助理解：
 
-{{< figure src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/image-20220427155047587.png" >}}
+{{< figure src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220427155047587.png" >}}
 
 
 

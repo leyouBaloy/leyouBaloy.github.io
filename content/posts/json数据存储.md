@@ -100,7 +100,7 @@ print(test_string)
 
 打印结果：
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-b526e0e0eeb46343-1024x155.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-b526e0e0eeb46343-1024x155.png)
 
 **2、load和 loads**
 
@@ -132,7 +132,7 @@ print(json_obj_from_web)
 
 打印结果
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/02/8516750-a6d38380a795390d-1024x149.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/8516750-a6d38380a795390d-1024x149.png)
 
 # [json的dump和dumps的区别](https://www.cnblogs.com/zhoajiahao/p/11133430.html)
 

@@ -147,7 +147,7 @@ theme = "LoveIt"
       # Gravatar 邮箱，用于优先在主页显示的头像
       gravatarEmail = ""
       # 主页显示头像的 URL
-      avatarURL = "https://cdn.jsdelivr.net/gh/aiupc/drawingbed/img/qq头像.jpg"
+      avatarURL = "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/qq头像.jpg"
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # 主页显示的网站副标题

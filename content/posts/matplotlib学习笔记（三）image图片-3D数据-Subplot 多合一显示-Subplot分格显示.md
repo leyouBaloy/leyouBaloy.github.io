@@ -38,11 +38,11 @@ plt.yticks(())
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1024x631.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-1024x631.png)
 
 interpolation参数有这些
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png)
 
 ### 3D数据
 
@@ -102,7 +102,7 @@ ax.set_zlim(-2, 2)
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-2.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-2.png)
 
 ### Subplot 多合一显示
 
@@ -156,11 +156,11 @@ plt.tight_layout()
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png)
 
 figure1
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png)
 
 figure2
 
@@ -205,10 +205,10 @@ plt.tight_layout()
 plt.show()
 ```
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-5-1.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-5-1.png)
 
 method1和method2效果图
 
-![](https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png)
+![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png)
 
 method2

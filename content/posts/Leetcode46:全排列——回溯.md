@@ -47,7 +47,7 @@ class Solution:
 
 有两个变量`first`和`i`。在每一次递归当中，`0～first`是已确定的路径，`i`是与`first`交换的数的位置。看下图：
 
-{{< figure src="https://cdn.jsdelivr.net/gh/leyouBaloy/mypic/img/fig14.PNG" >}}
+{{< figure src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/fig14.PNG" >}}
 
 代码（c++的stl里有swap函数，写出的代码更简洁）
 
