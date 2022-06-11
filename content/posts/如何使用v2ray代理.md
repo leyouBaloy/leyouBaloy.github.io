@@ -21,33 +21,33 @@ v2ray是一个代理工具，你不仅需要在电脑上下载这个软件，还
 
 ### 2.添加一个订阅
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-4.png)
+{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-4.png" >}}
 
 双击点开后，软件会自动跳到后台运行
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-5.png)
+{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-5.png" >}}
 
 在右下角你可以找到它，双击点开
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-6.png)
+{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-6.png" >}}
 
 点击这里的 订阅-->订阅设置
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-7.png)
+{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-7.png" >}}
 
 点击添加
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-8.png)
+{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-8.png" >}}
 
 输入订阅地址后点确定，可以使用我已经购买的订阅地址，请私聊我
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-10.png)
+{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-10.png" >}}
 
 之后再回到界面，点击 订阅-->更新订阅
 
 ### 3.切换服务器，开启代理
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-11.png)
+{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-11.png" >}}
 
 然后右下角这里，右键点击-->选择服务器（先随便选一个），和游戏加速器一样，因为每个人的网络环境不同，你需要更换不同的节点以达到更快的网速
 
@@ -61,4 +61,4 @@ v2ray是一个代理工具，你不仅需要在电脑上下载这个软件，还
 
 再搜索ip，可以查看你的网络环境已经发生改变
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-12.png)
+{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-12.png" >}}
