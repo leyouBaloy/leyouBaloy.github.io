@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>解锁新技术栈vue&#43;flask前后端分离 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="解锁新技术栈vue&#43;flask前后端分离" />
-<meta property="og:description" content="Vue 之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档" />
+        <title>《写给大家看的设计书》读书笔记 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="《写给大家看的设计书》读书笔记" />
+<meta property="og:description" content="写给大家看的设计书 本书作者是美国著名设计师Robin Williams，Mac爱好者（因为我也喜欢Mac，所以强调一下这个）。 这是一本写给非设" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-05-24T23:41:05+08:00" />
-<meta property="article:modified_time" content="2022-05-24T23:41:05+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-14T19:19:28+08:00" />
+<meta property="article:modified_time" content="2022-06-14T19:19:28+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="解锁新技术栈vue&#43;flask前后端分离"/>
-<meta name="twitter:description" content="Vue 之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档"/>
+<meta name="twitter:title" content="《写给大家看的设计书》读书笔记"/>
+<meta name="twitter:description" content="写给大家看的设计书 本书作者是美国著名设计师Robin Williams，Mac爱好者（因为我也喜欢Mac，所以强调一下这个）。 这是一本写给非设"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%9C%80%E8%BF%91%E7%9A%84%E6%B8%B8%E7%A6%BB%E7%8A%B6%E6%80%81/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "解锁新技术栈vue+flask前后端分离",
+        "headline": "《写给大家看的设计书》读书笔记",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue\u002bflask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB\/"
-        },"genre": "posts","wordcount":  1021 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue\u002bflask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB\/","datePublished": "2022-05-24T23:41:05+08:00","dateModified": "2022-05-24T23:41:05+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0\/"
+        },"genre": "posts","wordcount":  838 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0\/","datePublished": "2022-06-14T19:19:28+08:00","dateModified": "2022-06-14T19:19:28+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">解锁新技术栈vue&#43;flask前后端分离</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-24">2022-05-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1021 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" class="leancloud_visitors" data-flag-title="解锁新技术栈vue&#43;flask前后端分离">
+        </div><article class="page single"><h1 class="single-title animated flipInX">《写给大家看的设计书》读书笔记</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>书影记录</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-14">2022-06-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 838 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="leancloud_visitors" data-flag-title="《写给大家看的设计书》读书笔记">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,95 +113,84 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#vue">Vue</a></li>
-    <li><a href="#vue-cli">Vue Cli</a></li>
-    <li><a href="#elementui">ElementUI</a></li>
-    <li><a href="#通信axios解决跨域问题">通信axios，解决跨域问题</a></li>
-    <li><a href="#后端flask">后端Flask</a></li>
-    <li><a href="#数据库">数据库</a></li>
-    <li><a href="#部署">部署</a></li>
+    <li><a href="#写给大家看的设计书">写给大家看的设计书</a></li>
+    <li><a href="#约书亚树">约书亚树</a></li>
+    <li><a href="#四大基本原则">四大基本原则</a></li>
+    <li><a href="#颜色运用">颜色运用</a></li>
+    <li><a href="#具体情景">具体情景</a></li>
+    <li><a href="#字体设计">字体设计</a></li>
+    <li><a href="#告诉你一个小技巧">告诉你一个小技巧</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="vue">Vue</h2>
-<p>之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档边写了。前端框架逻辑都差不多，一通百通，很开心能掌握这项技术。</p>
-<p>我的学习路线：</p>
+            </div><div class="content" id="content"><h2 id="写给大家看的设计书">写给大家看的设计书</h2>
+<p>本书作者是美国著名设计师Robin Williams，Mac爱好者（因为我也喜欢Mac，所以强调一下这个）。</p>
+<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1655119695518-136cfa75-32cd-4586-a84a-a3c68f21ea1a.png"/>
+</figure>
+
+<p>这是一本写给非设计专业人士看的设计科普类数据，介绍了有关设计的四个基本原则、颜色运用、字体搭配等内容。语言通俗易懂，由易到难，循序渐进，逻辑清晰，有丰富的图片和案例，是一本写的非常好的科普书籍，谁看了都能从书里学到点什么。</p>
+<h2 id="约书亚树">约书亚树</h2>
+<p>当作者偶然知道家门口的那种树的名字叫“约书亚树”时，她才会注意到它，认识它，了解它。所以说，想弄明白任何问题，首先搞清楚问题的定义。</p>
+<h2 id="四大基本原则">四大基本原则</h2>
+<p>这是一个相当乏味但很典型的报告封面：</p>
+<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220614195722772.png"/>
+</figure>
+
+<p>亲密性：把相关的项组合到一起，使结构清晰。</p>
+<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220614195802210.png"/>
+</figure>
+
+<p>对齐：使整个页面清爽整齐。</p>
+<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220614195835109.png"/>
+</figure>
+
+<p>重复：增加条理性，引导视觉。</p>
+<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220614195924261.png"/>
+</figure>
+
+<p>对比：引人注目。</p>
+<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220614195941199.png"/>
+</figure>
+
+<h2 id="颜色运用">颜色运用</h2>
+<p>以下都是能用的上的小常识，没有很强的理论性！</p>
 <ul>
-<li>先了解web基础知识，比如http，get，post请求等等</li>
-<li>了解html，css，js等前端基础知识（非常基础，我甚至没写过一行css代码</li>
-<li>看b站的手把手教学视频（非常长，只需要看一部分就可以啦</li>
-<li>看Vue官方文档（不建议新手直接看，很难懂</li>
+<li>色轮</li>
+<li>颜色关系（互补、三色组&hellip;</li>
+<li>暗色和亮色</li>
+<li>单色、色质</li>
+<li>暖色与冷色</li>
+<li>CMYK与RGB</li>
 </ul>
-<p>Vue官方文档：https://cn.vuejs.org/</p>
-<p>一个案例（后台管理系统：</p>
+<h2 id="具体情景">具体情景</h2>
 <ul>
-<li>
-<p>教学视频：https://www.bilibili.com/video/BV14y4y1M7Nc?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click</p>
-</li>
-<li>
-<p>源代码：https://gitee.com/xqnode/springboot-vue-demo</p>
-</li>
+<li>包装</li>
+<li>企业名片</li>
+<li>信笺和信封</li>
+<li>传单</li>
+<li>新闻简报</li>
+<li>宣传册</li>
+<li>明信片</li>
+<li>报纸广告</li>
+<li>网站（一点点</li>
 </ul>
-<h2 id="vue-cli">Vue Cli</h2>
-<p>Vue的脚手架工具，配合编译器Vscode就可以拿来直接开发Vue啦</p>
-<p>同样是看b站手把手教学视频，官方文档，搜索引擎搜索问题</p>
-<h2 id="elementui">ElementUI</h2>
-<p><a href="https://element.eleme.io/" target="_blank" rel="noopener noreffer">https://element.eleme.io/</a></p>
-<p>大名鼎鼎的UI工具，不用手写样式啦</p>
-<h2 id="通信axios解决跨域问题">通信axios，解决跨域问题</h2>
-<p>前后端通信，主流的解决方案是使用axios，视频里有演示如何在Vue里使用axios，也非常方便。</p>
-<p>跨域问题是由于浏览器为了安全性拒绝向其它ip或端口的地址发送请求，vue的解决方案是它帮你在后台发送请求，部署的时候用nginx可以非常方便的解决</p>
-<h2 id="后端flask">后端Flask</h2>
-<p>直接看官方文档，很简单好用，做小项目速度起飞</p>
-<h2 id="数据库">数据库</h2>
-<p>团队项目用腾讯云或阿里云云MySQL数据库，一年也就几块钱</p>
-<p>小项目直接SQLite，开发速度起飞</p>
-<h2 id="部署">部署</h2>
-<p>我针的针的没想到我能一次性部署成功～</p>
-<p>首先把前端build一下</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">npm run build
-</code></pre></div><p>产生dist文件夹，直接拖到服务端（我使用的是ubuntu</p>
-<p>配置nginx（要改的地方已标出</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="k">server</span> <span class="p">{</span>
-        <span class="kn">listen</span>       <span class="mi">80</span><span class="p">;</span>
-        <span class="kn">server_name</span>  <span class="s">你的server_name，ip</span> <span class="s">or</span> <span class="s">域名</span><span class="p">;</span>
-
-        <span class="kn">location</span> <span class="s">^~</span> <span class="s">/api</span> <span class="p">{</span>
-            <span class="kn">rewrite</span>  <span class="s">^/api/(.*)</span>$ <span class="s">/</span><span class="nv">$1</span> <span class="s">break</span><span class="p">;</span> <span class="c1"># 解决跨域，路径替换，把前端中的/api替换掉
-</span><span class="c1"></span>            <span class="kn">proxy_pass</span>   <span class="s">http://localhost:9090</span><span class="p">;</span> <span class="c1"># 后端地址
-</span><span class="c1"></span>            <span class="kn">add_header</span> <span class="s">Access-Control-Allow-Methods</span> <span class="s">*</span><span class="p">;</span>
-            <span class="kn">add_header</span> <span class="s">Access-Control-Max-Age</span> <span class="mi">3600</span><span class="p">;</span>
-            <span class="kn">add_header</span> <span class="s">Access-Control-Allow-Credentials</span> <span class="s">true</span><span class="p">;</span>
-            <span class="kn">add_header</span> <span class="s">Access-Control-Allow-Origin</span> <span class="nv">$http_origin</span><span class="p">;</span>
-            <span class="kn">add_header</span> <span class="s">Access-Control-Allow-Headers</span> <span class="nv">$http_access_control_request_headers</span><span class="p">;</span>
-            <span class="kn">if</span> <span class="s">(</span><span class="nv">$request_method</span> <span class="p">=</span> <span class="s">OPTIONS</span> <span class="s">)</span> <span class="p">{</span>
-                <span class="kn">return</span> <span class="mi">200</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
-            <span class="kn">root</span>   <span class="s">/home/ubuntu/sgjyb/vue2/dist</span><span class="p">;</span> <span class="c1"># 前端路径
-</span><span class="c1"></span>            <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
-            <span class="kn">add_header</span> <span class="s">&#39;Access-Control-Allow-Origin&#39;</span> <span class="s">&#39;*&#39;</span><span class="p">;</span>
-            <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="nv">$uri/</span> <span class="s">/index.html</span><span class="p">;</span>
-        <span class="p">}</span>
-
-        <span class="c1">#error_page  404              /404.html;
-</span><span class="c1"></span>
-        <span class="c1"># redirect server error pages to the static page /50x.html
-</span><span class="c1"></span>        <span class="c1">#
-</span><span class="c1"></span>        <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
-        <span class="kn">location</span> <span class="p">=</span> <span class="s">/50x.html</span> <span class="p">{</span>
-            <span class="kn">root</span>   <span class="s">html</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></div><p>然后可以测试一下能不能访问</p>
-<p>最后部署后端：在服务器上装python=&gt;上传后端到服务器=&gt;运行</p>
-<p>可以使用screen让它一直保持运行</p>
+<h2 id="字体设计">字体设计</h2>
+<p>什么是字体的衬线？Oldstyle、Modern、Sans serif 等字体你一定使用过，但你仔细观察过它们的特点吗？</p>
+<p>虽然这一部分介绍的都是英文字体，但仍然非常值得一读～</p>
+<h2 id="告诉你一个小技巧">告诉你一个小技巧</h2>
+<blockquote>
+<p>“告诉你一个方法，这是我们在图形设计课上经常使用的技巧，如果一个客户坚持他自己拙劣的设计，不想再认真考虑你更精美的作品，就可以采用这个技巧。展示他的设计时先搞得一团糟。比如（有意）洒点咖啡上去，把边缘弄得参差不齐，划上钢笔印，放得不整齐，诸如此类。展示你认为更棒的设计时则要做得干净漂亮，用非常好的纸张打印，把它们贴在展示板上，覆一层保护膜等。这样一来，大多数情况下客户都会考虑你的作品，并相信你的作品确实比他原先的想法更好，而且由于他是一个 VIP*（而你已经脱离这个行列），他无法指出自己为什么做不到这么好，只知道你的设计看上去更棒。告诉别人这是我说的。）</p>
+<ul>
+<li>VIP：未经过视觉训练的人”</li>
+</ul>
+<p>摘录来自
+写给大家看的设计书（第 4 版）
+[美] Robin Williams</p>
+</blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-05-24</span>
+                <span>更新于 2022-06-14</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -220,8 +209,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E6%9C%80%E8%BF%91%E7%9A%84%E6%B8%B8%E7%A6%BB%E7%8A%B6%E6%80%81/" class="prev" rel="prev" title="最近的游离状态"><i class="fas fa-angle-left fa-fw"></i>最近的游离状态</a>
-            <a href="/posts/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B9%A6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="next" rel="next" title="《写给大家看的设计书》读书笔记">《写给大家看的设计书》读书笔记<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E8%A7%A3%E9%94%81%E6%96%B0%E6%8A%80%E6%9C%AF%E6%A0%88vue&#43;flask%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" class="prev" rel="prev" title="解锁新技术栈vue&#43;flask前后端分离"><i class="fas fa-angle-left fa-fw"></i>解锁新技术栈vue&#43;flask前后端分离</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
