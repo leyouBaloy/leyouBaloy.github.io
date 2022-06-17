@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>浅记一下最近的恋爱片段～ - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="浅记一下最近的恋爱片段～" />
-<meta property="og:description" content="摘自《挪威的森林》 “最最喜欢你，绿子。” “什么程度？” “像喜欢春天的熊一样。” “春天的熊？”绿子再次扬起脸，“什么春天的熊？” “春天的原野里" />
+        <title>使用正则表达式进行高级替换 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="使用正则表达式进行高级替换" />
+<meta property="og:description" content="需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg) 但是这样渲" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E6%B5%85%E8%AE%B0%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E7%9A%84%E6%81%8B%E7%88%B1%E7%89%87%E6%AE%B5/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-06-17T00:33:03+08:00" />
-<meta property="article:modified_time" content="2022-06-17T00:33:03+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-17T15:02:15+08:00" />
+<meta property="article:modified_time" content="2022-06-17T15:02:15+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="浅记一下最近的恋爱片段～"/>
-<meta name="twitter:description" content="摘自《挪威的森林》 “最最喜欢你，绿子。” “什么程度？” “像喜欢春天的熊一样。” “春天的熊？”绿子再次扬起脸，“什么春天的熊？” “春天的原野里"/>
+<meta name="twitter:title" content="使用正则表达式进行高级替换"/>
+<meta name="twitter:description" content="需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg) 但是这样渲"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E6%B5%85%E8%AE%B0%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E7%9A%84%E6%81%8B%E7%88%B1%E7%89%87%E6%AE%B5/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%9C%A8word%E4%B8%AD%E4%BD%BF%E7%94%A8%E9%80%9A%E9%85%8D%E7%AC%A6%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E7%9A%84%E6%9F%A5%E6%89%BE%E5%92%8C%E6%9B%BF%E6%8D%A2/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%B5%85%E8%AE%B0%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E7%9A%84%E6%81%8B%E7%88%B1%E7%89%87%E6%AE%B5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "浅记一下最近的恋爱片段～",
+        "headline": "使用正则表达式进行高级替换",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%B5%85%E8%AE%B0%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E7%9A%84%E6%81%8B%E7%88%B1%E7%89%87%E6%AE%B5\/"
-        },"genre": "posts","wordcount":  274 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%B5%85%E8%AE%B0%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E7%9A%84%E6%81%8B%E7%88%B1%E7%89%87%E6%AE%B5\/","datePublished": "2022-06-17T00:33:03+08:00","dateModified": "2022-06-17T00:33:03+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2\/"
+        },"genre": "posts","wordcount":  741 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2\/","datePublished": "2022-06-17T15:02:15+08:00","dateModified": "2022-06-17T15:02:15+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">浅记一下最近的恋爱片段～</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>随笔杂记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-17">2022-06-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 274 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/%E6%B5%85%E8%AE%B0%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E7%9A%84%E6%81%8B%E7%88%B1%E7%89%87%E6%AE%B5/" class="leancloud_visitors" data-flag-title="浅记一下最近的恋爱片段～">
+        </div><article class="page single"><h1 class="single-title animated flipInX">使用正则表达式进行高级替换</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a>&nbsp;<a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-17">2022-06-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 741 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/" class="leancloud_visitors" data-flag-title="使用正则表达式进行高级替换">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,53 +113,54 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#小青岛"><em>小青岛</em></a></li>
-    <li><a href="#蒲公英"><em>蒲公英</em></a></li>
-    <li><a href="#螺蛳粉"><em>螺蛳粉</em></a></li>
-    <li><a href="#梦乐城"><em>梦乐城</em></a></li>
-    <li><a href="#漂亮彤彤和帅气乐乐和西瓜的夏天"><em>漂亮彤彤和帅气乐乐和西瓜的夏天</em></a></li>
+    <li><a href="#需求">需求</a></li>
+    <li><a href="#代码">代码</a></li>
+    <li><a href="#resub">re.sub</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><blockquote>
-<p><strong>摘自《挪威的森林》</strong></p>
-<p><em>“最最喜欢你，绿子。”</em></p>
-<p><em>“什么程度？”</em></p>
-<p><em>“像喜欢春天的熊一样。”</em></p>
-<p><em>“春天的熊？”绿子再次扬起脸，“什么春天的熊？”</em></p>
-<p><em>“春天的原野里，你一个人正走着，对面走来一只可爱的小熊，浑身的毛活像天鹅绒，眼睛圆鼓鼓的。</em></p>
-<p><em>它对你说道：’你好，小姐，和我一块儿打滚玩好吗？’接着，你就和小熊抱在一起，顺着长满三叶草的山坡‘咕噜咕噜’滚下去，玩了整整一天。你说棒不棒？”</em></p>
-<p><em>“太棒了。”</em></p>
-<p><em>“我就这么喜欢你。”</em></p>
-</blockquote>
-<h2 id="小青岛"><em>小青岛</em></h2>
-<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1561%20%E5%A4%A7.jpeg"/>
-</figure>
+            </div><div class="content" id="content"><h2 id="需求">需求</h2>
+<p>最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="err">!</span><span class="p">[](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">myblog</span><span class="o">-</span><span class="mf">1257298572.</span><span class="n">cos</span><span class="o">.</span><span class="n">ap</span><span class="o">-</span><span class="n">shanghai</span><span class="o">.</span><span class="n">myqcloud</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">IMG_1562</span><span class="o">%</span><span class="mi">20</span><span class="o">%</span><span class="n">E5</span><span class="o">%</span><span class="n">A4</span><span class="o">%</span><span class="n">A7</span><span class="o">.</span><span class="n">jpeg</span><span class="p">)</span>
+</code></pre></div><p>但是这样渲染出的图片不能居中，也不能缩放，我得把它转换成博客主题的格式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python">\<span class="p">{</span>\<span class="p">{</span><span class="o">&lt;</span> <span class="n">figure</span> <span class="n">src</span><span class="o">=</span><span class="s2">&#34;https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562</span><span class="si">%20%</span><span class="s2">E5%A4%A7.jpeg&#34;</span> <span class="o">&gt;</span>\<span class="p">}</span>\<span class="p">}</span><span class="err">（</span><span class="n">为了防止渲染原文没有</span>\<span class="n">斜杠</span><span class="err">）</span>
+</code></pre></div><p>思路很简单，但不能简单的使用python的<code>replace</code>函数，因为不仅要匹配<code>![]()</code>，还要匹配括号里的url</p>
+<h2 id="代码">代码</h2>
+<p>可以拿这个网站试一试：https://regex101.com</p>
+<p>点左边<code>FUNCTION</code>里的<code>Substitution</code>，就是替换模式</p>
+<p><code>TOOLS</code>里的<code>Code Generator</code>可以生成代码（不过python的代码不太好用）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 匹配字符串</span>
+<span class="sa">r</span><span class="s2">&#34;!\[.*\]\((https:\/\/myblog.*)\)&#34;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 替换字符串</span>
+<span class="s1">&#39;/{/{&lt; figure src=&#34;</span><span class="se">\\</span><span class="s1">1&#34; &gt;/}/}&#39;</span><span class="err">（</span><span class="n">为了防止渲染原文没有</span><span class="o">/</span><span class="n">斜杠</span><span class="err">）</span>
+</code></pre></div><p>这里面的<code>\\1</code>就表示匹配字符串里用括号包围起来的那部分，replace是没有这种功能的。</p>
+<p>完整代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span> <span class="c1"># 文件夹路径</span>
+<span class="n">file</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span> <span class="c1"># 文件名</span>
 
-<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg"/>
-</figure>
-
-<h2 id="蒲公英"><em>蒲公英</em></h2>
-<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1586%20%E5%A4%A7.jpeg"/>
-</figure>
-
-<h2 id="螺蛳粉"><em>螺蛳粉</em></h2>
-<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1645%20%E5%A4%A7.jpeg"/>
-</figure>
-
-<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1643%20%E5%A4%A7.jpeg"/>
-</figure>
-
-<h2 id="梦乐城"><em>梦乐城</em></h2>
-<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1662%20%E5%A4%A7.jpeg"/>
-</figure>
-
-<h2 id="漂亮彤彤和帅气乐乐和西瓜的夏天"><em>漂亮彤彤和帅气乐乐和西瓜的夏天</em></h2>
-<figure><img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1673%20%E5%A4%A7.jpeg"/>
-</figure>
-
-<blockquote>
-<p>在夏天谈恋爱，梅子味的晚霞，啤酒味的星空，草莓味的心事，跟你在一起，西瓜般的清爽，橘子汽水一样的心动。</p>
-</blockquote>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">file</span><span class="p">),</span><span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">all_text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;!\[.*\]\((https:\/\/myblog.*)\)&#34;</span><span class="p">,</span> <span class="s1">&#39;/{/{&lt; figure src=&#34;</span><span class="se">\\</span><span class="s1">1&#34; &gt;/}/}&#39;</span><span class="p">,</span> <span class="n">all_text</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span><span class="p">)</span> <span class="c1"># （为了防止渲染原文没有/斜杠）</span>
+    
+    
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">file</span><span class="p">),</span><span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</code></pre></div><h2 id="resub">re.sub</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">repl</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;Return the string obtained by replacing the leftmost
+</span><span class="s2">    non-overlapping occurrences of the pattern in string by the
+</span><span class="s2">    replacement repl.  repl can be either a string or a callable;
+</span><span class="s2">    if a string, backslash escapes in it are processed.  If it is
+</span><span class="s2">    a callable, it&#39;s passed the match object and must return
+</span><span class="s2">    a replacement string to be used.&#34;&#34;&#34;</span>
+    <span class="k">return</span> <span class="n">_compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">repl</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+</code></pre></div><p>1）pattern：该参数表示正则中的模式字符串；
+（2）repl：该参数表示要替换的字符串（即匹配到pattern后替换为repl），也可以是个函数；
+（3）string：该参数表示要被处理（查找替换）的原始字符串；
+（4）count：可选参数，表示是要替换的最大次数，而且必须是非负整数，该参数默认为0，即所有的匹配都会被替换；
+（5）flags：可选参数，表示编译时用的匹配模式（如忽略大小写、多行模式等），数字形式，默认为0。</p>
+<p><code>re.MULTILINE</code>:多行模式</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -183,8 +184,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E5%9C%A8word%E4%B8%AD%E4%BD%BF%E7%94%A8%E9%80%9A%E9%85%8D%E7%AC%A6%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E7%9A%84%E6%9F%A5%E6%89%BE%E5%92%8C%E6%9B%BF%E6%8D%A2/" class="prev" rel="prev" title="在word中使用通配符进行高级的查找和替换"><i class="fas fa-angle-left fa-fw"></i>在word中使用通配符进行高级的查找和替换</a>
-            <a href="/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/" class="next" rel="next" title="使用正则表达式进行高级替换">使用正则表达式进行高级替换<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E6%B5%85%E8%AE%B0%E4%B8%80%E4%B8%8B%E6%9C%80%E8%BF%91%E7%9A%84%E6%81%8B%E7%88%B1%E7%89%87%E6%AE%B5/" class="prev" rel="prev" title="浅记一下最近的恋爱片段～"><i class="fas fa-angle-left fa-fw"></i>浅记一下最近的恋爱片段～</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
