@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 17 Jun 2022 15:02:15 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 23 Jun 2022 12:24:27 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>组织一次成功的班级烧烤经验分享</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E7%BB%84%E7%BB%87%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E7%9A%84%E7%8F%AD%E7%BA%A7%E7%83%A7%E7%83%A4%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</link>
+    <pubDate>Thu, 23 Jun 2022 12:24:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E7%BB%84%E7%BB%87%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E7%9A%84%E7%8F%AD%E7%BA%A7%E7%83%A7%E7%83%A4%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</guid>
+    <description><![CDATA[准备物资 6月22日，班级组织了一次团建，去轰趴馆（一个双层别墅，有烧烤、厨房、KTV、游戏机、投影仪、麻将、台球等等的地方）早上十点到达，晚]]></description>
+</item><item>
     <title>使用正则表达式进行高级替换</title>
     <link>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/</link>
     <pubDate>Fri, 17 Jun 2022 15:02:15 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%A5%B3%E6%80%A7%E4%B8%BB%E4%B9%89%E8%AF%BB%E5%90%8E%E6%9C%89%E6%84%9F/</guid>
     <description><![CDATA[《从零开始的女性主义》 “女性主义”其实就是“女权主义”，只不过后者在大家的印象里有贬义的意味，所以换了一种说法。“女权”这个词在近几年特别火]]></description>
-</item><item>
-    <title>Leetcode39:组合总和——回溯</title>
-    <link>https://www.leyoubaloy.xyz/posts/leetcode39%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C%E5%9B%9E%E6%BA%AF/</link>
-    <pubDate>Fri, 06 May 2022 17:09:58 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/leetcode39%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C%E5%9B%9E%E6%BA%AF/</guid>
-    <description><![CDATA[题目 https://leetcode-cn.com/problems/combination-sum/ 做回溯题就像见老同学，你觉得它还像以前一样简单，但是你错了😭 题解 搜索回溯 思路：对于candidates中的每一个数你有两个选项，要么选]]></description>
 </item></channel>
 </rss>
