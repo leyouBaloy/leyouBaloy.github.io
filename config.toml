@@ -180,6 +180,7 @@ theme = "LoveIt"
   [params.social]
     GitHub = "leyouBaloy"
     Email = "1942956063@qq.com"
+    love = "#"
 
 
 # LoveIt 新增 | 0.2.0 网站分析配置
