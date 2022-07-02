@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>正则表达式提取《飞鸟集》 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="正则表达式提取《飞鸟集》" />
-<meta property="og:description" content="需求 从网上down了一个《飞鸟集》的txt文件，其内容是这样的 Stray Birds 飞鸟集 1 Stray birds of summer come to my window to sing and fly away. And yellow leaves of autumn, which have no songs, flutter and fall there with a sigh. 夏天的飞" />
+        <title>《乡土中国》读书笔记 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="《乡土中国》读书笔记" />
+<meta property="og:description" content="乡土本色 未完成，待更新" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8F%90%E5%8F%96%E9%A3%9E%E9%B8%9F%E9%9B%86/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-06-30T11:18:09+08:00" />
-<meta property="article:modified_time" content="2022-06-30T11:18:09+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E4%B9%A1%E5%9C%9F%E4%B8%AD%E5%9B%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-01T20:32:23+08:00" />
+<meta property="article:modified_time" content="2022-07-01T20:32:23+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="正则表达式提取《飞鸟集》"/>
-<meta name="twitter:description" content="需求 从网上down了一个《飞鸟集》的txt文件，其内容是这样的 Stray Birds 飞鸟集 1 Stray birds of summer come to my window to sing and fly away. And yellow leaves of autumn, which have no songs, flutter and fall there with a sigh. 夏天的飞"/>
+<meta name="twitter:title" content="《乡土中国》读书笔记"/>
+<meta name="twitter:description" content="乡土本色 未完成，待更新"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8F%90%E5%8F%96%E9%A3%9E%E9%B8%9F%E9%9B%86/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E7%BB%84%E7%BB%87%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E7%9A%84%E7%8F%AD%E7%BA%A7%E7%83%A7%E7%83%A4%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E4%B9%A1%E5%9C%9F%E4%B8%AD%E5%9B%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "正则表达式提取《飞鸟集》",
+        "headline": "《乡土中国》读书笔记",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8F%90%E5%8F%96%E9%A3%9E%E9%B8%9F%E9%9B%86\/"
-        },"genre": "posts","wordcount":  1455 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8F%90%E5%8F%96%E9%A3%9E%E9%B8%9F%E9%9B%86\/","datePublished": "2022-06-30T11:18:09+08:00","dateModified": "2022-06-30T11:18:09+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E4%B9%A1%E5%9C%9F%E4%B8%AD%E5%9B%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0\/"
+        },"genre": "posts","wordcount":  11 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E4%B9%A1%E5%9C%9F%E4%B8%AD%E5%9B%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0\/","datePublished": "2022-07-01T20:32:23+08:00","dateModified": "2022-07-01T20:32:23+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">正则表达式提取《飞鸟集》</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a>&nbsp;<a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-30">2022-06-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1455 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8F%90%E5%8F%96%E9%A3%9E%E9%B8%9F%E9%9B%86/" class="leancloud_visitors" data-flag-title="正则表达式提取《飞鸟集》">
+        </div><article class="page single"><h1 class="single-title animated flipInX">《乡土中国》读书笔记</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>书影记录</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-01">2022-07-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 11 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/%E4%B9%A1%E5%9C%9F%E4%B8%AD%E5%9B%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="leancloud_visitors" data-flag-title="《乡土中国》读书笔记">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,203 +113,16 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#需求">需求</a></li>
-    <li><a href="#实现">实现</a></li>
+    <li><a href="#乡土本色"><em>乡土本色</em></a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="需求">需求</h2>
-<p>从网上down了一个《飞鸟集》的txt文件，其内容是这样的</p>
-<pre tabindex="0"><code>Stray Birds
-
-飞鸟集
-
-
-
-
-
-1
-
-
-
-Stray birds of summer come to my window to sing and fly away. And yellow leaves of autumn, which have no songs, flutter and fall there with a sigh.
-
-
-
-夏天的飞鸟，飞到我窗前唱歌，又飞去了。
-
-秋天的黄叶，它们没有什么可唱，只叹息一声，飞落在那里。
-
-
-
-
-
-2
-
-
-
-O troupe of little vagrants of the world, leave your footprints in my words.
-
-
-
-世界上的一队小小的漂泊者呀，请留下你们的足印在我的文字里。
-
-
-
-
-
-3
-
-
-
-The world puts off its mask of vastness to its lover. It becomes small as one song, as one kiss of the eternal.
-
-
-
-世界对着它的爱人，把它浩瀚的面具揭下了。
-
-它变小了，小如一首歌，小如一回永恒的接吻。
-
-
-
-
-
-4
-
-
-
-It is the tears of the earth that keep her smiles in bloom.
-
-
-
-是“地”的泪点，使她的微笑保持着青春不谢。
-
-
-
-
-
-5
-
-
-
-The mighty desert is burning for the love of a blade of grass who shakes her head and laughs and flies away.
-
-
-
-广漠无垠的沙漠热烈地追求着一叶绿草的爱，但她摇摇头，笑起来，飞了开去。
-
-
-
-
-
-6
-
-
-
-If you shed tears when you miss the sun, you also miss the stars.
-
-
-
-如果错过了太阳时你流了泪，那么你也要错过群星了。
-
-
-
-
-
-7
-
-
-
-The sands in your way beg for your song and your movement, dancing water. Will you carry the burden of their lameness?
-
-
-
-跳舞着的流水呀，在你途中的泥沙，要求你的歌声，你的流动呢。你肯挟跛足的泥沙而俱下么？
-
-
-
-
-
-8
-
-
-
-Her wistful face haunts my dreams like the rain at night.
-
-
-
-她的热切的脸，如夜雨似的，搅扰着我的梦魂。
-
-
-
-
-
-9
-
-
-
-Once we dreamt that we were strangers. We wake up to find that we were dear to each other.
-
-
-
-有一次，我们梦见大家都是不相识的。
-
-我们醒了，却知道我们原是相亲爱的。
-
-
-
-
-
-
-</code></pre><p>总共325段（上面只截取了9段），每天要给女朋友发一段，用邮件的形式。因为是重复性操作，所以诉诸于代码实现。</p>
-<p>所以做一个数据处理，用正则表达式把每一段提取出来，写成json文件，格式如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;1&#34;</span><span class="p">:</span> <span class="s2">&#34;Stray birds of summer come to my window to sing and fly away. And yellow leaves of autumn, which have no songs, flutter and fall there with a sigh.\n\n\n\n夏天的飞鸟，飞到我窗前唱歌，又飞去了。\n\n秋天的黄叶，它们没有什么可唱，只叹息一声，飞落在那里。&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;2&#34;</span><span class="p">:</span> <span class="s2">&#34;O troupe of little vagrants of the world, leave your footprints in my words.\n\n\n\n世界上的一队小小的漂泊者呀，请留下你们的足印在我的文字里。&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;3&#34;</span><span class="p">:</span> <span class="s2">&#34;The world puts off its mask of vastness to its lover. It becomes small as one song, as one kiss of the eternal.\n\n\n\n世界对着它的爱人，把它浩瀚的面具揭下了。\n\n它变小了，小如一首歌，小如一回永恒的接吻。&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;4&#34;</span><span class="p">:</span> <span class="s2">&#34;It is the tears of the earth that keep her smiles in bloom.\n\n\n\n是“地”的泪点，使她的微笑保持着青春不谢。&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;5&#34;</span><span class="p">:</span> <span class="s2">&#34;The mighty desert is burning for the love of a blade of grass who shakes her head and laughs and flies away.\n\n\n\n广漠无垠的沙漠热烈地追求着一叶绿草的爱，但她摇摇头，笑起来，飞了开去。&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;6&#34;</span><span class="p">:</span> <span class="s2">&#34;If you shed tears when you miss the sun, you also miss the stars.\n\n\n\n如果错过了太阳时你流了泪，那么你也要错过群星了。&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;7&#34;</span><span class="p">:</span> <span class="s2">&#34;The sands in your way beg for your song and your movement, dancing water. Will you carry the burden of their lameness?\n\n\n\n跳舞着的流水呀，在你途中的泥沙，要求你的歌声，你的流动呢。你肯挟跛足的泥沙而俱下么？&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;8&#34;</span><span class="p">:</span> <span class="s2">&#34;Her wistful face haunts my dreams like the rain at night.\n\n\n\n她的热切的脸，如夜雨似的，搅扰着我的梦魂。&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;9&#34;</span><span class="p">:</span> <span class="s2">&#34;Once we dreamt that we were strangers. We wake up to find that we were dear to each other.\n\n\n\n有一次，我们梦见大家都是不相识的。\n\n我们醒了，却知道我们原是相亲爱的。&#34;</span>
-<span class="p">}</span>
-</code></pre></div><h2 id="实现">实现</h2>
-<p>regex101.com，这个网站真是太好用了。</p>
-<p>因为我用的是python，进去之后记得选择python，把文件复制进去，就可以编辑正则表达式了。</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112512950.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112512950.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112512950.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112512950.png 2x"
-        data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112512950.png"
-        title="image-20220630112512950" /></p>
-<p>代码可以点Code Generator生成，不过不太好用，可以作为参照。</p>
-<p>代码：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112823725.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112823725.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112823725.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112823725.png 2x"
-        data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220630112823725.png"
-        title="image-20220630112823725" /></p>
-<p>因为正则表达式中的特殊符号会被博客无情转译，所以放图片不放文本了。</p>
-<p>顺便记录一下两日期相差天数的代码：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
-<span class="n">past</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s2">&#34;2022-06-29 00:00:00&#34;</span><span class="p">,</span><span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&#34;</span><span class="p">))</span>
-<span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">delta_day</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">now</span><span class="o">-</span><span class="n">past</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">delta_day</span><span class="p">)</span>
-</code></pre></div><p>保存为json文件，中文不乱码</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;Birds.json&#34;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_obj</span><span class="p">:</span>
-    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">file_obj</span><span class="p">,</span><span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+            </div><div class="content" id="content"><h2 id="乡土本色"><em>乡土本色</em></h2>
+<p>未完成，待更新</p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-06-30</span>
+                <span>更新于 2022-07-01</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -328,8 +141,8 @@ Once we dreamt that we were strangers. We wake up to find that we were dear to e
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E7%BB%84%E7%BB%87%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E7%9A%84%E7%8F%AD%E7%BA%A7%E7%83%A7%E7%83%A4%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="prev" rel="prev" title="组织一次成功的班级烧烤经验分享"><i class="fas fa-angle-left fa-fw"></i>组织一次成功的班级烧烤经验分享</a>
-            <a href="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/" class="next" rel="next" title="数据结构与算法实习第一阶段">数据结构与算法实习第一阶段<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/" class="prev" rel="prev" title="数据结构与算法实习第一阶段"><i class="fas fa-angle-left fa-fw"></i>数据结构与算法实习第一阶段</a>
+            <a href="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" class="next" rel="next" title="数据结构与算法实习第二阶段">数据结构与算法实习第二阶段<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
