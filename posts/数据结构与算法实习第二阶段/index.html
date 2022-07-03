@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>数据结构与算法实习第二阶段 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="数据结构与算法实习第二阶段" />
-<meta property="og:description" content="7-2 分而治之 知识点：图论 思路： 记录邻接矩阵，输入时记录每个节点的度数。被摧毁的城市的度置为0，和它相邻的点度也-1。最后检查是否有度大于0的点" />
+<meta property="og:description" content="7-2 分而治之 知识点：图论 思路： 思路一：记录邻接矩阵，输入时记录每个节点的度数。被摧毁的城市的度置为0，和它相邻的点度也-1。最后检查是否有度大" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-02T15:38:13+08:00" />
@@ -14,7 +14,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="数据结构与算法实习第二阶段"/>
-<meta name="twitter:description" content="7-2 分而治之 知识点：图论 思路： 记录邻接矩阵，输入时记录每个节点的度数。被摧毁的城市的度置为0，和它相邻的点度也-1。最后检查是否有度大于0的点"/>
+<meta name="twitter:description" content="7-2 分而治之 知识点：图论 思路： 思路一：记录邻接矩阵，输入时记录每个节点的度数。被摧毁的城市的度置为0，和它相邻的点度也-1。最后检查是否有度大"/>
 <meta name="application-name" content="百乐的编程学习">
 <meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E4%B9%A1%E5%9C%9F%E4%B8%AD%E5%9B%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -25,7 +25,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5\/"
-        },"genre": "posts","wordcount":  465 ,
+        },"genre": "posts","wordcount":  2352 ,
         "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5\/","datePublished": "2022-07-02T15:38:13+08:00","dateModified": "2022-07-02T15:38:13+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
@@ -102,8 +102,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">数据结构与算法实习第二阶段</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a>&nbsp;<a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-02">2022-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 465 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" class="leancloud_visitors" data-flag-title="数据结构与算法实习第二阶段">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-02">2022-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2352 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" class="leancloud_visitors" data-flag-title="数据结构与算法实习第二阶段">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -114,14 +114,15 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#7-2-分而治之">7-2 分而治之</a></li>
+    <li><a href="#7-3-那就别担心了">7-3 那就别担心了</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="7-2-分而治之">7-2 分而治之</h2>
 <p><strong>知识点</strong>：图论</p>
 <p><strong>思路</strong>：</p>
 <ul>
-<li>记录邻接矩阵，输入时记录每个节点的度数。被摧毁的城市的度置为0，和它相邻的点度也-1。最后检查是否有度大于0的点，有就说明有城市相连通，输出NO，否则输出YES；</li>
-<li>记录所有的边(u, v)，和被攻陷城池lost[i]。遍历边(u, v)，如果存在u或v没有被攻陷（即不在lost里面），说明有城市连通，输出NO，否则YES；</li>
+<li>思路一：记录邻接矩阵，输入时记录每个节点的度数。被摧毁的城市的度置为0，和它相邻的点度也-1。最后检查是否有度大于0的点，有就说明有城市相连通，输出NO，否则输出YES；</li>
+<li>思路二：记录所有的边(u, v)，和被攻陷城池lost[i]。遍历边(u, v)，如果存在u或v没有被攻陷（即不在lost里面），说明有城市连通，输出NO，否则YES；</li>
 </ul>
 <p>因为这题最多有10005个点，使用邻接矩阵会超内存，所以采用第二种思路；</p>
 <p><strong>细节</strong>：</p>
@@ -180,6 +181,138 @@
         <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;NO&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
     <span class="p">}</span>
   
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div><h2 id="7-3-那就别担心了">7-3 那就别担心了</h2>
+<p><strong>知识点</strong>：dfs、时间复杂度</p>
+<p><strong>思路</strong>：抽象一下：给定一个有向无环图（DAG），并且给出起点A和终点B，问从A出发的所有路径是否都能到达B，并且求出从A出发到达B的不同路径有多少条。第一个问题非常好解，只要从A开始DFS，如果搜到某个出度为0的点，并且这个点不是题面给出的B点，就说明并不是所有从A出发的路径都能到达B。对于第二个问题，虽然这道题数据比较小，最多只有500个点，但是这题的时间限制是400ms，对于求解不同路径的问题，如果暴力搜索的话是一定会超时的。</p>
+<p>考察输入样例1:</p>
+<pre tabindex="0"><code>7 8
+7 6
+8 5
+6 5
+5 2
+5 3
+2 1
+3 1
+7 1
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/7-3%20%E9%82%A3%E5%B0%B1%E5%88%AB%E6%8B%85%E5%BF%83%E4%BA%86%E9%A2%98%E8%A7%A3DAG.jpg"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/7-3%20%E9%82%A3%E5%B0%B1%E5%88%AB%E6%8B%85%E5%BF%83%E4%BA%86%E9%A2%98%E8%A7%A3DAG.jpg, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/7-3%20%E9%82%A3%E5%B0%B1%E5%88%AB%E6%8B%85%E5%BF%83%E4%BA%86%E9%A2%98%E8%A7%A3DAG.jpg 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/7-3%20%E9%82%A3%E5%B0%B1%E5%88%AB%E6%8B%85%E5%BF%83%E4%BA%86%E9%A2%98%E8%A7%A3DAG.jpg 2x"
+        data-sizes="auto"
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/7-3%20%E9%82%A3%E5%B0%B1%E5%88%AB%E6%8B%85%E5%BF%83%E4%BA%86%E9%A2%98%E8%A7%A3DAG.jpg"
+        title="7-3 那就别担心了题解DAG" /></p>
+<p>很明显，从7到1有如下路径：</p>
+<pre tabindex="0"><code>7 -&gt; 6 -&gt; 5 —&gt; 2 -&gt; 1
+7 -&gt; 6 -&gt; 5 -&gt; 3 -&gt; 1
+7 -&gt; 8 -&gt; 5 -&gt; 2 -&gt; 1
+7 -&gt; 8 -&gt; 5 -&gt; 3 -&gt; 1
+</code></pre><p>发现，从5到1有两条路径。在搜索时，经过7，6，5，会把这两条路径都搜索一遍；经过7，8，5，又会把这两条路径搜索一遍。这样就造成了时间的浪费。我们考虑，如果在经过6号节点到达5号节点，再到达终点1号节点的所有路径全部搜索完时，5号节点能够储存下“经过该节点有2条路径到达目标节点”这个信息，这样在从8号节点搜索到5号时，就不需要再重复地将接下来的路径全部搜索一遍了，直接从5号节点读到“接下来有2条不同的路径”这个信息。正好，DFS的“走到底再返回”的性质可以做到从尾到头，也就是从终点到起点记录信息，因此我们可以在DFS的过程中进行记忆化操作。</p>
+<p>我们定义<code>step[i]</code>为“从<code>i</code>号节点到达目标节点的路径条数“，求解的目标是<code>step[A]</code>，定义<code>step[B] = 1</code>，并且标记𝐵B节点已经被访问过。在DFS的过程中，如果将要搜索的节点没有被访问过，就搜索，并记录下路径条数，当前节点直接加上待搜索（其实这时候已经搜索完了）的节点的路径条数。以上图为例，DFS的过程如下：</p>
+<ol>
+<li>初始化<code>step[]</code>数组为0，初始化<code>vis[]</code>数组为<strong>false</strong>，赋值<code>step[1]=1</code>, <code>vis[1]=true</code>;</li>
+<li>从起点7开始DFS，赋值<code>vis[7]=true</code>。接下来想搜索6，<code>vis[6]==false</code>，进入；</li>
+<li>从6节点开始DFS，赋值<code>vis[6]=true</code>。接下来想搜索5，<code>vis[5]==false</code>，进入；</li>
+<li>从5节点开始DFS，赋值<code>vis[5]=true</code>。接下来想搜索2，<code>vis[2]==false</code>，进入；</li>
+<li>从2节点开始DFS，赋值<code>vis[2]=true</code>。接下来想搜索1，<code>vis[1]==true</code>，不进入；累加路径条数<code>step[2]=step[2]+step[1]</code>，这时<code>step[2]=1</code>。2节点没有其他的路径，返回，<code>step[5]=step[5]+step[2]</code>,此时<code>step[5]=1</code></li>
+<li>接下来想搜索3，赋值<code>vis[1]==true</code>，不进入；累加路径条数<code>step[3]=step[3]+step[1]</code>，这时<code>step[3]=1</code>。3节点没有其他的路径，返回,<code>step[5]=step[5]+step[3]</code>,此时<code>step[5]=2</code></li>
+<li>5节点没有其他的路径，返回，<code>step[6]=step[6]+step[5]</code>，此时<code>step[6]=2</code>.</li>
+<li>6没有其它节点了，返回7，<code>step[7]=step[7]+step[6]</code>，此时<code>step[7]=2</code>。继续搜索8。</li>
+<li>从8开始DFS，赋值<code>vis[8]=true</code>，接下来又想搜索5，<code>vis[5]=true</code>，不进入，<code>step[8]=step[8]+step[5]</code>，此时<code>step[8]=2</code>；</li>
+<li>没有其它路径了，返回7，<code>step[7]=step[7]+step[8]</code>，此时<code>step[7]=4</code>。没有其它节点了，递归结束。</li>
+</ol>
+<p><strong>细节</strong>：</p>
+<ul>
+<li>路径使用邻接矩阵存储（邻接表更节省空间，但因为不能使用<code>vector</code>，所以邻接表实现起来会麻烦一点）</li>
+<li>判断能否“逻辑自洽”：出度为0且该节点不是终点，令全局变量<code>isLogic</code></li>
+</ul>
+<p>dfs的过程用代码实现：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="n">Propositions</span><span class="o">::</span><span class="n">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vis</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">getOutdegree</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">node</span> <span class="o">!=</span> <span class="n">end</span> <span class="p">){</span>
+        <span class="n">isLogic</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">path</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">step</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">step</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>所有代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Propositions</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">;</span> <span class="c1">// 起点和终点
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">isLogic</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// 是否逻辑自洽
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">path</span><span class="p">[</span><span class="mi">505</span><span class="p">][</span><span class="mi">505</span><span class="p">];</span> <span class="c1">// 邻接矩阵，在构建函数中初始化为0；
+</span><span class="c1"></span>    <span class="kt">long</span> <span class="kt">long</span> <span class="n">step</span><span class="p">[</span><span class="mi">505</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span> <span class="c1">// step[i] : 第 i 个点到终点的路径的个数
+</span><span class="c1"></span>    <span class="kt">bool</span> <span class="n">vis</span><span class="p">[</span><span class="mi">505</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span> <span class="c1">// 是否访问过
+</span><span class="c1"></span>
+    <span class="n">Propositions</span><span class="p">();</span>
+    <span class="kt">void</span> <span class="nf">insertPath</span><span class="p">();</span> <span class="c1">// 输入路径
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="nf">getOutdegree</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">);</span> <span class="c1">// 计算一个节点的出度
+</span><span class="c1"></span>    <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">);</span> <span class="c1">// 深度优先搜索
+</span><span class="c1"></span>    <span class="kt">void</span> <span class="nf">detect</span><span class="p">();</span> <span class="c1">// 推理入口
+</span><span class="c1"></span><span class="p">};</span>
+
+<span class="n">Propositions</span><span class="o">::</span><span class="n">Propositions</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">){</span>
+            <span class="n">path</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">Propositions</span><span class="o">::</span><span class="n">insertPath</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="kt">int</span> <span class="n">from</span><span class="p">,</span> <span class="n">to</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">from</span> <span class="o">&gt;&gt;</span> <span class="n">to</span><span class="p">;</span>
+        <span class="n">path</span><span class="p">[</span><span class="n">from</span><span class="p">][</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">Propositions</span><span class="o">::</span><span class="n">getOutdegree</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">path</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">Propositions</span><span class="o">::</span><span class="n">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vis</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">getOutdegree</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">node</span> <span class="o">!=</span> <span class="n">end</span> <span class="p">){</span>
+        <span class="n">isLogic</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">path</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span> <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">step</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">step</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">Propositions</span><span class="o">::</span><span class="n">detect</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">start</span> <span class="o">&gt;&gt;</span> <span class="n">end</span><span class="p">;</span>
+    <span class="n">step</span><span class="p">[</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 重要初始化
+</span><span class="c1"></span>    <span class="n">vis</span><span class="p">[</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span> <span class="c1">// 重要初始化
+</span><span class="c1"></span>    <span class="n">dfs</span><span class="p">(</span><span class="n">start</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">step</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span> <span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">isLogic</span> <span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Yes&#34;</span><span class="p">;</span>
+    <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;No&#34;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Propositions</span> <span class="n">p</span><span class="p">;</span>
+    <span class="n">p</span><span class="p">.</span><span class="n">insertPath</span><span class="p">();</span>
+    <span class="n">p</span><span class="p">.</span><span class="n">detect</span><span class="p">();</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
