@@ -25,7 +25,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5\/"
-        },"genre": "posts","wordcount":  4286 ,
+        },"genre": "posts","wordcount":  4696 ,
         "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5\/","datePublished": "2022-07-02T15:38:13+08:00","dateModified": "2022-07-02T15:38:13+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
@@ -102,8 +102,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">数据结构与算法实习第二阶段</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%88%B7%E9%A2%98/"><i class="far fa-folder fa-fw"></i>刷题</a>&nbsp;<a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-02">2022-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4286 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 9 分钟&nbsp;<span id="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" class="leancloud_visitors" data-flag-title="数据结构与算法实习第二阶段">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-02">2022-07-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4696 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 10 分钟&nbsp;<span id="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" class="leancloud_visitors" data-flag-title="数据结构与算法实习第二阶段">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -116,6 +116,7 @@
     <li><a href="#7-2-分而治之">7-2 分而治之</a></li>
     <li><a href="#7-3-那就别担心了">7-3 那就别担心了</a></li>
     <li><a href="#7-4-森森旅游">7-4 森森旅游</a></li>
+    <li><a href="#7-5-hand-made-cream">7-5 Hand-made Cream</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="7-2-分而治之">7-2 分而治之</h2>
@@ -344,7 +345,7 @@
 </ul>
 </li>
 </ul>
-<p><strong>21分代码</strong>：</p>
+<p><strong>21分代码</strong>（三个测试点超时）：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#define int long long 
 </span><span class="cp"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">100005</span><span class="p">;</span> <span class="c1">// 最大节点数
@@ -621,6 +622,85 @@
   <span class="c1">// 返回顶部元素就可以啦
 </span><span class="c1"></span>  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">ms</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
+</code></pre></div><h2 id="7-5-hand-made-cream">7-5 Hand-made Cream</h2>
+<p><strong>知识点</strong>：动态规划</p>
+<p><strong>思路</strong>：考察从第1个面包<code>bread[1]</code>，选到第i个面包<code>bread[i]</code>和从<code>cream[1]</code>到<code>cream[j]</code>，乘积最大的搭配<code>dp[i][j]</code>，有如下情况：</p>
+<ul>
+<li>如果将第i个面包和第j个面包搭配，那么<code>dp[i][j] = dp[i-1][j-1] + bread[i]*cream[j]</code>；</li>
+<li>如果不搭配，那么等于前一个面包，或者前一个冰淇淋的结论，即<code>dp[i][j] = dp[i-1][j]</code>或者<code>dp[i][j] = dp[i][j-1]</code></li>
+</ul>
+<p>因为要求最大的值，所以综合一下：<code>dp[i][j] = max(dp[i-1][j-1]+bread[i]*cream[j],dp[i-1][j],dp[i][j-1])</code></p>
+<p>用两个循环，动态更新一下<code>dp</code>表就可以啦，下面是题目样例最终得到的dp表：</p>
+<table>
+<thead>
+<tr>
+<th>bread\cream</th>
+<th>10</th>
+<th>8</th>
+<th>11</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>10</td>
+<td>100</td>
+<td>100</td>
+<td>110</td>
+<td>110</td>
+</tr>
+<tr>
+<td>8</td>
+<td>100</td>
+<td>164</td>
+<td>188</td>
+<td>188</td>
+</tr>
+</tbody>
+</table>
+<p><strong>代码</strong>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span> <span class="o">&amp;&amp;</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="n">c</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">b</span> <span class="o">&gt;=</span> <span class="n">c</span><span class="p">)</span><span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">return</span> <span class="n">c</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">1005</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="mi">1005</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+
+    <span class="kt">int</span> <span class="n">dp</span><span class="p">[</span><span class="mi">1005</span><span class="p">][</span><span class="mi">1005</span><span class="p">],</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">M</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">){</span>
+            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span> <span class="p">;</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">res</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
 </code></pre></div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
