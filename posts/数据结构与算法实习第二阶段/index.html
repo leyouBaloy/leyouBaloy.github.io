@@ -323,7 +323,7 @@
 <p>1.使用现金从城市1出发，到达所有城市的最小花费（储存在<code>oneToOthers</code>内）
 2.使用旅游金从城市n出发，到达所有城市的最小花费（储存在<code>othersToN</code>内）</p>
 <p>在第i个城市将现金换成旅游金的情况下所需要的现金总额为</p>
-<p><code>all_cash = oneToOthers[i] + othersToN</code></p>
+<p><code>all_cash = oneToOthers[i] + othersToN[i]</code></p>
 <p>（即从城市1到达第i个城市所需要的最小现金数 + 从第i个城市到城市n所需要的最小旅游金数所转换成的现金数量）</p>
 <p>然后再通过枚举中转点<code>i</code>的方式，得到全局最优解。为了让Dijkstra算法更有效率，可以存储反向路径。</p>
 <p><strong>细节</strong>：</p>
