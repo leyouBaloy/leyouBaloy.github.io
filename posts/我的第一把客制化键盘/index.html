@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Linux输出重定向以及crontab的坑 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Linux输出重定向以及crontab的坑" />
-<meta property="og:description" content="有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩" />
+        <title>我的第一把客制化键盘 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="我的第一把客制化键盘" />
+<meta property="og:description" content="作为计算机专业的学生和游戏爱好者，每天做的最多的事情就是坐在电脑前面敲键盘，俗话说：“工欲善其事，必先利其器”，要追求更高效的工作方式和游戏" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/linux%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E4%BB%A5%E5%8F%8Acrontab%E7%9A%84%E5%9D%91/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-07-13T11:14:42+08:00" />
-<meta property="article:modified_time" content="2022-07-13T11:14:42+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%8A%8A%E5%AE%A2%E5%88%B6%E5%8C%96%E9%94%AE%E7%9B%98/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-16T15:41:28+08:00" />
+<meta property="article:modified_time" content="2022-08-16T15:41:28+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Linux输出重定向以及crontab的坑"/>
-<meta name="twitter:description" content="有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩"/>
+<meta name="twitter:title" content="我的第一把客制化键盘"/>
+<meta name="twitter:description" content="作为计算机专业的学生和游戏爱好者，每天做的最多的事情就是坐在电脑前面敲键盘，俗话说：“工欲善其事，必先利其器”，要追求更高效的工作方式和游戏"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/linux%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E4%BB%A5%E5%8F%8Acrontab%E7%9A%84%E5%9D%91/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%8A%8A%E5%AE%A2%E5%88%B6%E5%8C%96%E9%94%AE%E7%9B%98/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%8A%8A%E5%AE%A2%E5%88%B6%E5%8C%96%E9%94%AE%E7%9B%98/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/linux%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E4%BB%A5%E5%8F%8Acrontab%E7%9A%84%E5%9D%91/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Linux输出重定向以及crontab的坑",
+        "headline": "我的第一把客制化键盘",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/linux%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E4%BB%A5%E5%8F%8Acrontab%E7%9A%84%E5%9D%91\/"
-        },"genre": "posts","wordcount":  699 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/linux%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E4%BB%A5%E5%8F%8Acrontab%E7%9A%84%E5%9D%91\/","datePublished": "2022-07-13T11:14:42+08:00","dateModified": "2022-07-13T11:14:42+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%8A%8A%E5%AE%A2%E5%88%B6%E5%8C%96%E9%94%AE%E7%9B%98\/"
+        },"genre": "posts","wordcount":  1018 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%8A%8A%E5%AE%A2%E5%88%B6%E5%8C%96%E9%94%AE%E7%9B%98\/","datePublished": "2022-08-16T15:41:28+08:00","dateModified": "2022-08-16T15:41:28+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Linux输出重定向以及crontab的坑</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a>&nbsp;<a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-13">2022-07-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 699 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/linux%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E4%BB%A5%E5%8F%8Acrontab%E7%9A%84%E5%9D%91/" class="leancloud_visitors" data-flag-title="Linux输出重定向以及crontab的坑">
+        </div><article class="page single"><h1 class="single-title animated flipInX">我的第一把客制化键盘</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a>&nbsp;<a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>随笔杂记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-16">2022-08-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1018 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%8A%8A%E5%AE%A2%E5%88%B6%E5%8C%96%E9%94%AE%E7%9B%98/" class="leancloud_visitors" data-flag-title="我的第一把客制化键盘">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,41 +113,56 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#编辑crontab">编辑crontab</a></li>
-    <li><a href="#写cron表达式">写cron表达式</a></li>
-    <li><a href="#输出重定向">输出重定向</a></li>
+    <li>
+      <ul>
+        <li><a href="#机械键盘和薄膜键盘">机械键盘和薄膜键盘</a></li>
+        <li><a href="#客制化键盘">客制化键盘</a></li>
+        <li><a href="#效果">效果</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑：</p>
-<h2 id="编辑crontab">编辑crontab</h2>
-<p>首先执行</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">crontab -e
-</code></pre></div><p>编辑cron表达式，注意：每个用户都有自己的crontab，如果想省事的话建议直接</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">sudo crontab -e
-</code></pre></div><p>只使用root用户的就好了。</p>
-<h2 id="写cron表达式">写cron表达式</h2>
-<p>一行一个。一般自己在执行脚本的时候在终端里打的是<code>python 脚本.py</code>，但是在cron里可能会有问题。最好把所有的路径都换成绝对路径，比如<code>/usr/bin/python3.8 /home/ubuntu/脚本.py</code>，前面加上时间（比如说每天23点执行），完整如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="m">0</span> <span class="m">23</span> * * * /usr/bin/python3.8 /home/ubuntu/脚本.py
-</code></pre></div><p>注意：有的时候python脚本里会打开其它文件（存在其它文件的相对路径），这个时候必须得cd到当前目录下才可以正确执行，改成如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="m">0</span> <span class="m">23</span> * * * <span class="nb">cd</span> /home/ubuntu/ <span class="o">&amp;&amp;</span> /usr/bin/python3.8 /home/ubuntu/脚本.py
-</code></pre></div><h2 id="输出重定向">输出重定向</h2>
-<p>有几个符号要认识一下：</p>
-<pre tabindex="0"><code>&gt; file      // 标准输出重定向到文件-覆盖
-&gt;&gt;file      // 标准输出重定向到文件-追加
-2&gt;file      // 标准错误重定向到文件-覆盖
-2&gt;&gt;file     // 标准错误重定向到文件-追加
-2&gt;/dev/null // 标准错误重定向到回收站
-&amp;&gt;file      // 标准输出和标准错误重定向到文件-覆盖
-&gt;&gt;file 2&gt;&amp;1 // 标准输出和标准错误重定向到文件-追加
-</code></pre><p>偷懒的话，就用最后一个就可以啦。把所有的输出（包括报错）都输出到自己定义的日志文件里，这个很实用，因为你的脚本一旦出现问题，查日志是很好的追溯手段。所以表达式又复杂一点：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="m">0</span> <span class="m">23</span> * * * <span class="nb">cd</span> /home/ubuntu/ <span class="o">&amp;&amp;</span> /usr/bin/python3.8 /home/ubuntu/脚本.py &gt;&gt; /home/ubuntu/out.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
-</code></pre></div><p>最后还可以加一个<code>&amp;</code>，表示后台执行：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="m">0</span> <span class="m">23</span> * * * <span class="nb">cd</span> /home/ubuntu/ <span class="o">&amp;&amp;</span> /usr/bin/python3.8 /home/ubuntu/脚本.py &gt;&gt; /home/ubuntu/out.log 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
-</code></pre></div></div><div class="post-footer" id="post-footer">
+            </div><div class="content" id="content"><p>作为计算机专业的学生和游戏爱好者，每天做的最多的事情就是坐在电脑前面敲键盘，俗话说：“工欲善其事，必先利其器”，要追求更高效的工作方式和游戏体验，打造一把趁手的高端的机械键盘很有必要。</p>
+<h3 id="机械键盘和薄膜键盘">机械键盘和薄膜键盘</h3>
+<p>不会有人现在还不知道机械键盘和薄膜键盘的区别吧？它们两个架构不同，薄膜键盘是指通过胶碗来完成键帽的按下与回弹的动作，当按键下压到薄膜上时候，触点接触产生电信号，完成整个按键过程的键盘。机械键盘的每一个键下面都是一个开关，每一次敲击都是按动了一个开关，所以虽然和薄膜键盘的效果是一样的，但是从触发的原理上讲是有本质的区别的。早期的打字机、电报机是机械键盘，按下去啪嗒啪嗒响声很大。后来人们发明了廉价、寿命高、还防水的薄膜键盘，快速取代了机械键盘的市场。到了现代，人们又为了追求更好的手感和更好听的按键音回归了机械键盘。机械键盘有“轴”的概念，不同的轴的按压重量、段落感、声音等等是不一样的。轴的名字一般以颜色命名，比如青轴声音大，段落感很好，适合打游戏，红轴声音小，没有段落感，适合打字。</p>
+<h3 id="客制化键盘">客制化键盘</h3>
+<p>客制化键盘是针对机械键盘而言的，起初我是不知道有这个圈子的，直到前几天我的挚友刘鑫宇跟我说他跟着网上的教程搞了一把客制化键盘，我一下来了兴趣。我平时用的键盘都是凑合用的，对高端键盘有需求，而且淘宝上的成品键盘鱼龙混杂，便宜的不入我眼，贵的买不起，而客制化键盘既便宜又能满足我的个性化要求，直接开冲！</p>
+<p>客制化键盘对新手来说还是蛮友好的，只需要买套件、轴体、键帽这三样配件，不到一个小时就能装出一把键盘，非常简单。下面是我选择的配件以及选择理由：</p>
+<ul>
+<li>套件：黑吉蛇dk68，淘宝官方店购买，175元。最有性价比的三模套件（三模是指有蓝牙、Wi-Fi2.4g、有线三种连接方式），有RGB灯光。68键的配列比正常尺寸的键盘要小很多（移除了一些按键），好处是轴体用得少，省钱，而且很小巧精致，方便携带。不用担心按键缺失，缺失的按键都是不常用的按键，即使用到了也可以用组合按键代替。</li>
+<li>轴体：ttc金粉轴v2，闲鱼购买，161元（2.3一颗，买70颗）。我的码字需求远高于游戏需求，所以选择了这个码字网红轴。确实很满意，打字很舒服，声音有点像麻将，很好听。轴体的选择见仁见智，适合自己的才是最好的，</li>
+<li>键帽：藤花键帽，闲鱼购买，47元（包括8元运费）。这个键帽是别人买键盘送的，闲置了卖给我，我觉得很好看，很喜欢，也很划算。键帽没什么科技含量，选个好看的就行。</li>
+</ul>
+<h3 id="效果">效果</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2793.jpeg"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2793.jpeg, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2793.jpeg 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2793.jpeg 2x"
+        data-sizes="auto"
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2793.jpeg"
+        title="IMG_2793" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg 2x"
+        data-sizes="auto"
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg"
+        title="IMG_2795" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2813.jpeg"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2813.jpeg, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2813.jpeg 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2813.jpeg 2x"
+        data-sizes="auto"
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2813.jpeg"
+        title="IMG_2813" /></p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-07-13</span>
+                <span>更新于 2022-08-16</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -166,8 +181,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" class="prev" rel="prev" title="数据结构与算法实习第二阶段"><i class="fas fa-angle-left fa-fw"></i>数据结构与算法实习第二阶段</a>
-            <a href="/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%8A%8A%E5%AE%A2%E5%88%B6%E5%8C%96%E9%94%AE%E7%9B%98/" class="next" rel="next" title="我的第一把客制化键盘">我的第一把客制化键盘<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/linux%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E4%BB%A5%E5%8F%8Acrontab%E7%9A%84%E5%9D%91/" class="prev" rel="prev" title="Linux输出重定向以及crontab的坑"><i class="fas fa-angle-left fa-fw"></i>Linux输出重定向以及crontab的坑</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
