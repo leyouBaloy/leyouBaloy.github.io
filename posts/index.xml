@@ -3,7 +3,14 @@
         <title>所有文章 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 28 Aug 2022 22:35:36 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 07 Sep 2022 17:41:32 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>大三上学期规划</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%A4%A7%E4%B8%89%E4%B8%8A%E5%AD%A6%E6%9C%9F%E8%A7%84%E5%88%92/</link>
+    <pubDate>Wed, 07 Sep 2022 17:41:32 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%A4%A7%E4%B8%89%E4%B8%8A%E5%AD%A6%E6%9C%9F%E8%A7%84%E5%88%92/</guid>
+    <description><![CDATA[读书和锻炼是仍然是主要活动，读书是学习知识最快的途径，锻炼是保持高效率的前提。其中读书的范围要收敛，多读专业书籍，少读课外书（也不能不读，毕]]></description>
+</item><item>
     <title>星露谷物语为什么这么好玩？</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%98%9F%E9%9C%B2%E8%B0%B7%E7%89%A9%E8%AF%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%A5%BD%E7%8E%A9/</link>
     <pubDate>Sun, 28 Aug 2022 22:35:36 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E7%BB%84%E7%BB%87%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E7%9A%84%E7%8F%AD%E7%BA%A7%E7%83%A7%E7%83%A4%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</guid>
     <description><![CDATA[准备物资 6月22日，班级组织了一次团建，去轰趴馆（一个双层别墅，有烧烤、厨房、KTV、游戏机、投影仪、麻将、台球等等的地方）早上十点到达，晚]]></description>
-</item><item>
-    <title>使用正则表达式进行高级替换</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/</link>
-    <pubDate>Fri, 17 Jun 2022 15:02:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/</guid>
-    <description><![CDATA[需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg) 但是这样渲]]></description>
 </item></channel>
 </rss>
