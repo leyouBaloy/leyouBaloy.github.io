@@ -3,7 +3,14 @@
         <title>所有文章 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 10 Oct 2022 16:01:42 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 21 Oct 2022 21:53:47 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>时间管理出现重大失误，输！</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E5%87%BA%E7%8E%B0%E9%87%8D%E5%A4%A7%E5%A4%B1%E8%AF%AF%E8%BE%93/</link>
+    <pubDate>Fri, 21 Oct 2022 21:53:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E5%87%BA%E7%8E%B0%E9%87%8D%E5%A4%A7%E5%A4%B1%E8%AF%AF%E8%BE%93/</guid>
+    <description><![CDATA[今天三节课，分别是早八、午二、晚七，苦不堪言。下午上机课，我一直坚持的想法还被组员给否了，不太开心。然后紧接着赶去听发展对象的答辩，我本来寻]]></description>
+</item><item>
     <title>数模比赛失利</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%A8%A1%E6%AF%94%E8%B5%9B%E5%A4%B1%E5%88%A9/</link>
     <pubDate>Mon, 10 Oct 2022 16:01:42 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/</guid>
     <description><![CDATA[7-1 Table Tennis 知识点：模拟，队列 思路：把所有玩家按到达顺序排序，逐个处理，分如下情况： 找到所有桌子中最早结束当前服务的桌子。判断：如果这个桌子当前服]]></description>
-</item><item>
-    <title>《乡土中国》读书笔记</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E4%B9%A1%E5%9C%9F%E4%B8%AD%E5%9B%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Fri, 01 Jul 2022 20:32:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E4%B9%A1%E5%9C%9F%E4%B8%AD%E5%9B%BD%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[《乡土中国》由费孝通先生的14篇论文组成，其内容是对中国社会基本结构的深入剖析。其中《差序格局》一篇最让我印象深刻。该书并不难读，但若要想全]]></description>
 </item></channel>
 </rss>
