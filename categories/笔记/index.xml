@@ -3,7 +3,14 @@
         <title>笔记 - 分类 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/</link>
         <description>笔记 - 分类 - 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 13 Jul 2022 11:14:42 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 22 Oct 2022 09:54:39 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>字、字节、字长、位等概念区分</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86/</link>
+    <pubDate>Sat, 22 Oct 2022 09:54:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86/</guid>
+    <description><![CDATA[一提到字、字节、字长、位等概念我就做晕车，从来没弄懂过，现在总结如下 英文 特点 与其它关系 位 bit 0或1，最基本单位 字节 byte ASCII码中表示一个字符]]></description>
+</item><item>
     <title>Linux输出重定向以及crontab的坑</title>
     <link>https://www.leyoubaloy.xyz/posts/linux%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%E4%BB%A5%E5%8F%8Acrontab%E7%9A%84%E5%9D%91/</link>
     <pubDate>Wed, 13 Jul 2022 11:14:42 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/git%E6%92%A4%E9%94%80%E7%89%88%E6%9C%AC/</guid>
     <description><![CDATA[Git如何撤回远程仓库已经提交的版本？ 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 执行 git log]]></description>
-</item><item>
-    <title>Pandas使用技巧</title>
-    <link>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
-    <pubDate>Sat, 16 Apr 2022 15:42:08 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/pandas%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
-    <description><![CDATA[read_csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行]]></description>
 </item></channel>
 </rss>
