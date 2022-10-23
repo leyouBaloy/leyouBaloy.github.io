@@ -3,7 +3,14 @@
         <title>技能分享 - 分类 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/</link>
         <description>技能分享 - 分类 - 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 16 Aug 2022 15:41:28 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 23 Oct 2022 23:52:09 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux在指定时间区间内的随机时间点执行任务</title>
+    <link>https://www.leyoubaloy.xyz/posts/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/</link>
+    <pubDate>Sun, 23 Oct 2022 23:52:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/</guid>
+    <description><![CDATA[在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。 现在升级需求，比如说我想在6:00到9:00之间]]></description>
+</item><item>
     <title>我的第一把客制化键盘</title>
     <link>https://www.leyoubaloy.xyz/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%8A%8A%E5%AE%A2%E5%88%B6%E5%8C%96%E9%94%AE%E7%9B%98/</link>
     <pubDate>Tue, 16 Aug 2022 15:41:28 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/git%E6%92%A4%E9%94%80%E7%89%88%E6%9C%AC/</guid>
     <description><![CDATA[Git如何撤回远程仓库已经提交的版本？ 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 执行 git log]]></description>
-</item><item>
-    <title>Roboflow&#43;colab优雅地训练yolov5模型</title>
-    <link>https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/</link>
-    <pubDate>Sat, 19 Mar 2022 13:37:49 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/roboflow&#43;colab%E4%BC%98%E9%9B%85%E5%9C%B0%E8%AE%AD%E7%BB%83yolov5%E6%A8%A1%E5%9E%8B/</guid>
-    <description><![CDATA[roboflow roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理]]></description>
 </item></channel>
 </rss>

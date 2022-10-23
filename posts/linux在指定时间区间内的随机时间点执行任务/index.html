@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>字、字节、字长、位等概念区分 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="字、字节、字长、位等概念区分" />
-<meta property="og:description" content="一提到字、字节、字长、位等概念我就做晕车，从来没弄懂过，现在总结如下 英文 特点 与其它关系 位 bit 0或1，最基本单位 字节 byte ASCII码中表示一个字符" />
+        <title>Linux在指定时间区间内的随机时间点执行任务 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Linux在指定时间区间内的随机时间点执行任务" />
+<meta property="og:description" content="在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。 现在升级需求，比如说我想在6:00到9:00之间" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-10-22T09:54:39+08:00" />
-<meta property="article:modified_time" content="2022-10-22T09:54:39+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-23T23:52:09+08:00" />
+<meta property="article:modified_time" content="2022-10-23T23:52:09+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="字、字节、字长、位等概念区分"/>
-<meta name="twitter:description" content="一提到字、字节、字长、位等概念我就做晕车，从来没弄懂过，现在总结如下 英文 特点 与其它关系 位 bit 0或1，最基本单位 字节 byte ASCII码中表示一个字符"/>
+<meta name="twitter:title" content="Linux在指定时间区间内的随机时间点执行任务"/>
+<meta name="twitter:description" content="在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。 现在升级需求，比如说我想在6:00到9:00之间"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E5%87%BA%E7%8E%B0%E9%87%8D%E5%A4%A7%E5%A4%B1%E8%AF%AF%E8%BE%93/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "字、字节、字长、位等概念区分",
+        "headline": "Linux在指定时间区间内的随机时间点执行任务",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86\/"
-        },"genre": "posts","wordcount":  630 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86\/","datePublished": "2022-10-22T09:54:39+08:00","dateModified": "2022-10-22T09:54:39+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1\/"
+        },"genre": "posts","wordcount":  315 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1\/","datePublished": "2022-10-23T23:52:09+08:00","dateModified": "2022-10-23T23:52:09+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">字、字节、字长、位等概念区分</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-22">2022-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 630 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86/" class="leancloud_visitors" data-flag-title="字、字节、字长、位等概念区分">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Linux在指定时间区间内的随机时间点执行任务</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a>&nbsp;<a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-23">2022-10-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 315 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/" class="leancloud_visitors" data-flag-title="Linux在指定时间区间内的随机时间点执行任务">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,74 +113,31 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#中英文表示">中/英文表示</a></li>
-    <li><a href="#单位换算">单位换算</a></li>
+    <li><a href="#example">example</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>一提到字、字节、字长、位等概念我就做晕车，从来没弄懂过，现在总结如下</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>英文</th>
-<th>特点</th>
-<th>与其它关系</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>位</td>
-<td>bit</td>
-<td>0或1，最基本单位</td>
-<td></td>
-</tr>
-<tr>
-<td>字节</td>
-<td>byte</td>
-<td>ASCII码中表示一个字符的单位</td>
-<td>1字节=8位</td>
-</tr>
-<tr>
-<td>字</td>
-<td>word</td>
-<td>它代表计算机处理指令或数据的二进制数位数，是计算机进行数据存储和数据处理的运算单位。通常称16位是一个字，32位是一个双字，64位是两个双字。</td>
-<td>16个位为一个字（即两个字节是一个字）</td>
-</tr>
-<tr>
-<td>字长</td>
-<td></td>
-<td>字的位数叫做字长。不同档次的机器有不同的字长。例如一台8位机，它的1个字就等于1个字节，字长为8位。如果是一台16位机，它的1个字就由2个字节构成，字长为16位。</td>
-<td>不固定</td>
-</tr>
-</tbody>
-</table>
-<h2 id="中英文表示">中/英文表示</h2>
-<p>一般在英文状态下一个字母或字符占用一个字节，一个汉字用两个字节表示。</p>
-<ul>
-<li>ASCII 码中，一个英文字母(不分大小写)为一个字节，一个中文汉字为两个字节。</li>
-<li>UTF-8 编码中，一个英文字为一个字节，一个中文为三个字节。</li>
-<li>Unicode 编码中，一个英文为一个字节，一个中文为两个字节。</li>
-<li>符号：英文标点为一个字节，中文标点为两个字节。例如：英文句号 <strong>.</strong> 占1个字节的大小，中文句号 **。**占2个字节的大小。</li>
-<li>UTF-16 编码中，一个英文字母字符或一个汉字字符存储都需要 2 个字节(Unicode 扩展区的一些汉字存储需要 4 个字节)。</li>
-<li>UTF-32 编码中，世界上任何字符的存储都需要 4 个字节。</li>
-</ul>
-<blockquote>
-<p>摘自 <a href="http://t.csdn.cn/OQaeG" target="_blank" rel="noopener noreffer">http://t.csdn.cn/OQaeG</a></p>
-</blockquote>
-<h2 id="单位换算">单位换算</h2>
-<p>1 Byte = 8 bit</p>
-<p>1 KB = 2^10 Byte</p>
-<p>1 MB = 2^10 KB = 2^20 Byte</p>
-<p>1 GB = 2^10 MB = 2^30 Byte</p>
-<p>另外，Byte通常简写为B(大写)，而bit通常简写为b(小写)。可以这么记忆，大写的为大单位，实际数值小，小写的为小单位，实际数值较大，1B=8b。</p>
-<blockquote>
-<p>摘自 <a href="http://t.csdn.cn/OQaeG" target="_blank" rel="noopener noreffer">http://t.csdn.cn/OQaeG</a></p>
-</blockquote>
+            </div><div class="content" id="content"><p>在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。</p>
+<p>现在升级需求，比如说我想在6:00到9:00之间，随机找一个时间执行这个任务，怎么做呢？</p>
+<p>思路：我们不能在crontab里指定一个随机的时间（只能指定一个具体的时间），但是我们可以指定一个具体的时间运行<code>shell</code>脚本，再在shell脚本里设置一个延迟执行，这样就能解决问题啦！</p>
+<h2 id="example">example</h2>
+<p>假如xxx.py是我们要执行的程序，我们需要它执行的时间是从6:00到9:00之间随机一个时间，那么，</p>
+<p>crontab中这样编辑：</p>
+<pre tabindex="0"><code>0 6 * * * sh /home/ubuntu/xxxx.sh &gt;&gt; /home/ubuntu/xxxx.log 2&gt;&amp;1 &amp;
+</code></pre><p>xxxx.sh这样写:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!bin/bash
+</span><span class="cp"></span><span class="c1"># 随机等待0～180分钟</span>
+sleep $<span class="o">[(</span> <span class="nv">$RANDOM</span> % <span class="m">180</span> <span class="o">)</span>*60<span class="o">]</span>
+<span class="nv">curtime</span> <span class="o">=</span> <span class="k">$(</span>date <span class="s2">&#34;+%Y-%m-%d %H:%M:%S&#34;</span><span class="k">)</span>
+<span class="c1"># 输出当前时间</span>
+<span class="nb">echo</span> <span class="nv">$curtime</span>
+<span class="c1"># 运行程序</span>
+/usr/bin/python3.8 /home/ubuntu/xxxx.py &gt;&gt; /home/ubuntu/xxxx.log 
+</code></pre></div><p>完成！</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-10-22</span>
+                <span>更新于 2022-10-23</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -199,8 +156,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86%E5%87%BA%E7%8E%B0%E9%87%8D%E5%A4%A7%E5%A4%B1%E8%AF%AF%E8%BE%93/" class="prev" rel="prev" title="时间管理出现重大失误，输！"><i class="fas fa-angle-left fa-fw"></i>时间管理出现重大失误，输！</a>
-            <a href="/posts/linux%E5%9C%A8%E6%8C%87%E5%AE%9A%E6%97%B6%E9%97%B4%E5%8C%BA%E9%97%B4%E5%86%85%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E7%82%B9%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/" class="next" rel="next" title="Linux在指定时间区间内的随机时间点执行任务">Linux在指定时间区间内的随机时间点执行任务<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%AD%97%E5%AD%97%E8%8A%82%E5%AD%97%E9%95%BF%E4%BD%8D%E7%AD%89%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86/" class="prev" rel="prev" title="字、字节、字长、位等概念区分"><i class="fas fa-angle-left fa-fw"></i>字、字节、字长、位等概念区分</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
