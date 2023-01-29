@@ -1,5 +1,5 @@
 ---
-title: "Livego——小而美的直播串流软件"
+title: "LiveGo——小而美的直播串流软件"
 author: 孙百乐
 date: 2023-01-01T16:11:53+08:00
 draft: false
