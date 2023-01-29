@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 15 Jan 2023 08:59:39 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 28 Jan 2023 17:57:02 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>《肠子的小心思》——读书笔记</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E8%82%A0%E5%AD%90%E7%9A%84%E5%B0%8F%E5%BF%83%E6%80%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Sat, 28 Jan 2023 17:57:02 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E8%82%A0%E5%AD%90%E7%9A%84%E5%B0%8F%E5%BF%83%E6%80%9D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[我是一个肠胃经常出毛病的人。最近闲逛豆瓣，发现了这本评分高达8.9分的有关肠子的医学科普书籍，赶紧买回来看看它能对我有什么帮助，看完之后果然]]></description>
+</item><item>
     <title>致动o手柄对比xbox原装手柄使用体验分享</title>
     <link>https://www.leyoubaloy.xyz/posts/%E8%87%B4%E5%8A%A8o%E6%89%8B%E6%9F%84%E5%AF%B9%E6%AF%94xbox%E5%8E%9F%E8%A3%85%E6%89%8B%E6%9F%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E5%88%86%E4%BA%AB/</link>
     <pubDate>Sun, 15 Jan 2023 08:59:39 &#43;0800</pubDate>
@@ -13,7 +20,7 @@
     <guid>https://www.leyoubaloy.xyz/posts/%E8%87%B4%E5%8A%A8o%E6%89%8B%E6%9F%84%E5%AF%B9%E6%AF%94xbox%E5%8E%9F%E8%A3%85%E6%89%8B%E6%9F%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E5%88%86%E4%BA%AB/</guid>
     <description><![CDATA[对于游戏玩家来说，键盘鼠标可能不是最好的控制器（网游，fps玩家除外），拥有一个手柄，会让游戏体验更加舒适。尤其是对于一些需要慢慢品玩的3A]]></description>
 </item><item>
-    <title>Livego——小而美的直播串流软件</title>
+    <title>LiveGo——小而美的直播串流软件</title>
     <link>https://www.leyoubaloy.xyz/posts/livego%E5%B0%8F%E8%80%8C%E7%BE%8E%E7%9A%84%E7%9B%B4%E6%92%AD%E4%B8%B2%E6%B5%81%E8%BD%AF%E4%BB%B6/</link>
     <pubDate>Sun, 01 Jan 2023 16:11:53 &#43;0800</pubDate>
     <author>作者</author>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E6%82%89%E8%BE%BE%E5%A4%9A-%E4%BA%BA%E7%94%9F%E5%B0%B1%E6%98%AF%E5%9C%A8%E4%B8%8D%E6%96%AD%E7%9A%84%E4%BD%93%E9%AA%8C%E4%B8%8E%E6%84%9F%E6%82%9F/</guid>
     <description><![CDATA[《悉达多》 故事的背景发生在印度，青年的悉达多是婆罗门（印度种姓制度中的最高等级）之子，他幼年时勤勉好学，聪慧非凡，长相俊美。大家都爱戴他，认]]></description>
-</item><item>
-    <title>计组线上实验-运算器设计</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E8%AE%A1%E7%BB%84%E7%BA%BF%E4%B8%8A%E5%AE%9E%E9%AA%8C-%E8%BF%90%E7%AE%97%E5%99%A8%E8%AE%BE%E8%AE%A1/</link>
-    <pubDate>Sat, 29 Oct 2022 12:58:43 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E8%AE%A1%E7%BB%84%E7%BA%BF%E4%B8%8A%E5%AE%9E%E9%AA%8C-%E8%BF%90%E7%AE%97%E5%99%A8%E8%AE%BE%E8%AE%A1/</guid>
-    <description><![CDATA[Logisim 这个软件还蛮好用的，用java写的，Windows直接按照老师的说明文档装就可以了，Mac从这里下载 https://github.com/laurensk/logisim-macos 学习资料： Mooc视频&ndash;]]></description>
 </item></channel>
 </rss>
