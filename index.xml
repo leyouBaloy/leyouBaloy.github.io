@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 15 Feb 2023 21:31:31 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 09 Mar 2023 16:12:56 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>如何将语雀文档导出为html（使用语雀API）</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%AD%E9%9B%80%E6%96%87%E6%A1%A3%E5%AF%BC%E5%87%BA%E4%B8%BAhtml%E4%BD%BF%E7%94%A8%E8%AF%AD%E9%9B%80api/</link>
+    <pubDate>Thu, 09 Mar 2023 16:12:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%AD%E9%9B%80%E6%96%87%E6%A1%A3%E5%AF%BC%E5%87%BA%E4%B8%BAhtml%E4%BD%BF%E7%94%A8%E8%AF%AD%E9%9B%80api/</guid>
+    <description><![CDATA[需求 语雀本身是用web端访问的，按理来说，导出为html文件应该是最接近原生文档的观感的，但是却不支持，反倒是可以导出为pdf、markdo]]></description>
+</item><item>
     <title>2023年寒假总结</title>
     <link>https://www.leyoubaloy.xyz/posts/2023%E5%B9%B4%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93/</link>
     <pubDate>Wed, 15 Feb 2023 21:31:31 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%8F%88%E4%B8%80%E4%B8%AA%E5%AF%92%E5%81%87%E5%BC%80%E5%A7%8B%E5%95%A6/</guid>
     <description><![CDATA[又一个寒假开始啦，期盼了一学期，终于回家啦。随着年级的增长，每次回家的感觉都略有不同，环境还是那个环境，但是心态，跟最开始大不相同。 第一次放]]></description>
-</item><item>
-    <title>我再也不胡吃海喝了😭😭😭</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E6%88%91%E5%86%8D%E4%B9%9F%E4%B8%8D%E8%83%A1%E5%90%83%E6%B5%B7%E5%96%9D%E4%BA%86/</link>
-    <pubDate>Fri, 09 Dec 2022 14:26:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E6%88%91%E5%86%8D%E4%B9%9F%E4%B8%8D%E8%83%A1%E5%90%83%E6%B5%B7%E5%96%9D%E4%BA%86/</guid>
-    <description><![CDATA[我对我自己真的很栓Q，时隔一年半，我又一次因为急性肠胃炎被送进了校医院！ 历史总是惊人的巧合 历史总是惊人的巧合，这一次我同样是在夜晚乱吃东西（]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,14 @@
         <title>技能分享 - 分类 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/</link>
         <description>技能分享 - 分类 - 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Feb 2023 14:14:19 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 09 Mar 2023 16:12:56 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>如何将语雀文档导出为html（使用语雀API）</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%AD%E9%9B%80%E6%96%87%E6%A1%A3%E5%AF%BC%E5%87%BA%E4%B8%BAhtml%E4%BD%BF%E7%94%A8%E8%AF%AD%E9%9B%80api/</link>
+    <pubDate>Thu, 09 Mar 2023 16:12:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%AD%E9%9B%80%E6%96%87%E6%A1%A3%E5%AF%BC%E5%87%BA%E4%B8%BAhtml%E4%BD%BF%E7%94%A8%E8%AF%AD%E9%9B%80api/</guid>
+    <description><![CDATA[需求 语雀本身是用web端访问的，按理来说，导出为html文件应该是最接近原生文档的观感的，但是却不支持，反倒是可以导出为pdf、markdo]]></description>
+</item><item>
     <title>Qt动态添加和删除布局（仿jupyter）</title>
     <link>https://www.leyoubaloy.xyz/posts/qt%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%B8%83%E5%B1%80%E4%BB%BFjupyter/</link>
     <pubDate>Thu, 02 Feb 2023 14:14:19 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E7%BB%84%E7%BB%87%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E7%9A%84%E7%8F%AD%E7%BA%A7%E7%83%A7%E7%83%A4%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</guid>
     <description><![CDATA[准备物资 6月22日，班级组织了一次团建，去轰趴馆（一个双层别墅，有烧烤、厨房、KTV、游戏机、投影仪、麻将、台球等等的地方）早上十点到达，晚]]></description>
-</item><item>
-    <title>使用正则表达式进行高级替换</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/</link>
-    <pubDate>Fri, 17 Jun 2022 15:02:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E9%AB%98%E7%BA%A7%E6%9B%BF%E6%8D%A2/</guid>
-    <description><![CDATA[需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg) 但是这样渲]]></description>
 </item></channel>
 </rss>
