@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>2023年寒假总结 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="2023年寒假总结" />
-<meta property="og:description" content="明天就要返校啦，下学期课贼少（一周只有4节），而且疫情结束，再也不会被封在学校啦，可以多跟彤彤出去玩了，所以还是蛮期待的！回顾这个寒假，总体" />
+        <title>HUSTOJ前端源代码解析（PHP） - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="HUSTOJ前端源代码解析（PHP）" />
+<meta property="og:description" content="需求 老师写了一本c&#43;&#43;教材，这本教材的一大特色就是构建了一个有关c&#43;&#43;的知识点网络。只有在电子版教材中，这种知识点网络才能真正发挥它的作用（" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/2023%E5%B9%B4%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-02-15T21:31:31+08:00" />
-<meta property="article:modified_time" content="2023-02-15T21:31:31+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-09T17:12:10+08:00" />
+<meta property="article:modified_time" content="2023-03-09T17:12:10+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="2023年寒假总结"/>
-<meta name="twitter:description" content="明天就要返校啦，下学期课贼少（一周只有4节），而且疫情结束，再也不会被封在学校啦，可以多跟彤彤出去玩了，所以还是蛮期待的！回顾这个寒假，总体"/>
+<meta name="twitter:title" content="HUSTOJ前端源代码解析（PHP）"/>
+<meta name="twitter:description" content="需求 老师写了一本c&#43;&#43;教材，这本教材的一大特色就是构建了一个有关c&#43;&#43;的知识点网络。只有在电子版教材中，这种知识点网络才能真正发挥它的作用（"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/2023%E5%B9%B4%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E8%B7%9F%E5%A6%88%E5%A6%88%E4%B8%80%E8%B5%B7%E7%9A%84%E5%BE%90%E5%B7%9E%E4%B8%80%E6%97%A5%E6%B8%B8/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E7%BB%84%E8%A3%85%E4%B8%80%E5%8F%B0%E6%96%B0%E7%9A%84%E7%94%B5%E8%84%91/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%AD%E9%9B%80%E6%96%87%E6%A1%A3%E5%AF%BC%E5%87%BA%E4%B8%BAhtml%E4%BD%BF%E7%94%A8%E8%AF%AD%E9%9B%80api/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "2023年寒假总结",
+        "headline": "HUSTOJ前端源代码解析（PHP）",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/2023%E5%B9%B4%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93\/"
-        },"genre": "posts","wordcount":  1522 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/2023%E5%B9%B4%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93\/","datePublished": "2023-02-15T21:31:31+08:00","dateModified": "2023-02-15T21:31:31+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php\/"
+        },"genre": "posts","wordcount":  1285 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php\/","datePublished": "2023-03-09T17:12:10+08:00","dateModified": "2023-03-09T17:12:10+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">2023年寒假总结</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>随笔杂记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-02-15">2023-02-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1522 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/2023%E5%B9%B4%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93/" class="leancloud_visitors" data-flag-title="2023年寒假总结">
+        </div><article class="page single"><h1 class="single-title animated flipInX">HUSTOJ前端源代码解析（PHP）</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-09">2023-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1285 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php/" class="leancloud_visitors" data-flag-title="HUSTOJ前端源代码解析（PHP）">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -113,43 +113,59 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#年前">年前</a></li>
-    <li><a href="#年中">年中</a></li>
-    <li><a href="#年后">年后</a></li>
+    <li><a href="#需求">需求</a></li>
+    <li><a href="#分析">分析</a></li>
+    <li><a href="#工具">工具</a></li>
+    <li><a href="#部署">部署</a></li>
+    <li><a href="#总结">总结</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>明天就要返校啦，下学期课贼少（一周只有4节），而且疫情结束，再也不会被封在学校啦，可以多跟彤彤出去玩了，所以还是蛮期待的！回顾这个寒假，总体上来说是平平淡淡，但是有很多事情还是很值得记录的。整个假期可以分为三个阶段，年前、年中、年后，这三个阶段我所做的事情和心态是截然不同的。</p>
-<h2 id="年前">年前</h2>
-<p>刚从学校回来，我还保持着在学校的那种不愿浪费时间，努力工作学习的状态。每天早上都能起床，吃个早饭，读读论文，做做工作。这个时候跟家庭的活动和跟朋友的活动也是比较多的，比如说跟彤彤聊聊天，看看电影，电视剧，跟刘鑫宇去网吧玩，跟家人去逛超市，家庭聚餐、逛街等等。而且，在学校因为太长时间没玩游戏憋坏了的我也开始疯狂的玩游戏，也很花时间。因此，年前的我，日子过得是蛮充实的。</p>
-<h2 id="年中">年中</h2>
-<p>过年了，导师给咱放假了，那还学个屁的习，开启堕落模式～晚上玩到凌晨2点，早上睡到10点才醒，然后还不愿意起床，在床上磨蹭到12点，起来吃午饭，然后下午继续玩。过年期间的家庭活动就更多了，除了多次家庭聚餐之外，表哥从上海回来，还带我们去洗浴，逛街，玩主机游戏。家里会有亲戚来打麻将，热热闹闹的。晚上也不无聊，可以跟我妈一起去看电影&hellip;这一段日子过得也是很充实的。</p>
-<h2 id="年后">年后</h2>
-<p>年后，大人们都去上班了，表哥也走了。家里面突然冷清了下来，与年中时的热闹氛围形成了强烈的反差。我也突然意识到漫长的寒假即将结束了，我该结束醉生梦死的生活，开始面对现实了。现实是：我不仅又要开组会，读论文，帮导师干活，而且还要迎接开学三场考试。此外，我自己定的寒假任务：写一篇专利，还没有开始做。这个任务从上学期拖到了寒假开始，又从寒假开始拖到了1月份，又从1月份拖到了年后（2月份）&hellip;这种突如其来的认清现实带来的压力，让我一下子很难接受，所以我emo了几天。</p>
-<p>年后的我在家里实在学不下去，这几天我出门转了转，突然灵感大发，想到我可以去自习室学习哇！在手机上一搜，竟然在我家对面就有一个“积木自习室”，离我家非常近，它距离我家的距离甚至比从寝室到图书馆还近，真是妙哉～去了之后，果然没让我失望，有空调、热水、Wi-Fi，更重要的是，它提供了一个非常好的学习氛围，坐在里面，就像是坐在了大学图书馆里，周围人都在学习，我也能够静下心来。发现这个自习室，是我寒假的一个重要转折点，从第一次进入自习室的那天开始，我就不emo了，每天下午2点左右去自习，还可以在路上买杯奶茶，学3-4个小时，再回家吃晚饭，走在回家的路上，心里非常轻松愉快。在开学前的15天里，我几乎每天都去自习室，终于完成了我的寒假任务。</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230652424.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230652424.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230652424.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230652424.png 2x"
-        data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230652424.png"
-        title="image-20230215230652424" /></p>
-<p>另外，还有一件重要的事，就是我对我家人的情感变化（尤其是对我妈妈）。在过去的日子里，我还很幼稚，不太把妈妈为我做的点滴小事放在眼里，也不太乐意主动跟她聊天。但是近几年，我越来越发现妈妈的伟大之处，开始理解体谅妈妈，主动帮妈妈做事，跟她聊天。有一次跟彤彤聊天，她说她的妈妈要走了，可能得明年才能相见，哭的不行，我很心疼她。我想到我的妈妈，也是如此爱我，而我也即将离开她，真是有点舍不得，忍不住我的眼泪也掉了下来。为了不让她操心，我得证明自己已经长大了，所以我和妈妈去徐州旅行，我认真做了攻略，合理安排了行程，确实让妈妈看到了我的厉害之处，我觉得这很有意义。</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230448061.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230448061.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230448061.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230448061.png 2x"
-        data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230215230448061.png"
-        title="image-20230215230448061" /></p>
-<p>这张图是我在年初六（上班的前一天）用奖学金请我妈妈，我表哥，我姥姥和姥爷一起去泡温泉时拍摄的，他们都很开心，能为家里人做一些事情，我也很开心。</p>
-<p>另外，值得一提的是，我的车技也在这个假期得到了极大的锻炼。以前只走过去奶奶家的路，现在可以去任何地方。以前家里人开车去别的地方都是我爸来开，现在都是我来开。我自己也单独开过两次。但目前还是比较缺乏经验的，有待加强。</p>
+            </div><div class="content" id="content"><h2 id="需求">需求</h2>
+<p>老师写了一本c++教材，这本教材的一大特色就是构建了一个有关c++的知识点网络。只有在电子版教材中，这种知识点网络才能真正发挥它的作用（比如点击超链接跳转到指定知识点），而出版社（清华大学出版社）不提供电子版教材的支持，因此我们需要自己搭建一个电子版教材网站。</p>
+<p>刚好老师为了给本科生考试，让学长搭建了一个HUSTOJ。老师想了一个主意，把HUSTOJ修改一下，增加一些页面，把教材放进去，这样既有题目又有教材，而且貌似很方便就能实现。</p>
+<p>作为组里唯一一个既懂一点前端，又懂一点后端，还懂一点运维的学生，这个任务自然落在我头上了。</p>
+<h2 id="分析">分析</h2>
+<p>语言：</p>
+<ul>
+<li>HUSTOJ是用php写的，我没有学习过，但是看了一会源代码，就发现跟Django的模板语言比较像，还是能看得懂的，所以上手修改不成问题。</li>
+<li>还有一个神器就是ChatGPT，看不懂的地方直接把代码复制进去，让它给我解释一下，它给出的的答案真的很让我满意。</li>
+</ul>
+<p>思路：</p>
+<ul>
+<li>首先把教材转成html文件，放在/home/judge/src/web目录下，这是网站的根目录。实操过程中，我新建了一个文件夹book，把<code>.html</code>改成<code>.php</code>后放了进去。</li>
+<li>然后在根目录下新建一个book.php文件，无参数访问该文件为教材的目录；点击目录可跳转到教材的指定章节（带参数访问，如book.php?ch=2表示访问第二章）。</li>
+<li>修改导航栏，增加一栏“教材”，然后指向book.php。</li>
+</ul>
+<p>文件：</p>
+<p>这里列出一些重要的的文件的作用，这个在官方文档中是没有给出来的，自己探索花了很长时间。</p>
+<p>/home/judge/src/web：网站的根目录，下面的都是该目录下的文件：</p>
+<ul>
+<li>index.php：首页，主要引用了模板里的index.php，所以对首页的修改不要在这里改，而要在模板里的index.php里改。</li>
+<li>book.php：我自己加的教材页面，无参数访问该文件为教材的目录；点击目录可跳转到教材的指定章节（带参数访问，如book.php?ch=2表示访问第二章）。</li>
+<li>book/*.php：教材的静态html代码</li>
+</ul>
+<p>/template/syzoj使用了syzoj主题目录文件，里面放的都是模板，下面的都是该目录下的文件：</p>
+<ul>
+<li>book_contents.php：我自己创建的目录。</li>
+<li>index.php：模板里的首页，在这里我又加了一个目录，引用book_contents.php。</li>
+<li>hedaer.php：修改导航栏在这里改，不要在nav.php改！</li>
+</ul>
+<h2 id="工具">工具</h2>
+<p>工欲善其事，必先利其器，有哪些好用的工具可以用呢</p>
+<ul>
+<li>Tabby：很好用的跨平台开源终端软件，帮你管理密钥，sftp也很好用。</li>
+<li>macOS的文件搜索：不仅能搜文件名，还能搜文件内容，速度贼快（因为有建立索引），Windows可用everything这个软件</li>
+<li>VS code的ssh remote插件：可以直接用VS code修改服务器上的代码，比vim舒服多了。</li>
+</ul>
+<h2 id="部署">部署</h2>
+<p>nginx+php的部署起来稍微有些麻烦，但是由于php的逻辑代码是嵌入在html文档中的（不像vue，每次修改完源码都需要编译），所以部署完再修改代码是很方便的。</p>
+<h2 id="总结">总结</h2>
+<p>又解锁了一个新的技术栈php，qwq。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-02-15</span>
+                <span>更新于 2023-03-09</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -168,8 +184,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E8%B7%9F%E5%A6%88%E5%A6%88%E4%B8%80%E8%B5%B7%E7%9A%84%E5%BE%90%E5%B7%9E%E4%B8%80%E6%97%A5%E6%B8%B8/" class="prev" rel="prev" title="跟妈妈一起的徐州一日游"><i class="fas fa-angle-left fa-fw"></i>跟妈妈一起的徐州一日游</a>
-            <a href="/posts/%E7%BB%84%E8%A3%85%E4%B8%80%E5%8F%B0%E6%96%B0%E7%9A%84%E7%94%B5%E8%84%91/" class="next" rel="next" title="组装一台新的电脑">组装一台新的电脑<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%AD%E9%9B%80%E6%96%87%E6%A1%A3%E5%AF%BC%E5%87%BA%E4%B8%BAhtml%E4%BD%BF%E7%94%A8%E8%AF%AD%E9%9B%80api/" class="prev" rel="prev" title="如何将语雀文档导出为html（使用语雀API）"><i class="fas fa-angle-left fa-fw"></i>如何将语雀文档导出为html（使用语雀API）</a>
+            <a href="/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/" class="next" rel="next" title="妈妈说：好久都没这么开心了">妈妈说：好久都没这么开心了<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
