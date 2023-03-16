@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>妈妈说：好久都没这么开心了 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="妈妈说：好久都没这么开心了" />
-<meta property="og:description" content="3月7日是女神节，3月8日是妇女节，3月9日是我妈妈生日，所以这几天对她来说是很重要的日子。 我妈妈记我和我姐的生日记得很清楚，但自己的生日却" />
+        <title>在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号" />
+<meta property="og:description" content="highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 先引入css文件和js文件 &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css&#34;&gt; &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js&#34;&gt;&lt;/script&gt; 再将你的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-03-09T17:14:05+08:00" />
-<meta property="article:modified_time" content="2023-03-09T17:14:05+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-16T23:51:26+08:00" />
+<meta property="article:modified_time" content="2023-03-16T23:51:26+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="妈妈说：好久都没这么开心了"/>
-<meta name="twitter:description" content="3月7日是女神节，3月8日是妇女节，3月9日是我妈妈生日，所以这几天对她来说是很重要的日子。 我妈妈记我和我姐的生日记得很清楚，但自己的生日却"/>
+<meta name="twitter:title" content="在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号"/>
+<meta name="twitter:description" content="highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 先引入css文件和js文件 &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css&#34;&gt; &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js&#34;&gt;&lt;/script&gt; 再将你的"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "妈妈说：好久都没这么开心了",
+        "headline": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86\/"
-        },"genre": "posts","wordcount":  562 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86\/","datePublished": "2023-03-09T17:14:05+08:00","dateModified": "2023-03-09T17:14:05+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7\/"
+        },"genre": "posts","wordcount":  617 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7\/","datePublished": "2023-03-16T23:51:26+08:00","dateModified": "2023-03-16T23:51:26+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">妈妈说：好久都没这么开心了</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>随笔杂记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-09">2023-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 562 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/" class="leancloud_visitors" data-flag-title="妈妈说：好久都没这么开心了">
+        </div><article class="page single"><h1 class="single-title animated flipInX">在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-16">2023-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 617 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7/" class="leancloud_visitors" data-flag-title="在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -111,43 +111,82 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>3月7日是女神节，3月8日是妇女节，3月9日是我妈妈生日，所以这几天对她来说是很重要的日子。</p>
-<p>我妈妈记我和我姐的生日记得很清楚，但自己的生日却很少提到，一辈子都没过过几次生日，更没收到过什么礼物。</p>
-<p>前段时间我二姨在家族群里发了一束花的图片，说是她儿子送的，我心想：“切，不就是一束花嘛，我也能送”。所以我就送了一束花给妈妈。</p>
-<p>我故意不告诉我妈我的计划，想给她一个惊喜。3月7日上午，我先问了我嫂子（她跟我妈在一个单位），确认我妈是在单位的，然后在美团上下单买了11朵康乃馨和1朵百合组成的花束，里面夹了一张卡片：“祝妈妈女神节快乐。——儿子”。没过多久我妈就顺利收到了这束花，我妈高兴坏了，全单位的人都知道了这件事，我妈觉得特别有面子。</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#highlightjs">highlight.js</a></li>
+    <li><a href="#highlightjs-line-numbersjs">highlightjs-line-numbers.js</a></li>
+    <li><a href="#在vue中使用">在vue中使用</a></li>
+    <li><a href="#其它实现方法">其它实现方法</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="highlightjs">highlight.js</h2>
+<p>实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是：</p>
+<ol>
+<li>先引入css文件和js文件</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><ol start="2">
+<li>再将你的代码用<code>&lt;code&gt;</code>包裹</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>{{ 你的代码 }}<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+</code></pre></div><ol start="3">
+<li>再调用hljs的高亮函数，它的原理是找到所有的code标签，然后通过操作DOM，给你的代码设置高亮样式。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+		<span class="nx">hljs</span><span class="p">.</span><span class="nx">initHighlightingOnLoad</span><span class="p">();</span>
+	<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="highlightjs-line-numbersjs">highlightjs-line-numbers.js</h2>
+<p>hilightjs-line-numbers.js在highlight.js的基础上，给代码增加了行号，项目地址👇：</p>
+<p><a href="https://github.com/wcoder/highlightjs-line-numbers.js" target="_blank" rel="noopener noreffer">https://github.com/wcoder/highlightjs-line-numbers.js</a></p>
+<p>它的原理是将highlight.js渲染结构改装成<code>&lt;table&gt;</code>，第一列是行号，第二列才是代码。这种思路是非常棒的！</p>
+<p>它的使用方法是在highlight.js的使用方法上加了两步：</p>
+<ol>
+<li>除了引用highlight.js之外，还要引用highlightjs-line-numbers.js</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css&#34;</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../src/highlightjs-line-numbers.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><ol start="2">
+<li>将你的代码用<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code>包裹</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>{{ 你的代码 }}<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre></div><ol start="3">
+<li>调用</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+		<span class="nx">hljs</span><span class="p">.</span><span class="nx">initHighlightingOnLoad</span><span class="p">();</span>
+		<span class="nx">hljs</span><span class="p">.</span><span class="nx">initLineNumbersOnLoad</span><span class="p">({</span>
+            <span class="c1">// singleLine:true,
+</span><span class="c1"></span>            <span class="c1">// startFrom: 5,
+</span><span class="c1"></span>        <span class="p">});</span>
+	<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="在vue中使用">在vue中使用</h2>
+<p>奶奶的，在vue的组件中引用这个库，发现总是不能正确调用。我试了好久，终于找到了一个很nice的方法，就是直接在public下的<code>index.html</code>中引用，然后在组件中调用。</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161200543.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161200543.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161200543.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161200543.png 2x"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001209249.png"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001209249.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001209249.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001209249.png 2x"
         data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161200543.png"
-        title="image-20230312161200543" /></p>
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001209249.png"
+        title="image-20230317001209249" /></p>
+<p>效果差强人意，但总算是把功能实现了</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161233245.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161233245.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161233245.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161233245.png 2x"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001321999.png"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001321999.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001321999.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001321999.png 2x"
         data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161233245.png"
-        title="image-20230312161233245" /></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161253187.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161253187.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161253187.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161253187.png 2x"
-        data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161253187.png"
-        title="image-20230312161253187" /></p>
-<p>我妈的一句：“好久没有这么开心了”，有点扎心。近几年我家的情况不算很好，我爸工作不顺利，我姐也不听话，我妈自己面临着退休的问题，生活中全是烦恼，确实好久都没这么开心了。现在我家的希望全在我一个人身上，我家能否过的蒸蒸日上，就看我毕业后的情况了。</p>
-<p>收到花之后，我妈找同事拍了好几张照片，除了发给我，还发到家族群里。家族群里，大家一起祝福我妈，说我做得对，长大了、懂事了，我也很骄傲自豪。</p>
-<p>这半年来，我感觉自己真的有质的变化，比以前更加有责任感，考虑事情更加周到，也更知道孝顺家人了，这可能就是成长吧。</p>
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001321999.png"
+        title="image-20230317001321999" /></p>
+<h2 id="其它实现方法">其它实现方法</h2>
+<p>在网上搜索，会发现还有另一种实现原理：使用vue.directive，自动在代码前面加一个<code>&lt;ul&gt;</code>，显示行号；这种方法也可以实现，但是样式很难调整，容易出现行号错位。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-03-09</span>
+                <span>更新于 2023-03-16</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -166,8 +205,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php/" class="prev" rel="prev" title="HUSTOJ前端源代码解析（PHP）"><i class="fas fa-angle-left fa-fw"></i>HUSTOJ前端源代码解析（PHP）</a>
-            <a href="/posts/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7/" class="next" rel="next" title="在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号">在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/" class="prev" rel="prev" title="妈妈说：好久都没这么开心了"><i class="fas fa-angle-left fa-fw"></i>妈妈说：好久都没这么开心了</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
