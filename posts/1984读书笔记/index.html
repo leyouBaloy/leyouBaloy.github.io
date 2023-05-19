@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Vue&#43;flask实现播放任何视频源（包括rtsp摄像头） - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="Vue&#43;flask实现播放任何视频源（包括rtsp摄像头）" />
-<meta property="og:description" content="背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就" />
+        <title>《1984》读书笔记 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="《1984》读书笔记" />
+<meta property="og:description" content="1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-04-22T10:40:50+08:00" />
-<meta property="article:modified_time" content="2023-04-22T10:40:50+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/1984%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-02T00:35:22+08:00" />
+<meta property="article:modified_time" content="2023-05-02T00:35:22+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Vue&#43;flask实现播放任何视频源（包括rtsp摄像头）"/>
-<meta name="twitter:description" content="背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就"/>
+<meta name="twitter:title" content="《1984》读书笔记"/>
+<meta name="twitter:description" content="1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/1984%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/1984%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
+        "headline": "《1984》读书笔记",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/vue\u002bflask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4\/"
-        },"genre": "posts","wordcount":  619 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/vue\u002bflask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4\/","datePublished": "2023-04-22T10:40:50+08:00","dateModified": "2023-04-22T10:40:50+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/1984%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0\/"
+        },"genre": "posts","wordcount":  531 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/1984%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0\/","datePublished": "2023-05-02T00:35:22+08:00","dateModified": "2023-05-02T00:35:22+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Vue&#43;flask实现播放任何视频源（包括rtsp摄像头）</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-22">2023-04-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 619 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/" class="leancloud_visitors" data-flag-title="Vue&#43;flask实现播放任何视频源（包括rtsp摄像头）">
+        </div><article class="page single"><h1 class="single-title animated flipInX">《1984》读书笔记</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B9%A6%E5%BD%B1%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>书影记录</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-05-02">2023-05-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 531 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/1984%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="leancloud_visitors" data-flag-title="《1984》读书笔记">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -111,47 +111,14 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#背景">背景</a></li>
-    <li><a href="#代码">代码</a></li>
-    <li><a href="#总结">总结</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h2 id="背景">背景</h2>
-<p>最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。</p>
-<p>由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才能推流，比如转成rtmp或webRTC等其它流，这样就能在网页上播放了。GitHub上能找到很多转码推流的代码，但又因为海康还对这个协议做了魔改（主要是加密），所以这些代码也不支持！</p>
-<p>最后我看到一个很nice的方法：在后端（flask）使用cv库读取视频流，不断截取每一帧的图片，发送给前端。前端只需要用一个<code>&lt;img&gt;</code>标签就能渲染这个直播视频啦。</p>
-<h2 id="代码">代码</h2>
-<p>Flask</p>
-<pre tabindex="0"><code class="language-flask" data-lang="flask"># camera = cv2.VideoCapture(0) # 笔记本自带摄像头，支持macbook
-camera = cv2.VideoCapture(os.path.join(app.config['UPLOAD_FOLDER'], 'zdws.mp4')) # 本地视频
-@app.route('/api/video_feed')
-def video_feed():
-    def generate():
-        while True:
-            # time.sleep(0.0)
-            ret, frame = camera.read()
-            if not ret:
-                break
-            _, jpeg = cv2.imencode('.jpg', frame)
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() + b'\r\n')
-    return Response(generate(), mimetype='multipart/x-mixed-replace; boundary=frame')
-</code></pre><p>Vue</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="c">&lt;!--</span> <span class="nx">摄像头画面展示区域</span> <span class="o">--&gt;</span>
-        <span class="p">&lt;</span><span class="nt">img</span>
-          <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100%&#34;</span>
-          <span class="na">src</span><span class="o">=</span><span class="s">&#34;api/video_feed&#34;</span>
-        <span class="p">/&gt;</span>
-</code></pre></div><h2 id="总结">总结</h2>
-<p>这个方法能够以最低的成本解决问题，但是每次都传整张图片，对网络质量的，所以它只适用于网络质量较高的局域网。</p>
-<p>视频本身就是由一帧一帧的图像组成的，但是我们传送数据时不可能原封不动地传送每一帧，因为它太大了。我们需要对视频进行压缩，去除帧与帧之间的冗余信息之后再发送到客户端，之后进行解压和渲染。压缩和解压是需要时间的，所以我们观看网络直播时肯定会有一定的延时。4G时代的网速依然是不够的，期待下一代网络技术的更新。</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较深入，16世纪文艺复兴时期，英国的莫尔就提出了空想社会主义（马克思的科学社会主义的前身）；后来19世纪英国人率先搞起了资产阶级革命，号称“自由、平等”；到了20世纪，资本主义社会开始不那么美好了，我们都从历史课本上学到过，贫富差距过大，大量的工人像奴隶一样被对待，资本家只想着赚钱，生产过剩的牛奶宁肯倒掉也不愿给穷人喝&hellip;真可谓“朱门酒肉臭，路有冻死骨”。所以这个时候就出现了一个问题：资本主义是不是人类社会的最终形态？如果不是，那么什么社会才是呢？为了回答这个问题，有人又把当年莫儿提出的空想社会主义搬出来了，他们说乌托邦是存在的，只要精心设计，所有人服从安排，大家都能过上幸福平等的生活～西方所谓的乌托邦，其实跟《桃花源记》中的桃花源，《挪威的森林》中的疗养院等等比较像，就是一种公有制社会，大家一起劳作，共享劳动成果，所有资源统一分配，人人平等。这种社会你觉得可能存在吗，或者说，可能大范围的存在吗？不用你回答，就已经有人开始批评了，那就是反乌托邦三部曲——《我们》、《美丽新世界》、《1984》</p>
+<p>《我们》</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-04-22</span>
+                <span>更新于 2023-05-02</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -170,8 +137,7 @@ def video_feed():
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/" class="prev" rel="prev" title="如何搭建一个ChatGPT镜像站"><i class="fas fa-angle-left fa-fw"></i>如何搭建一个ChatGPT镜像站</a>
-            <a href="/posts/1984%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="next" rel="next" title="《1984》读书笔记">《1984》读书笔记<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/" class="prev" rel="prev" title="Vue&#43;flask实现播放任何视频源（包括rtsp摄像头）"><i class="fas fa-angle-left fa-fw"></i>Vue&#43;flask实现播放任何视频源（包括rtsp摄像头）</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
