@@ -15,7 +15,9 @@ categories:
 
 ## Lecture 01 Course Overview
 
-一个有趣的例子
+瞎几把记点东西
+
+* 一个有趣的例子
 
 ```
 (lldb) print 40000*40000
@@ -23,3 +25,8 @@ categories:
 (lldb) print 50000*50000
 (int) $1 = -1794967296
 ```
+
+* No cheating!CMU对作业的要求好严格，甚至连搜索引擎都不能用，否则算作弊。
+
+## Lecture 02 Bits, Bytes, and Integers
+
