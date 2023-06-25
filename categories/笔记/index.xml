@@ -3,14 +3,7 @@
         <title>笔记 - 分类 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/</link>
         <description>笔记 - 分类 - 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 04 Jun 2023 23:38:19 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
-    <title>CMU:CSAPP课程自学笔记</title>
-    <link>https://www.leyoubaloy.xyz/posts/cmucsapp%E8%AF%BE%E7%A8%8B%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</link>
-    <pubDate>Sun, 04 Jun 2023 23:38:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/cmucsapp%E8%AF%BE%E7%A8%8B%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</guid>
-    <description><![CDATA[前言 现在的我，没有考研的压力，不需为了应付考试学习八股；没有保研的压力，不需要参加各种竞赛内卷；没有工作的压力，不需要学乱七八糟的技术。所以]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 12 Apr 2023 14:11:41 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
     <title>如何搭建一个ChatGPT镜像站</title>
     <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/</link>
     <pubDate>Wed, 12 Apr 2023 14:11:41 &#43;0800</pubDate>
@@ -73,5 +66,12 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/</guid>
     <description><![CDATA[7-1 Table Tennis 知识点：模拟，队列 思路：把所有玩家按到达顺序排序，逐个处理，分如下情况： 找到所有桌子中最早结束当前服务的桌子。判断：如果这个桌子当前服]]></description>
+</item><item>
+    <title>数据结构与算法实习第一阶段</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/</link>
+    <pubDate>Thu, 30 Jun 2022 16:34:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/</guid>
+    <description><![CDATA[7-1 符号配对 知识点：栈 思路：先输入数据，将所有的符号保存下来，其它的可以丢掉。然后遍历，用tmp保留当前的符号，遇到左符号，压栈，当遇到右括号]]></description>
 </item></channel>
 </rss>
