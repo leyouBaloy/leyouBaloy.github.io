@@ -2,7 +2,7 @@
 title: "CMU:CSAPP课程自学笔记"
 author: 孙百乐
 date: 2023-06-04T23:38:19+08:00
-draft: false
+draft: true
 categories: 
 - 笔记
 ---
@@ -28,5 +28,19 @@ categories:
 
 * No cheating!CMU对作业的要求好严格，甚至连搜索引擎都不能用，否则算作弊。
 
-## Lecture 02 Bits, Bytes, and Integers
+## Lecture 02、03 Bits, Bytes, and Integers
+
+看不下去
+
+## Lecture 04 Floating Point
+
+## Machine-Level Programing I: Basics
+
+终于知道x86的来历了，英特尔处理器最早叫8086，后来诞生了80286，80386，这些命名的特点就是80x86，简称x86。后来即使因特尔不以数字来命名了，仍然有人叫英特尔的处理器为x86处理器。值得注意的是，早期这些处理器都是32位的，后来英特尔也推出了64为处理器，所以x86既有32位又有64位。但一般认为是32位。
+
+AMD比因特尔先搞出了64位处理器，指令集就叫amd64，英特尔被迫无奈兼容了amd搞出的指令集，叫x86_64。但是英特尔的底子还是很厚实的，后来居上，x86_64的市场做的更大。
+
+所以，简单来说，x86 是指 32 位系统，而 x64、x86_64 和 amd64 是指 64 位系统。虽然名字不同，但 x64、x86_64 和 amd64 其实是同一种架构。
+
+
 
