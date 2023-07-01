@@ -3,7 +3,14 @@
         <title>技能分享 - 分类 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/</link>
         <description>技能分享 - 分类 - 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 22 Apr 2023 10:40:50 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 01 Jul 2023 10:41:41 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>好用的动画制作工具-Keynote</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%8A%A8%E7%94%BB%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7-keynote/</link>
+    <pubDate>Sat, 01 Jul 2023 10:41:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%8A%A8%E7%94%BB%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7-keynote/</guid>
+    <description><![CDATA[Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。 在通用性上，Keynote明显没]]></description>
+</item><item>
     <title>Vue&#43;flask实现播放任何视频源（包括rtsp摄像头）</title>
     <link>https://www.leyoubaloy.xyz/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/</link>
     <pubDate>Sat, 22 Apr 2023 10:40:50 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E8%87%B4%E5%8A%A8o%E6%89%8B%E6%9F%84%E5%AF%B9%E6%AF%94xbox%E5%8E%9F%E8%A3%85%E6%89%8B%E6%9F%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E5%88%86%E4%BA%AB/</guid>
     <description><![CDATA[对于游戏玩家来说，键盘鼠标可能不是最好的控制器（网游，fps玩家除外），拥有一个手柄，会让游戏体验更加舒适。尤其是对于一些需要慢慢品玩的3A]]></description>
-</item><item>
-    <title>LiveGo——小而美的直播串流软件</title>
-    <link>https://www.leyoubaloy.xyz/posts/livego%E5%B0%8F%E8%80%8C%E7%BE%8E%E7%9A%84%E7%9B%B4%E6%92%AD%E4%B8%B2%E6%B5%81%E8%BD%AF%E4%BB%B6/</link>
-    <pubDate>Sun, 01 Jan 2023 16:11:53 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/livego%E5%B0%8F%E8%80%8C%E7%BE%8E%E7%9A%84%E7%9B%B4%E6%92%AD%E4%B8%B2%E6%B5%81%E8%BD%AF%E4%BB%B6/</guid>
-    <description><![CDATA[近期想跟女朋友一起异地看电影，试了几种方式都不够优雅， 方式一：用chrome插件，双方同时打开一个视频源，然后通过这个插件能控制两个人的进度]]></description>
 </item></channel>
 </rss>
