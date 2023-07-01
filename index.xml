@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 02 May 2023 00:35:22 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 01 Jul 2023 10:15:46 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Flask的一些关于线程的特性</title>
+    <link>https://www.leyoubaloy.xyz/posts/flask%E7%9A%84%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8E%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%89%B9%E6%80%A7/</link>
+    <pubDate>Sat, 01 Jul 2023 10:15:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/flask%E7%9A%84%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8E%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%89%B9%E6%80%A7/</guid>
+    <description><![CDATA[前言 Flask是我最喜欢用的后端，以为它实在是太简单了，拿来做小型项目速度嗖嗖的。最近做比赛需要将后端通过socket连接到硬件设备，soc]]></description>
+</item><item>
     <title>《1984》读书笔记</title>
     <link>https://www.leyoubaloy.xyz/posts/1984%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
     <pubDate>Tue, 02 May 2023 00:35:22 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E7%BB%84%E8%A3%85%E4%B8%80%E5%8F%B0%E6%96%B0%E7%9A%84%E7%94%B5%E8%84%91/</guid>
     <description><![CDATA[从Windows换到Mac，获得了很多东西： 又轻又薄，续航还长，背出去上课自习非常方便（隔壁背着游戏本的同学都羡慕哭了）； 一块素质极高的屏幕]]></description>
-</item><item>
-    <title>2023年寒假总结</title>
-    <link>https://www.leyoubaloy.xyz/posts/2023%E5%B9%B4%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93/</link>
-    <pubDate>Wed, 15 Feb 2023 21:31:31 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/2023%E5%B9%B4%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[明天就要返校啦，下学期课贼少（一周只有4节），而且疫情结束，再也不会被封在学校啦，可以多跟彤彤出去玩了，所以还是蛮期待的！回顾这个寒假，总体]]></description>
 </item></channel>
 </rss>
