@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hides on 百乐的编程学习</title>
+    <link>https://www.leyoubaloy.xyz/hide/</link>
+    <description>Recent content in Hides on 百乐的编程学习</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 05 Apr 2021 13:18:35 +0000</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/hide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AutoReport</title>
+      <link>https://www.leyoubaloy.xyz/hide/autoreport/</link>
+      <pubDate>Mon, 05 Apr 2021 13:18:35 +0000</pubDate>
+      
+      <guid>https://www.leyoubaloy.xyz/hide/autoreport/</guid>
+      <description>疫情防控通自动填报教程 前言 “天下苦疫情防控通久矣！”作为UPC学子，每天都要做一件“无聊”的事情——填报疫情防控通。如果哪天忘了填报，就会被</description>
+    </item>
+    
+  </channel>
+</rss>

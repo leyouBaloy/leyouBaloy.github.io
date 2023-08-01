@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>技能分享 - 分类 - 百乐的编程学习</title>
+        <link>https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/</link>
+        <description>技能分享 - 分类 - 百乐的编程学习</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 01 Jul 2023 10:41:41 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/" rel="self" type="application/rss+xml" /><item>
+    <title>好用的动画制作工具-Keynote</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%8A%A8%E7%94%BB%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7-keynote/</link>
+    <pubDate>Sat, 01 Jul 2023 10:41:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%8A%A8%E7%94%BB%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7-keynote/</guid>
+    <description><![CDATA[Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。 在通用性上，Keynote明显没]]></description>
+</item><item>
+    <title>Vue&#43;flask实现播放任何视频源（包括rtsp摄像头）</title>
+    <link>https://www.leyoubaloy.xyz/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/</link>
+    <pubDate>Sat, 22 Apr 2023 10:40:50 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/</guid>
+    <description><![CDATA[背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就]]></description>
+</item><item>
+    <title>如何搭建一个ChatGPT镜像站</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/</link>
+    <pubDate>Wed, 12 Apr 2023 14:11:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/</guid>
+    <description><![CDATA[为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内]]></description>
+</item><item>
+    <title>CSS布局基础知识</title>
+    <link>https://www.leyoubaloy.xyz/posts/css%E5%B8%83%E5%B1%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+    <pubDate>Mon, 20 Mar 2023 13:32:55 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/css%E5%B8%83%E5%B1%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
+    <description><![CDATA[需求 还是之前的那个需求，我需要做一个静态网页用于展示电子版教材。网页的布局非常重要，我需要一个顶部横向的导航栏，一个能够显示大纲的侧边栏，侧]]></description>
+</item><item>
+    <title>在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7/</link>
+    <pubDate>Thu, 16 Mar 2023 23:51:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7/</guid>
+    <description><![CDATA[highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 先引入css文件和js文件 &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css&#34;&gt; &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js&#34;&gt;&lt;/script&gt; 再将你的]]></description>
+</item><item>
+    <title>HUSTOJ前端源代码解析（PHP）</title>
+    <link>https://www.leyoubaloy.xyz/posts/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php/</link>
+    <pubDate>Thu, 09 Mar 2023 17:12:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/hustoj%E5%89%8D%E7%AB%AF%E6%BA%90%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90php/</guid>
+    <description><![CDATA[需求 老师写了一本c++教材，这本教材的一大特色就是构建了一个有关c++的知识点网络。只有在电子版教材中，这种知识点网络才能真正发挥它的作用（]]></description>
+</item><item>
+    <title>如何将语雀文档导出为html（使用语雀API）</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%AD%E9%9B%80%E6%96%87%E6%A1%A3%E5%AF%BC%E5%87%BA%E4%B8%BAhtml%E4%BD%BF%E7%94%A8%E8%AF%AD%E9%9B%80api/</link>
+    <pubDate>Thu, 09 Mar 2023 16:12:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%B0%86%E8%AF%AD%E9%9B%80%E6%96%87%E6%A1%A3%E5%AF%BC%E5%87%BA%E4%B8%BAhtml%E4%BD%BF%E7%94%A8%E8%AF%AD%E9%9B%80api/</guid>
+    <description><![CDATA[需求 语雀本身是用web端访问的，按理来说，导出为html文件应该是最接近原生文档的观感的，但是却不支持，反倒是可以导出为pdf、markdo]]></description>
+</item><item>
+    <title>组装一台新的电脑</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E7%BB%84%E8%A3%85%E4%B8%80%E5%8F%B0%E6%96%B0%E7%9A%84%E7%94%B5%E8%84%91/</link>
+    <pubDate>Wed, 01 Mar 2023 08:57:51 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E7%BB%84%E8%A3%85%E4%B8%80%E5%8F%B0%E6%96%B0%E7%9A%84%E7%94%B5%E8%84%91/</guid>
+    <description><![CDATA[从Windows换到Mac，获得了很多东西： 又轻又薄，续航还长，背出去上课自习非常方便（隔壁背着游戏本的同学都羡慕哭了）； 一块素质极高的屏幕]]></description>
+</item><item>
+    <title>Qt动态添加和删除布局（仿jupyter）</title>
+    <link>https://www.leyoubaloy.xyz/posts/qt%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%B8%83%E5%B1%80%E4%BB%BFjupyter/</link>
+    <pubDate>Thu, 02 Feb 2023 14:14:19 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/qt%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%B8%83%E5%B1%80%E4%BB%BFjupyter/</guid>
+    <description><![CDATA[前言 老师给了一个任务，仿照jupyter notebook中可以动态添加、删除的cell，用c++的qt做一个类似的界面。具体来说，一个cel]]></description>
+</item><item>
+    <title>致动o手柄对比xbox原装手柄使用体验分享</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E8%87%B4%E5%8A%A8o%E6%89%8B%E6%9F%84%E5%AF%B9%E6%AF%94xbox%E5%8E%9F%E8%A3%85%E6%89%8B%E6%9F%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E5%88%86%E4%BA%AB/</link>
+    <pubDate>Sun, 15 Jan 2023 08:59:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E8%87%B4%E5%8A%A8o%E6%89%8B%E6%9F%84%E5%AF%B9%E6%AF%94xbox%E5%8E%9F%E8%A3%85%E6%89%8B%E6%9F%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E5%88%86%E4%BA%AB/</guid>
+    <description><![CDATA[对于游戏玩家来说，键盘鼠标可能不是最好的控制器（网游，fps玩家除外），拥有一个手柄，会让游戏体验更加舒适。尤其是对于一些需要慢慢品玩的3A]]></description>
+</item></channel>
+</rss>
