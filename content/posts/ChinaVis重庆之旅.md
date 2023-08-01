@@ -34,9 +34,7 @@ ChinaVis大会于2023年7月21日-24日在重庆召开，老师带着我们可�
 
 接着步行来到了魁星楼，你以为是1楼？其实是22楼！在这里能感受到8D的重庆。
 
-<html>
-<video src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7673.mp4"></video>
-</html>
+<source src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7673.mp4" type="video/mp4">
 
 然后肚子也饿了，我们就来到解放碑步行街找吃的，这里的小吃街规模非常大，小吃的味道以辣味为主（甚至有辣味冰淇淋）。
 
@@ -52,7 +50,7 @@ ChinaVis大会于2023年7月21日-24日在重庆召开，老师带着我们可�
 
 <video src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/重庆江景.mp4"></video>
 
-![“IMG_7704”大](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_7704%E2%80%9D%E5%A4%A7.jpeg)
+![“IMG_7704”大](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7704.jpeg)
 
 美丽的景色让人陶醉，回去的路上我都还在回味，还拍了其它很多好看的照片，篇幅原因，这里就不一一列出了。
 
