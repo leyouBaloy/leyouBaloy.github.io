@@ -1,7 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tags - 标签 - 百乐的编程学习</title>
-        <link>https://www.leyoubaloy.xyz/tags/</link>
-        <description>Tags - 标签 - 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="https://www.leyoubaloy.xyz/tags/" rel="self" type="application/rss+xml" /></channel>
-</rss>
