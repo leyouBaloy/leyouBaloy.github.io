@@ -6,6 +6,7 @@ draft: false
 categories: 
 - 随笔杂记
 - 笔记
+featuredImagePreview: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_7639%E2%80%9D%E5%A4%A7.jpeg
 ---
 
 ChinaVis大会于2023年7月21日-24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～
