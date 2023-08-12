@@ -3,7 +3,14 @@
         <title>所有文章 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 01 Aug 2023 15:14:14 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 12 Aug 2023 20:06:07 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>苏州印象</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E8%8B%8F%E5%B7%9E%E5%8D%B0%E8%B1%A1/</link>
+    <pubDate>Sat, 12 Aug 2023 20:06:07 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E8%8B%8F%E5%B7%9E%E5%8D%B0%E8%B1%A1/</guid>
+    <description><![CDATA[2023年8月3日-5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一]]></description>
+</item><item>
     <title>与彤彤一起的徐州奇幻冒险</title>
     <link>https://www.leyoubaloy.xyz/posts/%E4%B8%8E%E5%BD%A4%E5%BD%A4%E4%B8%80%E8%B5%B7%E7%9A%84%E5%BE%90%E5%B7%9E%E5%A5%87%E5%B9%BB%E5%86%92%E9%99%A9/</link>
     <pubDate>Tue, 01 Aug 2023 15:14:14 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%9C%A8vue%E4%B8%AD%E4%BD%BF%E7%94%A8hilightjs-line-numbers%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E5%B9%B6%E4%B8%94%E5%A2%9E%E5%8A%A0%E8%A1%8C%E5%8F%B7/</guid>
     <description><![CDATA[highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 先引入css文件和js文件 &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css&#34;&gt; &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js&#34;&gt;&lt;/script&gt; 再将你的]]></description>
-</item><item>
-    <title>妈妈说：好久都没这么开心了</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/</link>
-    <pubDate>Thu, 09 Mar 2023 17:14:05 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%88%E5%A6%88%E8%AF%B4%E5%A5%BD%E4%B9%85%E9%83%BD%E6%B2%A1%E8%BF%99%E4%B9%88%E5%BC%80%E5%BF%83%E4%BA%86/</guid>
-    <description><![CDATA[3月7日是女神节，3月8日是妇女节，3月9日是我妈妈生日，所以这几天对她来说是很重要的日子。 我妈妈记我和我姐的生日记得很清楚，但自己的生日却]]></description>
 </item></channel>
 </rss>
