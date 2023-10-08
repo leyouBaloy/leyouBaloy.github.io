@@ -3,7 +3,14 @@
         <title>所有文章 - 百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/posts/</link>
         <description>所有文章 | 百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 19 Sep 2023 16:59:13 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 08 Oct 2023 20:11:39 &#43;0800</lastBuildDate><atom:link href="https://www.leyoubaloy.xyz/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>蚌埠美食之旅</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85/</link>
+    <pubDate>Sun, 08 Oct 2023 20:11:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85/</guid>
+    <description><![CDATA[蚌埠简介 蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给]]></description>
+</item><item>
     <title>艺术品般的游戏—《荒野大镖客救赎2》</title>
     <link>https://www.leyoubaloy.xyz/posts/%E8%89%BA%E6%9C%AF%E5%93%81%E8%88%AC%E7%9A%84%E6%B8%B8%E6%88%8F%E8%8D%92%E9%87%8E%E5%A4%A7%E9%95%96%E5%AE%A22%E6%95%91%E8%B5%8E/</link>
     <pubDate>Tue, 19 Sep 2023 16:59:13 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/</guid>
     <description><![CDATA[为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内]]></description>
-</item><item>
-    <title>CSS布局基础知识</title>
-    <link>https://www.leyoubaloy.xyz/posts/css%E5%B8%83%E5%B1%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
-    <pubDate>Mon, 20 Mar 2023 13:32:55 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/css%E5%B8%83%E5%B1%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
-    <description><![CDATA[需求 还是之前的那个需求，我需要做一个静态网页用于展示电子版教材。网页的布局非常重要，我需要一个顶部横向的导航栏，一个能够显示大纲的侧边栏，侧]]></description>
 </item></channel>
 </rss>
