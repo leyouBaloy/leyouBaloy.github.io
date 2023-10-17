@@ -1,5 +1,7 @@
 # 简历
 
+{{< figure src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%AD%99%E7%99%BE%E4%B9%90.jpg"  width="200px">}}
+
 {{< admonition type=abstract title="教育背景" open=true >}}
 
 2020.09至今：**中国石油大学（华东）**（青岛、211、双一流）计算机科学与技术专业
@@ -9,8 +11,6 @@
 研究方向：数据压缩、可视化、人工智能等
 
 {{< /admonition >}}
-
-{{< figure src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%AD%99%E7%99%BE%E4%B9%90.jpg"  width="200px">}}
 
 {{< admonition type=tip title="发表论文" open=true >}}
 
@@ -28,12 +28,13 @@
 
 {{< /admonition >}}
 
-{{< admonition type=tip title="竞赛获奖" open=true >}}
+{{< admonition type=tip title="项目竞赛" open=true >}}
 
-* 第十八届全国大学生智能汽车竞赛全国总决赛一等奖，2023
+* 第十八届全国大学生智能汽车竞赛全国总决赛**一等奖**，2023
 * 中国高校计算机大赛 2023 网络技术挑战赛华东赛区二等奖，全国总决赛三等奖，2023
 * 2023 年美国大学生数学建模竞赛 HonorableMention 奖，2023
-* 第十三届中国大学生服务外包创新创业大赛区域赛二等奖，全国总决赛三等奖，2022
+* 第十三届中国大学生服务外包创新创业大赛区域赛二等奖，全国总决赛三等奖，**组长**，2022
+* 大学生创新创业训练项目优秀结题，**组长**，2023
 
 {{< /admonition >}}
 
@@ -72,7 +73,7 @@
 
 2022年初寒假，使用hugo+Lovelt+github+jsdelivr打造此博客，用于学习和记录学习。
 
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/叛逆表情包.jpeg)
+{{< figure src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/叛逆表情包.jpeg"  width="200px">}}
 
 
 
