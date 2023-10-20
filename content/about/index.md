@@ -71,6 +71,14 @@
 
 {{< /admonition >}}
 
+{{< admonition type=tip title="性格爱好" open=true >}}
+
+本人性格沉稳，遇事冷静，懂得克制；有良好表达能力，但是不喜张扬。
+
+爱好读书（平均每年 15 本，题材不限），旅游，看电影。
+
+{{< /admonition >}}
+
 # 关于该博客
 
 2022年初寒假，使用hugo+Lovelt+github+jsdelivr打造此博客，用于学习和记录学习。
