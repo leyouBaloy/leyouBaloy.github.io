@@ -46,7 +46,7 @@
 
 【1】Xin Li, Zhikuan Wang, Chenglizhao Chen, Chunfeng Tao, Yuanbo Qiu, Junde Liu and **Baile Sun**. SemID : Blind Image Inpainting with Semantic Inconsistency Detection[J]. 2023. Tsinghua Science and Technology.
 
-【2】Xin Li, Xiaofei Zhao, **Baile Sun**, Jixiu Liao. Remote Sensing Image Compression Method Based on Implicit Neural Representation[C]. 2023. *In Proceedings of the 2023 12th International Conference on Computing and Pattern Recognition (ICCPR '23).* 
+【2】Xin Li, Baile Sun, Jixiu Liao, and Xiaofei Zhao. 2023. Remote Sensing Image Compression Method Based on Implicit Neural Representation. In 2023 12th International Conference on Computing and Pattern Recognition (ICCPR 2023), October 27–29, 2023, Qingdao, China. ACM, New York, NY, USA, 8 pages. https://doi.org/10.1145/3633637.3633706
 
 {{< /admonition >}}
 
