@@ -32,13 +32,6 @@
     <guid>https://www.leyoubaloy.xyz/posts/%E8%8B%8F%E5%B7%9E%E5%8D%B0%E8%B1%A1/</guid>
     <description><![CDATA[2023年8月3日-5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一]]></description>
 </item><item>
-    <title>与彤彤一起的徐州奇幻冒险</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E4%B8%8E%E5%BD%A4%E5%BD%A4%E4%B8%80%E8%B5%B7%E7%9A%84%E5%BE%90%E5%B7%9E%E5%A5%87%E5%B9%BB%E5%86%92%E9%99%A9/</link>
-    <pubDate>Tue, 01 Aug 2023 15:14:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E4%B8%8E%E5%BD%A4%E5%BD%A4%E4%B8%80%E8%B5%B7%E7%9A%84%E5%BE%90%E5%B7%9E%E5%A5%87%E5%B9%BB%E5%86%92%E9%99%A9/</guid>
-    <description><![CDATA[今年8月份彤彤就要去徐州上班啦，我陪着她一起来租房子，我俩一起在徐州呆了6天。这6天里有欢声笑语，也有小矛盾，但是总体回忆起来是丰富有趣的～]]></description>
-</item><item>
     <title>ChinaVis重庆之旅</title>
     <link>https://www.leyoubaloy.xyz/posts/chinavis%E9%87%8D%E5%BA%86%E4%B9%8B%E6%97%85/</link>
     <pubDate>Mon, 31 Jul 2023 19:17:10 &#43;0800</pubDate>
@@ -73,5 +66,12 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/</guid>
     <description><![CDATA[背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就]]></description>
+</item><item>
+    <title>如何搭建一个ChatGPT镜像站</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/</link>
+    <pubDate>Wed, 12 Apr 2023 14:11:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/</guid>
+    <description><![CDATA[为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内]]></description>
 </item></channel>
 </rss>
