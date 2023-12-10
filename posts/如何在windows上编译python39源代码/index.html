@@ -5,28 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>蚌埠美食之旅 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="蚌埠美食之旅" />
-<meta property="og:description" content="蚌埠简介 蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给" />
+        <title>如何在Windows上编译Python39源代码 - 百乐的编程学习</title><meta name="Description" content=""><meta property="og:title" content="如何在Windows上编译Python39源代码" />
+<meta property="og:description" content="安装Visual Studio 2017 先下载Visual Studio Installer https://learn.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio?view=vs-2022 打开Visual Studio Installer-&gt;选择“工作负荷”-&gt;使用C&#43;&#43;的桌面开发、P" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-10-08T20:11:39+08:00" />
-<meta property="article:modified_time" content="2023-10-08T20:11:39+08:00" />
+<meta property="og:url" content="https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8A%E7%BC%96%E8%AF%91python39%E6%BA%90%E4%BB%A3%E7%A0%81/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-10T20:51:01+08:00" />
+<meta property="article:modified_time" content="2023-12-10T20:51:01+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="蚌埠美食之旅"/>
-<meta name="twitter:description" content="蚌埠简介 蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给"/>
+<meta name="twitter:title" content="如何在Windows上编译Python39源代码"/>
+<meta name="twitter:description" content="安装Visual Studio 2017 先下载Visual Studio Installer https://learn.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio?view=vs-2022 打开Visual Studio Installer-&gt;选择“工作负荷”-&gt;使用C&#43;&#43;的桌面开发、P"/>
 <meta name="application-name" content="百乐的编程学习">
-<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E8%89%BA%E6%9C%AF%E5%93%81%E8%88%AC%E7%9A%84%E6%B8%B8%E6%88%8F%E8%8D%92%E9%87%8E%E5%A4%A7%E9%95%96%E5%AE%A22%E6%95%91%E8%B5%8E/" /><link rel="next" href="https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8A%E7%BC%96%E8%AF%91python39%E6%BA%90%E4%BB%A3%E7%A0%81/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="百乐的编程学习"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/qq%E5%A4%B4%E5%83%8F.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8A%E7%BC%96%E8%AF%91python39%E6%BA%90%E4%BB%A3%E7%A0%81/" /><link rel="prev" href="https://www.leyoubaloy.xyz/posts/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "蚌埠美食之旅",
+        "headline": "如何在Windows上编译Python39源代码",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85\/"
-        },"genre": "posts","wordcount":  1182 ,
-        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85\/","datePublished": "2023-10-08T20:11:39+08:00","dateModified": "2023-10-08T20:11:39+08:00","publisher": {
+            "@id": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8A%E7%BC%96%E8%AF%91python39%E6%BA%90%E4%BB%A3%E7%A0%81\/"
+        },"genre": "posts","wordcount":  570 ,
+        "url": "https:\/\/www.leyoubaloy.xyz\/posts\/%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8A%E7%BC%96%E8%AF%91python39%E6%BA%90%E4%BB%A3%E7%A0%81\/","datePublished": "2023-12-10T20:51:01+08:00","dateModified": "2023-12-10T20:51:01+08:00","publisher": {
             "@type": "Organization",
             "name": "孙百乐"},"author": {
                 "@type": "Person",
@@ -100,10 +100,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">蚌埠美食之旅</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9A%8F%E7%AC%94%E6%9D%82%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>随笔杂记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-10-08">2023-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1182 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85/" class="leancloud_visitors" data-flag-title="蚌埠美食之旅">
+        </div><article class="page single"><h1 class="single-title animated flipInX">如何在Windows上编译Python39源代码</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>孙百乐</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%88%86%E4%BA%AB/"><i class="far fa-folder fa-fw"></i>技能分享</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-12-10">2023-12-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 570 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8A%E7%BC%96%E8%AF%91python39%E6%BA%90%E4%BB%A3%E7%A0%81/" class="leancloud_visitors" data-flag-title="如何在Windows上编译Python39源代码">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -111,83 +111,81 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#蚌埠简介">蚌埠简介</a></li>
-    <li><a href="#美食图集">美食图集</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h2 id="蚌埠简介">蚌埠简介</h2>
-<p>蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给蚌埠带来了繁荣的机会。除此之外，蚌埠还有千里淮河第一大港——蚌埠港，水路交通也十分发达。铁路和水路奠定了蚌埠重要的交通地位。交通有了，人也渐渐多起来，商业也逐渐发达，蚌埠是中国最早设立的地级市之一，民国时期的二马路商贩云集，热闹非凡，那时的蚌埠有“小上海”之称，1955 年建成蚌埠百货大楼，是当之无愧的皖北 CBD，吸引着无数周边城市的居民来这里购物，一直到今天都在经营。</p>
-<p>除此之外，蚌埠的工业发达，至1980年代，蚌埠市的工业发展一直在安徽省名列前茅，并以综合型加工业基地著称。教育资源发达，有一本院校安徽财经大学和蚌埠医学院。医疗条件优渥，三甲医院有3个（数量不确定，但至少有 2 个）。市区不大，资源比较集中，行政区划基本没什么调整，三个县加上凤阳的认同度也很高。</p>
-<p>蚌埠还有一个别称叫“珠城”，是因为过去的蚌埠盛产珍珠。在张公山公园里有珍珠女的美丽雕像，热门电视剧中的神话故事《长月烬明》就取材于此。</p>
-<p>蚌埠还有很多有趣的历史，比如曾经被称作“匪城”，因为火车站贼太多了，而且蚌埠人性格偏北方，比较凶猛彪悍，常在街上喝酒闹事，所以外地人对蚌埠人的印象一直不好。不过那是很久之前的事情啦，现在的蚌埠可是全国文明城市，好人之城～</p>
-<p>然而，蚌埠没有赶上改革开放的好机会，在长三角也属于一个边缘的存在，近些年还一直在被合肥“吸血”，铁路和产业被抢走了很多，建设速度明显放缓，GDP增速连年在安徽省倒数。不过好处就是房价物价真的很低，只要家在这里，月薪 3k 你也能过的很舒服。</p>
-<p>正当过去的辉煌基本已经消失的无影无踪的时候，蚌埠在网络上又焕发了新的活力，一句热梗“蚌埠住了”，让大家又开始关注蚌埠。2023 年五一期间，蚌埠接待游客高达417.6万人次，据我在蚌埠的朋友说，当时的蚌埠感觉要被挤爆了，上一次这么热闹可能还是太平天国运动&hellip;&hellip;游客们来这里吃美食，赏美景，受到了当地人热情的接待，还有政府的大力支持。被捧为“网红城市”，不仅仅是因为一句热梗，而是源自丰厚的底蕴～</p>
-<p>其实不光是皖 C 蚌埠，具有类似命运的还有鲁 C 淄博，苏 C 徐州，都是好吃好玩，便宜舒适的城市。如果没有很多钱，不想去太远的地方，也不知道假期该怎么过，来这样的城市玩一玩还是很值得的。这可能是新时代下，皖 C、鲁 C 和苏 C 的新的历史使命吧。</p>
-<h2 id="美食图集">美食图集</h2>
-<p>在现代，虽然蚌埠享誉盛名的已经不多了，但是“美食之城”的名号是当之无愧的。淮河流经蚌埠，使蚌埠横跨了中国的南方和北方，便捷的交通也使得天南地北的人们在这里相聚，文化不停的融合，其中也包括美食文化。所以，蚌埠即有南方的米食，也有北方的面食。蚌埠人也很“好吃”，研究出了麻辣烫、干扣面、小龙虾、冰酒酿、烧饼夹里脊等绝佳美食。</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><h1 id="安装visual-studio-2017">安装Visual Studio 2017</h1>
+<p>先下载Visual Studio Installer</p>
+<p><a href="https://learn.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio?view=vs-2022" target="_blank" rel="noopener noreffer">https://learn.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio?view=vs-2022</a></p>
+<p>打开Visual Studio Installer-&gt;选择“工作负荷”-&gt;使用C++的桌面开发、Python开发。</p>
+<p>另外，在“Python开发”里，选择Python本机开发工具。</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206163956788.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206163956788.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206163956788.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206163956788.png 2x"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186333481-795f9c06-8190-4e53-b0b1-3cb0e02ae25a.png"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186333481-795f9c06-8190-4e53-b0b1-3cb0e02ae25a.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186333481-795f9c06-8190-4e53-b0b1-3cb0e02ae25a.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186333481-795f9c06-8190-4e53-b0b1-3cb0e02ae25a.png 2x"
         data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206163956788.png"
-        title="image-20231206163956788" /></p>
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186333481-795f9c06-8190-4e53-b0b1-3cb0e02ae25a.png"
+        title="img" /></p>
+<p>然后开始安装这一套软件，默认装的是社区版，够用。</p>
+<h1 id="下载python源代码">下载Python源代码</h1>
+<p><a href="https://www.python.org/downloads/release/python-3913/" target="_blank" rel="noopener noreffer">https://www.python.org/downloads/release/python-3913/</a></p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164019794.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164019794.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164019794.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164019794.png 2x"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186438498-d3f8a9d7-de88-4f4e-9ef0-ccc20db9a801.png"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186438498-d3f8a9d7-de88-4f4e-9ef0-ccc20db9a801.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186438498-d3f8a9d7-de88-4f4e-9ef0-ccc20db9a801.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186438498-d3f8a9d7-de88-4f4e-9ef0-ccc20db9a801.png 2x"
         data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164019794.png"
-        title="image-20231206164019794" /></p>
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186438498-d3f8a9d7-de88-4f4e-9ef0-ccc20db9a801.png"
+        title="img" /></p>
+<p>下载完解压</p>
+<h1 id="开始编译">开始编译</h1>
+<p>用命令行进入PCbuild目录，执行build.bat文件</p>
+<p>编译完了之后，编译后文件会出现在PCbuild目录的amd64目录下</p>
+<p>可以用命令行执行amd64目录下的python.exe</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164029477.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164029477.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164029477.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164029477.png 2x"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186910646-0e855187-b9de-49ee-bb18-356a0073840d.png"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186910646-0e855187-b9de-49ee-bb18-356a0073840d.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186910646-0e855187-b9de-49ee-bb18-356a0073840d.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186910646-0e855187-b9de-49ee-bb18-356a0073840d.png 2x"
         data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164029477.png"
-        title="image-20231206164029477" /></p>
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186910646-0e855187-b9de-49ee-bb18-356a0073840d.png"
+        title="img" /></p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164044166.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164044166.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164044166.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164044166.png 2x"
+        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186914548-f43a9eee-674d-467d-85f3-d3f4dc463f67.png"
+        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186914548-f43a9eee-674d-467d-85f3-d3f4dc463f67.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186914548-f43a9eee-674d-467d-85f3-d3f4dc463f67.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186914548-f43a9eee-674d-467d-85f3-d3f4dc463f67.png 2x"
         data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164044166.png"
-        title="image-20231206164044166" /></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164101762.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164101762.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164101762.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164101762.png 2x"
-        data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164101762.png"
-        title="image-20231206164101762" /></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164119393.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164119393.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164119393.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164119393.png 2x"
-        data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164119393.png"
-        title="image-20231206164119393" /></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164133864.png"
-        data-srcset="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164133864.png, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164133864.png 1.5x, https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164133864.png 2x"
-        data-sizes="auto"
-        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206164133864.png"
-        title="image-20231206164133864" /></p>
+        alt="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1702186914548-f43a9eee-674d-467d-85f3-d3f4dc463f67.png"
+        title="img" /></p>
+<h1 id="测试编译">测试编译</h1>
+<ul>
+<li>参考这个文档，可以对源代码做一个小修改</li>
+</ul>
+<p><a href="https://flaggo.github.io/python3-source-code-analysis/preface/modify-code/" target="_blank" rel="noopener noreffer">https://flaggo.github.io/python3-source-code-analysis/preface/modify-code/</a></p>
+<p>然后进入PCbuild/amd64目录下的python.exe试试效果</p>
+<ul>
+<li>可能还会有其它报错，我就遇到了</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain">D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets
+(46,5): error MSB8036: 找不到 Windows SDK 版本10.0.22621.0。请安装所需的版本的 Windows SDK 或者在项目属性页中或通过右键 单击解决方案并选择“重定解决方案目标”来更改 SDK 版本
+。 [D:\Python-3.9.13\Python-3.9.13\PCbuild\pythoncore.vcxproj]
+
+生成失败。
+
+D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets
+(46,5): error MSB8036: 找不到 Windows SDK 版本10.0.22621.0。请安装所需的版本的 Windows SDK 或者在项目属性页中或通过右键 单击解决方案并选择“重定解决方案目标”来更改 SDK 版本
+。 [D:\Python-3.9.13\Python-3.9.13\PCbuild\pythoncore.vcxproj]
+    0 个警告
+    1 个错误
+</code></pre></div><p>按照它的提示，把该项目的Windows SDK版本改了之后就好了。</p>
+<p>具体问题具体对待吧</p>
+<h1 id="参考">参考</h1>
+<p>PCbuild目录下有readme.txt，里面的流程和我的流程是一样的</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2023-10-08</span>
+                <span>更新于 2023-12-10</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -206,8 +204,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/%E8%89%BA%E6%9C%AF%E5%93%81%E8%88%AC%E7%9A%84%E6%B8%B8%E6%88%8F%E8%8D%92%E9%87%8E%E5%A4%A7%E9%95%96%E5%AE%A22%E6%95%91%E8%B5%8E/" class="prev" rel="prev" title="艺术品般的游戏—《荒野大镖客救赎2》"><i class="fas fa-angle-left fa-fw"></i>艺术品般的游戏—《荒野大镖客救赎2》</a>
-            <a href="/posts/%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8A%E7%BC%96%E8%AF%91python39%E6%BA%90%E4%BB%A3%E7%A0%81/" class="next" rel="next" title="如何在Windows上编译Python39源代码">如何在Windows上编译Python39源代码<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/%E8%9A%8C%E5%9F%A0%E7%BE%8E%E9%A3%9F%E4%B9%8B%E6%97%85/" class="prev" rel="prev" title="蚌埠美食之旅"><i class="fas fa-angle-left fa-fw"></i>蚌埠美食之旅</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
