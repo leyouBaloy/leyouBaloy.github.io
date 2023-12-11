@@ -3,9 +3,16 @@
         <title>百乐的编程学习</title>
         <link>https://www.leyoubaloy.xyz/</link>
         <description>百乐的编程学习</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 10 Dec 2023 20:51:01 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 11 Dec 2023 20:55:26 &#43;0800</lastBuildDate>
             <atom:link href="https://www.leyoubaloy.xyz/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>《置身事内》读书笔记</title>
+    <link>https://www.leyoubaloy.xyz/posts/%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Mon, 11 Dec 2023 20:55:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://www.leyoubaloy.xyz/posts/%E7%BD%AE%E8%BA%AB%E4%BA%8B%E5%86%85%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[《置身事内》是复旦大学经济学院副教授兰小欢的科普读物。兰教授写这本书的目的是让更多的国人了解我国的经济政策。过去十年，我国的经济发展可以用“]]></description>
+</item><item>
     <title>如何在Windows上编译Python39源代码</title>
     <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8A%E7%BC%96%E8%AF%91python39%E6%BA%90%E4%BB%A3%E7%A0%81/</link>
     <pubDate>Sun, 10 Dec 2023 20:51:01 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://www.leyoubaloy.xyz/posts/vue&#43;flask%E5%AE%9E%E7%8E%B0%E6%92%AD%E6%94%BE%E4%BB%BB%E4%BD%95%E8%A7%86%E9%A2%91%E6%BA%90%E5%8C%85%E6%8B%ACrtsp%E6%91%84%E5%83%8F%E5%A4%B4/</guid>
     <description><![CDATA[背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就]]></description>
-</item><item>
-    <title>如何搭建一个ChatGPT镜像站</title>
-    <link>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/</link>
-    <pubDate>Wed, 12 Apr 2023 14:11:41 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://www.leyoubaloy.xyz/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAchatgpt%E9%95%9C%E5%83%8F%E7%AB%99/</guid>
-    <description><![CDATA[为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内]]></description>
 </item></channel>
 </rss>
