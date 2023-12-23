@@ -4,7 +4,7 @@ author: 孙百乐
 date: 2023-12-23T21:39:08+08:00
 draft: false
 categories: 
-- 经验分享
+- 笔记
 ---
 
 # 变量符号
