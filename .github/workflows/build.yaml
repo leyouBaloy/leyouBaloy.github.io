@@ -43,6 +43,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Create CNAME file
+        run: echo www.leyoubaloy.xyz > ./dist/CNAME
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
