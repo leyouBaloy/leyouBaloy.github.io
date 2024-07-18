@@ -3,7 +3,7 @@
     "title": "长期任务：做一个在线oj的评测",
     "date": "2021-03-23T09:10:48.000Z",
     "file": "长期任务：做一个在线oj的评测.md",
-    "excerpt": "任务拆分\r\r一个html页面，左边是题目，右边是文本框，可以编写代码。右下角有一个“提交”按钮，点击之后将代码发送到后台进行评测。\r现在已有基于jupyternotebook的评测多个题目的评测代码，需要把它拆分后放在django后台运行。\r可能需要用到数据",
+    "excerpt": "任务拆分一个html页面，左边是题目，右边是文本框，可以编写代码。右下角有一个“提交”按钮，点击之后将代码发送到后台进行评测。现在已有基于jupyternotebook的评测多个题目的评测代码，需要把它拆分后放在django后台运行。可能需要用到数据库，统一",
     "tags": [
       "笔记"
     ],
@@ -24,7 +24,7 @@
     "title": "Django学习笔记",
     "date": "2021-03-15T23:02:45.000Z",
     "file": "Django学习笔记.md",
-    "excerpt": "安装虚拟环境\r\r在Powershell中执行\r\r```\rSet-ExecutionPolicyUnrestricted\r执行策略更改\ryyes\rpipfreeze输出所有在本地已安装的包\r```\r\r```\rpipinstallvirtualenv\r",
+    "excerpt": "安装虚拟环境在Powershell中执行```Set-ExecutionPolicyUnrestricted执行策略更改yyespipfreeze输出所有在本地已安装的包``````pipinstallvirtualenvcd目标文件夹virt",
     "tags": [
       "笔记"
     ],
@@ -34,7 +34,7 @@
     "title": "Pandas学习笔记",
     "date": "2021-03-09T11:04:10.000Z",
     "file": "Pandas学习笔记.md",
-    "excerpt": "map()和apply()和applymap()区别\r\rmap()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。\r\rapply()函数的功能是将一个自定义函数作用于DataFrame的行或者列\r",
+    "excerpt": "map()和apply()和applymap()区别map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列appl",
     "tags": [
       "笔记"
     ],
@@ -44,7 +44,7 @@
     "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
     "date": "2021-03-03T20:46:14.000Z",
     "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
-    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver\r仅用于学习\r感谢莫烦up主\r\r图中图\r\r```\rimportmatplotlib.pyplotasplt\r",
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主图中图```importmatplotlib.pyplotaspltfig=",
     "tags": [
       "笔记"
     ],
@@ -54,7 +54,7 @@
     "title": "开学第二天明确学习方向",
     "date": "2021-03-02T20:31:39.000Z",
     "file": "开学第二天明确学习方向.md",
-    "excerpt": "可以进行的学习\r\rmatplotlib\rkaggle刷题pandas等\rweb前端（css,javascript）\rPython爬虫实战\r继续看课本（这个可能是最无聊的）\r\r现在就好迷，在寝室里不知道学啥。\r\r这样吧，学学云顶之弈把",
+    "excerpt": "可以进行的学习matplotlibkaggle刷题pandas等web前端（css,javascript）Python爬虫实战继续看课本（这个可能是最无聊的）现在就好迷，在寝室里不知道学啥。这样吧，学学云顶之弈把",
     "tags": [
       "随笔杂记"
     ],
@@ -64,7 +64,7 @@
     "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
     "date": "2021-02-26T12:06:38.000Z",
     "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
-    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver\r仅用于学习\r感谢莫烦up主\r\rimage图片\r\r```\rimportmatplotlib.pyplotas",
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主image图片```importmatplotlib.pyplotaspltimp",
     "tags": [
       "笔记"
     ],
@@ -74,7 +74,7 @@
     "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
     "date": "2021-02-25T18:40:44.000Z",
     "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
-    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver\r仅供学习使用\r\rLegend图例\r\r```\rimportmatplotlib.pyplotasplt\rimp",
+    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver仅供学习使用Legend图例```importmatplotlib.pyplotaspltimportnum",
     "tags": [
       "笔记"
     ],
@@ -84,7 +84,7 @@
     "title": "csv库的使用方法",
     "date": "2021-02-25T11:10:35.000Z",
     "file": "csv库的使用方法.md",
-    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。\r\r一、csv简介\r\rCSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符",
+    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。一、csv简介CSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。c",
     "tags": [
       "笔记"
     ],
@@ -94,7 +94,7 @@
     "title": "json数据存储",
     "date": "2021-02-25T11:02:16.000Z",
     "file": "json数据存储.md",
-    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2\r\r在上一篇文章里我们讲了xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。\r\r实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据",
+    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2在上一篇文章里我们讲了xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件",
     "tags": [
       "笔记"
     ],
