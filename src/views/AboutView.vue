@@ -11,7 +11,7 @@
       <p>该博客借鉴了<a target="_blank"href="https://github.com/dillonzq/LoveIt">LoveIt</a>和<a target="_blank" href="https://skywt.cn/">SkyWT</a>，感谢你们给我提供了许多灵感！❤</p>
       <!-- <p>六年前，我上高二的时候就开始做博客了，之后几乎每年我都会我认为最新的技术和最好看的样式折腾一段时间，最开始是WordPress，接着是Hexo，Hugo，VuePress...也用过像Butterfly，LoveIt等优秀的主题。别人做的东西好是好，但总是觉得有很多地方不满意，所以干脆自己从头做一个！</p> -->
       <p>如果你觉得我做的还不错，可以点个star哦！在未来我会把它封装成主题，让更多的人可以使用~🤝</p>
-      <p>更多技术细节可以查看：<a href="">项目地址</a></p>
+      <p>更多技术细节可以查看：<a target="_blank" href="https://github.com/leyouBaloy/leyouBaloy.github.io">项目地址</a></p>
     </div>
   </main>
 </template>
@@ -24,18 +24,20 @@ import SocialMedia from "@/components/SocialMedia.vue";
 
 <style scoped>
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 50px;
+  max-width: 1000px;
+  margin: auto;
+
+  
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 1000px;
+  /* width: 100%; */
+  /* max-width: ; */
+  padding: 0 20px;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 h1 {

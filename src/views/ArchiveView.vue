@@ -38,7 +38,7 @@
     </div>
 
   </main>
-  <n-back-top :right="100" />
+  <!-- <n-back-top :right="100" /> -->
 </template>
 
 <script setup lang="ts">
@@ -87,20 +87,20 @@ onMounted(() => {
 
 <style scoped>
 main {
-  display: flex;
-  flex-direction: column;
-  /* 水平居中 */
-  align-items: center;
-  padding-bottom: 50px;
+  max-width: 768px;
+  margin: auto;
+  
 }
 
 .container {
   display: flex;
   flex-direction: column;
   /* margin-top: 60px; */
-  width: 100%;
-  max-width: 768px;
+  /* width: 100%; */
   align-items: center;
+  padding: 0 20px;
+  padding-bottom: 50px;
+  /* margin: auto; */
 }
 
 .anchor {

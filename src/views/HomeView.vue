@@ -19,11 +19,12 @@
         </div>
 
       </div>
-      <n-pagination class="pagination" size="large" v-model:page="numPage" :page-count="pageCount" @update:page="loadMarkdownMetadata" />
-
+      <n-pagination class="pagination" size="large" v-model:page="numPage" :page-count="pageCount" @update:page="loadMarkdownMetadata" :page-slot="7" />
+      <n-back-top :right="10" :bottom="100"/>
     </div>
+    
   </main>
-  <n-back-top :right="10" :bottom="100"/>
+ 
 </template>
 
 <script setup lang="ts">
@@ -126,18 +127,21 @@ onMounted(() => {
 <style scoped>
 /* flex 布局，垂直分布，水平居中 */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex;
+  flex-direction: column; */
+  max-width: 768px;
+  margin: auto;
+  /* align-items: center; */
+  /* margin: auto; */
   /* padding: 20px; */
 }
 
 .content {
-  max-width: 768px;
+  /* margin: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .posts {
@@ -177,6 +181,8 @@ main {
 }
 
 .pagination {
+  /* width: 100%; */
+  margin: auto;
   margin-bottom: 20px;
 }
 

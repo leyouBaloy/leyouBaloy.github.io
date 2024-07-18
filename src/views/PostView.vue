@@ -16,16 +16,16 @@
   
   <style scoped>
 main {
-    display: flex;
-    flex-direction: column;
-    /* 水平居中 */
-    align-items: center;
+  max-width: 768px;
+  margin: auto;
 }
 .container {
     display: flex;
     /* margin-top: 60px; */
     max-width: 768px;
+    padding: 0 20px;
     padding-bottom: 50px;
+    margin: auto;
 }
   </style>
   
