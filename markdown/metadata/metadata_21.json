@@ -3,7 +3,7 @@
     "title": "如何使用v2ray代理",
     "date": "2021-01-22T10:42:05.000Z",
     "file": "如何使用v2ray代理.md",
-    "excerpt": "v2ray是一个代理工具，你不仅需要在电脑上下载这个软件，还要购买或者直接搭建v2ray服务器用于科学上网。\r\r1.下载v2ray\r\r打开以下链接，即可自动跳入下载\r\r[点击直接下载](https://download.fastlink.digital/v2rayN.zip)\r",
+    "excerpt": "v2ray是一个代理工具，你不仅需要在电脑上下载这个软件，还要购买或者直接搭建v2ray服务器用于科学上网。1.下载v2ray打开以下链接，即可自动跳入下载[点击直接下载](https://download.fastlink.digital/v2rayN.zip)（如果上面链",
     "tags": [
       "技能分享"
     ],
@@ -14,7 +14,7 @@
     "title": "jupyter打开项目文件夹",
     "date": "2021-01-19T17:52:50.000Z",
     "file": "jupyter打开项目文件夹.md",
-    "excerpt": "一.添加环境变量\r\r直接在windows里面搜索“查看高级系统设置”，选择<高级>,<环境变量>，点开<path>，以下三行填入其中：\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-cont",
+    "excerpt": "一.添加环境变量直接在windows里面搜索“查看高级系统设置”，选择<高级>,<环境变量>，点开<path>，以下三行填入其中：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/",
     "tags": [
       "技能分享"
     ],
@@ -24,7 +24,7 @@
     "title": "字符串与数字之间的转换",
     "date": "2021-01-01T21:15:27.000Z",
     "file": "字符串与数字之间的转换.md",
-    "excerpt": "方法一（利用<sstream>的stringstream，_可以是浮点数_）\r\r数字to字符串\r\r```\rinclude<iostream>\rinclude<sstream>\rusingnamespacestd;\r\rintmain()\r{\rdoub",
+    "excerpt": "方法一（利用<sstream>的stringstream，_可以是浮点数_）数字to字符串```include<iostream>include<sstream>usingnamespacestd;intmain(){doublex;s",
     "tags": [
       "刷题"
     ],
@@ -34,7 +34,7 @@
     "title": "给string对象插入字符",
     "date": "2020-12-28T16:52:10.000Z",
     "file": "给string对象插入字符.md",
-    "excerpt": "```\rinclude<bits/stdc++.h>\rusingnamespacestd;\r\rintmain()\r{\rstrings;\rs=\"123456\";\rstring::iteratorit;\rit=s.begin();\r",
+    "excerpt": "```include<bits/stdc++.h>usingnamespacestd;intmain(){strings;s=\"123456\";string::iteratorit;it=s.begin();s.inser",
     "tags": [
       "刷题"
     ],
@@ -44,7 +44,7 @@
     "title": "使用sort算法对向量元素排列",
     "date": "2020-12-28T16:26:38.000Z",
     "file": "使用sort算法对向量元素排列.md",
-    "excerpt": "```\rinclude<bits/stdc++.h>\rusingnamespacestd;\r\rintmain()\r{\rsrand(time(NULL));\rvector<int>v;\rinti;\rfor(inti=0;i<10;i++)",
+    "excerpt": "```include<bits/stdc++.h>usingnamespacestd;intmain(){srand(time(NULL));vector<int>v;inti;for(inti=0;i<10;i++){",
     "tags": [
       "刷题"
     ],
@@ -54,7 +54,7 @@
     "title": "使用reverse反向排列算法",
     "date": "2020-12-28T16:21:28.000Z",
     "file": "使用reverse反向排列算法.md",
-    "excerpt": "```\rinclude<bits/stdc++.h>\rusingnamespacestd;\r\rintmain()\r{\rsrand(time(NULL));\rvector<int>v(10);\rfor(inti=0;i<10;i++)\r{\r",
+    "excerpt": "```include<bits/stdc++.h>usingnamespacestd;intmain(){srand(time(NULL));vector<int>v(10);for(inti=0;i<10;i++){v",
     "tags": [
       "刷题"
     ],
@@ -64,7 +64,7 @@
     "title": "《十二公民》观后感",
     "date": "2020-12-21T21:58:43.000Z",
     "file": "《十二公民》观后感.md",
-    "excerpt": "今天和同学们看了电影《十二公民》，有感而发。\r\r十二公民讲的主要是十二位职业，性格各不相同的成年人，受到老师的邀请在政法大学的教室里进行模拟陪审，讨论一起凶杀案的嫌疑人是有罪还是无罪的故事。影片的场景非常简单，绝大部分剧情都发生在那间教室里，但是剧情却一波三折，从最初的十一人投票认为有罪，一人认",
+    "excerpt": "今天和同学们看了电影《十二公民》，有感而发。十二公民讲的主要是十二位职业，性格各不相同的成年人，受到老师的邀请在政法大学的教室里进行模拟陪审，讨论一起凶杀案的嫌疑人是有罪还是无罪的故事。影片的场景非常简单，绝大部分剧情都发生在那间教室里，但是剧情却一波三折，从最初的十一人投票认为有罪，一人认为无",
     "tags": [
       "书影记录"
     ],
@@ -74,7 +74,7 @@
     "title": "字符处理软件-substr-insert-find",
     "date": "2020-12-17T21:10:39.000Z",
     "file": "字符处理软件-substr-insert-find.md",
-    "excerpt": "题目描述\r\r你需要开发一款文字处理软件。最开始时输入一个字符串（不超过100个字符）作为初始文档。可以认为文档开头是第0个字符。需要支持以下操作：\r\r`1str`：后接插入，在文档后面插入字符串str，并输出文档的字符串。\r`2ab`：截取文档部分，只保留文",
+    "excerpt": "题目描述你需要开发一款文字处理软件。最开始时输入一个字符串（不超过100个字符）作为初始文档。可以认为文档开头是第0个字符。需要支持以下操作：`1str`：后接插入，在文档后面插入字符串str，并输出文档的字符串。`2ab`：截取文档部分，只保留文档中从第",
     "tags": [
       "刷题"
     ],
@@ -84,7 +84,7 @@
     "title": "requests爬表情包",
     "date": "2020-12-13T17:23:02.000Z",
     "file": "requests爬表情包.md",
-    "excerpt": "需要的库：\r\r!pipinstalllxml\r\r!pipinstallrequest\r\r!pipinstallpathlib\r\r代码：\r\r```\rimporttime\r代码合集并修改为下载多页表情\rimportrequests\rfrombs4impo",
+    "excerpt": "需要的库：!pipinstalllxml!pipinstallrequest!pipinstallpathlib代码：```importtime代码合集并修改为下载多页表情importrequestsfrombs4importBeautifulSo",
     "tags": [
       "刷题"
     ],
@@ -94,7 +94,7 @@
     "title": "中国是如何富起来的？",
     "date": "2020-12-12T12:19:03.000Z",
     "file": "中国是如何富起来的？.md",
-    "excerpt": "我把解放后中国的崛起分为两个阶段，一是1949年至改革开放前（1978年）发展重工业，二是1978年改革开放之后到现在的中国特色社会主义经济。\r\r      第一阶段，主要领导人是毛泽东主席，他的伟大之处就在于让中国人民团结起来，组建了强有力的政府，政府的动员能力十分了得，当时人民也非常热血积",
+    "excerpt": "我把解放后中国的崛起分为两个阶段，一是1949年至改革开放前（1978年）发展重工业，二是1978年改革开放之后到现在的中国特色社会主义经济。      第一阶段，主要领导人是毛泽东主席，他的伟大之处就在于让中国人民团结起来，组建了强有力的政府，政府的动员能力十分了得，当时人民也非常热血积极，",
     "tags": [
       "书影记录"
     ],

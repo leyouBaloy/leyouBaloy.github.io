@@ -3,7 +3,7 @@
     "title": "递归法求最大公约数",
     "date": "2020-11-17T12:58:03.000Z",
     "file": "递归法求最大公约数.md",
-    "excerpt": "求m和n的最大公约数\r\r```\rintgcd(intm,intn)\r{\rif(m%n==0)\r{\rreturnn;\r}\relse\r{\rreturngcd(n,m%n);\r}\r}\r``",
+    "excerpt": "求m和n的最大公约数```intgcd(intm,intn){if(m%n==0){returnn;}else{returngcd(n,m%n);}}```",
     "tags": [
       "刷题"
     ],
@@ -14,7 +14,7 @@
     "title": "selenium爬教务处课表",
     "date": "2020-11-16T20:45:35.000Z",
     "file": "selenium爬教务处课表.md",
-    "excerpt": "```\rfromseleniumimportwebdriver\rfrombs4importBeautifulSoup\rfromselenium.webdriverimportActionChains\rimporttime\rfromselenium.webdriver.",
+    "excerpt": "```fromseleniumimportwebdriverfrombs4importBeautifulSoupfromselenium.webdriverimportActionChainsimporttimefromselenium.webdriver.commo",
     "tags": [
       "刷题"
     ],
@@ -34,7 +34,7 @@
     "title": "我的青春不迷茫，奋斗青春成就未来-征文活动",
     "date": "2020-11-15T10:23:57.000Z",
     "file": "我的青春不迷茫，奋斗青春成就未来-征文活动.md",
-    "excerpt": "九月，我成为了石油大学计算机学院的一名学生。秋高气爽，海风习习，我第一次远离家乡，独自留在一个陌生的城市，妈妈望着我远去的背影，掉下了眼泪，我的心里也很不是滋味。\r\r但是，我很快就熟悉了校园，与身边的同学打成了一片，我们一起去食堂吃饭，一起寻找上课的教室，一起讨论不会的程序设计题目，一起参加各种",
+    "excerpt": "九月，我成为了石油大学计算机学院的一名学生。秋高气爽，海风习习，我第一次远离家乡，独自留在一个陌生的城市，妈妈望着我远去的背影，掉下了眼泪，我的心里也很不是滋味。但是，我很快就熟悉了校园，与身边的同学打成了一片，我们一起去食堂吃饭，一起寻找上课的教室，一起讨论不会的程序设计题目，一起参加各种活动",
     "tags": [
       "随笔杂记"
     ],
@@ -44,7 +44,7 @@
     "title": "输入二进制转化为十进制",
     "date": "2020-11-10T14:49:20.000Z",
     "file": "输入二进制转化为十进制.md",
-    "excerpt": "```\rbitset<16>bint;//16bit二进制数据，还有bitset<32>\r\rcin>>bint;\rinta;\ra=bint.to_ulong();\rcout<<a;",
+    "excerpt": "```bitset<16>bint;//16bit二进制数据，还有bitset<32>cin>>bint;inta;a=bint.to_ulong();cout<<a;```",
     "tags": [
       "刷题"
     ],
@@ -54,7 +54,7 @@
     "title": "字符数组的拼接和排序-strcat()-sort()-strlen()",
     "date": "2020-11-07T09:11:20.000Z",
     "file": "字符数组的拼接和排序-strcat()-sort()-strlen().md",
-    "excerpt": "【题目描述】\r\r小明参加学校每年一度的大学生科技节活动的游戏，这次遇到的题目是字符接龙。主持人拿出2张卡片，每张卡片上都有一个顺序字符串，即字符串是按ASCII码顺序编排的。现在要求小明把2个字符串连接成一个字符串，而且连接以后的字符串内容还是按ASCII码顺序排列的。（假设每张卡片上的字符串都",
+    "excerpt": "【题目描述】小明参加学校每年一度的大学生科技节活动的游戏，这次遇到的题目是字符接龙。主持人拿出2张卡片，每张卡片上都有一个顺序字符串，即字符串是按ASCII码顺序编排的。现在要求小明把2个字符串连接成一个字符串，而且连接以后的字符串内容还是按ASCII码顺序排列的。（假设每张卡片上的字符串都不包",
     "tags": [
       "刷题"
     ],
@@ -64,7 +64,7 @@
     "title": "删除重复的字符并重新排列-这个题太jb烦人了",
     "date": "2020-11-07T08:48:03.000Z",
     "file": "删除重复的字符并重新排列-这个题太jb烦人了.md",
-    "excerpt": "【题目描述】\r\r输入一个长度不超过100的字符串，删除串中的重复字符。例如：输入的字符串为abacaeedabcdcd，\r\r删除重复字符串后为abced。\r\r【输入格式】\r\r一个长度不超过100个字符。\r\r【输出格式】\r\r删除重复字符后的字符串，保留原来的顺序。\r\rF",
+    "excerpt": "【题目描述】输入一个长度不超过100的字符串，删除串中的重复字符。例如：输入的字符串为abacaeedabcdcd，删除重复字符串后为abced。【输入格式】一个长度不超过100个字符。【输出格式】删除重复字符后的字符串，保留原来的顺序。Forexample:I",
     "tags": [
       "刷题"
     ],
@@ -74,7 +74,7 @@
     "title": "每个字母代表一个数字，输出字符串代表的数字之和",
     "date": "2020-11-05T17:38:36.000Z",
     "file": "每个字母代表一个数字，输出字符串代表的数字之和.md",
-    "excerpt": "【题目描述】\r\rIfwedefineeachoftheuppercaselettersanumber,thatis,1forA,2forB,3forC,...25forY,26forZ,we\r\rcancalculateamark",
+    "excerpt": "【题目描述】Ifwedefineeachoftheuppercaselettersanumber,thatis,1forA,2forB,3forC,...25forY,26forZ,wecancalculateamarkfor",
     "tags": [
       "刷题"
     ],
@@ -84,7 +84,7 @@
     "title": "统计字符串中字符出现的个数-int与char类型的转换",
     "date": "2020-11-05T16:31:07.000Z",
     "file": "统计字符串中字符出现的个数-int与char类型的转换.md",
-    "excerpt": "【题目描述】\r\r从键盘输入一行文本，统计其中数字字符‘0’~‘9’出现的频率并输出。没出现的不需要输出。\r\r【输入格式】\r\r一行文本，长度不超过1000。\r\r【输出格式】\r\r按照从0到9顺序输出统计结果。每个数字的信息占一行，如“0:2”表示数字字符0出现了2次。\r\rFor",
+    "excerpt": "【题目描述】从键盘输入一行文本，统计其中数字字符‘0’~‘9’出现的频率并输出。没出现的不需要输出。【输入格式】一行文本，长度不超过1000。【输出格式】按照从0到9顺序输出统计结果。每个数字的信息占一行，如“0:2”表示数字字符0出现了2次。Forexample:In",
     "tags": [
       "刷题"
     ],
@@ -94,7 +94,7 @@
     "title": "大小写字母互换-输入与输出字符串",
     "date": "2020-11-02T16:52:58.000Z",
     "file": "大小写字母互换-输入与输出字符串.md",
-    "excerpt": "【题目描述】\r\r小明在录入一篇英文文献时由于键盘误操作，事先按下了CapsLock（大写锁定）键，然后又按照平时的录入习惯进行操作。结果录入的内容里面，原本应该是英文大写的地方都变成了小写，而原来应该是英文小写的地方都变成了大写。如果重新录入的话实在太可怕了！\r\r【输入格式】\r\r任意一个",
+    "excerpt": "【题目描述】小明在录入一篇英文文献时由于键盘误操作，事先按下了CapsLock（大写锁定）键，然后又按照平时的录入习惯进行操作。结果录入的内容里面，原本应该是英文大写的地方都变成了小写，而原来应该是英文小写的地方都变成了大写。如果重新录入的话实在太可怕了！【输入格式】任意一个字符串（长度",
     "tags": [
       "刷题"
     ],
