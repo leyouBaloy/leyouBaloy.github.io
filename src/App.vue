@@ -15,6 +15,6 @@ const route = useRoute()
 <style scoped>
 * {
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 </style>
