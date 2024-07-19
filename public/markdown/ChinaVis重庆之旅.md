@@ -77,4 +77,4 @@ ChinaVis大会于2023年7月21日-24日在重庆召开，老师带着我们可�
 
 <img src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_7639%E2%80%9D%E5%A4%A7.jpeg" >
 
-回家啦，再见重庆，再见ChinaVis。先坐飞机去南京，再坐高铁回蚌埠，路费报销真爽。下一站，去徐州找彤彤！
+回家啦，再见重庆，再见ChinaVis。先坐飞机去南京，再坐高铁回蚌埠，路费报销真爽。
