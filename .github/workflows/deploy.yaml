@@ -1,34 +1,21 @@
-name: Deploy page
-
-on:
-  push:
-    branches:
-      - master
-
+name: Build and Deploy
+on: [push]
+permissions:
+  contents: write
 jobs:
   build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-        with:
-          persist-credentials: false
-
+        uses: actions/checkout@v4
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
-          yarn install
-          yarn run build
-          cp dist/index.html dist/404.html
+          npm install
+          npm run build
 
-      - name: Create CNAME file
-        run: echo www.leyoubaloy.xyz > ./dist/CNAME
-        
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
-
-## 
+          folder: dist # The folder the action should deploy.
