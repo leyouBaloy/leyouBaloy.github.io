@@ -66,6 +66,7 @@ const renderVNode = (nodes) => {
           style: {
             maxWidth: '768px',
             borderRadius: '10px',
+            display: 'block',
             // 阴影
             boxShadow: '0 1px 3px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.14), 0 2px 5px rgba(0,0,0,.12)',
           },
@@ -127,22 +128,21 @@ li {
 }
 
 pre {
-  max-width: 768px;
-  background: #f6f8fa;
-  /* padding: 1em; */
-  overflow: auto;
+  border-left: 0.5rem solid #cbccce;
+  max-width: 100%;
+    margin: 0;
+    padding: 16px;
+    background-color: #f6f8fa;
+    overflow: auto;
 }
 
 code {
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
   padding: 0em 0.2em;
   border-radius: 4px;
   display:inline-block;
   text-indent: 0;
-}
-
-img {
-  max-width: 100%;
+  max-width: 768px;
 }
 
 blockquote {
@@ -165,15 +165,15 @@ strong {
   display: inline-block;
 }
 
-code {
-  max-width: 100%;
+img {
+  display: block;
 }
-
 
 </style>
 
 <style>
 .n-iamge {
+  display: block !important;
   max-width: 100%;
   border-radius: 20px !important;
 }

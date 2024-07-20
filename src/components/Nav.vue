@@ -1,5 +1,5 @@
 <template>
-
+<transition name="nav-transition">
     <nav :class="['nav', { 'hidden': expandNav }]">
       <router-link
         v-for="(item, index) in navItems"
@@ -12,7 +12,9 @@
         <span>{{ item.name }}</span>
       </router-link>
     </nav>
+  </transition>
 
+    <transition name="nav-transition">
     <nav v-if="expandNav" :class="['nav', 'nav-fix-top', 'nav-blur']">
       <router-link
         v-for="(item, index) in navItems"
@@ -25,6 +27,7 @@
         <span>{{ item.name }}</span>
       </router-link>
     </nav>
+  </transition>
 </template>
 
 <script setup>
@@ -111,6 +114,7 @@ const isActive = (path) => {
 }
 .nav-transition-enter-from, .nav-transition-leave-to {
   transform: translateY(-100%);
+  
 }
 
 </style>
