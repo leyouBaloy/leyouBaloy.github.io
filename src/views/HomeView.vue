@@ -12,7 +12,7 @@
       <div class="posts">
         <n-divider></n-divider>
         <div v-for="post in posts" :key="post.title">
-          <PostCard :title="post.title" :content="post.excerpt" :time="post.date"
+          <PostCard :title="post.title" :content="post.excerpt" :time="new Date(post.date).toLocaleDateString()"
             :tag="post.tag ? post.tag[0] : undefined" :img="post.img" :path="`/post/${post.file}`" :id="post.title" />
           <n-divider></n-divider>
 
@@ -20,6 +20,7 @@
 
       </div>
       <n-pagination class="pagination" size="large" v-model:page="numPage" :page-count="pageCount" @update:page="loadMarkdownMetadata" :page-slot="7" />
+      <Foot></Foot>
       <n-back-top :right="10" :bottom="100"/>
     </div>
     
@@ -32,6 +33,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import axios from 'axios';
 import { NAvatar, NDivider, NPagination,NBackTop,NAlert } from 'naive-ui';
 import Nav from "@/components/Nav.vue";
+import Foot from "@/components/Foot.vue";
 import PostCard from "@/components/PostCard.vue";
 import type { PostMetadata } from "@/types/PostMetadata.ts";
 

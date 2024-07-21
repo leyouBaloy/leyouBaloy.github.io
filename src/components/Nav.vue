@@ -11,6 +11,7 @@
         <n-icon size="17" :component="item.icon"></n-icon>
         <span>{{ item.name }}</span>
       </router-link>
+      
     </nav>
   </transition>
 

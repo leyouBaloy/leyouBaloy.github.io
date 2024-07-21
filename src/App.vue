@@ -17,4 +17,9 @@ const route = useRoute()
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   /* background-color: #fff; */
 }
+
+.footer {
+  display: block;
+  margin: auto;
+}
 </style>
