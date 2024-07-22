@@ -122,7 +122,7 @@ const isActive = (path) => {
 .nav-item {
   display: flex;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0px 10px;
   text-decoration: none;
   color: #333;
   transition: color 0.3s ease;
@@ -152,7 +152,7 @@ const isActive = (path) => {
 a {
   display: flex;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 10px;
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
@@ -173,7 +173,7 @@ a {
   border-radius: 5px;
   padding: 10px 0;
   z-index: 1000;
-  min-width: 120px;
+  min-width: 100px;
 }
 
 .dropdown-item {
