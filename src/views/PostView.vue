@@ -3,6 +3,7 @@
     <main>
         <div class="container">
       <MarkdownRenderer :filename=$route.params.filename />
+      <div class="beaudar beaudar-frame"></div>
     </div>
     </main>
     
@@ -12,6 +13,11 @@
   import { ref, onMounted } from 'vue';
   import MarkdownRenderer from '../components/MarkdownRenderer.vue';
   import Nav from "@/components/Nav.vue";  
+  import { useRoute } from 'vue-router';
+  const $route = useRoute();
+
+
+
   </script>
   
   <style scoped>
