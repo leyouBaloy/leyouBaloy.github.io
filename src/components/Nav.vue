@@ -152,7 +152,7 @@ const isActive = (path) => {
 a {
   display: flex;
     align-items: center;
-    padding: 0px 10px;
+    padding: 0px 15px;
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
