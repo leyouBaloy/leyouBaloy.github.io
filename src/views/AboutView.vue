@@ -12,14 +12,36 @@
       <!-- <p>六年前，我上高二的时候就开始做博客了，之后几乎每年我都会我认为最新的技术和最好看的样式折腾一段时间，最开始是WordPress，接着是Hexo，Hugo，VuePress...也用过像Butterfly，LoveIt等优秀的主题。别人做的东西好是好，但总是觉得有很多地方不满意，所以干脆自己从头做一个！</p> -->
       <p>如果你觉得我做的还不错，可以点个star哦！在未来我会把它封装成主题，让更多的人可以使用~🤝</p>
       <p>更多技术细节可以查看：<a target="_blank" href="https://github.com/leyouBaloy/leyouBaloy.github.io">项目地址</a></p>
+      <h1>留言板📋</h1>
     </div>
   </main>
+  <div id="comment-section"></div>
 </template>
 
 <script setup>
 import Nav from "@/components/Nav.vue";
 import InfoCards from "@/components/InfoCards.vue";
 import SocialMedia from "@/components/SocialMedia.vue";
+import { onMounted, nextTick } from "vue";
+
+onMounted(async () => {
+  await nextTick();
+  const script = document.createElement('script');
+  script.src = "https://beaudar.lipk.org/client.js";
+  script.setAttribute('repo', 'leyouBaloy/leyouBaloy.github.io');
+  script.setAttribute('issue-term', 'pathname');
+  script.setAttribute('theme', 'github-light');
+  script.setAttribute('crossorigin', 'anonymous');
+  script.async = true;
+
+  const commentSection = document.getElementById('comment-section');
+  if (commentSection) {
+    commentSection.appendChild(script);
+  } else {
+    console.error('Cannot find comment-section element.');
+  }
+});
+
 </script>
 
 <style scoped>
@@ -37,7 +59,7 @@ main {
   /* max-width: ; */
   padding: 0 20px;
   align-items: center;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 h1 {

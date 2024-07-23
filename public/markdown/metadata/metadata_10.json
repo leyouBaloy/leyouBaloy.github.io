@@ -1,5 +1,26 @@
 [
   {
+    "title": "Leetcode78:子集——递归、回溯——一道困扰我的题",
+    "date": "2022-03-29T08:46:07.000Z",
+    "file": "Leetcode78_子集——递归、回溯——一道困扰我的题.md",
+    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/subsets/\r\r一道初中数学题，但是是很难的编程题。\r\r题解\r\r二进制枚举\r\r​\t集合`a={5,2,9}`中任何一个数有两种状态，在子集中或者不在子集中，分别用1和0来表示。所以我",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
+    "title": "今天逃课还被点名了qwq",
+    "date": "2022-03-29T01:36:46.000Z",
+    "file": "今天逃课还被点名了qwq.md",
+    "excerpt": "疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最多的就是刷视频打游戏和睡觉。\r\r今天早上没定闹钟，8:00上课，7:45我才起床。迷迷糊糊的还把时间看错了，以为是8:45，索性直接摆烂不去了。其实这个时候",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": ""
+  },
+  {
     "title": "Leetcode103:二叉树的锯齿形层序遍历",
     "date": "2022-03-27T11:36:29.000Z",
     "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
@@ -7,8 +28,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 25
+    "img": ""
   },
   {
     "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
@@ -77,26 +97,6 @@
     "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/non-overlapping-intervals/\r\r这题我竟然一年前做过，第二遍再做的时候一点印象都没有。\r\r看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算",
     "tags": [
       "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode240:搜索二维矩阵——二分、矩阵",
-    "date": "2022-03-19T09:55:44.000Z",
-    "file": "Leetcode240_搜索二维矩阵——二分、矩阵.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/search-a-2d-matrix-ii/\r\r题解\r\r法一：逐行二分\r\r没啥好说的，代码可以参考一下\r\r```c++\rclassSolution{\rpublic:\rb",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Roboflow+colab优雅地训练yolov5模型",
-    "date": "2022-03-19T05:37:49.000Z",
-    "file": "roboflow+colab优雅地训练yolov5模型.md",
-    "excerpt": "roboflow\r\rroboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。\r\r网址：https://roboflow.com/\r\r提示：\r\r可以免费使用\r需要挂代理\r套餐一",
-    "tags": [
-      "技能分享"
     ],
     "img": ""
   }

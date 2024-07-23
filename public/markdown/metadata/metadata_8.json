@@ -1,5 +1,27 @@
 [
   {
+    "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
+    "date": "2022-04-20T11:01:29.000Z",
+    "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
+    "excerpt": "题目\r\r题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？\r\r初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面",
+    "tags": [
+      "刷题",
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
+    "title": "Leetcode821:字符的最短距离——两次遍历",
+    "date": "2022-04-19T08:45:09.000Z",
+    "file": "Leetcode821_字符的最短距离——两次遍历.md",
+    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/shortest-distance-to-a-character/\r\r题解\r\r遍历k次，取最小\r\r思路：创建结果数组`v`，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍`s",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
     "title": "Leetcode386:字典序排数——dfs、迭代",
     "date": "2022-04-18T09:26:02.000Z",
     "file": "Leetcode386_字典序排数——dfs、迭代.md",
@@ -7,8 +29,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 25
+    "img": ""
   },
   {
     "title": "Leetcode5:最长回文子串——中心扩展法",
@@ -76,27 +97,6 @@
     "date": "2022-04-09T04:08:07.000Z",
     "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
     "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/subarray-sum-equals-k/\r\r不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。\r\r题解\r\r枚举法\r\r枚举法会超时，但可以为我们提供思路。\r\r考虑以`j",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "C++和python常用函数",
-    "date": "2022-04-08T12:23:24.000Z",
-    "file": "c++和python常用函数.md",
-    "excerpt": "c++常用函数\r\rsort(v.begin(),v.end())\r\r```c++\r//向量v\rvector<int>v;\rsort(v.begin(),v.end())\r//数组a\rsort(a,a+n);\r```\r\r```c++\r//可以加参数cm",
-    "tags": [
-      "刷题",
-      "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
-    "date": "2022-04-08T11:59:03.000Z",
-    "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/longest-substring-without-repeating-characters/\r\r乍一看好像做过，再一看好像不会😂\r\r题解\r\r暴力法\r\r设字符串为`s`，假如我们要找的这段没",
     "tags": [
       "刷题"
     ],
