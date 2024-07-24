@@ -1,6 +1,6 @@
 <template>
-  <Nav :expandNav="true"></Nav>
   <main>
+    <PageHead></PageHead>
     <div class="container">
       <h1>文章归档📚</h1>
       <span class="xz">共发布 {{ totalPosts }} 篇文章 📕</span>
@@ -50,6 +50,7 @@ import Timeline from "@/components/Timeline.vue";
 import TimelineItem from "@/components/TimelineItem.vue";
 import { NTabs, NTabPane, NBackTop, NAnchor, NAnchorLink } from "naive-ui";
 import type { PostMetadata } from "@/types/PostMetadata.ts";
+import PageHead from '@/components/PageHead.vue';
 
 const totalPosts = ref(0);
 const postsByYear = ref<Record<string, PostMetadata[]>>({});

@@ -1,15 +1,8 @@
 <template>
   <main>
-    
-      <div class="bg">
-        <n-avatar :round="true" :size="100" src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/avatar.jpg"
-        :bordered="true" />
-      <span class="name">Bailey</span>
-      <span class="zym">读万卷书，行万里路</span>
-      <div ref="navPlaceholder" class="nav-placeholder"></div>
-      <Nav :expandNav="expandNav"></Nav>
-      </div>
-      <div class="content">
+
+    <PageHead></PageHead>
+    <div class="content">
       <div class="posts">
         <!-- <n-divider></n-divider> -->
         <div v-for="post in posts" :key="post.title">
@@ -34,45 +27,16 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import axios from 'axios';
 import { NAvatar, NDivider, NPagination, NBackTop, NAlert } from 'naive-ui';
-import Nav from "@/components/Nav.vue";
 import Foot from "@/components/Foot.vue";
+import PageHead from "@/components/PageHead.vue";
 import PostCard from "@/components/PostCard.vue";
 import type { PostMetadata } from "@/types/PostMetadata.ts";
 
 // const isNavFixed = ref(false);
 // const isNavBlur = ref(false);
-const expandNav = ref(false);
-const nav = ref<HTMLElement | null>(null);
-const navPlaceholder = ref<HTMLElement | null>(null);
 
-const observer = new IntersectionObserver(
-  ([entry]) => {
-    if (entry.intersectionRatio === 0) {
-      // isNavFixed.value = true;
-      // isNavBlur.value = true;
-      expandNav.value = true;
-    } else {
-      // isNavFixed.value = false;
-      // isNavBlur.value = false;
-      expandNav.value = false;
-    }
-  },
-  {
-    threshold: [0, 1]
-  }
-);
 
-onMounted(() => {
-  if (navPlaceholder.value) {
-    observer.observe(navPlaceholder.value);
-  }
-});
 
-onBeforeUnmount(() => {
-  if (navPlaceholder.value) {
-    observer.unobserve(navPlaceholder.value);
-  }
-});
 
 // 加载元数据
 const posts = ref<PostMetadata[]>([]);
@@ -145,22 +109,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 60px;
   padding-top: 20px;
 }
 
-.bg {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url('../assets/bg1.jpg');
-  background-position: center;
-  background-size: cover;
-  padding-bottom: 40px;
-  padding-top: 30px;
-}
+
 
 .posts {
   width: 100%;
@@ -177,31 +130,8 @@ main {
   }
 }
 
-.name {
-  font-size: 27px;
-  background-color: #ffffff3c;
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  /* color:#fff; */
-}
 
-.zym {
-  /* color: #73828c; */
-  color:#fff;
-  background-color: #3A7EE1;
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
 
-.scroll-content {
-  width: 100%;
-}
-
-.nav-placeholder {
-  height: 10px;
-  /* 占个位置 */
-  width: 100%;
-}
 
 .pagination {
   /* width: 100%; */

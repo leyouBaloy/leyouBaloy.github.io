@@ -1,6 +1,6 @@
 <template>
-  <Nav :expandNav="true"></Nav>
   <main>
+    <PageHead></PageHead>
     <div class="container">
       <h1>关于我🧍</h1>
       <p>虽然我们都不喜欢被打标签...但是通过标签可以快速了解一个人。</p>
@@ -23,6 +23,7 @@ import Nav from "@/components/Nav.vue";
 import InfoCards from "@/components/InfoCards.vue";
 import SocialMedia from "@/components/SocialMedia.vue";
 import { onMounted, nextTick } from "vue";
+import PageHead from "@/components/PageHead.vue";
 
 onMounted(async () => {
   await nextTick();

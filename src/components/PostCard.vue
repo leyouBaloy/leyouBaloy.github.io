@@ -142,6 +142,7 @@ const props = defineProps({
     justify-content: center;
     width: 100%;
     margin-bottom: 20px;
+    max-height: 400px;
     /* height: 100px; */
 }
 
