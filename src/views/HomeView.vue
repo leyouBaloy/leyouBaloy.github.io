@@ -133,7 +133,7 @@ onMounted(() => {
 main {
   /* display: flex;
   flex-direction: column; */
-  max-width: 768px;
+  max-width: 900px;
   margin: auto;
   /* align-items: center; */
   /* margin: auto; */
