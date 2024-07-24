@@ -1,16 +1,17 @@
 <template>
   <main>
-    <div class="content">
-      <n-avatar :round="true" :size="100" src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/avatar.jpg" :bordered="true" />
+    
+      <div class="bg">
+        <n-avatar :round="true" :size="100" src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/avatar.jpg"
+        :bordered="true" />
       <span class="name">Bailey</span>
       <span class="zym">读万卷书，行万里路</span>
       <div ref="navPlaceholder" class="nav-placeholder"></div>
       <Nav :expandNav="expandNav"></Nav>
-
-
-
+      </div>
+      <div class="content">
       <div class="posts">
-        <n-divider></n-divider>
+        <!-- <n-divider></n-divider> -->
         <div v-for="post in posts" :key="post.title">
           <PostCard :title="post.title" :content="post.excerpt" :time="new Date(post.date).toLocaleDateString()"
             :tag="post.tag ? post.tag[0] : undefined" :img="post.img" :path="`/post/${post.file}`" :id="post.title" />
@@ -19,19 +20,20 @@
         </div>
 
       </div>
-      <n-pagination class="pagination" size="large" v-model:page="numPage" :page-count="pageCount" @update:page="loadMarkdownMetadata" :page-slot="7" />
+      <n-pagination class="pagination" size="large" v-model:page="numPage" :page-count="pageCount"
+        @update:page="loadMarkdownMetadata" :page-slot="7" />
       <Foot></Foot>
-      <n-back-top :right="10" :bottom="100"/>
+      <n-back-top :right="10" :bottom="100" />
     </div>
-    
+
   </main>
- 
+
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import axios from 'axios';
-import { NAvatar, NDivider, NPagination,NBackTop,NAlert } from 'naive-ui';
+import { NAvatar, NDivider, NPagination, NBackTop, NAlert } from 'naive-ui';
 import Nav from "@/components/Nav.vue";
 import Foot from "@/components/Foot.vue";
 import PostCard from "@/components/PostCard.vue";
@@ -144,6 +146,20 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 0 20px;
+  padding-top: 20px;
+}
+
+.bg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../assets/bg1.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 40px;
+  padding-top: 30px;
 }
 
 .posts {
@@ -163,10 +179,15 @@ main {
 
 .name {
   font-size: 27px;
+  background-color: #ffffff3c;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* color:#fff; */
 }
 
 .zym {
-  color: #73828c;
+  /* color: #73828c; */
+  color:#fff;
+  background-color: #3A7EE1;
   font-size: 17px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -187,13 +208,12 @@ main {
   margin: auto;
   margin-bottom: 20px;
 }
-
 </style>
 
 <style>
 .n-pagination .n-pagination-item {
---n-item-border-active: 1px solid #2d96bd;
---n-item-text-color-active: #2d96bd;
---n-item-text-color-hover: #2d96bd;
+  --n-item-border-active: 1px solid #2d96bd;
+  --n-item-text-color-active: #2d96bd;
+  --n-item-text-color-hover: #2d96bd;
 }
 </style>

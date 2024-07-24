@@ -100,6 +100,8 @@ const isActive = (path) => {
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease; /* 添加过渡效果 */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
 }
 
 .hidden {

@@ -15,11 +15,20 @@ const route = useRoute()
 <style scoped>
 * {
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  /* background-color: #fff; */
 }
 
 .footer {
   display: block;
   margin: auto;
+}
+</style>
+
+<style>
+body {
+  background-color: #DDD;
+}
+
+main {
+  background-color: #FFFFFF;
 }
 </style>

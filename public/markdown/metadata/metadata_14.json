@@ -1,5 +1,16 @@
 [
   {
+    "title": "从wordpress迁移到hugo过程分享",
+    "date": "2022-01-28T07:52:50.000Z",
+    "file": "从wordpress迁移到hugo过程分享.md",
+    "excerpt": "为什么抛弃wordpress选择hugo\r\r不用买服务器了\rwordpress经常奔溃，易受攻击\rhugo编译速度真tm快\r有一款钟爱的hugo主题\r\r文章迁移\r\r文章迁移使用一个hexo插件（你没看错，就是hexo插件）。\r\r首先新建一个hex",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "gitee/github webhooks+nodejs实现自动拉取代码",
     "date": "2022-01-25T20:50:41.000Z",
     "file": "gitee webhooks+nodejs实现自动拉取代码.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "年度总结",
@@ -87,16 +97,6 @@
     "excerpt": "起因\r\r从大一我刚做昕哥的学生开始，他就建议刚学完c程序设计的我趁热打铁，去考一个ccfcsp认证。我当时对算法不感兴趣，也没参加acm，就没有关注这个认证。\r\r结果没想到昕哥主持了今年的csp认证，考点就在我们学校。昕哥当然首先拉我们参加，还说给我们报销费用，让我们先垫着。（估计",
     "tags": [
       "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "数值计算方法",
-    "date": "2021-12-01T18:31:18.000Z",
-    "file": "数值计算方法.md",
-    "excerpt": "包含几乎所有课堂上讲的题目\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/12/IMG_20210929_163844_edit_487818933159",
-    "tags": [
-      "技能分享"
     ],
     "img": ""
   }

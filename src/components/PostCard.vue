@@ -1,20 +1,19 @@
 <template>
     <div class="container">
-        <div v-if="img!=null" class="img-container">
-            <n-image
-                lazy
-                object-fit="cover"
-                width="100%"
-                :src="img"
-            />
-        </div>
+
         <router-link :to="path" class="title"><span>{{ title }}</span>
-</router-link>
+
+        </router-link>
+
+        <div v-if="img != ''" class="img-container">
+            <n-image lazy object-fit="cover" width="100%" :src="img" />
+        </div>
         <div class="content">{{ content }} ...<router-link :to="path" class="more"><span>更多</span></router-link></div>
         <div class="footer">
             <span class="time">发布时间：{{ time }}</span>
-            <span class="tag">分类：{{ tag }}</span></div>
-</div>
+            <span class="tag">分类：{{ tag }}</span>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -66,6 +65,7 @@ const props = defineProps({
     text-decoration: none;
     font-weight: 800;
     color: black;
+
     /* 鼠标悬浮 */
     &:hover {
         text-decoration: underline;
@@ -81,6 +81,7 @@ const props = defineProps({
     /* 取消下划线 */
     text-decoration: none;
     color: #2d96bd;
+
     /* 鼠标悬浮 */
     &:hover {
         text-decoration: underline;
@@ -110,10 +111,10 @@ const props = defineProps({
 .footer {
     display: flex;
     flex-direction: row;
-    
+
 }
 
-.time{
+.time {
     font-size: 15px;
     color: #73828c;
     /* margin-left: 10px; */
@@ -143,14 +144,15 @@ const props = defineProps({
     margin-bottom: 20px;
     /* height: 100px; */
 }
+
 .n-image {
     max-width: 100%;
     border-radius: 10px;
     /* height: 100%; */
     transition: all 0.3s ease;
-  &:hover {
-    transform: scale(1.01);
-  }
-}
 
+    &:hover {
+        transform: scale(1.01);
+    }
+}
 </style>

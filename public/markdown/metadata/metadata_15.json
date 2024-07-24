@@ -1,5 +1,16 @@
 [
   {
+    "title": "数值计算方法",
+    "date": "2021-12-01T18:31:18.000Z",
+    "file": "数值计算方法.md",
+    "excerpt": "包含几乎所有课堂上讲的题目\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/12/IMG_20210929_163844_edit_487818933159",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "讲一个能满足和感动自己的故事！",
     "date": "2021-11-24T21:25:56.000Z",
     "file": "讲一个能满足和感动自己的故事！.md",
@@ -7,8 +18,7 @@
     "tags": [
       "笔记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "Mac上自动连接校园网的脚本",
@@ -87,16 +97,6 @@
     "excerpt": "时间\r\r2021年国庆期间，10月3日至5日。\r\r第一站：翡翠谷\r\r翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。\r\r翡翠谷是一条长长的峡",
     "tags": [
       "书影记录"
-    ],
-    "img": ""
-  },
-  {
-    "title": "全国高校AI知识竞赛UPC赛区获奖通知",
-    "date": "2021-09-29T23:37:12.000Z",
-    "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
-    "excerpt": "获奖名单：\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)\r\r![](https://myblog-1257298572.",
-    "tags": [
-      "刷题"
     ],
     "img": ""
   }
