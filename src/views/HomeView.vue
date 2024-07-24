@@ -110,25 +110,22 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 0 60px;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
+@media screen and (min-width:50px){
+  .content {
+  padding-left: 20px;
+  padding-right: 20px;
 
+}
+}
 
 .posts {
   width: 100%;
 }
 
-/* 添加阴影 */
-.n-avatar {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
-  transition: all 0.3s ease;
 
-  &:hover {
-    transform: scale(1.1);
-  }
-}
 
 
 
