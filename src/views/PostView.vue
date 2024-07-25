@@ -6,32 +6,38 @@
       
     </div>
   </main>
-  <div id="comment-section"></div>
+  <div class="comment" ref="scriptContainer"></div>
 </template>
 
 <script setup>
-import { nextTick, onMounted } from 'vue';
+import { nextTick, onMounted, ref } from 'vue';
 import MarkdownRenderer from '../components/MarkdownRenderer.vue';
 import Nav from "@/components/Nav.vue";
 import { useRoute } from 'vue-router';
 const $route = useRoute();
 
+const scriptContainer = ref(null);
+
 onMounted(async () => {
-  await nextTick();
+  
+
   const script = document.createElement('script');
-  script.src = "https://beaudar.lipk.org/client.js";
-  script.setAttribute('repo', 'leyouBaloy/leyouBaloy.github.io');
-  script.setAttribute('issue-term', 'pathname');
-  script.setAttribute('theme', 'github-light');
-  script.setAttribute('crossorigin', 'anonymous');
+  script.src = "https://giscus.app/client.js";
+  script.dataset.repo = "leyoubaloy/leyoubaloy.github.io";
+  script.dataset.repoId = "R_kgDOGv-zPA";
+  script.dataset.category = "Announcements";
+  script.dataset.categoryId = "DIC_kwDOGv-zPM4ChJ8X";
+  script.dataset.mapping = "pathname";
+  script.dataset.strict = "0";
+  script.dataset.reactionsEnabled = "1";
+  script.dataset.emitMetadata = "0";
+  script.dataset.inputPosition = "bottom";
+  script.dataset.theme = "preferred_color_scheme";
+  script.dataset.lang = "zh-CN";
+  script.crossOrigin = "anonymous";
   script.async = true;
 
-  const commentSection = document.getElementById('comment-section');
-  if (commentSection) {
-    commentSection.appendChild(script);
-  } else {
-    console.error('Cannot find comment-section element.');
-  }
+  scriptContainer.value.appendChild(script);
 });
 </script>
 

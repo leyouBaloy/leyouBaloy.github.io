@@ -13,34 +13,41 @@
       <p>如果你觉得我做的还不错，可以点个star哦！在未来我会把它封装成主题，让更多的人可以使用~🤝</p>
       <p>更多技术细节可以查看：<a target="_blank" href="https://github.com/leyouBaloy/leyouBaloy.github.io">项目地址</a></p>
       <h1>留言板📋</h1>
+      <div class="comment" ref="scriptContainer"></div>
     </div>
   </main>
-  <div id="comment-section"></div>
+  
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Nav from "@/components/Nav.vue";
 import InfoCards from "@/components/InfoCards.vue";
 import SocialMedia from "@/components/SocialMedia.vue";
-import { onMounted, nextTick } from "vue";
+import { onMounted, nextTick, ref } from "vue";
 import PageHead from "@/components/PageHead.vue";
 
+const scriptContainer = ref(null);
+
 onMounted(async () => {
-  await nextTick();
+  
+
   const script = document.createElement('script');
-  script.src = "https://beaudar.lipk.org/client.js";
-  script.setAttribute('repo', 'leyouBaloy/leyouBaloy.github.io');
-  script.setAttribute('issue-term', 'pathname');
-  script.setAttribute('theme', 'github-light');
-  script.setAttribute('crossorigin', 'anonymous');
+  script.src = "https://giscus.app/client.js";
+  script.dataset.repo = "leyoubaloy/leyoubaloy.github.io";
+  script.dataset.repoId = "R_kgDOGv-zPA";
+  script.dataset.category = "Announcements";
+  script.dataset.categoryId = "DIC_kwDOGv-zPM4ChJ8X";
+  script.dataset.mapping = "pathname";
+  script.dataset.strict = "0";
+  script.dataset.reactionsEnabled = "1";
+  script.dataset.emitMetadata = "0";
+  script.dataset.inputPosition = "bottom";
+  script.dataset.theme = "preferred_color_scheme";
+  script.dataset.lang = "zh-CN";
+  script.crossOrigin = "anonymous";
   script.async = true;
 
-  const commentSection = document.getElementById('comment-section');
-  if (commentSection) {
-    commentSection.appendChild(script);
-  } else {
-    console.error('Cannot find comment-section element.');
-  }
+  scriptContainer.value.appendChild(script);
 });
 
 </script>
@@ -90,5 +97,25 @@ a {
   margin-top: 20px;
 }
 
+.comment{
+  width: 100%;
+  padding: 0 20px;
+}
 
+</style>
+
+<style>
+.giscus {
+  max-width: 900px;
+  margin: auto;
+  background-color: #fff;
+  /* position: relative; */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.giscus-frame {
+  /* max-width: 860px; */
+  margin: auto;
+}
 </style>

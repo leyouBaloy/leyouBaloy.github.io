@@ -126,10 +126,6 @@ main {
 }
 
 
-
-
-
-
 .pagination {
   /* width: 100%; */
   margin: auto;
