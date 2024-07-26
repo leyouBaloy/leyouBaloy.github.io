@@ -38,13 +38,6 @@ const router = createRouter({
       // }
     },
   ],
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { top: 1000 }
-    }
-  },
 })
 
 export default router

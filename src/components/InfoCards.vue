@@ -248,7 +248,7 @@ height: 1124px; */
     position: static;
     left: 90px;
     top: 0px;
-    width: 417px;
+    /* width: 417px; */
     height: 490px;
     opacity: 1;
 
@@ -269,7 +269,7 @@ height: 1124px; */
     position: static;
     left: 0px;
     top: 0px;
-    width: 200px;
+    width: 180px;
     height: 490px;
     opacity: 1;
 
@@ -287,7 +287,7 @@ height: 1124px; */
     position: static;
     left: 217px;
     top: 0px;
-    width: 200px;
+    width: 180px;
     height: 490px;
     opacity: 1;
 
@@ -304,7 +304,7 @@ height: 1124px; */
     position: static;
     left: 522px;
     top: 0px;
-    width: 415px;
+    width: 375px;
     height: 490px;
     opacity: 1;
 
@@ -324,8 +324,8 @@ height: 1124px; */
     position: static;
     left: 0px;
     top: 145px;
-    width: 415px;
-    height: 345px;
+    width: 375px;
+    /* height: 345px; */
     opacity: 1;
 
     /* 自动布局 */
@@ -343,7 +343,7 @@ height: 1124px; */
     position: static;
     left: 0px;
     top: 0px;
-    width: 415px;
+    width: 375px;
     height: 130px;
     opacity: 1;
 
@@ -360,8 +360,8 @@ height: 1124px; */
     position: relative;
     left: 0px;
     top: 0px;
-    width: 200px;
-    height: 355px;
+    width: 180px;
+    height: 320px;
     opacity: 1;
 
     box-sizing: border-box;
@@ -376,7 +376,7 @@ height: 1124px; */
     position: relative;
     left: 0px;
     /* top: 370px; */
-    width: 200px;
+    width: 180px;
     height: 120px;
     opacity: 1;
     box-sizing: border-box;
@@ -399,8 +399,8 @@ height: 1124px; */
     position: relative;
     left: 0px;
     top: 0px;
-    width: 200px;
-    height: 125px;
+    width: 180px;
+    height: 105px;
     opacity: 1;
     background-color: #f3f4f6;
 
@@ -418,8 +418,8 @@ height: 1124px; */
     position: relative;
     left: 0px;
     /* top: 140px; */
-    width: 200px;
-    height: 350px;
+    width: 180px;
+    height: 335px;
     opacity: 1;
 
     box-sizing: border-box;
@@ -450,8 +450,8 @@ height: 1124px; */
     position: relative;
     left: 0px;
     top: 0px;
-    width: 415px;
-    height: 165px;
+    width: 375px;
+    height: 150px;
     opacity: 1;
 
     box-sizing: border-box;
@@ -471,8 +471,8 @@ height: 1124px; */
     position: static;
     left: 0px;
     top: 0px;
-    width: 415px;
-    height: 165px;
+    width: 375px;
+    height: 150px;
     opacity: 1;
 
     box-sizing: border-box;
@@ -490,8 +490,8 @@ height: 1124px; */
     position: static;
     left: 215px;
     top: 0px;
-    width: 200px;
-    height: 130px;
+    width: 180px;
+    height: 125px;
     opacity: 1;
 
     box-sizing: border-box;
@@ -505,8 +505,8 @@ height: 1124px; */
     position: static;
     left: 215px;
     top: 0px;
-    width: 200px;
-    height: 130px;
+    width: 180px;
+    height: 125px;
     opacity: 1;
 
     box-sizing: border-box;

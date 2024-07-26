@@ -12,6 +12,7 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@giscus/vue": "^3.0.0",
     "axios": "^1.7.2",
     "emoji-vue": "^0.2.4",
     "front-matter": "^4.0.2",

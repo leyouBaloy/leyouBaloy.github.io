@@ -15,11 +15,37 @@ const route = useRoute()
 <style scoped>
 * {
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  /* background-color: #fff; */
 }
 
 .footer {
   display: block;
+  margin: auto;
+}
+</style>
+
+<style>
+body {
+  background-color: #DDD;
+}
+
+main {
+  background-color: #FFFFFF;
+}
+</style>
+
+<!-- 评论的样式 -->
+<style>
+.giscus {
+  max-width: 900px;
+  margin: auto;
+  background-color: #fff;
+  /* position: relative; */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.giscus-frame {
+  /* max-width: 860px; */
   margin: auto;
 }
 </style>
