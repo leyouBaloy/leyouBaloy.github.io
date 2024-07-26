@@ -1,20 +1,30 @@
 [
   {
-    "title": "《从零开始的女性主义》读后有感",
-    "date": "2022-05-06T09:32:20.000Z",
-    "file": "《从零开始的女性主义》读后有感.md",
-    "excerpt": "《从零开始的女性主义》\r\r“女性主义”其实就是“女权主义”，只不过后者在大家的印象里有贬义的意味，所以换了一种说法。“女权”这个词在近几年特别火，有很多人抨击，也总有人为它辩护，还有人趁乱在其中捣鬼。那么为什么会产生女权主义呢？它到底是怎样的斗争呢？我很好奇，所以去阅读了这本豆瓣热榜第一名",
+    "title": "心态的重要性",
+    "date": "2022-05-07T10:07:05.000Z",
+    "file": "心态的重要性.md",
+    "excerpt": "好心态的学姐导师找人的时候也是想招开朗一点的。",
     "tags": [
-      "书影记录"
+      "随笔杂记"
     ],
     "img": "",
     "totalPages": 26
   },
   {
+    "title": "《从零开始的女性主义》读后有感",
+    "date": "2022-05-06T09:32:20.000Z",
+    "file": "《从零开始的女性主义》读后有感.md",
+    "excerpt": "《从零开始的女性主义》“女性主义”其实就是“女权主义”，只不过后者在大家的印象里有贬义的意味，所以换了一种说法。“女权”这个词在近几年特别火，有很多人抨击，也总有人为它辩护，还有人趁乱在其中捣鬼。那么为什么会产生女权主义呢？它到底是怎样的斗争呢？我很好奇，所以去阅读了这本豆瓣热榜第一名的《",
+    "tags": [
+      "书影记录"
+    ],
+    "img": ""
+  },
+  {
     "title": "Leetcode39:组合总和——回溯",
     "date": "2022-05-06T09:09:58.000Z",
     "file": "Leetcode39_组合总和——回溯.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/combination-sum/\r\r做回溯题就像见老同学，你觉得它还像以前一样简单，但是你错了😭\r\r题解\r\r搜索回溯\r\r思路：对于`candidates`中的每一个数你有两个选项，要么",
+    "excerpt": "题目https://leetcode-cn.com/problems/combination-sum/做回溯题就像见老同学，你觉得它还像以前一样简单，但是你错了😭题解搜索回溯思路：对于`candidates`中的每一个数你有两个选项，要么选，要么不选。所以回",
     "tags": [
       "刷题"
     ],
@@ -24,7 +34,7 @@
     "title": "Leetcode1823:找出游戏的获胜者——约瑟夫环",
     "date": "2022-05-04T08:24:22.000Z",
     "file": "Leetcode1823_找出游戏的获胜者——约瑟夫环.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/\r\r约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。\r\r题解\r\r",
+    "excerpt": "题目https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。题解朴素的模拟法",
     "tags": [
       "刷题"
     ],
@@ -34,7 +44,7 @@
     "title": "期中梳理以及规划",
     "date": "2022-05-03T09:44:40.000Z",
     "file": "期中梳理以及规划.md",
-    "excerpt": "前言\r\r今年影响我们最大的事情就是疫情的反弹，导致学期初无法正常上课。等到课程恢复时又到了期中，体测、考试等都被推迟，本来就漫长煎熬的期中阶段变得更加漫长煎熬了。学期初的时候我写了篇blog，当时立的flag完成的不错，所以今天再立一次。\r\r梳理上半学期\r\r学习、工作",
+    "excerpt": "前言今年影响我们最大的事情就是疫情的反弹，导致学期初无法正常上课。等到课程恢复时又到了期中，体测、考试等都被推迟，本来就漫长煎熬的期中阶段变得更加漫长煎熬了。学期初的时候我写了篇blog，当时立的flag完成的不错，所以今天再立一次。梳理上半学期学习、工作以及生活",
     "tags": [
       "随笔杂记"
     ],
@@ -44,7 +54,7 @@
     "title": "《无人生还》读后有感",
     "date": "2022-04-30T09:58:36.000Z",
     "file": "《无人生还》读后有感.md",
-    "excerpt": "作者\r\r《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写于1939年。\r\r{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqc",
+    "excerpt": "作者《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写于1939年。{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud",
     "tags": [
       "书影记录"
     ],
@@ -54,7 +64,7 @@
     "title": "Leetcode46:全排列——交换、回溯",
     "date": "2022-04-29T09:22:24.000Z",
     "file": "Leetcode46_全排列——回溯.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/permutations/\r\r全排列问题也是比较经典的问题，其所用的交换法也很巧妙。\r\r题解\r\r纯dfs\r\r首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大，但是时间",
+    "excerpt": "题目https://leetcode-cn.com/problems/permutations/全排列问题也是比较经典的问题，其所用的交换法也很巧妙。题解纯dfs首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大，但是时间复杂度和回溯法是相同",
     "tags": [
       "刷题"
     ],
@@ -64,7 +74,7 @@
     "title": "Leetcode17:电话号码的字母组合——回溯",
     "date": "2022-04-27T07:36:14.000Z",
     "file": "Leetcode17_电话号码的字母组合——回溯.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/\r\r终于能自己做出一道题了😭，之前的回溯题没白刷\r\r题解\r\r回溯\r\r思路：先用哈希表储存数字对应的字母，然后",
+    "excerpt": "题目https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/终于能自己做出一道题了😭，之前的回溯题没白刷题解回溯思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径",
     "tags": [
       "刷题"
     ],
@@ -74,7 +84,7 @@
     "title": "Leetcode16:最接近的三数之和——排序、双指针",
     "date": "2022-04-26T10:58:23.000Z",
     "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/3sum-closest/\r\r题解\r\r排序+双指针\r\r这道题的官方题解写的太好了：https://leetcode-cn.com/problems/3sum-closest/solution",
+    "excerpt": "题目https://leetcode-cn.com/problems/3sum-closest/题解排序+双指针这道题的官方题解写的太好了：https://leetcode-cn.com/problems/3sum-closest/solution/zui-jie",
     "tags": [
       "刷题"
     ],
@@ -84,17 +94,7 @@
     "title": "Leetcode11:盛水最多的容器——双指针",
     "date": "2022-04-25T09:26:41.000Z",
     "file": "Leetcode11_盛水最多的容器——双指针.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/container-with-most-water/\r\r每次看题解：“我又会了！”\r\r下一题：“我是废物。”\r\r题解\r\r双指针\r\r定义两个指针`left`和`right`分别在最左边",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode743:网络延迟时间——dijkstra算法",
-    "date": "2022-04-21T09:35:07.000Z",
-    "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/network-delay-time/\r\r关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。\r\r题解\r\r关于dijkstra算法具体内容",
+    "excerpt": "题目https://leetcode-cn.com/problems/container-with-most-water/每次看题解：“我又会了！”下一题：“我是废物。”题解双指针定义两个指针`left`和`right`分别在最左边和最右边，指向两个柱子，",
     "tags": [
       "刷题"
     ],

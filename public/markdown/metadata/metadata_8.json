@@ -1,21 +1,31 @@
 [
   {
-    "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
-    "date": "2022-04-20T11:01:29.000Z",
-    "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
-    "excerpt": "题目\r\r题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？\r\r初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面",
+    "title": "Leetcode743:网络延迟时间——dijkstra算法",
+    "date": "2022-04-21T09:35:07.000Z",
+    "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/network-delay-time/关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。题解关于dijkstra算法具体内容就不在这里细说了",
     "tags": [
-      "刷题",
-      "笔记"
+      "刷题"
     ],
     "img": "",
     "totalPages": 26
   },
   {
+    "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
+    "date": "2022-04-20T11:01:29.000Z",
+    "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
+    "excerpt": "题目题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步",
+    "tags": [
+      "刷题",
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
     "title": "Leetcode821:字符的最短距离——两次遍历",
     "date": "2022-04-19T08:45:09.000Z",
     "file": "Leetcode821_字符的最短距离——两次遍历.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/shortest-distance-to-a-character/\r\r题解\r\r遍历k次，取最小\r\r思路：创建结果数组`v`，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍`s",
+    "excerpt": "题目https://leetcode-cn.com/problems/shortest-distance-to-a-character/题解遍历k次，取最小思路：创建结果数组`v`，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍`s`，记录下每个`",
     "tags": [
       "刷题"
     ],
@@ -25,7 +35,7 @@
     "title": "Leetcode386:字典序排数——dfs、迭代",
     "date": "2022-04-18T09:26:02.000Z",
     "file": "Leetcode386_字典序排数——dfs、迭代.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/lexicographical-numbers/\r\r日常做不出来😭\r\r题解\r\r什么是字典序？（原谅我到了大二才搞明白什么是字典序😂）\r\r>对于[字符串](https://so.csdn.n",
+    "excerpt": "题目https://leetcode-cn.com/problems/lexicographical-numbers/日常做不出来😭题解什么是字典序？（原谅我到了大二才搞明白什么是字典序😂）>对于[字符串](https://so.csdn.net/so/sear",
     "tags": [
       "刷题"
     ],
@@ -35,7 +45,7 @@
     "title": "Leetcode5:最长回文子串——中心扩展法",
     "date": "2022-04-17T02:36:32.000Z",
     "file": "Leetcode5_最长回文子串——中心扩展法.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/longest-palindromic-substring/\r\r题解\r\r中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题...\r\r这道题需要注意的细节：\r\r",
+    "excerpt": "题目https://leetcode-cn.com/problems/longest-palindromic-substring/题解中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题...这道题需要注意的细节：回文子串长度既",
     "tags": [
       "刷题"
     ],
@@ -45,7 +55,7 @@
     "title": "Git撤销版本",
     "date": "2022-04-16T12:23:57.000Z",
     "file": "git撤销版本.md",
-    "excerpt": "Git如何撤回远程仓库已经提交的版本？\r\r1.不能直接在像gitee,github这样的远程仓库上直接操作。所以先把项目clone下来。\r2.执行`gitlog`查看日志，获取需要回退的版本号，如5f6935bcc46d480113f0c49d4b54052d10c5aec0",
+    "excerpt": "Git如何撤回远程仓库已经提交的版本？1.不能直接在像gitee,github这样的远程仓库上直接操作。所以先把项目clone下来。2.执行`gitlog`查看日志，获取需要回退的版本号，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。3",
     "tags": [
       "技能分享",
       "笔记"
@@ -56,7 +66,7 @@
     "title": "Pandas使用技巧",
     "date": "2022-04-16T07:42:08.000Z",
     "file": "Pandas使用技巧.md",
-    "excerpt": "read_csv()参数\r\rheader\r\r`header=None`读取时不设置表头\r\r\r\rdrop()\r\r`df.drop(0)`删除第一行\r\r\r\r",
+    "excerpt": "read_csv()参数header`header=None`读取时不设置表头drop()`df.drop(0)`删除第一行",
     "tags": [
       "笔记"
     ],
@@ -66,7 +76,7 @@
     "title": "Leetcode451:根据字符出现频率排序——桶排序",
     "date": "2022-04-15T10:00:29.000Z",
     "file": "Leetcode451_根据字符出现频率排序——桶排序.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/sort-characters-by-frequency/\r\r\r\r题解\r\r思路\r\r用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限",
+    "excerpt": "题目https://leetcode-cn.com/problems/sort-characters-by-frequency/题解思路用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26",
     "tags": [
       "刷题"
     ],
@@ -76,7 +86,7 @@
     "title": "《失乐园》读后有感",
     "date": "2022-04-15T08:38:22.000Z",
     "file": "《失乐园》读后有感.md",
-    "excerpt": "故事简叙\r\r{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220415165918989.png\"title=\"《失乐园》\">}}\r\r久木是一家出版社",
+    "excerpt": "故事简叙{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220415165918989.png\"title=\"《失乐园》\">}}久木是一家出版社的编辑，",
     "tags": [
       "书影记录"
     ],
@@ -86,19 +96,9 @@
     "title": "成功主持150人参会的讲座！",
     "date": "2022-04-10T15:05:16.000Z",
     "file": "成功主持150人参会的讲座！.md",
-    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}\r\r\r\r{{<f",
+    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}{{<figur",
     "tags": [
       "随笔杂记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
-    "date": "2022-04-09T04:08:07.000Z",
-    "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/subarray-sum-equals-k/\r\r不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。\r\r题解\r\r枚举法\r\r枚举法会超时，但可以为我们提供思路。\r\r考虑以`j",
-    "tags": [
-      "刷题"
     ],
     "img": ""
   }
