@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { useRoute, RouterView } from 'vue-router'
 import { SpeedInsights } from "@vercel/speed-insights/vue"
+import { inject } from '@vercel/analytics'; // 引入vercel analytics
 const route = useRoute()
+
+// 引入vercel analytics
+inject();
 </script>
 
 <template>
