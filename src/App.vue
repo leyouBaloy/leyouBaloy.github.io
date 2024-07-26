@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute, RouterView } from 'vue-router'
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 const route = useRoute()
 </script>
 
@@ -10,6 +11,7 @@ const route = useRoute()
     </keep-alive>
     <component :is="Component" v-if="!$route.meta.keepAlive" />
 </router-view>
+<SpeedInsights/>
 </template>
 
 <style scoped>
