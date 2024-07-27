@@ -3,7 +3,7 @@ export interface PostMetadata {
     date: string;
     file: string;
     excerpt: string;
-    tag?: string[] | undefined;
+    tags?: string[] | undefined;
     img?: string;
     totalPages?: number;
   }

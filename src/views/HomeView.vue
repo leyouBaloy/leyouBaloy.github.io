@@ -7,7 +7,7 @@
         <!-- <n-divider></n-divider> -->
         <div v-for="post in posts" :key="post.title">
           <PostCard :title="post.title" :content="post.excerpt" :time="new Date(post.date).toLocaleDateString()"
-            :tag="post.tag ? post.tag[0] : undefined" :img="post.img" :path="`/post/${post.file}`" :id="post.title" />
+            :tag="post.tags ? post.tags.join(', ') : '未分类'" :img="post.img" :path="`/post/${post.file}`" :id="post.title" />
           <n-divider></n-divider>
 
         </div>
