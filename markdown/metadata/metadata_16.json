@@ -1,46 +1,5 @@
 [
   {
-    "title": "黄山归来不看岳——黄山之旅",
-    "date": "2021-10-06T08:28:08.000Z",
-    "file": "黄山归来不看岳——黄山之旅.md",
-    "excerpt": "时间2021年国庆期间，10月3日至5日。第一站：翡翠谷翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。翡翠谷是一条长长的峡谷，一路走进去有",
-    "tags": [
-      "书影记录"
-    ],
-    "img": "",
-    "totalPages": 26
-  },
-  {
-    "title": "全国高校AI知识竞赛UPC赛区获奖通知",
-    "date": "2021-09-29T23:37:12.000Z",
-    "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
-    "excerpt": "获奖名单：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)![](https://myblog-1257298572.cos.",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "浏览器不支持getUserMedia",
-    "date": "2021-09-23T15:58:12.000Z",
-    "file": "浏览器不支持getUserMedia.md",
-    "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全浏览器只支持file:,https:,[http://localhost](http://localhost)",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "certbot自动配置nginx给wordpress站点加https",
-    "date": "2021-09-08T22:42:40.000Z",
-    "file": "certbot自动配置nginx给wordpress站点加https.md",
-    "excerpt": "思路1.安装snap2.安装certbot3.自动配置nginx完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](https://",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
-  },
-  {
     "title": "对图像操作",
     "date": "2021-08-29T21:21:29.000Z",
     "file": "对图像操作.md",
@@ -48,7 +7,8 @@
     "tags": [
       "技能分享"
     ],
-    "img": ""
+    "img": "",
+    "totalPages": 25
   },
   {
     "title": "Conda 配置虚拟环境",
@@ -97,6 +57,46 @@
     "excerpt": "一句话概述  《人类简史》在2012年以希伯来文出版。本书从人类的起源开始谈，谈到人类的认知革命、农业革命、再谈到人类的融合统一、科学革命，最后谈一谈人类的未来。构造了一个横跨人类历史的巨大历史框架。作者简介  作者是以色列年轻人尤瓦尔·赫拉利（出书时不到40岁）",
     "tags": [
       "书影记录"
+    ],
+    "img": ""
+  },
+  {
+    "title": "网吧＋炸鸡 yyds!",
+    "date": "2021-08-11T20:57:33.000Z",
+    "file": "网吧＋炸鸡 yyds!.md",
+    "excerpt": "这个星期我去了六次网吧，吃了三次炸鸡。网吧虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。打LOL终极魔典，一开始我两被敌",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "linux学习笔记",
+    "date": "2021-08-08T11:09:47.000Z",
+    "file": "linux学习笔记.md",
+    "excerpt": "安装python1）安装依赖包安装“Developmenttools”软件组：```sudoyumgroupinstall\"Developmenttools\"```因为Python3.7源文件使用zlib格式打包，所以需要安装zlib软件",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "django笔记进阶",
+    "date": "2021-08-08T11:08:25.000Z",
+    "file": "django笔记进阶.md",
+    "excerpt": "models写入新数据，返回此条新数据```new_data=Queue.objects.create(queue_dic)```访问新写入数据的id字段```new_data.id```查询数据查询一条数据```student",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "python发邮件",
+    "date": "2021-08-08T08:20:29.000Z",
+    "file": "python发邮件.md",
+    "excerpt": "QQ邮箱设置![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081637.jpg)![](https://myblog-125",
+    "tags": [
+      "技能分享"
     ],
     "img": ""
   }
