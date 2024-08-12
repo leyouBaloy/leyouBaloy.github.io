@@ -36,7 +36,7 @@
         </n-tab-pane>
       </n-tabs>
     </div>
-
+    <Foot></Foot>
   </main>
   <!-- <n-back-top :right="100" /> -->
 </template>
@@ -51,6 +51,7 @@ import TimelineItem from "@/components/TimelineItem.vue";
 import { NTabs, NTabPane, NBackTop, NAnchor, NAnchorLink } from "naive-ui";
 import type { PostMetadata } from "@/types/PostMetadata.ts";
 import PageHead from '@/components/PageHead.vue';
+import Foot from '@/components/Foot.vue';
 
 const totalPosts = ref(0);
 const postsByYear = ref<Record<string, PostMetadata[]>>({});

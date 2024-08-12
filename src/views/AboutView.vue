@@ -14,7 +14,9 @@
       <p>更多技术细节可以查看：<a target="_blank" href="https://github.com/leyouBaloy/leyouBaloy.github.io">项目地址</a></p>
       <h1>留言板📋</h1>
       <div class="comment" ref="scriptContainer"></div>
+      <Foot></Foot>
     </div>
+
   </main>
   
 </template>
@@ -25,6 +27,7 @@ import InfoCards from "@/components/InfoCards.vue";
 import SocialMedia from "@/components/SocialMedia.vue";
 import { onMounted, nextTick, ref } from "vue";
 import PageHead from "@/components/PageHead.vue";
+import Foot from "@/components/Foot.vue";
 
 const scriptContainer = ref(null);
 

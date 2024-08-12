@@ -5,8 +5,10 @@
       <MarkdownRenderer :filename=$route.params.filename />
       
     </div>
+    <div class="comment" ref="scriptContainer"></div>
+  <Foot></Foot>
   </main>
-  <div class="comment" ref="scriptContainer"></div>
+  
 </template>
 
 <script setup>
@@ -14,6 +16,7 @@ import { nextTick, onMounted, ref } from 'vue';
 import MarkdownRenderer from '../components/MarkdownRenderer.vue';
 import Nav from "@/components/Nav.vue";
 import { useRoute } from 'vue-router';
+import Foot from "@/components/Foot.vue";
 const $route = useRoute();
 
 const scriptContainer = ref(null);
