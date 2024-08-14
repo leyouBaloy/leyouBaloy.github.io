@@ -1,5 +1,17 @@
 [
   {
+    "title": "C++和python常用函数",
+    "date": "2022-04-08T12:23:24.000Z",
+    "file": "c++和python常用函数.md",
+    "excerpt": "c++常用函数sort(v.begin(),v.end())```c++//向量vvector<int>v;sort(v.begin(),v.end())//数组asort(a,a+n);``````c++//可以加参数cmp//比如对inter",
+    "tags": [
+      "刷题",
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 25
+  },
+  {
     "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
     "date": "2022-04-08T11:59:03.000Z",
     "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
@@ -7,8 +19,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 25
+    "img": ""
   },
   {
     "title": "Leetcode347:前K个高频元素——优先队列、堆",
@@ -85,16 +96,6 @@
     "date": "2022-03-30T11:19:10.000Z",
     "file": "Leetcode113_路径总和II——dfs、回溯.md",
     "excerpt": "题目https://leetcode-cn.com/problems/path-sum-ii/题解dfs无回溯我们用深度优先搜索，在搜索时把当前路径记录下来为`nums`。如果满足1.`sum(nums)==targetSum`；2.该节点是叶节点；",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode78:子集——递归、回溯——一道困扰我的题",
-    "date": "2022-03-29T08:46:07.000Z",
-    "file": "Leetcode78_子集——递归、回溯——一道困扰我的题.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/subsets/一道初中数学题，但是是很难的编程题。题解二进制枚举​\t集合`a={5,2,9}`中任何一个数有两种状态，在子集中或者不在子集中，分别用1和0来表示。所以我们可以进行如下编码：",
     "tags": [
       "刷题"
     ],

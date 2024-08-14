@@ -1,5 +1,16 @@
 [
   {
+    "title": "Mac上自动连接校园网的脚本",
+    "date": "2021-11-24T18:58:03.000Z",
+    "file": "Mac上自动连接校园网的脚本.md",
+    "excerpt": "起因傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/1",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 25
+  },
+  {
     "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
     "date": "2021-11-21T09:04:54.000Z",
     "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 25
+    "img": ""
   },
   {
     "title": "精准而优雅——MacBook Air",
@@ -85,16 +95,6 @@
     "date": "2021-09-23T15:58:12.000Z",
     "file": "浏览器不支持getUserMedia.md",
     "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全浏览器只支持file:,https:,[http://localhost](http://localhost)",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "certbot自动配置nginx给wordpress站点加https",
-    "date": "2021-09-08T22:42:40.000Z",
-    "file": "certbot自动配置nginx给wordpress站点加https.md",
-    "excerpt": "思路1.安装snap2.安装certbot3.自动配置nginx完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](https://",
     "tags": [
       "技能分享"
     ],

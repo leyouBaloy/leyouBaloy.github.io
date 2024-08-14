@@ -1,5 +1,16 @@
 [
   {
+    "title": "certbot自动配置nginx给wordpress站点加https",
+    "date": "2021-09-08T22:42:40.000Z",
+    "file": "certbot自动配置nginx给wordpress站点加https.md",
+    "excerpt": "思路1.安装snap2.安装certbot3.自动配置nginx完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](https://",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 25
+  },
+  {
     "title": "对图像操作",
     "date": "2021-08-29T21:21:29.000Z",
     "file": "对图像操作.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 25
+    "img": ""
   },
   {
     "title": "Conda 配置虚拟环境",
@@ -87,16 +97,6 @@
     "excerpt": "models写入新数据，返回此条新数据```new_data=Queue.objects.create(queue_dic)```访问新写入数据的id字段```new_data.id```查询数据查询一条数据```student",
     "tags": [
       "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "python发邮件",
-    "date": "2021-08-08T08:20:29.000Z",
-    "file": "python发邮件.md",
-    "excerpt": "QQ邮箱设置![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081637.jpg)![](https://myblog-125",
-    "tags": [
-      "技能分享"
     ],
     "img": ""
   }
