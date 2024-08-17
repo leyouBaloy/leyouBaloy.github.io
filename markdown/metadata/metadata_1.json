@@ -1,5 +1,16 @@
 [
   {
+    "title": "品酒🍶（国窖 1573）",
+    "date": "2024-08-17T22:01:53.000Z",
+    "file": "品酒（国窖 1573）.md",
+    "excerpt": "今天品一下国窖1573，拿泸州老窖特曲做个对比。香味：国窖1573跟泸州老窖特曲的香味基调十分相似，但仔细闻有细微差别，国窖1573更加轻盈，丰富，有果香味儿。而特曲的窖泥味儿偏重，会更沉闷一些。品尝：入口之后，国窖的这种轻盈感更加明显。无论是入口还是吞咽，国窖都要",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240817222031606.png",
+    "totalPages": 26
+  },
+  {
     "title": "新加坡访学旅行",
     "date": "2024-08-14T08:01:42.000Z",
     "file": "新加坡访学旅行.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_20240808_192834.jpg",
-    "totalPages": 25
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_20240808_192834.jpg"
   },
   {
     "title": "品酒🍶（古井贡酒-古20）以及小插曲",
@@ -89,16 +99,6 @@
     "excerpt": "《置身事内》是复旦大学经济学院副教授兰小欢的科普读物。兰教授写这本书的目的是让更多的国人了解我国的经济政策。过去十年，我国的经济发展可以用“起飞”二字来形容。一提到中国经济，大家都非常自信且乐观的。但是到了疫情结束后的2023年，大家明显感到经济增速放缓了，生活和工作压力变大了。对于我们大学生来说，",
     "tags": [
       "书影记录"
-    ],
-    "img": ""
-  },
-  {
-    "title": "如何在Windows上编译Python39源代码",
-    "date": "2023-12-10T12:51:01.000Z",
-    "file": "如何在Windows上编译Python39源代码.md",
-    "excerpt": "安装VisualStudio2017先下载VisualStudioInstallerhttps://learn.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio?v",
-    "tags": [
-      "技能分享"
     ],
     "img": ""
   }

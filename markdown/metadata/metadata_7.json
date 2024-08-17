@@ -1,5 +1,16 @@
 [
   {
+    "title": "《学术研究，你的成功之道》",
+    "date": "2022-05-07T12:12:51.000Z",
+    "file": "《学术研究，你的成功之道》.md",
+    "excerpt": "《学术研究，你的成功之道》格雷准则如何判断一个好问题？格雷准则是由图灵奖得主JimGary,在1999年图灵奖颁奖典礼上提出的一个好的问题应该具备的几个条件。1.有明显的益处；测试描述简单可以用“电梯描述法”看能否在1分钟之内将问题意义清楚明白的讲出来。",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "《从零开始的女性主义》读后有感",
     "date": "2022-05-06T09:32:20.000Z",
     "file": "《从零开始的女性主义》读后有感.md",
@@ -7,8 +18,7 @@
     "tags": [
       "书影记录"
     ],
-    "img": "",
-    "totalPages": 25
+    "img": ""
   },
   {
     "title": "Leetcode39:组合总和——回溯",
@@ -85,16 +95,6 @@
     "date": "2022-04-25T09:26:41.000Z",
     "file": "Leetcode11_盛水最多的容器——双指针.md",
     "excerpt": "题目https://leetcode-cn.com/problems/container-with-most-water/每次看题解：“我又会了！”下一题：“我是废物。”题解双指针定义两个指针`left`和`right`分别在最左边和最右边，指向两个柱子，",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode743:网络延迟时间——dijkstra算法",
-    "date": "2022-04-21T09:35:07.000Z",
-    "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/network-delay-time/关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。题解关于dijkstra算法具体内容就不在这里细说了",
     "tags": [
       "刷题"
     ],
