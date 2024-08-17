@@ -1,5 +1,16 @@
 [
   {
+    "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
+    "date": "2022-04-09T04:08:07.000Z",
+    "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/subarray-sum-equals-k/不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。题解枚举法枚举法会超时，但可以为我们提供思路。考虑以`j`结尾和为`k`的连",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "C++和python常用函数",
     "date": "2022-04-08T12:23:24.000Z",
     "file": "c++和python常用函数.md",
@@ -8,8 +19,7 @@
       "刷题",
       "笔记"
     ],
-    "img": "",
-    "totalPages": 25
+    "img": ""
   },
   {
     "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
@@ -86,16 +96,6 @@
     "date": "2022-03-31T08:20:49.000Z",
     "file": "Leetcode198_打家劫舍——动态规划.md",
     "excerpt": "题目https://leetcode-cn.com/problems/house-robber/题解看官方题解吧，官方题解写的真好。感想我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode113:路径总和——dfs、回溯",
-    "date": "2022-03-30T11:19:10.000Z",
-    "file": "Leetcode113_路径总和II——dfs、回溯.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/path-sum-ii/题解dfs无回溯我们用深度优先搜索，在搜索时把当前路径记录下来为`nums`。如果满足1.`sum(nums)==targetSum`；2.该节点是叶节点；",
     "tags": [
       "刷题"
     ],
