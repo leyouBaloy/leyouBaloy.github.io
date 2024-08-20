@@ -1,20 +1,30 @@
 [
   {
-    "title": "最大子数组和——动态规划、分治",
-    "date": "2022-02-28T11:35:21.000Z",
-    "file": "最大子数组和——动态规划、分治.md",
-    "excerpt": "题目>来自：https://leetcode-cn.com/problems/maximum-subarray/[53.最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/)难度简单4424收藏分享切换为",
+    "title": "Yolov5训练自己的目标检测模型",
+    "date": "2022-02-28T14:34:57.000Z",
+    "file": "yolov5训练自己的目标检测模型.md",
+    "excerpt": "yolov5训练自己的目标检测模型\r\ryolov5\r\ryolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代模型。\r\r项目地址：[https://github.com/ultralytics/yolov5](https://gi",
     "tags": [
-      "刷题"
+      "技能分享"
     ],
     "img": "",
     "totalPages": 26
   },
   {
+    "title": "最大子数组和——动态规划、分治",
+    "date": "2022-02-28T11:35:21.000Z",
+    "file": "最大子数组和——动态规划、分治.md",
+    "excerpt": "题目\r\r>来自：https://leetcode-cn.com/problems/maximum-subarray/\r\r[53.最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/)\r\r难度简单4424收",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
     "title": "存在重复元素——排序、哈希",
     "date": "2022-02-26T11:22:16.000Z",
     "file": "存在重复元素——排序、哈希.md",
-    "excerpt": "题目>该题来自：https://leetcode-cn.com/problems/contains-duplicate/[217.存在重复元素]难度简单635收藏分享切换为英文接收动态反馈给你一个整数数组`nums`。如果任一值在数组中出现至少两次，",
+    "excerpt": "题目\r>该题来自：https://leetcode-cn.com/problems/contains-duplicate/\r\r[217.存在重复元素]\r\r难度简单635收藏分享切换为英文接收动态反馈\r\r给你一个整数数组`nums`。如果任一值在数组中出现至",
     "tags": [
       "刷题"
     ],
@@ -24,7 +34,7 @@
     "title": "找到小镇的法官——图论入门",
     "date": "2022-02-25T10:49:18.000Z",
     "file": "找到小镇的法官——图论入门.md",
-    "excerpt": "题目>来源：力扣（LeetCode）>链接：https://leetcode-cn.com/problems/find-the-town-judge>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。小镇里有n个人，按从1到n的顺序编号。传言称，",
+    "excerpt": "题目\r\r>来源：力扣（LeetCode）\r>链接：https://leetcode-cn.com/problems/find-the-town-judge\r>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。\r\r小镇里有n个人，按从1到n的顺序编",
     "tags": [
       "刷题"
     ],
@@ -34,7 +44,7 @@
     "title": "完全背包问题——动态规划——这道题解是认真写的qwq",
     "date": "2022-02-23T11:24:06.000Z",
     "file": "完全背包问题——动态规划.md",
-    "excerpt": ">完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。>>题目链接：https://www.acwing.com/problem/content/3/有NN种物品和一个容量是VV的背包，每种物品都有无限件可用。第ii种物品的体积是vivi，价值是wiwi",
+    "excerpt": ">完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。\r>\r>题目链接：https://www.acwing.com/problem/content/3/\r\r有NN种物品和一个容量是VV的背包，每种物品都有无限件可用。\r\r第ii种物品的体积是vivi，价值",
     "tags": [
       "刷题"
     ],
@@ -54,7 +64,7 @@
     "title": "租用游艇——动态规划",
     "date": "2022-02-21T12:19:11.000Z",
     "file": "租用游艇——动态规划.md",
-    "excerpt": ">洛谷P1359租用游艇>>https://www.luogu.com.cn/problem/solution/P1359题目描述长江游艇俱乐部在长江上设置了nn个游艇出租站1,2,\\cdots,n1,2,⋯,n。游客可在这些游艇出租站租用游艇，并在下游的任何一",
+    "excerpt": ">洛谷P1359租用游艇\r>\r>https://www.luogu.com.cn/problem/solution/P1359\r\r题目描述\r\r长江游艇俱乐部在长江上设置了nn个游艇出租站1,2,\\cdots,n1,2,⋯,n。游客可在这些游艇出租站租用游艇，并在",
     "tags": [
       "刷题"
     ],
@@ -64,7 +74,7 @@
     "title": "《雪国》读书笔记",
     "date": "2022-02-13T15:38:09.000Z",
     "file": "《雪国》读书笔记.md",
-    "excerpt": "雪国雪国是远离繁华都市，如世外桃源一般的地方。在小说的开头写道：>穿过县界长长的隧道，便是雪国。夜空下一片白茫茫。主人公岛村每年都会独自来雪国度假，在这里他结识了一个叫驹子的姑娘，岛村被驹子的活泼美丽打动，两人情投意合，开始交往。同时另一个叫叶子的姑娘，她纯粹空灵的气质，更让岛村",
+    "excerpt": "雪国\r\r雪国是远离繁华都市，如世外桃源一般的地方。在小说的开头写道：\r\r>穿过县界长长的隧道，便是雪国。夜空下一片白茫茫。\r\r主人公岛村每年都会独自来雪国度假，在这里他结识了一个叫驹子的姑娘，岛村被驹子的活泼美丽打动，两人情投意合，开始交往。同时另一个叫叶子的姑娘，她纯粹空灵的气",
     "tags": [
       "书影记录"
     ],
@@ -74,7 +84,7 @@
     "title": "记录寒假学做饭",
     "date": "2022-02-02T15:11:15.000Z",
     "file": "记录寒假学做饭.md",
-    "excerpt": "记录寒假学做饭故事起因放假前刷到b站一个热门视频，惊呼：“做饭竟然这么简单？”![回家一定要学做饭](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E5%9B%9E%E5%AE%B6%E4%",
+    "excerpt": "记录寒假学做饭\r\r故事起因\r\r放假前刷到b站一个热门视频，惊呼：“做饭竟然这么简单？”\r\r![回家一定要学做饭](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E5%9B%9E%E5%AE%",
     "tags": [
       "随笔杂记"
     ],
@@ -84,19 +94,9 @@
     "title": "《半泽直树》观后有感",
     "date": "2022-02-01T13:52:23.000Z",
     "file": "《半泽直树》观后有感.md",
-    "excerpt": "半泽直树半泽直树是日本电视剧《半泽直树》中的主人公。半泽的家族经营了一家小公司，在半泽年幼时，日本遇到了经济泡沫，公司急需贷款，但银行对此不但见死不救，还落井下石，逼死了半泽的父亲。大学毕业后，半泽竟选择进入银行工作，立志要找到害死父亲的人，并完成复仇。电视剧的主要讲述的，就是半泽如何传",
+    "excerpt": "半泽直树\r\r半泽直树是日本电视剧《半泽直树》中的主人公。半泽的家族经营了一家小公司，在半泽年幼时，日本遇到了经济泡沫，公司急需贷款，但银行对此不但见死不救，还落井下石，逼死了半泽的父亲。大学毕业后，半泽竟选择进入银行工作，立志要找到害死父亲的人，并完成复仇。电视剧的主要讲述的，就是半泽如",
     "tags": [
       "书影记录"
-    ],
-    "img": ""
-  },
-  {
-    "title": "从wordpress迁移到hugo过程分享",
-    "date": "2022-01-28T07:52:50.000Z",
-    "file": "从wordpress迁移到hugo过程分享.md",
-    "excerpt": "为什么抛弃wordpress选择hugo不用买服务器了wordpress经常奔溃，易受攻击hugo编译速度真tm快有一款钟爱的hugo主题文章迁移文章迁移使用一个hexo插件（你没看错，就是hexo插件）。首先新建一个hexo博客（用完就可以删了",
-    "tags": [
-      "技能分享"
     ],
     "img": ""
   }
