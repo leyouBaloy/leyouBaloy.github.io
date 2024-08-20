@@ -1,5 +1,17 @@
 [
   {
+    "title": "Flask+vue使用jwt验证",
+    "date": "2022-05-22T05:00:39.000Z",
+    "file": "flask+vue使用jwt验证.md",
+    "excerpt": "为什么要使用jwt验证？jwt（jsonwebtoken）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫（天猫属于淘宝的子网站），那么你需不需要重新登录呢？答案是不用，你会发现天猫。在一个站点登录后，在其它子站点就不需要重复登录，这就是单点登录。",
+    "tags": [
+      "技能分享",
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "《学术研究，你的成功之道》",
     "date": "2022-05-07T12:12:51.000Z",
     "file": "《学术研究，你的成功之道》.md",
@@ -7,8 +19,7 @@
     "tags": [
       "笔记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "《从零开始的女性主义》读后有感",
@@ -85,16 +96,6 @@
     "date": "2022-04-26T10:58:23.000Z",
     "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
     "excerpt": "题目https://leetcode-cn.com/problems/3sum-closest/题解排序+双指针这道题的官方题解写的太好了：https://leetcode-cn.com/problems/3sum-closest/solution/zui-jie",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode11:盛水最多的容器——双指针",
-    "date": "2022-04-25T09:26:41.000Z",
-    "file": "Leetcode11_盛水最多的容器——双指针.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/container-with-most-water/每次看题解：“我又会了！”下一题：“我是废物。”题解双指针定义两个指针`left`和`right`分别在最左边和最右边，指向两个柱子，",
     "tags": [
       "刷题"
     ],
