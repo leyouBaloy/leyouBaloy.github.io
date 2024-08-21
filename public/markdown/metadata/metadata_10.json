@@ -1,9 +1,9 @@
 [
   {
-    "title": "Leetcode198:打家劫舍——动态规划",
-    "date": "2022-03-31T08:20:49.000Z",
-    "file": "Leetcode198_打家劫舍——动态规划.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/house-robber/\r\r题解\r\r看官方题解吧，官方题解写的真好。\r\r感想\r\r我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，",
+    "title": "Leetcode55:跳跃游戏——贪心",
+    "date": "2022-04-01T08:03:13.000Z",
+    "file": "Leetcode55_跳跃游戏——贪心.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/jump-game/题解所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。那么这道题可以有这样的思路：从前往后遍历`nums`的元素，实时维护最远可以到达的位置`far",
     "tags": [
       "刷题"
     ],
@@ -11,10 +11,20 @@
     "totalPages": 26
   },
   {
+    "title": "Leetcode198:打家劫舍——动态规划",
+    "date": "2022-03-31T08:20:49.000Z",
+    "file": "Leetcode198_打家劫舍——动态规划.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/house-robber/题解看官方题解吧，官方题解写的真好。感想我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
     "title": "Leetcode113:路径总和——dfs、回溯",
     "date": "2022-03-30T11:19:10.000Z",
     "file": "Leetcode113_路径总和II——dfs、回溯.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/path-sum-ii/\r\r题解\r\rdfs无回溯\r\r我们用深度优先搜索，在搜索时把当前路径记录下来为`nums`。如果满足\r\r1.`sum(nums)==targetSum`；\r2.",
+    "excerpt": "题目https://leetcode-cn.com/problems/path-sum-ii/题解dfs无回溯我们用深度优先搜索，在搜索时把当前路径记录下来为`nums`。如果满足1.`sum(nums)==targetSum`；2.该节点是叶节点；",
     "tags": [
       "刷题"
     ],
@@ -24,7 +34,7 @@
     "title": "Leetcode78:子集——递归、回溯——一道困扰我的题",
     "date": "2022-03-29T08:46:07.000Z",
     "file": "Leetcode78_子集——递归、回溯——一道困扰我的题.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/subsets/\r\r一道初中数学题，但是是很难的编程题。\r\r题解\r\r二进制枚举\r\r​\t集合`a={5,2,9}`中任何一个数有两种状态，在子集中或者不在子集中，分别用1和0来表示。所以我",
+    "excerpt": "题目https://leetcode-cn.com/problems/subsets/一道初中数学题，但是是很难的编程题。题解二进制枚举​\t集合`a={5,2,9}`中任何一个数有两种状态，在子集中或者不在子集中，分别用1和0来表示。所以我们可以进行如下编码：",
     "tags": [
       "刷题"
     ],
@@ -34,7 +44,7 @@
     "title": "今天逃课还被点名了qwq",
     "date": "2022-03-29T01:36:46.000Z",
     "file": "今天逃课还被点名了qwq.md",
-    "excerpt": "疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最多的就是刷视频打游戏和睡觉。\r\r今天早上没定闹钟，8:00上课，7:45我才起床。迷迷糊糊的还把时间看错了，以为是8:45，索性直接摆烂不去了。其实这个时候",
+    "excerpt": "疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最多的就是刷视频打游戏和睡觉。今天早上没定闹钟，8:00上课，7:45我才起床。迷迷糊糊的还把时间看错了，以为是8:45，索性直接摆烂不去了。其实这个时候仍然",
     "tags": [
       "随笔杂记"
     ],
@@ -44,7 +54,7 @@
     "title": "Leetcode103:二叉树的锯齿形层序遍历",
     "date": "2022-03-27T11:36:29.000Z",
     "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/\r\r做过102题后这题可以轻松做出来\r\r题解\r\r复习一下`[102.二叉树的层序遍历]`：\r\r首先根节点入",
+    "excerpt": "题目https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/做过102题后这题可以轻松做出来题解复习一下`[102.二叉树的层序遍历]`：首先根节点入队当队列不为空",
     "tags": [
       "刷题"
     ],
@@ -54,7 +64,7 @@
     "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
     "date": "2022-03-26T09:02:51.000Z",
     "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/\r\r上数据结构这门课时研究过这个问题，思路很快就有，难在debug\r\r题解\r\r",
+    "excerpt": "题目https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/上数据结构这门课时研究过这个问题，思路很快就有，难在debug题解递归法众",
     "tags": [
       "刷题"
     ],
@@ -64,7 +74,7 @@
     "title": "Leetcode108:将有序数组转换为二叉搜索树",
     "date": "2022-03-25T07:36:05.000Z",
     "file": "Leetcode108_将有序数组转换为二叉搜索树.md",
-    "excerpt": "题目\r\r从今天开始多做一点关于数据结构“树”的题目。\r\rhttps://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/\r\r题解\r\r知识点：二叉搜索树\r\r定义很简单：\r\r",
+    "excerpt": "题目从今天开始多做一点关于数据结构“树”的题目。https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/题解知识点：二叉搜索树定义很简单：-若其左子树存在，则",
     "tags": [
       "刷题"
     ],
@@ -74,7 +84,7 @@
     "title": "Leetcode695:岛屿的最大面积——中等难度的搜索算法",
     "date": "2022-03-24T07:47:10.000Z",
     "file": "Leetcode695_岛屿的最大面积——中等难度的搜索算法.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/max-area-of-island/\r\rleetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。\r\r题解\r\r这道",
+    "excerpt": "题目https://leetcode-cn.com/problems/max-area-of-island/leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。题解这道题相较于Leet",
     "tags": [
       "刷题"
     ],
@@ -84,17 +94,7 @@
     "title": "Leetcode977:有序数组的平方——双指针",
     "date": "2022-03-23T12:35:46.000Z",
     "file": "Leetcode977_有序数组的平方——双指针.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/squares-of-a-sorted-array/\r\r题解\r\r先平方再排序\r\r```c++\rclassSolution{\rpublic:\rvector<int>sort",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
-    "date": "2022-03-22T09:50:53.000Z",
-    "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/rotting-oranges/\r\r这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。\r\r题解\r\r解题思路\r\r这道题很明显要使用广度优先搜索，",
+    "excerpt": "题目https://leetcode-cn.com/problems/squares-of-a-sorted-array/题解先平方再排序```c++classSolution{public:vector<int>sortedSquares(v",
     "tags": [
       "刷题"
     ],

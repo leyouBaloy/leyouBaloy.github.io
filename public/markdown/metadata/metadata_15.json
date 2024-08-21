@@ -1,20 +1,30 @@
 [
   {
-    "title": "数值计算方法",
-    "date": "2021-12-01T18:31:18.000Z",
-    "file": "数值计算方法.md",
-    "excerpt": "包含几乎所有课堂上讲的题目\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/12/IMG_20210929_163844_edit_487818933159",
+    "title": "参加ccf csp认证考试有感",
+    "date": "2021-12-05T23:28:56.000Z",
+    "file": "参加ccf csp认证考试有感.md",
+    "excerpt": "起因从大一我刚做昕哥的学生开始，他就建议刚学完c程序设计的我趁热打铁，去考一个ccfcsp认证。我当时对算法不感兴趣，也没参加acm，就没有关注这个认证。结果没想到昕哥主持了今年的csp认证，考点就在我们学校。昕哥当然首先拉我们参加，还说给我们报销费用，让我们先垫着。（估计是不会给",
     "tags": [
-      "技能分享"
+      "笔记"
     ],
     "img": "",
     "totalPages": 26
   },
   {
+    "title": "数值计算方法",
+    "date": "2021-12-01T18:31:18.000Z",
+    "file": "数值计算方法.md",
+    "excerpt": "包含几乎所有课堂上讲的题目![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/12/IMG_20210929_163844_edit_48781893315941",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
     "title": "讲一个能满足和感动自己的故事！",
     "date": "2021-11-24T21:25:56.000Z",
     "file": "讲一个能满足和感动自己的故事！.md",
-    "excerpt": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。\r\r如何写好论文\r\r细节，careful\r\r仔细画每一幅图\r不要有typo（词句小错误）\r不要用长句\r避免过度修饰，冗长\r至少修改30遍\r\r逻辑通",
+    "excerpt": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。如何写好论文细节，careful仔细画每一幅图不要有typo（词句小错误）不要用长句避免过度修饰，冗长至少修改30遍逻辑通顺写提纲",
     "tags": [
       "笔记"
     ],
@@ -24,7 +34,7 @@
     "title": "Mac上自动连接校园网的脚本",
     "date": "2021-11-24T18:58:03.000Z",
     "file": "Mac上自动连接校园网的脚本.md",
-    "excerpt": "起因\r\r傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/20",
+    "excerpt": "起因傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/1",
     "tags": [
       "技能分享"
     ],
@@ -34,7 +44,7 @@
     "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
     "date": "2021-11-21T09:04:54.000Z",
     "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
-    "excerpt": "问题描述\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-3-1024x215.png)\r\r如图，有一天在push的时候要求输入Use",
+    "excerpt": "问题描述![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-3-1024x215.png)如图，有一天在push的时候要求输入Usernam",
     "tags": [
       "技能分享"
     ],
@@ -44,7 +54,7 @@
     "title": "精准而优雅——MacBook Air",
     "date": "2021-11-14T10:32:04.000Z",
     "file": "精准而优雅——MacBook Air.md",
-    "excerpt": "我的第一台macbook\r\r犹豫了一年，终于在2021年11月份买了这台m1版本的macbookair。非常感谢我哥借给我不敢想象的8k块。\r\r精准\r\r在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求：\r\r",
+    "excerpt": "我的第一台macbook犹豫了一年，终于在2021年11月份买了这台m1版本的macbookair。非常感谢我哥借给我不敢想象的8k块。精准在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求：不打游戏",
     "tags": [
       "随笔杂记"
     ],
@@ -54,7 +64,7 @@
     "title": "macOS下matplotlib无法显示中文字体问题解决",
     "date": "2021-11-12T16:57:43.000Z",
     "file": "macOS下matplotlib无法显示中文字体问题解决.md",
-    "excerpt": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。\r\r后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html\r",
+    "excerpt": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html",
     "tags": [
       "技能分享"
     ],
@@ -64,7 +74,7 @@
     "title": "如何在英语朗读视频中添加文稿",
     "date": "2021-11-04T17:15:40.000Z",
     "file": "如何在英语朗读视频中添加文稿.md",
-    "excerpt": "如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读视频中添加文稿呢？\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp",
+    "excerpt": "如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读视频中添加文稿呢？![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-c",
     "tags": [
       "技能分享"
     ],
@@ -74,7 +84,7 @@
     "title": "Linux自由软件协会迎新结束有感",
     "date": "2021-10-30T22:43:09.000Z",
     "file": "Linux自由软件协会迎新结束有感.md",
-    "excerpt": "大一的时候，看到这个社团感觉就很对胃口，想加入。但是Linux自由软件协会太低调了，那年的百团大战我都没找到摊位。\r\r大二阴差阳错，我直接从局外人成了会长。\r\r起因是我当了飞桨领航团团长，要借一个社团办线下活动，没人愿意跟我合作。\r\r陈荣灿学长跟我都是李昕老师的学生，我问他可不可以合作办",
+    "excerpt": "大一的时候，看到这个社团感觉就很对胃口，想加入。但是Linux自由软件协会太低调了，那年的百团大战我都没找到摊位。大二阴差阳错，我直接从局外人成了会长。起因是我当了飞桨领航团团长，要借一个社团办线下活动，没人愿意跟我合作。陈荣灿学长跟我都是李昕老师的学生，我问他可不可以合作办一个活动，他",
     "tags": [
       "随笔杂记"
     ],
@@ -84,19 +94,9 @@
     "title": "ubuntu安装Python3的曲折之路",
     "date": "2021-10-30T13:58:01.000Z",
     "file": "ubuntu安装Python3的曲折之路.md",
-    "excerpt": "思路\r\r先安装Python版本管理器pyenv\r\r再用Pyenv安装Python\r\r安装pyenv\r\r标准安装：找到项目地址[pyenv/pyenv:SimplePythonversionmanagement(github.com)](https://git",
+    "excerpt": "思路先安装Python版本管理器pyenv再用Pyenv安装Python安装pyenv标准安装：找到项目地址[pyenv/pyenv:SimplePythonversionmanagement(github.com)](https://github.com/",
     "tags": [
       "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "黄山归来不看岳——黄山之旅",
-    "date": "2021-10-06T08:28:08.000Z",
-    "file": "黄山归来不看岳——黄山之旅.md",
-    "excerpt": "时间\r\r2021年国庆期间，10月3日至5日。\r\r第一站：翡翠谷\r\r翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。\r\r翡翠谷是一条长长的峡",
-    "tags": [
-      "书影记录"
     ],
     "img": ""
   }

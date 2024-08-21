@@ -1,20 +1,30 @@
 [
   {
-    "title": "Python第二周学习报告（草稿）",
-    "date": "2020-10-04T15:05:52.000Z",
-    "file": "Python第二周学习报告（草稿）.md",
-    "excerpt": "总体感受\r\r这是我跟着b站昕哥的视频学习\"Python数据分析“的第二周，总体上感觉Python确实是比c++要简单不少，学c++就像是开手动挡汽车，虽然难学，但是学会之后可以享受操纵的乐趣。而学Python就像是开手动挡汽车，简单上手，也功能强大。\r\r和以前在网上自学其它东",
+    "title": "每日一题--二维数组",
+    "date": "2020-10-06T14:25:18.000Z",
+    "file": "每日一题--二维数组.md",
+    "excerpt": "【题目描述】输入一个正整数n，输出n×n的回型方阵。例如，n=5时，输出：1111112221123211222111111【输入格式】一行，包含一个正整数n，2≤n≤9。【输出格式】共n行，每行包含n",
     "tags": [
-      "笔记"
+      "刷题"
     ],
     "img": "",
     "totalPages": 26
   },
   {
+    "title": "Python第二周学习报告（草稿）",
+    "date": "2020-10-04T15:05:52.000Z",
+    "file": "Python第二周学习报告（草稿）.md",
+    "excerpt": "总体感受这是我跟着b站昕哥的视频学习\"Python数据分析“的第二周，总体上感觉Python确实是比c++要简单不少，学c++就像是开手动挡汽车，虽然难学，但是学会之后可以享受操纵的乐趣。而学Python就像是开手动挡汽车，简单上手，也功能强大。和以前在网上自学其它东西不一样",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
     "title": "第一章练习题",
     "date": "2020-09-30T23:09:21.000Z",
     "file": "第一章练习题.md",
-    "excerpt": "修改pip源：\r[](https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html)[https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html](ht",
+    "excerpt": "修改pip源：[](https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html)[https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html](htt",
     "tags": [
       "刷题"
     ],
