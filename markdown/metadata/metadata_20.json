@@ -1,5 +1,16 @@
 [
   {
+    "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
+    "date": "2021-02-25T18:40:44.000Z",
+    "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
+    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver仅供学习使用Legend图例```importmatplotlib.pyplotaspltimportnum",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "csv库的使用方法",
     "date": "2021-02-25T11:10:35.000Z",
     "file": "csv库的使用方法.md",
@@ -7,8 +18,7 @@
     "tags": [
       "笔记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "json数据存储",
@@ -87,16 +97,6 @@
     "excerpt": "[https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm\\_id\\_from=pageDriver](https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm_id_from=pageDriver)",
     "tags": [
       "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "叮~我们的MC服务器终于到货啦！",
-    "date": "2021-01-30T11:24:49.000Z",
-    "file": "叮~我们的MC服务器终于到货啦！.md",
-    "excerpt": "1月30日更新增加了竹子mod参考资料http://www.minecraftxz.com/bamboo/豆腐工坊mod参考资料https://www.mcmod.cn/class/386.html增加了小地图，进客户端就能看到魔法金属是一个大量级的Mod可以观看籽岷",
-    "tags": [
-      "随笔杂记"
     ],
     "img": ""
   }

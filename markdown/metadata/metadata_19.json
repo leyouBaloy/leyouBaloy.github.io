@@ -1,5 +1,16 @@
 [
   {
+    "title": "《菊次郎的夏天》观后感",
+    "date": "2021-04-05T23:25:45.000Z",
+    "file": "《菊次郎的夏天》观后感.md",
+    "excerpt": "话不多说，看看豆瓣评分吧：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/04/image-23-1024x492.png)8.8分，对于一个喜剧电影来说，算是",
+    "tags": [
+      "书影记录"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "matplotlib作热机效率随负载大小变化曲线图",
     "date": "2021-04-02T09:28:08.000Z",
     "file": "matplotlib作热机效率随负载大小变化曲线图.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "“专利申请”撰写有感",
@@ -85,16 +95,6 @@
     "date": "2021-02-26T12:06:38.000Z",
     "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
     "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主image图片```importmatplotlib.pyplotaspltimp",
-    "tags": [
-      "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
-    "date": "2021-02-25T18:40:44.000Z",
-    "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
-    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver仅供学习使用Legend图例```importmatplotlib.pyplotaspltimportnum",
     "tags": [
       "笔记"
     ],

@@ -1,5 +1,16 @@
 [
   {
+    "title": "解锁新技术栈vue+flask前后端分离",
+    "date": "2022-05-24T15:41:05.000Z",
+    "file": "解锁新技术栈vue+flask前后端分离.md",
+    "excerpt": "Vue之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档边写了。前端框架逻辑都差不多，一通百通，很开心能掌握这项技术。我的学习路线：先了解web基础知识，比如http，get，post请求等",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "Flask+vue使用jwt验证",
     "date": "2022-05-22T05:00:39.000Z",
     "file": "flask+vue使用jwt验证.md",
@@ -8,8 +19,7 @@
       "技能分享",
       "笔记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "《学术研究，你的成功之道》",
@@ -86,16 +96,6 @@
     "date": "2022-04-27T07:36:14.000Z",
     "file": "Leetcode17_电话号码的字母组合——回溯.md",
     "excerpt": "题目https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/终于能自己做出一道题了😭，之前的回溯题没白刷题解回溯思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode16:最接近的三数之和——排序、双指针",
-    "date": "2022-04-26T10:58:23.000Z",
-    "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/3sum-closest/题解排序+双指针这道题的官方题解写的太好了：https://leetcode-cn.com/problems/3sum-closest/solution/zui-jie",
     "tags": [
       "刷题"
     ],

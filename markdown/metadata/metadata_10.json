@@ -1,5 +1,16 @@
 [
   {
+    "title": "Leetcode55:跳跃游戏——贪心",
+    "date": "2022-04-01T08:03:13.000Z",
+    "file": "Leetcode55_跳跃游戏——贪心.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/jump-game/题解所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。那么这道题可以有这样的思路：从前往后遍历`nums`的元素，实时维护最远可以到达的位置`far",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "Leetcode198:打家劫舍——动态规划",
     "date": "2022-03-31T08:20:49.000Z",
     "file": "Leetcode198_打家劫舍——动态规划.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "Leetcode113:路径总和——dfs、回溯",
@@ -85,16 +95,6 @@
     "date": "2022-03-23T12:35:46.000Z",
     "file": "Leetcode977_有序数组的平方——双指针.md",
     "excerpt": "题目https://leetcode-cn.com/problems/squares-of-a-sorted-array/题解先平方再排序```c++classSolution{public:vector<int>sortedSquares(v",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
-    "date": "2022-03-22T09:50:53.000Z",
-    "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/rotting-oranges/这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。题解解题思路这道题很明显要使用广度优先搜索，搜索的目标是每个腐烂",
     "tags": [
       "刷题"
     ],
