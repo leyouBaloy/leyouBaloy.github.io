@@ -9,7 +9,8 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --force"
+    "type-check": "vue-tsc --build --force",
+    "newp": "node src/scripts/generate-new-post.js"
   },
   "dependencies": {
     "@giscus/vue": "^3.0.0",
