@@ -1,14 +1,14 @@
-
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { ViteSSG } from "vite-ssg";
+import { createPinia } from "pinia";
 // import naive from "naive-ui";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import { routes } from "./router";
 
-const app = createApp(App)
-
-app.use(createPinia())
-app.use(router)
-// app.use(naive);
-app.mount('#app')
+export const createApp = ViteSSG(
+  App,
+  { routes },
+  ({ app, router, routes, isClient, initialState }) => {
+    app.use(createPinia())
+  }
+);
