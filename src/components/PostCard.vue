@@ -90,6 +90,11 @@ const props = defineProps({
     text-decoration: none;
     font-weight: 800;
     color: black;
+    /* 装饰线 */
+  text-decoration: underline;
+  text-decoration-color: #2d96bd;
+  /* 装饰线宽度 */
+  text-decoration-thickness: 3px;
 
     /* 鼠标悬浮 */
     &:hover {
