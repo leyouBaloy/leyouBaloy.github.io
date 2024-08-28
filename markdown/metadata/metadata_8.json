@@ -1,5 +1,16 @@
 [
   {
+    "title": "《无人生还》读后有感",
+    "date": "2022-04-30T09:58:36.000Z",
+    "file": "《无人生还》读后有感.md",
+    "excerpt": "作者《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写于1939年。{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud",
+    "tags": [
+      "书影记录"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "Leetcode46:全排列——交换、回溯",
     "date": "2022-04-29T09:22:24.000Z",
     "file": "Leetcode46_全排列——回溯.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "Leetcode17:电话号码的字母组合——回溯",
@@ -88,17 +98,6 @@
     "excerpt": "题目https://leetcode-cn.com/problems/longest-palindromic-substring/题解中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题...这道题需要注意的细节：回文子串长度既",
     "tags": [
       "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Git撤销版本",
-    "date": "2022-04-16T12:23:57.000Z",
-    "file": "git撤销版本.md",
-    "excerpt": "Git如何撤回远程仓库已经提交的版本？1.不能直接在像gitee,github这样的远程仓库上直接操作。所以先把项目clone下来。2.执行`gitlog`查看日志，获取需要回退的版本号，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。3",
-    "tags": [
-      "技能分享",
-      "笔记"
     ],
     "img": ""
   }

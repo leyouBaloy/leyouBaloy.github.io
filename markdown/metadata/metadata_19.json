@@ -1,5 +1,16 @@
 [
   {
+    "title": "离散数学结课总结+笔记",
+    "date": "2021-05-29T16:23:46.000Z",
+    "file": "离散数学结课总结+笔记.md",
+    "excerpt": "课程时长离散数学上了大一上，大一下两个学期（貌似是80个学时。课程目录总共四个篇章，分别是“集合论”、“数理逻辑”、“抽象代数”、“图论基础”。课程感悟这是一门数学课，但是和数学分析、概率论又完全不同。离散数学研究的真的是离散的数学知识，与微积分完",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "理清主次，集中精力解决“主要矛盾”。",
     "date": "2021-05-03T21:05:53.000Z",
     "file": "理清主次，集中精力解决“主要矛盾”。.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "《如何阅读一本书》读后感",
@@ -85,16 +95,6 @@
     "date": "2021-03-09T11:04:10.000Z",
     "file": "Pandas学习笔记.md",
     "excerpt": "map()和apply()和applymap()区别map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列appl",
-    "tags": [
-      "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
-    "date": "2021-03-03T20:46:14.000Z",
-    "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
-    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主图中图```importmatplotlib.pyplotaspltfig=",
     "tags": [
       "笔记"
     ],

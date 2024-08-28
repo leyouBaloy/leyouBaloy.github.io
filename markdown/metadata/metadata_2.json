@@ -1,5 +1,17 @@
 [
   {
+    "title": "压缩域图像深度学习分类/分割论文调研",
+    "date": "2024-07-21T17:28:35.000Z",
+    "file": "压缩域图像深度学习分类_分割论文调研.md",
+    "excerpt": "为什么要做压缩域图像深度学习分类/分割？互联网上充斥着大量图像，它们基本都是以压缩的形式存在。在传统的训练过程中，需要将图像数据从压缩域（CompressedDomain）解压到像素域（PixelDomain），再输入到网络中进行训练。然而，解压这一步真的有意义吗？解压只是将数据形式进行",
+    "tags": [
+      "人工智能",
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "《德米安》读后有感",
     "date": "2024-05-01T15:49:07.000Z",
     "file": "德米安读后有感.md",
@@ -7,8 +19,7 @@
     "tags": [
       "书影记录"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "一部接地气的国产法律神剧——第二十条",
@@ -91,15 +102,5 @@
       "笔记"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7704.jpeg"
-  },
-  {
-    "title": "好用的动画制作工具-Keynote",
-    "date": "2023-07-01T02:41:41.000Z",
-    "file": "好用的动画制作工具-keynote.md",
-    "excerpt": "Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。![image-20230701105100566](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
   }
 ]
