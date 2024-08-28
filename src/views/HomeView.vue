@@ -111,28 +111,26 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 60px;
+  padding: 0 10px;
   padding-top: 40px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
 }
 
 .posts {
   column-count: 2;
-  column-gap: 20px;
+  column-gap: 10px;
   width: 100%;
-}
-
-@media screen and (min-width:500px){
-  .content {
-  padding-left: 20px;
-  padding-right: 20px;
-}
 }
 
 @media screen and (max-width:500px){
   .posts {
     column-count: 1;
     column-gap: 20px;
-  width: 100%;
+    width: 100%;
+  }
+  .content {
+    padding: 5px;
   }
 }
 
