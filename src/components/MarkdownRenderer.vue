@@ -106,7 +106,10 @@ onMounted(loadMarkdown);
 /* 添加一些基本的样式 */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  
+  /* 装饰线 */
+  text-decoration: underline;
+  text-decoration-color: #2d96bd;
+  /* text-decoration-style:wavy; */
 }
 
 .title {
@@ -167,6 +170,10 @@ strong {
 
 img {
   display: block;
+}
+
+strong {
+  text-indent: 0;
 }
 
 </style>
