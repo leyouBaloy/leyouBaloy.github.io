@@ -3,7 +3,7 @@
     "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
     "date": "2021-03-03T20:46:14.000Z",
     "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
-    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver\r仅用于学习\r感谢莫烦up主\r\r图中图\r\r```\rimportmatplotlib.pyplotasplt\r",
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主图中图```importmatplotlib.pyplotaspltfig=",
     "tags": [
       "笔记"
     ],
@@ -14,7 +14,7 @@
     "title": "开学第二天明确学习方向",
     "date": "2021-03-02T20:31:39.000Z",
     "file": "开学第二天明确学习方向.md",
-    "excerpt": "可以进行的学习\r\rmatplotlib\rkaggle刷题pandas等\rweb前端（css,javascript）\rPython爬虫实战\r继续看课本（这个可能是最无聊的）\r\r现在就好迷，在寝室里不知道学啥。\r\r这样吧，学学云顶之弈把",
+    "excerpt": "可以进行的学习matplotlibkaggle刷题pandas等web前端（css,javascript）Python爬虫实战继续看课本（这个可能是最无聊的）现在就好迷，在寝室里不知道学啥。这样吧，学学云顶之弈把",
     "tags": [
       "随笔杂记"
     ],
@@ -24,7 +24,7 @@
     "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
     "date": "2021-02-26T12:06:38.000Z",
     "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
-    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver\r仅用于学习\r感谢莫烦up主\r\rimage图片\r\r```\rimportmatplotlib.pyplotas",
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主image图片```importmatplotlib.pyplotaspltimp",
     "tags": [
       "笔记"
     ],
@@ -34,7 +34,7 @@
     "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
     "date": "2021-02-25T18:40:44.000Z",
     "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
-    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver\r仅供学习使用\r\rLegend图例\r\r```\rimportmatplotlib.pyplotasplt\rimp",
+    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver仅供学习使用Legend图例```importmatplotlib.pyplotaspltimportnum",
     "tags": [
       "笔记"
     ],
@@ -44,7 +44,7 @@
     "title": "csv库的使用方法",
     "date": "2021-02-25T11:10:35.000Z",
     "file": "csv库的使用方法.md",
-    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。\r\r一、csv简介\r\rCSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符",
+    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。一、csv简介CSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。c",
     "tags": [
       "笔记"
     ],
@@ -54,7 +54,7 @@
     "title": "json数据存储",
     "date": "2021-02-25T11:02:16.000Z",
     "file": "json数据存储.md",
-    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2\r\r在上一篇文章里我们讲了xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。\r\r实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据",
+    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2在上一篇文章里我们讲了xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件",
     "tags": [
       "笔记"
     ],
@@ -64,7 +64,7 @@
     "title": "matplotlib学习笔记（一）基本语法,figure,坐标轴",
     "date": "2021-02-23T10:48:54.000Z",
     "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
-    "excerpt": "学习视频地址：[https://www.bilibili.com/video/BV1Jx411L7LU?](https://www.bilibili.com/video/BV1Jx411L7LU?)\rgithub地址：[https://github.com/MorvanZhou/tutoria",
+    "excerpt": "学习视频地址：[https://www.bilibili.com/video/BV1Jx411L7LU?](https://www.bilibili.com/video/BV1Jx411L7LU?)github地址：[https://github.com/MorvanZhou/tutorial",
     "tags": [
       "笔记"
     ],
@@ -74,7 +74,7 @@
     "title": "《新喜剧之王》观后感",
     "date": "2021-02-15T20:18:05.000Z",
     "file": "《新喜剧之王》观后感.md",
-    "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。\r\r剧",
+    "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。剧情",
     "tags": [
       "书影记录"
     ],
@@ -84,7 +84,7 @@
     "title": "BeautifulSoup学习笔记",
     "date": "2021-02-14T19:08:15.000Z",
     "file": "BeautifulSoup学习笔记.md",
-    "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。\r\r[https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044](https://www.bilibili.com/video/BV1Pg4",
+    "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。[https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044](https://www.bilibili.com/video/BV1Pg4y1",
     "tags": [
       "笔记"
     ],
@@ -94,7 +94,7 @@
     "title": "《华尔街之狼》观后感",
     "date": "2021-02-11T00:29:07.000Z",
     "file": "《华尔街之狼》观后感.md",
-    "excerpt": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。\r\r剧情\r\r主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。\r公司破产后，他也学会了搞传销",
+    "excerpt": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。剧情主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。公司破产后，他也学会了搞传销（果然在大",
     "tags": [
       "书影记录"
     ],

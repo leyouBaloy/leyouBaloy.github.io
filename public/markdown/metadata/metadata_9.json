@@ -3,7 +3,7 @@
     "title": "Git撤销版本",
     "date": "2022-04-16T12:23:57.000Z",
     "file": "git撤销版本.md",
-    "excerpt": "Git如何撤回远程仓库已经提交的版本？\r\r1.不能直接在像gitee,github这样的远程仓库上直接操作。所以先把项目clone下来。\r2.执行`gitlog`查看日志，获取需要回退的版本号，如5f6935bcc46d480113f0c49d4b54052d10c5aec0",
+    "excerpt": "Git如何撤回远程仓库已经提交的版本？1.不能直接在像gitee,github这样的远程仓库上直接操作。所以先把项目clone下来。2.执行`gitlog`查看日志，获取需要回退的版本号，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。3",
     "tags": [
       "技能分享",
       "笔记"
@@ -15,7 +15,7 @@
     "title": "Pandas使用技巧",
     "date": "2022-04-16T07:42:08.000Z",
     "file": "Pandas使用技巧.md",
-    "excerpt": "read_csv()参数\r\rheader\r\r`header=None`读取时不设置表头\r\r\r\rdrop()\r\r`df.drop(0)`删除第一行\r\r\r\r",
+    "excerpt": "read_csv()参数header`header=None`读取时不设置表头drop()`df.drop(0)`删除第一行",
     "tags": [
       "笔记"
     ],
@@ -25,7 +25,7 @@
     "title": "Leetcode451:根据字符出现频率排序——桶排序",
     "date": "2022-04-15T10:00:29.000Z",
     "file": "Leetcode451_根据字符出现频率排序——桶排序.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/sort-characters-by-frequency/\r\r\r\r题解\r\r思路\r\r用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限",
+    "excerpt": "题目https://leetcode-cn.com/problems/sort-characters-by-frequency/题解思路用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26",
     "tags": [
       "刷题"
     ],
@@ -35,7 +35,7 @@
     "title": "《失乐园》读后有感",
     "date": "2022-04-15T08:38:22.000Z",
     "file": "《失乐园》读后有感.md",
-    "excerpt": "故事简叙\r\r{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220415165918989.png\"title=\"《失乐园》\">}}\r\r久木是一家出版社",
+    "excerpt": "故事简叙{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220415165918989.png\"title=\"《失乐园》\">}}久木是一家出版社的编辑，",
     "tags": [
       "书影记录"
     ],
@@ -45,7 +45,7 @@
     "title": "成功主持150人参会的讲座！",
     "date": "2022-04-10T15:05:16.000Z",
     "file": "成功主持150人参会的讲座！.md",
-    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}\r\r\r\r{{<f",
+    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}{{<figur",
     "tags": [
       "随笔杂记"
     ],
@@ -55,7 +55,7 @@
     "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
     "date": "2022-04-09T04:08:07.000Z",
     "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/subarray-sum-equals-k/\r\r不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。\r\r题解\r\r枚举法\r\r枚举法会超时，但可以为我们提供思路。\r\r考虑以`j",
+    "excerpt": "题目https://leetcode-cn.com/problems/subarray-sum-equals-k/不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。题解枚举法枚举法会超时，但可以为我们提供思路。考虑以`j`结尾和为`k`的连",
     "tags": [
       "刷题"
     ],
@@ -65,7 +65,7 @@
     "title": "C++和python常用函数",
     "date": "2022-04-08T12:23:24.000Z",
     "file": "c++和python常用函数.md",
-    "excerpt": "c++常用函数\r\rsort(v.begin(),v.end())\r\r```c++\r//向量v\rvector<int>v;\rsort(v.begin(),v.end())\r//数组a\rsort(a,a+n);\r```\r\r```c++\r//可以加参数cm",
+    "excerpt": "c++常用函数sort(v.begin(),v.end())```c++//向量vvector<int>v;sort(v.begin(),v.end())//数组asort(a,a+n);``````c++//可以加参数cmp//比如对inter",
     "tags": [
       "刷题",
       "笔记"
@@ -76,7 +76,7 @@
     "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
     "date": "2022-04-08T11:59:03.000Z",
     "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/longest-substring-without-repeating-characters/\r\r乍一看好像做过，再一看好像不会😂\r\r题解\r\r暴力法\r\r设字符串为`s`，假如我们要找的这段没",
+    "excerpt": "题目https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/乍一看好像做过，再一看好像不会😂题解暴力法设字符串为`s`，假如我们要找的这段没有重复字符的序列是从",
     "tags": [
       "刷题"
     ],
@@ -86,7 +86,7 @@
     "title": "Leetcode347:前K个高频元素——优先队列、堆",
     "date": "2022-04-07T08:55:15.000Z",
     "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/top-k-frequent-elements/\r\r从这题开始学会使用堆\r\r题解\r\r堆（heap）\r\r大顶堆：父节点的值大于子节点的值。\r\r小顶堆：父节点的值小于子节点的值。\r\r性质：",
+    "excerpt": "题目https://leetcode-cn.com/problems/top-k-frequent-elements/从这题开始学会使用堆题解堆（heap）大顶堆：父节点的值大于子节点的值。小顶堆：父节点的值小于子节点的值。性质：根节点一定是最大（最小）值",
     "tags": [
       "刷题"
     ],
@@ -96,7 +96,7 @@
     "title": "Leetcode310:最小高度树",
     "date": "2022-04-06T07:07:06.000Z",
     "file": "Leetcode310_最小高度树.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/minimum-height-trees/\r\r这是一道理论性很强，代码也很有技巧性的“中等”难度题目。\r\r题解\r\r暴力法\r\r献上我的超时代码：\r\r```python\rclassSolu",
+    "excerpt": "题目https://leetcode-cn.com/problems/minimum-height-trees/这是一道理论性很强，代码也很有技巧性的“中等”难度题目。题解暴力法献上我的超时代码：```pythonclassSolution:def",
     "tags": [
       "刷题"
     ],

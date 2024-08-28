@@ -3,7 +3,7 @@
     "title": "使用sort算法对向量元素排列",
     "date": "2020-12-28T16:26:38.000Z",
     "file": "使用sort算法对向量元素排列.md",
-    "excerpt": "```\rinclude<bits/stdc++.h>\rusingnamespacestd;\r\rintmain()\r{\rsrand(time(NULL));\rvector<int>v;\rinti;\rfor(inti=0;i<10;i++)",
+    "excerpt": "```include<bits/stdc++.h>usingnamespacestd;intmain(){srand(time(NULL));vector<int>v;inti;for(inti=0;i<10;i++){",
     "tags": [
       "刷题"
     ],
@@ -14,7 +14,7 @@
     "title": "使用reverse反向排列算法",
     "date": "2020-12-28T16:21:28.000Z",
     "file": "使用reverse反向排列算法.md",
-    "excerpt": "```\rinclude<bits/stdc++.h>\rusingnamespacestd;\r\rintmain()\r{\rsrand(time(NULL));\rvector<int>v(10);\rfor(inti=0;i<10;i++)\r{\r",
+    "excerpt": "```include<bits/stdc++.h>usingnamespacestd;intmain(){srand(time(NULL));vector<int>v(10);for(inti=0;i<10;i++){v",
     "tags": [
       "刷题"
     ],
@@ -24,7 +24,7 @@
     "title": "《十二公民》观后感",
     "date": "2020-12-21T21:58:43.000Z",
     "file": "《十二公民》观后感.md",
-    "excerpt": "今天和同学们看了电影《十二公民》，有感而发。\r\r十二公民讲的主要是十二位职业，性格各不相同的成年人，受到老师的邀请在政法大学的教室里进行模拟陪审，讨论一起凶杀案的嫌疑人是有罪还是无罪的故事。影片的场景非常简单，绝大部分剧情都发生在那间教室里，但是剧情却一波三折，从最初的十一人投票认为有罪，一人认",
+    "excerpt": "今天和同学们看了电影《十二公民》，有感而发。十二公民讲的主要是十二位职业，性格各不相同的成年人，受到老师的邀请在政法大学的教室里进行模拟陪审，讨论一起凶杀案的嫌疑人是有罪还是无罪的故事。影片的场景非常简单，绝大部分剧情都发生在那间教室里，但是剧情却一波三折，从最初的十一人投票认为有罪，一人认为无",
     "tags": [
       "书影记录"
     ],
@@ -34,7 +34,7 @@
     "title": "字符处理软件-substr-insert-find",
     "date": "2020-12-17T21:10:39.000Z",
     "file": "字符处理软件-substr-insert-find.md",
-    "excerpt": "题目描述\r\r你需要开发一款文字处理软件。最开始时输入一个字符串（不超过100个字符）作为初始文档。可以认为文档开头是第0个字符。需要支持以下操作：\r\r`1str`：后接插入，在文档后面插入字符串str，并输出文档的字符串。\r`2ab`：截取文档部分，只保留文",
+    "excerpt": "题目描述你需要开发一款文字处理软件。最开始时输入一个字符串（不超过100个字符）作为初始文档。可以认为文档开头是第0个字符。需要支持以下操作：`1str`：后接插入，在文档后面插入字符串str，并输出文档的字符串。`2ab`：截取文档部分，只保留文档中从第",
     "tags": [
       "刷题"
     ],
@@ -44,7 +44,7 @@
     "title": "requests爬表情包",
     "date": "2020-12-13T17:23:02.000Z",
     "file": "requests爬表情包.md",
-    "excerpt": "需要的库：\r\r!pipinstalllxml\r\r!pipinstallrequest\r\r!pipinstallpathlib\r\r代码：\r\r```\rimporttime\r代码合集并修改为下载多页表情\rimportrequests\rfrombs4impo",
+    "excerpt": "需要的库：!pipinstalllxml!pipinstallrequest!pipinstallpathlib代码：```importtime代码合集并修改为下载多页表情importrequestsfrombs4importBeautifulSo",
     "tags": [
       "刷题"
     ],
@@ -54,7 +54,7 @@
     "title": "中国是如何富起来的？",
     "date": "2020-12-12T12:19:03.000Z",
     "file": "中国是如何富起来的？.md",
-    "excerpt": "我把解放后中国的崛起分为两个阶段，一是1949年至改革开放前（1978年）发展重工业，二是1978年改革开放之后到现在的中国特色社会主义经济。\r\r      第一阶段，主要领导人是毛泽东主席，他的伟大之处就在于让中国人民团结起来，组建了强有力的政府，政府的动员能力十分了得，当时人民也非常热血积",
+    "excerpt": "我把解放后中国的崛起分为两个阶段，一是1949年至改革开放前（1978年）发展重工业，二是1978年改革开放之后到现在的中国特色社会主义经济。      第一阶段，主要领导人是毛泽东主席，他的伟大之处就在于让中国人民团结起来，组建了强有力的政府，政府的动员能力十分了得，当时人民也非常热血积极，",
     "tags": [
       "书影记录"
     ],
@@ -64,7 +64,7 @@
     "title": "判断回文数",
     "date": "2020-12-04T09:05:15.000Z",
     "file": "判断回文数.md",
-    "excerpt": "一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++里把int类型转换成string类型真的好麻烦！在百度上查了很久，方法要么不对，要么就是太复杂。果然c++是不适合处理字符串的。\r\r所以放弃那种做法，用这种",
+    "excerpt": "一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++里把int类型转换成string类型真的好麻烦！在百度上查了很久，方法要么不对，要么就是太复杂。果然c++是不适合处理字符串的。所以放弃那种做法，用这种：",
     "tags": [
       "刷题"
     ],
@@ -74,7 +74,7 @@
     "title": "c++比较字典序的三种方法",
     "date": "2020-12-04T08:04:09.000Z",
     "file": "c++比较字典序的三种方法.md",
-    "excerpt": "[比较字符串字典序的三种方法【C++】-知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/205953754)\r\r```\rinclude<iostream>\rusingnamespacestd;\r\rintmain(){\rchar",
+    "excerpt": "[比较字符串字典序的三种方法【C++】-知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/205953754)```include<iostream>usingnamespacestd;intmain(){chars1[2]",
     "tags": [
       "刷题"
     ],
@@ -84,7 +84,7 @@
     "title": "质数判断",
     "date": "2020-12-03T10:13:20.000Z",
     "file": "质数判断.md",
-    "excerpt": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来\r\r```\rinclude<iostream>\rinclude<cmath>\r\rusingnamespacestd;\rboolsb(intx)\r{\rint",
+    "excerpt": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来```include<iostream>include<cmath>usingnamespacestd;boolsb(intx){inti,flag=0",
     "tags": [
       "刷题"
     ],
@@ -94,7 +94,7 @@
     "title": "c++傻缺错误集锦",
     "date": "2020-12-02T20:09:14.000Z",
     "file": "c++傻缺错误集锦.md",
-    "excerpt": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！\r千万不要把“==”写成“=”\r\r输出小数时函数用成了intFun()\r应该用doubleFun()习惯了使用intFun()\r也是看了半天，没有看出问题来\r\r输入M和N\r我只写了cin>>",
+    "excerpt": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！千万不要把“==”写成“=”输出小数时函数用成了intFun()应该用doubleFun()习惯了使用intFun()也是看了半天，没有看出问题来输入M和N我只写了cin>>N;导致后",
     "tags": [
       "刷题"
     ],

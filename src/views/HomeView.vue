@@ -8,11 +8,12 @@
         <div v-for="post in posts" :key="post.title">
           <PostCard :title="post.title" :content="post.excerpt" :time="new Date(post.date).toLocaleDateString()"
             :tag="post.tags ? post.tags.join(', ') : '未分类'" :img="post.img" :path="`/post/${post.file}`" :id="post.title" />
-          <n-divider></n-divider>
+          <!-- <n-divider></n-divider> -->
 
         </div>
 
       </div>
+      <n-divider></n-divider>
       <n-pagination class="pagination" size="large" v-model:page="numPage" :page-count="pageCount"
         @update:page="loadMarkdownMetadata" :page-slot="7" />
       <Foot></Foot>
@@ -106,6 +107,7 @@ main {
 
 .content {
   /* margin: auto; */
+  column-count: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,6 +124,8 @@ main {
 }
 
 .posts {
+  column-count: 2;
+  column-gap: 20px;
   width: 100%;
 }
 
