@@ -115,20 +115,26 @@ main {
   padding-top: 40px;
 }
 
-@media screen and (min-width:50px){
-  .content {
-  padding-left: 20px;
-  padding-right: 20px;
-
-}
-}
-
 .posts {
   column-count: 2;
   column-gap: 20px;
   width: 100%;
 }
 
+@media screen and (min-width:500px){
+  .content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+}
+
+@media screen and (max-width:500px){
+  .posts {
+    column-count: 1;
+    column-gap: 20px;
+  width: 100%;
+  }
+}
 
 .pagination {
   /* width: 100%; */
