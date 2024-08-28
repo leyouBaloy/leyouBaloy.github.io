@@ -20,13 +20,11 @@ jobs:
           npm install
           npm run build
           cp dist/index.html dist/404.html
-
-      - name: Create CNAME file
-        run: echo www.leyoubaloy.xyz > ./dist/CNAME
         
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages # The branch the action should deploy to.
+          publish_dir: ./dist # The folder the action should deploy.
+          cname: www.leyoubaloy.xyz
