@@ -25,6 +25,13 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
   if (path.extname(file) === '.md') {
     const content = fs.readFileSync(path.join(normalizedMarkdownDir, file), 'utf8');
     const metadata = frontMatter(content);
+
+    // 检查 draft 属性是否为 true
+    if (metadata.attributes.draft === true) {
+      console.log(`Skipping draft file: ${file}`);
+      return; // 跳过此文件
+    }
+
     const bodyContent = metadata.body;
 
     // 获取 tags 和 img 字段，优先级依次为 categories/tags 和 featuredImagePreview/img
@@ -35,7 +42,7 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
       title: metadata.attributes.title,
       date: metadata.attributes.date,
       file: file,
-      excerpt: bodyContent.slice(0, 150).replaceAll('#', '').replaceAll(' ', '').replaceAll('\n', '').replaceAll('*', ''), // 截取正文前150字,并且替换它的#为空
+      excerpt: bodyContent.slice(0, 150).replaceAll('#', '').replaceAll(' ', '').replaceAll('\n', '').replaceAll('*', ''),
       tags: tags, // 优先 categories，其次 tags，否则为空数组
       img: img // 优先 featuredImagePreview，其次 img，否则为空字符串
     });

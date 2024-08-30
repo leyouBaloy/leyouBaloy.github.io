@@ -1,26 +1,5 @@
 [
   {
-    "title": "使用sort算法对向量元素排列",
-    "date": "2020-12-28T16:26:38.000Z",
-    "file": "使用sort算法对向量元素排列.md",
-    "excerpt": "```\rinclude<bits/stdc++.h>\rusingnamespacestd;\r\rintmain()\r{\rsrand(time(NULL));\rvector<int>v;\rinti;\rfor(inti=0;i<10;i++)",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "totalPages": 26
-  },
-  {
-    "title": "使用reverse反向排列算法",
-    "date": "2020-12-28T16:21:28.000Z",
-    "file": "使用reverse反向排列算法.md",
-    "excerpt": "```\rinclude<bits/stdc++.h>\rusingnamespacestd;\r\rintmain()\r{\rsrand(time(NULL));\rvector<int>v(10);\rfor(inti=0;i<10;i++)\r{\r",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
     "title": "《十二公民》观后感",
     "date": "2020-12-21T21:58:43.000Z",
     "file": "《十二公民》观后感.md",
@@ -28,7 +7,8 @@
     "tags": [
       "书影记录"
     ],
-    "img": ""
+    "img": "",
+    "totalPages": 26
   },
   {
     "title": "字符处理软件-substr-insert-find",
@@ -95,6 +75,26 @@
     "date": "2020-12-02T20:09:14.000Z",
     "file": "c++傻缺错误集锦.md",
     "excerpt": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！\r千万不要把“==”写成“=”\r\r输出小数时函数用成了intFun()\r应该用doubleFun()习惯了使用intFun()\r也是看了半天，没有看出问题来\r\r输入M和N\r我只写了cin>>",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "selenium爬GDP",
+    "date": "2020-12-01T23:11:02.000Z",
+    "file": "selenium爬GDP.md",
+    "excerpt": "```\rfromseleniumimportwebdriver\rfrombs4importBeautifulSoup\rimportcsv\r\rout=open('d:/data.csv','w',newline='')\rcsv_write=csv.writer(ou",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "对称字符串处理",
+    "date": "2020-11-27T08:45:18.000Z",
+    "file": "对称字符串处理.md",
+    "excerpt": "【题目描述】\r\r某某国王（不是萨拉克门托！）有一个神奇的魔镜，它可以把东西变为原来的两倍(可惜是反的)。某日，他感到很无聊，于是把皇后的一串珠子变了不知道几次，皇后回来之后不是很高兴，她还是喜欢原来那串珠子，现在告诉你改变之后珠子的形状，请你告诉她，原来的珠子是什么样子的。\r\r【输入】\r\r",
     "tags": [
       "刷题"
     ],

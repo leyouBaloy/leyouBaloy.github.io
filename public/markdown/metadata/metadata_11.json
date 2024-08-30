@@ -1,26 +1,5 @@
 [
   {
-    "title": "Leetcode108:将有序数组转换为二叉搜索树",
-    "date": "2022-03-25T07:36:05.000Z",
-    "file": "Leetcode108_将有序数组转换为二叉搜索树.md",
-    "excerpt": "题目\r\r从今天开始多做一点关于数据结构“树”的题目。\r\rhttps://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/\r\r题解\r\r知识点：二叉搜索树\r\r定义很简单：\r\r",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "totalPages": 26
-  },
-  {
-    "title": "Leetcode695:岛屿的最大面积——中等难度的搜索算法",
-    "date": "2022-03-24T07:47:10.000Z",
-    "file": "Leetcode695_岛屿的最大面积——中等难度的搜索算法.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/max-area-of-island/\r\rleetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。\r\r题解\r\r这道",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
     "title": "Leetcode977:有序数组的平方——双指针",
     "date": "2022-03-23T12:35:46.000Z",
     "file": "Leetcode977_有序数组的平方——双指针.md",
@@ -28,7 +7,8 @@
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "totalPages": 26
   },
   {
     "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
@@ -97,6 +77,26 @@
     "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/assign-cookies/\r\r题解\r\r为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子）\r\r然后对于每个胃口",
     "tags": [
       "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "Leetcode160:相交链表——哈希、双指针",
+    "date": "2022-03-16T12:06:00.000Z",
+    "file": "Leetcode160_相交链表——哈希、双指针.md",
+    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/intersection-of-two-linked-lists/\r\r题解\r\r法一：哈希表\r\r先把一个链表放到哈希表里，再遍历另一个链表。\r\r```c++\rclassSolution",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "mac m1 安装sqlserver踩坑经历",
+    "date": "2022-03-16T10:14:14.000Z",
+    "file": "macm1安装sqlserver踩坑经历.md",
+    "excerpt": "为什么安装sqlserver\r\r上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。\r\r法一：云数据库（❌\r\r在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所",
+    "tags": [
+      "技能分享"
     ],
     "img": ""
   }
