@@ -109,6 +109,8 @@ h1, h2, h3, h4, h5, h6 {
   /* 装饰线 */
   text-decoration: underline;
   text-decoration-color: #2d96bd;
+  /* 装饰线宽度 */
+  text-decoration-thickness: 4px;
   /* text-decoration-style:wavy; */
 }
 
