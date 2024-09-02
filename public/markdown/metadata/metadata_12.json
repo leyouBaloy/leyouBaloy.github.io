@@ -1,5 +1,16 @@
 [
   {
+    "title": "mac m1 安装sqlserver踩坑经历",
+    "date": "2022-03-16T10:14:14.000Z",
+    "file": "macm1安装sqlserver踩坑经历.md",
+    "excerpt": "为什么安装sqlserver\r\r上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。\r\r法一：云数据库（❌\r\r在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "Leetcode206:反转链表",
     "date": "2022-03-14T11:15:57.000Z",
     "file": "leetcode206_反转链表.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "三数之和——双指针——好难",
@@ -86,16 +96,6 @@
     "date": "2022-03-05T08:08:03.000Z",
     "file": "环形链表——哈希、链表、双指针.md",
     "excerpt": "题目\r\r>题目来自：https://leetcode-cn.com/problems/linked-list-cycle/\r\r141.环形链表\r\r难度简单1376收藏分享切换为英文接收动态反馈\r\r给你一个链表的头节点`head`，判断链表中是否有环。\r\r如",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "合并两个有序数组——数组、双指针、排序——这题的题解绝了",
-    "date": "2022-03-04T07:32:13.000Z",
-    "file": "合并两个有序数组——数组、双指针、排序——这题的题解绝了.md",
-    "excerpt": "题目\r\r>该题来自：https://leetcode-cn.com/problems/merge-sorted-array/\r\r[88.合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)\r\r难",
     "tags": [
       "刷题"
     ],
