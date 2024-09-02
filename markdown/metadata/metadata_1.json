@@ -1,5 +1,17 @@
 [
   {
+    "title": "AI一周大事件（24年9月2日）",
+    "date": "2024-09-02T13:19:38.000Z",
+    "file": "AI一周大事件（24年9月2日）.md",
+    "excerpt": "AI一周大事件（24年9月2日）人大北邮上海AILab等提出多模态分割新方法|ECCV2024已有研究正在做的：（各自从视觉、文本和音频线索的角度出发）-视频对象分割（VOS，VideoObjectSegmentation）：通常以第一帧中的对象掩码作为参",
+    "tags": [
+      "笔记",
+      "人工智能"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240902212953.png",
+    "totalPages": 26
+  },
+  {
     "title": "绿植盆栽攻略",
     "date": "2024-08-28T10:24:07.000Z",
     "file": "绿植盆栽攻略.md",
@@ -8,8 +20,7 @@
       "随笔杂记",
       "笔记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgbbf772ea317555ba7ac144f9318fc7f.jpg",
-    "totalPages": 26
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgbbf772ea317555ba7ac144f9318fc7f.jpg"
   },
   {
     "title": "AI一周大事件（24年8月25日）",
@@ -91,16 +102,5 @@
       "随笔杂记"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%93%81%E9%85%92%E6%B1%BE%E9%85%92%E6%B3%B8%E5%B7%9E%E8%80%81%E7%AA%96.jpg"
-  },
-  {
-    "title": "遥感图像检索调研",
-    "date": "2024-07-21T21:07:35.000Z",
-    "file": "遥感图像检索调研.md",
-    "excerpt": "遥感图像检索的形式遥感图像检索最常见的形式是给定一张queryimage，去遥感数据库里查询跟它最相近的图像。研究最多的是这种。除此之外，还有画草图检索，或者用SAR（一种雷达）、文本、音频来检索的，这种叫跨模态检索。还有从地面照片来检索遥感图像的，属于不同视角的检索。![](ht",
-    "tags": [
-      "人工智能",
-      "笔记"
-    ],
-    "img": ""
   }
 ]
