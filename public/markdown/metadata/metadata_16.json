@@ -1,30 +1,20 @@
 [
   {
-    "title": "Linux自由软件协会迎新结束有感",
-    "date": "2021-10-30T22:43:09.000Z",
-    "file": "Linux自由软件协会迎新结束有感.md",
-    "excerpt": "大一的时候，看到这个社团感觉就很对胃口，想加入。但是Linux自由软件协会太低调了，那年的百团大战我都没找到摊位。\r\r大二阴差阳错，我直接从局外人成了会长。\r\r起因是我当了飞桨领航团团长，要借一个社团办线下活动，没人愿意跟我合作。\r\r陈荣灿学长跟我都是李昕老师的学生，我问他可不可以合作办",
+    "title": "ubuntu安装Python3的曲折之路",
+    "date": "2021-10-30T13:58:01.000Z",
+    "file": "ubuntu安装Python3的曲折之路.md",
+    "excerpt": "思路先安装Python版本管理器pyenv再用Pyenv安装Python安装pyenv标准安装：找到项目地址[pyenv/pyenv:SimplePythonversionmanagement(github.com)](https://github.com/",
     "tags": [
-      "随笔杂记"
+      "技能分享"
     ],
     "img": "",
     "totalPages": 26
   },
   {
-    "title": "ubuntu安装Python3的曲折之路",
-    "date": "2021-10-30T13:58:01.000Z",
-    "file": "ubuntu安装Python3的曲折之路.md",
-    "excerpt": "思路\r\r先安装Python版本管理器pyenv\r\r再用Pyenv安装Python\r\r安装pyenv\r\r标准安装：找到项目地址[pyenv/pyenv:SimplePythonversionmanagement(github.com)](https://git",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
-  },
-  {
     "title": "黄山归来不看岳——黄山之旅",
     "date": "2021-10-06T08:28:08.000Z",
     "file": "黄山归来不看岳——黄山之旅.md",
-    "excerpt": "时间\r\r2021年国庆期间，10月3日至5日。\r\r第一站：翡翠谷\r\r翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。\r\r翡翠谷是一条长长的峡",
+    "excerpt": "时间2021年国庆期间，10月3日至5日。第一站：翡翠谷翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。翡翠谷是一条长长的峡谷，一路走进去有",
     "tags": [
       "书影记录"
     ],
@@ -34,7 +24,7 @@
     "title": "全国高校AI知识竞赛UPC赛区获奖通知",
     "date": "2021-09-29T23:37:12.000Z",
     "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
-    "excerpt": "获奖名单：\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)\r\r![](https://myblog-1257298572.",
+    "excerpt": "获奖名单：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)![](https://myblog-1257298572.cos.",
     "tags": [
       "刷题"
     ],
@@ -54,7 +44,7 @@
     "title": "certbot自动配置nginx给wordpress站点加https",
     "date": "2021-09-08T22:42:40.000Z",
     "file": "certbot自动配置nginx给wordpress站点加https.md",
-    "excerpt": "思路\r\r1.安装snap\r2.安装certbot\r3.自动配置nginx\r\r完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](ht",
+    "excerpt": "思路1.安装snap2.安装certbot3.自动配置nginx完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](https://",
     "tags": [
       "技能分享"
     ],
@@ -64,7 +54,7 @@
     "title": "对图像操作",
     "date": "2021-08-29T21:21:29.000Z",
     "file": "对图像操作.md",
-    "excerpt": "图像\r\r位图（rastergraphics)和矢量图（vectorgraphics)\r\r位图是有像素的，色彩丰富。矢量图放大不会失真。\r\r通道\r\r单通道\r\r灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256=2_2_2\\2)，那",
+    "excerpt": "图像位图（rastergraphics)和矢量图（vectorgraphics)位图是有像素的，色彩丰富。矢量图放大不会失真。通道单通道灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256=2_2_2\\2)，那么他的像素值0(黑)",
     "tags": [
       "技能分享"
     ],
@@ -74,7 +64,7 @@
     "title": "Conda 配置虚拟环境",
     "date": "2021-08-29T21:20:21.000Z",
     "file": "Conda 配置虚拟环境.md",
-    "excerpt": "创建虚拟环境\r\r```\rcondacreate-n名字python=3.8\r```\r\r进入虚拟环境\r\r```\rcondaactivate名字\r```\r\r退出虚拟环境\r\r```\rcondadeactivate\r```\r\r",
+    "excerpt": "创建虚拟环境```condacreate-n名字python=3.8```进入虚拟环境```condaactivate名字```退出虚拟环境```condadeactivate```删除虚拟环境```conda",
     "tags": [
       "技能分享"
     ],
@@ -84,7 +74,7 @@
     "title": "jupyter-paddle使用docker安装",
     "date": "2021-08-29T21:19:42.000Z",
     "file": "jupyter-paddle使用docker安装.md",
-    "excerpt": "安装\r\r参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html\r\r先安装docker，参考官网\r\r拉取镜像：\r\r`docker",
+    "excerpt": "安装参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html先安装docker，参考官网拉取镜像：`dockerpullreg",
     "tags": [
       "技能分享"
     ],
@@ -97,6 +87,16 @@
     "excerpt": "  现在距离开学没几天了，暑假在一起玩的朋友、同学都纷纷开学了，就剩我一个人呆在家越来越无聊。在家里呆腻了，我就在晚上出去走走。一路向西，或一路向北，不到穷尽不回头。这是我第一次用自己的脚步丈量我的家乡城市——蚌埠。  我是一个路痴，我觉得我之所以会成为路痴，不是因为我天生缺少方向感，也不是因为我",
     "tags": [
       "随笔杂记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "python时间遇到的坑",
+    "date": "2021-08-22T15:21:03.000Z",
+    "file": "python时间遇到的坑.md",
+    "excerpt": "python中与时间相关的标准库有三个：timedatetimecalendar吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会时区坑查看时间的方式有很多法一：```pythonfromdatetimeimportdatetim",
+    "tags": [
+      "笔记"
     ],
     "img": ""
   }

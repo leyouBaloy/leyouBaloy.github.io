@@ -1,30 +1,20 @@
 [
   {
-    "title": "python时间遇到的坑",
-    "date": "2021-08-22T15:21:03.000Z",
-    "file": "python时间遇到的坑.md",
-    "excerpt": "python中与时间相关的标准库有三个：\r\rtime\rdatetime\rcalendar\r\r吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会\r\r时区坑\r\r查看时间的方式有很多\r\r法一：\r\r```python\rfromdatetime",
+    "title": "《人类简史》读后有感",
+    "date": "2021-08-16T09:03:38.000Z",
+    "file": "《人类简史》读后有感.md",
+    "excerpt": "一句话概述  《人类简史》在2012年以希伯来文出版。本书从人类的起源开始谈，谈到人类的认知革命、农业革命、再谈到人类的融合统一、科学革命，最后谈一谈人类的未来。构造了一个横跨人类历史的巨大历史框架。作者简介  作者是以色列年轻人尤瓦尔·赫拉利（出书时不到40岁）",
     "tags": [
-      "笔记"
+      "书影记录"
     ],
     "img": "",
     "totalPages": 26
   },
   {
-    "title": "《人类简史》读后有感",
-    "date": "2021-08-16T09:03:38.000Z",
-    "file": "《人类简史》读后有感.md",
-    "excerpt": "一句话概述\r\r  《人类简史》在2012年以希伯来文出版。本书从人类的起源开始谈，谈到人类的认知革命、农业革命、再谈到人类的融合统一、科学革命，最后谈一谈人类的未来。构造了一个横跨人类历史的巨大历史框架。\r\r作者简介\r\r  作者是以色列年轻人尤瓦尔·赫拉利（出书时",
-    "tags": [
-      "书影记录"
-    ],
-    "img": ""
-  },
-  {
     "title": "网吧＋炸鸡 yyds!",
     "date": "2021-08-11T20:57:33.000Z",
     "file": "网吧＋炸鸡 yyds!.md",
-    "excerpt": "这个星期我去了六次网吧，吃了三次炸鸡。\r\r网吧\r\r虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。\r\r现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。\r\r打LOL终极魔典",
+    "excerpt": "这个星期我去了六次网吧，吃了三次炸鸡。网吧虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。打LOL终极魔典，一开始我两被敌",
     "tags": [
       "随笔杂记"
     ],
@@ -34,7 +24,7 @@
     "title": "linux学习笔记",
     "date": "2021-08-08T11:09:47.000Z",
     "file": "linux学习笔记.md",
-    "excerpt": "安装python\r\r1）安装依赖包安装“Developmenttools”软件组：\r\r```\rsudoyumgroupinstall\"Developmenttools\"\r```\r\r因为Python3.7源文件使用zlib格式打包，所以需要安装",
+    "excerpt": "安装python1）安装依赖包安装“Developmenttools”软件组：```sudoyumgroupinstall\"Developmenttools\"```因为Python3.7源文件使用zlib格式打包，所以需要安装zlib软件",
     "tags": [
       "笔记"
     ],
@@ -44,7 +34,7 @@
     "title": "django笔记进阶",
     "date": "2021-08-08T11:08:25.000Z",
     "file": "django笔记进阶.md",
-    "excerpt": "models\r\r写入新数据，返回此条新数据\r\r```new_data=Queue.objects.create(queue_dic)```\r\r访问新写入数据的id字段\r\r```new_data.id```\r\r查询数据\r\r查询一条数据\r",
+    "excerpt": "models写入新数据，返回此条新数据```new_data=Queue.objects.create(queue_dic)```访问新写入数据的id字段```new_data.id```查询数据查询一条数据```student",
     "tags": [
       "笔记"
     ],
@@ -54,7 +44,7 @@
     "title": "python发邮件",
     "date": "2021-08-08T08:20:29.000Z",
     "file": "python发邮件.md",
-    "excerpt": "QQ邮箱设置\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081637.jpg)![](https://myblog-1",
+    "excerpt": "QQ邮箱设置![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081637.jpg)![](https://myblog-125",
     "tags": [
       "技能分享"
     ],
@@ -64,7 +54,7 @@
     "title": "NGINX学习笔记",
     "date": "2021-08-02T17:35:49.000Z",
     "file": "NGINX学习笔记.md",
-    "excerpt": "NGINX\r\rnginx常用命令\r\r```shell\rwhereisnginx找到nginx目录\rcd/usr/local/nginx/sbinsbin是存放命令的目录\r```\r\r```shell\r./nginx启动nginx\r```\r\r```s",
+    "excerpt": "NGINXnginx常用命令```shellwhereisnginx找到nginx目录cd/usr/local/nginx/sbinsbin是存放命令的目录``````shell./nginx启动nginx``````shell./nginx",
     "tags": [
       "笔记"
     ],
@@ -74,7 +64,7 @@
     "title": "和老同学的难得一见",
     "date": "2021-08-01T11:07:38.000Z",
     "file": "和老同学的难得一见.md",
-    "excerpt": "老同学没有忘记\r\r高中同学感情很深，分别一年，互相想念。我才刚到家两天，泽枫，国荣，宇龙都发消息给我找我出去玩。我对高三博雅班的同学没有任何好感，但是对以前二班的同学我很愿意继续相处。\r\r张宇龙的升学宴\r\r一个五河的小伙子，我高中的好兄弟。今年复读一年考上北京的对外经贸大",
+    "excerpt": "老同学没有忘记高中同学感情很深，分别一年，互相想念。我才刚到家两天，泽枫，国荣，宇龙都发消息给我找我出去玩。我对高三博雅班的同学没有任何好感，但是对以前二班的同学我很愿意继续相处。张宇龙的升学宴一个五河的小伙子，我高中的好兄弟。今年复读一年考上北京的对外经贸大学，大喜，十",
     "tags": [
       "随笔杂记"
     ],
@@ -84,7 +74,7 @@
     "title": "带鱼屏真是太太太爽爽爽啦",
     "date": "2021-07-30T12:46:02.000Z",
     "file": "带鱼屏真是太太太爽爽爽啦.md",
-    "excerpt": "型号LG29wk500，入门级带鱼屏\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/0G__6RSBEZH8TSCLI1PA2-scaled.jp",
+    "excerpt": "型号LG29wk500，入门级带鱼屏![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/0G__6RSBEZH8TSCLI1PA2-scaled.jpg)",
     "tags": [
       "随笔杂记"
     ],
@@ -94,7 +84,17 @@
     "title": "暑期实习项目-onlinejudge在线测试平台",
     "date": "2021-07-28T14:58:29.000Z",
     "file": "暑期实习项目-onlinejudge在线测试平台.md",
-    "excerpt": "展示\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/QQ截图20210727201920.png)\r\r![](https://myblog-12",
+    "excerpt": "展示![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/QQ截图20210727201920.png)![](https://myblog-125729",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "docker笔记",
+    "date": "2021-07-19T20:57:21.000Z",
+    "file": "docker笔记.md",
+    "excerpt": "打开docker服务```shellsystemctlstartdocker```docker一直在后台运行```dockerrun-ditjudge:0.2/bin/bash```复制```dockercp容器id:容器内路径目的主机路径",
     "tags": [
       "笔记"
     ],
