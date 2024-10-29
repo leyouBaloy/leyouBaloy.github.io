@@ -3,9 +3,9 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bailey's Blog</title>
-    <script type="module" crossorigin="" src="/assets/app-BG_iPlVX.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/app-0hOkwOSo.css">
-  <link rel="modulepreload" crossorigin="" href="/assets/ArchiveView-Cs4iW9Ex.js"><link rel="stylesheet" href="/assets/ArchiveView-B7Kf79t9.css"><link rel="modulepreload" crossorigin="" href="/assets/PageHead-rIddrG6N.js"><link rel="stylesheet" href="/assets/PageHead-Dne1mxb_.css"><link rel="modulepreload" crossorigin="" href="/assets/Nav-BWyiPtfz.js"><link rel="stylesheet" href="/assets/Nav-2xM-7IQk.css"><style cssr-id="n-tabs">
+    <script type="module" crossorigin="" src="/assets/app-DR18RCAP.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/app-5hAqSIon.css">
+  <link rel="modulepreload" crossorigin="" href="/assets/ArchiveView-BQX4-_cb.js"><link rel="stylesheet" href="/assets/ArchiveView-BTAJyxor.css"><link rel="modulepreload" crossorigin="" href="/assets/PageHead-B7eupgOH.js"><link rel="stylesheet" href="/assets/PageHead-CShltarX.css"><link rel="modulepreload" crossorigin="" href="/assets/Nav-CyUXOj83.js"><link rel="stylesheet" href="/assets/Nav-CfEGTgts.css"><style cssr-id="n-tabs">
 .n-tabs {
 
  box-sizing: border-box;
@@ -576,7 +576,6 @@ padding-left: 16px;
 .n-tabs .n-tabs-nav.n-tabs-nav--card-type .n-tabs-nav__prefix, .n-tabs .n-tabs-nav.n-tabs-nav--card-type .n-tabs-nav__suffix {
 
  transition: border-color .3s var(--n-bezier);
- border-bottom: 1px solid var(--n-tab-border-color);
  
 }
 
@@ -613,6 +612,7 @@ padding-left: 16px;
  padding-left: 8px;
  padding-right: 8px;
  font-size: 16px;
+ justify-content: center;
  
 }
 
@@ -645,8 +645,16 @@ padding-right: 8px;
 color: var(--n-tab-text-color-disabled);
 }
 
-.n-tabs .n-tabs-nav.n-tabs-nav--card-type .n-tabs-scroll-padding {
-border-bottom: 1px solid var(--n-tab-border-color);
+.n-tabs .n-tabs-nav.n-tabs-nav--left, .n-tabs .n-tabs-nav.n-tabs-nav--right {
+
+ flex-direction: column; 
+ 
+}
+
+.n-tabs .n-tabs-nav.n-tabs-nav--left .n-tabs-nav__prefix, .n-tabs .n-tabs-nav.n-tabs-nav--right .n-tabs-nav__prefix, .n-tabs .n-tabs-nav.n-tabs-nav--left .n-tabs-nav__suffix, .n-tabs .n-tabs-nav.n-tabs-nav--right .n-tabs-nav__suffix {
+
+ padding: var(--n-tab-padding-vertical);
+ 
 }
 
 .n-tabs .n-tabs-nav.n-tabs-nav--left .n-tabs-wrapper, .n-tabs .n-tabs-nav.n-tabs-nav--right .n-tabs-wrapper {
@@ -655,16 +663,26 @@ border-bottom: 1px solid var(--n-tab-border-color);
  
 }
 
-.n-tabs .n-tabs-nav.n-tabs-nav--left .n-tabs-wrapper .n-tabs-tab-wrapper, .n-tabs .n-tabs-nav.n-tabs-nav--right .n-tabs-wrapper .n-tabs-tab-wrapper {
+.n-tabs .n-tabs-nav.n-tabs-nav--left .n-tabs-tab-wrapper, .n-tabs .n-tabs-nav.n-tabs-nav--right .n-tabs-tab-wrapper {
 
  flex-direction: column;
  
 }
 
-.n-tabs .n-tabs-nav.n-tabs-nav--left .n-tabs-wrapper .n-tabs-tab-wrapper .n-tabs-tab-pad, .n-tabs .n-tabs-nav.n-tabs-nav--right .n-tabs-wrapper .n-tabs-tab-wrapper .n-tabs-tab-pad {
+.n-tabs .n-tabs-nav.n-tabs-nav--left .n-tabs-tab-wrapper .n-tabs-tab-pad, .n-tabs .n-tabs-nav.n-tabs-nav--right .n-tabs-tab-wrapper .n-tabs-tab-pad {
 
  height: var(--n-tab-gap-vertical);
  width: 100%;
+ 
+}
+
+.n-tabs .n-tabs-nav.n-tabs-nav--top.n-tabs-nav--card-type .n-tabs-scroll-padding {
+border-bottom: 1px solid var(--n-tab-border-color);
+}
+
+.n-tabs .n-tabs-nav.n-tabs-nav--top.n-tabs-nav--card-type .n-tabs-nav__prefix, .n-tabs .n-tabs-nav.n-tabs-nav--top.n-tabs-nav--card-type .n-tabs-nav__suffix {
+
+ border-bottom: 1px solid var(--n-tab-border-color);
  
 }
 
@@ -693,6 +711,16 @@ border-bottom: 1px solid var(--n-tab-border-color);
  
 }
 
+.n-tabs .n-tabs-nav.n-tabs-nav--left.n-tabs-nav--card-type .n-tabs-scroll-padding {
+border-right: 1px solid var(--n-tab-border-color);
+}
+
+.n-tabs .n-tabs-nav.n-tabs-nav--left.n-tabs-nav--card-type .n-tabs-nav__prefix, .n-tabs .n-tabs-nav.n-tabs-nav--left.n-tabs-nav--card-type .n-tabs-nav__suffix {
+
+ border-right: 1px solid var(--n-tab-border-color);
+ 
+}
+
 .n-tabs .n-tabs-nav.n-tabs-nav--left.n-tabs-nav--card-type .n-tabs-tab {
 
  border-top-left-radius: var(--n-tab-border-radius);
@@ -718,6 +746,16 @@ border-bottom: 1px solid var(--n-tab-border-color);
  
 }
 
+.n-tabs .n-tabs-nav.n-tabs-nav--right.n-tabs-nav--card-type .n-tabs-scroll-padding {
+border-left: 1px solid var(--n-tab-border-color);
+}
+
+.n-tabs .n-tabs-nav.n-tabs-nav--right.n-tabs-nav--card-type .n-tabs-nav__prefix, .n-tabs .n-tabs-nav.n-tabs-nav--right.n-tabs-nav--card-type .n-tabs-nav__suffix {
+
+ border-left: 1px solid var(--n-tab-border-color);
+ 
+}
+
 .n-tabs .n-tabs-nav.n-tabs-nav--right.n-tabs-nav--card-type .n-tabs-tab {
 
  border-top-right-radius: var(--n-tab-border-radius);
@@ -740,6 +778,16 @@ border-bottom: 1px solid var(--n-tab-border-color);
 .n-tabs .n-tabs-nav.n-tabs-nav--right.n-tabs-nav--card-type .n-tabs-pad {
 
  border-left: 1px solid var(--n-tab-border-color);
+ 
+}
+
+.n-tabs .n-tabs-nav.n-tabs-nav--bottom.n-tabs-nav--card-type .n-tabs-scroll-padding {
+border-top: 1px solid var(--n-tab-border-color);
+}
+
+.n-tabs .n-tabs-nav.n-tabs-nav--bottom.n-tabs-nav--card-type .n-tabs-nav__prefix, .n-tabs .n-tabs-nav.n-tabs-nav--bottom.n-tabs-nav--card-type .n-tabs-nav__suffix {
+
+ border-top: 1px solid var(--n-tab-border-color);
  
 }
 
