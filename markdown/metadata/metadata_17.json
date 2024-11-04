@@ -1,5 +1,16 @@
 [
   {
+    "title": "jupyter-paddle使用docker安装",
+    "date": "2021-08-29T21:19:42.000Z",
+    "file": "jupyter-paddle使用docker安装.md",
+    "excerpt": "安装参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html先安装docker，参考官网拉取镜像：`dockerpullreg",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "再认识我的家乡——蚌埠",
     "date": "2021-08-27T22:47:10.000Z",
     "file": "再认识我的家乡——蚌埠.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "python时间遇到的坑",
@@ -85,16 +95,6 @@
     "date": "2021-08-01T11:07:38.000Z",
     "file": "和老同学的难得一见.md",
     "excerpt": "老同学没有忘记高中同学感情很深，分别一年，互相想念。我才刚到家两天，泽枫，国荣，宇龙都发消息给我找我出去玩。我对高三博雅班的同学没有任何好感，但是对以前二班的同学我很愿意继续相处。张宇龙的升学宴一个五河的小伙子，我高中的好兄弟。今年复读一年考上北京的对外经贸大学，大喜，十",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "带鱼屏真是太太太爽爽爽啦",
-    "date": "2021-07-30T12:46:02.000Z",
-    "file": "带鱼屏真是太太太爽爽爽啦.md",
-    "excerpt": "型号LG29wk500，入门级带鱼屏![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/07/0G__6RSBEZH8TSCLI1PA2-scaled.jpg)",
     "tags": [
       "随笔杂记"
     ],
