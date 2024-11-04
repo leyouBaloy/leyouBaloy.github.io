@@ -1,5 +1,16 @@
 [
   {
+    "title": "新加坡访学旅行",
+    "date": "2024-08-14T08:01:42.000Z",
+    "file": "新加坡访学旅行.md",
+    "excerpt": "读万卷书，行万里路。因为今年学校出了一个境外访学资助政策，所以就申请了为期七天的新加坡南洋理工大学的访学项目。这是我第一次出国，有很多新奇体验，在这里分享一下~新加坡新加坡位于东南亚马来半岛南端、马六甲海峡出入口，新加坡岛东西约50公里，南北约26公里，国土面积仅733.1平方千米（2",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_20240808_192834.jpg",
+    "totalPages": 26
+  },
+  {
     "title": "品酒🍶（古井贡酒-古20）以及小插曲",
     "date": "2024-07-27T23:01:53.000Z",
     "file": "品酒（古井贡酒-古20）.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%8F%A420.jpg",
-    "totalPages": 26
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%8F%A420.jpg"
   },
   {
     "title": "品酒🍶（汾酒黄盖&泸州老窖特曲经典）",
@@ -89,16 +99,6 @@
     "excerpt": "安装VisualStudio2017先下载VisualStudioInstallerhttps://learn.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio?v",
     "tags": [
       "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "蚌埠美食之旅",
-    "date": "2023-10-08T12:11:39.000Z",
-    "file": "蚌埠美食之旅.md",
-    "excerpt": "蚌埠简介蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给蚌埠带来了繁荣的机会。除此之外，蚌埠还有千里淮河第一大港——蚌埠港，水路交通也十分发达。铁路和水路奠定了蚌埠重要的交通地位。交通有了，人也渐渐多起来，",
-    "tags": [
-      "随笔杂记"
     ],
     "img": ""
   }
