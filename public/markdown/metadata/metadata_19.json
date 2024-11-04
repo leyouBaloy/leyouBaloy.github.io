@@ -1,5 +1,16 @@
 [
   {
+    "title": "本学期“人工智能”学习结束总结",
+    "date": "2021-06-13T23:16:09.000Z",
+    "file": "本学期“人工智能”学习结束总结.md",
+    "excerpt": "  现在人工智能真是火到了极点，各个专业都想转行搞人工智能。作为本来就是人工智能专业的学生，更是要趁早开始。所以，大一下学期，在老师的指导，以及同学和合作下，我开始接触人工智能的学习。学习资料从机器学习开始：_《统计学习方法》_作者：李航教科书/课本，理论性强，",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "《消失的13级台阶》读后感",
     "date": "2021-06-06T22:24:13.000Z",
     "file": "《消失的13级台阶》读后感.md",
@@ -7,8 +18,7 @@
     "tags": [
       "书影记录"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "离散数学结课总结+笔记",
@@ -85,16 +95,6 @@
     "date": "2021-03-16T10:03:57.000Z",
     "file": "pathlib库.md",
     "excerpt": "[老婆不在家，看点刺激的](https://blog.csdn.net/itanders/article/details/88754606)",
-    "tags": [
-      "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Django学习笔记",
-    "date": "2021-03-15T23:02:45.000Z",
-    "file": "Django学习笔记.md",
-    "excerpt": "安装虚拟环境在Powershell中执行```Set-ExecutionPolicyUnrestricted执行策略更改yyespipfreeze输出所有在本地已安装的包``````pipinstallvirtualenvcd目标文件夹virt",
     "tags": [
       "笔记"
     ],

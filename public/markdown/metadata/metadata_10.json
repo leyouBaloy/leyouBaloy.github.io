@@ -1,5 +1,16 @@
 [
   {
+    "title": "Leetcode347:前K个高频元素——优先队列、堆",
+    "date": "2022-04-07T08:55:15.000Z",
+    "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/top-k-frequent-elements/从这题开始学会使用堆题解堆（heap）大顶堆：父节点的值大于子节点的值。小顶堆：父节点的值小于子节点的值。性质：根节点一定是最大（最小）值",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "Leetcode310:最小高度树",
     "date": "2022-04-06T07:07:06.000Z",
     "file": "Leetcode310_最小高度树.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "Leetcode2:两数相加——链表",
@@ -87,16 +97,6 @@
     "excerpt": "疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最多的就是刷视频打游戏和睡觉。今天早上没定闹钟，8:00上课，7:45我才起床。迷迷糊糊的还把时间看错了，以为是8:45，索性直接摆烂不去了。其实这个时候仍然",
     "tags": [
       "随笔杂记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode103:二叉树的锯齿形层序遍历",
-    "date": "2022-03-27T11:36:29.000Z",
-    "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/做过102题后这题可以轻松做出来题解复习一下`[102.二叉树的层序遍历]`：首先根节点入队当队列不为空",
-    "tags": [
-      "刷题"
     ],
     "img": ""
   }

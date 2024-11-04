@@ -1,5 +1,16 @@
 [
   {
+    "title": "Conda 配置虚拟环境",
+    "date": "2021-08-29T21:20:21.000Z",
+    "file": "Conda 配置虚拟环境.md",
+    "excerpt": "创建虚拟环境```condacreate-n名字python=3.8```进入虚拟环境```condaactivate名字```退出虚拟环境```condadeactivate```删除虚拟环境```conda",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "jupyter-paddle使用docker安装",
     "date": "2021-08-29T21:19:42.000Z",
     "file": "jupyter-paddle使用docker安装.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "再认识我的家乡——蚌埠",
@@ -87,16 +97,6 @@
     "excerpt": "NGINXnginx常用命令```shellwhereisnginx找到nginx目录cd/usr/local/nginx/sbinsbin是存放命令的目录``````shell./nginx启动nginx``````shell./nginx",
     "tags": [
       "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "和老同学的难得一见",
-    "date": "2021-08-01T11:07:38.000Z",
-    "file": "和老同学的难得一见.md",
-    "excerpt": "老同学没有忘记高中同学感情很深，分别一年，互相想念。我才刚到家两天，泽枫，国荣，宇龙都发消息给我找我出去玩。我对高三博雅班的同学没有任何好感，但是对以前二班的同学我很愿意继续相处。张宇龙的升学宴一个五河的小伙子，我高中的好兄弟。今年复读一年考上北京的对外经贸大学，大喜，十",
-    "tags": [
-      "随笔杂记"
     ],
     "img": ""
   }
