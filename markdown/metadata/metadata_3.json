@@ -1,5 +1,16 @@
 [
   {
+    "title": "如何在Windows上编译Python39源代码",
+    "date": "2023-12-10T12:51:01.000Z",
+    "file": "如何在Windows上编译Python39源代码.md",
+    "excerpt": "安装VisualStudio2017先下载VisualStudioInstallerhttps://learn.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio?v",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "蚌埠美食之旅",
     "date": "2023-10-08T12:11:39.000Z",
     "file": "蚌埠美食之旅.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "艺术品般的游戏—《荒野大镖客救赎2》",
@@ -90,16 +100,6 @@
     "tags": [
       "技能分享",
       "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "CSS布局基础知识",
-    "date": "2023-03-20T05:32:55.000Z",
-    "file": "CSS布局基础知识.md",
-    "excerpt": "需求还是之前的那个需求，我需要做一个静态网页用于展示电子版教材。网页的布局非常重要，我需要一个顶部横向的导航栏，一个能够显示大纲的侧边栏，侧边栏的右边是教材的内容，听起来很简单，不是吗？但我需要再加一个条件，就是这些布局得是响应式的，要能够适应不同尺寸的屏幕，这可就不简单了。举个例子，当屏",
-    "tags": [
-      "技能分享"
     ],
     "img": ""
   }

@@ -1,5 +1,16 @@
 [
   {
+    "title": "jupyter打开项目文件夹",
+    "date": "2021-01-19T17:52:50.000Z",
+    "file": "jupyter打开项目文件夹.md",
+    "excerpt": "一.添加环境变量直接在windows里面搜索“查看高级系统设置”，选择<高级>,<环境变量>，点开<path>，以下三行填入其中：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "字符串与数字之间的转换",
     "date": "2021-01-01T21:15:27.000Z",
     "file": "字符串与数字之间的转换.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "给string对象插入字符",
@@ -85,16 +95,6 @@
     "date": "2020-12-04T09:05:15.000Z",
     "file": "判断回文数.md",
     "excerpt": "一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++里把int类型转换成string类型真的好麻烦！在百度上查了很久，方法要么不对，要么就是太复杂。果然c++是不适合处理字符串的。所以放弃那种做法，用这种：",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "c++比较字典序的三种方法",
-    "date": "2020-12-04T08:04:09.000Z",
-    "file": "c++比较字典序的三种方法.md",
-    "excerpt": "[比较字符串字典序的三种方法【C++】-知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/205953754)```include<iostream>usingnamespacestd;intmain(){chars1[2]",
     "tags": [
       "刷题"
     ],

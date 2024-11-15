@@ -1,5 +1,16 @@
 [
   {
+    "title": "对图像操作",
+    "date": "2021-08-29T21:21:29.000Z",
+    "file": "对图像操作.md",
+    "excerpt": "图像位图（rastergraphics)和矢量图（vectorgraphics)位图是有像素的，色彩丰富。矢量图放大不会失真。通道单通道灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256=2_2_2\\2)，那么他的像素值0(黑)",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "Conda 配置虚拟环境",
     "date": "2021-08-29T21:20:21.000Z",
     "file": "Conda 配置虚拟环境.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "jupyter-paddle使用docker安装",
@@ -87,16 +97,6 @@
     "excerpt": "QQ邮箱设置![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081637.jpg)![](https://myblog-125",
     "tags": [
       "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "NGINX学习笔记",
-    "date": "2021-08-02T17:35:49.000Z",
-    "file": "NGINX学习笔记.md",
-    "excerpt": "NGINXnginx常用命令```shellwhereisnginx找到nginx目录cd/usr/local/nginx/sbinsbin是存放命令的目录``````shell./nginx启动nginx``````shell./nginx",
-    "tags": [
-      "笔记"
     ],
     "img": ""
   }

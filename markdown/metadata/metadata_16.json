@@ -1,5 +1,16 @@
 [
   {
+    "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
+    "date": "2021-11-21T09:04:54.000Z",
+    "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
+    "excerpt": "问题描述![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-3-1024x215.png)如图，有一天在push的时候要求输入Usernam",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "精准而优雅——MacBook Air",
     "date": "2021-11-14T10:32:04.000Z",
     "file": "精准而优雅——MacBook Air.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "macOS下matplotlib无法显示中文字体问题解决",
@@ -85,16 +95,6 @@
     "date": "2021-09-08T22:42:40.000Z",
     "file": "certbot自动配置nginx给wordpress站点加https.md",
     "excerpt": "思路1.安装snap2.安装certbot3.自动配置nginx完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](https://",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "对图像操作",
-    "date": "2021-08-29T21:21:29.000Z",
-    "file": "对图像操作.md",
-    "excerpt": "图像位图（rastergraphics)和矢量图（vectorgraphics)位图是有像素的，色彩丰富。矢量图放大不会失真。通道单通道灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256=2_2_2\\2)，那么他的像素值0(黑)",
     "tags": [
       "技能分享"
     ],
