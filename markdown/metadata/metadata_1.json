@@ -1,5 +1,16 @@
 [
   {
+    "title": "Leetcode_209长度最小的子数组——滑动窗口",
+    "date": "2024-11-21T13:28:00.000Z",
+    "file": "Leetcode_209长度最小的子数组.md",
+    "excerpt": "Leetcode_209长度最小的子数组给定一个含有`n`个正整数的数组和一个正整数`target`。找出该数组中满足其总和大于等于`target`的长度最小的子数组`[numsl,numsl+1,...,numsr-1,numsr]`，并返回",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "高光谱遥感深度学习调研",
     "date": "2024-11-15T08:36:41.000Z",
     "file": "高光谱遥感深度学习调研.md",
@@ -7,8 +18,7 @@
     "tags": [
       "笔记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png",
-    "totalPages": 26
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png"
   },
   {
     "title": "品酒（尊美醇Jameson）",
@@ -90,16 +100,5 @@
       "随笔杂记"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240821232051784.png"
-  },
-  {
-    "title": "调研遥感数据压缩",
-    "date": "2024-08-20T16:11:00.000Z",
-    "file": "调研遥感数据压缩.md",
-    "excerpt": "什么是遥感数据压缩？遥感图像压缩是指利用特定的算法和技术减少遥感图像数据量的过程，以便更有效地存储和传输数据。这个过程涉及到数据的编码，以减少数据的比特数，同时尽量保持原始图像的重要视觉和分析信息。遥感图像压缩通常分为两类：1.无损压缩（LosslessCompression）",
-    "tags": [
-      "人工智能",
-      "笔记"
-    ],
-    "img": ""
   }
 ]
