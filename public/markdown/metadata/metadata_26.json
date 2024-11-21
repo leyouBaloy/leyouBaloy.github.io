@@ -1,5 +1,16 @@
 [
   {
+    "title": "Python-洗牌算法",
+    "date": "2020-10-11T16:11:03.000Z",
+    "file": "Python-洗牌算法.md",
+    "excerpt": "原理在这[https://www.bilibili.com/video/BV1k7411q7jo](https://www.bilibili.com/video/BV1k7411q7jo)\r\r倒序写法\r\r```\rimportrandom\rdefshuffle(lis):\r",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 26
+  },
+  {
     "title": "每日一题--a到z26个字母循环输出",
     "date": "2020-10-10T23:07:49.000Z",
     "file": "每日一题--a到z26个字母循环输出.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "每日一题--有进位的加法运算",
