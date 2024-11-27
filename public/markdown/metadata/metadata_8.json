@@ -1,5 +1,27 @@
 [
   {
+    "title": "Flask+vue使用jwt验证",
+    "date": "2022-05-22T05:00:39.000Z",
+    "file": "flask+vue使用jwt验证.md",
+    "excerpt": "为什么要使用jwt验证？\r\rjwt（jsonwebtoken）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫（天猫属于淘宝的子网站），那么你需不需要重新登录呢？答案是不用，你会发现天猫。在一个站点登录后，在其它子站点就不需要重复登录，这就是单点登",
+    "tags": [
+      "技能分享",
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
+    "title": "《学术研究，你的成功之道》",
+    "date": "2022-05-07T12:12:51.000Z",
+    "file": "《学术研究，你的成功之道》.md",
+    "excerpt": "《学术研究，你的成功之道》\r\r格雷准则\r\r如何判断一个好问题？\r\r格雷准则是由图灵奖得主JimGary,在1999年图灵奖颁奖典礼上提出的一个好的问题应该具备的几个条件。\r\r1.有明显的益处；测试描述简单可以用“电梯描述法”看能否在1分钟之内将问题意义清楚明",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
     "title": "《从零开始的女性主义》读后有感",
     "date": "2022-05-06T09:32:20.000Z",
     "file": "《从零开始的女性主义》读后有感.md",
@@ -7,8 +29,7 @@
     "tags": [
       "书影记录"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "Leetcode39:组合总和——回溯",
@@ -75,26 +96,6 @@
     "date": "2022-04-26T10:58:23.000Z",
     "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
     "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/3sum-closest/\r\r题解\r\r排序+双指针\r\r这道题的官方题解写的太好了：https://leetcode-cn.com/problems/3sum-closest/solution",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode11:盛水最多的容器——双指针",
-    "date": "2022-04-25T09:26:41.000Z",
-    "file": "Leetcode11_盛水最多的容器——双指针.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/container-with-most-water/\r\r每次看题解：“我又会了！”\r\r下一题：“我是废物。”\r\r题解\r\r双指针\r\r定义两个指针`left`和`right`分别在最左边",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode743:网络延迟时间——dijkstra算法",
-    "date": "2022-04-21T09:35:07.000Z",
-    "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/network-delay-time/\r\r关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。\r\r题解\r\r关于dijkstra算法具体内容",
     "tags": [
       "刷题"
     ],

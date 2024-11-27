@@ -1,5 +1,26 @@
 [
   {
+    "title": "成功主持150人参会的讲座！",
+    "date": "2022-04-10T15:05:16.000Z",
+    "file": "成功主持150人参会的讲座！.md",
+    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}\r\r\r\r{{<f",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
+    "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
+    "date": "2022-04-09T04:08:07.000Z",
+    "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
+    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/subarray-sum-equals-k/\r\r不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。\r\r题解\r\r枚举法\r\r枚举法会超时，但可以为我们提供思路。\r\r考虑以`j",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
     "title": "C++和python常用函数",
     "date": "2022-04-08T12:23:24.000Z",
     "file": "c++和python常用函数.md",
@@ -8,8 +29,7 @@
       "刷题",
       "笔记"
     ],
-    "img": "",
-    "totalPages": 26
+    "img": ""
   },
   {
     "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
@@ -76,26 +96,6 @@
     "date": "2022-04-01T08:03:13.000Z",
     "file": "Leetcode55_跳跃游戏——贪心.md",
     "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/jump-game/\r\r题解\r\r所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。\r\r那么这道题可以有这样的思路：从前往后遍历`nums`的元素，实时维护最远可以到达的位",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode198:打家劫舍——动态规划",
-    "date": "2022-03-31T08:20:49.000Z",
-    "file": "Leetcode198_打家劫舍——动态规划.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/house-robber/\r\r题解\r\r看官方题解吧，官方题解写的真好。\r\r感想\r\r我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode113:路径总和——dfs、回溯",
-    "date": "2022-03-30T11:19:10.000Z",
-    "file": "Leetcode113_路径总和II——dfs、回溯.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/path-sum-ii/\r\r题解\r\rdfs无回溯\r\r我们用深度优先搜索，在搜索时把当前路径记录下来为`nums`。如果满足\r\r1.`sum(nums)==targetSum`；\r2.",
     "tags": [
       "刷题"
     ],
