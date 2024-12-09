@@ -1,14 +1,24 @@
 [
   {
-    "title": "全国高校AI知识竞赛UPC赛区获奖通知",
-    "date": "2021-09-29T23:37:12.000Z",
-    "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
-    "excerpt": "获奖名单：\r\r![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)\r\r![](https://myblog-1257298572.",
+    "title": "黄山归来不看岳——黄山之旅",
+    "date": "2021-10-06T08:28:08.000Z",
+    "file": "黄山归来不看岳——黄山之旅.md",
+    "excerpt": "时间2021年国庆期间，10月3日至5日。第一站：翡翠谷翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。翡翠谷是一条长长的峡谷，一路走进去有",
     "tags": [
-      "刷题"
+      "书影记录"
     ],
     "img": "",
     "totalPages": 27
+  },
+  {
+    "title": "全国高校AI知识竞赛UPC赛区获奖通知",
+    "date": "2021-09-29T23:37:12.000Z",
+    "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
+    "excerpt": "获奖名单：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)![](https://myblog-1257298572.cos.",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
   },
   {
     "title": "浏览器不支持getUserMedia",
@@ -24,7 +34,7 @@
     "title": "certbot自动配置nginx给wordpress站点加https",
     "date": "2021-09-08T22:42:40.000Z",
     "file": "certbot自动配置nginx给wordpress站点加https.md",
-    "excerpt": "思路\r\r1.安装snap\r2.安装certbot\r3.自动配置nginx\r\r完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](ht",
+    "excerpt": "思路1.安装snap2.安装certbot3.自动配置nginx完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](https://",
     "tags": [
       "技能分享"
     ],
@@ -34,7 +44,7 @@
     "title": "对图像操作",
     "date": "2021-08-29T21:21:29.000Z",
     "file": "对图像操作.md",
-    "excerpt": "图像\r\r位图（rastergraphics)和矢量图（vectorgraphics)\r\r位图是有像素的，色彩丰富。矢量图放大不会失真。\r\r通道\r\r单通道\r\r灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256=2_2_2\\2)，那",
+    "excerpt": "图像位图（rastergraphics)和矢量图（vectorgraphics)位图是有像素的，色彩丰富。矢量图放大不会失真。通道单通道灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256=2_2_2\\2)，那么他的像素值0(黑)",
     "tags": [
       "技能分享"
     ],
@@ -44,7 +54,7 @@
     "title": "Conda 配置虚拟环境",
     "date": "2021-08-29T21:20:21.000Z",
     "file": "Conda 配置虚拟环境.md",
-    "excerpt": "创建虚拟环境\r\r```\rcondacreate-n名字python=3.8\r```\r\r进入虚拟环境\r\r```\rcondaactivate名字\r```\r\r退出虚拟环境\r\r```\rcondadeactivate\r```\r\r",
+    "excerpt": "创建虚拟环境```condacreate-n名字python=3.8```进入虚拟环境```condaactivate名字```退出虚拟环境```condadeactivate```删除虚拟环境```conda",
     "tags": [
       "技能分享"
     ],
@@ -54,7 +64,7 @@
     "title": "jupyter-paddle使用docker安装",
     "date": "2021-08-29T21:19:42.000Z",
     "file": "jupyter-paddle使用docker安装.md",
-    "excerpt": "安装\r\r参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html\r\r先安装docker，参考官网\r\r拉取镜像：\r\r`docker",
+    "excerpt": "安装参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html先安装docker，参考官网拉取镜像：`dockerpullreg",
     "tags": [
       "技能分享"
     ],
@@ -74,7 +84,7 @@
     "title": "python时间遇到的坑",
     "date": "2021-08-22T15:21:03.000Z",
     "file": "python时间遇到的坑.md",
-    "excerpt": "python中与时间相关的标准库有三个：\r\rtime\rdatetime\rcalendar\r\r吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会\r\r时区坑\r\r查看时间的方式有很多\r\r法一：\r\r```python\rfromdatetime",
+    "excerpt": "python中与时间相关的标准库有三个：timedatetimecalendar吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会时区坑查看时间的方式有很多法一：```pythonfromdatetimeimportdatetim",
     "tags": [
       "笔记"
     ],
@@ -84,19 +94,9 @@
     "title": "《人类简史》读后有感",
     "date": "2021-08-16T09:03:38.000Z",
     "file": "《人类简史》读后有感.md",
-    "excerpt": "一句话概述\r\r  《人类简史》在2012年以希伯来文出版。本书从人类的起源开始谈，谈到人类的认知革命、农业革命、再谈到人类的融合统一、科学革命，最后谈一谈人类的未来。构造了一个横跨人类历史的巨大历史框架。\r\r作者简介\r\r  作者是以色列年轻人尤瓦尔·赫拉利（出书时",
+    "excerpt": "一句话概述  《人类简史》在2012年以希伯来文出版。本书从人类的起源开始谈，谈到人类的认知革命、农业革命、再谈到人类的融合统一、科学革命，最后谈一谈人类的未来。构造了一个横跨人类历史的巨大历史框架。作者简介  作者是以色列年轻人尤瓦尔·赫拉利（出书时不到40岁）",
     "tags": [
       "书影记录"
-    ],
-    "img": ""
-  },
-  {
-    "title": "网吧＋炸鸡 yyds!",
-    "date": "2021-08-11T20:57:33.000Z",
-    "file": "网吧＋炸鸡 yyds!.md",
-    "excerpt": "这个星期我去了六次网吧，吃了三次炸鸡。\r\r网吧\r\r虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。\r\r现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。\r\r打LOL终极魔典",
-    "tags": [
-      "随笔杂记"
     ],
     "img": ""
   }

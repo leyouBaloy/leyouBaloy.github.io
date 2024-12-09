@@ -1,9 +1,9 @@
 [
   {
-    "title": "Leetcode733:图像渲染——搜索算法",
-    "date": "2022-03-21T10:27:50.000Z",
-    "file": "Leetcode733_图像渲染——搜索算法.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/flood-fill/\r\r美好的一天从一道简单题开始～\r\r题解\r\r理解题意后，发现这不就是windows自带画图工具里的`油漆桶`吗？\r\r深度优先搜索\r\r众所周知，深度优先搜索可以用",
+    "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
+    "date": "2022-03-22T09:50:53.000Z",
+    "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/rotting-oranges/这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。题解解题思路这道题很明显要使用广度优先搜索，搜索的目标是每个腐烂",
     "tags": [
       "刷题"
     ],
@@ -11,10 +11,20 @@
     "totalPages": 27
   },
   {
+    "title": "Leetcode733:图像渲染——搜索算法",
+    "date": "2022-03-21T10:27:50.000Z",
+    "file": "Leetcode733_图像渲染——搜索算法.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/flood-fill/美好的一天从一道简单题开始～题解理解题意后，发现这不就是windows自带画图工具里的`油漆桶`吗？深度优先搜索众所周知，深度优先搜索可以用`栈`实现，而`递归`本",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
     "title": "Leetcode435:重叠区间——动态规划、贪心",
     "date": "2022-03-20T09:41:58.000Z",
     "file": "Leetcode435_重叠区间——动态规划、贪心.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/non-overlapping-intervals/\r\r这题我竟然一年前做过，第二遍再做的时候一点印象都没有。\r\r看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算",
+    "excerpt": "题目https://leetcode-cn.com/problems/non-overlapping-intervals/这题我竟然一年前做过，第二遍再做的时候一点印象都没有。看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算法水平还不如",
     "tags": [
       "刷题"
     ],
@@ -24,7 +34,7 @@
     "title": "Leetcode240:搜索二维矩阵——二分、矩阵",
     "date": "2022-03-19T09:55:44.000Z",
     "file": "Leetcode240_搜索二维矩阵——二分、矩阵.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/search-a-2d-matrix-ii/\r\r题解\r\r法一：逐行二分\r\r没啥好说的，代码可以参考一下\r\r```c++\rclassSolution{\rpublic:\rb",
+    "excerpt": "题目https://leetcode-cn.com/problems/search-a-2d-matrix-ii/题解法一：逐行二分没啥好说的，代码可以参考一下```c++classSolution{public:boolsearchMat",
     "tags": [
       "刷题"
     ],
@@ -34,7 +44,7 @@
     "title": "Roboflow+colab优雅地训练yolov5模型",
     "date": "2022-03-19T05:37:49.000Z",
     "file": "roboflow+colab优雅地训练yolov5模型.md",
-    "excerpt": "roboflow\r\rroboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。\r\r网址：https://roboflow.com/\r\r提示：\r\r可以免费使用\r需要挂代理\r套餐一",
+    "excerpt": "roboflowroboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。网址：https://roboflow.com/提示：可以免费使用需要挂代理套餐一定要选public，",
     "tags": [
       "技能分享"
     ],
@@ -44,7 +54,7 @@
     "title": "《邓小平时代》——改革开放的总设计师",
     "date": "2022-03-18T10:32:09.000Z",
     "file": "《邓小平时代》——改革开放的总设计师.md",
-    "excerpt": "邓小平时代\r\r所有中国人都知道，1949年建国时中国是一个落后封闭的社会主义国家（和现在的朝鲜差不多）。但是在80年代，社会主义市场经济取代了计划经济，对外封闭变成了改革开放。90年代，中国经济一路起飞，国际地位迅速提高。直到现在，中国已经成为世界最强的国家之一。\r\r中国是如何崛起的？",
+    "excerpt": "邓小平时代所有中国人都知道，1949年建国时中国是一个落后封闭的社会主义国家（和现在的朝鲜差不多）。但是在80年代，社会主义市场经济取代了计划经济，对外封闭变成了改革开放。90年代，中国经济一路起飞，国际地位迅速提高。直到现在，中国已经成为世界最强的国家之一。中国是如何崛起的？在大一时",
     "tags": [
       "书影记录"
     ],
@@ -54,7 +64,7 @@
     "title": "Leetcode455:分发饼干——排序、贪心",
     "date": "2022-03-18T08:01:16.000Z",
     "file": "Leetcode455_分发饼干——排序、贪心.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/assign-cookies/\r\r题解\r\r为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子）\r\r然后对于每个胃口",
+    "excerpt": "题目https://leetcode-cn.com/problems/assign-cookies/题解为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子）然后对于每个胃口小的孩子，找到一",
     "tags": [
       "刷题"
     ],
@@ -64,7 +74,7 @@
     "title": "Leetcode160:相交链表——哈希、双指针",
     "date": "2022-03-16T12:06:00.000Z",
     "file": "Leetcode160_相交链表——哈希、双指针.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/intersection-of-two-linked-lists/\r\r题解\r\r法一：哈希表\r\r先把一个链表放到哈希表里，再遍历另一个链表。\r\r```c++\rclassSolution",
+    "excerpt": "题目https://leetcode-cn.com/problems/intersection-of-two-linked-lists/题解法一：哈希表先把一个链表放到哈希表里，再遍历另一个链表。```c++classSolution{public:",
     "tags": [
       "刷题"
     ],
@@ -74,7 +84,7 @@
     "title": "mac m1 安装sqlserver踩坑经历",
     "date": "2022-03-16T10:14:14.000Z",
     "file": "macm1安装sqlserver踩坑经历.md",
-    "excerpt": "为什么安装sqlserver\r\r上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。\r\r法一：云数据库（❌\r\r在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所",
+    "excerpt": "为什么安装sqlserver上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。法一：云数据库（❌在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所周知，像阿里",
     "tags": [
       "技能分享"
     ],
@@ -84,17 +94,7 @@
     "title": "Leetcode206:反转链表",
     "date": "2022-03-14T11:15:57.000Z",
     "file": "leetcode206_反转链表.md",
-    "excerpt": "一件事情只有做了一段时间之后才能找到方向。前段时间随便找了一些题刷，开始逐渐了解数据结构和算法。最近在知乎上看到一篇文章，列举了400道数据结构入门题目，感觉找到了方向。\r\r所以从今天开始进入新的刷题阶段。\r\r题单在此：https://www.zhihu.com/question/39975",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "三数之和——双指针——好难",
-    "date": "2022-03-13T08:48:06.000Z",
-    "file": "三数之和——双指针——好难.md",
-    "excerpt": "题目\r\r[15.三数之和]\r\r难度中等4464收藏分享切换为英文接收动态反馈\r\r给你一个包含`n`个整数的数组`nums`，判断`nums`中是否存在三个元素a，b，c，使得a+b+c=0？请你找出所有和为`0`且不重复的三元组",
+    "excerpt": "一件事情只有做了一段时间之后才能找到方向。前段时间随便找了一些题刷，开始逐渐了解数据结构和算法。最近在知乎上看到一篇文章，列举了400道数据结构入门题目，感觉找到了方向。所以从今天开始进入新的刷题阶段。题单在此：https://www.zhihu.com/question/399753856",
     "tags": [
       "刷题"
     ],

@@ -1,9 +1,9 @@
 [
   {
-    "title": "csv库的使用方法",
-    "date": "2021-02-25T11:10:35.000Z",
-    "file": "csv库的使用方法.md",
-    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。\r\r一、csv简介\r\rCSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符",
+    "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
+    "date": "2021-02-25T18:40:44.000Z",
+    "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
+    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver仅供学习使用Legend图例```importmatplotlib.pyplotaspltimportnum",
     "tags": [
       "笔记"
     ],
@@ -11,10 +11,20 @@
     "totalPages": 27
   },
   {
+    "title": "csv库的使用方法",
+    "date": "2021-02-25T11:10:35.000Z",
+    "file": "csv库的使用方法.md",
+    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。一、csv简介CSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。c",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
     "title": "json数据存储",
     "date": "2021-02-25T11:02:16.000Z",
     "file": "json数据存储.md",
-    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2\r\r在上一篇文章里我们讲了xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。\r\r实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据",
+    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2在上一篇文章里我们讲了xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件",
     "tags": [
       "笔记"
     ],
@@ -24,7 +34,7 @@
     "title": "matplotlib学习笔记（一）基本语法,figure,坐标轴",
     "date": "2021-02-23T10:48:54.000Z",
     "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
-    "excerpt": "学习视频地址：[https://www.bilibili.com/video/BV1Jx411L7LU?](https://www.bilibili.com/video/BV1Jx411L7LU?)\rgithub地址：[https://github.com/MorvanZhou/tutoria",
+    "excerpt": "学习视频地址：[https://www.bilibili.com/video/BV1Jx411L7LU?](https://www.bilibili.com/video/BV1Jx411L7LU?)github地址：[https://github.com/MorvanZhou/tutorial",
     "tags": [
       "笔记"
     ],
@@ -34,7 +44,7 @@
     "title": "《新喜剧之王》观后感",
     "date": "2021-02-15T20:18:05.000Z",
     "file": "《新喜剧之王》观后感.md",
-    "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。\r\r剧",
+    "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。剧情",
     "tags": [
       "书影记录"
     ],
@@ -44,7 +54,7 @@
     "title": "BeautifulSoup学习笔记",
     "date": "2021-02-14T19:08:15.000Z",
     "file": "BeautifulSoup学习笔记.md",
-    "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。\r\r[https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044](https://www.bilibili.com/video/BV1Pg4",
+    "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。[https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044](https://www.bilibili.com/video/BV1Pg4y1",
     "tags": [
       "笔记"
     ],
@@ -54,7 +64,7 @@
     "title": "《华尔街之狼》观后感",
     "date": "2021-02-11T00:29:07.000Z",
     "file": "《华尔街之狼》观后感.md",
-    "excerpt": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。\r\r剧情\r\r主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。\r公司破产后，他也学会了搞传销",
+    "excerpt": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。剧情主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。公司破产后，他也学会了搞传销（果然在大",
     "tags": [
       "书影记录"
     ],
@@ -64,7 +74,7 @@
     "title": "搞了一晚上http升级为https",
     "date": "2021-02-09T23:45:43.000Z",
     "file": "搞了一晚上http升级为https.md",
-    "excerpt": "感慨\r\r网上的教程好多好乱，我照着其中的一个做，差点把我网站给干没了。以后搞东西之前，一定要备份！！！！\r\r思路\r\r大致就是，先在腾讯云申请了一个免费的证书，然后下载是一个压缩文件，有用的是里面的Apache的配置文件（因为我的wordpress是跑在Apache",
+    "excerpt": "感慨网上的教程好多好乱，我照着其中的一个做，差点把我网站给干没了。以后搞东西之前，一定要备份！！！！思路大致就是，先在腾讯云申请了一个免费的证书，然后下载是一个压缩文件，有用的是里面的Apache的配置文件（因为我的wordpress是跑在Apache上的）",
     "tags": [
       "笔记"
     ],
@@ -74,7 +84,7 @@
     "title": "学吉他总结",
     "date": "2021-02-09T18:26:18.000Z",
     "file": "学吉他总结.md",
-    "excerpt": "时间？\r\r我是从去年暑假开始学吉他的，到目前为止也就刚好半年吧。\r\r学的好不好？\r\r学的还是挺不错的，也就半年的时间，上了不超过20节课（每节一个小时）我现在已经能弹很多很多流行歌曲了。每隔一段时间我都能找到一首我特别想弹唱的歌，“把我喜欢的歌弹出来”这就是我学吉他的最",
+    "excerpt": "时间？我是从去年暑假开始学吉他的，到目前为止也就刚好半年吧。学的好不好？学的还是挺不错的，也就半年的时间，上了不超过20节课（每节一个小时）我现在已经能弹很多很多流行歌曲了。每隔一段时间我都能找到一首我特别想弹唱的歌，“把我喜欢的歌弹出来”这就是我学吉他的最大动力。",
     "tags": [
       "随笔杂记"
     ],
@@ -84,19 +94,9 @@
     "title": "python面向对象课程",
     "date": "2021-02-02T10:33:46.000Z",
     "file": "python面向对象课程.md",
-    "excerpt": "[https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm\\_id\\_from=pageDriver](https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm_id_from=pageDriver)\r",
+    "excerpt": "[https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm\\_id\\_from=pageDriver](https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm_id_from=pageDriver)",
     "tags": [
       "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "叮~我们的MC服务器终于到货啦！",
-    "date": "2021-01-30T11:24:49.000Z",
-    "file": "叮~我们的MC服务器终于到货啦！.md",
-    "excerpt": "1月30日更新\r\r增加了竹子mod参考资料http://www.minecraftxz.com/bamboo/\r\r豆腐工坊mod参考资料https://www.mcmod.cn/class/386.html\r\r增加了小地图，进客户端就能看到\r\r魔法金属是一个大量级的Mo",
-    "tags": [
-      "随笔杂记"
     ],
     "img": ""
   }

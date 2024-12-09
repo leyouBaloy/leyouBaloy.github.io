@@ -1,20 +1,30 @@
 [
   {
-    "title": "成功主持150人参会的讲座！",
-    "date": "2022-04-10T15:05:16.000Z",
-    "file": "成功主持150人参会的讲座！.md",
-    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}\r\r\r\r{{<f",
+    "title": "《失乐园》读后有感",
+    "date": "2022-04-15T08:38:22.000Z",
+    "file": "《失乐园》读后有感.md",
+    "excerpt": "故事简叙{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220415165918989.png\"title=\"《失乐园》\">}}久木是一家出版社的编辑，",
     "tags": [
-      "随笔杂记"
+      "书影记录"
     ],
     "img": "",
     "totalPages": 27
   },
   {
+    "title": "成功主持150人参会的讲座！",
+    "date": "2022-04-10T15:05:16.000Z",
+    "file": "成功主持150人参会的讲座！.md",
+    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}{{<figur",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": ""
+  },
+  {
     "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
     "date": "2022-04-09T04:08:07.000Z",
     "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/subarray-sum-equals-k/\r\r不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。\r\r题解\r\r枚举法\r\r枚举法会超时，但可以为我们提供思路。\r\r考虑以`j",
+    "excerpt": "题目https://leetcode-cn.com/problems/subarray-sum-equals-k/不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。题解枚举法枚举法会超时，但可以为我们提供思路。考虑以`j`结尾和为`k`的连",
     "tags": [
       "刷题"
     ],
@@ -24,7 +34,7 @@
     "title": "C++和python常用函数",
     "date": "2022-04-08T12:23:24.000Z",
     "file": "c++和python常用函数.md",
-    "excerpt": "c++常用函数\r\rsort(v.begin(),v.end())\r\r```c++\r//向量v\rvector<int>v;\rsort(v.begin(),v.end())\r//数组a\rsort(a,a+n);\r```\r\r```c++\r//可以加参数cm",
+    "excerpt": "c++常用函数sort(v.begin(),v.end())```c++//向量vvector<int>v;sort(v.begin(),v.end())//数组asort(a,a+n);``````c++//可以加参数cmp//比如对inter",
     "tags": [
       "刷题",
       "笔记"
@@ -35,7 +45,7 @@
     "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
     "date": "2022-04-08T11:59:03.000Z",
     "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/longest-substring-without-repeating-characters/\r\r乍一看好像做过，再一看好像不会😂\r\r题解\r\r暴力法\r\r设字符串为`s`，假如我们要找的这段没",
+    "excerpt": "题目https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/乍一看好像做过，再一看好像不会😂题解暴力法设字符串为`s`，假如我们要找的这段没有重复字符的序列是从",
     "tags": [
       "刷题"
     ],
@@ -45,7 +55,7 @@
     "title": "Leetcode347:前K个高频元素——优先队列、堆",
     "date": "2022-04-07T08:55:15.000Z",
     "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/top-k-frequent-elements/\r\r从这题开始学会使用堆\r\r题解\r\r堆（heap）\r\r大顶堆：父节点的值大于子节点的值。\r\r小顶堆：父节点的值小于子节点的值。\r\r性质：",
+    "excerpt": "题目https://leetcode-cn.com/problems/top-k-frequent-elements/从这题开始学会使用堆题解堆（heap）大顶堆：父节点的值大于子节点的值。小顶堆：父节点的值小于子节点的值。性质：根节点一定是最大（最小）值",
     "tags": [
       "刷题"
     ],
@@ -55,7 +65,7 @@
     "title": "Leetcode310:最小高度树",
     "date": "2022-04-06T07:07:06.000Z",
     "file": "Leetcode310_最小高度树.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/minimum-height-trees/\r\r这是一道理论性很强，代码也很有技巧性的“中等”难度题目。\r\r题解\r\r暴力法\r\r献上我的超时代码：\r\r```python\rclassSolu",
+    "excerpt": "题目https://leetcode-cn.com/problems/minimum-height-trees/这是一道理论性很强，代码也很有技巧性的“中等”难度题目。题解暴力法献上我的超时代码：```pythonclassSolution:def",
     "tags": [
       "刷题"
     ],
@@ -65,7 +75,7 @@
     "title": "Leetcode2:两数相加——链表",
     "date": "2022-04-05T08:50:12.000Z",
     "file": "Leetcode2_两数相加——链表.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/add-two-numbers/\r\r这道题主要是debug\r\r题解\r\r我自己写的代码：\r\r```c++\r/\rDefinitionforsingly-linkedlist.\r",
+    "excerpt": "题目https://leetcode-cn.com/problems/add-two-numbers/这道题主要是debug题解我自己写的代码：```c++/Definitionforsingly-linkedlist.structListN",
     "tags": [
       "刷题"
     ],
@@ -75,7 +85,7 @@
     "title": "Leetcode230:二叉搜索树中第K小的元素",
     "date": "2022-04-04T07:26:44.000Z",
     "file": "Leetcode230_二叉搜索树中第K小的元素.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/\r\r这是一道可拓展性很高的题目\r\r题解\r\r中序遍历递归法\r\r最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第`k-1`个元",
+    "excerpt": "题目https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/这是一道可拓展性很高的题目题解中序遍历递归法最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第`k-1`个元素。可是我们只需",
     "tags": [
       "刷题"
     ],
@@ -85,17 +95,7 @@
     "title": "Leetcode450:删除二叉搜索树中的节点",
     "date": "2022-04-02T02:20:05.000Z",
     "file": "Leetcode450_删除二叉搜索树中的节点.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/delete-node-in-a-bst/\r\r这道题完全可以当作一个知识点来对待。\r\r题解\r\r思路\r\r众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。\r",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode55:跳跃游戏——贪心",
-    "date": "2022-04-01T08:03:13.000Z",
-    "file": "Leetcode55_跳跃游戏——贪心.md",
-    "excerpt": "题目\r\rhttps://leetcode-cn.com/problems/jump-game/\r\r题解\r\r所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。\r\r那么这道题可以有这样的思路：从前往后遍历`nums`的元素，实时维护最远可以到达的位",
+    "excerpt": "题目https://leetcode-cn.com/problems/delete-node-in-a-bst/这道题完全可以当作一个知识点来对待。题解思路众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。某个节点`node",
     "tags": [
       "刷题"
     ],
