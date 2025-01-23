@@ -1,56 +1,60 @@
 <template>
     <div class="wrapper">
-        <div class="container">
-
-            <router-link :to="path" class="title"><span>{{ title }}</span>
-
-            </router-link>
-
-            <div v-if="img != ''" class="img-container">
-                <n-image lazy object-fit="cover" width="100%" :src="img" />
-            </div>
-            <div class="content">{{ content }} ...<router-link :to="path" class="more"><span>更多</span></router-link>
-            </div>
-            <div class="footer">
-                <span class="time">发布时间：{{ time }}</span>
-                <span class="tag">分类：{{ tag }}</span>
-            </div>
+      <div class="container">
+  
+        <router-link :to="path" class="title">
+          <span>{{ title }}</span>
+        </router-link>
+  
+        <!-- 如果有图片，添加 onload 事件 -->
+        <div v-if="img" class="img-container">
+          <!-- naive-ui 的 n-image 可以透传原生 load 事件 -->
+          <n-image
+            lazy
+            object-fit="cover"
+            width="100%"
+            :src="img"
+            @load="handleLoad"
+          />
         </div>
+  
+        <div class="content">
+          {{ content }} ...
+          <router-link :to="path" class="more"><span>更多</span></router-link>
+        </div>
+  
+        <div class="footer">
+          <span class="time">发布时间：{{ time }}</span>
+          <span class="tag">分类：{{ tag }}</span>
+        </div>
+  
+      </div>
     </div>
+  </template>
+  
 
-</template>
-
-<script setup lang="ts">
-import { NImage } from 'naive-ui';
-
-
-const props = defineProps({
-    title: {
-        type: String,
-        default: '标题'
-    },
-    img: {
-        type: String || null
-    },
-    content: {
-        type: String,
-        default: '内容'
-    },
-    time: {
-        type: String,
-        default: '2023-01-01'
-    },
-    tag: {
-        type: String,
-        default: '书影记录'
-    },
-    path: {
-        type: String,
-        default: '/'
-    }
-})
-
-</script>
+  <script setup lang="ts">
+  import { defineEmits } from 'vue';
+  import { NImage } from 'naive-ui';
+  
+  const props = defineProps({
+    title: { type: String, default: '标题' },
+    img: { type: String, default: '' },
+    content: { type: String, default: '内容' },
+    time: { type: String, default: '2023-01-01' },
+    tag: { type: String, default: '书影记录' },
+    path: { type: String, default: '/' }
+  });
+  
+  // 定义自定义事件 imageLoaded
+  const emit = defineEmits(['imageLoaded']);
+  
+  // 图片加载完触发父组件回调
+  function handleLoad() {
+    emit('imageLoaded');
+  }
+  </script>
+  
 
 <style scoped>
 .wrapper {
