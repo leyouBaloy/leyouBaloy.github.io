@@ -69,7 +69,7 @@ import { NDivider, NBackTop} from 'naive-ui';
 import PageHead from "@/components/PageHead.vue";
 import Foot from "@/components/Foot.vue";
 import PostCard from "@/components/PostCard.vue";
-import type { PostMetadata } from "@/types/PostMetadata.ts";
+import type { PostMetadata } from "@/types/PostMetadata";
 
 /** 响应式判断：移动端 */
 const isMobile = ref(false);

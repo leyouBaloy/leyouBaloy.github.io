@@ -3,7 +3,7 @@
     "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
     "date": "2025-01-24T01:37:25.000Z",
     "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
-    "excerpt": "思路![image-20250124101620483](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png)1.首先定义一个瀑布流容器，它的高度暂定（后面会更新",
+    "excerpt": "思路![image-20250124101620483](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png)1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）",
     "tags": [
       "技能分享"
     ],
