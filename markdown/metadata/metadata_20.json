@@ -1,5 +1,16 @@
 [
   {
+    "title": "《如何阅读一本书》读后感",
+    "date": "2021-04-23T18:16:55.000Z",
+    "file": "《如何阅读一本书》读后感.md",
+    "excerpt": "今天是世界读书日，我想给大家推荐一本《如何阅读一本书》。基本介绍《如何阅读一本书》初版于1940年，1972年又大幅增订改写为新版，是一本有六十多年历史经典名著。作者是美国作家\\[莫提默·J·艾德勒\\]和\\[查尔斯·范多伦\\]，二者都参加过《大英百科全书》的编写工作。如书名所见，",
+    "tags": [
+      "书影记录"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "《菊次郎的夏天》观后感",
     "date": "2021-04-05T23:25:45.000Z",
     "file": "《菊次郎的夏天》观后感.md",
@@ -7,8 +18,7 @@
     "tags": [
       "书影记录"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "matplotlib作热机效率随负载大小变化曲线图",
@@ -87,16 +97,6 @@
     "excerpt": "可以进行的学习matplotlibkaggle刷题pandas等web前端（css,javascript）Python爬虫实战继续看课本（这个可能是最无聊的）现在就好迷，在寝室里不知道学啥。这样吧，学学云顶之弈把",
     "tags": [
       "随笔杂记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
-    "date": "2021-02-26T12:06:38.000Z",
-    "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
-    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主image图片```importmatplotlib.pyplotaspltimp",
-    "tags": [
-      "笔记"
     ],
     "img": ""
   }
