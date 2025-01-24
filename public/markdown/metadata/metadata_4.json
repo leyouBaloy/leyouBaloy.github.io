@@ -1,5 +1,16 @@
 [
   {
+    "title": "好用的动画制作工具-Keynote",
+    "date": "2023-07-01T02:41:41.000Z",
+    "file": "好用的动画制作工具-keynote.md",
+    "excerpt": "Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。![image-20230701105100566](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "Flask的一些关于线程的特性",
     "date": "2023-07-01T02:15:46.000Z",
     "file": "Flask的一些关于线程的特性.md",
@@ -7,8 +18,7 @@
     "tags": [
       "笔记"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "《1984》读书笔记",
@@ -90,16 +100,5 @@
       "技能分享"
     ],
     "img": ""
-  },
-  {
-    "title": "组装一台新的电脑",
-    "date": "2023-03-01T00:57:51.000Z",
-    "file": "组装一台新的电脑.md",
-    "excerpt": "从Windows换到Mac，获得了很多东西：又轻又薄，续航还长，背出去上课自习非常方便（隔壁背着游戏本的同学都羡慕哭了）；一块素质极高的屏幕，看文献非常舒服；优秀的软件生态，在Mac上可以使用很多优质软件，比如Mac版清爽的qq；优秀的硬件生态，与我的iPhone互联，同步",
-    "tags": [
-      "随笔杂记",
-      "技能分享"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_3956.jpeg"
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "title": "每日一题--给小朋友的自动出题自动批改",
+    "date": "2020-10-06T21:24:10.000Z",
+    "file": "每日一题--给小朋友的自动出题自动批改.md",
+    "excerpt": "```include<iostream>include<cstdlib>include<ctime>usingnamespacestd;intmain(){srand((int)time(0));//产生随机种子把0换成NULL也行in",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "每日一题--二维数组",
     "date": "2020-10-06T14:25:18.000Z",
     "file": "每日一题--二维数组.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "Python第二周学习报告（草稿）",

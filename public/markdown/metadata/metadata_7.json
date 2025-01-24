@@ -1,5 +1,16 @@
 [
   {
+    "title": "星露谷物语为什么这么好玩？",
+    "date": "2022-08-28T14:35:36.000Z",
+    "file": "星露谷物语为什么这么好玩？.md",
+    "excerpt": "星露谷物语星露谷物语是一款农场模拟经营游戏，但除了种田之外，游戏还包括了钓鱼、挖矿、杀怪、结婚、剧情任务等丰富的游戏内容。初看游戏大小，只有600mb，画面是粗糙的像素，但当你深入品玩这个游戏后，你会被这个游戏庞大的世界观震惊，你真的很难相信，它的作者是个独立开发者。![image-",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "我的第一把客制化键盘",
     "date": "2022-08-16T07:41:28.000Z",
     "file": "我的第一把客制化键盘.md",
@@ -8,8 +19,7 @@
       "技能分享",
       "随笔杂记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg",
-    "totalPages": 27
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg"
   },
   {
     "title": "Linux输出重定向以及crontab的坑",
@@ -94,16 +104,6 @@
     "excerpt": "需求一个212页的word文档，包含如下反复出现的单元：```word2022.2.2英语1902班王彤每日一词∣快递包装绿色治理greengovernanceofexpresspackaging来源：中国日报网国家邮政局发展研究中心近日发布《中国邮政快递业绿",
     "tags": [
       "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "《写给大家看的设计书》读书笔记",
-    "date": "2022-06-14T11:19:28.000Z",
-    "file": "《写给大家看的设计书》读书笔记.md",
-    "excerpt": "写给大家看的设计书本书作者是美国著名设计师RobinWilliams，Mac爱好者（因为我也喜欢Mac，所以强调一下这个）。{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/165511",
-    "tags": [
-      "书影记录"
     ],
     "img": ""
   }
