@@ -41,14 +41,15 @@
   </div>
 
       <n-divider style="margin-bottom: 10px;"/>
-      <!-- 加载更多按钮 -->
+      <!-- 加载更多-按钮 -->
       <div class="pagination-container">
         <button
           class="load-more-btn"
           @click="loadNextPage"
           :disabled="loading || numPage >= pageCount"
+          :class="{ 'loading-btn': loading }"
         >
-        <span v-if="loading">加载中...<img v-if="loading" src="../assets/loading.gif" style="height: 100%;" /></span>
+        <span v-if="loading">加载中...<img src="../assets/loading.gif" style="height: 30px;" /></span>
         <span v-else-if="numPage < pageCount">加载更多</span>
         <span v-else>没有更多内容</span>
         </button>
@@ -308,22 +309,39 @@ main {
 }
 
 .load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   background-color: #2d96bd;
   color: #fff;
-  /* 边框 */
-  border: 1px solid ;
+  border: 1px solid transparent;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 
-/* load-more-btn动画 */
 .load-more-btn:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-  /* 阴影 */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
+.load-more-btn img {
+  /* 图片与文字的间距 */
+  margin-left: 10px;
+  height: 20px; /* 调整图片高度适配按钮 */
+}
+
+.load-more-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.loading-btn {
+  background-color: #fff;
+  color: #2d96bd;
+  border-color: #2d96bd;
+}
+
 </style>
