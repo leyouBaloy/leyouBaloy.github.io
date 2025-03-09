@@ -95,7 +95,7 @@
     "title": "Leetcode46:全排列——交换、回溯",
     "date": "2022-04-29T09:22:24.000Z",
     "file": "Leetcode46_全排列——回溯.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/permutations/全排列问题也是比较经典的问题，其所用的交换法也很巧妙。题解纯dfs首先想到的办法，不用回溯，每次递归传参都是数组的复制，空间复杂度很大，但是时间复杂度和回溯法是相同",
+    "excerpt": "题目https://leetcode-cn.com/problems/permutations/2025.03.09又重新做了一次题解纯dfs首先想到的办法，cur_path记录当前路径，left_path记录剩下可选择的元素。不用回溯，每次递归传参都是",
     "tags": [
       "刷题"
     ],
