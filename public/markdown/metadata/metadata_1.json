@@ -1,5 +1,16 @@
 [
   {
+    "title": "开源PDF解析工具Marker深度解析",
+    "date": "2025-05-05T14:36:59.000Z",
+    "file": "开源PDF解析工具Marker深度解析.md",
+    "excerpt": "开源PDF解析工具Marker深度解析检索增强生成（RAG）系统的第一步就是做pdf解析，从复杂多样的pdf中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker和MinerU。因为Marker是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
     "date": "2025-01-24T01:37:25.000Z",
     "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png",
-    "totalPages": 27
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png"
   },
   {
     "title": "品酒🍶——古井贡酒第六代55度",
@@ -87,16 +97,6 @@
     "date": "2024-10-29T13:04:06.000Z",
     "file": "Leetcode_142环形链表II.md",
     "excerpt": "Leetcode_142环形链表IIhttps://leetcode.cn/problems/linked-list-cycle-ii/description/给定一个链表的头节点`head`，返回链表开始入环的第一个节点。如果链表无环，则返回`null`。如果链表中有",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode283:移动零——双指针",
-    "date": "2024-09-23T12:01:16.000Z",
-    "file": "Leetcode_283移动零.md",
-    "excerpt": "题目给定一个数组`nums`，编写一个函数将所有`0`移动到数组的末尾，同时保持非零元素的相对顺序。请注意，必须在不复制数组的情况下原地对数组进行操作。示例1:```输入:nums=[0,1,0,3,12]输出:[1,3,12,0,0]`",
     "tags": [
       "刷题"
     ],

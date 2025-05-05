@@ -1,5 +1,16 @@
 [
   {
+    "title": "Leetcode46:全排列——交换、回溯",
+    "date": "2022-04-29T09:22:24.000Z",
+    "file": "Leetcode46_全排列——回溯.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/permutations/2025.03.09又重新做了一次题解纯dfs首先想到的办法，cur_path记录当前路径，left_path记录剩下可选择的元素。不用回溯，每次递归传参都是",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "Leetcode17:电话号码的字母组合——回溯",
     "date": "2022-04-27T07:36:14.000Z",
     "file": "Leetcode17_电话号码的字母组合——回溯.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "Leetcode16:最接近的三数之和——排序、双指针",
@@ -88,16 +98,6 @@
     "excerpt": "Git如何撤回远程仓库已经提交的版本？1.不能直接在像gitee,github这样的远程仓库上直接操作。所以先把项目clone下来。2.执行`gitlog`查看日志，获取需要回退的版本号，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。3",
     "tags": [
       "技能分享",
-      "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Pandas使用技巧",
-    "date": "2022-04-16T07:42:08.000Z",
-    "file": "Pandas使用技巧.md",
-    "excerpt": "read_csv()参数header`header=None`读取时不设置表头drop()`df.drop(0)`删除第一行",
-    "tags": [
       "笔记"
     ],
     "img": ""
