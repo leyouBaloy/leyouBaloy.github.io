@@ -1,5 +1,16 @@
 [
   {
+    "title": "DeepResearch深度搜索实现方法调研",
+    "date": "2025-05-09T14:03:42.000Z",
+    "file": "DeepResearch深度搜索实现方法调研.md",
+    "excerpt": "DeepResearch深度搜索实现方法调研DeepResearch有三个核心能力+能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索）+能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？）+能力三：对多",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png",
+    "totalPages": 27
+  },
+  {
     "title": "开源PDF解析工具Marker深度解析",
     "date": "2025-05-05T14:36:59.000Z",
     "file": "开源PDF解析工具Marker深度解析.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
@@ -87,16 +97,6 @@
     "date": "2024-11-04T12:10:30.000Z",
     "file": "数之和问题归纳哈希双指针.md",
     "excerpt": "Leetcode1:两数之和题目https://leetcode.cn/problems/two-sum/给定一个整数数组nums和一个目标值target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode142:环形链表II——快慢指针",
-    "date": "2024-10-29T13:04:06.000Z",
-    "file": "Leetcode_142环形链表II.md",
-    "excerpt": "Leetcode_142环形链表IIhttps://leetcode.cn/problems/linked-list-cycle-ii/description/给定一个链表的头节点`head`，返回链表开始入环的第一个节点。如果链表无环，则返回`null`。如果链表中有",
     "tags": [
       "刷题"
     ],
