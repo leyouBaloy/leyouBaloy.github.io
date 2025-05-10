@@ -1,5 +1,17 @@
 [
   {
+    "title": "Git撤销版本",
+    "date": "2022-04-16T12:23:57.000Z",
+    "file": "git撤销版本.md",
+    "excerpt": "Git如何撤回远程仓库已经提交的版本？1.不能直接在像gitee,github这样的远程仓库上直接操作。所以先把项目clone下来。2.执行`gitlog`查看日志，获取需要回退的版本号，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。3",
+    "tags": [
+      "技能分享",
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "Pandas使用技巧",
     "date": "2022-04-16T07:42:08.000Z",
     "file": "Pandas使用技巧.md",
@@ -7,8 +19,7 @@
     "tags": [
       "笔记"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "Leetcode451:根据字符出现频率排序——桶排序",
@@ -86,16 +97,6 @@
     "date": "2022-04-06T07:07:06.000Z",
     "file": "Leetcode310_最小高度树.md",
     "excerpt": "题目https://leetcode-cn.com/problems/minimum-height-trees/这是一道理论性很强，代码也很有技巧性的“中等”难度题目。题解暴力法献上我的超时代码：```pythonclassSolution:def",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode2:两数相加——链表",
-    "date": "2022-04-05T08:50:12.000Z",
-    "file": "Leetcode2_两数相加——链表.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/add-two-numbers/这道题主要是debug题解我自己写的代码：```c++/Definitionforsingly-linkedlist.structListN",
     "tags": [
       "刷题"
     ],

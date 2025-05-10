@@ -1,6 +1,11 @@
 {
   "技能分享": [
     {
+      "title": "DeepResearch深度搜索实现方法调研",
+      "date": "2025-05-09T14:03:42.000Z",
+      "file": "DeepResearch深度搜索实现方法调研.md"
+    },
+    {
       "title": "开源PDF解析工具Marker深度解析",
       "date": "2025-05-05T14:36:59.000Z",
       "file": "开源PDF解析工具Marker深度解析.md"

@@ -1,5 +1,16 @@
 [
   {
+    "title": "输入二进制转化为十进制",
+    "date": "2020-11-10T14:49:20.000Z",
+    "file": "输入二进制转化为十进制.md",
+    "excerpt": "```bitset<16>bint;//16bit二进制数据，还有bitset<32>cin>>bint;inta;a=bint.to_ulong();cout<<a;```",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "字符数组的拼接和排序-strcat()-sort()-strlen()",
     "date": "2020-11-07T09:11:20.000Z",
     "file": "字符数组的拼接和排序-strcat()-sort()-strlen().md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "删除重复的字符并重新排列-这个题太jb烦人了",
@@ -87,16 +97,6 @@
     "excerpt": "工欲善其事，必先利其器。看学校官网，关注讲座[www.upc.edu.cn](http://www.upc.edu.cn)看学院官网，看学术报告，黄岛讲堂，写记录册[computer.upc.edu.cn](http://computer.upc.edu.cn)关注",
     "tags": [
       "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "判断n能否被幸运数整除-do while循环应用",
-    "date": "2020-10-27T15:18:53.000Z",
-    "file": "判断n能否被幸运数整除-do while循环应用.md",
-    "excerpt": "【题目描述】判断一个正整数n是否能被一个“幸运数”整除。幸运数是指一个只包含4或7的正整数，如7、47、477等都是幸运数，17、42则不是幸运数。【输入格式】一行包含一个正整数n(1≤n≤1000)。【输出格式】一行一个字符串，如果能被幸运数整除输出“YES",
-    "tags": [
-      "刷题"
     ],
     "img": ""
   }
