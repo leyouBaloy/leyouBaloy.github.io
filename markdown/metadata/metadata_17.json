@@ -1,5 +1,16 @@
 [
   {
+    "title": "精准而优雅——MacBook Air",
+    "date": "2021-11-14T10:32:04.000Z",
+    "file": "精准而优雅——MacBook Air.md",
+    "excerpt": "我的第一台macbook犹豫了一年，终于在2021年11月份买了这台m1版本的macbookair。非常感谢我哥借给我不敢想象的8k块。精准在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求：不打游戏",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "macOS下matplotlib无法显示中文字体问题解决",
     "date": "2021-11-12T16:57:43.000Z",
     "file": "macOS下matplotlib无法显示中文字体问题解决.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "如何在英语朗读视频中添加文稿",
@@ -85,16 +95,6 @@
     "date": "2021-08-29T21:21:29.000Z",
     "file": "对图像操作.md",
     "excerpt": "图像位图（rastergraphics)和矢量图（vectorgraphics)位图是有像素的，色彩丰富。矢量图放大不会失真。通道单通道灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256=2_2_2\\2)，那么他的像素值0(黑)",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Conda 配置虚拟环境",
-    "date": "2021-08-29T21:20:21.000Z",
-    "file": "Conda 配置虚拟环境.md",
-    "excerpt": "创建虚拟环境```condacreate-n名字python=3.8```进入虚拟环境```condaactivate名字```退出虚拟环境```condadeactivate```删除虚拟环境```conda",
     "tags": [
       "技能分享"
     ],

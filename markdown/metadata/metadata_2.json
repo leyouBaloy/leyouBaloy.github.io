@@ -1,5 +1,16 @@
 [
   {
+    "title": "品酒（尊美醇Jameson）",
+    "date": "2024-11-04T15:18:54.000Z",
+    "file": "品酒尊美醇Jameson.md",
+    "excerpt": "尊美醇Jameson![image-20241104232932122](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png)产地：爱尔兰。其最初在都柏林",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png",
+    "totalPages": 27
+  },
+  {
     "title": "数之和问题归纳——哈希、双指针",
     "date": "2024-11-04T12:10:30.000Z",
     "file": "数之和问题归纳哈希双指针.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "Leetcode142:环形链表II——快慢指针",
@@ -91,15 +101,5 @@
       "随笔杂记"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240817222031606.png"
-  },
-  {
-    "title": "新加坡访学旅行",
-    "date": "2024-08-14T08:01:42.000Z",
-    "file": "新加坡访学旅行.md",
-    "excerpt": "读万卷书，行万里路。因为今年学校出了一个境外访学资助政策，所以就申请了为期七天的新加坡南洋理工大学的访学项目。这是我第一次出国，有很多新奇体验，在这里分享一下~新加坡新加坡位于东南亚马来半岛南端、马六甲海峡出入口，新加坡岛东西约50公里，南北约26公里，国土面积仅733.1平方千米（2",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_20240808_192834.jpg"
   }
 ]

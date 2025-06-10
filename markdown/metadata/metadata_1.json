@@ -1,5 +1,16 @@
 [
   {
+    "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
+    "date": "2025-06-10T10:14:29.000Z",
+    "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
+    "excerpt": "ChartVLMChartVLM由两部分组成：图表结构解码器+大语言模型截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct显存占用基本保持在2506MiB普通图表|原图|识别结果|评价||------|---",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/images/d969c3b0_1749549251583-7654c91e-ef01-4bf7-9656-11efa4778806.png",
+    "totalPages": 27
+  },
+  {
     "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
     "date": "2025-06-10T08:48:23.000Z",
     "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1749543589300-bf8e1d05-b85e-4da7-b535-e77ac6cdc244.png",
-    "totalPages": 27
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1749543589300-bf8e1d05-b85e-4da7-b535-e77ac6cdc244.png"
   },
   {
     "title": "DeepResearch深度搜索实现方法调研",
@@ -91,15 +101,5 @@
       "笔记"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png"
-  },
-  {
-    "title": "品酒（尊美醇Jameson）",
-    "date": "2024-11-04T15:18:54.000Z",
-    "file": "品酒尊美醇Jameson.md",
-    "excerpt": "尊美醇Jameson![image-20241104232932122](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png)产地：爱尔兰。其最初在都柏林",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png"
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "title": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
+    "date": "2023-03-16T15:51:26.000Z",
+    "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md",
+    "excerpt": "highlight.js实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是：1.先引入css文件和js文件```html<linkrel=\"stylesheet\"type=\"text/css\"href=\"https://cdnjs.",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "妈妈说：好久都没这么开心了",
     "date": "2023-03-09T09:14:05.000Z",
     "file": "妈妈说：好久都没这么开心了.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161200543.png",
-    "totalPages": 27
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161200543.png"
   },
   {
     "title": "HUSTOJ前端源代码解析（PHP）",
@@ -89,17 +99,6 @@
     "excerpt": "对于游戏玩家来说，键盘鼠标可能不是最好的控制器（网游，fps玩家除外），拥有一个手柄，会让游戏体验更加舒适。尤其是对于一些需要慢慢品玩的3A大作，或者是需要各种微操的赛车游戏，手柄的体验绝对秒杀键鼠。Xbox手柄Xbox手柄是PC平台上最经典的手柄，由微软生产。它兼容性游戏多，做工精良",
     "tags": [
       "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "LiveGo——小而美的直播串流软件",
-    "date": "2023-01-01T08:11:53.000Z",
-    "file": "Livego——小而美的直播串流软件.md",
-    "excerpt": "近期想跟女朋友一起异地看电影，试了几种方式都不够优雅，方式一：用chrome插件，双方同时打开一个视频源，然后通过这个插件能控制两个人的进度条保持一致。缺点：因为有的视频源是收费的，两个人想一起看得交两份钱，还有的不支持网页播放（需要下载软件），所以这种方式灵活性很差，不好用。方式二：用",
-    "tags": [
-      "技能分享",
-      "笔记"
     ],
     "img": ""
   }

@@ -1,5 +1,16 @@
 [
   {
+    "title": "Django学习笔记",
+    "date": "2021-03-15T23:02:45.000Z",
+    "file": "Django学习笔记.md",
+    "excerpt": "安装虚拟环境在Powershell中执行```Set-ExecutionPolicyUnrestricted执行策略更改yyespipfreeze输出所有在本地已安装的包``````pipinstallvirtualenvcd目标文件夹virt",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "Pandas学习笔记",
     "date": "2021-03-09T11:04:10.000Z",
     "file": "Pandas学习笔记.md",
@@ -7,8 +18,7 @@
     "tags": [
       "笔记"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
@@ -87,16 +97,6 @@
     "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。剧情",
     "tags": [
       "书影记录"
-    ],
-    "img": ""
-  },
-  {
-    "title": "BeautifulSoup学习笔记",
-    "date": "2021-02-14T19:08:15.000Z",
-    "file": "BeautifulSoup学习笔记.md",
-    "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。[https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044](https://www.bilibili.com/video/BV1Pg4y1",
-    "tags": [
-      "笔记"
     ],
     "img": ""
   }
