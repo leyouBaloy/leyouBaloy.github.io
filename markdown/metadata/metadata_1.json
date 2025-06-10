@@ -1,5 +1,16 @@
 [
   {
+    "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+    "date": "2025-06-10T08:48:23.000Z",
+    "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
+    "excerpt": "背景为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法多模态大模型测试Prompt```plain你是一位专门为图像创建文本描述的文件分析专家。你将收到一张图片或图表。你的任务是创建该图像的简短描述。说明：1.仔细检查提供的图像。2",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1749543589300-bf8e1d05-b85e-4da7-b535-e77ac6cdc244.png",
+    "totalPages": 27
+  },
+  {
     "title": "DeepResearch深度搜索实现方法调研",
     "date": "2025-05-09T14:03:42.000Z",
     "file": "DeepResearch深度搜索实现方法调研.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png",
-    "totalPages": 27
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png"
   },
   {
     "title": "开源PDF解析工具Marker深度解析",
@@ -91,15 +101,5 @@
       "随笔杂记"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png"
-  },
-  {
-    "title": "数之和问题归纳——哈希、双指针",
-    "date": "2024-11-04T12:10:30.000Z",
-    "file": "数之和问题归纳哈希双指针.md",
-    "excerpt": "Leetcode1:两数之和题目https://leetcode.cn/problems/two-sum/给定一个整数数组nums和一个目标值target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
   }
 ]
