@@ -31,3 +31,5 @@ coverage
 
 # vite-ssg
 .vite-ssg-temp/*
+
+.venv
