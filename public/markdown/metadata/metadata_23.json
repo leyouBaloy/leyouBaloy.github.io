@@ -1,5 +1,16 @@
 [
   {
+    "title": "给string对象插入字符",
+    "date": "2020-12-28T16:52:10.000Z",
+    "file": "给string对象插入字符.md",
+    "excerpt": "```include<bits/stdc++.h>usingnamespacestd;intmain(){strings;s=\"123456\";string::iteratorit;it=s.begin();s.inser",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "使用sort算法对向量元素排列",
     "date": "2020-12-28T16:26:38.000Z",
     "file": "使用sort算法对向量元素排列.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "使用reverse反向排列算法",
@@ -85,16 +95,6 @@
     "date": "2020-12-03T10:13:20.000Z",
     "file": "质数判断.md",
     "excerpt": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来```include<iostream>include<cmath>usingnamespacestd;boolsb(intx){inti,flag=0",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "c++傻缺错误集锦",
-    "date": "2020-12-02T20:09:14.000Z",
-    "file": "c++傻缺错误集锦.md",
-    "excerpt": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！千万不要把“==”写成“=”输出小数时函数用成了intFun()应该用doubleFun()习惯了使用intFun()也是看了半天，没有看出问题来输入M和N我只写了cin>>N;导致后",
     "tags": [
       "刷题"
     ],

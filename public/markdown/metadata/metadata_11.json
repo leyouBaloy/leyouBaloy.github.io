@@ -1,5 +1,16 @@
 [
   {
+    "title": "Leetcode310:最小高度树",
+    "date": "2022-04-06T07:07:06.000Z",
+    "file": "Leetcode310_最小高度树.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/minimum-height-trees/这是一道理论性很强，代码也很有技巧性的“中等”难度题目。题解暴力法献上我的超时代码：```pythonclassSolution:def",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "Leetcode2:两数相加——链表",
     "date": "2022-04-05T08:50:12.000Z",
     "file": "Leetcode2_两数相加——链表.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "Leetcode230:二叉搜索树中第K小的元素",
@@ -85,16 +95,6 @@
     "date": "2022-03-27T11:36:29.000Z",
     "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
     "excerpt": "题目https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/做过102题后这题可以轻松做出来题解复习一下`[102.二叉树的层序遍历]`：首先根节点入队当队列不为空",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
-    "date": "2022-03-26T09:02:51.000Z",
-    "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/上数据结构这门课时研究过这个问题，思路很快就有，难在debug题解递归法众",
     "tags": [
       "刷题"
     ],
