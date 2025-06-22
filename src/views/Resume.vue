@@ -70,7 +70,7 @@
             教育背景
           </h2>
           <div class="section-content">
-            <p v-for="edu in education" :key="edu.degree">
+            <p v-for="edu in education" :key="edu.label">
               <strong>{{ edu.label }}：</strong>
               <strong v-if="edu.highlight">{{ edu.school }}</strong>
               <span v-else>{{ edu.school }}</span>
