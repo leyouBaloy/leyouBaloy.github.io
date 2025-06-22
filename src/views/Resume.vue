@@ -50,7 +50,7 @@
         </div>
         <div class="profile-pic-container">
           <img
-            :src="profilePicture"
+            src="../assets/白底证件照压缩.png"
             alt="Profile Picture"
             class="profile-pic"
           />
@@ -128,7 +128,7 @@
                 </ul>
               </div>
             </div>
-            <img :src="companyLogo" alt="NetEase Logo" class="logo" />
+            <img src="../assets/网易logo.png" alt="NetEase Logo" class="logo" />
           </div>
         </section>
 
@@ -261,10 +261,6 @@ interface Honor {
   category: string;
   content: string;
 }
-
-// 图片资源
-const profilePicture = ref("/src/assets/白底证件照压缩.png");
-const companyLogo = ref("/src/assets/网易logo.png");
 
 // 个人信息
 const personalInfo = ref({
