@@ -6,8 +6,11 @@
                     <img class="xueweizhao" src="../assets/学位照-裁切压缩.jpg" />
                     <div class="hover-text">长相还算说得过去😅</div>
                 </div>
-                <div class="nianling" @click="downLoad()">
+                <!-- <div class="nianling" @click="downLoad()">
                     <div class="nianling-text">PDF简历下载</div><n-icon size="30"><CloudDownloadOutline/></n-icon>
+                </div> -->
+                <div class="nianling">
+                    <div class="nianling-text" @click="jumpToResume()">个人简历</div>
                 </div>
             </div>
             <div class="left-right">
@@ -56,6 +59,7 @@
 import { ref, onMounted } from 'vue';
 import {NIcon} from "naive-ui";
 import {CloudDownloadOutline,HomeOutline} from "@vicons/ionicons5";
+import {useRouter} from 'vue-router';
 
 const downLoad = ()=>{
 	let a = document.createElement('a');
@@ -65,6 +69,12 @@ const downLoad = ()=>{
 	evt.initEvent('click',true,true);
 	a.dispatchEvent(evt);
 	window.URL.revokeObjectURL(a.href);
+}
+
+const router = useRouter();
+
+const jumpToResume = ()=>{
+    router.push('/resume');
 }
 
 </script>
