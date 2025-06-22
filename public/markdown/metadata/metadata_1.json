@@ -1,5 +1,17 @@
 [
   {
+    "title": "手撕Attention",
+    "date": "2025-06-22T08:49:55.000Z",
+    "file": "手撕Attention.md",
+    "excerpt": "第一重境界最简单的计算Attention(Q,K,V)=softmax(QK.T/sqrt(hidden_dim))V```importmathimporttorchimporttorch.nnasnnclassSelfAttentionV1(nn.M",
+    "tags": [
+      "笔记",
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
     "date": "2025-06-10T10:14:29.000Z",
     "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
@@ -7,8 +19,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/images/d969c3b0_1749549251583-7654c91e-ef01-4bf7-9656-11efa4778806.png",
-    "totalPages": 27
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/images/d969c3b0_1749549251583-7654c91e-ef01-4bf7-9656-11efa4778806.png"
   },
   {
     "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
@@ -91,15 +102,5 @@
       "刷题"
     ],
     "img": ""
-  },
-  {
-    "title": "高光谱遥感深度学习调研",
-    "date": "2024-11-15T08:36:41.000Z",
-    "file": "高光谱遥感深度学习调研.md",
-    "excerpt": "高光谱遥感深度学习调研综述高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。>WangC,LiuB,LiuL,etal.Areviewofdeeplearningusedinthehyperspectralim",
-    "tags": [
-      "笔记"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png"
   }
 ]

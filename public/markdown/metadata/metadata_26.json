@@ -1,5 +1,16 @@
 [
   {
+    "title": "用sort函数给数组排序",
+    "date": "2020-11-01T20:27:22.000Z",
+    "file": "用sort函数给数组排序.md",
+    "excerpt": "sort函数的调用需要头文件include<algorithm>从小到大排：例如：a\\[50\\]={2,3,5,1,-1},想让它按照从小到大的顺序排列，那么就可以这么写，sort(a,a+5),然后数组就会变成{-1,1,2,3,5}。具体代码如下：```include",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "cout输出精确到小数点后两位",
     "date": "2020-11-01T17:13:53.000Z",
     "file": "cout输出精确到小数点后两位.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "工欲善其事，必先利其器。",
@@ -85,16 +95,6 @@
     "date": "2020-10-11T16:11:03.000Z",
     "file": "Python-洗牌算法.md",
     "excerpt": "原理在这[https://www.bilibili.com/video/BV1k7411q7jo](https://www.bilibili.com/video/BV1k7411q7jo)倒序写法```importrandomdefshuffle(lis):fori",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "每日一题--a到z26个字母循环输出",
-    "date": "2020-10-10T23:07:49.000Z",
-    "file": "每日一题--a到z26个字母循环输出.md",
-    "excerpt": "题目描述】      根据样例在屏幕上输出一个平行四边形，如果每行字母超过了z，则从a重新开始。【输入】      一行，包含一个整数n（2<n≤26）。【输出】      见样例。Forexample:![](https://myblog-1257298572.",
     "tags": [
       "刷题"
     ],

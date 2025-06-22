@@ -20,6 +20,7 @@
     "axios": "^1.7.5",
     "emoji-vue": "^0.2.4",
     "front-matter": "^4.0.2",
+    "html2pdf.js": "^0.10.3",
     "markdown-it": "^14.1.0",
     "marked": "^14.1.0",
     "pinia": "^2.2.2",
