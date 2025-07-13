@@ -4,7 +4,7 @@ categories:
 - 技能分享
 date: 2025-07-13 09:25:50
 title: RAG图谱实体和边智能合并
-img: 
+img: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png
 ---
 
 # RAG图谱实体和边智能合并
