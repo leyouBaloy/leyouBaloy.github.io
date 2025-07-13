@@ -338,7 +338,7 @@ const education = ref<EducationInfo[]>([
   },
   {
     label: "研究方向",
-    school: "表征学习、数据压缩、数据分析、可视化与可视分析",
+    school: "RAG、表征学习、数据压缩、数据分析、可视化与可视分析",
     additional: "",
   },
 ]);
@@ -351,15 +351,16 @@ const internship = ref({
   duration: "2025.02-2025.09",
   tasks: {
     left: [
-      "文档解析功能研发，切片算法优化.",
-      "基于多模态大模型的图表理解功能研发.",
-      "双向MCP功能研发.",
-      "知识图谱实体合并功能优化.",
+      "文档解析功能研发，切片算法优化",
+      "基于多模态大模型的图表理解功能研发",
+      "双向MCP功能研发、ReAct机制实现",
+      "知识图谱构建与查询、实体智能合并算法研发",
     ],
     right: [
-      "前端开发处理流式响应，防抖与节流功能设计.",
-      "前沿论文调研、竞品功能调研.",
-      "与客户对接，答疑，解决部署问题.",
+      "xlsx表格向量化优化算法",
+      "长期记忆模块设计与研发",
+      "前端处理流式响应，防抖与节流功能设计",
+      "前沿论文调研、竞品功能调研、客户支持",
     ],
   },
 });
@@ -444,7 +445,7 @@ const skills = ref([
   "熟悉 Numpy、Pandas、Matplotlib、Pytorch 等数据分析/可视化/人工智能工具.",
   "熟悉 Vue3、微信小程序等前端框架. 熟悉 Django、Flask 等后端框架.",
   "熟练使用 Linux、Git、Docker 等常用开发环境/运维工具.",
-  "曾在新加坡南洋理工大学访学，英语水平优秀. 性格乐观开朗, 抗压能力强.",
+  "英语水平优秀, 新加坡南洋理工大学访学经历. 性格乐观开朗, 抗压能力强.",
 ]);
 </script>
 
@@ -456,11 +457,9 @@ const skills = ref([
   display: flex;
   justify-content: center;
   padding: 8px 0;
-  font-family:
-    "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB",
-    "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   color: #333;
-  font-size: 9pt;
+  font-size: 10pt;
   line-height: 1.4;
 }
 
@@ -469,6 +468,11 @@ const skills = ref([
   max-height: 297mm;
   background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  font-family: "Noto Sans SC", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 1.3em;
 }
 
 @media print {
@@ -603,7 +607,7 @@ const skills = ref([
   margin: 0;
   padding-left: 0;
   list-style-type: "›  ";
-  width: 250px;
+  width: 280px;
 }
 
 .work-content-columns .vertical-line {
