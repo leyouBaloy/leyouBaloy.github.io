@@ -1,5 +1,17 @@
 [
   {
+    "title": "手撕卷积神经网络+反向传播梯度更新",
+    "date": "2025-07-13T07:24:20.000Z",
+    "file": "手撕卷积神经网络+反向传播梯度更新.md",
+    "excerpt": "手撕卷积神经网络一个简单的卷积神经网络，就4层，分别是InputLayer,conv_layer,hidden_layer(全连接层+ReLU激活),output_layer```importnumpyasnpclassInputLayer:\"\"\"输入层",
+    "tags": [
+      "笔记",
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "手撕Attention",
     "date": "2025-06-22T08:49:55.000Z",
     "file": "手撕Attention.md",
@@ -8,8 +20,7 @@
       "笔记",
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
@@ -92,15 +103,5 @@
       "技能分享"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png"
-  },
-  {
-    "title": "Leetcode_209长度最小的子数组——滑动窗口",
-    "date": "2024-11-21T13:28:00.000Z",
-    "file": "Leetcode_209长度最小的子数组.md",
-    "excerpt": "Leetcode_209长度最小的子数组给定一个含有`n`个正整数的数组和一个正整数`target`。找出该数组中满足其总和大于等于`target`的长度最小的子数组`[numsl,numsl+1,...,numsr-1,numsr]`，并返回",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
   }
 ]
