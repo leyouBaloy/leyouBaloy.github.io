@@ -1,5 +1,17 @@
 [
   {
+    "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
+    "date": "2024-11-27T06:47:24.000Z",
+    "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
+    "excerpt": "无核显主机U盘安装Ubuntu先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。原因是nouveau这个倒霉驱动跟N卡不适",
+    "tags": [
+      "笔记",
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png",
+    "totalPages": 28
+  },
+  {
     "title": "Leetcode_209长度最小的子数组——滑动窗口",
     "date": "2024-11-21T13:28:00.000Z",
     "file": "Leetcode_209长度最小的子数组.md",
@@ -7,8 +19,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "高光谱遥感深度学习调研",
@@ -90,15 +101,5 @@
       "随笔杂记"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1724511302687.jpg"
-  },
-  {
-    "title": "品酒🍶（高脖绿瓶西凤酒陕西版）",
-    "date": "2024-08-21T23:09:53.000Z",
-    "file": "品酒（高脖绿瓶西凤酒陕西版）.md",
-    "excerpt": "今天品一下高脖绿瓶西凤酒，这是凤香型的代表酒。这个酒也是出了名的乱，有陕西版比省外版的好喝，批次早的比批次晚的好喝。我买的版本是2023年的陕西版。原料：高粱、大麦、小麦、豌豆。酒精度：55度。价格：约50元/500ml。闻香：闻着像黄盖汾（",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240821232051784.png"
   }
 ]

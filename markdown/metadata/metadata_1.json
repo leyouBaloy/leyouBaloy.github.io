@@ -1,14 +1,26 @@
 [
   {
+    "title": "RAG图谱实体和边智能合并",
+    "date": "2025-07-13T09:25:50.000Z",
+    "file": "RAG图谱实体和边智能合并.md",
+    "excerpt": "RAG图谱实体和边智能合并调研graphRAG方法：精确字符匹配对具有相同title和type的实体进行合并，直接将description相加对具有相同source和target的边进行合并，直接将description相加优点：速度快缺点：精度低，",
+    "tags": [
+      "随笔杂记",
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
     "title": "手撕卷积神经网络+反向传播梯度更新",
     "date": "2025-07-13T07:24:20.000Z",
     "file": "手撕卷积神经网络+反向传播梯度更新.md",
     "excerpt": "手撕卷积神经网络一个简单的卷积神经网络，就4层，分别是InputLayer,conv_layer,hidden_layer(全连接层+ReLU激活),output_layer```importnumpyasnpclassInputLayer:\"\"\"输入层",
     "tags": [
-      "笔记"
+      "笔记",
+      "技能分享"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "手撕Attention",
@@ -91,16 +103,5 @@
       "技能分享"
     ],
     "img": ""
-  },
-  {
-    "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
-    "date": "2024-11-27T06:47:24.000Z",
-    "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
-    "excerpt": "无核显主机U盘安装Ubuntu先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。原因是nouveau这个倒霉驱动跟N卡不适",
-    "tags": [
-      "笔记",
-      "技能分享"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png"
   }
 ]
