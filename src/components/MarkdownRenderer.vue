@@ -26,6 +26,9 @@ import { NIcon, NImage } from 'naive-ui';
 import { CalendarOutline, ArchiveOutline } from '@vicons/ionicons5';
 import MarkdownIt from 'markdown-it';
 import { markRaw } from 'vue';
+import texmath from 'markdown-it-texmath'; // 导入公式渲染插件
+import 'katex/dist/katex.min.css'; // 导入公式渲染样式
+import katex from 'katex'; // 导入 katex
 
 const props = defineProps({
   filename: {
@@ -42,6 +45,13 @@ const md = new MarkdownIt({
   breaks: false,
   linkify: true,
   typographer: true,
+}).use(texmath, {
+  engine: katex,
+  delimiters: ['dollars', 'brackets'], // 支持 $ 和 \( \) 语法
+  katexOptions: { 
+    throwOnError: false,
+    errorColor: '#cc0000'
+  }
 });
 
 // 检查节点是否在表格内
