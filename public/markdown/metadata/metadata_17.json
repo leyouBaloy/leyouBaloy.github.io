@@ -1,5 +1,16 @@
 [
   {
+    "title": "讲一个能满足和感动自己的故事！",
+    "date": "2021-11-24T21:25:56.000Z",
+    "file": "讲一个能满足和感动自己的故事！.md",
+    "excerpt": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。如何写好论文细节，careful仔细画每一幅图不要有typo（词句小错误）不要用长句避免过度修饰，冗长至少修改30遍逻辑通顺写提纲",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
     "title": "Mac上自动连接校园网的脚本",
     "date": "2021-11-24T18:58:03.000Z",
     "file": "Mac上自动连接校园网的脚本.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
@@ -87,16 +97,6 @@
     "excerpt": "获奖名单：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)![](https://myblog-1257298572.cos.",
     "tags": [
       "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "浏览器不支持getUserMedia",
-    "date": "2021-09-23T15:58:12.000Z",
-    "file": "浏览器不支持getUserMedia.md",
-    "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全浏览器只支持file:,https:,[http://localhost](http://localhost)",
-    "tags": [
-      "技能分享"
     ],
     "img": ""
   }
