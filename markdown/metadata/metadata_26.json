@@ -1,5 +1,16 @@
 [
   {
+    "title": "字符数组的输入输出",
+    "date": "2020-11-02T10:56:17.000Z",
+    "file": "字符数组的输入输出.md",
+    "excerpt": "[https://blog.csdn.net/lost\\_in\\_jungle\\_/article/details/82716778](https://blog.csdn.net/lost_in_jungle_/article/details/82716778)写得针不戳cin>>a;",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 27
+  },
+  {
     "title": "用sort函数给数组排序",
     "date": "2020-11-01T20:27:22.000Z",
     "file": "用sort函数给数组排序.md",
@@ -7,8 +18,7 @@
     "tags": [
       "刷题"
     ],
-    "img": "",
-    "totalPages": 27
+    "img": ""
   },
   {
     "title": "cout输出精确到小数点后两位",
@@ -85,16 +95,6 @@
     "date": "2020-10-17T16:26:51.000Z",
     "file": "识别字符.md",
     "excerpt": "【题目描述】数学课上，楠楠学习了一个新的知识。两数相除，如果得不到整数商，会有两种情况：一种是得到有限小数，另一种是得到无限小数。从小数点后某一位开始依次不断地重复出现前一个或一节数字的十进制无限小数，叫做循环小数，如2.9666...,(在数学中它读作“二点九六，六循环”），定义循环",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Python-洗牌算法",
-    "date": "2020-10-11T16:11:03.000Z",
-    "file": "Python-洗牌算法.md",
-    "excerpt": "原理在这[https://www.bilibili.com/video/BV1k7411q7jo](https://www.bilibili.com/video/BV1k7411q7jo)倒序写法```importrandomdefshuffle(lis):fori",
     "tags": [
       "刷题"
     ],
