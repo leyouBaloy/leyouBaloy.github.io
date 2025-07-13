@@ -14,7 +14,7 @@
   {
     "title": "手撕卷积神经网络+反向传播梯度更新",
     "date": "2025-07-13T07:24:20.000Z",
-    "file": "手撕卷积神经网络+反向传播梯度更新.md",
+    "file": "手撕卷积神经网络反向传播梯度更新.md",
     "excerpt": "手撕卷积神经网络一个简单的卷积神经网络，就4层，分别是InputLayer,conv_layer,hidden_layer(全连接层+ReLU激活),output_layer```importnumpyasnpclassInputLayer:\"\"\"输入层",
     "tags": [
       "笔记",
