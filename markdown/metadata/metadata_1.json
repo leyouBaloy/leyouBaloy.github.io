@@ -1,5 +1,16 @@
 [
   {
+    "title": "langchain-faiss加载pkl文件速度提升",
+    "date": "2025-12-14T06:19:28.000Z",
+    "file": "langchain-faiss加载pkl文件速度提升.md",
+    "excerpt": "langchain-faiss加载pkl文件速度提升背景Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。langchain_community.vectorstores中的Faiss写入一个向量库中包含两个文件：ind",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
     "title": "RAG图谱实体和边智能合并",
     "date": "2025-07-13T09:25:50.000Z",
     "file": "RAG图谱实体和边智能合并.md",
@@ -8,8 +19,7 @@
       "随笔杂记",
       "技能分享"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png",
-    "totalPages": 28
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png"
   },
   {
     "title": "手撕卷积神经网络+反向传播梯度更新",
@@ -92,16 +102,5 @@
       "随笔杂记"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241209225923467.png"
-  },
-  {
-    "title": "电脑启动需要经历哪些过程？",
-    "date": "2024-11-27T06:51:10.000Z",
-    "file": "电脑启动需要经历哪些过程？.md",
-    "excerpt": "传统BIOS启动流程1.BIOSBIOS启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。",
-    "tags": [
-      "笔记",
-      "技能分享"
-    ],
-    "img": ""
   }
 ]

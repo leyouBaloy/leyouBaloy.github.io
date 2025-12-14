@@ -1,4 +1,276 @@
 {
+  "技能分享": [
+    {
+      "title": "langchain-faiss加载pkl文件速度提升",
+      "date": "2025-12-14T06:19:28.000Z",
+      "file": "langchain-faiss加载pkl文件速度提升.md"
+    },
+    {
+      "title": "RAG图谱实体和边智能合并",
+      "date": "2025-07-13T09:25:50.000Z",
+      "file": "RAG图谱实体和边智能合并.md"
+    },
+    {
+      "title": "手撕卷积神经网络+反向传播梯度更新",
+      "date": "2025-07-13T07:24:20.000Z",
+      "file": "手撕卷积神经网络反向传播梯度更新.md"
+    },
+    {
+      "title": "手撕Attention",
+      "date": "2025-06-22T08:49:55.000Z",
+      "file": "手撕Attention.md"
+    },
+    {
+      "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
+      "date": "2025-06-10T10:14:29.000Z",
+      "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md"
+    },
+    {
+      "title": "DeepResearch深度搜索实现方法调研",
+      "date": "2025-05-09T14:03:42.000Z",
+      "file": "DeepResearch深度搜索实现方法调研.md"
+    },
+    {
+      "title": "开源PDF解析工具Marker深度解析",
+      "date": "2025-05-05T14:36:59.000Z",
+      "file": "开源PDF解析工具Marker深度解析.md"
+    },
+    {
+      "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
+      "date": "2025-01-24T01:37:25.000Z",
+      "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md"
+    },
+    {
+      "title": "电脑启动需要经历哪些过程？",
+      "date": "2024-11-27T06:51:10.000Z",
+      "file": "电脑启动需要经历哪些过程？.md"
+    },
+    {
+      "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
+      "date": "2024-11-27T06:47:24.000Z",
+      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md"
+    },
+    {
+      "title": "如何在Windows上编译Python39源代码",
+      "date": "2023-12-10T12:51:01.000Z",
+      "file": "如何在Windows上编译Python39源代码.md"
+    },
+    {
+      "title": "好用的动画制作工具-Keynote",
+      "date": "2023-07-01T02:41:41.000Z",
+      "file": "好用的动画制作工具-keynote.md"
+    },
+    {
+      "title": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
+      "date": "2023-04-22T02:40:50.000Z",
+      "file": "vueflask实现播放任何视频源包括rtsp摄像头.md"
+    },
+    {
+      "title": "如何搭建一个ChatGPT镜像站",
+      "date": "2023-04-12T06:11:41.000Z",
+      "file": "如何搭建一个ChatGPT镜像站.md"
+    },
+    {
+      "title": "CSS布局基础知识",
+      "date": "2023-03-20T05:32:55.000Z",
+      "file": "CSS布局基础知识.md"
+    },
+    {
+      "title": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
+      "date": "2023-03-16T15:51:26.000Z",
+      "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md"
+    },
+    {
+      "title": "HUSTOJ前端源代码解析（PHP）",
+      "date": "2023-03-09T09:12:10.000Z",
+      "file": "HUSTOJ前端源代码解析（PHP）.md"
+    },
+    {
+      "title": "如何将语雀文档导出为html（使用语雀API）",
+      "date": "2023-03-09T08:12:56.000Z",
+      "file": "如何将语雀文档导出为html（使用语雀API）.md"
+    },
+    {
+      "title": "组装一台新的电脑",
+      "date": "2023-03-01T00:57:51.000Z",
+      "file": "组装一台新的电脑.md"
+    },
+    {
+      "title": "Qt动态添加和删除布局（仿jupyter）",
+      "date": "2023-02-02T06:14:19.000Z",
+      "file": "qt动态添加和删除布局（仿jupyter）.md"
+    },
+    {
+      "title": "致动o手柄对比xbox原装手柄使用体验分享",
+      "date": "2023-01-15T00:59:39.000Z",
+      "file": "致动o手柄对比xbox原装手柄使用体验分享.md"
+    },
+    {
+      "title": "LiveGo——小而美的直播串流软件",
+      "date": "2023-01-01T08:11:53.000Z",
+      "file": "Livego——小而美的直播串流软件.md"
+    },
+    {
+      "title": "Kaggle图像分类竞赛实战总结详细代码解读",
+      "date": "2022-12-29T04:37:38.000Z",
+      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md"
+    },
+    {
+      "title": "Linux在指定时间区间内的随机时间点执行任务",
+      "date": "2022-10-23T15:52:09.000Z",
+      "file": "Linux在指定时间区间内的随机时间点执行任务.md"
+    },
+    {
+      "title": "我的第一把客制化键盘",
+      "date": "2022-08-16T07:41:28.000Z",
+      "file": "我的第一把客制化键盘.md"
+    },
+    {
+      "title": "Linux输出重定向以及crontab的坑",
+      "date": "2022-07-13T03:14:42.000Z",
+      "file": "Linux输出重定向以及crontab的坑.md"
+    },
+    {
+      "title": "正则表达式提取《飞鸟集》",
+      "date": "2022-06-30T03:18:09.000Z",
+      "file": "正则表达式提取《飞鸟集》.md"
+    },
+    {
+      "title": "组织一次成功的班级烧烤经验分享",
+      "date": "2022-06-23T04:24:27.000Z",
+      "file": "组织一次成功的班级烧烤经验分享.md"
+    },
+    {
+      "title": "使用正则表达式进行高级替换",
+      "date": "2022-06-17T07:02:15.000Z",
+      "file": "使用正则表达式进行高级替换.md"
+    },
+    {
+      "title": "在word中使用通配符进行高级的查找和替换",
+      "date": "2022-06-16T09:03:05.000Z",
+      "file": "在word中使用通配符进行高级的查找和替换.md"
+    },
+    {
+      "title": "解锁新技术栈vue+flask前后端分离",
+      "date": "2022-05-24T15:41:05.000Z",
+      "file": "解锁新技术栈vue+flask前后端分离.md"
+    },
+    {
+      "title": "Flask+vue使用jwt验证",
+      "date": "2022-05-22T05:00:39.000Z",
+      "file": "flask+vue使用jwt验证.md"
+    },
+    {
+      "title": "Git撤销版本",
+      "date": "2022-04-16T12:23:57.000Z",
+      "file": "git撤销版本.md"
+    },
+    {
+      "title": "Roboflow+colab优雅地训练yolov5模型",
+      "date": "2022-03-19T05:37:49.000Z",
+      "file": "roboflow+colab优雅地训练yolov5模型.md"
+    },
+    {
+      "title": "mac m1 安装sqlserver踩坑经历",
+      "date": "2022-03-16T10:14:14.000Z",
+      "file": "macm1安装sqlserver踩坑经历.md"
+    },
+    {
+      "title": "C语言中值传递、指针传递和引用传递",
+      "date": "2022-03-07T09:15:10.000Z",
+      "file": "C语言中值传递、指针传递和引用传递.md"
+    },
+    {
+      "title": "Yolov5训练自己的目标检测模型",
+      "date": "2022-02-28T14:34:57.000Z",
+      "file": "yolov5训练自己的目标检测模型.md"
+    },
+    {
+      "title": "从wordpress迁移到hugo过程分享",
+      "date": "2022-01-28T07:52:50.000Z",
+      "file": "从wordpress迁移到hugo过程分享.md"
+    },
+    {
+      "title": "gitee/github webhooks+nodejs实现自动拉取代码",
+      "date": "2022-01-25T20:50:41.000Z",
+      "file": "gitee webhooks+nodejs实现自动拉取代码.md"
+    },
+    {
+      "title": "数值计算方法",
+      "date": "2021-12-01T18:31:18.000Z",
+      "file": "数值计算方法.md"
+    },
+    {
+      "title": "Mac上自动连接校园网的脚本",
+      "date": "2021-11-24T18:58:03.000Z",
+      "file": "Mac上自动连接校园网的脚本.md"
+    },
+    {
+      "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
+      "date": "2021-11-21T09:04:54.000Z",
+      "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md"
+    },
+    {
+      "title": "macOS下matplotlib无法显示中文字体问题解决",
+      "date": "2021-11-12T16:57:43.000Z",
+      "file": "macOS下matplotlib无法显示中文字体问题解决.md"
+    },
+    {
+      "title": "如何在英语朗读视频中添加文稿",
+      "date": "2021-11-04T17:15:40.000Z",
+      "file": "如何在英语朗读视频中添加文稿.md"
+    },
+    {
+      "title": "ubuntu安装Python3的曲折之路",
+      "date": "2021-10-30T13:58:01.000Z",
+      "file": "ubuntu安装Python3的曲折之路.md"
+    },
+    {
+      "title": "浏览器不支持getUserMedia",
+      "date": "2021-09-23T15:58:12.000Z",
+      "file": "浏览器不支持getUserMedia.md"
+    },
+    {
+      "title": "certbot自动配置nginx给wordpress站点加https",
+      "date": "2021-09-08T22:42:40.000Z",
+      "file": "certbot自动配置nginx给wordpress站点加https.md"
+    },
+    {
+      "title": "对图像操作",
+      "date": "2021-08-29T21:21:29.000Z",
+      "file": "对图像操作.md"
+    },
+    {
+      "title": "Conda 配置虚拟环境",
+      "date": "2021-08-29T21:20:21.000Z",
+      "file": "Conda 配置虚拟环境.md"
+    },
+    {
+      "title": "jupyter-paddle使用docker安装",
+      "date": "2021-08-29T21:19:42.000Z",
+      "file": "jupyter-paddle使用docker安装.md"
+    },
+    {
+      "title": "python发邮件",
+      "date": "2021-08-08T08:20:29.000Z",
+      "file": "python发邮件.md"
+    },
+    {
+      "title": "matplotlib作热机效率随负载大小变化曲线图",
+      "date": "2021-04-02T09:28:08.000Z",
+      "file": "matplotlib作热机效率随负载大小变化曲线图.md"
+    },
+    {
+      "title": "如何使用v2ray代理",
+      "date": "2021-01-22T10:42:05.000Z",
+      "file": "如何使用v2ray代理.md"
+    },
+    {
+      "title": "jupyter打开项目文件夹",
+      "date": "2021-01-19T17:52:50.000Z",
+      "file": "jupyter打开项目文件夹.md"
+    }
+  ],
   "随笔杂记": [
     {
       "title": "RAG图谱实体和边智能合并",
@@ -284,273 +556,6 @@
       "title": "我的青春不迷茫，奋斗青春成就未来-征文活动",
       "date": "2020-11-15T10:23:57.000Z",
       "file": "我的青春不迷茫，奋斗青春成就未来-征文活动.md"
-    }
-  ],
-  "技能分享": [
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "file": "RAG图谱实体和边智能合并.md"
-    },
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "file": "手撕卷积神经网络反向传播梯度更新.md"
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "file": "手撕Attention.md"
-    },
-    {
-      "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
-      "date": "2025-06-10T10:14:29.000Z",
-      "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md"
-    },
-    {
-      "title": "DeepResearch深度搜索实现方法调研",
-      "date": "2025-05-09T14:03:42.000Z",
-      "file": "DeepResearch深度搜索实现方法调研.md"
-    },
-    {
-      "title": "开源PDF解析工具Marker深度解析",
-      "date": "2025-05-05T14:36:59.000Z",
-      "file": "开源PDF解析工具Marker深度解析.md"
-    },
-    {
-      "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
-      "date": "2025-01-24T01:37:25.000Z",
-      "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md"
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "file": "电脑启动需要经历哪些过程？.md"
-    },
-    {
-      "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
-      "date": "2024-11-27T06:47:24.000Z",
-      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md"
-    },
-    {
-      "title": "如何在Windows上编译Python39源代码",
-      "date": "2023-12-10T12:51:01.000Z",
-      "file": "如何在Windows上编译Python39源代码.md"
-    },
-    {
-      "title": "好用的动画制作工具-Keynote",
-      "date": "2023-07-01T02:41:41.000Z",
-      "file": "好用的动画制作工具-keynote.md"
-    },
-    {
-      "title": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
-      "date": "2023-04-22T02:40:50.000Z",
-      "file": "vueflask实现播放任何视频源包括rtsp摄像头.md"
-    },
-    {
-      "title": "如何搭建一个ChatGPT镜像站",
-      "date": "2023-04-12T06:11:41.000Z",
-      "file": "如何搭建一个ChatGPT镜像站.md"
-    },
-    {
-      "title": "CSS布局基础知识",
-      "date": "2023-03-20T05:32:55.000Z",
-      "file": "CSS布局基础知识.md"
-    },
-    {
-      "title": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
-      "date": "2023-03-16T15:51:26.000Z",
-      "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md"
-    },
-    {
-      "title": "HUSTOJ前端源代码解析（PHP）",
-      "date": "2023-03-09T09:12:10.000Z",
-      "file": "HUSTOJ前端源代码解析（PHP）.md"
-    },
-    {
-      "title": "如何将语雀文档导出为html（使用语雀API）",
-      "date": "2023-03-09T08:12:56.000Z",
-      "file": "如何将语雀文档导出为html（使用语雀API）.md"
-    },
-    {
-      "title": "组装一台新的电脑",
-      "date": "2023-03-01T00:57:51.000Z",
-      "file": "组装一台新的电脑.md"
-    },
-    {
-      "title": "Qt动态添加和删除布局（仿jupyter）",
-      "date": "2023-02-02T06:14:19.000Z",
-      "file": "qt动态添加和删除布局（仿jupyter）.md"
-    },
-    {
-      "title": "致动o手柄对比xbox原装手柄使用体验分享",
-      "date": "2023-01-15T00:59:39.000Z",
-      "file": "致动o手柄对比xbox原装手柄使用体验分享.md"
-    },
-    {
-      "title": "LiveGo——小而美的直播串流软件",
-      "date": "2023-01-01T08:11:53.000Z",
-      "file": "Livego——小而美的直播串流软件.md"
-    },
-    {
-      "title": "Kaggle图像分类竞赛实战总结详细代码解读",
-      "date": "2022-12-29T04:37:38.000Z",
-      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md"
-    },
-    {
-      "title": "Linux在指定时间区间内的随机时间点执行任务",
-      "date": "2022-10-23T15:52:09.000Z",
-      "file": "Linux在指定时间区间内的随机时间点执行任务.md"
-    },
-    {
-      "title": "我的第一把客制化键盘",
-      "date": "2022-08-16T07:41:28.000Z",
-      "file": "我的第一把客制化键盘.md"
-    },
-    {
-      "title": "Linux输出重定向以及crontab的坑",
-      "date": "2022-07-13T03:14:42.000Z",
-      "file": "Linux输出重定向以及crontab的坑.md"
-    },
-    {
-      "title": "正则表达式提取《飞鸟集》",
-      "date": "2022-06-30T03:18:09.000Z",
-      "file": "正则表达式提取《飞鸟集》.md"
-    },
-    {
-      "title": "组织一次成功的班级烧烤经验分享",
-      "date": "2022-06-23T04:24:27.000Z",
-      "file": "组织一次成功的班级烧烤经验分享.md"
-    },
-    {
-      "title": "使用正则表达式进行高级替换",
-      "date": "2022-06-17T07:02:15.000Z",
-      "file": "使用正则表达式进行高级替换.md"
-    },
-    {
-      "title": "在word中使用通配符进行高级的查找和替换",
-      "date": "2022-06-16T09:03:05.000Z",
-      "file": "在word中使用通配符进行高级的查找和替换.md"
-    },
-    {
-      "title": "解锁新技术栈vue+flask前后端分离",
-      "date": "2022-05-24T15:41:05.000Z",
-      "file": "解锁新技术栈vue+flask前后端分离.md"
-    },
-    {
-      "title": "Flask+vue使用jwt验证",
-      "date": "2022-05-22T05:00:39.000Z",
-      "file": "flask+vue使用jwt验证.md"
-    },
-    {
-      "title": "Git撤销版本",
-      "date": "2022-04-16T12:23:57.000Z",
-      "file": "git撤销版本.md"
-    },
-    {
-      "title": "Roboflow+colab优雅地训练yolov5模型",
-      "date": "2022-03-19T05:37:49.000Z",
-      "file": "roboflow+colab优雅地训练yolov5模型.md"
-    },
-    {
-      "title": "mac m1 安装sqlserver踩坑经历",
-      "date": "2022-03-16T10:14:14.000Z",
-      "file": "macm1安装sqlserver踩坑经历.md"
-    },
-    {
-      "title": "C语言中值传递、指针传递和引用传递",
-      "date": "2022-03-07T09:15:10.000Z",
-      "file": "C语言中值传递、指针传递和引用传递.md"
-    },
-    {
-      "title": "Yolov5训练自己的目标检测模型",
-      "date": "2022-02-28T14:34:57.000Z",
-      "file": "yolov5训练自己的目标检测模型.md"
-    },
-    {
-      "title": "从wordpress迁移到hugo过程分享",
-      "date": "2022-01-28T07:52:50.000Z",
-      "file": "从wordpress迁移到hugo过程分享.md"
-    },
-    {
-      "title": "gitee/github webhooks+nodejs实现自动拉取代码",
-      "date": "2022-01-25T20:50:41.000Z",
-      "file": "gitee webhooks+nodejs实现自动拉取代码.md"
-    },
-    {
-      "title": "数值计算方法",
-      "date": "2021-12-01T18:31:18.000Z",
-      "file": "数值计算方法.md"
-    },
-    {
-      "title": "Mac上自动连接校园网的脚本",
-      "date": "2021-11-24T18:58:03.000Z",
-      "file": "Mac上自动连接校园网的脚本.md"
-    },
-    {
-      "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
-      "date": "2021-11-21T09:04:54.000Z",
-      "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md"
-    },
-    {
-      "title": "macOS下matplotlib无法显示中文字体问题解决",
-      "date": "2021-11-12T16:57:43.000Z",
-      "file": "macOS下matplotlib无法显示中文字体问题解决.md"
-    },
-    {
-      "title": "如何在英语朗读视频中添加文稿",
-      "date": "2021-11-04T17:15:40.000Z",
-      "file": "如何在英语朗读视频中添加文稿.md"
-    },
-    {
-      "title": "ubuntu安装Python3的曲折之路",
-      "date": "2021-10-30T13:58:01.000Z",
-      "file": "ubuntu安装Python3的曲折之路.md"
-    },
-    {
-      "title": "浏览器不支持getUserMedia",
-      "date": "2021-09-23T15:58:12.000Z",
-      "file": "浏览器不支持getUserMedia.md"
-    },
-    {
-      "title": "certbot自动配置nginx给wordpress站点加https",
-      "date": "2021-09-08T22:42:40.000Z",
-      "file": "certbot自动配置nginx给wordpress站点加https.md"
-    },
-    {
-      "title": "对图像操作",
-      "date": "2021-08-29T21:21:29.000Z",
-      "file": "对图像操作.md"
-    },
-    {
-      "title": "Conda 配置虚拟环境",
-      "date": "2021-08-29T21:20:21.000Z",
-      "file": "Conda 配置虚拟环境.md"
-    },
-    {
-      "title": "jupyter-paddle使用docker安装",
-      "date": "2021-08-29T21:19:42.000Z",
-      "file": "jupyter-paddle使用docker安装.md"
-    },
-    {
-      "title": "python发邮件",
-      "date": "2021-08-08T08:20:29.000Z",
-      "file": "python发邮件.md"
-    },
-    {
-      "title": "matplotlib作热机效率随负载大小变化曲线图",
-      "date": "2021-04-02T09:28:08.000Z",
-      "file": "matplotlib作热机效率随负载大小变化曲线图.md"
-    },
-    {
-      "title": "如何使用v2ray代理",
-      "date": "2021-01-22T10:42:05.000Z",
-      "file": "如何使用v2ray代理.md"
-    },
-    {
-      "title": "jupyter打开项目文件夹",
-      "date": "2021-01-19T17:52:50.000Z",
-      "file": "jupyter打开项目文件夹.md"
     }
   ],
   "笔记": [
