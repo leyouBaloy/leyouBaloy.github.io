@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps, h, Fragment } from 'vue';
+import { ref, onMounted, h, Fragment } from 'vue';
 import axios from 'axios';
 import frontMatter from 'front-matter';
 import { NIcon, NImage } from 'naive-ui';
@@ -29,6 +29,8 @@ import { markRaw } from 'vue';
 import texmath from 'markdown-it-texmath'; // 导入公式渲染插件
 import 'katex/dist/katex.min.css'; // 导入公式渲染样式
 import katex from 'katex'; // 导入 katex
+import CodeBlock from './CodeBlock.vue'; // 导入代码块组件
+import Prism from 'prismjs';
 
 const props = defineProps({
   filename: {
@@ -45,10 +47,18 @@ const md = new MarkdownIt({
   breaks: false,
   linkify: true,
   typographer: true,
+  highlight: function (str, lang) {
+    // 只需要设置语言类名，实际高亮由 CodeBlock 组件处理
+    const escaped = md.utils.escapeHtml(str);
+    if (lang) {
+      return '<pre><code class="language-' + lang + '">' + escaped + '</code></pre>';
+    }
+    return '<pre><code class="language-text">' + escaped + '</code></pre>';
+  }
 }).use(texmath, {
   engine: katex,
   delimiters: ['dollars', 'brackets'], // 支持 $ 和 \( \) 语法
-  katexOptions: { 
+  katexOptions: {
     throwOnError: false,
     errorColor: '#cc0000'
   }
@@ -74,9 +84,31 @@ const renderVNode = (nodes) => {
       const tagName = node.tagName.toLowerCase();
       const children = renderVNode(node.childNodes);
 
+      // 处理代码块
+      if (tagName === 'pre') {
+        const codeElement = node.querySelector('code');
+        if (codeElement) {
+          const codeText = codeElement.textContent || codeElement.innerText;
+          const classList = codeElement.className || '';
+          const languageMatch = classList.match(/language-(\w+)/);
+          const language = languageMatch ? languageMatch[1] : 'text';
+
+          return h(CodeBlock, {
+            code: codeText.trim(),
+            language: language
+          });
+        }
+      }
+
+      // 处理行内代码
+      if (tagName === 'code' && (!node.parentElement || node.parentElement.tagName.toLowerCase() !== 'pre')) {
+        const codeText = node.textContent || node.innerText;
+        return h('code', codeText);
+      }
+
       if (tagName === 'img') {
         const isInTable = isInsideTable(node);
-        
+
         return h(NImage, {
           style: {
             maxWidth: isInTable ? '120px' : '100%',
@@ -306,21 +338,15 @@ onMounted(loadMarkdown);
   padding: 8px;
 }
 
-/* 处理超长代码块 */
-.md :deep(pre) {
-  border-left: 0.5rem solid #cbccce;
-  margin: 1rem 0;
-  padding: 16px;
-  background-color: #f6f8fa;
-  overflow-x: auto;
-  max-width: 100%;
-}
-
-.md :deep(code) {
-  padding: 0em 0.2em;
-  border-radius: 4px;
-  display: inline-block;
-  text-indent: 0;
+/* 行内代码样式（清新主题） */
+.md :deep(code:not(pre code)) {
+  background-color: #f0f9ff;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-family: 'Consolas', 'Monaco', 'Courier New', 'SF Mono', monospace;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
   word-break: break-word;
 }
 

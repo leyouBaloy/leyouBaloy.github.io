@@ -93,14 +93,13 @@
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/WechatIMG374.jpeg"
   },
   {
-    "title": "绿植盆栽攻略",
-    "date": "2024-08-28T10:24:07.000Z",
-    "file": "绿植盆栽攻略.md",
-    "excerpt": "分类以下是常见的绿植盆栽分类：一、观叶类绿植盆栽植物类型：绿萝、吊兰、龟背竹、发财树、文竹、虎皮兰等。养护难度：总体来说养护难度相对较低。绿萝和吊兰适应能力强，能在不同环境下生长，只要保证适量的水分和散射光即可。龟背竹喜欢温暖湿润的环境，但也比较耐阴。",
+    "title": "代码块功能测试",
+    "date": "2024-09-14T00:00:00.000Z",
+    "file": "代码块测试.md",
+    "excerpt": "代码块Copy按钮和高亮功能测试这个页面用于测试新添加的代码块功能，包括语法高亮和复制按钮。JavaScript代码块```javascriptfunctionfibonacci(n){if(n<=1)returnn;leta=0,b",
     "tags": [
-      "随笔杂记",
-      "笔记"
+      "技术测试"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgbbf772ea317555ba7ac144f9318fc7f.jpg"
+    "img": ""
   }
 ]
