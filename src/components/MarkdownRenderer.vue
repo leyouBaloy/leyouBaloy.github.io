@@ -367,6 +367,95 @@ h1, h2, h3, h4, h5, h6 {
 
 .title {
   text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 1rem auto 2rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #fef3c7 100%);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 20px rgba(227, 242, 253, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e40af;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  max-width: 90%;
+}
+
+/* 标题的装饰元素 */
+.title::before {
+  content: '✨';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  font-size: 1.2rem;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.title::after {
+  content: '🌸';
+  position: absolute;
+  top: -8px;
+  right: 20px;
+  font-size: 1.2rem;
+  animation: twinkle 2s ease-in-out infinite 1s;
+}
+
+/* 标题悬停效果 */
+.title:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 25px rgba(227, 242, 253, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* 闪烁动画 */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+}
+
+/* 标题响应式设计 */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem auto 1.5rem;
+    max-width: 95%;
+  }
+
+  .title::before,
+  .title::after {
+    font-size: 1rem;
+    top: -6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem auto 1rem;
+    border-radius: 12px;
+  }
+
+  .title::before,
+  .title::after {
+    font-size: 0.9rem;
+    top: -5px;
+    left: 15px;
+    right: 15px;
+  }
 }
 
 p {
