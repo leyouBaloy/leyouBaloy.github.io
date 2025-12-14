@@ -1,5 +1,16 @@
 [
   {
+    "title": "全国高校AI知识竞赛UPC赛区获奖通知",
+    "date": "2021-09-29T23:37:12.000Z",
+    "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
+    "excerpt": "获奖名单：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)![](https://myblog-1257298572.cos.",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
     "title": "浏览器不支持getUserMedia",
     "date": "2021-09-23T15:58:12.000Z",
     "file": "浏览器不支持getUserMedia.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技能分享"
     ],
-    "img": "",
-    "totalPages": 28
+    "img": ""
   },
   {
     "title": "certbot自动配置nginx给wordpress站点加https",
@@ -87,16 +97,6 @@
     "excerpt": "这个星期我去了六次网吧，吃了三次炸鸡。网吧虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。打LOL终极魔典，一开始我两被敌",
     "tags": [
       "随笔杂记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "linux学习笔记",
-    "date": "2021-08-08T11:09:47.000Z",
-    "file": "linux学习笔记.md",
-    "excerpt": "安装python1）安装依赖包安装“Developmenttools”软件组：```sudoyumgroupinstall\"Developmenttools\"```因为Python3.7源文件使用zlib格式打包，所以需要安装zlib软件",
-    "tags": [
-      "笔记"
     ],
     "img": ""
   }

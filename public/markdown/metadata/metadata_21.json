@@ -1,5 +1,16 @@
 [
   {
+    "title": "matplotlib作热机效率随负载大小变化曲线图",
+    "date": "2021-04-02T09:28:08.000Z",
+    "file": "matplotlib作热机效率随负载大小变化曲线图.md",
+    "excerpt": "大物实验得到的数据，用python的matplotlib很方便处理数据准备：```r=np.arange(0.5,6.0,0.5)u2=np.array([6.66,6.49,6.37,6.37,6.17,6.12,6.18,5.98,5.97,5.93,5.91])i2=",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
     "title": "“专利申请”撰写有感",
     "date": "2021-03-28T20:46:35.000Z",
     "file": "“专利申请”撰写有感.md",
@@ -7,8 +18,7 @@
     "tags": [
       "随笔杂记"
     ],
-    "img": "",
-    "totalPages": 28
+    "img": ""
   },
   {
     "title": "长期任务：做一个在线oj的评测",
@@ -85,16 +95,6 @@
     "date": "2021-02-25T18:40:44.000Z",
     "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
     "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver仅供学习使用Legend图例```importmatplotlib.pyplotaspltimportnum",
-    "tags": [
-      "笔记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "csv库的使用方法",
-    "date": "2021-02-25T11:10:35.000Z",
-    "file": "csv库的使用方法.md",
-    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。一、csv简介CSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。c",
     "tags": [
       "笔记"
     ],

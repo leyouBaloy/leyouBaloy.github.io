@@ -1326,6 +1326,11 @@
   ],
   "2025": [
     {
+      "title": "langchain-faiss加载pkl文件速度提升",
+      "date": "2025-12-14T06:19:28.000Z",
+      "file": "langchain-faiss加载pkl文件速度提升.md"
+    },
+    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "file": "RAG图谱实体和边智能合并.md"
