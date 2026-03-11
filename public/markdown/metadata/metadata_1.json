@@ -22,48 +22,6 @@
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png"
   },
   {
-    "title": "手撕卷积神经网络+反向传播梯度更新",
-    "date": "2025-07-13T07:24:20.000Z",
-    "file": "手撕卷积神经网络反向传播梯度更新.md",
-    "excerpt": "手撕卷积神经网络一个简单的卷积神经网络，就4层，分别是InputLayer,conv_layer,hidden_layer(全连接层+ReLU激活),output_layer```importnumpyasnpclassInputLayer:\"\"\"输入层",
-    "tags": [
-      "笔记",
-      "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "手撕Attention",
-    "date": "2025-06-22T08:49:55.000Z",
-    "file": "手撕Attention.md",
-    "excerpt": "第一重境界最简单的计算Attention(Q,K,V)=softmax(QK.T/sqrt(hidden_dim))V```importmathimporttorchimporttorch.nnasnnclassSelfAttentionV1(nn.M",
-    "tags": [
-      "笔记",
-      "技能分享"
-    ],
-    "img": ""
-  },
-  {
-    "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
-    "date": "2025-06-10T10:14:29.000Z",
-    "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
-    "excerpt": "ChartVLMChartVLM由两部分组成：图表结构解码器+大语言模型截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct显存占用基本保持在2506MiB普通图表|原图|识别结果|评价||------|---",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/images/d969c3b0_1749549251583-7654c91e-ef01-4bf7-9656-11efa4778806.png"
-  },
-  {
-    "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
-    "date": "2025-06-10T08:48:23.000Z",
-    "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
-    "excerpt": "背景为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法多模态大模型测试Prompt```plain你是一位专门为图像创建文本描述的文件分析专家。你将收到一张图片或图表。你的任务是创建该图像的简短描述。说明：1.仔细检查提供的图像。2",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1749543589300-bf8e1d05-b85e-4da7-b535-e77ac6cdc244.png"
-  },
-  {
     "title": "DeepResearch深度搜索实现方法调研",
     "date": "2025-05-09T14:03:42.000Z",
     "file": "DeepResearch深度搜索实现方法调研.md",
@@ -72,16 +30,6 @@
       "技能分享"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png"
-  },
-  {
-    "title": "开源PDF解析工具Marker深度解析",
-    "date": "2025-05-05T14:36:59.000Z",
-    "file": "开源PDF解析工具Marker深度解析.md",
-    "excerpt": "开源PDF解析工具Marker深度解析检索增强生成（RAG）系统的第一步就是做pdf解析，从复杂多样的pdf中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker和MinerU。因为Marker是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
   },
   {
     "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
@@ -94,13 +42,63 @@
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png"
   },
   {
-    "title": "品酒🍶——古井贡酒第六代55度",
-    "date": "2024-12-09T14:49:43.000Z",
-    "file": "品酒-古井贡酒第六代55度.md",
-    "excerpt": "古井贡酒第六代55度香型：浓香型度数：55原料：高粱、大米、小麦、糯米、玉米产地：安徽亳州价格：72元/500ml品鉴感受闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。![image-20241",
+    "title": "Leetcode_209长度最小的子数组——滑动窗口",
+    "date": "2024-11-21T13:28:00.000Z",
+    "file": "Leetcode_209长度最小的子数组.md",
+    "excerpt": "Leetcode_209长度最小的子数组给定一个含有`n`个正整数的数组和一个正整数`target`。找出该数组中满足其总和大于等于`target`的长度最小的子数组`[numsl,numsl+1,...,numsr-1,numsr]`，并返回",
     "tags": [
-      "随笔杂记"
+      "刷题"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241209225923467.png"
+    "img": ""
+  },
+  {
+    "title": "Leetcode142:环形链表II——快慢指针",
+    "date": "2024-10-29T13:04:06.000Z",
+    "file": "Leetcode_142环形链表II.md",
+    "excerpt": "Leetcode_142环形链表IIhttps://leetcode.cn/problems/linked-list-cycle-ii/description/给定一个链表的头节点`head`，返回链表开始入环的第一个节点。如果链表无环，则返回`null`。如果链表中有",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "Leetcode283:移动零——双指针",
+    "date": "2024-09-23T12:01:16.000Z",
+    "file": "Leetcode_283移动零.md",
+    "excerpt": "题目给定一个数组`nums`，编写一个函数将所有`0`移动到数组的末尾，同时保持非零元素的相对顺序。请注意，必须在不复制数组的情况下原地对数组进行操作。示例1:```输入:nums=[0,1,0,3,12]输出:[1,3,12,0,0]`",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "代码块功能测试",
+    "date": "2024-09-14T00:00:00.000Z",
+    "file": "代码块测试.md",
+    "excerpt": "代码块Copy按钮和高亮功能测试这个页面用于测试新添加的代码块功能，包括语法高亮和复制按钮。JavaScript代码块```javascriptfunctionfibonacci(n){if(n<=1)returnn;leta=0,b",
+    "tags": [
+      "技术测试"
+    ],
+    "img": ""
+  },
+  {
+    "title": "一部接地气的国产法律神剧——第二十条",
+    "date": "2024-02-21T09:30:31.000Z",
+    "file": "一部接地气的国产法律神剧-第二十条.md",
+    "excerpt": "春节假期末期，我和我爸妈一起去电影院观看了《第二十条》，我和我妈都觉得非常好看。《第二十条》是一部国产法律电影，其剧名指的是我国刑法第二十条关于正当防卫和防卫过当的法律条文。从来没有哪一条法律条文像第二十条这样容易引起争议。试想一下，如果一名歹徒要拿刀杀你，你在情急之中找到另外一把凶器并且将他反杀，",
+    "tags": [
+      "书影记录"
+    ],
+    "img": ""
+  },
+  {
+    "title": "SCI论文润色经验分享",
+    "date": "2023-12-23T13:39:08.000Z",
+    "file": "SCI论文润色经验分享.md",
+    "excerpt": "变量符号-第一次出现的变量符号需要解释，后面不需再解释。-文章中所有的变量符号要保持一致，不能前后歧义。解决这个问题最好的办法就是在写作时维护一个符号表。如果文章的公式变量较多，强烈建议这么做，否则后面改起来会很痛苦。-所有单字母变量，都要采用斜体。多字母变量和函数，采用正体。对于",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
   }
 ]

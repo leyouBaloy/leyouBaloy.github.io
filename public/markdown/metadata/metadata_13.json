@@ -1,102 +1,106 @@
 [
   {
-    "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
-    "date": "2022-03-22T09:50:53.000Z",
-    "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/rotting-oranges/这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。题解解题思路这道题很明显要使用广度优先搜索，搜索的目标是每个腐烂",
+    "title": "电脑启动需要经历哪些过程？",
+    "date": "2024-11-27T06:51:10.000Z",
+    "file": "电脑启动需要经历哪些过程？.md",
+    "excerpt": "传统BIOS启动流程1.BIOSBIOS启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。",
     "tags": [
-      "刷题"
+      "笔记",
+      "技能分享"
     ],
     "img": "",
     "totalPages": 28
   },
   {
-    "title": "Leetcode733:图像渲染——搜索算法",
-    "date": "2022-03-21T10:27:50.000Z",
-    "file": "Leetcode733_图像渲染——搜索算法.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/flood-fill/美好的一天从一道简单题开始～题解理解题意后，发现这不就是windows自带画图工具里的`油漆桶`吗？深度优先搜索众所周知，深度优先搜索可以用`栈`实现，而`递归`本",
+    "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
+    "date": "2024-11-27T06:47:24.000Z",
+    "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
+    "excerpt": "无核显主机U盘安装Ubuntu先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。原因是nouveau这个倒霉驱动跟N卡不适",
     "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode435:重叠区间——动态规划、贪心",
-    "date": "2022-03-20T09:41:58.000Z",
-    "file": "Leetcode435_重叠区间——动态规划、贪心.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/non-overlapping-intervals/这题我竟然一年前做过，第二遍再做的时候一点印象都没有。看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算法水平还不如",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode240:搜索二维矩阵——二分、矩阵",
-    "date": "2022-03-19T09:55:44.000Z",
-    "file": "Leetcode240_搜索二维矩阵——二分、矩阵.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/search-a-2d-matrix-ii/题解法一：逐行二分没啥好说的，代码可以参考一下```c++classSolution{public:boolsearchMat",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Roboflow+colab优雅地训练yolov5模型",
-    "date": "2022-03-19T05:37:49.000Z",
-    "file": "roboflow+colab优雅地训练yolov5模型.md",
-    "excerpt": "roboflowroboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。网址：https://roboflow.com/提示：可以免费使用需要挂代理套餐一定要选public，",
-    "tags": [
+      "笔记",
       "技能分享"
     ],
-    "img": ""
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png"
   },
   {
-    "title": "《邓小平时代》——改革开放的总设计师",
-    "date": "2022-03-18T10:32:09.000Z",
-    "file": "《邓小平时代》——改革开放的总设计师.md",
-    "excerpt": "邓小平时代所有中国人都知道，1949年建国时中国是一个落后封闭的社会主义国家（和现在的朝鲜差不多）。但是在80年代，社会主义市场经济取代了计划经济，对外封闭变成了改革开放。90年代，中国经济一路起飞，国际地位迅速提高。直到现在，中国已经成为世界最强的国家之一。中国是如何崛起的？在大一时",
+    "title": "高光谱遥感深度学习调研",
+    "date": "2024-11-15T08:36:41.000Z",
+    "file": "高光谱遥感深度学习调研.md",
+    "excerpt": "高光谱遥感深度学习调研综述高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。>WangC,LiuB,LiuL,etal.Areviewofdeeplearningusedinthehyperspectralim",
     "tags": [
-      "书影记录"
+      "笔记"
     ],
-    "img": ""
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png"
   },
   {
-    "title": "Leetcode455:分发饼干——排序、贪心",
-    "date": "2022-03-18T08:01:16.000Z",
-    "file": "Leetcode455_分发饼干——排序、贪心.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/assign-cookies/题解为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子）然后对于每个胃口小的孩子，找到一",
+    "title": "品酒（尊美醇Jameson）",
+    "date": "2024-11-04T15:18:54.000Z",
+    "file": "品酒尊美醇Jameson.md",
+    "excerpt": "尊美醇Jameson![image-20241104232932122](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png)产地：爱尔兰。其最初在都柏林",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png"
+  },
+  {
+    "title": "数之和问题归纳——哈希、双指针",
+    "date": "2024-11-04T12:10:30.000Z",
+    "file": "数之和问题归纳哈希双指针.md",
+    "excerpt": "Leetcode1:两数之和题目https://leetcode.cn/problems/two-sum/给定一个整数数组nums和一个目标值target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是",
     "tags": [
       "刷题"
     ],
     "img": ""
   },
   {
-    "title": "Leetcode160:相交链表——哈希、双指针",
-    "date": "2022-03-16T12:06:00.000Z",
-    "file": "Leetcode160_相交链表——哈希、双指针.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/intersection-of-two-linked-lists/题解法一：哈希表先把一个链表放到哈希表里，再遍历另一个链表。```c++classSolution{public:",
+    "title": "品酒🍶（古井贡酒-古8）",
+    "date": "2024-09-19T15:38:28.000Z",
+    "file": "品酒（古井贡酒-古8）.md",
+    "excerpt": "古8香型：浓香型原料：水、高粱、大米、小麦、糯米、玉米酒精度：42度产地：安徽亳州价格：220元/425ml品尝感受：入口柔，后劲小，感觉像是稀释了的古16，毕竟是低度酒，喝起来没有那么浓郁，但是古井的窖泥味儿还是很明显的。相比于42度的红盖汾酒来说，好喝多",
     "tags": [
-      "刷题"
+      "随笔杂记"
     ],
-    "img": ""
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/WechatIMG374.jpeg"
   },
   {
-    "title": "mac m1 安装sqlserver踩坑经历",
-    "date": "2022-03-16T10:14:14.000Z",
-    "file": "macm1安装sqlserver踩坑经历.md",
-    "excerpt": "为什么安装sqlserver上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。法一：云数据库（❌在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所周知，像阿里",
+    "title": "绿植盆栽攻略",
+    "date": "2024-08-28T10:24:07.000Z",
+    "file": "绿植盆栽攻略.md",
+    "excerpt": "分类以下是常见的绿植盆栽分类：一、观叶类绿植盆栽植物类型：绿萝、吊兰、龟背竹、发财树、文竹、虎皮兰等。养护难度：总体来说养护难度相对较低。绿萝和吊兰适应能力强，能在不同环境下生长，只要保证适量的水分和散射光即可。龟背竹喜欢温暖湿润的环境，但也比较耐阴。",
     "tags": [
-      "技能分享"
+      "随笔杂记",
+      "笔记"
     ],
-    "img": ""
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgbbf772ea317555ba7ac144f9318fc7f.jpg"
   },
   {
-    "title": "Leetcode206:反转链表",
-    "date": "2022-03-14T11:15:57.000Z",
-    "file": "leetcode206_反转链表.md",
-    "excerpt": "一件事情只有做了一段时间之后才能找到方向。前段时间随便找了一些题刷，开始逐渐了解数据结构和算法。最近在知乎上看到一篇文章，列举了400道数据结构入门题目，感觉找到了方向。所以从今天开始进入新的刷题阶段。题单在此：https://www.zhihu.com/question/399753856",
+    "title": "品酒🍶(古井贡酒-古16)",
+    "date": "2024-08-24T14:52:24.000Z",
+    "file": "品酒(古井贡酒-古16) .md",
+    "excerpt": "外观古16这个酒属于古井贡酒系列的中端，品质还是不错的，包装非常精美，酒瓶是大红色，喜庆，很适合婚宴使用。![1724511302687](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/172451130268",
     "tags": [
-      "刷题"
+      "随笔杂记"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1724511302687.jpg"
+  },
+  {
+    "title": "品酒🍶（高脖绿瓶西凤酒陕西版）",
+    "date": "2024-08-21T23:09:53.000Z",
+    "file": "品酒（高脖绿瓶西凤酒陕西版）.md",
+    "excerpt": "今天品一下高脖绿瓶西凤酒，这是凤香型的代表酒。这个酒也是出了名的乱，有陕西版比省外版的好喝，批次早的比批次晚的好喝。我买的版本是2023年的陕西版。原料：高粱、大麦、小麦、豌豆。酒精度：55度。价格：约50元/500ml。闻香：闻着像黄盖汾（",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240821232051784.png"
+  },
+  {
+    "title": "调研遥感数据压缩",
+    "date": "2024-08-20T16:11:00.000Z",
+    "file": "调研遥感数据压缩.md",
+    "excerpt": "什么是遥感数据压缩？遥感图像压缩是指利用特定的算法和技术减少遥感图像数据量的过程，以便更有效地存储和传输数据。这个过程涉及到数据的编码，以减少数据的比特数，同时尽量保持原始图像的重要视觉和分析信息。遥感图像压缩通常分为两类：1.无损压缩（LosslessCompression）",
+    "tags": [
+      "人工智能",
+      "笔记"
     ],
     "img": ""
   }

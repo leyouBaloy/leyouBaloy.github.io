@@ -191,7 +191,7 @@ const searchQuery = ref('');
 const selectedTag = ref<string | null>(null);
 
 // 标签类型映射
-const tagTypes = ['success', 'info', 'warning', 'error', 'default'];
+const tagTypes: Array<'success' | 'info' | 'warning' | 'error' | 'default'> = ['success', 'info', 'warning', 'error', 'default'];
 
 const getYearIcon = (year: string) => {
   const currentYear = new Date().getFullYear();
@@ -227,7 +227,7 @@ const toggleTag = (tag: string | null) => {
 
 // 生成所有标签列表（带样式）
 const allTags = computed(() => {
-  const tags: Array<{name: string, count: number, type: string}> = [];
+  const tags: Array<{name: string, count: number, type: 'success' | 'info' | 'warning' | 'error' | 'default'}> = [];
   const tagNames = Object.keys(postsByTag.value);
   
   // 找出最大和最小数量用于计算权重

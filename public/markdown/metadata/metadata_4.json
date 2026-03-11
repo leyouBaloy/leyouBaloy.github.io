@@ -1,104 +1,102 @@
 [
   {
-    "title": "《德米安》读后有感",
-    "date": "2024-05-01T15:49:07.000Z",
-    "file": "德米安读后有感.md",
-    "excerpt": "最近读了黑塞的《德米安》，这是一个关于一个少年如何在彷徨时找寻自我的故事。故事的主人公叫辛克莱，他出生于一个宗教家庭，父母都是非常善良纯洁的人，小时候的他也非常懂事乖巧，生活在幸福当中。但是有一天他遇到了校园霸凌，他为这件事情使他非常苦恼，也正是因为这件事情使他觉醒了自我，他开始发现世界不是单纯善良",
+    "title": "Leetcode1823:找出游戏的获胜者——约瑟夫环",
+    "date": "2022-05-04T08:24:22.000Z",
+    "file": "Leetcode1823_找出游戏的获胜者——约瑟夫环.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。题解朴素的模拟法",
     "tags": [
-      "书影记录"
+      "刷题"
     ],
     "img": "",
     "totalPages": 28
   },
   {
-    "title": "一部接地气的国产法律神剧——第二十条",
-    "date": "2024-02-21T09:30:31.000Z",
-    "file": "一部接地气的国产法律神剧-第二十条.md",
-    "excerpt": "春节假期末期，我和我爸妈一起去电影院观看了《第二十条》，我和我妈都觉得非常好看。《第二十条》是一部国产法律电影，其剧名指的是我国刑法第二十条关于正当防卫和防卫过当的法律条文。从来没有哪一条法律条文像第二十条这样容易引起争议。试想一下，如果一名歹徒要拿刀杀你，你在情急之中找到另外一把凶器并且将他反杀，",
+    "title": "《无人生还》读后有感",
+    "date": "2022-04-30T09:58:36.000Z",
+    "file": "《无人生还》读后有感.md",
+    "excerpt": "作者《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写于1939年。{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud",
     "tags": [
       "书影记录"
     ],
     "img": ""
   },
   {
-    "title": "SCI论文润色经验分享",
-    "date": "2023-12-23T13:39:08.000Z",
-    "file": "SCI论文润色经验分享.md",
-    "excerpt": "变量符号-第一次出现的变量符号需要解释，后面不需再解释。-文章中所有的变量符号要保持一致，不能前后歧义。解决这个问题最好的办法就是在写作时维护一个符号表。如果文章的公式变量较多，强烈建议这么做，否则后面改起来会很痛苦。-所有单字母变量，都要采用斜体。多字母变量和函数，采用正体。对于",
+    "title": "Leetcode46:全排列——交换、回溯",
+    "date": "2022-04-29T09:22:24.000Z",
+    "file": "Leetcode46_全排列——回溯.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/permutations/2025.03.09又重新做了一次题解纯dfs首先想到的办法，cur_path记录当前路径，left_path记录剩下可选择的元素。不用回溯，每次递归传参都是",
     "tags": [
-      "笔记"
+      "刷题"
     ],
     "img": ""
   },
   {
-    "title": "《置身事内》读书笔记",
-    "date": "2023-12-11T12:55:26.000Z",
-    "file": "置身事内读书笔记.md",
-    "excerpt": "《置身事内》是复旦大学经济学院副教授兰小欢的科普读物。兰教授写这本书的目的是让更多的国人了解我国的经济政策。过去十年，我国的经济发展可以用“起飞”二字来形容。一提到中国经济，大家都非常自信且乐观的。但是到了疫情结束后的2023年，大家明显感到经济增速放缓了，生活和工作压力变大了。对于我们大学生来说，",
+    "title": "Leetcode17:电话号码的字母组合——回溯",
+    "date": "2022-04-27T07:36:14.000Z",
+    "file": "Leetcode17_电话号码的字母组合——回溯.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/终于能自己做出一道题了😭，之前的回溯题没白刷题解回溯思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径",
     "tags": [
-      "书影记录"
+      "刷题"
     ],
     "img": ""
   },
   {
-    "title": "如何在Windows上编译Python39源代码",
-    "date": "2023-12-10T12:51:01.000Z",
-    "file": "如何在Windows上编译Python39源代码.md",
-    "excerpt": "安装VisualStudio2017先下载VisualStudioInstallerhttps://learn.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio?v",
+    "title": "Leetcode16:最接近的三数之和——排序、双指针",
+    "date": "2022-04-26T10:58:23.000Z",
+    "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/3sum-closest/题解排序+双指针这道题的官方题解写的太好了：https://leetcode-cn.com/problems/3sum-closest/solution/zui-jie",
     "tags": [
-      "技能分享"
+      "刷题"
     ],
     "img": ""
   },
   {
-    "title": "蚌埠美食之旅",
-    "date": "2023-10-08T12:11:39.000Z",
-    "file": "蚌埠美食之旅.md",
-    "excerpt": "蚌埠简介蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给蚌埠带来了繁荣的机会。除此之外，蚌埠还有千里淮河第一大港——蚌埠港，水路交通也十分发达。铁路和水路奠定了蚌埠重要的交通地位。交通有了，人也渐渐多起来，",
+    "title": "Leetcode11:盛水最多的容器——双指针",
+    "date": "2022-04-25T09:26:41.000Z",
+    "file": "Leetcode11_盛水最多的容器——双指针.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/container-with-most-water/每次看题解：“我又会了！”下一题：“我是废物。”题解双指针定义两个指针`left`和`right`分别在最左边和最右边，指向两个柱子，",
     "tags": [
-      "随笔杂记"
+      "刷题"
     ],
     "img": ""
   },
   {
-    "title": "艺术品般的游戏—《荒野大镖客救赎2》",
-    "date": "2023-09-19T08:59:13.000Z",
-    "file": "艺术品般的游戏—荒野大镖客2救赎.md",
-    "excerpt": "“地表最强游戏公司”大名鼎鼎的侠盗猎车手系列(GTA,GrandTheftAuto)在游戏界应该无人不知，无人不晓，而由原班人马（R星，RockstarGames）打造的荒野大镖客系列（RD,RedDead）的知名度稍差一些。这可能是因为荒野大镖客系列目前仅有3部作品（GTA",
+    "title": "Leetcode743:网络延迟时间——dijkstra算法",
+    "date": "2022-04-21T09:35:07.000Z",
+    "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/network-delay-time/关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。题解关于dijkstra算法具体内容就不在这里细说了",
     "tags": [
-      "随笔杂记"
+      "刷题"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9Cec96892d0905de1851aeaca8df1c310d18f58540.jpg@1256w_708h_!web-article-pic%E2%80%9D%E5%A4%A7.jpeg"
+    "img": ""
   },
   {
-    "title": "苏州印象",
-    "date": "2023-08-12T12:06:07.000Z",
-    "file": "苏州印象.md",
-    "excerpt": "2023年8月3日-5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一座城市的呢？我非常好奇，终于有机会能一探究竟！从蚌埠坐绿皮火车仅需不到5小时就能到达苏州站（票价62.5），苏州站位于苏州的中心区域——姑苏区（听名字就觉得",
+    "title": "Leetcode821:字符的最短距离——两次遍历",
+    "date": "2022-04-19T08:45:09.000Z",
+    "file": "Leetcode821_字符的最短距离——两次遍历.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/shortest-distance-to-a-character/题解遍历k次，取最小思路：创建结果数组`v`，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍`s`，记录下每个`",
     "tags": [
-      "随笔杂记",
-      "笔记"
+      "刷题"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_8237%E2%80%9D%E5%A4%A7.jpeg"
+    "img": ""
   },
   {
-    "title": "ChinaVis重庆之旅",
-    "date": "2023-07-31T11:17:10.000Z",
-    "file": "ChinaVis重庆之旅.md",
-    "excerpt": "ChinaVis大会于2023年7月21日-24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～出发！第一次坐飞机，飞机型号是波音737-800，起飞的时候感觉好神奇，在空中的景色也非常美。![](https://mybl",
+    "title": "Leetcode386:字典序排数——dfs、迭代",
+    "date": "2022-04-18T09:26:02.000Z",
+    "file": "Leetcode386_字典序排数——dfs、迭代.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/lexicographical-numbers/日常做不出来😭题解什么是字典序？（原谅我到了大二才搞明白什么是字典序😂）>对于[字符串](https://so.csdn.net/so/sear",
     "tags": [
-      "随笔杂记",
-      "笔记"
+      "刷题"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7704.jpeg"
+    "img": ""
   },
   {
-    "title": "好用的动画制作工具-Keynote",
-    "date": "2023-07-01T02:41:41.000Z",
-    "file": "好用的动画制作工具-keynote.md",
-    "excerpt": "Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。![image-20230701105100566](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20",
+    "title": "Leetcode5:最长回文子串——中心扩展法",
+    "date": "2022-04-17T02:36:32.000Z",
+    "file": "Leetcode5_最长回文子串——中心扩展法.md",
+    "excerpt": "题目https://leetcode-cn.com/problems/longest-palindromic-substring/题解中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题...这道题需要注意的细节：回文子串长度既",
     "tags": [
-      "技能分享"
+      "刷题"
     ],
     "img": ""
   }

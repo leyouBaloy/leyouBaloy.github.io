@@ -1,9 +1,9 @@
 [
   {
-    "title": "《失乐园》读后有感",
-    "date": "2022-04-15T08:38:22.000Z",
-    "file": "《失乐园》读后有感.md",
-    "excerpt": "故事简叙{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220415165918989.png\"title=\"《失乐园》\">}}久木是一家出版社的编辑，",
+    "title": "87《红楼梦》观之有感",
+    "date": "2021-07-14T21:56:23.000Z",
+    "file": "87《红楼梦》观之有感.md",
+    "excerpt": "87版《红楼梦》  87红楼梦拍得是相当好的。小时候看不懂，不以为然。后来看了新版红楼梦（10版），才知道87版红楼梦是多么经典。导演王扶林拿捏了每一处细节，用高超的手法尽可能地还原了红楼梦原著。为拍摄此剧付出的代价也远高于现代拍摄的古装剧。演员也各个都是颜值天花板，看得好不过瘾！  ",
     "tags": [
       "书影记录"
     ],
@@ -11,91 +11,90 @@
     "totalPages": 28
   },
   {
-    "title": "成功主持150人参会的讲座！",
-    "date": "2022-04-10T15:05:16.000Z",
-    "file": "成功主持150人参会的讲座！.md",
-    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}{{<figur",
+    "title": "Django学习笔记",
+    "date": "2021-03-15T23:02:45.000Z",
+    "file": "Django学习笔记.md",
+    "excerpt": "安装虚拟环境在Powershell中执行```Set-ExecutionPolicyUnrestricted执行策略更改yyespipfreeze输出所有在本地已安装的包``````pipinstallvirtualenvcd目标文件夹virt",
     "tags": [
-      "随笔杂记"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
-    "date": "2022-04-09T04:08:07.000Z",
-    "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/subarray-sum-equals-k/不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。题解枚举法枚举法会超时，但可以为我们提供思路。考虑以`j`结尾和为`k`的连",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "C++和python常用函数",
-    "date": "2022-04-08T12:23:24.000Z",
-    "file": "c++和python常用函数.md",
-    "excerpt": "c++常用函数sort(v.begin(),v.end())```c++//向量vvector<int>v;sort(v.begin(),v.end())//数组asort(a,a+n);``````c++//可以加参数cmp//比如对inter",
-    "tags": [
-      "刷题",
       "笔记"
     ],
     "img": ""
   },
   {
-    "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
-    "date": "2022-04-08T11:59:03.000Z",
-    "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/乍一看好像做过，再一看好像不会😂题解暴力法设字符串为`s`，假如我们要找的这段没有重复字符的序列是从",
+    "title": "Pandas学习笔记",
+    "date": "2021-03-09T11:04:10.000Z",
+    "file": "Pandas学习笔记.md",
+    "excerpt": "map()和apply()和applymap()区别map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列appl",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "csv库的使用方法",
+    "date": "2021-02-25T11:10:35.000Z",
+    "file": "csv库的使用方法.md",
+    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。一、csv简介CSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。c",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "BeautifulSoup学习笔记",
+    "date": "2021-02-14T19:08:15.000Z",
+    "file": "BeautifulSoup学习笔记.md",
+    "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。[https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044](https://www.bilibili.com/video/BV1Pg4y1",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "c++比较字典序的三种方法",
+    "date": "2020-12-04T08:04:09.000Z",
+    "file": "c++比较字典序的三种方法.md",
+    "excerpt": "[比较字符串字典序的三种方法【C++】-知乎(zhihu.com)](https://zhuanlan.zhihu.com/p/205953754)```include<iostream>usingnamespacestd;intmain(){chars1[2]",
     "tags": [
       "刷题"
     ],
     "img": ""
   },
   {
-    "title": "Leetcode347:前K个高频元素——优先队列、堆",
-    "date": "2022-04-07T08:55:15.000Z",
-    "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/top-k-frequent-elements/从这题开始学会使用堆题解堆（heap）大顶堆：父节点的值大于子节点的值。小顶堆：父节点的值小于子节点的值。性质：根节点一定是最大（最小）值",
+    "title": "c++傻缺错误集锦",
+    "date": "2020-12-02T20:09:14.000Z",
+    "file": "c++傻缺错误集锦.md",
+    "excerpt": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！千万不要把“==”写成“=”输出小数时函数用成了intFun()应该用doubleFun()习惯了使用intFun()也是看了半天，没有看出问题来输入M和N我只写了cin>>N;导致后",
     "tags": [
       "刷题"
     ],
     "img": ""
   },
   {
-    "title": "Leetcode310:最小高度树",
-    "date": "2022-04-06T07:07:06.000Z",
-    "file": "Leetcode310_最小高度树.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/minimum-height-trees/这是一道理论性很强，代码也很有技巧性的“中等”难度题目。题解暴力法献上我的超时代码：```pythonclassSolution:def",
+    "title": "Python爬虫-selenium-request",
+    "date": "2020-11-16T15:20:41.000Z",
+    "file": "Python爬虫-selenium-request.md",
+    "excerpt": "[seleniumrequest](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/11/seleniumrequest.zip)[下载](https://myblog-125",
     "tags": [
       "刷题"
     ],
     "img": ""
   },
   {
-    "title": "Leetcode2:两数相加——链表",
-    "date": "2022-04-05T08:50:12.000Z",
-    "file": "Leetcode2_两数相加——链表.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/add-two-numbers/这道题主要是debug题解我自己写的代码：```c++/Definitionforsingly-linkedlist.structListN",
+    "title": "cout输出精确到小数点后两位",
+    "date": "2020-11-01T17:13:53.000Z",
+    "file": "cout输出精确到小数点后两位.md",
+    "excerpt": "【题目描述】给出两幅相同大小的黑白图像（用0表示黑，1表示白）表示，求它们的相似度。说明：若两幅图像在相同位置上的像素点颜色相同，则称它们在该位置具有相同的像素点。两幅图像的相似度定义为相同像素点数占总像素点数的百分比。【输入】第一行包含两个整数m和n，表示图像的行数和列数，中间",
     "tags": [
       "刷题"
     ],
     "img": ""
   },
   {
-    "title": "Leetcode230:二叉搜索树中第K小的元素",
-    "date": "2022-04-04T07:26:44.000Z",
-    "file": "Leetcode230_二叉搜索树中第K小的元素.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/这是一道可拓展性很高的题目题解中序遍历递归法最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第`k-1`个元素。可是我们只需",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode450:删除二叉搜索树中的节点",
-    "date": "2022-04-02T02:20:05.000Z",
-    "file": "Leetcode450_删除二叉搜索树中的节点.md",
-    "excerpt": "题目https://leetcode-cn.com/problems/delete-node-in-a-bst/这道题完全可以当作一个知识点来对待。题解思路众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。某个节点`node",
+    "title": "Python-一元二次方程，保留两位小数",
+    "date": "2020-10-19T15:10:44.000Z",
+    "file": "Python-一元二次方程，保留两位小数.md",
+    "excerpt": "【问题描述】一元二次方程：ax2+bx+c=0（a╪0）【输入形式】输入a、b和c的值（有理数）【输出形式】输出x的两个值，或者No（即没有有理数的解）【样例输入】12.53【样例输出】No【样例输入】1-21【样例输出】1.001.00【样例",
     "tags": [
       "刷题"
     ],

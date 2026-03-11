@@ -4,6 +4,7 @@ export interface PostMetadata {
     file: string;
     excerpt: string;
     tags?: string[] | undefined;
+    categories?: string[] | undefined;
     img?: string;
     totalPages?: number;
   }
