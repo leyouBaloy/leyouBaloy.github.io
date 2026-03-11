@@ -1,0 +1,49 @@
+# 博客优化 TODO
+
+> 由 OpenClaw 自动记录和更新
+
+## 待实现功能
+
+### 高优先级
+
+- [ ] **暗色模式支持** - 跟随系统或手动切换
+- [ ] **搜索功能增强** - 全文搜索不只是标题
+- [ ] **评论系统** - Giscus / Disqus 集成
+- [ ] **文章目录** - 侧边栏自动生成 TOC
+
+### 中优先级
+
+- [ ] **暗色模式** - 参考 tailwindcss/daisyui 的主题切换
+- [ ] **代码块优化** - 复制按钮、语言显示
+- [ ] **图片灯箱** - 点击放大
+- [ ] **文章分享** - 社交媒体分享按钮
+- [ ] **阅读进度条** - 页面滚动显示
+- [ ] **字数统计** - 文章底部显示阅读时间
+
+### 低优先级
+
+- [ ] **RSS 订阅** - 生成 RSS feed
+- [ ] **sitemap** - 搜索引擎优化
+- [ ] **文章过期提示** - 提示文章更新时间
+- [ ] **相关推荐** - 底部推荐相关文章
+
+## GitHub Trending 发现
+
+### 可参考的优秀项目
+
+| 项目 | 描述 | 可借鉴点 |
+|------|------|----------|
+| [vueuse/vueuse](https://github.com/vueuse/vueuse) | Vue3 组合式工具库 | 实用的组合式函数 |
+| [unocss/unocss](https://github.com/unocss/unocss) | 原子化 CSS 引擎 | 快速样式方案 |
+| [vuejs/core](https://github.com/vuejs/core) | Vue3 核心 | 学习 Vue 最佳实践 |
+
+### AI/LLM 相关
+
+| 项目 | 描述 | 博客话题 |
+|------|------|----------|
+| [ollama/ollama](https://github.com/ollama/ollama) | 本地运行大模型 | 本地部署 LLM 教程 |
+| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | LLM 应用框架 | RAG 实践 |
+
+## 更新日志
+
+- 2026-03-11: 创建 TODO 文档
