@@ -3,6 +3,8 @@ title: "ChinaVis重庆之旅"
 author: 孙百乐
 date: 2023-07-31T19:17:10+08:00
 draft: false
+tags: [AI,人工智能,学习,日记,生活,笔记,随笔]
+
 categories: 
 - 随笔杂记
 - 笔记

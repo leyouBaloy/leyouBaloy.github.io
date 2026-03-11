@@ -3,6 +3,8 @@ title: "CMU:CSAPP课程自学笔记"
 author: 孙百乐
 date: 2023-06-04T23:38:19+08:00
 draft: true
+tags: [学习,笔记]
+
 categories: 
 - 笔记
 ---

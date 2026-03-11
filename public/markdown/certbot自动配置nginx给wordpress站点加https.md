@@ -1,5 +1,7 @@
 ---
 author: 孙百乐
+tags: [AI,nginx,人工智能,安装,服务器,配置]
+
 categories:
 - 技能分享
 date: 2021-09-08 22:42:40

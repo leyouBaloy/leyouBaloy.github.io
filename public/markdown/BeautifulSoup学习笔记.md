@@ -1,5 +1,7 @@
 ---
 author: 孙百乐
+tags: [Python,学习,笔记,编程]
+
 categories:
 - 笔记
 date: 2021-02-14 19:08:15
