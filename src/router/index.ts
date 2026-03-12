@@ -16,6 +16,11 @@ export const routes = [
     // }
   },
   {
+    path: "/media",
+    name: "media",
+    component: () => import("../views/MediaView.vue"),
+  },
+  {
     path: "/about",
     name: "AboutView",
     // route level code-splitting

@@ -11,7 +11,7 @@
         <n-icon size="17" :component="item.icon"></n-icon>
         <span>{{ item.name }}</span>
       </router-link>
-
+      
       <div class="nav-item dropdown" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false">
         <n-icon size="17" :component="Train"></n-icon>
         <span>开往</span>
@@ -76,6 +76,7 @@ const props = defineProps({
 const navItems = shallowRef([
   { name: '主页', path: '/', icon: Home },
   { name: '归档', path: '/archive', icon: Archive },
+  { name: '见闻录', path: '/media', icon: Archive },
   { name: '关于', path: '/about', icon: Person },
 ]);
 
