@@ -124,9 +124,19 @@ onBeforeUnmount(() => {
 
 .avatar {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   z-index: 2;
+  animation: avatarFadeIn 0.8s ease forwards;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+@keyframes avatarFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .avatar:hover {
@@ -136,24 +146,34 @@ onBeforeUnmount(() => {
 
 .avatar-ring {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
   border-radius: 50%;
-  border: 3px solid transparent;
-  background: linear-gradient(135deg, #667eea, #764ba2, #667eea) border-box;
-  background-clip: padding-box;
-  animation: rotate 3s linear infinite;
-  opacity: 0.6;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease-in-out infinite, breathe 2s ease-in-out infinite;
+  opacity: 0.4;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
   }
 }
 
@@ -166,6 +186,16 @@ onBeforeUnmount(() => {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 2px;
+  animation: nameFadeIn 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes nameFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .zym {
@@ -175,6 +205,10 @@ onBeforeUnmount(() => {
   font-style: italic;
   position: relative;
   padding: 0 20px;
+  animation: nameFadeIn 0.6s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+  transform: translateY(10px);
 }
 
 .zym::before,
@@ -200,12 +234,30 @@ onBeforeUnmount(() => {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.9);
   color: #333;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFade 0.6s ease forwards;
+}
+
+.social-icon:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.social-icon:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .social-icon:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.05);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
   color: #667eea;
   background: white;
