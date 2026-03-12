@@ -1,18 +1,21 @@
 {
-  "books": [
-    {
-      "title": "《悉达多》",
-      "excerpt": "人生就是在不断的体验与感悟...",
-      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/demian-cover.jpg",
-      "date": "2022-11-12",
-      "postFile": "《悉达多》-人生就是在不断的体验与感悟.md"
-    },
+  "reading": [
     {
       "title": "《德米安》",
       "excerpt": "关于一个少年如何在彷徨时找寻自我的故事...",
       "cover": "",
       "date": "2024-05-01",
       "postFile": "德米安读后有感.md"
+    }
+  ],
+  "wantToRead": [],
+  "finished": [
+    {
+      "title": "《悉达多》",
+      "excerpt": "人生就是在不断的体验与感悟...",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/demian-cover.jpg",
+      "date": "2022-11-12",
+      "postFile": "《悉达多》-人生就是在不断的体验与感悟.md"
     },
     {
       "title": "《1984》",
