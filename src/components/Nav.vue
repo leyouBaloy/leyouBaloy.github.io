@@ -64,7 +64,7 @@
 import { ref, shallowRef, defineProps, watch, nextTick } from 'vue';
 import { NIcon,NAlert } from 'naive-ui';
 import { useRoute } from 'vue-router';
-import { Home, Archive, Person, Train, RadioButtonOn } from '@vicons/ionicons5';
+import { Home, Archive, Person, Train, RadioButtonOn, Book, Film } from '@vicons/ionicons5';
 
 const props = defineProps({
   // fixed: Boolean,
@@ -76,7 +76,7 @@ const props = defineProps({
 const navItems = shallowRef([
   { name: '主页', path: '/', icon: Home },
   { name: '归档', path: '/archive', icon: Archive },
-  { name: '见闻录', path: '/media', icon: Archive },
+  { name: '见闻录', path: '/media', icon: Book },
   { name: '关于', path: '/about', icon: Person },
 ]);
 
