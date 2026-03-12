@@ -41,8 +41,8 @@
   </div>
 
       <n-divider style="margin-bottom: 10px;"/>
-      <!-- 加载更多-按钮 -->
-      <div class="pagination-container">
+      <!-- 加载更多-按钮 + 无限滚动触发器 -->
+      <div class="pagination-container" ref="loadMoreTrigger">
         <button
           class="load-more-btn"
           @click="loadNextPage"
@@ -63,7 +63,7 @@
 
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick } from 'vue';
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import axios from 'axios';
 import { NDivider, NBackTop} from 'naive-ui';
 import PageHead from "@/components/PageHead.vue";
@@ -82,6 +82,10 @@ const numPage = ref(1);
 const pageCount = ref(1);
 const loading = ref(false);
 const posts = ref<PostMetadata[]>([]);
+
+// 底部加载元素引用（用于无限滚动）
+const loadMoreTrigger = ref<HTMLElement | null>(null);
+let observer: IntersectionObserver | null = null;
 
 // 瀑布流容器引用
 const waterfallWrapper = ref<HTMLElement | null>(null);
@@ -226,7 +230,13 @@ const loadNextPage = async () => {
   }
 };
 
-
+/** 无限滚动触发 */
+const handleIntersect = async (entries: IntersectionObserverEntry[]) => {
+  const entry = entries[0];
+  if (entry.isIntersecting && !loading.value && numPage.value < pageCount.value) {
+    await loadNextPage();
+  }
+};
 
 // 定义函数: colWidth = containerWidth - 3 * gutter
 function updateColWidth() {
@@ -249,7 +259,23 @@ onMounted(() => {
   window.addEventListener('resize', updateColWidth);
   window.addEventListener('resize', layoutHandle);
 
+  // 设置无限滚动 observer
+  if (loadMoreTrigger.value) {
+    observer = new IntersectionObserver(handleIntersect, {
+      root: null,
+      rootMargin: '100px', // 提前100px触发
+      threshold: 0
+    });
+    observer.observe(loadMoreTrigger.value);
+  }
+
   loadMarkdownMetadata();
+});
+
+onBeforeUnmount(() => {
+  if (observer) {
+    observer.disconnect();
+  }
 });
 </script>
 
