@@ -9,7 +9,7 @@
             :bordered="true"
             class="avatar"
           />
-          <div class="avatar-ring"></div>
+          <div class="avatar-ring" :class="avatarStyle"></div>
         </div>
         
         <h1 class="name">Bailey</h1>
@@ -44,6 +44,18 @@ const expandNav = ref(false);
 const nav = ref<HTMLElement | null>(null);
 const navPlaceholder = ref<HTMLElement | null>(null);
 
+// 头像框样式随机
+const avatarStyle = ref('ring-gradient');
+
+// 头像框样式列表
+const ringStyles = [
+  'ring-gradient',      // 渐变呼吸
+  'ring-neon',         // 霓虹灯效果
+  'ring-aurora',       // 极光效果
+  'ring-stars',        // 星光效果
+  'ring-dream',        // 梦幻效果
+];
+
 const observer = new IntersectionObserver(
   ([entry]) => {
     if (entry.intersectionRatio === 0) {
@@ -61,6 +73,8 @@ onMounted(() => {
   if (navPlaceholder.value) {
     observer.observe(navPlaceholder.value);
   }
+  // 随机选择头像框样式
+  avatarStyle.value = ringStyles[Math.floor(Math.random() * ringStyles.length)];
 });
 
 onBeforeUnmount(() => {
@@ -151,30 +165,82 @@ onBeforeUnmount(() => {
   right: -10px;
   bottom: -10px;
   border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* 样式1: 渐变呼吸 */
+.ring-gradient {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
   background-size: 200% 200%;
   animation: gradientMove 3s ease-in-out infinite, breathe 2s ease-in-out infinite;
-  opacity: 0.4;
 }
 
 @keyframes gradientMove {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 @keyframes breathe {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.02);
-  }
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.02); }
+}
+
+/* 样式2: 霓虹灯效果 */
+.ring-neon {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.6),
+              0 0 40px rgba(118, 75, 162, 0.4),
+              0 0 60px rgba(102, 126, 234, 0.2);
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.6), 0 0 40px rgba(118, 75, 162, 0.4); }
+  50% { box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.6); }
+}
+
+/* 样式3: 极光效果 */
+.ring-aurora {
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 127, 0.4) 0%, 
+    rgba(102, 126, 234, 0.4) 25%,
+    rgba(118, 75, 162, 0.4) 50%,
+    rgba(0, 255, 127, 0.4) 75%,
+    rgba(102, 126, 234, 0.4) 100%);
+  filter: blur(3px);
+  animation: auroraMove 4s ease-in-out infinite;
+}
+
+@keyframes auroraMove {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.4; }
+  50% { transform: scale(1.05) rotate(5deg); opacity: 0.7; }
+}
+
+/* 样式4: 星光效果 */
+.ring-stars {
+  background: radial-gradient(circle at 30% 30%, 
+    rgba(255, 255, 255, 0.8) 0%, 
+    rgba(102, 126, 234, 0.3) 30%,
+    transparent 70%);
+  animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* 样式5: 梦幻效果 */
+.ring-dream {
+  background: linear-gradient(180deg, 
+    rgba(255, 182, 193, 0.5) 0%,
+    rgba(102, 126, 234, 0.4) 50%,
+    rgba(147, 112, 219, 0.5) 100%);
+  animation: dreamy 3s ease-in-out infinite;
+}
+
+@keyframes dreamy {
+  0%, 100% { opacity: 0.3; transform: scale(1); filter: hue-rotate(0deg); }
+  50% { opacity: 0.6; transform: scale(1.03); filter: hue-rotate(20deg); }
 }
 
 .name {
