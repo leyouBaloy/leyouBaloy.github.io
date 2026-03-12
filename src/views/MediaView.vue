@@ -172,30 +172,33 @@ main {
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* 媒体卡片网格 */
+/* 媒体卡片网格 - 竖向海报式 */
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
 .media-card {
+  width: 160px;
   background: white;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .media-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
 }
 
 .media-cover {
   position: relative;
-  height: 180px;
+  width: 100%;
+  height: 220px;
   overflow: hidden;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -208,45 +211,49 @@ main {
 
 .media-type-badge {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  top: 8px;
+  left: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .media-info {
-  padding: 20px;
+  padding: 12px;
 }
 
 .media-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
-  margin: 0 0 10px 0;
+  margin: 0 0 6px 0;
   color: #333;
-  line-height: 1.4;
+  line-height: 1.3;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-align: center;
 }
 
 .media-excerpt {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-  margin: 0 0 12px 0;
+  font-size: 12px;
+  color: #888;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-align: center;
 }
 
 .media-date {
-  font-size: 13px;
-  color: #999;
+  font-size: 11px;
+  color: #aaa;
+  display: block;
+  text-align: center;
 }
 
 /* 空状态 */
@@ -269,8 +276,16 @@ main {
   }
   
   .media-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+  }
+  
+  .media-card {
+    width: 130px;
+  }
+  
+  .media-cover {
+    height: 180px;
   }
 }
 </style>
