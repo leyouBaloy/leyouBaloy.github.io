@@ -103,36 +103,28 @@ const loadMediaData = async () => {
     // 收集书影评文章
     const media: any[] = [];
     
-    // 检查所有标签下的文章
-    for (const tag in allTags) {
-      const posts = allTags[tag];
-      for (const post of posts) {
-        // 通过标题关键词判断是否是书影评
-        const title = post.title || '';
-        const isBook = title.includes('读后有感') || title.includes('读后感') || title.includes('读书笔记');
-        const isMovie = title.includes('观之有感') || title.includes('观后感') || title.includes('影评') || title.includes('剧评');
-        
-        if (isBook || isMovie) {
-          // 查找完整信息
-          const detailRes = await axios.get(`/markdown/metadata/metadata_1.json`);
-          const allPosts = detailRes.data;
-          
-          // 尝试从其他页获取完整信息
-          for (let i = 1; i <= 28; i++) {
-            try {
-              const res = await axios.get(`/markdown/metadata/metadata_${i}.json`);
-              const found = res.data.find((p: any) => p.file === post.file);
-              if (found) {
-                media.push({
-                  ...found,
-                  type: isBook ? 'book' : 'movie'
-                });
-                break;
-              }
-            } catch (e) {
-              continue;
-            }
+    // 检查"书影记录"标签下的文章
+    const mediaTag = allTags['书影记录'] || [];
+    for (const post of mediaTag) {
+      const title = post.title || '';
+      // 有《》的是书，其他是电影
+      const isBook = title.includes('《');
+      const isMovie = !isBook;
+      
+      // 查找完整信息
+      for (let i = 1; i <= 28; i++) {
+        try {
+          const res = await axios.get(`/markdown/metadata/metadata_${i}.json`);
+          const found = res.data.find((p: any) => p.file === post.file);
+          if (found) {
+            media.push({
+              ...found,
+              type: isBook ? 'book' : 'movie'
+            });
+            break;
           }
+        } catch (e) {
+          continue;
         }
       }
     }
