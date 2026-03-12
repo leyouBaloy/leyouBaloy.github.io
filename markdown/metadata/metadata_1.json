@@ -1,0 +1,106 @@
+[
+  {
+    "title": "自动发布博客",
+    "date": "2026-03-11T14:22:25.000Z",
+    "file": "自动发布博客.md",
+    "excerpt": "用AISkills实现博客自动发布🚀>🤖本文由AI自动生成并自动发布前言今天来介绍一个超酷的技术——通过AIAgent(OpenClaw)的Skills功能实现博客的自动化发布！只需一句指令，AI就能帮你完成从写作到发布的全流程。",
+    "tags": [
+      "技术教程"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
+    "title": "langchain-faiss加载pkl文件速度提升",
+    "date": "2025-12-14T06:19:28.000Z",
+    "file": "langchain-faiss加载pkl文件速度提升.md",
+    "excerpt": "langchain-faiss加载pkl文件速度提升背景Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。langchain_community.vectorstores中的Faiss写入一个向量库中包含两个文件：ind",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "RAG图谱实体和边智能合并",
+    "date": "2025-07-13T09:25:50.000Z",
+    "file": "RAG图谱实体和边智能合并.md",
+    "excerpt": "RAG图谱实体和边智能合并调研graphRAG方法：精确字符匹配对具有相同title和type的实体进行合并，直接将description相加对具有相同source和target的边进行合并，直接将description相加优点：速度快缺点：精度低，",
+    "tags": [
+      "随笔杂记",
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png"
+  },
+  {
+    "title": "手撕卷积神经网络+反向传播梯度更新",
+    "date": "2025-07-13T07:24:20.000Z",
+    "file": "手撕卷积神经网络反向传播梯度更新.md",
+    "excerpt": "手撕卷积神经网络一个简单的卷积神经网络，就4层，分别是InputLayer,conv_layer,hidden_layer(全连接层+ReLU激活),output_layer```importnumpyasnpclassInputLayer:\"\"\"输入层",
+    "tags": [
+      "笔记",
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "手撕Attention",
+    "date": "2025-06-22T08:49:55.000Z",
+    "file": "手撕Attention.md",
+    "excerpt": "第一重境界最简单的计算Attention(Q,K,V)=softmax(QK.T/sqrt(hidden_dim))V```importmathimporttorchimporttorch.nnasnnclassSelfAttentionV1(nn.M",
+    "tags": [
+      "笔记",
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
+    "date": "2025-06-10T10:14:29.000Z",
+    "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
+    "excerpt": "ChartVLMChartVLM由两部分组成：图表结构解码器+大语言模型截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct显存占用基本保持在2506MiB普通图表|原图|识别结果|评价||------|---",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/images/d969c3b0_1749549251583-7654c91e-ef01-4bf7-9656-11efa4778806.png"
+  },
+  {
+    "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+    "date": "2025-06-10T08:48:23.000Z",
+    "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
+    "excerpt": "背景为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法多模态大模型测试Prompt```plain你是一位专门为图像创建文本描述的文件分析专家。你将收到一张图片或图表。你的任务是创建该图像的简短描述。说明：1.仔细检查提供的图像。2",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1749543589300-bf8e1d05-b85e-4da7-b535-e77ac6cdc244.png"
+  },
+  {
+    "title": "DeepResearch深度搜索实现方法调研",
+    "date": "2025-05-09T14:03:42.000Z",
+    "file": "DeepResearch深度搜索实现方法调研.md",
+    "excerpt": "DeepResearch深度搜索实现方法调研DeepResearch有三个核心能力+能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索）+能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？）+能力三：对多",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png"
+  },
+  {
+    "title": "开源PDF解析工具Marker深度解析",
+    "date": "2025-05-05T14:36:59.000Z",
+    "file": "开源PDF解析工具Marker深度解析.md",
+    "excerpt": "开源PDF解析工具Marker深度解析检索增强生成（RAG）系统的第一步就是做pdf解析，从复杂多样的pdf中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker和MinerU。因为Marker是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
+    "date": "2025-01-24T01:37:25.000Z",
+    "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
+    "excerpt": "思路![image-20250124101620483](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png)1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png"
+  }
+]

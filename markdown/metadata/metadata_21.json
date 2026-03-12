@@ -1,0 +1,103 @@
+[
+  {
+    "title": "《如何阅读一本书》读后感",
+    "date": "2021-04-23T18:16:55.000Z",
+    "file": "《如何阅读一本书》读后感.md",
+    "excerpt": "今天是世界读书日，我想给大家推荐一本《如何阅读一本书》。基本介绍《如何阅读一本书》初版于1940年，1972年又大幅增订改写为新版，是一本有六十多年历史经典名著。作者是美国作家\\[莫提默·J·艾德勒\\]和\\[查尔斯·范多伦\\]，二者都参加过《大英百科全书》的编写工作。如书名所见，",
+    "tags": [
+      "书影记录"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
+    "title": "《菊次郎的夏天》观后感",
+    "date": "2021-04-05T23:25:45.000Z",
+    "file": "《菊次郎的夏天》观后感.md",
+    "excerpt": "话不多说，看看豆瓣评分吧：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/04/image-23-1024x492.png)8.8分，对于一个喜剧电影来说，算是",
+    "tags": [
+      "书影记录"
+    ],
+    "img": ""
+  },
+  {
+    "title": "matplotlib作热机效率随负载大小变化曲线图",
+    "date": "2021-04-02T09:28:08.000Z",
+    "file": "matplotlib作热机效率随负载大小变化曲线图.md",
+    "excerpt": "大物实验得到的数据，用python的matplotlib很方便处理数据准备：```r=np.arange(0.5,6.0,0.5)u2=np.array([6.66,6.49,6.37,6.37,6.17,6.12,6.18,5.98,5.97,5.93,5.91])i2=",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "“专利申请”撰写有感",
+    "date": "2021-03-28T20:46:35.000Z",
+    "file": "“专利申请”撰写有感.md",
+    "excerpt": "从开学开始，我就接到了李昕老师的任务——为我们寒假的成果“一种基于docker和jupyternotebook的复合类型题目在线检测方法”撰写一份“专利申请”，并完成申请。第一作者当然是李昕老师，因为我们的核心代码全是李昕老师写的，第二作者包括我和另外一位贡献较大的成员。申请专利并署名我们既是一种",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "长期任务：做一个在线oj的评测",
+    "date": "2021-03-23T09:10:48.000Z",
+    "file": "长期任务：做一个在线oj的评测.md",
+    "excerpt": "任务拆分一个html页面，左边是题目，右边是文本框，可以编写代码。右下角有一个“提交”按钮，点击之后将代码发送到后台进行评测。现在已有基于jupyternotebook的评测多个题目的评测代码，需要把它拆分后放在django后台运行。可能需要用到数据库，统一",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "pathlib库",
+    "date": "2021-03-16T10:03:57.000Z",
+    "file": "pathlib库.md",
+    "excerpt": "[老婆不在家，看点刺激的](https://blog.csdn.net/itanders/article/details/88754606)",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "Django学习笔记",
+    "date": "2021-03-15T23:02:45.000Z",
+    "file": "Django学习笔记.md",
+    "excerpt": "安装虚拟环境在Powershell中执行```Set-ExecutionPolicyUnrestricted执行策略更改yyespipfreeze输出所有在本地已安装的包``````pipinstallvirtualenvcd目标文件夹virt",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "Pandas学习笔记",
+    "date": "2021-03-09T11:04:10.000Z",
+    "file": "Pandas学习笔记.md",
+    "excerpt": "map()和apply()和applymap()区别map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列appl",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
+    "date": "2021-03-03T20:46:14.000Z",
+    "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主图中图```importmatplotlib.pyplotaspltfig=",
+    "tags": [
+      "笔记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "开学第二天明确学习方向",
+    "date": "2021-03-02T20:31:39.000Z",
+    "file": "开学第二天明确学习方向.md",
+    "excerpt": "可以进行的学习matplotlibkaggle刷题pandas等web前端（css,javascript）Python爬虫实战继续看课本（这个可能是最无聊的）现在就好迷，在寝室里不知道学啥。这样吧，学学云顶之弈把",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": ""
+  }
+]
