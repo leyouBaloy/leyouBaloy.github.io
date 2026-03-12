@@ -1,66 +1,5 @@
 [
   {
-    "title": "requests爬表情包",
-    "date": "2020-12-13T17:23:02.000Z",
-    "file": "requests爬表情包.md",
-    "excerpt": "需要的库：!pipinstalllxml!pipinstallrequest!pipinstallpathlib代码：```importtime代码合集并修改为下载多页表情importrequestsfrombs4importBeautifulSo",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "totalPages": 28
-  },
-  {
-    "title": "中国是如何富起来的？",
-    "date": "2020-12-12T12:19:03.000Z",
-    "file": "中国是如何富起来的？.md",
-    "excerpt": "我把解放后中国的崛起分为两个阶段，一是1949年至改革开放前（1978年）发展重工业，二是1978年改革开放之后到现在的中国特色社会主义经济。      第一阶段，主要领导人是毛泽东主席，他的伟大之处就在于让中国人民团结起来，组建了强有力的政府，政府的动员能力十分了得，当时人民也非常热血积极，",
-    "tags": [
-      "书影记录"
-    ],
-    "img": ""
-  },
-  {
-    "title": "判断回文数",
-    "date": "2020-12-04T09:05:15.000Z",
-    "file": "判断回文数.md",
-    "excerpt": "一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++里把int类型转换成string类型真的好麻烦！在百度上查了很久，方法要么不对，要么就是太复杂。果然c++是不适合处理字符串的。所以放弃那种做法，用这种：",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "质数判断",
-    "date": "2020-12-03T10:13:20.000Z",
-    "file": "质数判断.md",
-    "excerpt": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来```include<iostream>include<cmath>usingnamespacestd;boolsb(intx){inti,flag=0",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "selenium爬GDP",
-    "date": "2020-12-01T23:11:02.000Z",
-    "file": "selenium爬GDP.md",
-    "excerpt": "```fromseleniumimportwebdriverfrombs4importBeautifulSoupimportcsvout=open('d:/data.csv','w',newline='')csv_write=csv.writer(out,dial",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "对称字符串处理",
-    "date": "2020-11-27T08:45:18.000Z",
-    "file": "对称字符串处理.md",
-    "excerpt": "【题目描述】某某国王（不是萨拉克门托！）有一个神奇的魔镜，它可以把东西变为原来的两倍(可惜是反的)。某日，他感到很无聊，于是把皇后的一串珠子变了不知道几次，皇后回来之后不是很高兴，她还是喜欢原来那串珠子，现在告诉你改变之后珠子的形状，请你告诉她，原来的珠子是什么样子的。【输入】输入有多组",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
     "title": "给学生成绩排序，总分相同看语文，语文相同看序号",
     "date": "2020-11-24T15:18:32.000Z",
     "file": "给学生成绩排序，总分相同看语文，语文相同看序号.md",
@@ -68,7 +7,8 @@
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "totalPages": 28
   },
   {
     "title": "结构体排序-sort()-typedef",
@@ -95,6 +35,66 @@
     "date": "2020-11-18T20:53:41.000Z",
     "file": "四舍五入小数.md",
     "excerpt": "【题目描述】请编一个将浮点数四舍五入的函数Fun，其功能是使浮点数保留2位小数，并对第3位进行四舍五入（规定实型数为正数）。例如：实型数为1234.567，则函数返回1234.57；实型数为1234.564，则函数返回1234.56。【输入】一个浮点数。【输出】精确到小数点后",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "递归法求最大公约数",
+    "date": "2020-11-17T12:58:03.000Z",
+    "file": "递归法求最大公约数.md",
+    "excerpt": "求m和n的最大公约数```intgcd(intm,intn){if(m%n==0){returnn;}else{returngcd(n,m%n);}}```",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "selenium爬教务处课表",
+    "date": "2020-11-16T20:45:35.000Z",
+    "file": "selenium爬教务处课表.md",
+    "excerpt": "```fromseleniumimportwebdriverfrombs4importBeautifulSoupfromselenium.webdriverimportActionChainsimporttimefromselenium.webdriver.commo",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "Python爬虫-selenium-request",
+    "date": "2020-11-16T15:20:41.000Z",
+    "file": "Python爬虫-selenium-request.md",
+    "excerpt": "[seleniumrequest](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/11/seleniumrequest.zip)[下载](https://myblog-125",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "我的青春不迷茫，奋斗青春成就未来-征文活动",
+    "date": "2020-11-15T10:23:57.000Z",
+    "file": "我的青春不迷茫，奋斗青春成就未来-征文活动.md",
+    "excerpt": "九月，我成为了石油大学计算机学院的一名学生。秋高气爽，海风习习，我第一次远离家乡，独自留在一个陌生的城市，妈妈望着我远去的背影，掉下了眼泪，我的心里也很不是滋味。但是，我很快就熟悉了校园，与身边的同学打成了一片，我们一起去食堂吃饭，一起寻找上课的教室，一起讨论不会的程序设计题目，一起参加各种活动",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": ""
+  },
+  {
+    "title": "输入二进制转化为十进制",
+    "date": "2020-11-10T14:49:20.000Z",
+    "file": "输入二进制转化为十进制.md",
+    "excerpt": "```bitset<16>bint;//16bit二进制数据，还有bitset<32>cin>>bint;inta;a=bint.to_ulong();cout<<a;```",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "字符数组的拼接和排序-strcat()-sort()-strlen()",
+    "date": "2020-11-07T09:11:20.000Z",
+    "file": "字符数组的拼接和排序-strcat()-sort()-strlen().md",
+    "excerpt": "【题目描述】小明参加学校每年一度的大学生科技节活动的游戏，这次遇到的题目是字符接龙。主持人拿出2张卡片，每张卡片上都有一个顺序字符串，即字符串是按ASCII码顺序编排的。现在要求小明把2个字符串连接成一个字符串，而且连接以后的字符串内容还是按ASCII码顺序排列的。（假设每张卡片上的字符串都不包",
     "tags": [
       "刷题"
     ],

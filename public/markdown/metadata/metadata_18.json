@@ -1,103 +1,102 @@
 [
   {
-    "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
-    "date": "2022-04-20T11:01:29.000Z",
-    "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
-    "excerpt": "题目题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步",
+    "title": "ubuntu安装Python3的曲折之路",
+    "date": "2021-10-30T13:58:01.000Z",
+    "file": "ubuntu安装Python3的曲折之路.md",
+    "excerpt": "思路先安装Python版本管理器pyenv再用Pyenv安装Python安装pyenv标准安装：找到项目地址[pyenv/pyenv:SimplePythonversionmanagement(github.com)](https://github.com/",
     "tags": [
-      "刷题",
-      "笔记"
+      "技能分享"
     ],
     "img": "",
     "totalPages": 28
   },
   {
-    "title": "成功主持150人参会的讲座！",
-    "date": "2022-04-10T15:05:16.000Z",
-    "file": "成功主持150人参会的讲座！.md",
-    "excerpt": "{{<figuresrc=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/ai%E8%AE%B2%E5%BA%A7100%E4%BA%BA.png\"title=\"腾讯会议截图\">}}{{<figur",
+    "title": "黄山归来不看岳——黄山之旅",
+    "date": "2021-10-06T08:28:08.000Z",
+    "file": "黄山归来不看岳——黄山之旅.md",
+    "excerpt": "时间2021年国庆期间，10月3日至5日。第一站：翡翠谷翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。翡翠谷是一条长长的峡谷，一路走进去有",
+    "tags": [
+      "书影记录"
+    ],
+    "img": ""
+  },
+  {
+    "title": "全国高校AI知识竞赛UPC赛区获奖通知",
+    "date": "2021-09-29T23:37:12.000Z",
+    "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
+    "excerpt": "获奖名单：![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)![](https://myblog-1257298572.cos.",
+    "tags": [
+      "刷题"
+    ],
+    "img": ""
+  },
+  {
+    "title": "浏览器不支持getUserMedia",
+    "date": "2021-09-23T15:58:12.000Z",
+    "file": "浏览器不支持getUserMedia.md",
+    "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全浏览器只支持file:,https:,[http://localhost](http://localhost)",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "certbot自动配置nginx给wordpress站点加https",
+    "date": "2021-09-08T22:42:40.000Z",
+    "file": "certbot自动配置nginx给wordpress站点加https.md",
+    "excerpt": "思路1.安装snap2.安装certbot3.自动配置nginx完事儿了，确实很方便。具体执行语句访问[https://certbot.eff.org/](https://certbot.eff.org/)按下图选择环境后就能看到所有执行语句![](https://",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "对图像操作",
+    "date": "2021-08-29T21:21:29.000Z",
+    "file": "对图像操作.md",
+    "excerpt": "图像位图（rastergraphics)和矢量图（vectorgraphics)位图是有像素的，色彩丰富。矢量图放大不会失真。通道单通道灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256=2_2_2\\2)，那么他的像素值0(黑)",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "Conda 配置虚拟环境",
+    "date": "2021-08-29T21:20:21.000Z",
+    "file": "Conda 配置虚拟环境.md",
+    "excerpt": "创建虚拟环境```condacreate-n名字python=3.8```进入虚拟环境```condaactivate名字```退出虚拟环境```condadeactivate```删除虚拟环境```conda",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "jupyter-paddle使用docker安装",
+    "date": "2021-08-29T21:19:42.000Z",
+    "file": "jupyter-paddle使用docker安装.md",
+    "excerpt": "安装参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html先安装docker，参考官网拉取镜像：`dockerpullreg",
+    "tags": [
+      "技能分享"
+    ],
+    "img": ""
+  },
+  {
+    "title": "再认识我的家乡——蚌埠",
+    "date": "2021-08-27T22:47:10.000Z",
+    "file": "再认识我的家乡——蚌埠.md",
+    "excerpt": "  现在距离开学没几天了，暑假在一起玩的朋友、同学都纷纷开学了，就剩我一个人呆在家越来越无聊。在家里呆腻了，我就在晚上出去走走。一路向西，或一路向北，不到穷尽不回头。这是我第一次用自己的脚步丈量我的家乡城市——蚌埠。  我是一个路痴，我觉得我之所以会成为路痴，不是因为我天生缺少方向感，也不是因为我",
     "tags": [
       "随笔杂记"
     ],
     "img": ""
   },
   {
-    "title": "杨辉三角——数组、动态规划",
-    "date": "2022-03-10T09:04:50.000Z",
-    "file": "杨辉三角——数组、动态规划.md",
-    "excerpt": "题目>本题来自：https://leetcode-cn.com/problems/pascals-triangle/[118.杨辉三角]难度简单708收藏分享切换为英文接收动态反馈给定一个非负整数`numRows`，生成「杨辉三角」的前`numRows`",
+    "title": "python时间遇到的坑",
+    "date": "2021-08-22T15:21:03.000Z",
+    "file": "python时间遇到的坑.md",
+    "excerpt": "python中与时间相关的标准库有三个：timedatetimecalendar吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会时区坑查看时间的方式有很多法一：```pythonfromdatetimeimportdatetim",
     "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "环形链表——哈希、链表、双指针",
-    "date": "2022-03-05T08:08:03.000Z",
-    "file": "环形链表——哈希、链表、双指针.md",
-    "excerpt": "题目>题目来自：https://leetcode-cn.com/problems/linked-list-cycle/141.环形链表难度简单1376收藏分享切换为英文接收动态反馈给你一个链表的头节点`head`，判断链表中是否有环。如果链表中有某个节点，",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "合并两个有序数组——数组、双指针、排序——这题的题解绝了",
-    "date": "2022-03-04T07:32:13.000Z",
-    "file": "合并两个有序数组——数组、双指针、排序——这题的题解绝了.md",
-    "excerpt": "题目>该题来自：https://leetcode-cn.com/problems/merge-sorted-array/[88.合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)难度简单130",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "有效的数独——数组、哈希表、矩阵",
-    "date": "2022-03-03T08:46:16.000Z",
-    "file": "有效的数独——数组、哈希表、矩阵.md",
-    "excerpt": ">该题目来自：https://leetcode-cn.com/problems/valid-sudoku/题目[36.有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)难度中等786收藏分享切换为英文接收动态反",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "由和找到两数——数组、哈希表",
-    "date": "2022-03-02T11:25:55.000Z",
-    "file": "由和找到两数——数组、哈希表.md",
-    "excerpt": "题目>该题目来自：https://leetcode-cn.com/problems/two-sum/[1.两数之和](https://leetcode-cn.com/problems/two-sum/)难度简单13591收藏分享切换为英文接收动态反馈给定一个整数数",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "最大子数组和——动态规划、分治",
-    "date": "2022-02-28T11:35:21.000Z",
-    "file": "最大子数组和——动态规划、分治.md",
-    "excerpt": "题目>来自：https://leetcode-cn.com/problems/maximum-subarray/[53.最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/)难度简单4424收藏分享切换为",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "存在重复元素——排序、哈希",
-    "date": "2022-02-26T11:22:16.000Z",
-    "file": "存在重复元素——排序、哈希.md",
-    "excerpt": "题目>该题来自：https://leetcode-cn.com/problems/contains-duplicate/[217.存在重复元素]难度简单635收藏分享切换为英文接收动态反馈给你一个整数数组`nums`。如果任一值在数组中出现至少两次，",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
-  },
-  {
-    "title": "找到小镇的法官——图论入门",
-    "date": "2022-02-25T10:49:18.000Z",
-    "file": "找到小镇的法官——图论入门.md",
-    "excerpt": "题目>来源：力扣（LeetCode）>链接：https://leetcode-cn.com/problems/find-the-town-judge>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。小镇里有n个人，按从1到n的顺序编号。传言称，",
-    "tags": [
-      "刷题"
+      "笔记"
     ],
     "img": ""
   }

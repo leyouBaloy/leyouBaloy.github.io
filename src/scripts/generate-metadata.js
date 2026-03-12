@@ -32,6 +32,12 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
       return; // 跳过此文件
     }
 
+    // 跳过没有日期的文件
+    if (!metadata.attributes.date) {
+      console.log(`Skipping file without date: ${file}`);
+      return;
+    }
+
     const bodyContent = metadata.body;
 
     // 获取 tags 和 img 字段，优先级依次为 categories/tags 和 featuredImagePreview/img
