@@ -28,16 +28,16 @@
         </button>
       </div>
 
-      <!-- 书籍卡片 -->
+      <!-- 媒体卡片 -->
       <div class="media-grid">
         <div 
           v-for="item in filteredMedia" 
-          :key="item.file" 
+          :key="item.postFile" 
           class="media-card"
-          @click="goToPost(item.file)"
+          @click="goToPost(item.postFile)"
         >
           <div class="media-cover">
-            <img :src="item.img || defaultCover" :alt="item.title" />
+            <img :src="item.cover || defaultCover" :alt="item.title" />
             <div class="media-type-badge">{{ item.type === 'book' ? '📚' : '🎬' }}</div>
           </div>
           <div class="media-info">
@@ -93,49 +93,33 @@ const formatDate = (dateStr: string) => {
   });
 };
 
-// 加载书影评数据
+// 加载书影评数据 - 从 media.json 读取
 const loadMediaData = async () => {
   try {
-    // 加载所有 metadata
-    const response = await axios.get('/markdown/metadata/posts_by_tag.json');
-    const allTags = response.data;
+    const response = await axios.get('/data/media.json');
+    const mediaData = response.data;
     
-    // 收集书影评文章
     const media: any[] = [];
     
-    // 检查"书影记录"标签下的文章
-    const mediaTag = allTags['书影记录'] || [];
-    for (const post of mediaTag) {
-      const title = post.title || '';
-      // 有《》的是书，其他是电影
-      const isBook = title.includes('《');
-      const isMovie = !isBook;
-      
-      // 查找完整信息
-      for (let i = 1; i <= 28; i++) {
-        try {
-          const res = await axios.get(`/markdown/metadata/metadata_${i}.json`);
-          const found = res.data.find((p: any) => p.file === post.file);
-          if (found) {
-            media.push({
-              ...found,
-              type: isBook ? 'book' : 'movie'
-            });
-            break;
-          }
-        } catch (e) {
-          continue;
-        }
-      }
+    // 处理书籍
+    for (const book of (mediaData.books || [])) {
+      media.push({
+        ...book,
+        type: 'book'
+      });
     }
     
-    // 去重并按日期排序
-    const uniqueMedia = media.filter((item, index, self) => 
-      index === self.findIndex((t) => t.file === item.file)
-    );
+    // 处理电影
+    for (const movie of (mediaData.movies || [])) {
+      media.push({
+        ...movie,
+        type: 'movie'
+      });
+    }
     
-    uniqueMedia.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    mediaItems.value = uniqueMedia;
+    // 按日期排序
+    media.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    mediaItems.value = media;
     
   } catch (error) {
     console.error('加载书影评数据失败:', error);
