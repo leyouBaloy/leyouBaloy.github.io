@@ -26,8 +26,6 @@
             <span class="tech-tag">GitHub Pages</span>
           </div>
           
-          <p>六年前，我上高二的时候就开始做博客了，之后几乎每年我都会用最新的技术和最好看的样式折腾一段时间。</p>
-          
           <div class="blog-history">
             <div class="history-item">
               <span class="year">WordPress</span>
@@ -50,10 +48,6 @@
               <span class="desc">全新开始</span>
             </div>
           </div>
-          
-          <p>别人做的东西好是好，但总是觉得有很多地方不满意，所以干脆自己从头做一个！🤔</p>
-          
-          <p>如果你觉得我做的还不错，可以点个 star 哦！在未来我会把它封装成主题，让更多的人可以使用~ 🤝</p>
           
           <div class="cta-buttons">
             <a href="https://github.com/leyouBaloy/leyouBaloy.github.io" target="_blank" class="btn btn-primary">
