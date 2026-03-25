@@ -1,5 +1,16 @@
 [
   {
+    "title": "single-agent现阶段明显强于multi-agent",
+    "date": "2026-03-25T03:44:00.000Z",
+    "file": "single-agent-vs-multi-agent.md",
+    "excerpt": "single-agent现阶段明显强于multi-agentmulti-agent系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。反观那些真正跑出来的产品——OpenC",
+    "tags": [
+      "技术思考"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
     "title": "自动发布博客",
     "date": "2026-03-11T14:22:25.000Z",
     "file": "自动发布博客.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技术教程"
     ],
-    "img": "",
-    "totalPages": 28
+    "img": ""
   },
   {
     "title": "langchain-faiss加载pkl文件速度提升",
@@ -92,15 +102,5 @@
       "技能分享"
     ],
     "img": ""
-  },
-  {
-    "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
-    "date": "2025-01-24T01:37:25.000Z",
-    "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
-    "excerpt": "思路![image-20250124101620483](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png)1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png"
   }
 ]

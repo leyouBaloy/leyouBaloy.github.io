@@ -1378,6 +1378,11 @@
   ],
   "2026": [
     {
+      "title": "single-agent现阶段明显强于multi-agent",
+      "date": "2026-03-25T03:44:00.000Z",
+      "file": "single-agent-vs-multi-agent.md"
+    },
+    {
       "title": "自动发布博客",
       "date": "2026-03-11T14:22:25.000Z",
       "file": "自动发布博客.md"

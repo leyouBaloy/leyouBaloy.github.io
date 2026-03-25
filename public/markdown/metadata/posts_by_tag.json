@@ -1,4 +1,11 @@
 {
+  "技术思考": [
+    {
+      "title": "single-agent现阶段明显强于multi-agent",
+      "date": "2026-03-25T03:44:00.000Z",
+      "file": "single-agent-vs-multi-agent.md"
+    }
+  ],
   "技术教程": [
     {
       "title": "自动发布博客",
