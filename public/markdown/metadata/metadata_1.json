@@ -1,5 +1,16 @@
 [
   {
+    "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
+    "date": "2026-03-25T12:53:00.000Z",
+    "file": "opencode-seven-core-tools.md",
+    "excerpt": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash做AI编程助手（或类似工具）的核心，就是怎么让AI正确地读写文件、执行命令。本质上，LLM是个\"脑子里有很多知识但手很短\"的存在——它能推理，但没法直接摸到你的代码。于",
+    "tags": [
+      "技术教程"
+    ],
+    "img": "",
+    "totalPages": 28
+  },
+  {
     "title": "single-agent现阶段明显强于multi-agent",
     "date": "2026-03-25T03:44:00.000Z",
     "file": "single-agent-vs-multi-agent.md",
@@ -7,8 +18,7 @@
     "tags": [
       "技术思考"
     ],
-    "img": "",
-    "totalPages": 28
+    "img": ""
   },
   {
     "title": "自动发布博客",
@@ -92,15 +102,5 @@
       "技能分享"
     ],
     "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png"
-  },
-  {
-    "title": "开源PDF解析工具Marker深度解析",
-    "date": "2025-05-05T14:36:59.000Z",
-    "file": "开源PDF解析工具Marker深度解析.md",
-    "excerpt": "开源PDF解析工具Marker深度解析检索增强生成（RAG）系统的第一步就是做pdf解析，从复杂多样的pdf中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker和MinerU。因为Marker是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进",
-    "tags": [
-      "技能分享"
-    ],
-    "img": ""
   }
 ]

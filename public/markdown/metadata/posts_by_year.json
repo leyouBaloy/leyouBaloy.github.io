@@ -1378,6 +1378,11 @@
   ],
   "2026": [
     {
+      "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
+      "date": "2026-03-25T12:53:00.000Z",
+      "file": "opencode-seven-core-tools.md"
+    },
+    {
       "title": "single-agent现阶段明显强于multi-agent",
       "date": "2026-03-25T03:44:00.000Z",
       "file": "single-agent-vs-multi-agent.md"
