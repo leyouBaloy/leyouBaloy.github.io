@@ -4,20 +4,27 @@
   <div class="reading-progress-container">
     <div class="reading-progress-bar" :style="{ width: readingProgress + '%' }"></div>
   </div>
-  <main>
+  <main ref="mainRef">
     <div class="container">
-      <MarkdownRenderer :filename=$route.params.filename />
-      
+      <MarkdownRenderer :filename=$route.params.filename @headings-ready="onHeadingsReady" />
+
+      <!-- 悬浮目录 -->
+      <TableOfContents
+        v-if="headings.length > 0"
+        :headings="headings"
+        ref="tocRef"
+      />
     </div>
     <div class="comment" ref="scriptContainer"></div>
   <Foot></Foot>
   </main>
-  
+
 </template>
 
 <script setup>
 import { nextTick, onMounted, onUnmounted, ref } from 'vue';
 import MarkdownRenderer from '../components/MarkdownRenderer.vue';
+import TableOfContents from '../components/TableOfContents.vue';
 import Nav from "@/components/Nav.vue";
 import { useRoute } from 'vue-router';
 import Foot from "@/components/Foot.vue";
@@ -25,12 +32,19 @@ const $route = useRoute();
 
 const scriptContainer = ref(null);
 const readingProgress = ref(0);
+const headings = ref([]);
+const tocRef = ref(null);
+const mainRef = ref(null);
+
+const onHeadingsReady = (h) => {
+  headings.value = h;
+};
 
 const updateReadingProgress = () => {
   const windowHeight = window.innerHeight;
   const documentHeight = document.documentElement.scrollHeight - windowHeight;
   const scrollTop = window.scrollY;
-  
+
   if (documentHeight > 0) {
     readingProgress.value = Math.min(100, Math.max(0, (scrollTop / documentHeight) * 100));
   }
@@ -41,7 +55,7 @@ onMounted(async () => {
   await nextTick();
   window.addEventListener('scroll', updateReadingProgress);
   updateReadingProgress();
-  
+
 
   const script = document.createElement('script');
   script.src = "https://giscus.app/client.js";
@@ -71,11 +85,11 @@ onUnmounted(() => {
 main {
   max-width: 900px;
   margin: auto;
+  position: relative;
 }
 
 .container {
   display: flex;
-  /* margin-top: 60px; */
   max-width: 768px;
   padding: 0 20px;
   padding-bottom: 20px;

@@ -1,6 +1,6 @@
 <!-- MarkdownRenderer.vue -->
 <template>
-  <div class="article">
+  <div class="article" ref="articleRef">
     <h1 class="title">{{ metaData.title }}</h1>
     <div class="metadata">
       <n-icon size="13">
@@ -12,14 +12,14 @@
       </n-icon>
       分类：{{ metaData.categories }}
     </div>
-    <div class="md">
+    <div class="md" ref="mdRef">
       <component :is="renderedContent" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, h, Fragment } from 'vue';
+import { ref, onMounted, h, Fragment, nextTick } from 'vue';
 import axios from 'axios';
 import frontMatter from 'front-matter';
 import { NIcon, NImage } from 'naive-ui';
@@ -38,8 +38,35 @@ const props = defineProps({
   }
 });
 
+const emit = defineEmits(['headings-ready']);
+
 const metaData = ref({});
 const renderedContent = ref();
+const articleRef = ref(null);
+const mdRef = ref(null);
+
+// 生成 heading slug ID
+const slugify = (text) => {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s\u4e00-\u9fa5-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
+// 从 markdown body 中提取 headings（用于生成目录）
+const extractHeadings = (markdown) => {
+  const headingRegex = /^(#{1,6})\s+(.+)$/gm;
+  const headings = [];
+  let match;
+  while ((match = headingRegex.exec(markdown)) !== null) {
+    const level = match[1].length;
+    const text = match[2].trim();
+    headings.push({ level, text, id: slugify(text) });
+  }
+  return headings;
+};
 
 const md = new MarkdownIt({
   html: true,
@@ -244,10 +271,35 @@ const loadMarkdown = async () => {
     attributes.date = new Date(attributes.date).toLocaleDateString();
     attributes.categories = attributes.categories.join(', ');
     metaData.value = attributes;
+
+    // 提取 headings
+    const headings = extractHeadings(body);
+
     const html = md.render(body);
     const div = document.createElement('div');
     div.innerHTML = html;
     renderedContent.value = markRaw(renderVNode(div.childNodes));
+
+    // 等渲染完成后，注入 heading IDs
+    await nextTick();
+    const mdEl = mdRef.value;
+    if (mdEl) {
+      const headingEls = mdEl.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      headingEls.forEach((el) => {
+        const text = el.textContent.trim();
+        const id = slugify(text);
+        el.id = id;
+      });
+
+      // 更新 headings 列表中的 id（确保和 DOM 一致）
+      const updatedHeadings = headings.map(h => ({
+        ...h,
+        id: slugify(h.text)
+      }));
+
+      // emit 给父组件
+      emit('headings-ready', updatedHeadings);
+    }
   } catch (error) {
     console.error('Error loading markdown file:', error);
   }
