@@ -194,8 +194,8 @@ defineExpose({ hideToc });
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  top: auto;
-  bottom: 140px;
+  top: 100px;
+  bottom: auto;
   right: 20px;
 }
 
@@ -401,7 +401,8 @@ defineExpose({ hideToc });
   
   .toc-wrapper.collapsed {
     right: 10px;
-    bottom: 140px;
+    top: 80px;
+    bottom: auto;
   }
   
   .toc-fab {
