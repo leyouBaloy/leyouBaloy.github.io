@@ -63,8 +63,14 @@ const props = defineProps({
 const isVisible = ref(true);
 const isCollapsed = ref(false);
 const activeId = ref('');
+const isMobile = ref(false);
 
 let observer = null;
+
+// 检测是否是移动端
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 768;
+};
 
 const toggleCollapse = () => {
   isCollapsed.value = !isCollapsed.value;
@@ -72,7 +78,8 @@ const toggleCollapse = () => {
 
 const showToc = () => {
   isVisible.value = true;
-  isCollapsed.value = false;
+  // 移动端默认折叠，点击展开按钮才展开
+  isCollapsed.value = isMobile.value;
 };
 
 const hideToc = () => {
@@ -143,15 +150,22 @@ watch(() => props.headings, async (newHeadings) => {
 }, { immediate: false });
 
 onMounted(() => {
+  checkMobile();
+  // 移动端默认折叠
+  if (isMobile.value) {
+    isCollapsed.value = true;
+  }
   if (props.headings.length > 0) {
     nextTick(setupObserver);
   }
+  window.addEventListener('resize', checkMobile);
 });
 
 onUnmounted(() => {
   if (observer) {
     observer.disconnect();
   }
+  window.removeEventListener('resize', checkMobile);
 });
 
 // 暴露隐藏方法给父组件
