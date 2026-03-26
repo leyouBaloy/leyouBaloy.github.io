@@ -90,7 +90,7 @@ const applyTheme = () => {
 /* 暗色模式切换按钮 */
 .dark-toggle {
   position: fixed;
-  bottom: 80px;
+  bottom: 20px;
   right: 20px;
   width: 48px;
   height: 48px;

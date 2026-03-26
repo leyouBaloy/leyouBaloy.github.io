@@ -58,7 +58,7 @@
       </div>
 
       <Foot />
-      <n-back-top :right="10" :bottom="100" />
+      <n-back-top :right="20" :bottom="140" />
     </div>
   </main>
 </template>

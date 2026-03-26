@@ -181,7 +181,7 @@ defineExpose({ hideToc });
   height: 32px;
   border-radius: 8px;
   top: auto;
-  bottom: 80px;
+  bottom: 140px;
   right: 20px;
 }
 
@@ -303,7 +303,7 @@ defineExpose({ hideToc });
 .toc-fab {
   position: fixed;
   right: 20px;
-  bottom: 80px;
+  bottom: 140px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
