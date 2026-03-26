@@ -45,7 +45,7 @@
                 :time="post.date"
                 :category="getCategory(post)"
                 :tags="getTags(post)"
-                @click="router.push(`/post/${post.file}`)" 
+                @click="router.push(`/post/${post.slug}`)" 
               />
             </timeline>
           </div>
@@ -114,7 +114,7 @@
                 :time="post.date"
                 :category="getCategory(post)"
                 :tags="getTags(post)"
-                @click="router.push(`/post/${post.file}`)" 
+                @click="router.push(`/post/${post.slug}`)" 
               />
             </timeline>
           </div>
@@ -159,7 +159,7 @@
                 :tags="getTags(post)"
                 highlight
                 :search-keyword="searchQuery"
-                @click="router.push(`/post/${post.file}`)" 
+                @click="router.push(`/post/${post.slug}`)" 
               />
             </timeline>
           </div>

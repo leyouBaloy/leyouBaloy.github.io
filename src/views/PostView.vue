@@ -6,7 +6,7 @@
   </div>
   <main ref="mainRef">
     <div class="container">
-      <MarkdownRenderer :filename=$route.params.filename @headings-ready="onHeadingsReady" />
+      <MarkdownRenderer v-if="resolvedFilename" :filename="resolvedFilename" @headings-ready="onHeadingsReady" />
 
       <!-- 悬浮目录 -->
       <TableOfContents
@@ -28,13 +28,23 @@ import TableOfContents from '../components/TableOfContents.vue';
 import Nav from "@/components/Nav.vue";
 import { useRoute } from 'vue-router';
 import Foot from "@/components/Foot.vue";
+import axios from 'axios';
+
+const props = defineProps({
+  slug: {
+    type: String
+  }
+});
+
 const $route = useRoute();
+const resolvedSlug = props.slug || $route.params.slug;
 
 const scriptContainer = ref(null);
 const readingProgress = ref(0);
 const headings = ref([]);
 const tocRef = ref(null);
 const mainRef = ref(null);
+const resolvedFilename = ref('');
 
 const onHeadingsReady = (h) => {
   headings.value = h;
@@ -56,6 +66,19 @@ onMounted(async () => {
   window.addEventListener('scroll', updateReadingProgress);
   updateReadingProgress();
 
+  // 解析 slug -> filename
+  try {
+    const mappingRes = await axios.get('/markdown/metadata/slug_mapping.json');
+    const slugMapping = mappingRes.data;
+    const filename = slugMapping[resolvedSlug];
+    if (filename) {
+      resolvedFilename.value = filename;
+    } else {
+      console.error('Slug not found:', resolvedSlug);
+    }
+  } catch (err) {
+    console.error('Failed to load slug mapping:', err);
+  }
 
   const script = document.createElement('script');
   script.src = "https://giscus.app/client.js";

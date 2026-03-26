@@ -3,6 +3,7 @@
     "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
     "date": "2026-03-25T12:53:00.000Z",
     "file": "opencode-seven-core-tools.md",
+    "slug": "512e708e",
     "excerpt": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash做AI编程助手（或类似工具）的核心，就是怎么让AI正确地读写文件、执行命令。本质上，LLM是个\"脑子里有很多知识但手很短\"的存在——它能推理，但没法直接摸到你的代码。于",
     "tags": [
       "技术教程"
@@ -14,6 +15,7 @@
     "title": "single-agent现阶段明显强于multi-agent",
     "date": "2026-03-25T03:44:00.000Z",
     "file": "single-agent-vs-multi-agent.md",
+    "slug": "7dbff82d",
     "excerpt": "single-agent现阶段明显强于multi-agentmulti-agent系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。反观那些真正跑出来的产品——OpenC",
     "tags": [
       "技术思考"
@@ -24,6 +26,7 @@
     "title": "自动发布博客",
     "date": "2026-03-11T14:22:25.000Z",
     "file": "自动发布博客.md",
+    "slug": "2f15163c",
     "excerpt": "用AISkills实现博客自动发布🚀>🤖本文由AI自动生成并自动发布前言今天来介绍一个超酷的技术——通过AIAgent(OpenClaw)的Skills功能实现博客的自动化发布！只需一句指令，AI就能帮你完成从写作到发布的全流程。",
     "tags": [
       "技术教程"
@@ -34,6 +37,7 @@
     "title": "langchain-faiss加载pkl文件速度提升",
     "date": "2025-12-14T06:19:28.000Z",
     "file": "langchain-faiss加载pkl文件速度提升.md",
+    "slug": "506f20a8",
     "excerpt": "langchain-faiss加载pkl文件速度提升背景Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。langchain_community.vectorstores中的Faiss写入一个向量库中包含两个文件：ind",
     "tags": [
       "技能分享"
@@ -44,6 +48,7 @@
     "title": "RAG图谱实体和边智能合并",
     "date": "2025-07-13T09:25:50.000Z",
     "file": "RAG图谱实体和边智能合并.md",
+    "slug": "46bbd497",
     "excerpt": "RAG图谱实体和边智能合并调研graphRAG方法：精确字符匹配对具有相同title和type的实体进行合并，直接将description相加对具有相同source和target的边进行合并，直接将description相加优点：速度快缺点：精度低，",
     "tags": [
       "随笔杂记",
@@ -55,6 +60,7 @@
     "title": "手撕卷积神经网络+反向传播梯度更新",
     "date": "2025-07-13T07:24:20.000Z",
     "file": "手撕卷积神经网络反向传播梯度更新.md",
+    "slug": "8912df88",
     "excerpt": "手撕卷积神经网络一个简单的卷积神经网络，就4层，分别是InputLayer,conv_layer,hidden_layer(全连接层+ReLU激活),output_layer```importnumpyasnpclassInputLayer:\"\"\"输入层",
     "tags": [
       "笔记",
@@ -66,6 +72,7 @@
     "title": "手撕Attention",
     "date": "2025-06-22T08:49:55.000Z",
     "file": "手撕Attention.md",
+    "slug": "d764f796",
     "excerpt": "第一重境界最简单的计算Attention(Q,K,V)=softmax(QK.T/sqrt(hidden_dim))V```importmathimporttorchimporttorch.nnasnnclassSelfAttentionV1(nn.M",
     "tags": [
       "笔记",
@@ -77,6 +84,7 @@
     "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
     "date": "2025-06-10T10:14:29.000Z",
     "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
+    "slug": "ff7483e1",
     "excerpt": "ChartVLMChartVLM由两部分组成：图表结构解码器+大语言模型截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct显存占用基本保持在2506MiB普通图表|原图|识别结果|评价||------|---",
     "tags": [
       "技能分享"
@@ -87,6 +95,7 @@
     "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
     "date": "2025-06-10T08:48:23.000Z",
     "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
+    "slug": "e9dd83c6",
     "excerpt": "背景为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法多模态大模型测试Prompt```plain你是一位专门为图像创建文本描述的文件分析专家。你将收到一张图片或图表。你的任务是创建该图像的简短描述。说明：1.仔细检查提供的图像。2",
     "tags": [
       "随笔杂记"
@@ -97,6 +106,7 @@
     "title": "DeepResearch深度搜索实现方法调研",
     "date": "2025-05-09T14:03:42.000Z",
     "file": "DeepResearch深度搜索实现方法调研.md",
+    "slug": "47f2a5ec",
     "excerpt": "DeepResearch深度搜索实现方法调研DeepResearch有三个核心能力+能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索）+能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？）+能力三：对多",
     "tags": [
       "技能分享"

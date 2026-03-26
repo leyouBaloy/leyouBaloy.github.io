@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import frontMatter from 'front-matter';
+import { createHash } from 'crypto';
 import { fileURLToPath } from 'url';
 
 // 获取当前文件的目录名
@@ -19,7 +20,23 @@ if (!fs.existsSync(normalizedOutputDir)) {
   fs.mkdirSync(normalizedOutputDir, { recursive: true });
 }
 
+// 对文件名做 md5 hash，取前 8 位
+const hashFilename = (filename) => {
+  return createHash('md5').update(filename).digest('hex').slice(0, 8);
+};
+
+// 从标题生成 slug（用于手动指定 slug 时校验格式）
+const generateSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^\w\s\u4e00-\u9fa5-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
 const metadataList = [];
+const slugMapping = {}; // slug -> filename
 
 fs.readdirSync(normalizedMarkdownDir).forEach(file => {
   if (path.extname(file) === '.md') {
@@ -44,14 +61,24 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
     const tags = metadata.attributes.categories || metadata.attributes.tags || [];
     const img = metadata.attributes.featuredImagePreview || metadata.attributes.img || '';
 
+    // 获取 slug：优先使用 frontmatter 中的 slug，否则用文件名 hash
+    const slug = metadata.attributes.slug || hashFilename(file);
+
     metadataList.push({
       title: metadata.attributes.title,
       date: metadata.attributes.date,
       file: file,
+      slug: slug,
       excerpt: bodyContent.slice(0, 150).replaceAll('#', '').replaceAll(' ', '').replaceAll('\n', '').replaceAll('*', ''),
       tags: tags, // 优先 categories，其次 tags，否则为空数组
       img: img // 优先 featuredImagePreview，其次 img，否则为空字符串
     });
+
+    // 建立 slug -> filename 映射
+    if (slugMapping[slug]) {
+      console.warn(`Duplicate slug "${slug}" for file ${file} (already used by ${slugMapping[slug]})`);
+    }
+    slugMapping[slug] = file;
   }
 });
 
@@ -72,11 +99,12 @@ for (let i = 0; i < metadataList.length; i += chunkSize) {
   console.log(`Metadata chunk ${Math.floor(i / chunkSize) + 1} generated successfully!`);
 }
 
-// 仅保留 title, date, file 字段
+// 仅保留 title, date, file, slug 字段
 const simplifiedMetadataList = metadataList.map(post => ({
   title: post.title,
   date: post.date,
-  file: post.file
+  file: post.file,
+  slug: post.slug
 }));
 
 // 按年份分类
@@ -98,7 +126,8 @@ const postsByTag = metadataList.reduce((acc, post) => {
     acc[tag].push({
       title: post.title,
       date: post.date,
-      file: post.file
+      file: post.file,
+      slug: post.slug
     });
   });
   return acc;
@@ -111,3 +140,7 @@ console.log('Posts by year JSON file generated successfully!');
 // 输出按标签分类的 JSON 文件
 fs.writeFileSync(path.join(normalizedOutputDir, 'posts_by_tag.json'), JSON.stringify(postsByTag, null, 2));
 console.log('Posts by tag JSON file generated successfully!');
+
+// 输出 slug -> filename 映射文件
+fs.writeFileSync(path.join(normalizedOutputDir, 'slug_mapping.json'), JSON.stringify(slugMapping, null, 2));
+console.log('Slug mapping JSON file generated successfully!');

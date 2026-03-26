@@ -29,7 +29,7 @@ export const routes = [
     component: () => import("../views/AboutView.vue"),
   },
   {
-    path: "/post/:filename",
+    path: "/post/:slug",
     name: "PostView",
     component: () => import("../views/PostView.vue"),
     props: true,

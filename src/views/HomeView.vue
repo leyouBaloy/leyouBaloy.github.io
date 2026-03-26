@@ -12,7 +12,7 @@
             :time="new Date(post.date).toLocaleDateString()"
             :tag="post.tags ? post.tags.join(', ') : '未分类'"
             :img="post.img"
-            :path="`/post/${post.file}`"
+            :path="`/post/${post.slug}`"
             :id="post.title"
           />
         </div>
@@ -32,7 +32,7 @@
           :time="new Date(post.date).toLocaleDateString()"
           :tag="post.tags ? post.tags.join(', ') : '未分类'"
           :img="post.img"
-          :path="`/post/${post.file}`"
+          :path="`/post/${post.slug}`"
           :id="post.title"
           @imageLoaded="onImageLoaded"
         />

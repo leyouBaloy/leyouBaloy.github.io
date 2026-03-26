@@ -3,6 +3,7 @@
     "title": "开源PDF解析工具Marker深度解析",
     "date": "2025-05-05T14:36:59.000Z",
     "file": "开源PDF解析工具Marker深度解析.md",
+    "slug": "19977fa8",
     "excerpt": "开源PDF解析工具Marker深度解析检索增强生成（RAG）系统的第一步就是做pdf解析，从复杂多样的pdf中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker和MinerU。因为Marker是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进",
     "tags": [
       "技能分享"
@@ -14,6 +15,7 @@
     "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
     "date": "2025-01-24T01:37:25.000Z",
     "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
+    "slug": "7624b8c1",
     "excerpt": "思路![image-20250124101620483](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png)1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）",
     "tags": [
       "技能分享"
@@ -24,6 +26,7 @@
     "title": "品酒🍶——古井贡酒第六代55度",
     "date": "2024-12-09T14:49:43.000Z",
     "file": "品酒-古井贡酒第六代55度.md",
+    "slug": "11baea90",
     "excerpt": "古井贡酒第六代55度香型：浓香型度数：55原料：高粱、大米、小麦、糯米、玉米产地：安徽亳州价格：72元/500ml品鉴感受闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。![image-20241",
     "tags": [
       "随笔杂记"
@@ -34,6 +37,7 @@
     "title": "电脑启动需要经历哪些过程？",
     "date": "2024-11-27T06:51:10.000Z",
     "file": "电脑启动需要经历哪些过程？.md",
+    "slug": "4e728164",
     "excerpt": "传统BIOS启动流程1.BIOSBIOS启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。",
     "tags": [
       "笔记",
@@ -45,6 +49,7 @@
     "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
     "date": "2024-11-27T06:47:24.000Z",
     "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
+    "slug": "024ab30e",
     "excerpt": "无核显主机U盘安装Ubuntu先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。原因是nouveau这个倒霉驱动跟N卡不适",
     "tags": [
       "笔记",
@@ -56,6 +61,7 @@
     "title": "Leetcode_209长度最小的子数组——滑动窗口",
     "date": "2024-11-21T13:28:00.000Z",
     "file": "Leetcode_209长度最小的子数组.md",
+    "slug": "35124327",
     "excerpt": "Leetcode_209长度最小的子数组给定一个含有`n`个正整数的数组和一个正整数`target`。找出该数组中满足其总和大于等于`target`的长度最小的子数组`[numsl,numsl+1,...,numsr-1,numsr]`，并返回",
     "tags": [
       "刷题"
@@ -66,6 +72,7 @@
     "title": "高光谱遥感深度学习调研",
     "date": "2024-11-15T08:36:41.000Z",
     "file": "高光谱遥感深度学习调研.md",
+    "slug": "40c266ad",
     "excerpt": "高光谱遥感深度学习调研综述高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。>WangC,LiuB,LiuL,etal.Areviewofdeeplearningusedinthehyperspectralim",
     "tags": [
       "笔记"
@@ -76,6 +83,7 @@
     "title": "品酒（尊美醇Jameson）",
     "date": "2024-11-04T15:18:54.000Z",
     "file": "品酒尊美醇Jameson.md",
+    "slug": "b9f36e78",
     "excerpt": "尊美醇Jameson![image-20241104232932122](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png)产地：爱尔兰。其最初在都柏林",
     "tags": [
       "随笔杂记"
@@ -86,6 +94,7 @@
     "title": "数之和问题归纳——哈希、双指针",
     "date": "2024-11-04T12:10:30.000Z",
     "file": "数之和问题归纳哈希双指针.md",
+    "slug": "c3608157",
     "excerpt": "Leetcode1:两数之和题目https://leetcode.cn/problems/two-sum/给定一个整数数组nums和一个目标值target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是",
     "tags": [
       "刷题"
@@ -96,6 +105,7 @@
     "title": "Leetcode142:环形链表II——快慢指针",
     "date": "2024-10-29T13:04:06.000Z",
     "file": "Leetcode_142环形链表II.md",
+    "slug": "f870a3e8",
     "excerpt": "Leetcode_142环形链表IIhttps://leetcode.cn/problems/linked-list-cycle-ii/description/给定一个链表的头节点`head`，返回链表开始入环的第一个节点。如果链表无环，则返回`null`。如果链表中有",
     "tags": [
       "刷题"

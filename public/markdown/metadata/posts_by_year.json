@@ -3,1394 +3,1670 @@
     {
       "title": "给string对象插入字符",
       "date": "2020-12-28T16:52:10.000Z",
-      "file": "给string对象插入字符.md"
+      "file": "给string对象插入字符.md",
+      "slug": "3244e6d6"
     },
     {
       "title": "使用sort算法对向量元素排列",
       "date": "2020-12-28T16:26:38.000Z",
-      "file": "使用sort算法对向量元素排列.md"
+      "file": "使用sort算法对向量元素排列.md",
+      "slug": "8b4ed166"
     },
     {
       "title": "使用reverse反向排列算法",
       "date": "2020-12-28T16:21:28.000Z",
-      "file": "使用reverse反向排列算法.md"
+      "file": "使用reverse反向排列算法.md",
+      "slug": "8924b63c"
     },
     {
       "title": "《十二公民》观后感",
       "date": "2020-12-21T21:58:43.000Z",
-      "file": "《十二公民》观后感.md"
+      "file": "《十二公民》观后感.md",
+      "slug": "64c15f9f"
     },
     {
       "title": "字符处理软件-substr-insert-find",
       "date": "2020-12-17T21:10:39.000Z",
-      "file": "字符处理软件-substr-insert-find.md"
+      "file": "字符处理软件-substr-insert-find.md",
+      "slug": "81d1a575"
     },
     {
       "title": "requests爬表情包",
       "date": "2020-12-13T17:23:02.000Z",
-      "file": "requests爬表情包.md"
+      "file": "requests爬表情包.md",
+      "slug": "0b44e590"
     },
     {
       "title": "中国是如何富起来的？",
       "date": "2020-12-12T12:19:03.000Z",
-      "file": "中国是如何富起来的？.md"
+      "file": "中国是如何富起来的？.md",
+      "slug": "c2d24b0b"
     },
     {
       "title": "判断回文数",
       "date": "2020-12-04T09:05:15.000Z",
-      "file": "判断回文数.md"
+      "file": "判断回文数.md",
+      "slug": "fac162a6"
     },
     {
       "title": "c++比较字典序的三种方法",
       "date": "2020-12-04T08:04:09.000Z",
-      "file": "c++比较字典序的三种方法.md"
+      "file": "c++比较字典序的三种方法.md",
+      "slug": "8c9dbe5e"
     },
     {
       "title": "质数判断",
       "date": "2020-12-03T10:13:20.000Z",
-      "file": "质数判断.md"
+      "file": "质数判断.md",
+      "slug": "7081f44b"
     },
     {
       "title": "c++傻缺错误集锦",
       "date": "2020-12-02T20:09:14.000Z",
-      "file": "c++傻缺错误集锦.md"
+      "file": "c++傻缺错误集锦.md",
+      "slug": "9f35c36a"
     },
     {
       "title": "selenium爬GDP",
       "date": "2020-12-01T23:11:02.000Z",
-      "file": "selenium爬GDP.md"
+      "file": "selenium爬GDP.md",
+      "slug": "64141331"
     },
     {
       "title": "对称字符串处理",
       "date": "2020-11-27T08:45:18.000Z",
-      "file": "对称字符串处理.md"
+      "file": "对称字符串处理.md",
+      "slug": "e01a279b"
     },
     {
       "title": "给学生成绩排序，总分相同看语文，语文相同看序号",
       "date": "2020-11-24T15:18:32.000Z",
-      "file": "给学生成绩排序，总分相同看语文，语文相同看序号.md"
+      "file": "给学生成绩排序，总分相同看语文，语文相同看序号.md",
+      "slug": "a3e33341"
     },
     {
       "title": "结构体排序-sort()-typedef",
       "date": "2020-11-21T09:18:25.000Z",
-      "file": "结构体排序-sort()-typedef.md"
+      "file": "结构体排序-sort()-typedef.md",
+      "slug": "d6d9ee78"
     },
     {
       "title": "猴子选大王-结构体",
       "date": "2020-11-21T08:46:45.000Z",
-      "file": "猴子选大王-结构体.md"
+      "file": "猴子选大王-结构体.md",
+      "slug": "cfceb3b5"
     },
     {
       "title": "四舍五入小数",
       "date": "2020-11-18T20:53:41.000Z",
-      "file": "四舍五入小数.md"
+      "file": "四舍五入小数.md",
+      "slug": "0a5d3847"
     },
     {
       "title": "递归法求最大公约数",
       "date": "2020-11-17T12:58:03.000Z",
-      "file": "递归法求最大公约数.md"
+      "file": "递归法求最大公约数.md",
+      "slug": "0b1af30e"
     },
     {
       "title": "selenium爬教务处课表",
       "date": "2020-11-16T20:45:35.000Z",
-      "file": "selenium爬教务处课表.md"
+      "file": "selenium爬教务处课表.md",
+      "slug": "9e2ef618"
     },
     {
       "title": "Python爬虫-selenium-request",
       "date": "2020-11-16T15:20:41.000Z",
-      "file": "Python爬虫-selenium-request.md"
+      "file": "Python爬虫-selenium-request.md",
+      "slug": "aaaacb5c"
     },
     {
       "title": "我的青春不迷茫，奋斗青春成就未来-征文活动",
       "date": "2020-11-15T10:23:57.000Z",
-      "file": "我的青春不迷茫，奋斗青春成就未来-征文活动.md"
+      "file": "我的青春不迷茫，奋斗青春成就未来-征文活动.md",
+      "slug": "a149f284"
     },
     {
       "title": "输入二进制转化为十进制",
       "date": "2020-11-10T14:49:20.000Z",
-      "file": "输入二进制转化为十进制.md"
+      "file": "输入二进制转化为十进制.md",
+      "slug": "08b6f13d"
     },
     {
       "title": "字符数组的拼接和排序-strcat()-sort()-strlen()",
       "date": "2020-11-07T09:11:20.000Z",
-      "file": "字符数组的拼接和排序-strcat()-sort()-strlen().md"
+      "file": "字符数组的拼接和排序-strcat()-sort()-strlen().md",
+      "slug": "d7f8cd3e"
     },
     {
       "title": "删除重复的字符并重新排列-这个题太jb烦人了",
       "date": "2020-11-07T08:48:03.000Z",
-      "file": "删除重复的字符并重新排列-这个题太jb烦人了.md"
+      "file": "删除重复的字符并重新排列-这个题太jb烦人了.md",
+      "slug": "2e93ab72"
     },
     {
       "title": "每个字母代表一个数字，输出字符串代表的数字之和",
       "date": "2020-11-05T17:38:36.000Z",
-      "file": "每个字母代表一个数字，输出字符串代表的数字之和.md"
+      "file": "每个字母代表一个数字，输出字符串代表的数字之和.md",
+      "slug": "cad421de"
     },
     {
       "title": "统计字符串中字符出现的个数-int与char类型的转换",
       "date": "2020-11-05T16:31:07.000Z",
-      "file": "统计字符串中字符出现的个数-int与char类型的转换.md"
+      "file": "统计字符串中字符出现的个数-int与char类型的转换.md",
+      "slug": "0dc727b2"
     },
     {
       "title": "大小写字母互换-输入与输出字符串",
       "date": "2020-11-02T16:52:58.000Z",
-      "file": "大小写字母互换-输入与输出字符串.md"
+      "file": "大小写字母互换-输入与输出字符串.md",
+      "slug": "708b2ebe"
     },
     {
       "title": "字符数组的输入输出",
       "date": "2020-11-02T10:56:17.000Z",
-      "file": "字符数组的输入输出.md"
+      "file": "字符数组的输入输出.md",
+      "slug": "bb8c6a25"
     },
     {
       "title": "用sort函数给数组排序",
       "date": "2020-11-01T20:27:22.000Z",
-      "file": "用sort函数给数组排序.md"
+      "file": "用sort函数给数组排序.md",
+      "slug": "f1dc3e60"
     },
     {
       "title": "cout输出精确到小数点后两位",
       "date": "2020-11-01T17:13:53.000Z",
-      "file": "cout输出精确到小数点后两位.md"
+      "file": "cout输出精确到小数点后两位.md",
+      "slug": "519da68d"
     },
     {
       "title": "工欲善其事，必先利其器。",
       "date": "2020-10-28T22:41:29.000Z",
-      "file": "工欲善其事，必先利其器.md"
+      "file": "工欲善其事，必先利其器.md",
+      "slug": "704d93a5"
     },
     {
       "title": "判断n能否被幸运数整除-do while循环应用",
       "date": "2020-10-27T15:18:53.000Z",
-      "file": "判断n能否被幸运数整除-do while循环应用.md"
+      "file": "判断n能否被幸运数整除-do while循环应用.md",
+      "slug": "0bee197f"
     },
     {
       "title": "自动去重和排序",
       "date": "2020-10-26T20:24:49.000Z",
-      "file": "自动去重和排序.md"
+      "file": "自动去重和排序.md",
+      "slug": "0745a700"
     },
     {
       "title": "每日一题-数组去重和排序",
       "date": "2020-10-24T08:42:50.000Z",
-      "file": "每日一题-数组去重和排序.md"
+      "file": "每日一题-数组去重和排序.md",
+      "slug": "92375048"
     },
     {
       "title": "《中国的官办经济》读后感",
       "date": "2020-10-19T18:46:23.000Z",
-      "file": "《中国的官办经济》读后感.md"
+      "file": "《中国的官办经济》读后感.md",
+      "slug": "01bdba8e"
     },
     {
       "title": "Python-一元二次方程，保留两位小数",
       "date": "2020-10-19T15:10:44.000Z",
-      "file": "Python-一元二次方程，保留两位小数.md"
+      "file": "Python-一元二次方程，保留两位小数.md",
+      "slug": "1992df17"
     },
     {
       "title": "识别字符",
       "date": "2020-10-17T16:26:51.000Z",
-      "file": "识别字符.md"
+      "file": "识别字符.md",
+      "slug": "b35ce183"
     },
     {
       "title": "Python-洗牌算法",
       "date": "2020-10-11T16:11:03.000Z",
-      "file": "Python-洗牌算法.md"
+      "file": "Python-洗牌算法.md",
+      "slug": "6c7a9fd6"
     },
     {
       "title": "每日一题--a到z26个字母循环输出",
       "date": "2020-10-10T23:07:49.000Z",
-      "file": "每日一题--a到z26个字母循环输出.md"
+      "file": "每日一题--a到z26个字母循环输出.md",
+      "slug": "3ad3af40"
     },
     {
       "title": "每日一题--有进位的加法运算",
       "date": "2020-10-10T09:22:16.000Z",
-      "file": "每日一题--有进位的加法运算.md"
+      "file": "每日一题--有进位的加法运算.md",
+      "slug": "b103ca10"
     },
     {
       "title": "每日一题(2)--很多个数排序问题",
       "date": "2020-10-08T21:09:10.000Z",
-      "file": "每日一题(2)--很多个数排序问题.md"
+      "file": "每日一题(2)--很多个数排序问题.md",
+      "slug": "680534d6"
     },
     {
       "title": "每日一题--二分法找数组中的数",
       "date": "2020-10-08T20:04:22.000Z",
-      "file": "每日一题--二分法找数组中的数.md"
+      "file": "每日一题--二分法找数组中的数.md",
+      "slug": "22820229"
     },
     {
       "title": "每日一题--求超大数的各位数字和",
       "date": "2020-10-07T19:04:32.000Z",
-      "file": "每日一题--求超大数的各位数字和.md"
+      "file": "每日一题--求超大数的各位数字和.md",
+      "slug": "7bc52da3"
     },
     {
       "title": "每日一题--给小朋友的自动出题自动批改",
       "date": "2020-10-06T21:24:10.000Z",
-      "file": "每日一题--给小朋友的自动出题自动批改.md"
+      "file": "每日一题--给小朋友的自动出题自动批改.md",
+      "slug": "955dbd01"
     },
     {
       "title": "每日一题--二维数组",
       "date": "2020-10-06T14:25:18.000Z",
-      "file": "每日一题--二维数组.md"
+      "file": "每日一题--二维数组.md",
+      "slug": "c6411564"
     },
     {
       "title": "Python第二周学习报告（草稿）",
       "date": "2020-10-04T15:05:52.000Z",
-      "file": "Python第二周学习报告（草稿）.md"
+      "file": "Python第二周学习报告（草稿）.md",
+      "slug": "bb55d973"
     },
     {
       "title": "第一章练习题",
       "date": "2020-09-30T23:09:21.000Z",
-      "file": "第一章练习题.md"
+      "file": "第一章练习题.md",
+      "slug": "043f53a9"
     }
   ],
   "2021": [
     {
       "title": "《史蒂夫·乔布斯传》读书笔记",
       "date": "2021-12-16T22:57:46.000Z",
-      "file": "《史蒂夫·乔布斯传》读书笔记.md"
+      "file": "《史蒂夫·乔布斯传》读书笔记.md",
+      "slug": "0c6d1bcd"
     },
     {
       "title": "参加ccf csp认证考试有感",
       "date": "2021-12-05T23:28:56.000Z",
-      "file": "参加ccf csp认证考试有感.md"
+      "file": "参加ccf csp认证考试有感.md",
+      "slug": "94d9e3ca"
     },
     {
       "title": "数值计算方法",
       "date": "2021-12-01T18:31:18.000Z",
-      "file": "数值计算方法.md"
+      "file": "数值计算方法.md",
+      "slug": "3b6e3bc4"
     },
     {
       "title": "讲一个能满足和感动自己的故事！",
       "date": "2021-11-24T21:25:56.000Z",
-      "file": "讲一个能满足和感动自己的故事！.md"
+      "file": "讲一个能满足和感动自己的故事！.md",
+      "slug": "7dbb12f1"
     },
     {
       "title": "Mac上自动连接校园网的脚本",
       "date": "2021-11-24T18:58:03.000Z",
-      "file": "Mac上自动连接校园网的脚本.md"
+      "file": "Mac上自动连接校园网的脚本.md",
+      "slug": "1f902f05"
     },
     {
       "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
       "date": "2021-11-21T09:04:54.000Z",
-      "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md"
+      "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
+      "slug": "400b9839"
     },
     {
       "title": "精准而优雅——MacBook Air",
       "date": "2021-11-14T10:32:04.000Z",
-      "file": "精准而优雅——MacBook Air.md"
+      "file": "精准而优雅——MacBook Air.md",
+      "slug": "591056ff"
     },
     {
       "title": "macOS下matplotlib无法显示中文字体问题解决",
       "date": "2021-11-12T16:57:43.000Z",
-      "file": "macOS下matplotlib无法显示中文字体问题解决.md"
+      "file": "macOS下matplotlib无法显示中文字体问题解决.md",
+      "slug": "2031667d"
     },
     {
       "title": "如何在英语朗读视频中添加文稿",
       "date": "2021-11-04T17:15:40.000Z",
-      "file": "如何在英语朗读视频中添加文稿.md"
+      "file": "如何在英语朗读视频中添加文稿.md",
+      "slug": "0e0d4826"
     },
     {
       "title": "Linux自由软件协会迎新结束有感",
       "date": "2021-10-30T22:43:09.000Z",
-      "file": "Linux自由软件协会迎新结束有感.md"
+      "file": "Linux自由软件协会迎新结束有感.md",
+      "slug": "c99a798a"
     },
     {
       "title": "ubuntu安装Python3的曲折之路",
       "date": "2021-10-30T13:58:01.000Z",
-      "file": "ubuntu安装Python3的曲折之路.md"
+      "file": "ubuntu安装Python3的曲折之路.md",
+      "slug": "6434a878"
     },
     {
       "title": "黄山归来不看岳——黄山之旅",
       "date": "2021-10-06T08:28:08.000Z",
-      "file": "黄山归来不看岳——黄山之旅.md"
+      "file": "黄山归来不看岳——黄山之旅.md",
+      "slug": "2812cd66"
     },
     {
       "title": "全国高校AI知识竞赛UPC赛区获奖通知",
       "date": "2021-09-29T23:37:12.000Z",
-      "file": "全国高校AI知识竞赛UPC赛区获奖通知.md"
+      "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
+      "slug": "1829cd62"
     },
     {
       "title": "浏览器不支持getUserMedia",
       "date": "2021-09-23T15:58:12.000Z",
-      "file": "浏览器不支持getUserMedia.md"
+      "file": "浏览器不支持getUserMedia.md",
+      "slug": "2aef21c9"
     },
     {
       "title": "certbot自动配置nginx给wordpress站点加https",
       "date": "2021-09-08T22:42:40.000Z",
-      "file": "certbot自动配置nginx给wordpress站点加https.md"
+      "file": "certbot自动配置nginx给wordpress站点加https.md",
+      "slug": "8644ae3a"
     },
     {
       "title": "对图像操作",
       "date": "2021-08-29T21:21:29.000Z",
-      "file": "对图像操作.md"
+      "file": "对图像操作.md",
+      "slug": "3bdd31d7"
     },
     {
       "title": "Conda 配置虚拟环境",
       "date": "2021-08-29T21:20:21.000Z",
-      "file": "Conda 配置虚拟环境.md"
+      "file": "Conda 配置虚拟环境.md",
+      "slug": "bcde8727"
     },
     {
       "title": "jupyter-paddle使用docker安装",
       "date": "2021-08-29T21:19:42.000Z",
-      "file": "jupyter-paddle使用docker安装.md"
+      "file": "jupyter-paddle使用docker安装.md",
+      "slug": "30e1e85f"
     },
     {
       "title": "再认识我的家乡——蚌埠",
       "date": "2021-08-27T22:47:10.000Z",
-      "file": "再认识我的家乡——蚌埠.md"
+      "file": "再认识我的家乡——蚌埠.md",
+      "slug": "10580a2d"
     },
     {
       "title": "python时间遇到的坑",
       "date": "2021-08-22T15:21:03.000Z",
-      "file": "python时间遇到的坑.md"
+      "file": "python时间遇到的坑.md",
+      "slug": "cf4fd6e1"
     },
     {
       "title": "《人类简史》读后有感",
       "date": "2021-08-16T09:03:38.000Z",
-      "file": "《人类简史》读后有感.md"
+      "file": "《人类简史》读后有感.md",
+      "slug": "05810db8"
     },
     {
       "title": "网吧＋炸鸡 yyds!",
       "date": "2021-08-11T20:57:33.000Z",
-      "file": "网吧＋炸鸡 yyds!.md"
+      "file": "网吧＋炸鸡 yyds!.md",
+      "slug": "b1b9e00f"
     },
     {
       "title": "linux学习笔记",
       "date": "2021-08-08T11:09:47.000Z",
-      "file": "linux学习笔记.md"
+      "file": "linux学习笔记.md",
+      "slug": "4fa6d037"
     },
     {
       "title": "django笔记进阶",
       "date": "2021-08-08T11:08:25.000Z",
-      "file": "django笔记进阶.md"
+      "file": "django笔记进阶.md",
+      "slug": "5b0b5af3"
     },
     {
       "title": "python发邮件",
       "date": "2021-08-08T08:20:29.000Z",
-      "file": "python发邮件.md"
+      "file": "python发邮件.md",
+      "slug": "31ffe735"
     },
     {
       "title": "NGINX学习笔记",
       "date": "2021-08-02T17:35:49.000Z",
-      "file": "NGINX学习笔记.md"
+      "file": "NGINX学习笔记.md",
+      "slug": "ec606feb"
     },
     {
       "title": "和老同学的难得一见",
       "date": "2021-08-01T11:07:38.000Z",
-      "file": "和老同学的难得一见.md"
+      "file": "和老同学的难得一见.md",
+      "slug": "cf49f235"
     },
     {
       "title": "带鱼屏真是太太太爽爽爽啦",
       "date": "2021-07-30T12:46:02.000Z",
-      "file": "带鱼屏真是太太太爽爽爽啦.md"
+      "file": "带鱼屏真是太太太爽爽爽啦.md",
+      "slug": "a30a3807"
     },
     {
       "title": "暑期实习项目-onlinejudge在线测试平台",
       "date": "2021-07-28T14:58:29.000Z",
-      "file": "暑期实习项目-onlinejudge在线测试平台.md"
+      "file": "暑期实习项目-onlinejudge在线测试平台.md",
+      "slug": "fd8f707c"
     },
     {
       "title": "docker笔记",
       "date": "2021-07-19T20:57:21.000Z",
-      "file": "docker笔记.md"
+      "file": "docker笔记.md",
+      "slug": "86d472e0"
     },
     {
       "title": "身体第一、健康第二",
       "date": "2021-07-17T16:00:14.000Z",
-      "file": "身体第一、健康第二.md"
+      "file": "身体第一、健康第二.md",
+      "slug": "90b23d4d"
     },
     {
       "title": "87《红楼梦》观之有感",
       "date": "2021-07-14T21:56:23.000Z",
-      "file": "87《红楼梦》观之有感.md"
+      "file": "87《红楼梦》观之有感.md",
+      "slug": "bb9c1edf"
     },
     {
       "title": "《京华烟云》读后有感",
       "date": "2021-06-23T23:42:43.000Z",
-      "file": "《京华烟云》读后有感.md"
+      "file": "《京华烟云》读后有感.md",
+      "slug": "f5d6357f"
     },
     {
       "title": "大物大作业-microbit编程小车",
       "date": "2021-06-21T22:49:05.000Z",
-      "file": "大物大作业-microbit编程小车.md"
+      "file": "大物大作业-microbit编程小车.md",
+      "slug": "86bb081c"
     },
     {
       "title": "“野蛮“其体魄！",
       "date": "2021-06-21T00:10:27.000Z",
-      "file": "“野蛮“其体魄！.md"
+      "file": "“野蛮“其体魄！.md",
+      "slug": "740381a6"
     },
     {
       "title": "《概率论与数理统计》结课总结",
       "date": "2021-06-17T20:33:22.000Z",
-      "file": "《概率论与数理统计》结课总结.md"
+      "file": "《概率论与数理统计》结课总结.md",
+      "slug": "94554f7a"
     },
     {
       "title": "本学期“人工智能”学习结束总结",
       "date": "2021-06-13T23:16:09.000Z",
-      "file": "本学期“人工智能”学习结束总结.md"
+      "file": "本学期“人工智能”学习结束总结.md",
+      "slug": "3dfae010"
     },
     {
       "title": "《消失的13级台阶》读后感",
       "date": "2021-06-06T22:24:13.000Z",
-      "file": "《消失的13级台阶》读后感.md"
+      "file": "《消失的13级台阶》读后感.md",
+      "slug": "7e8b71ec"
     },
     {
       "title": "离散数学结课总结+笔记",
       "date": "2021-05-29T16:23:46.000Z",
-      "file": "离散数学结课总结+笔记.md"
+      "file": "离散数学结课总结+笔记.md",
+      "slug": "fd13c30b"
     },
     {
       "title": "理清主次，集中精力解决“主要矛盾”。",
       "date": "2021-05-03T21:05:53.000Z",
-      "file": "理清主次，集中精力解决“主要矛盾”。.md"
+      "file": "理清主次，集中精力解决“主要矛盾”。.md",
+      "slug": "b278b761"
     },
     {
       "title": "《如何阅读一本书》读后感",
       "date": "2021-04-23T18:16:55.000Z",
-      "file": "《如何阅读一本书》读后感.md"
+      "file": "《如何阅读一本书》读后感.md",
+      "slug": "84d3a75c"
     },
     {
       "title": "《菊次郎的夏天》观后感",
       "date": "2021-04-05T23:25:45.000Z",
-      "file": "《菊次郎的夏天》观后感.md"
+      "file": "《菊次郎的夏天》观后感.md",
+      "slug": "a93040b6"
     },
     {
       "title": "matplotlib作热机效率随负载大小变化曲线图",
       "date": "2021-04-02T09:28:08.000Z",
-      "file": "matplotlib作热机效率随负载大小变化曲线图.md"
+      "file": "matplotlib作热机效率随负载大小变化曲线图.md",
+      "slug": "686c4940"
     },
     {
       "title": "“专利申请”撰写有感",
       "date": "2021-03-28T20:46:35.000Z",
-      "file": "“专利申请”撰写有感.md"
+      "file": "“专利申请”撰写有感.md",
+      "slug": "3c91c67f"
     },
     {
       "title": "长期任务：做一个在线oj的评测",
       "date": "2021-03-23T09:10:48.000Z",
-      "file": "长期任务：做一个在线oj的评测.md"
+      "file": "长期任务：做一个在线oj的评测.md",
+      "slug": "b3da82e1"
     },
     {
       "title": "pathlib库",
       "date": "2021-03-16T10:03:57.000Z",
-      "file": "pathlib库.md"
+      "file": "pathlib库.md",
+      "slug": "43720991"
     },
     {
       "title": "Django学习笔记",
       "date": "2021-03-15T23:02:45.000Z",
-      "file": "Django学习笔记.md"
+      "file": "Django学习笔记.md",
+      "slug": "9570ee75"
     },
     {
       "title": "Pandas学习笔记",
       "date": "2021-03-09T11:04:10.000Z",
-      "file": "Pandas学习笔记.md"
+      "file": "Pandas学习笔记.md",
+      "slug": "84a00195"
     },
     {
       "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
       "date": "2021-03-03T20:46:14.000Z",
-      "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md"
+      "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
+      "slug": "13bf1535"
     },
     {
       "title": "开学第二天明确学习方向",
       "date": "2021-03-02T20:31:39.000Z",
-      "file": "开学第二天明确学习方向.md"
+      "file": "开学第二天明确学习方向.md",
+      "slug": "068dcf5e"
     },
     {
       "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
       "date": "2021-02-26T12:06:38.000Z",
-      "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md"
+      "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
+      "slug": "10141fce"
     },
     {
       "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
       "date": "2021-02-25T18:40:44.000Z",
-      "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md"
+      "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
+      "slug": "9e6c0b5f"
     },
     {
       "title": "csv库的使用方法",
       "date": "2021-02-25T11:10:35.000Z",
-      "file": "csv库的使用方法.md"
+      "file": "csv库的使用方法.md",
+      "slug": "c9920664"
     },
     {
       "title": "json数据存储",
       "date": "2021-02-25T11:02:16.000Z",
-      "file": "json数据存储.md"
+      "file": "json数据存储.md",
+      "slug": "f16cfec5"
     },
     {
       "title": "matplotlib学习笔记（一）基本语法,figure,坐标轴",
       "date": "2021-02-23T10:48:54.000Z",
-      "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md"
+      "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
+      "slug": "5c2f0a26"
     },
     {
       "title": "《新喜剧之王》观后感",
       "date": "2021-02-15T20:18:05.000Z",
-      "file": "《新喜剧之王》观后感.md"
+      "file": "《新喜剧之王》观后感.md",
+      "slug": "70f77e2f"
     },
     {
       "title": "BeautifulSoup学习笔记",
       "date": "2021-02-14T19:08:15.000Z",
-      "file": "BeautifulSoup学习笔记.md"
+      "file": "BeautifulSoup学习笔记.md",
+      "slug": "eb083bdf"
     },
     {
       "title": "《华尔街之狼》观后感",
       "date": "2021-02-11T00:29:07.000Z",
-      "file": "《华尔街之狼》观后感.md"
+      "file": "《华尔街之狼》观后感.md",
+      "slug": "3d41ecc4"
     },
     {
       "title": "搞了一晚上http升级为https",
       "date": "2021-02-09T23:45:43.000Z",
-      "file": "搞了一晚上http升级为https.md"
+      "file": "搞了一晚上http升级为https.md",
+      "slug": "86e548f8"
     },
     {
       "title": "学吉他总结",
       "date": "2021-02-09T18:26:18.000Z",
-      "file": "学吉他总结.md"
+      "file": "学吉他总结.md",
+      "slug": "58d49ca7"
     },
     {
       "title": "python面向对象课程",
       "date": "2021-02-02T10:33:46.000Z",
-      "file": "python面向对象课程.md"
+      "file": "python面向对象课程.md",
+      "slug": "459e0a1c"
     },
     {
       "title": "叮~我们的MC服务器终于到货啦！",
       "date": "2021-01-30T11:24:49.000Z",
-      "file": "叮~我们的MC服务器终于到货啦！.md"
+      "file": "叮~我们的MC服务器终于到货啦！.md",
+      "slug": "353cc484"
     },
     {
       "title": "放寒假20天总结",
       "date": "2021-01-30T08:28:10.000Z",
-      "file": "放寒假20天总结.md"
+      "file": "放寒假20天总结.md",
+      "slug": "6a934166"
     },
     {
       "title": "参加测试脚本编写小组的感想",
       "date": "2021-01-30T08:27:14.000Z",
-      "file": "参加测试脚本编写小组的感想.md"
+      "file": "参加测试脚本编写小组的感想.md",
+      "slug": "7629dfe9"
     },
     {
       "title": "如何使用v2ray代理",
       "date": "2021-01-22T10:42:05.000Z",
-      "file": "如何使用v2ray代理.md"
+      "file": "如何使用v2ray代理.md",
+      "slug": "44c7bda9"
     },
     {
       "title": "jupyter打开项目文件夹",
       "date": "2021-01-19T17:52:50.000Z",
-      "file": "jupyter打开项目文件夹.md"
+      "file": "jupyter打开项目文件夹.md",
+      "slug": "3e721cb0"
     },
     {
       "title": "字符串与数字之间的转换",
       "date": "2021-01-01T21:15:27.000Z",
-      "file": "字符串与数字之间的转换.md"
+      "file": "字符串与数字之间的转换.md",
+      "slug": "eea33013"
     }
   ],
   "2022": [
     {
       "title": "Kaggle图像分类竞赛实战总结详细代码解读",
       "date": "2022-12-29T04:37:38.000Z",
-      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md"
+      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md",
+      "slug": "92077544"
     },
     {
       "title": "再见，恶心的排位赛",
       "date": "2022-12-26T14:39:29.000Z",
-      "file": "再见，恶心的排位赛.md"
+      "file": "再见，恶心的排位赛.md",
+      "slug": "04464ee3"
     },
     {
       "title": "又一个寒假开始啦",
       "date": "2022-12-17T09:38:43.000Z",
-      "file": "又一个寒假开始啦.md"
+      "file": "又一个寒假开始啦.md",
+      "slug": "47a554c5"
     },
     {
       "title": "我再也不胡吃海喝了😭😭😭",
       "date": "2022-12-09T06:26:16.000Z",
-      "file": "我再也不胡吃海喝了.md"
+      "file": "我再也不胡吃海喝了.md",
+      "slug": "5959d237"
     },
     {
       "title": "过去的几周我是怎么熬过来的",
       "date": "2022-11-20T13:15:02.000Z",
-      "file": "过去的几周我是怎么熬过来的.md"
+      "file": "过去的几周我是怎么熬过来的.md",
+      "slug": "2cc40118"
     },
     {
       "title": "《悉达多》——人生就是在不断的体验与感悟",
       "date": "2022-11-12T06:20:24.000Z",
-      "file": "《悉达多》-人生就是在不断的体验与感悟.md"
+      "file": "《悉达多》-人生就是在不断的体验与感悟.md",
+      "slug": "68349a2c"
     },
     {
       "title": "计组线上实验-运算器设计",
       "date": "2022-10-29T04:58:43.000Z",
-      "file": "计组线上实验-运算器设计.md"
+      "file": "计组线上实验-运算器设计.md",
+      "slug": "069c1237"
     },
     {
       "title": "Linux在指定时间区间内的随机时间点执行任务",
       "date": "2022-10-23T15:52:09.000Z",
-      "file": "Linux在指定时间区间内的随机时间点执行任务.md"
+      "file": "Linux在指定时间区间内的随机时间点执行任务.md",
+      "slug": "1cad2edf"
     },
     {
       "title": "字、字节、字长、位等概念区分",
       "date": "2022-10-22T01:54:39.000Z",
-      "file": "字、字节、字长、位等概念区分.md"
+      "file": "字、字节、字长、位等概念区分.md",
+      "slug": "ef85f195"
     },
     {
       "title": "时间管理出现重大失误，输！",
       "date": "2022-10-21T13:53:47.000Z",
-      "file": "时间管理出现重大失误，输！.md"
+      "file": "时间管理出现重大失误，输！.md",
+      "slug": "f543c019"
     },
     {
       "title": "数模比赛失利",
       "date": "2022-10-10T08:01:42.000Z",
-      "file": "数模比赛失利.md"
+      "file": "数模比赛失利.md",
+      "slug": "f643338a"
     },
     {
       "title": "数学建模参赛有感",
       "date": "2022-09-18T12:46:35.000Z",
-      "file": "数学建模参赛有感.md"
+      "file": "数学建模参赛有感.md",
+      "slug": "40f7467f"
     },
     {
       "title": "大三上学期规划",
       "date": "2022-09-07T09:41:32.000Z",
-      "file": "大三上学期规划.md"
+      "file": "大三上学期规划.md",
+      "slug": "3f190b1f"
     },
     {
       "title": "星露谷物语为什么这么好玩？",
       "date": "2022-08-28T14:35:36.000Z",
-      "file": "星露谷物语为什么这么好玩？.md"
+      "file": "星露谷物语为什么这么好玩？.md",
+      "slug": "2af8b0db"
     },
     {
       "title": "我的第一把客制化键盘",
       "date": "2022-08-16T07:41:28.000Z",
-      "file": "我的第一把客制化键盘.md"
+      "file": "我的第一把客制化键盘.md",
+      "slug": "6f652b2b"
     },
     {
       "title": "Linux输出重定向以及crontab的坑",
       "date": "2022-07-13T03:14:42.000Z",
-      "file": "Linux输出重定向以及crontab的坑.md"
+      "file": "Linux输出重定向以及crontab的坑.md",
+      "slug": "78bcbc75"
     },
     {
       "title": "数据结构与算法实习第二阶段",
       "date": "2022-07-02T07:38:13.000Z",
-      "file": "数据结构与算法实习第二阶段.md"
+      "file": "数据结构与算法实习第二阶段.md",
+      "slug": "dfbba3ac"
     },
     {
       "title": "《乡土中国》读书笔记",
       "date": "2022-07-01T12:32:23.000Z",
-      "file": "《乡土中国》读书笔记.md"
+      "file": "《乡土中国》读书笔记.md",
+      "slug": "29b4acc1"
     },
     {
       "title": "数据结构与算法实习第一阶段",
       "date": "2022-06-30T08:34:10.000Z",
-      "file": "数据结构与算法实习第一阶段.md"
+      "file": "数据结构与算法实习第一阶段.md",
+      "slug": "85eb2c70"
     },
     {
       "title": "正则表达式提取《飞鸟集》",
       "date": "2022-06-30T03:18:09.000Z",
-      "file": "正则表达式提取《飞鸟集》.md"
+      "file": "正则表达式提取《飞鸟集》.md",
+      "slug": "f9ab321a"
     },
     {
       "title": "组织一次成功的班级烧烤经验分享",
       "date": "2022-06-23T04:24:27.000Z",
-      "file": "组织一次成功的班级烧烤经验分享.md"
+      "file": "组织一次成功的班级烧烤经验分享.md",
+      "slug": "9d897e60"
     },
     {
       "title": "使用正则表达式进行高级替换",
       "date": "2022-06-17T07:02:15.000Z",
-      "file": "使用正则表达式进行高级替换.md"
+      "file": "使用正则表达式进行高级替换.md",
+      "slug": "17aa354e"
     },
     {
       "title": "在word中使用通配符进行高级的查找和替换",
       "date": "2022-06-16T09:03:05.000Z",
-      "file": "在word中使用通配符进行高级的查找和替换.md"
+      "file": "在word中使用通配符进行高级的查找和替换.md",
+      "slug": "2bd79d64"
     },
     {
       "title": "《写给大家看的设计书》读书笔记",
       "date": "2022-06-14T11:19:28.000Z",
-      "file": "《写给大家看的设计书》读书笔记.md"
+      "file": "《写给大家看的设计书》读书笔记.md",
+      "slug": "76de9d1d"
     },
     {
       "title": "解锁新技术栈vue+flask前后端分离",
       "date": "2022-05-24T15:41:05.000Z",
-      "file": "解锁新技术栈vue+flask前后端分离.md"
+      "file": "解锁新技术栈vue+flask前后端分离.md",
+      "slug": "190a7f91"
     },
     {
       "title": "Flask+vue使用jwt验证",
       "date": "2022-05-22T05:00:39.000Z",
-      "file": "flask+vue使用jwt验证.md"
+      "file": "flask+vue使用jwt验证.md",
+      "slug": "26d4ea53"
     },
     {
       "title": "《学术研究，你的成功之道》",
       "date": "2022-05-07T12:12:51.000Z",
-      "file": "《学术研究，你的成功之道》.md"
+      "file": "《学术研究，你的成功之道》.md",
+      "slug": "10d7958a"
     },
     {
       "title": "《从零开始的女性主义》读后有感",
       "date": "2022-05-06T09:32:20.000Z",
-      "file": "《从零开始的女性主义》读后有感.md"
+      "file": "《从零开始的女性主义》读后有感.md",
+      "slug": "f230d573"
     },
     {
       "title": "Leetcode39:组合总和——回溯",
       "date": "2022-05-06T09:09:58.000Z",
-      "file": "Leetcode39_组合总和——回溯.md"
+      "file": "Leetcode39_组合总和——回溯.md",
+      "slug": "7883cd5e"
     },
     {
       "title": "Leetcode1823:找出游戏的获胜者——约瑟夫环",
       "date": "2022-05-04T08:24:22.000Z",
-      "file": "Leetcode1823_找出游戏的获胜者——约瑟夫环.md"
+      "file": "Leetcode1823_找出游戏的获胜者——约瑟夫环.md",
+      "slug": "28771507"
     },
     {
       "title": "期中梳理以及规划",
       "date": "2022-05-03T09:44:40.000Z",
-      "file": "期中梳理以及规划.md"
+      "file": "期中梳理以及规划.md",
+      "slug": "12008a6f"
     },
     {
       "title": "《无人生还》读后有感",
       "date": "2022-04-30T09:58:36.000Z",
-      "file": "《无人生还》读后有感.md"
+      "file": "《无人生还》读后有感.md",
+      "slug": "7d1d0e91"
     },
     {
       "title": "Leetcode46:全排列——交换、回溯",
       "date": "2022-04-29T09:22:24.000Z",
-      "file": "Leetcode46_全排列——回溯.md"
+      "file": "Leetcode46_全排列——回溯.md",
+      "slug": "7d0a074c"
     },
     {
       "title": "Leetcode17:电话号码的字母组合——回溯",
       "date": "2022-04-27T07:36:14.000Z",
-      "file": "Leetcode17_电话号码的字母组合——回溯.md"
+      "file": "Leetcode17_电话号码的字母组合——回溯.md",
+      "slug": "0f11bd8d"
     },
     {
       "title": "Leetcode16:最接近的三数之和——排序、双指针",
       "date": "2022-04-26T10:58:23.000Z",
-      "file": "Leetcode16_最接近的三数之和——排序、双指针.md"
+      "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
+      "slug": "48d8627d"
     },
     {
       "title": "Leetcode11:盛水最多的容器——双指针",
       "date": "2022-04-25T09:26:41.000Z",
-      "file": "Leetcode11_盛水最多的容器——双指针.md"
+      "file": "Leetcode11_盛水最多的容器——双指针.md",
+      "slug": "b3c1d3e5"
     },
     {
       "title": "Leetcode743:网络延迟时间——dijkstra算法",
       "date": "2022-04-21T09:35:07.000Z",
-      "file": "Leetcode743_网络延迟时间——dijkstra算法.md"
+      "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
+      "slug": "e55a834f"
     },
     {
       "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
       "date": "2022-04-20T11:01:29.000Z",
-      "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md"
+      "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
+      "slug": "519b05f8"
     },
     {
       "title": "Leetcode821:字符的最短距离——两次遍历",
       "date": "2022-04-19T08:45:09.000Z",
-      "file": "Leetcode821_字符的最短距离——两次遍历.md"
+      "file": "Leetcode821_字符的最短距离——两次遍历.md",
+      "slug": "0690f1e1"
     },
     {
       "title": "Leetcode386:字典序排数——dfs、迭代",
       "date": "2022-04-18T09:26:02.000Z",
-      "file": "Leetcode386_字典序排数——dfs、迭代.md"
+      "file": "Leetcode386_字典序排数——dfs、迭代.md",
+      "slug": "3d6d6e6b"
     },
     {
       "title": "Leetcode5:最长回文子串——中心扩展法",
       "date": "2022-04-17T02:36:32.000Z",
-      "file": "Leetcode5_最长回文子串——中心扩展法.md"
+      "file": "Leetcode5_最长回文子串——中心扩展法.md",
+      "slug": "e5b047df"
     },
     {
       "title": "Git撤销版本",
       "date": "2022-04-16T12:23:57.000Z",
-      "file": "git撤销版本.md"
+      "file": "git撤销版本.md",
+      "slug": "5753ed33"
     },
     {
       "title": "Pandas使用技巧",
       "date": "2022-04-16T07:42:08.000Z",
-      "file": "Pandas使用技巧.md"
+      "file": "Pandas使用技巧.md",
+      "slug": "7241b9d9"
     },
     {
       "title": "Leetcode451:根据字符出现频率排序——桶排序",
       "date": "2022-04-15T10:00:29.000Z",
-      "file": "Leetcode451_根据字符出现频率排序——桶排序.md"
+      "file": "Leetcode451_根据字符出现频率排序——桶排序.md",
+      "slug": "e596e4cf"
     },
     {
       "title": "《失乐园》读后有感",
       "date": "2022-04-15T08:38:22.000Z",
-      "file": "《失乐园》读后有感.md"
+      "file": "《失乐园》读后有感.md",
+      "slug": "23ee6bf0"
     },
     {
       "title": "成功主持150人参会的讲座！",
       "date": "2022-04-10T15:05:16.000Z",
-      "file": "成功主持150人参会的讲座！.md"
+      "file": "成功主持150人参会的讲座！.md",
+      "slug": "19cbd8a1"
     },
     {
       "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
       "date": "2022-04-09T04:08:07.000Z",
-      "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md"
+      "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
+      "slug": "16f00348"
     },
     {
       "title": "C++和python常用函数",
       "date": "2022-04-08T12:23:24.000Z",
-      "file": "c++和python常用函数.md"
+      "file": "c++和python常用函数.md",
+      "slug": "09ec2d90"
     },
     {
       "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
       "date": "2022-04-08T11:59:03.000Z",
-      "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md"
+      "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
+      "slug": "79d5ca47"
     },
     {
       "title": "Leetcode347:前K个高频元素——优先队列、堆",
       "date": "2022-04-07T08:55:15.000Z",
-      "file": "Leetcode347_前K个高频元素——优先队列、堆.md"
+      "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
+      "slug": "5cddf427"
     },
     {
       "title": "Leetcode310:最小高度树",
       "date": "2022-04-06T07:07:06.000Z",
-      "file": "Leetcode310_最小高度树.md"
+      "file": "Leetcode310_最小高度树.md",
+      "slug": "5ed1d85c"
     },
     {
       "title": "Leetcode2:两数相加——链表",
       "date": "2022-04-05T08:50:12.000Z",
-      "file": "Leetcode2_两数相加——链表.md"
+      "file": "Leetcode2_两数相加——链表.md",
+      "slug": "211de655"
     },
     {
       "title": "Leetcode230:二叉搜索树中第K小的元素",
       "date": "2022-04-04T07:26:44.000Z",
-      "file": "Leetcode230_二叉搜索树中第K小的元素.md"
+      "file": "Leetcode230_二叉搜索树中第K小的元素.md",
+      "slug": "301ccc07"
     },
     {
       "title": "Leetcode450:删除二叉搜索树中的节点",
       "date": "2022-04-02T02:20:05.000Z",
-      "file": "Leetcode450_删除二叉搜索树中的节点.md"
+      "file": "Leetcode450_删除二叉搜索树中的节点.md",
+      "slug": "35b60c31"
     },
     {
       "title": "Leetcode55:跳跃游戏——贪心",
       "date": "2022-04-01T08:03:13.000Z",
-      "file": "Leetcode55_跳跃游戏——贪心.md"
+      "file": "Leetcode55_跳跃游戏——贪心.md",
+      "slug": "69e846ef"
     },
     {
       "title": "Leetcode198:打家劫舍——动态规划",
       "date": "2022-03-31T08:20:49.000Z",
-      "file": "Leetcode198_打家劫舍——动态规划.md"
+      "file": "Leetcode198_打家劫舍——动态规划.md",
+      "slug": "66b663b9"
     },
     {
       "title": "Leetcode113:路径总和——dfs、回溯",
       "date": "2022-03-30T11:19:10.000Z",
-      "file": "Leetcode113_路径总和II——dfs、回溯.md"
+      "file": "Leetcode113_路径总和II——dfs、回溯.md",
+      "slug": "d1d4a3c4"
     },
     {
       "title": "Leetcode78:子集——递归、回溯——一道困扰我的题",
       "date": "2022-03-29T08:46:07.000Z",
-      "file": "Leetcode78_子集——递归、回溯——一道困扰我的题.md"
+      "file": "Leetcode78_子集——递归、回溯——一道困扰我的题.md",
+      "slug": "bc3938df"
     },
     {
       "title": "今天逃课还被点名了qwq",
       "date": "2022-03-29T01:36:46.000Z",
-      "file": "今天逃课还被点名了qwq.md"
+      "file": "今天逃课还被点名了qwq.md",
+      "slug": "39d92005"
     },
     {
       "title": "Leetcode103:二叉树的锯齿形层序遍历",
       "date": "2022-03-27T11:36:29.000Z",
-      "file": "Leetcode103_二叉树的锯齿形层序遍历.md"
+      "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
+      "slug": "beb000fb"
     },
     {
       "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
       "date": "2022-03-26T09:02:51.000Z",
-      "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md"
+      "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
+      "slug": "6fb3bf4b"
     },
     {
       "title": "Leetcode108:将有序数组转换为二叉搜索树",
       "date": "2022-03-25T07:36:05.000Z",
-      "file": "Leetcode108_将有序数组转换为二叉搜索树.md"
+      "file": "Leetcode108_将有序数组转换为二叉搜索树.md",
+      "slug": "da6d8242"
     },
     {
       "title": "Leetcode695:岛屿的最大面积——中等难度的搜索算法",
       "date": "2022-03-24T07:47:10.000Z",
-      "file": "Leetcode695_岛屿的最大面积——中等难度的搜索算法.md"
+      "file": "Leetcode695_岛屿的最大面积——中等难度的搜索算法.md",
+      "slug": "099043ba"
     },
     {
       "title": "Leetcode977:有序数组的平方——双指针",
       "date": "2022-03-23T12:35:46.000Z",
-      "file": "Leetcode977_有序数组的平方——双指针.md"
+      "file": "Leetcode977_有序数组的平方——双指针.md",
+      "slug": "273b7289"
     },
     {
       "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
       "date": "2022-03-22T09:50:53.000Z",
-      "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md"
+      "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
+      "slug": "6e5ac913"
     },
     {
       "title": "Leetcode733:图像渲染——搜索算法",
       "date": "2022-03-21T10:27:50.000Z",
-      "file": "Leetcode733_图像渲染——搜索算法.md"
+      "file": "Leetcode733_图像渲染——搜索算法.md",
+      "slug": "2f23b348"
     },
     {
       "title": "Leetcode435:重叠区间——动态规划、贪心",
       "date": "2022-03-20T09:41:58.000Z",
-      "file": "Leetcode435_重叠区间——动态规划、贪心.md"
+      "file": "Leetcode435_重叠区间——动态规划、贪心.md",
+      "slug": "7f0b86db"
     },
     {
       "title": "Leetcode240:搜索二维矩阵——二分、矩阵",
       "date": "2022-03-19T09:55:44.000Z",
-      "file": "Leetcode240_搜索二维矩阵——二分、矩阵.md"
+      "file": "Leetcode240_搜索二维矩阵——二分、矩阵.md",
+      "slug": "e190f131"
     },
     {
       "title": "Roboflow+colab优雅地训练yolov5模型",
       "date": "2022-03-19T05:37:49.000Z",
-      "file": "roboflow+colab优雅地训练yolov5模型.md"
+      "file": "roboflow+colab优雅地训练yolov5模型.md",
+      "slug": "dbb064f5"
     },
     {
       "title": "《邓小平时代》——改革开放的总设计师",
       "date": "2022-03-18T10:32:09.000Z",
-      "file": "《邓小平时代》——改革开放的总设计师.md"
+      "file": "《邓小平时代》——改革开放的总设计师.md",
+      "slug": "95f646c6"
     },
     {
       "title": "Leetcode455:分发饼干——排序、贪心",
       "date": "2022-03-18T08:01:16.000Z",
-      "file": "Leetcode455_分发饼干——排序、贪心.md"
+      "file": "Leetcode455_分发饼干——排序、贪心.md",
+      "slug": "5c20a2a3"
     },
     {
       "title": "Leetcode160:相交链表——哈希、双指针",
       "date": "2022-03-16T12:06:00.000Z",
-      "file": "Leetcode160_相交链表——哈希、双指针.md"
+      "file": "Leetcode160_相交链表——哈希、双指针.md",
+      "slug": "4aad0dc0"
     },
     {
       "title": "mac m1 安装sqlserver踩坑经历",
       "date": "2022-03-16T10:14:14.000Z",
-      "file": "macm1安装sqlserver踩坑经历.md"
+      "file": "macm1安装sqlserver踩坑经历.md",
+      "slug": "918eb92e"
     },
     {
       "title": "Leetcode206:反转链表",
       "date": "2022-03-14T11:15:57.000Z",
-      "file": "leetcode206_反转链表.md"
+      "file": "leetcode206_反转链表.md",
+      "slug": "d4cc145b"
     },
     {
       "title": "三数之和——双指针——好难",
       "date": "2022-03-13T08:48:06.000Z",
-      "file": "三数之和——双指针——好难.md"
+      "file": "三数之和——双指针——好难.md",
+      "slug": "abd41b7c"
     },
     {
       "title": "二叉树的层序遍历——太tm妙啦",
       "date": "2022-03-11T09:57:18.000Z",
-      "file": "二叉树的层序遍历——太tm妙啦.md"
+      "file": "二叉树的层序遍历——太tm妙啦.md",
+      "slug": "6076106e"
     },
     {
       "title": "杨辉三角——数组、动态规划",
       "date": "2022-03-10T09:04:50.000Z",
-      "file": "杨辉三角——数组、动态规划.md"
+      "file": "杨辉三角——数组、动态规划.md",
+      "slug": "0aac7f3e"
     },
     {
       "title": "买卖股票的最佳时机——数组、动态规划",
       "date": "2022-03-09T12:16:07.000Z",
-      "file": "买卖股票的最佳时机——数组、动态规划.md"
+      "file": "买卖股票的最佳时机——数组、动态规划.md",
+      "slug": "bc3a067b"
     },
     {
       "title": "C语言中值传递、指针传递和引用传递",
       "date": "2022-03-07T09:15:10.000Z",
-      "file": "C语言中值传递、指针传递和引用传递.md"
+      "file": "C语言中值传递、指针传递和引用传递.md",
+      "slug": "65f5e948"
     },
     {
       "title": "二叉树的前中后序遍历",
       "date": "2022-03-07T08:33:28.000Z",
-      "file": "二叉树的前中后序遍历.md"
+      "file": "二叉树的前中后序遍历.md",
+      "slug": "1cf25f8c"
     },
     {
       "title": "两个数组的交集——数组、哈希、双指针",
       "date": "2022-03-06T08:00:46.000Z",
-      "file": "两个数组的交集——数组、哈希、双指针.md"
+      "file": "两个数组的交集——数组、哈希、双指针.md",
+      "slug": "658ce35f"
     },
     {
       "title": "环形链表——哈希、链表、双指针",
       "date": "2022-03-05T08:08:03.000Z",
-      "file": "环形链表——哈希、链表、双指针.md"
+      "file": "环形链表——哈希、链表、双指针.md",
+      "slug": "e30e2370"
     },
     {
       "title": "合并两个有序数组——数组、双指针、排序——这题的题解绝了",
       "date": "2022-03-04T07:32:13.000Z",
-      "file": "合并两个有序数组——数组、双指针、排序——这题的题解绝了.md"
+      "file": "合并两个有序数组——数组、双指针、排序——这题的题解绝了.md",
+      "slug": "aee57094"
     },
     {
       "title": "有效的数独——数组、哈希表、矩阵",
       "date": "2022-03-03T08:46:16.000Z",
-      "file": "有效的数独——数组、哈希表、矩阵.md"
+      "file": "有效的数独——数组、哈希表、矩阵.md",
+      "slug": "c36750b2"
     },
     {
       "title": "由和找到两数——数组、哈希表",
       "date": "2022-03-02T11:25:55.000Z",
-      "file": "由和找到两数——数组、哈希表.md"
+      "file": "由和找到两数——数组、哈希表.md",
+      "slug": "2473ac1b"
     },
     {
       "title": "Yolov5训练自己的目标检测模型",
       "date": "2022-02-28T14:34:57.000Z",
-      "file": "yolov5训练自己的目标检测模型.md"
+      "file": "yolov5训练自己的目标检测模型.md",
+      "slug": "8b193099"
     },
     {
       "title": "最大子数组和——动态规划、分治",
       "date": "2022-02-28T11:35:21.000Z",
-      "file": "最大子数组和——动态规划、分治.md"
+      "file": "最大子数组和——动态规划、分治.md",
+      "slug": "91bc6956"
     },
     {
       "title": "存在重复元素——排序、哈希",
       "date": "2022-02-26T11:22:16.000Z",
-      "file": "存在重复元素——排序、哈希.md"
+      "file": "存在重复元素——排序、哈希.md",
+      "slug": "3dd918a8"
     },
     {
       "title": "找到小镇的法官——图论入门",
       "date": "2022-02-25T10:49:18.000Z",
-      "file": "找到小镇的法官——图论入门.md"
+      "file": "找到小镇的法官——图论入门.md",
+      "slug": "d6d1b16d"
     },
     {
       "title": "完全背包问题——动态规划——这道题解是认真写的qwq",
       "date": "2022-02-23T11:24:06.000Z",
-      "file": "完全背包问题——动态规划.md"
+      "file": "完全背包问题——动态规划.md",
+      "slug": "54394b2a"
     },
     {
       "title": "01背包问题——动态规划",
       "date": "2022-02-22T08:42:16.000Z",
-      "file": "01背包问题——动态规划.md"
+      "file": "01背包问题——动态规划.md",
+      "slug": "554aac27"
     },
     {
       "title": "租用游艇——动态规划",
       "date": "2022-02-21T12:19:11.000Z",
-      "file": "租用游艇——动态规划.md"
+      "file": "租用游艇——动态规划.md",
+      "slug": "04c9f708"
     },
     {
       "title": "《雪国》读书笔记",
       "date": "2022-02-13T15:38:09.000Z",
-      "file": "《雪国》读书笔记.md"
+      "file": "《雪国》读书笔记.md",
+      "slug": "c04d3ca3"
     },
     {
       "title": "记录寒假学做饭",
       "date": "2022-02-02T15:11:15.000Z",
-      "file": "记录寒假学做饭.md"
+      "file": "记录寒假学做饭.md",
+      "slug": "dd3d589e"
     },
     {
       "title": "《半泽直树》观后有感",
       "date": "2022-02-01T13:52:23.000Z",
-      "file": "《半泽直树》观后有感.md"
+      "file": "《半泽直树》观后有感.md",
+      "slug": "8c24a0e2"
     },
     {
       "title": "从wordpress迁移到hugo过程分享",
       "date": "2022-01-28T07:52:50.000Z",
-      "file": "从wordpress迁移到hugo过程分享.md"
+      "file": "从wordpress迁移到hugo过程分享.md",
+      "slug": "eec5cb2f"
     },
     {
       "title": "gitee/github webhooks+nodejs实现自动拉取代码",
       "date": "2022-01-25T20:50:41.000Z",
-      "file": "gitee webhooks+nodejs实现自动拉取代码.md"
+      "file": "gitee webhooks+nodejs实现自动拉取代码.md",
+      "slug": "9992c4b8"
     },
     {
       "title": "年度总结",
       "date": "2022-01-21T11:35:06.000Z",
-      "file": "年度总结.md"
+      "file": "年度总结.md",
+      "slug": "13207411"
     },
     {
       "title": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴",
       "date": "2022-01-17T00:11:13.000Z",
-      "file": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴.md"
+      "file": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴.md",
+      "slug": "410258c9"
     },
     {
       "title": "跟基友玩双人成行这辈子没这么开心过",
       "date": "2022-01-15T23:11:00.000Z",
-      "file": "跟基友玩双人成行这辈子没这么开心过.md"
+      "file": "跟基友玩双人成行这辈子没这么开心过.md",
+      "slug": "b0cf01f1"
     },
     {
       "title": "把功夫用在平时",
       "date": "2022-01-15T23:09:38.000Z",
-      "file": "把功夫用在平时.md"
+      "file": "把功夫用在平时.md",
+      "slug": "b44deaa7"
     },
     {
       "title": "百度寄的证书和礼品，惊喜！",
       "date": "2022-01-14T10:00:39.000Z",
-      "file": "百度寄的证书和礼品，惊喜！.md"
+      "file": "百度寄的证书和礼品，惊喜！.md",
+      "slug": "144271c0"
     },
     {
       "title": "复习周苦不堪言",
       "date": "2022-01-05T10:51:42.000Z",
-      "file": "复习周苦不堪言.md"
+      "file": "复习周苦不堪言.md",
+      "slug": "9a871566"
     }
   ],
   "2023": [
     {
       "title": "SCI论文润色经验分享",
       "date": "2023-12-23T13:39:08.000Z",
-      "file": "SCI论文润色经验分享.md"
+      "file": "SCI论文润色经验分享.md",
+      "slug": "e736dfef"
     },
     {
       "title": "《置身事内》读书笔记",
       "date": "2023-12-11T12:55:26.000Z",
-      "file": "置身事内读书笔记.md"
+      "file": "置身事内读书笔记.md",
+      "slug": "1e3d20cb"
     },
     {
       "title": "如何在Windows上编译Python39源代码",
       "date": "2023-12-10T12:51:01.000Z",
-      "file": "如何在Windows上编译Python39源代码.md"
+      "file": "如何在Windows上编译Python39源代码.md",
+      "slug": "9fd37d43"
     },
     {
       "title": "蚌埠美食之旅",
       "date": "2023-10-08T12:11:39.000Z",
-      "file": "蚌埠美食之旅.md"
+      "file": "蚌埠美食之旅.md",
+      "slug": "f6639fe4"
     },
     {
       "title": "艺术品般的游戏—《荒野大镖客救赎2》",
       "date": "2023-09-19T08:59:13.000Z",
-      "file": "艺术品般的游戏—荒野大镖客2救赎.md"
+      "file": "艺术品般的游戏—荒野大镖客2救赎.md",
+      "slug": "32769736"
     },
     {
       "title": "苏州印象",
       "date": "2023-08-12T12:06:07.000Z",
-      "file": "苏州印象.md"
+      "file": "苏州印象.md",
+      "slug": "17a81efd"
     },
     {
       "title": "ChinaVis重庆之旅",
       "date": "2023-07-31T11:17:10.000Z",
-      "file": "ChinaVis重庆之旅.md"
+      "file": "ChinaVis重庆之旅.md",
+      "slug": "8cb0549f"
     },
     {
       "title": "好用的动画制作工具-Keynote",
       "date": "2023-07-01T02:41:41.000Z",
-      "file": "好用的动画制作工具-keynote.md"
+      "file": "好用的动画制作工具-keynote.md",
+      "slug": "3f0c5268"
     },
     {
       "title": "Flask的一些关于线程的特性",
       "date": "2023-07-01T02:15:46.000Z",
-      "file": "Flask的一些关于线程的特性.md"
+      "file": "Flask的一些关于线程的特性.md",
+      "slug": "c2de1901"
     },
     {
       "title": "《1984》读书笔记",
       "date": "2023-05-01T16:35:22.000Z",
-      "file": "《1984》读书笔记.md"
+      "file": "《1984》读书笔记.md",
+      "slug": "72d96981"
     },
     {
       "title": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
       "date": "2023-04-22T02:40:50.000Z",
-      "file": "vueflask实现播放任何视频源包括rtsp摄像头.md"
+      "file": "vueflask实现播放任何视频源包括rtsp摄像头.md",
+      "slug": "2453b9ad"
     },
     {
       "title": "如何搭建一个ChatGPT镜像站",
       "date": "2023-04-12T06:11:41.000Z",
-      "file": "如何搭建一个ChatGPT镜像站.md"
+      "file": "如何搭建一个ChatGPT镜像站.md",
+      "slug": "28b5db09"
     },
     {
       "title": "CSS布局基础知识",
       "date": "2023-03-20T05:32:55.000Z",
-      "file": "CSS布局基础知识.md"
+      "file": "CSS布局基础知识.md",
+      "slug": "433a59dc"
     },
     {
       "title": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
       "date": "2023-03-16T15:51:26.000Z",
-      "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md"
+      "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md",
+      "slug": "61be5727"
     },
     {
       "title": "妈妈说：好久都没这么开心了",
       "date": "2023-03-09T09:14:05.000Z",
-      "file": "妈妈说：好久都没这么开心了.md"
+      "file": "妈妈说：好久都没这么开心了.md",
+      "slug": "81f99cf2"
     },
     {
       "title": "HUSTOJ前端源代码解析（PHP）",
       "date": "2023-03-09T09:12:10.000Z",
-      "file": "HUSTOJ前端源代码解析（PHP）.md"
+      "file": "HUSTOJ前端源代码解析（PHP）.md",
+      "slug": "d09e9297"
     },
     {
       "title": "如何将语雀文档导出为html（使用语雀API）",
       "date": "2023-03-09T08:12:56.000Z",
-      "file": "如何将语雀文档导出为html（使用语雀API）.md"
+      "file": "如何将语雀文档导出为html（使用语雀API）.md",
+      "slug": "0e3ebef4"
     },
     {
       "title": "组装一台新的电脑",
       "date": "2023-03-01T00:57:51.000Z",
-      "file": "组装一台新的电脑.md"
+      "file": "组装一台新的电脑.md",
+      "slug": "8f9d9179"
     },
     {
       "title": "2023年寒假总结",
       "date": "2023-02-15T13:31:31.000Z",
-      "file": "2023年寒假总结.md"
+      "file": "2023年寒假总结.md",
+      "slug": "4416947d"
     },
     {
       "title": "跟妈妈一起的徐州一日游",
       "date": "2023-02-13T13:50:46.000Z",
-      "file": "跟妈妈一起的徐州一日游.md"
+      "file": "跟妈妈一起的徐州一日游.md",
+      "slug": "19397ade"
     },
     {
       "title": "Qt动态添加和删除布局（仿jupyter）",
       "date": "2023-02-02T06:14:19.000Z",
-      "file": "qt动态添加和删除布局（仿jupyter）.md"
+      "file": "qt动态添加和删除布局（仿jupyter）.md",
+      "slug": "65173be9"
     },
     {
       "title": "《肠子的小心思》——读书笔记",
       "date": "2023-01-28T09:57:02.000Z",
-      "file": "《肠子的小心思》——读书笔记.md"
+      "file": "《肠子的小心思》——读书笔记.md",
+      "slug": "4bf66344"
     },
     {
       "title": "致动o手柄对比xbox原装手柄使用体验分享",
       "date": "2023-01-15T00:59:39.000Z",
-      "file": "致动o手柄对比xbox原装手柄使用体验分享.md"
+      "file": "致动o手柄对比xbox原装手柄使用体验分享.md",
+      "slug": "8f710610"
     },
     {
       "title": "LiveGo——小而美的直播串流软件",
       "date": "2023-01-01T08:11:53.000Z",
-      "file": "Livego——小而美的直播串流软件.md"
+      "file": "Livego——小而美的直播串流软件.md",
+      "slug": "18b5f674"
     }
   ],
   "2024": [
     {
       "title": "品酒🍶——古井贡酒第六代55度",
       "date": "2024-12-09T14:49:43.000Z",
-      "file": "品酒-古井贡酒第六代55度.md"
+      "file": "品酒-古井贡酒第六代55度.md",
+      "slug": "11baea90"
     },
     {
       "title": "电脑启动需要经历哪些过程？",
       "date": "2024-11-27T06:51:10.000Z",
-      "file": "电脑启动需要经历哪些过程？.md"
+      "file": "电脑启动需要经历哪些过程？.md",
+      "slug": "4e728164"
     },
     {
       "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
       "date": "2024-11-27T06:47:24.000Z",
-      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md"
+      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
+      "slug": "024ab30e"
     },
     {
       "title": "Leetcode_209长度最小的子数组——滑动窗口",
       "date": "2024-11-21T13:28:00.000Z",
-      "file": "Leetcode_209长度最小的子数组.md"
+      "file": "Leetcode_209长度最小的子数组.md",
+      "slug": "35124327"
     },
     {
       "title": "高光谱遥感深度学习调研",
       "date": "2024-11-15T08:36:41.000Z",
-      "file": "高光谱遥感深度学习调研.md"
+      "file": "高光谱遥感深度学习调研.md",
+      "slug": "40c266ad"
     },
     {
       "title": "品酒（尊美醇Jameson）",
       "date": "2024-11-04T15:18:54.000Z",
-      "file": "品酒尊美醇Jameson.md"
+      "file": "品酒尊美醇Jameson.md",
+      "slug": "b9f36e78"
     },
     {
       "title": "数之和问题归纳——哈希、双指针",
       "date": "2024-11-04T12:10:30.000Z",
-      "file": "数之和问题归纳哈希双指针.md"
+      "file": "数之和问题归纳哈希双指针.md",
+      "slug": "c3608157"
     },
     {
       "title": "Leetcode142:环形链表II——快慢指针",
       "date": "2024-10-29T13:04:06.000Z",
-      "file": "Leetcode_142环形链表II.md"
+      "file": "Leetcode_142环形链表II.md",
+      "slug": "f870a3e8"
     },
     {
       "title": "Leetcode283:移动零——双指针",
       "date": "2024-09-23T12:01:16.000Z",
-      "file": "Leetcode_283移动零.md"
+      "file": "Leetcode_283移动零.md",
+      "slug": "0b17329c"
     },
     {
       "title": "品酒🍶（古井贡酒-古8）",
       "date": "2024-09-19T15:38:28.000Z",
-      "file": "品酒（古井贡酒-古8）.md"
+      "file": "品酒（古井贡酒-古8）.md",
+      "slug": "5086af34"
     },
     {
       "title": "代码块功能测试",
       "date": "2024-09-14T00:00:00.000Z",
-      "file": "代码块测试.md"
+      "file": "代码块测试.md",
+      "slug": "4692489c"
     },
     {
       "title": "绿植盆栽攻略",
       "date": "2024-08-28T10:24:07.000Z",
-      "file": "绿植盆栽攻略.md"
+      "file": "绿植盆栽攻略.md",
+      "slug": "5953ed50"
     },
     {
       "title": "品酒🍶(古井贡酒-古16)",
       "date": "2024-08-24T14:52:24.000Z",
-      "file": "品酒(古井贡酒-古16) .md"
+      "file": "品酒(古井贡酒-古16) .md",
+      "slug": "a2aab3af"
     },
     {
       "title": "品酒🍶（高脖绿瓶西凤酒陕西版）",
       "date": "2024-08-21T23:09:53.000Z",
-      "file": "品酒（高脖绿瓶西凤酒陕西版）.md"
+      "file": "品酒（高脖绿瓶西凤酒陕西版）.md",
+      "slug": "a6894469"
     },
     {
       "title": "调研遥感数据压缩",
       "date": "2024-08-20T16:11:00.000Z",
-      "file": "调研遥感数据压缩.md"
+      "file": "调研遥感数据压缩.md",
+      "slug": "a37163dc"
     },
     {
       "title": "品酒🍶（国窖 1573）",
       "date": "2024-08-17T22:01:53.000Z",
-      "file": "品酒（国窖 1573）.md"
+      "file": "品酒（国窖 1573）.md",
+      "slug": "7af852ce"
     },
     {
       "title": "新加坡访学旅行",
       "date": "2024-08-14T08:01:42.000Z",
-      "file": "新加坡访学旅行.md"
+      "file": "新加坡访学旅行.md",
+      "slug": "fe7200e4"
     },
     {
       "title": "品酒🍶（古井贡酒-古20）以及小插曲",
       "date": "2024-07-27T23:01:53.000Z",
-      "file": "品酒（古井贡酒-古20）.md"
+      "file": "品酒（古井贡酒-古20）.md",
+      "slug": "7120d25f"
     },
     {
       "title": "品酒🍶（汾酒黄盖&泸州老窖特曲经典）",
       "date": "2024-07-23T23:18:53.000Z",
-      "file": "品酒（汾酒黄盖&泸州老窖特曲经典）.md"
+      "file": "品酒（汾酒黄盖&泸州老窖特曲经典）.md",
+      "slug": "886209a4"
     },
     {
       "title": "遥感图像检索调研",
       "date": "2024-07-21T21:07:35.000Z",
-      "file": "遥感图像检索调研.md"
+      "file": "遥感图像检索调研.md",
+      "slug": "3c174b3b"
     },
     {
       "title": "压缩域图像深度学习分类/分割论文调研",
       "date": "2024-07-21T17:28:35.000Z",
-      "file": "压缩域图像深度学习分类_分割论文调研.md"
+      "file": "压缩域图像深度学习分类_分割论文调研.md",
+      "slug": "30e49844"
     },
     {
       "title": "《德米安》读后有感",
       "date": "2024-05-01T15:49:07.000Z",
-      "file": "德米安读后有感.md"
+      "file": "德米安读后有感.md",
+      "slug": "e9ae0e15"
     },
     {
       "title": "一部接地气的国产法律神剧——第二十条",
       "date": "2024-02-21T09:30:31.000Z",
-      "file": "一部接地气的国产法律神剧-第二十条.md"
+      "file": "一部接地气的国产法律神剧-第二十条.md",
+      "slug": "a94b5eff"
     }
   ],
   "2025": [
     {
       "title": "langchain-faiss加载pkl文件速度提升",
       "date": "2025-12-14T06:19:28.000Z",
-      "file": "langchain-faiss加载pkl文件速度提升.md"
+      "file": "langchain-faiss加载pkl文件速度提升.md",
+      "slug": "506f20a8"
     },
     {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
-      "file": "RAG图谱实体和边智能合并.md"
+      "file": "RAG图谱实体和边智能合并.md",
+      "slug": "46bbd497"
     },
     {
       "title": "手撕卷积神经网络+反向传播梯度更新",
       "date": "2025-07-13T07:24:20.000Z",
-      "file": "手撕卷积神经网络反向传播梯度更新.md"
+      "file": "手撕卷积神经网络反向传播梯度更新.md",
+      "slug": "8912df88"
     },
     {
       "title": "手撕Attention",
       "date": "2025-06-22T08:49:55.000Z",
-      "file": "手撕Attention.md"
+      "file": "手撕Attention.md",
+      "slug": "d764f796"
     },
     {
       "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
       "date": "2025-06-10T10:14:29.000Z",
-      "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md"
+      "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
+      "slug": "ff7483e1"
     },
     {
       "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
       "date": "2025-06-10T08:48:23.000Z",
-      "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md"
+      "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
+      "slug": "e9dd83c6"
     },
     {
       "title": "DeepResearch深度搜索实现方法调研",
       "date": "2025-05-09T14:03:42.000Z",
-      "file": "DeepResearch深度搜索实现方法调研.md"
+      "file": "DeepResearch深度搜索实现方法调研.md",
+      "slug": "47f2a5ec"
     },
     {
       "title": "开源PDF解析工具Marker深度解析",
       "date": "2025-05-05T14:36:59.000Z",
-      "file": "开源PDF解析工具Marker深度解析.md"
+      "file": "开源PDF解析工具Marker深度解析.md",
+      "slug": "19977fa8"
     },
     {
       "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
       "date": "2025-01-24T01:37:25.000Z",
-      "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md"
+      "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
+      "slug": "7624b8c1"
     }
   ],
   "2026": [
     {
       "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
       "date": "2026-03-25T12:53:00.000Z",
-      "file": "opencode-seven-core-tools.md"
+      "file": "opencode-seven-core-tools.md",
+      "slug": "512e708e"
     },
     {
       "title": "single-agent现阶段明显强于multi-agent",
       "date": "2026-03-25T03:44:00.000Z",
-      "file": "single-agent-vs-multi-agent.md"
+      "file": "single-agent-vs-multi-agent.md",
+      "slug": "7dbff82d"
     },
     {
       "title": "自动发布博客",
       "date": "2026-03-11T14:22:25.000Z",
-      "file": "自动发布博客.md"
+      "file": "自动发布博客.md",
+      "slug": "2f15163c"
     }
   ]
 }
