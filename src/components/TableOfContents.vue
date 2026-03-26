@@ -376,10 +376,23 @@ defineExpose({ hideToc });
   transform: scale(0.5);
 }
 
-/* 响应式：小屏幕隐藏 TOC */
-@media (max-width: 1200px) {
+/* 响应式：手机端 TOC 样式 */
+@media (max-width: 768px) {
   .toc-wrapper {
-    display: none;
+    right: 10px;
+    width: 180px;
+    max-height: calc(100vh - 120px);
+    top: 80px;
+  }
+  
+  .toc-wrapper.collapsed {
+    right: 10px;
+    bottom: 140px;
+  }
+  
+  .toc-fab {
+    right: 10px;
+    bottom: 140px;
   }
 }
 </style>
