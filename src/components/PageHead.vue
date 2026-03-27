@@ -1,5 +1,11 @@
 <template>
     <div class="bg">
+      <canvas
+  ref="canvas"
+  class="particle-canvas"
+  @mousemove="onMouseMove"
+  @mouseleave="onMouseLeave"
+></canvas>
       <div class="header-content">
         <div class="avatar-wrapper">
           <n-avatar 
@@ -43,6 +49,157 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 const expandNav = ref(false);
 const nav = ref<HTMLElement | null>(null);
 const navPlaceholder = ref<HTMLElement | null>(null);
+const canvas = ref<HTMLCanvasElement | null>(null);
+let ctx: CanvasRenderingContext2D | null = null;
+let animFrame: number = 0;
+let particles: Particle[] = [];
+let mouseX = -1000;
+let mouseY = -1000;
+
+interface Particle {
+  x: number;
+  y: number;
+  z: number;
+  vx: number;
+  vy: number;
+  radius: number;
+  color: string;
+}
+
+const colors = [
+  '102, 126, 234',   // 紫蓝
+  '118, 75, 162',    // 深紫
+  '0, 206, 209',     // 青色
+  '255, 182, 193',   // 暖粉
+  '147, 112, 219',   // 淡紫
+];
+
+function initCanvas() {
+  if (!canvas.value) return;
+  ctx = canvas.value.getContext('2d');
+  resizeCanvas();
+  createParticles();
+  animate();
+}
+
+function resizeCanvas() {
+  if (!canvas.value) return;
+  canvas.value.width = canvas.value.offsetWidth;
+  canvas.value.height = canvas.value.offsetHeight;
+}
+
+function createParticles() {
+  if (!canvas.value) return;
+  const w = canvas.value.offsetWidth;
+  const h = canvas.value.offsetHeight;
+  const count = Math.floor((w * h) / 15000); // 密度控制
+  particles = [];
+  for (let i = 0; i < count; i++) {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    particles.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      z: Math.random() * 2 - 1, // -1 ~ 1 纵深
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      radius: Math.random() * 1.5 + 0.5,
+      color,
+    });
+  }
+}
+
+function animate() {
+  if (!ctx || !canvas.value) return;
+  ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
+
+  const w = canvas.value.width;
+  const h = canvas.value.height;
+  const centerX = w / 2;
+  const centerY = h / 2;
+
+  // 连线：粒子之间
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const p1 = particles[i];
+      const p2 = particles[j];
+      const dx = p1.x - p2.x;
+      const dy = p1.y - p2.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      const maxDist = 120 + (p1.z + p2.z) * 20; // 近深远疏
+      if (dist < maxDist) {
+        const alpha = (1 - dist / maxDist) * 0.15;
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(${p1.color}, ${alpha})`;
+        ctx.lineWidth = 0.5;
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // 连线：鼠标与粒子
+  for (const p of particles) {
+    const dx = p.x - mouseX;
+    const dy = p.y - mouseY;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < 150) {
+      const alpha = (1 - dist / 150) * 0.25;
+      ctx.beginPath();
+      ctx.strokeStyle = `rgba(${p.color}, ${alpha})`;
+      ctx.lineWidth = 0.8;
+      ctx.moveTo(mouseX, mouseY);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+    }
+  }
+
+  // 画粒子
+  for (const p of particles) {
+    // 缓慢移动
+    p.x += p.vx;
+    p.y += p.vy;
+
+    // 边界环绕
+    if (p.x < 0) p.x = w;
+    if (p.x > w) p.x = 0;
+    if (p.y < 0) p.y = h;
+    if (p.y > h) p.y = 0;
+
+    // 3D 投影大小
+    const scale = 1 + p.z * 0.3;
+    const r = p.radius * scale;
+
+    // 光晕
+    const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r * 3);
+    grd.addColorStop(0, `rgba(${p.color}, 0.8)`);
+    grd.addColorStop(1, `rgba(${p.color}, 0)`);
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, r * 3, 0, Math.PI * 2);
+    ctx.fillStyle = grd;
+    ctx.fill();
+
+    // 核心
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${p.color}, 0.9)`;
+    ctx.fill();
+  }
+
+  animFrame = requestAnimationFrame(animate);
+}
+
+function onMouseMove(e: MouseEvent) {
+  if (!canvas.value) return;
+  const rect = canvas.value.getBoundingClientRect();
+  mouseX = e.clientX - rect.left;
+  mouseY = e.clientY - rect.top;
+}
+
+function onMouseLeave() {
+  mouseX = -1000;
+  mouseY = -1000;
+}
 
 // 头像框样式随机
 const avatarStyle = ref('ring-gradient');
@@ -75,12 +232,19 @@ onMounted(() => {
   }
   // 随机选择头像框样式
   avatarStyle.value = ringStyles[Math.floor(Math.random() * ringStyles.length)];
+  // 粒子动画
+  initCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener('resize', createParticles);
 });
 
 onBeforeUnmount(() => {
   if (navPlaceholder.value) {
     observer.unobserve(navPlaceholder.value);
   }
+  cancelAnimationFrame(animFrame);
+  window.removeEventListener('resize', resizeCanvas);
+  window.removeEventListener('resize', createParticles);
 });
 
 </script>
@@ -92,12 +256,19 @@ onBeforeUnmount(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('../assets/bg3.jpeg');
-  background-position: center;
-  background-size: cover;
   padding-bottom: 40px;
   padding-top: 60px;
   position: relative;
+  overflow: hidden;
+}
+
+.particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .bg::before {
