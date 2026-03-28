@@ -71,21 +71,13 @@
         <button class="btn-reset" @click="resetSettings">恢复默认</button>
       </div>
       
-      <div class="header-content">
+      <!-- 头像+名字+座右铭，跟随太阳位置 -->
+      <div class="header-content" ref="headerContent" :style="headerContentStyle">
         <div class="avatar-wrapper">
-          <n-avatar 
-            :round="true" 
-            :size="120" 
-            src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/avatar.jpg"
-            :bordered="true"
-            class="avatar"
-          />
           <div class="avatar-ring" :class="avatarStyle"></div>
         </div>
-        
         <h1 class="name">Bailey</h1>
         <p class="zym">读万卷书，行万里路</p>
-        
         <div class="social-links">
           <a href="https://github.com/leyouBaloy" target="_blank" class="social-icon" title="GitHub">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
@@ -115,6 +107,12 @@ const expandNav = ref(false);
 const navPlaceholder = ref<HTMLElement | null>(null);
 const canvas = ref<HTMLCanvasElement | null>(null);
 const lineCanvas = ref<HTMLCanvasElement | null>(null);
+const headerContent = ref<HTMLElement | null>(null);
+const headerContentStyle = ref<Record<string, string>>({});
+
+// 头像纹理
+let avatarTexture: THREE.Texture | null = null;
+let avatarMesh: THREE.Mesh | null = null;
 
 // 控制面板
 const showControls = ref(false);
@@ -204,8 +202,10 @@ class CosmicUniverse {
   private mouseX = -10000;
   private mouseY = -10000;
   private animFrame = 0;
+  private onPositionUpdate?: (pos: { x: number; y: number } | null) => void;
   
-  constructor(canvasEl: HTMLCanvasElement, lineCanvasEl: HTMLCanvasElement) {
+  constructor(canvasEl: HTMLCanvasElement, lineCanvasEl: HTMLCanvasElement, onPositionUpdate?: (pos: { x: number; y: number } | null) => void) {
+    this.onPositionUpdate = onPositionUpdate;
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0x000000);
     
@@ -242,6 +242,14 @@ class CosmicUniverse {
     const canvas = this.renderer.domElement;
     canvas.addEventListener('mousemove', this.onMouseMove.bind(this));
     canvas.addEventListener('mouseleave', this.onMouseLeave.bind(this));
+  }
+  
+  // 初始化并加载头像纹理
+  public initWithAvatar(callback?: () => void) {
+    this.loadAvatarTexture(() => {
+      this.init();
+      if (callback) callback();
+    });
   }
   
   private createStars(count: number) {
@@ -308,7 +316,68 @@ class CosmicUniverse {
     this.sunRing = new THREE.Mesh(sunRingGeometry, sunRingMaterial);
     this.sunGroup.add(this.sunRing);
     
+    // 创建头像平面，贴在太阳前面
+    this.createAvatarPlane();
+    
     this.scene.add(this.sunGroup);
+  }
+  
+  private createAvatarPlane() {
+    if (avatarMesh) {
+      this.scene.remove(avatarMesh);
+      avatarMesh = null;
+    }
+    if (avatarTexture) {
+      const avatarSize = sunSize * 1.6;
+      const avatarGeometry = new THREE.PlaneGeometry(avatarSize, avatarSize);
+      const avatarMaterial = new THREE.MeshBasicMaterial({
+        map: avatarTexture,
+        transparent: true,
+        opacity: 0.95,
+        side: THREE.DoubleSide
+      });
+      avatarMesh = new THREE.Mesh(avatarGeometry, avatarMaterial);
+      // 放在太阳前面一点的位置
+      avatarMesh.position.set(0, 0, 30);
+      this.scene.add(avatarMesh);
+    }
+  }
+  
+  // 将3D位置投影到2D屏幕坐标
+  public getSunScreenPosition(): { x: number; y: number } | null {
+    if (!this.sunGroup || !this.camera) return null;
+    
+    const sunPos = new THREE.Vector3(0, 0, 0);
+    sunPos.project(this.camera);
+    
+    const canvas = this.renderer.domElement;
+    const widthHalf = canvas.clientWidth / 2;
+    const heightHalf = canvas.clientHeight / 2;
+    
+    return {
+      x: sunPos.x * widthHalf + widthHalf,
+      y: -sunPos.y * heightHalf + heightHalf
+    };
+  }
+  
+  // 加载头像纹理
+  private loadAvatarTexture(callback: () => void) {
+    const loader = new THREE.TextureLoader();
+    loader.load(
+      'https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/avatar.jpg',
+      (texture) => {
+        avatarTexture = texture;
+        if (this.sunGroup) {
+          this.createAvatarPlane();
+        }
+        if (callback) callback();
+      },
+      undefined,
+      (error) => {
+        console.error('Failed to load avatar texture:', error);
+        if (callback) callback();
+      }
+    );
   }
   
   private createPlanetConfigs() {
@@ -449,6 +518,11 @@ class CosmicUniverse {
       mesh.scale.setScalar(0.9 + twinkle * 0.1);
     });
     
+    // 让头像平面始终面向相机
+    if (avatarMesh) {
+      avatarMesh.lookAt(this.camera.position);
+    }
+    
     if (this.lineCtx) {
       this.lineCtx.clearRect(0, 0, this.WIDTH, this.HEIGHT);
       
@@ -476,6 +550,12 @@ class CosmicUniverse {
     }
     
     this.renderer.render(this.scene, this.camera);
+    
+    // 更新header内容位置
+    if (this.onPositionUpdate) {
+      const pos = this.getSunScreenPosition();
+      this.onPositionUpdate(pos);
+    }
   }
   
   public updateParams(params: any) {
@@ -484,6 +564,12 @@ class CosmicUniverse {
     if (params.sunSize !== undefined) {
       sunSize = params.sunSize;
       this.createSun();
+      // 更新头像平面大小
+      if (avatarMesh && avatarTexture) {
+        const avatarSize = sunSize * 1.6;
+        avatarMesh.geometry.dispose();
+        avatarMesh.geometry = new THREE.PlaneGeometry(avatarSize, avatarSize);
+      }
     }
     if (params.starCount !== undefined) {
       starCount = params.starCount;
@@ -544,7 +630,24 @@ onMounted(() => {
   avatarStyle.value = ringStyles[Math.floor(Math.random() * ringStyles.length)];
   
   if (canvas.value && lineCanvas.value) {
-    universe = new CosmicUniverse(canvas.value, lineCanvas.value);
+    universe = new CosmicUniverse(canvas.value, lineCanvas.value, (pos) => {
+      if (pos) {
+        const avatarSize = 120;
+        const nameOffsetY = 20;
+        const mottoOffsetY = 60;
+        const socialOffsetY = 100;
+        
+        headerContentStyle.value = {
+          position: 'absolute',
+          left: `${pos.x - avatarSize / 2}px`,
+          top: `${pos.y - avatarSize / 2 + nameOffsetY}px`,
+          width: `${avatarSize}px`,
+          transform: 'translateX(0)',
+          zIndex: '10'
+        };
+      }
+    });
+    universe.initWithAvatar();
   }
 });
 
@@ -756,12 +859,18 @@ onBeforeUnmount(() => {
 }
 
 .header-content {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeInUp 0.8s ease;
+  pointer-events: none;
+}
+
+.header-content .name,
+.header-content .zym,
+.header-content .social-links {
+  pointer-events: auto;
 }
 
 @keyframes fadeInUp {
@@ -777,29 +886,7 @@ onBeforeUnmount(() => {
 
 .avatar-wrapper {
   position: relative;
-  margin-bottom: 20px;
-}
-
-.avatar {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  z-index: 2;
-  animation: avatarFadeIn 0.8s ease forwards;
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-@keyframes avatarFadeIn {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.avatar:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+  margin-bottom: 0;
 }
 
 .avatar-ring {
@@ -987,10 +1074,6 @@ onBeforeUnmount(() => {
   .zym {
     font-size: 14px;
     padding: 0 15px;
-  }
-  
-  .avatar-wrapper :deep(.n-avatar) {
-    --n-size: 100px !important;
   }
   
   .social-icon {
