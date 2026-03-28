@@ -72,7 +72,7 @@
       </div>
       
       <!-- 头像+名字+座右铭，跟随太阳位置 -->
-      <div class="header-content" ref="headerContent" :style="headerContentStyle">
+      <div class="header-content">
         <div class="avatar-wrapper">
           <div class="avatar-ring" :class="avatarStyle"></div>
         </div>
@@ -98,7 +98,6 @@
 </template>
 
 <script setup lang="ts">
-import { NAvatar} from 'naive-ui';
 import Nav from "@/components/Nav.vue";
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
 import * as THREE from 'three';
@@ -107,9 +106,6 @@ const expandNav = ref(false);
 const navPlaceholder = ref<HTMLElement | null>(null);
 const canvas = ref<HTMLCanvasElement | null>(null);
 const lineCanvas = ref<HTMLCanvasElement | null>(null);
-const headerContent = ref<HTMLElement | null>(null);
-const headerContentStyle = ref<Record<string, string>>({});
-
 // 头像纹理
 let avatarTexture: THREE.Texture | null = null;
 let avatarMesh: THREE.Mesh | null = null;
@@ -630,23 +626,7 @@ onMounted(() => {
   avatarStyle.value = ringStyles[Math.floor(Math.random() * ringStyles.length)];
   
   if (canvas.value && lineCanvas.value) {
-    universe = new CosmicUniverse(canvas.value, lineCanvas.value, (pos) => {
-      if (pos) {
-        const avatarSize = 120;
-        const nameOffsetY = 20;
-        const mottoOffsetY = 60;
-        const socialOffsetY = 100;
-        
-        headerContentStyle.value = {
-          position: 'absolute',
-          left: `${pos.x - avatarSize / 2}px`,
-          top: `${pos.y - avatarSize / 2 + nameOffsetY}px`,
-          width: `${avatarSize}px`,
-          transform: 'translateX(0)',
-          zIndex: '10'
-        };
-      }
-    });
+    universe = new CosmicUniverse(canvas.value, lineCanvas.value);
     universe.initWithAvatar();
   }
 });
@@ -665,13 +645,10 @@ onBeforeUnmount(() => {
 <style scoped>
 .bg {
   width: 100%;
-  min-height: 100vh;
+  min-height: 480px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-bottom: 40px;
-  padding-top: 60px;
   position: relative;
   overflow: hidden;
 }
@@ -682,6 +659,7 @@ onBeforeUnmount(() => {
   left: 0;
   width: 100%;
   height: 100%;
+  min-height: 480px;
   z-index: 0;
 }
 
@@ -691,6 +669,7 @@ onBeforeUnmount(() => {
   left: 0;
   width: 100%;
   height: 100%;
+  min-height: 480px;
   z-index: 1;
   pointer-events: none;
 }
@@ -860,18 +839,11 @@ onBeforeUnmount(() => {
 }
 
 .header-content {
-  position: absolute;
+  position: relative;
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  pointer-events: none;
-}
-
-.header-content .name,
-.header-content .zym,
-.header-content .social-links {
-  pointer-events: auto;
 }
 
 @keyframes fadeInUp {
