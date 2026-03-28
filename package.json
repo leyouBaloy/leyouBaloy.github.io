@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "node src/scripts/generate-metadata.js && vite",
+    "preinstall": "npm config set registry https://registry.npmjs.org/",
     "prebuild": "node src/scripts/generate-metadata.js",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "yarn install && run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite-ssg build",
     "type-check": "vue-tsc --build --force",
