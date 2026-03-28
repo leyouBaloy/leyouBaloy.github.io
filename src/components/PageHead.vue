@@ -1,11 +1,76 @@
 <template>
     <div class="bg">
       <canvas
-  ref="canvas"
-  class="particle-canvas"
-  @mousemove="onMouseMove"
-  @mouseleave="onMouseLeave"
-></canvas>
+        ref="canvas"
+        class="cosmic-canvas"
+      ></canvas>
+      <div ref="lineCanvasContainer" class="line-canvas-container">
+        <canvas ref="lineCanvas" class="line-canvas"></canvas>
+      </div>
+      
+      <!-- 控制面板按钮 -->
+      <button class="control-toggle" @click="toggleControlPanel" :title="showControls ? '关闭设置' : '打开设置'">
+        ⚙️
+      </button>
+      
+      <!-- 控制面板 -->
+      <div v-show="showControls" class="control-panel">
+        <div class="control-header">
+          <span>宇宙设置</span>
+          <button class="control-close" @click="showControls = false">✕</button>
+        </div>
+        
+        <div class="control-section">
+          <div class="control-group">
+            <label>X轴倾斜 <span class="value">{{ Math.round(tiltX * 180 / Math.PI) }}°</span></label>
+            <input type="range" v-model.number="tiltXDeg" min="0" max="90" @input="updateOrbitAngles">
+          </div>
+          <div class="control-group">
+            <label>Y轴旋转 <span class="value">{{ Math.round(tiltY * 180 / Math.PI) }}°</span></label>
+            <input type="range" v-model.number="tiltYDeg" min="0" max="90" @input="updateOrbitAngles">
+          </div>
+          <div class="control-group">
+            <label>Z轴旋转 <span class="value">{{ Math.round(tiltZ * 180 / Math.PI) }}°</span></label>
+            <input type="range" v-model.number="tiltZDeg" min="0" max="90" @input="updateOrbitAngles">
+          </div>
+        </div>
+        
+        <div class="control-section">
+          <div class="control-group">
+            <label>公转速度 <span class="value">{{ revolutionSpeed.toFixed(3) }}</span></label>
+            <input type="range" v-model.number="revolutionSpeed" min="0.001" max="0.05" step="0.001">
+          </div>
+          <div class="control-group">
+            <label>自转速度 <span class="value">{{ rotationSpeed.toFixed(3) }}</span></label>
+            <input type="range" v-model.number="rotationSpeed" min="0.001" max="0.1" step="0.001">
+          </div>
+        </div>
+        
+        <div class="control-section">
+          <div class="control-group">
+            <label>太阳大小 <span class="value">{{ sunSize }}</span></label>
+            <input type="range" v-model.number="sunSize" min="20" max="150">
+          </div>
+          <div class="control-group">
+            <label>星星数量 <span class="value">{{ starCount }}</span></label>
+            <input type="range" v-model.number="starCount" min="50" max="400">
+          </div>
+        </div>
+        
+        <div class="control-section">
+          <div class="control-group checkbox-group">
+            <input type="checkbox" v-model="showOrbits" id="showOrbits">
+            <label for="showOrbits">显示轨道</label>
+          </div>
+          <div class="control-group checkbox-group">
+            <input type="checkbox" v-model="showStars" id="showStars">
+            <label for="showStars">显示星星</label>
+          </div>
+        </div>
+        
+        <button class="btn-reset" @click="resetSettings">恢复默认</button>
+      </div>
+      
       <div class="header-content">
         <div class="avatar-wrapper">
           <n-avatar 
@@ -41,176 +106,422 @@
 </template>
 
 <script setup lang="ts">
-
 import { NAvatar} from 'naive-ui';
 import Nav from "@/components/Nav.vue";
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
+import * as THREE from 'three';
 
 const expandNav = ref(false);
-const nav = ref<HTMLElement | null>(null);
 const navPlaceholder = ref<HTMLElement | null>(null);
 const canvas = ref<HTMLCanvasElement | null>(null);
-let ctx: CanvasRenderingContext2D | null = null;
-let animFrame: number = 0;
-let particles: Particle[] = [];
-let mouseX = -1000;
-let mouseY = -1000;
+const lineCanvas = ref<HTMLCanvasElement | null>(null);
 
-interface Particle {
-  x: number;
-  y: number;
-  z: number;
-  vx: number;
-  vy: number;
-  radius: number;
-  color: string;
-}
+// 控制面板
+const showControls = ref(false);
+const toggleControlPanel = () => {
+  showControls.value = !showControls.value;
+};
 
-const colors = [
-  '102, 126, 234',   // 紫蓝
-  '118, 75, 162',    // 深紫
-  '0, 206, 209',     // 青色
-  '255, 182, 193',   // 暖粉
-  '147, 112, 219',   // 淡紫
-];
+// 参数
+const tiltXDeg = ref(10);
+const tiltYDeg = ref(0);
+const tiltZDeg = ref(20);
+let tiltX = 10 * Math.PI / 180;
+let tiltY = 0 * Math.PI / 180;
+let tiltZ = 20 * Math.PI / 180;
+let revolutionSpeed = 0.01;
+let rotationSpeed = 0.02;
+let sunSize = 70;
+let starCount = 180;
+let showOrbits = ref(true);
+let showStars = ref(true);
 
-function initCanvas() {
-  if (!canvas.value) return;
-  ctx = canvas.value.getContext('2d');
-  resizeCanvas();
-  createParticles();
-  animate();
-}
+const updateOrbitAngles = () => {
+  tiltX = tiltXDeg.value * Math.PI / 180;
+  tiltY = tiltYDeg.value * Math.PI / 180;
+  tiltZ = tiltZDeg.value * Math.PI / 180;
+  if (universe) {
+    universe.updateOrbitRotation();
+  }
+};
 
-function resizeCanvas() {
-  if (!canvas.value) return;
-  canvas.value.width = canvas.value.offsetWidth;
-  canvas.value.height = canvas.value.offsetHeight;
-}
+const resetSettings = () => {
+  tiltXDeg.value = 10;
+  tiltYDeg.value = 0;
+  tiltZDeg.value = 20;
+  revolutionSpeed = 0.01;
+  rotationSpeed = 0.02;
+  sunSize = 70;
+  starCount = 180;
+  showOrbits.value = true;
+  showStars.value = true;
+  tiltX = 10 * Math.PI / 180;
+  tiltY = 0 * Math.PI / 180;
+  tiltZ = 20 * Math.PI / 180;
+  if (universe) {
+    universe.reset();
+  }
+};
 
-function createParticles() {
-  if (!canvas.value) return;
-  const w = canvas.value.offsetWidth;
-  const h = canvas.value.offsetHeight;
-  const count = Math.floor((w * h) / 15000); // 密度控制
-  particles = [];
-  for (let i = 0; i < count; i++) {
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    particles.push({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      z: Math.random() * 2 - 1, // -1 ~ 1 纵深
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      radius: Math.random() * 1.5 + 0.5,
-      color,
+// 监听参数变化
+watch([revolutionSpeed, rotationSpeed, sunSize, starCount, showOrbits, showStars], () => {
+  if (universe) {
+    universe.updateParams({
+      revolutionSpeed,
+      rotationSpeed,
+      sunSize,
+      starCount,
+      showOrbits: showOrbits.value,
+      showStars: showStars.value
     });
   }
-}
+});
 
-function animate() {
-  if (!ctx || !canvas.value) return;
-  ctx.clearRect(0, 0, canvas.value.width, canvas.value.height);
+let universe: CosmicUniverse | null = null;
 
-  const w = canvas.value.width;
-  const h = canvas.value.height;
-  const centerX = w / 2;
-  const centerY = h / 2;
-
-  // 连线：粒子之间
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const p1 = particles[i];
-      const p2 = particles[j];
-      const dx = p1.x - p2.x;
-      const dy = p1.y - p2.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      const maxDist = 120 + (p1.z + p2.z) * 20; // 近深远疏
-      if (dist < maxDist) {
-        const alpha = (1 - dist / maxDist) * 0.15;
-        ctx.beginPath();
-        ctx.strokeStyle = `rgba(${p1.color}, ${alpha})`;
-        ctx.lineWidth = 0.5;
-        ctx.moveTo(p1.x, p1.y);
-        ctx.lineTo(p2.x, p2.y);
-        ctx.stroke();
+class CosmicUniverse {
+  private WIDTH = 900;
+  private HEIGHT = 480;
+  private HALF_W = this.WIDTH / 2;
+  private HALF_H = this.HEIGHT / 2;
+  
+  private scene: THREE.Scene;
+  private camera: THREE.PerspectiveCamera;
+  private renderer: THREE.WebGLRenderer;
+  private lineCtx: CanvasRenderingContext2D | null = null;
+  
+  private starsGroup: THREE.Group;
+  private starData: any[] = [];
+  private sunGroup: THREE.Group | null = null;
+  private sun: THREE.Mesh | null = null;
+  private sunRing: THREE.Mesh | null = null;
+  private planets: THREE.Mesh[] = [];
+  private orbitLines: THREE.Line[] = [];
+  private planetConfigs: any[] = [];
+  
+  private orbitRotation: THREE.Matrix4;
+  private frameCount = 0;
+  private mouseX = -10000;
+  private mouseY = -10000;
+  private animFrame = 0;
+  
+  constructor(canvasEl: HTMLCanvasElement, lineCanvasEl: HTMLCanvasElement) {
+    this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color(0x000000);
+    
+    const aspect = this.WIDTH / this.HEIGHT;
+    this.camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 2000);
+    this.camera.position.set(0, 0, 600);
+    this.camera.lookAt(0, 0, 0);
+    
+    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, canvas: canvasEl });
+    this.renderer.setSize(this.WIDTH, this.HEIGHT);
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.renderer.sortObjects = true;
+    
+    if (lineCanvasEl.parentElement) {
+      lineCanvasEl.width = this.WIDTH;
+      lineCanvasEl.height = this.HEIGHT;
+      this.lineCtx = lineCanvasEl.getContext('2d');
+    }
+    
+    this.starsGroup = new THREE.Group();
+    this.orbitRotation = new THREE.Matrix4();
+    
+    this.init();
+  }
+  
+  private init() {
+    this.createStars(starCount);
+    this.createSun();
+    this.createPlanetConfigs();
+    this.createPlanets();
+    this.updateOrbitRotation();
+    this.animate();
+    
+    const canvas = this.renderer.domElement;
+    canvas.addEventListener('mousemove', this.onMouseMove.bind(this));
+    canvas.addEventListener('mouseleave', this.onMouseLeave.bind(this));
+  }
+  
+  private createStars(count: number) {
+    this.starsGroup.clear();
+    this.starData = [];
+    
+    const starMaterial = new THREE.MeshBasicMaterial({
+      color: 0xFFFFFF,
+      transparent: true,
+      opacity: 0.8
+    });
+    
+    const starGeometry = new THREE.CircleGeometry(1.5, 8);
+    
+    for (let i = 0; i < count; i++) {
+      const x = (Math.random() - 0.5) * this.WIDTH * 0.9;
+      const y = (Math.random() - 0.5) * this.HEIGHT * 0.9;
+      const z = (Math.random() - 0.5) * 300;
+      const twinkleSpeed = 0.02 + Math.random() * 0.04;
+      const twinkleOffset = Math.random() * Math.PI * 2;
+      
+      const star = new THREE.Mesh(starGeometry, starMaterial.clone());
+      star.position.set(x, y, z);
+      star.userData = { twinkleSpeed, twinkleOffset, baseOpacity: 0.4 + Math.random() * 0.6 };
+      this.starsGroup.add(star);
+      this.starData.push({ mesh: star, x, y, z });
+    }
+    
+    this.starsGroup.visible = showStars.value;
+    this.scene.add(this.starsGroup);
+  }
+  
+  private createSun() {
+    if (this.sunGroup) {
+      this.scene.remove(this.sunGroup);
+    }
+    
+    this.sunGroup = new THREE.Group();
+    this.sunGroup.position.set(0, 0, 0);
+    
+    const sunInnerGeometry = new THREE.IcosahedronGeometry(sunSize + 2, 1);
+    const sunInnerMaterial = new THREE.MeshBasicMaterial({
+      color: 0x000000,
+      side: THREE.BackSide
+    });
+    const sunInner = new THREE.Mesh(sunInnerGeometry, sunInnerMaterial);
+    this.sunGroup.add(sunInner);
+    
+    const sunGeometry = new THREE.IcosahedronGeometry(sunSize, 1);
+    const sunMaterial = new THREE.MeshBasicMaterial({
+      color: 0xFFD700,
+      wireframe: true
+    });
+    this.sun = new THREE.Mesh(sunGeometry, sunMaterial);
+    this.sunGroup.add(this.sun);
+    
+    const sunRingGeometry = new THREE.RingGeometry(sunSize + 5, sunSize + 15, 32);
+    const sunRingMaterial = new THREE.MeshBasicMaterial({
+      color: 0xFFD700,
+      transparent: true,
+      opacity: 0.15,
+      side: THREE.DoubleSide
+    });
+    this.sunRing = new THREE.Mesh(sunRingGeometry, sunRingMaterial);
+    this.sunGroup.add(this.sunRing);
+    
+    this.scene.add(this.sunGroup);
+  }
+  
+  private createPlanetConfigs() {
+    this.planetConfigs = [
+      { type: 'box', size: [18, 18, 18], orbitRadiusX: 180, orbitRadiusZ: 135, speed: revolutionSpeed, color: 0x4A90D9, startAngle: 0 },
+      { type: 'sphere', size: 14, orbitRadiusX: 240, orbitRadiusZ: 180, speed: revolutionSpeed, color: 0xD94A6B, startAngle: Math.PI / 3 },
+      { type: 'octahedron', size: 16, orbitRadiusX: 315, orbitRadiusZ: 240, speed: revolutionSpeed, color: 0x6BD94A, startAngle: Math.PI * 2 / 3 },
+      { type: 'tetrahedron', size: 18, orbitRadiusX: 390, orbitRadiusZ: 300, speed: revolutionSpeed, color: 0x9A6BD9, startAngle: Math.PI }
+    ];
+  }
+  
+  private createPlanets() {
+    this.planets.forEach(p => this.scene.remove(p));
+    this.planets = [];
+    
+    this.planetConfigs.forEach((config, index) => {
+      let geometry;
+      if (config.type === 'box') {
+        geometry = new THREE.BoxGeometry(...config.size);
+      } else if (config.type === 'sphere') {
+        geometry = new THREE.SphereGeometry(config.size, 16, 12);
+      } else if (config.type === 'octahedron') {
+        geometry = new THREE.OctahedronGeometry(config.size);
+      } else if (config.type === 'tetrahedron') {
+        geometry = new THREE.TetrahedronGeometry(config.size);
+      }
+      
+      const material = new THREE.MeshBasicMaterial({
+        color: config.color,
+        wireframe: true
+      });
+      const planet = new THREE.Mesh(geometry, material);
+      
+      planet.userData = {
+        orbitRadiusX: config.orbitRadiusX,
+        orbitRadiusZ: config.orbitRadiusZ,
+        speed: revolutionSpeed,
+        angle: config.startAngle,
+        rotationAxis: new THREE.Vector3(0, 1, 0).applyMatrix4(this.orbitRotation)
+      };
+      
+      this.planets.push(planet);
+      this.scene.add(planet);
+    });
+  }
+  
+  updateOrbitRotation() {
+    this.orbitRotation = new THREE.Matrix4();
+    const rotZ = new THREE.Matrix4().makeRotationZ(tiltZ);
+    const rotY = new THREE.Matrix4().makeRotationY(tiltY);
+    const rotX = new THREE.Matrix4().makeRotationX(tiltX);
+    this.orbitRotation.multiplyMatrices(rotZ, rotY);
+    this.orbitRotation.multiply(rotX);
+    
+    this.updateOrbits();
+    this.updatePlanetRotationAxes();
+  }
+  
+  private createOrbitLine(radiusX: number, radiusZ: number) {
+    const points = [];
+    const segments = 128;
+    
+    for (let i = 0; i <= segments; i++) {
+      const angle = (i / segments) * Math.PI * 2;
+      const localX = Math.cos(angle) * radiusX;
+      const localY = 0;
+      const localZ = Math.sin(angle) * radiusZ;
+      const localPoint = new THREE.Vector3(localX, localY, localZ);
+      localPoint.applyMatrix4(this.orbitRotation);
+      points.push(localPoint);
+    }
+    
+    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+    const material = new THREE.LineBasicMaterial({
+      color: 0xFFFFFF,
+      transparent: true,
+      opacity: 0.12
+    });
+    return new THREE.Line(geometry, material);
+  }
+  
+  private updateOrbits() {
+    this.orbitLines.forEach(line => this.scene.remove(line));
+    this.orbitLines = [];
+    
+    if (showOrbits.value) {
+      this.planetConfigs.forEach(config => {
+        const orbit = this.createOrbitLine(config.orbitRadiusX, config.orbitRadiusZ);
+        this.scene.add(orbit);
+        this.orbitLines.push(orbit);
+      });
+    }
+  }
+  
+  private updatePlanetRotationAxes() {
+    this.planets.forEach(planet => {
+      planet.userData.rotationAxis = new THREE.Vector3(0, 1, 0).applyMatrix4(this.orbitRotation);
+    });
+  }
+  
+  private onMouseMove(e: MouseEvent) {
+    const rect = this.renderer.domElement.getBoundingClientRect();
+    this.mouseX = e.clientX - rect.left - this.HALF_W;
+    this.mouseY = this.HALF_H - (e.clientY - rect.top);
+  }
+  
+  private onMouseLeave() {
+    this.mouseX = -10000;
+    this.mouseY = -10000;
+  }
+  
+  private animate = () => {
+    this.animFrame = requestAnimationFrame(this.animate);
+    this.frameCount++;
+    
+    if (this.sun) this.sun.rotation.y += 0.005;
+    if (this.sunRing) this.sunRing.rotation.z += 0.002;
+    
+    this.planets.forEach(planet => {
+      const data = planet.userData;
+      data.angle += revolutionSpeed;
+      
+      const localX = Math.cos(data.angle) * data.orbitRadiusX;
+      const localZ = Math.sin(data.angle) * data.orbitRadiusZ;
+      
+      const localPoint = new THREE.Vector3(localX, 0, localZ);
+      localPoint.applyMatrix4(this.orbitRotation);
+      planet.position.copy(localPoint);
+      
+      planet.rotateOnAxis(data.rotationAxis, rotationSpeed);
+    });
+    
+    this.starData.forEach(star => {
+      const mesh = star.mesh;
+      const { twinkleSpeed, twinkleOffset, baseOpacity } = mesh.userData;
+      const twinkle = Math.sin(this.frameCount * twinkleSpeed + twinkleOffset);
+      mesh.material.opacity = baseOpacity * (0.7 + twinkle * 0.3);
+      mesh.scale.setScalar(0.9 + twinkle * 0.1);
+    });
+    
+    if (this.lineCtx) {
+      this.lineCtx.clearRect(0, 0, this.WIDTH, this.HEIGHT);
+      
+      const nearbyStars = this.starData.filter(star => {
+        const dx = star.x - this.mouseX;
+        const dy = star.y - this.mouseY;
+        return Math.sqrt(dx * dx + dy * dy) < 50;
+      });
+      
+      if (nearbyStars.length > 1) {
+        this.lineCtx.strokeStyle = 'rgba(255, 255, 255, 0.25)';
+        this.lineCtx.lineWidth = 1;
+        
+        for (let i = 0; i < nearbyStars.length; i++) {
+          for (let j = i + 1; j < nearbyStars.length; j++) {
+            this.lineCtx.beginPath();
+            const p1 = nearbyStars[i];
+            const p2 = nearbyStars[j];
+            this.lineCtx.moveTo(p1.x + this.HALF_W, this.HALF_H - p1.y);
+            this.lineCtx.lineTo(p2.x + this.HALF_W, this.HALF_H - p2.y);
+            this.lineCtx.stroke();
+          }
+        }
       }
     }
+    
+    this.renderer.render(this.scene, this.camera);
   }
-
-  // 连线：鼠标与粒子
-  for (const p of particles) {
-    const dx = p.x - mouseX;
-    const dy = p.y - mouseY;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    if (dist < 150) {
-      const alpha = (1 - dist / 150) * 0.25;
-      ctx.beginPath();
-      ctx.strokeStyle = `rgba(${p.color}, ${alpha})`;
-      ctx.lineWidth = 0.8;
-      ctx.moveTo(mouseX, mouseY);
-      ctx.lineTo(p.x, p.y);
-      ctx.stroke();
+  
+  public updateParams(params: any) {
+    if (params.revolutionSpeed !== undefined) revolutionSpeed = params.revolutionSpeed;
+    if (params.rotationSpeed !== undefined) rotationSpeed = params.rotationSpeed;
+    if (params.sunSize !== undefined) {
+      sunSize = params.sunSize;
+      this.createSun();
+    }
+    if (params.starCount !== undefined) {
+      starCount = params.starCount;
+      this.createStars(starCount);
+    }
+    if (params.showOrbits !== undefined) {
+      showOrbits.value = params.showOrbits;
+      this.updateOrbits();
+    }
+    if (params.showStars !== undefined) {
+      showStars.value = params.showStars;
+      this.starsGroup.visible = showStars.value;
     }
   }
-
-  // 画粒子
-  for (const p of particles) {
-    // 缓慢移动
-    p.x += p.vx;
-    p.y += p.vy;
-
-    // 边界环绕
-    if (p.x < 0) p.x = w;
-    if (p.x > w) p.x = 0;
-    if (p.y < 0) p.y = h;
-    if (p.y > h) p.y = 0;
-
-    // 3D 投影大小
-    const scale = 1 + p.z * 0.3;
-    const r = p.radius * scale;
-
-    // 光晕
-    const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r * 3);
-    grd.addColorStop(0, `rgba(${p.color}, 0.8)`);
-    grd.addColorStop(1, `rgba(${p.color}, 0)`);
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, r * 3, 0, Math.PI * 2);
-    ctx.fillStyle = grd;
-    ctx.fill();
-
-    // 核心
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(${p.color}, 0.9)`;
-    ctx.fill();
+  
+  public reset() {
+    this.createSun();
+    this.createPlanetConfigs();
+    this.createPlanets();
+    this.updateOrbitRotation();
+    this.createStars(starCount);
+    this.starsGroup.visible = true;
   }
-
-  animFrame = requestAnimationFrame(animate);
-}
-
-function onMouseMove(e: MouseEvent) {
-  if (!canvas.value) return;
-  const rect = canvas.value.getBoundingClientRect();
-  mouseX = e.clientX - rect.left;
-  mouseY = e.clientY - rect.top;
-}
-
-function onMouseLeave() {
-  mouseX = -1000;
-  mouseY = -1000;
+  
+  public destroy() {
+    cancelAnimationFrame(this.animFrame);
+  }
 }
 
 // 头像框样式随机
 const avatarStyle = ref('ring-gradient');
 
-// 头像框样式列表
 const ringStyles = [
-  'ring-gradient',      // 渐变呼吸
-  'ring-neon',         // 霓虹灯效果
-  'ring-aurora',       // 极光效果
-  'ring-stars',        // 星光效果
-  'ring-dream',        // 梦幻效果
+  'ring-gradient',
+  'ring-neon',
+  'ring-aurora',
+  'ring-stars',
+  'ring-dream',
 ];
 
 const observer = new IntersectionObserver(
@@ -230,21 +541,20 @@ onMounted(() => {
   if (navPlaceholder.value) {
     observer.observe(navPlaceholder.value);
   }
-  // 随机选择头像框样式
   avatarStyle.value = ringStyles[Math.floor(Math.random() * ringStyles.length)];
-  // 粒子动画
-  initCanvas();
-  window.addEventListener('resize', resizeCanvas);
-  window.addEventListener('resize', createParticles);
+  
+  if (canvas.value && lineCanvas.value) {
+    universe = new CosmicUniverse(canvas.value, lineCanvas.value);
+  }
 });
 
 onBeforeUnmount(() => {
   if (navPlaceholder.value) {
     observer.unobserve(navPlaceholder.value);
   }
-  cancelAnimationFrame(animFrame);
-  window.removeEventListener('resize', resizeCanvas);
-  window.removeEventListener('resize', createParticles);
+  if (universe) {
+    universe.destroy();
+  }
 });
 
 </script>
@@ -262,13 +572,175 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
-.particle-canvas {
+.cosmic-canvas {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+.line-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.line-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.control-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #FFD700;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.control-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotate(45deg);
+}
+
+.control-panel {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 15px;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  z-index: 99;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.control-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 13px;
+  color: #FFD700;
+}
+
+.control-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  line-height: 1;
+}
+
+.control-close:hover {
+  color: #fff;
+}
+
+.control-section {
+  margin-bottom: 12px;
+}
+
+.control-section:last-child {
+  margin-bottom: 0;
+}
+
+.control-group {
+  margin-bottom: 8px;
+}
+
+.control-group:last-child {
+  margin-bottom: 0;
+}
+
+.control-group label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+}
+
+.control-group .value {
+  color: #4A90D9;
+  font-size: 11px;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  outline: none;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #FFD700;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #FFD700;
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-reset {
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.btn-reset:hover {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #FFD700;
 }
 
 .bg::before {
@@ -280,11 +752,12 @@ onBeforeUnmount(() => {
   bottom: 0;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
   pointer-events: none;
+  z-index: 0;
 }
 
 .header-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -339,7 +812,6 @@ onBeforeUnmount(() => {
   opacity: 0.5;
 }
 
-/* 样式1: 渐变呼吸 */
 .ring-gradient {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
   background-size: 200% 200%;
@@ -356,7 +828,6 @@ onBeforeUnmount(() => {
   50% { opacity: 0.6; transform: scale(1.02); }
 }
 
-/* 样式2: 霓虹灯效果 */
 .ring-neon {
   box-shadow: 0 0 20px rgba(102, 126, 234, 0.6),
               0 0 40px rgba(118, 75, 162, 0.4),
@@ -369,7 +840,6 @@ onBeforeUnmount(() => {
   50% { box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.6); }
 }
 
-/* 样式3: 极光效果 */
 .ring-aurora {
   background: linear-gradient(45deg, 
     rgba(0, 255, 127, 0.4) 0%, 
@@ -386,7 +856,6 @@ onBeforeUnmount(() => {
   50% { transform: scale(1.05) rotate(5deg); opacity: 0.7; }
 }
 
-/* 样式4: 星光效果 */
 .ring-stars {
   background: radial-gradient(circle at 30% 30%, 
     rgba(255, 255, 255, 0.8) 0%, 
@@ -400,7 +869,6 @@ onBeforeUnmount(() => {
   50% { opacity: 0.8; transform: scale(1.1); }
 }
 
-/* 样式5: 梦幻效果 */
 .ring-dream {
   background: linear-gradient(180deg, 
     rgba(255, 182, 193, 0.5) 0%,
@@ -534,5 +1002,16 @@ onBeforeUnmount(() => {
     width: 20px;
     height: 20px;
   }
-}
-</style>
+  
+  .control-panel {
+    width: 200px;
+    right: 10px;
+  }
+  
+  .control-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    right: 10px;
+  }
+}</style>
