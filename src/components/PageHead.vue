@@ -207,8 +207,8 @@ class CosmicUniverse {
     
     const aspect = this.WIDTH / this.HEIGHT;
     this.camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 2000);
-    this.camera.position.set(0, 0, 600);
-    this.camera.lookAt(0, 0, 0);
+    this.camera.position.set(0, 300, 600);
+    this.camera.lookAt(0, 50, 0);
     
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, canvas: canvasEl });
     this.renderer.setSize(this.WIDTH, this.HEIGHT);
@@ -645,7 +645,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .bg {
   width: 100%;
-  min-height: 480px;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -659,7 +659,7 @@ onBeforeUnmount(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  min-height: 480px;
+  min-height: 700px;
   z-index: 0;
 }
 
@@ -669,7 +669,7 @@ onBeforeUnmount(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  min-height: 480px;
+  min-height: 700px;
   z-index: 1;
   pointer-events: none;
 }
