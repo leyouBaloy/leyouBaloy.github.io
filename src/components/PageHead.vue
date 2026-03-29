@@ -325,7 +325,8 @@ class CosmicUniverse {
     }
     if (avatarTexture) {
       const avatarSize = sunSize * 1.6;
-      const avatarGeometry = new THREE.PlaneGeometry(avatarSize, avatarSize);
+      // 圆形几何体，64 段保证足够平滑
+      const avatarGeometry = new THREE.CircleGeometry(avatarSize / 2, 64);
       const avatarMaterial = new THREE.MeshBasicMaterial({
         map: avatarTexture,
         transparent: true,
@@ -356,26 +357,42 @@ class CosmicUniverse {
     };
   }
   
-  // 加载头像纹理
+  // 加载头像纹理并裁剪为圆形
   private loadAvatarTexture(callback: () => void) {
-    const loader = new THREE.TextureLoader();
-    loader.load(
-      'https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/avatar.jpg',
-      (texture) => {
-        avatarTexture = texture;
-        if (this.sunGroup) {
-          this.createAvatarPlane();
-        }
-        if (callback) callback();
-      },
-      undefined,
-      (error) => {
-        console.error('Failed to load avatar texture:', error);
-        if (callback) callback();
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      // 用 Canvas 裁剪出圆形头像
+      const size = Math.max(img.width, img.height);
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d')!;
+      const radius = size / 2;
+      // 圆形裁剪
+      ctx.beginPath();
+      ctx.arc(radius, radius, radius, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.clip();
+      // 绘制图片（居中）
+      const sx = (size - img.width) / 2;
+      const sy = (size - img.height) / 2;
+      ctx.drawImage(img, sx, sy);
+      // 创建 Three.js 纹理
+      avatarTexture = new THREE.CanvasTexture(canvas);
+      avatarTexture.needsUpdate = true;
+      if (this.sunGroup) {
+        this.createAvatarPlane();
       }
-    );
+      if (callback) callback();
+    };
+    img.onerror = () => {
+      console.error('Failed to load avatar image');
+      if (callback) callback();
+    };
+    img.src = 'https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/avatar.jpg';
   }
-  
+
   private createPlanetConfigs() {
     this.planetConfigs = [
       { type: 'box', size: [18, 18, 18], orbitRadiusX: 180, orbitRadiusZ: 135, speed: revolutionSpeed, color: 0x4A90D9, startAngle: 0 },
