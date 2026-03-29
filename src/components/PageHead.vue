@@ -117,10 +117,10 @@ const toggleControlPanel = () => {
 };
 
 // 参数
-const tiltXDeg = ref(10);
+const tiltXDeg = ref(20);
 const tiltYDeg = ref(0);
 const tiltZDeg = ref(20);
-let tiltX = 10 * Math.PI / 180;
+let tiltX = 20 * Math.PI / 180;
 let tiltY = 0 * Math.PI / 180;
 let tiltZ = 20 * Math.PI / 180;
 let revolutionSpeed = 0.01;
@@ -284,7 +284,7 @@ class CosmicUniverse {
     }
     
     this.sunGroup = new THREE.Group();
-    this.sunGroup.position.set(0, 0, 0);
+    this.sunGroup.position.set(0, 100, 0);
     
     const sunInnerGeometry = new THREE.IcosahedronGeometry(sunSize + 2, 1);
     const sunInnerMaterial = new THREE.MeshBasicMaterial({
@@ -330,12 +330,12 @@ class CosmicUniverse {
       const avatarMaterial = new THREE.MeshBasicMaterial({
         map: avatarTexture,
         transparent: true,
-        opacity: 0.95,
+        opacity: 1.0,
         side: THREE.DoubleSide
       });
       avatarMesh = new THREE.Mesh(avatarGeometry, avatarMaterial);
-      // 放在太阳前面一点的位置
-      avatarMesh.position.set(0, 0, 30);
+      // 放在太阳前面一点的位置，与 sunGroup 同步上移 100px
+      avatarMesh.position.set(0, 100, 30);
       this.scene.add(avatarMesh);
     }
   }
@@ -460,6 +460,7 @@ class CosmicUniverse {
       const localZ = Math.sin(angle) * radiusZ;
       const localPoint = new THREE.Vector3(localX, localY, localZ);
       localPoint.applyMatrix4(this.orbitRotation);
+      localPoint.y += 100; // 整体上移，不影响倾斜角度
       points.push(localPoint);
     }
     
@@ -518,6 +519,7 @@ class CosmicUniverse {
       
       const localPoint = new THREE.Vector3(localX, 0, localZ);
       localPoint.applyMatrix4(this.orbitRotation);
+      localPoint.y += 100; // 整体上移，不影响倾斜角度
       planet.position.copy(localPoint);
       
       planet.rotateOnAxis(data.rotationAxis, rotationSpeed);
@@ -861,7 +863,7 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 300px;
+  padding-top: 240px;
 }
 
 @keyframes fadeInUp {

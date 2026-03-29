@@ -95,9 +95,11 @@ defineProps({
 .avatar-img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
+  filter: none;
+  border-radius: inherit;
 }
 
 .avatar-placeholder {
