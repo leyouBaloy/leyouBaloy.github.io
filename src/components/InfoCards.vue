@@ -56,20 +56,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import {NIcon} from "naive-ui";
-import {CloudDownloadOutline,HomeOutline} from "@vicons/ionicons5";
 import {useRouter} from 'vue-router';
-
-const downLoad = ()=>{
-	let a = document.createElement('a');
-	let evt = document.createEvent('MouseEvents');
-	a.download = '孙百乐简历';
-	a.href = '/孙百乐简历.pdf';
-	evt.initEvent('click',true,true);
-	a.dispatchEvent(evt);
-	window.URL.revokeObjectURL(a.href);
-}
 
 const router = useRouter();
 

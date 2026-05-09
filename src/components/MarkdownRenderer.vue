@@ -11,6 +11,18 @@
         <ArchiveOutline />
       </n-icon>
       分类：{{ metaData.categories }}
+      <span v-if="metaData.wordCount" class="meta-split">约 {{ metaData.wordCount }} 字</span>
+      <span v-if="metaData.readingTime" class="meta-split">{{ metaData.readingTime }} 分钟阅读</span>
+      <span v-if="metaData.updatedAt" class="meta-split">更新于：{{ metaData.updatedAt }}</span>
+    </div>
+    <div v-if="isOutdated" class="article-notice">
+      这篇文章发布已经超过两年，部分工具、版本或观点可能已经变化，请结合最新信息判断。
+    </div>
+    <div class="share-bar">
+      <button class="share-btn" @click="copyArticleLink">{{ copyText }}</button>
+      <button class="share-btn" @click="shareTo('weibo')">微博</button>
+      <button class="share-btn" @click="shareTo('x')">X</button>
+      <button class="share-btn" @click="nativeShare">系统分享</button>
     </div>
     <div class="md" ref="mdRef">
       <component :is="renderedContent" />
@@ -19,7 +31,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, h, Fragment, nextTick } from 'vue';
+import { computed, ref, onMounted, h, Fragment, nextTick } from 'vue';
 import axios from 'axios';
 import frontMatter from 'front-matter';
 import { NIcon, NImage } from 'naive-ui';
@@ -30,7 +42,6 @@ import texmath from 'markdown-it-texmath'; // 导入公式渲染插件
 import 'katex/dist/katex.min.css'; // 导入公式渲染样式
 import katex from 'katex'; // 导入 katex
 import CodeBlock from './CodeBlock.vue'; // 导入代码块组件
-import Prism from 'prismjs';
 
 const props = defineProps({
   filename: {
@@ -38,12 +49,26 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['headings-ready']);
+const emit = defineEmits(['headings-ready', 'metadata-ready']);
 
 const metaData = ref({});
 const renderedContent = ref();
 const articleRef = ref(null);
 const mdRef = ref(null);
+const copyText = ref('复制链接');
+
+const formatDate = (date) => {
+  if (!date) return '';
+  return new Date(date).toLocaleDateString();
+};
+
+const isOutdated = computed(() => {
+  if (!metaData.value.date) return false;
+  const published = new Date(metaData.value.date).getTime();
+  if (Number.isNaN(published)) return false;
+  const twoYears = 1000 * 60 * 60 * 24 * 365 * 2;
+  return Date.now() - published > twoYears;
+});
 
 // 生成 heading slug ID
 const slugify = (text) => {
@@ -68,6 +93,26 @@ const extractHeadings = (markdown) => {
   return headings;
 };
 
+const stripMarkdown = (content) => {
+  return content
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]+)]\([^)]*\)/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/[#>*_\-|~]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+};
+
+const countWords = (content) => {
+  const chineseChars = content.match(/[\u4e00-\u9fa5]/g) || [];
+  const latinWords = content
+    .replace(/[\u4e00-\u9fa5]/g, ' ')
+    .match(/[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)*/g) || [];
+  return chineseChars.length + latinWords.length;
+};
+
 const md = new MarkdownIt({
   html: true,
   xhtmlOut: false,
@@ -90,6 +135,56 @@ const md = new MarkdownIt({
     errorColor: '#cc0000'
   }
 });
+
+const getArticleUrl = () => {
+  if (typeof window === 'undefined') return '';
+  return window.location.href;
+};
+
+const copyArticleLink = async () => {
+  const url = getArticleUrl();
+  if (!url) return;
+  try {
+    await navigator.clipboard.writeText(url);
+  } catch (error) {
+    const textArea = document.createElement('textarea');
+    textArea.value = url;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  }
+  copyText.value = '已复制';
+  window.setTimeout(() => {
+    copyText.value = '复制链接';
+  }, 1800);
+};
+
+const nativeShare = async () => {
+  const url = getArticleUrl();
+  if (!url) return;
+  if (navigator.share) {
+    await navigator.share({
+      title: metaData.value.title || document.title,
+      text: metaData.value.title || 'Bailey Blog',
+      url
+    });
+    return;
+  }
+  await copyArticleLink();
+};
+
+const shareTo = (platform) => {
+  const url = encodeURIComponent(getArticleUrl());
+  const title = encodeURIComponent(metaData.value.title || 'Bailey Blog');
+  const shareUrls = {
+    weibo: `https://service.weibo.com/share/share.php?url=${url}&title=${title}`,
+    x: `https://twitter.com/intent/tweet?url=${url}&text=${title}`
+  };
+  window.open(shareUrls[platform], '_blank', 'noopener,noreferrer,width=720,height=520');
+};
 
 // 检查节点是否在表格内
 const isInsideTable = (node) => {
@@ -268,8 +363,21 @@ const loadMarkdown = async () => {
   try {
     const response = await axios.get(`/markdown/${props.filename}`);
     const { attributes, body } = frontMatter(response.data);
-    attributes.date = new Date(attributes.date).toLocaleDateString();
-    attributes.categories = attributes.categories.join(', ');
+    const categories = Array.isArray(attributes.categories)
+      ? attributes.categories
+      : (attributes.categories ? [attributes.categories] : []);
+    const tags = Array.isArray(attributes.tags)
+      ? attributes.tags
+      : (attributes.tags ? [attributes.tags] : []);
+    const displayTags = categories.length ? categories : tags;
+    attributes.date = formatDate(attributes.date);
+    attributes.updatedAt = formatDate(attributes.updatedAt || attributes.updated || attributes.date);
+    attributes.categories = displayTags.length ? displayTags.join(', ') : '未分类';
+    attributes.tags = displayTags;
+    attributes.file = props.filename;
+    const wordCount = countWords(stripMarkdown(body));
+    attributes.wordCount = attributes.wordCount || wordCount;
+    attributes.readingTime = attributes.readingTime || Math.max(1, Math.ceil(wordCount / 400));
     metaData.value = attributes;
 
     // 提取 headings
@@ -299,6 +407,7 @@ const loadMarkdown = async () => {
 
       // emit 给父组件
       emit('headings-ready', updatedHeadings);
+      emit('metadata-ready', metaData.value);
     }
   } catch (error) {
     console.error('Error loading markdown file:', error);
@@ -320,6 +429,74 @@ onMounted(loadMarkdown);
   font-size: .875rem;
   color: #73828c;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.meta-split::before {
+  content: '·';
+  margin-right: 6px;
+  color: #b6c2cc;
+}
+
+.article-notice {
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border-left: 4px solid #f59e0b;
+  border-radius: 8px;
+  background: #fffbeb;
+  color: #92400e;
+  font-size: 14px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.share-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.share-btn {
+  border: 1px solid #bae6fd;
+  background: #f0f9ff;
+  color: #0369a1;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.share-btn:hover {
+  border-color: #0ea5e9;
+  color: #0c4a6e;
+  transform: translateY(-1px);
+}
+
+:global([data-theme="dark"]) .article-notice {
+  background: #422006;
+  color: #fde68a;
+  border-left-color: #f59e0b;
+}
+
+:global([data-theme="dark"]) .share-btn {
+  background: #1f2937;
+  border-color: #374151;
+  color: #bae6fd;
+}
+
+:global([data-theme="dark"]) .share-btn:hover {
+  border-color: #38bdf8;
+  color: #e0f2fe;
 }
 
 .md {

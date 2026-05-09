@@ -1,115 +1,155 @@
 [
   {
+    "title": "DeepResearch深度搜索实现方法调研",
+    "date": "2025-05-09T14:03:42.000Z",
+    "updatedAt": "2025-05-09T14:03:42.000Z",
+    "file": "DeepResearch深度搜索实现方法调研.md",
+    "slug": "47f2a5ec",
+    "excerpt": "DeepResearch深度搜索实现方法调研 Deep Research 有三个核心能力 + 能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索） + 能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？） + 能力三：对多源的信息进行验",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png",
+    "wordCount": 1546,
+    "readingTime": 4,
+    "searchContent": "DeepResearch深度搜索实现方法调研 Deep Research 有三个核心能力 + 能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索） + 能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？） + 能力三：对多源的信息进行验证，整合（一个文档说 37 岁，另一个文档说 27 岁，怎么分辨？） 非强化学习方法： 《Search o1: Agentic Search Enhanced Large Reasoning Models》（能力二） 作者：人大+清华 https://github.com/sunnynexus/Search o1 (Star 800） + 当遇到知识不确定的情况时，模型会自动生成搜索查询，格式为 搜索词 + 系统检测到这一标记后，暂停模型推理，执行网络搜索 + 搜索结果被包装在 检索到的内容 标记中返回给模型 + 如果检索到的结果特别长，就用大语言模型对其进行精炼，再放进推理链条中。 优势： 检索触发机制：传统 RAG 是静态的、预先定义的；Search o1 是动态的、由模型主动触发的，可以在一定程度上实现能力二。 Deep Searcher https://github.com/zilliztech/deep searcher 基本流程： 1. 将原始问题进行拆解，分成多个子问题。 2. 子问题分别进行检索，得到对应的答案。 3. 子问题和答案进行整合，由模型生成下一轮子问题。 4. 达到指定检索轮数后，汇总最终的答案。 OpenDeepResearcher https://github.com/mshumer/OpenDeepResearcher 1. 用户输入一个研究主题后，LLM会生成最多四个不同的搜索关键词。 2. 每个搜索关键词都通过调用SERPAPI接口进行搜索。 3. 将所有获取到的链接进行聚合和去重处理。 4. 对每个唯一链接调用JINA网页内容解析接口，利用LLM评估网页的有用性，如果页面被判定为有效，则提取相关文本内容。 5. 汇总所有信息，判断是否需要进一步生成新的搜索关键词。如果需要，则生成新的查询；否则，循环终止。 6. 将所有收集到的上下文信息整合后，由LLM生成一份全面、详尽的报告。 deep research https://github.com/dzhng/deep research 1. 获取用户的查询和研究参数（广度与深度）并生成SERP查询。 2. 处理搜索结果，提取关键内容用于生成后续研究方向。 3. 如果深度 0，则根据新的研究方向继续探索。 4. 将所有上下文汇总成一份全面的Markdown报告。 强化学习方法： 《DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning》(能力一) 作者：伊利诺伊大学香槟分校+高丽大学 https://github.com/pat jj/DeepRetrieval (Star 360) query改写 已被证实是检索流程中的关键步骤。当用户提交问题时，大型语言模型(LLM)通常会对其进行重新表述(称为增强查询)，然后再执行检索。DeepRetrieval采用创新方法，利用强化学习(RL)而非传统的监督式微调(SFT)来优化这一关键步骤。 DeepRetrieval的突出之处在于它能够通过\"试错\"方式直接学习，使用检索指标作为奖励，无需昂贵的监督数据。这种方法使模型能够针对实际性能指标进行优化，而不仅仅是模仿人工编写的查询。 训练策略使用 PPO。 数据集：PubMed、ClinicalTrials.gov...公开数据集 《Search R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning》（能力一、二、三） 伊利诺伊大学香槟分校 https://github.com/PeterGriffinJin/Search R1 + 将搜索引擎建模为环境的一部分 模型可以在生成中插入 query 指令，系统则响应 results ，最终答案用 标签输出，推理过程包裹在 中。 + 支持多轮思考 检索循环 模型可以识别信息缺口并主动发起下一轮搜索，而不是一次性拼接上下文。 + 基于强化学习策略学习 训练采用 PPO （Proximal Policy Optimization）或 GRPO （Group Relative Policy Optimization）算法，奖励信号基于最终结果（如 Exact Match）而非过程监督。 + 避免优化干扰的技术细节 引入 Retrieved Token Loss Masking，对搜索返回内容不反向传播，从而保持训练稳定。 从下图来看，它用 7B 模型就能超越 Search o1 和 680B 参数的 R1？这种“小模型大能力”的背后，正是 RL 训练出的搜索策略弥补了知识覆盖和参数规模的不足。 + 数据集 ：在七个问答数据集上进行评估，包括一般问答（NQ、TriviaQA、PopQA）和多跳问答（HotpotQA、2WikiMultiHopQA、Musique、Bamboogle）。 + 基线比较 ：与多种方法进行比较，包括无检索的推理、检索增强生成（RAG）、工具调用方法（如IRCoT和Search o1）、监督微调（SFT）和基于RL的微调（R1）。 + 模型和检索设置 ：使用Qwen 2.5 3B和Qwen 2.5 7B模型，以2018年维基百科转储作为知识源，E5作为检索器，每次检索返回3个段落。 奖励函数： 总结 + 非强化学习方法从技术上来看技术路线都是一样的，即 使用推理模型分析 ，结合 联网搜索 以及 ReAct机制 ，根据用户输入扩展问题，再对每个问题进行多次联网查找，推理、再查找的过程，最终输出一个综合性的答案。这套方法也比较容易复现。 + 使用强化学习对整体进行进行端到端训练固然可以提升效果，用小模型代替大模型。但缺点也很明显，依赖于高质量的数据，会限制其应用范围，比如无法支持多种模型。 + 使用强化学习对个别流程进行针对性训练的是比较有可行性的，比如针对query生成专门训练。 + 当前的方法主要讨论的都是能力一、二，对能力三较少有针对性优化。",
+    "totalPages": 28
+  },
+  {
     "title": "开源PDF解析工具Marker深度解析",
     "date": "2025-05-05T14:36:59.000Z",
+    "updatedAt": "2025-05-05T14:36:59.000Z",
     "file": "开源PDF解析工具Marker深度解析.md",
     "slug": "19977fa8",
-    "excerpt": "开源PDF解析工具Marker深度解析检索增强生成（RAG）系统的第一步就是做pdf解析，从复杂多样的pdf中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker和MinerU。因为Marker是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进",
+    "excerpt": "开源PDF解析工具Marker深度解析 检索增强生成（RAG）系统的第一步就是做 pdf 解析，从复杂多样的 pdf 中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker 和 MinerU。因为 Marker 是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进行解析",
     "tags": [
       "技能分享"
     ],
     "img": "",
-    "totalPages": 28
+    "wordCount": 2329,
+    "readingTime": 6,
+    "searchContent": "开源PDF解析工具Marker深度解析 检索增强生成（RAG）系统的第一步就是做 pdf 解析，从复杂多样的 pdf 中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker 和 MinerU。因为 Marker 是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进行解析。 深度学习模型 在marker/models.py中可以看到，marker 用到了如下的深度学习模型: 这些模型都来自surya，作者没有直接介绍这些模型的原理，但可推测 像检测相关的 DetectionPredictor 和 InlineDetectionPredictor 可能用 Faster R CNN、YOLO 系列等目标检测模型； LayoutPredictor 或采用 Mask R CNN 、LayoutLM 等进行布局分析； OCRErrorPredictor 或许借助 RNN 变体或 BERT 类模型处理 OCR 错误； RecognitionPredictor 可能使用 CRNN 等做字符识别； TableRecPredictor 会用到基于 GNN 的模型处理表格； TexifyPredictor 可能采用 Seq2Seq 或 Transformer based 的 Seq2Seq 模型来生成 LaTeX 代码。 代码使用 PyTorch 框架，可指定设备和数据类型。 解析流程 因为其它数据类型（docx，pptx，xlsx）都可以转成pdf，所以 pdf 是 marker 处理的主要对象。从marker/converters/pdf.py可以看到处理pdf 的所有流程如下。marker 先通过以下流程，把pdf 解析为 document（抽象语法树），然后将document 渲染为json，html 或者markdown 格式。 通用格式处理 1. OrderProcessor 用于处理文档中元素的顺序，确保各部分内容按照正确的逻辑顺序排列，比如调整段落、列表项等的先后顺序。 2. LineMergeProcessor 对分割的行进行合并操作。在OCR处理或文档解析过程中，文本可能会被错误地分割成多行，该处理器会将相关的行合并成合理的段落或语句。 3. LineNumbersProcessor 处理文档中的行号信息。它可以识别、提取或添加行号，也可能对行号的格式和编号规则进行调整，以符合特定的输出要求。 特定元素处理 1. BlockquoteProcessor 专门处理文档中的块引用内容。它会识别块引用的起始和结束位置，对其进行格式化，例如添加特定的缩进或标记来区分块引用与普通文本。 2. CodeProcessor 处理代码块。会识别代码块的边界，对代码进行语法高亮处理（如果需要），并确保代码的格式在转换过程中保持正确，例如保留缩进、换行等。 3. ListProcessor 处理列表元素，包括有序列表和无序列表。它会识别列表项的格式，确保列表的编号或标记正确显示，并且处理列表嵌套等复杂情况。 4. PageHeaderProcessor 处理文档页面的页眉部分。可以识别页眉内容，对其进行提取、格式化或去除不必要的信息，以保证页眉内容在输出中正确显示。 5. SectionHeaderProcessor 处理文档中的章节标题。它会识别不同级别的章节标题，根据标题的层次结构进行相应的格式化，例如设置不同的字体大小、加粗等，以体现章节的主次关系。 6. TableProcessor 处理文档中的表格。会识别表格的结构，包括表头、表体、单元格等，对表格进行格式化，确保表格的布局和内容在转换后正确显示，可能还会处理表格的合并单元格等情况。 特定内容处理 1. DocumentTOCProcessor 生成文档的目录（TOC）。它会分析文档中的章节标题，根据标题的层次结构生成目录，并为每个目录项添加对应的页码或链接，方便读者快速定位文档内容。 2. EquationProcessor 处理文档中的数学公式。会识别公式的格式，可能会将公式转换为特定的表示形式，如LaTeX代码，以便在后续的渲染中正确显示数学内容。 3. FootnoteProcessor 处理文档中的脚注。它会识别脚注的引用标记和脚注内容，将脚注正确地放置在页面底部或文档末尾，并处理脚注与正文的关联。 4. TextProcessor 对普通文本进行处理，包括文本的清理、替换、大小写转换等操作，以确保文本的质量和一致性。 5. ReferenceProcessor 处理文档中的参考文献。它会识别参考文献的格式，对其进行整理和格式化，使其符合特定的引用规范，如APA、MLA等。 基于大语言模型（LLM）的处理 1. LLMTableProcessor 利用大语言模型对表格进行处理。可以对表格内容进行语义分析、补充缺失信息、优化表格结构等，以提高表格处理的质量和智能化程度。 2. LLMTableMergeProcessor 使用大语言模型来处理表格合并的情况。当文档中有多个相关表格需要合并时，该处理器借助大语言模型的理解能力，合理地合并表格内容，确保合并后的表格逻辑清晰。 3. LLMFormProcessor 利用大语言模型处理文档中的表单。可以识别表单的字段、填写要求，甚至可以根据上下文对表单内容进行自动填充或验证。 4. LLMInlineMathLinesProcessor 借助大语言模型处理行内数学公式。它可以对行内数学公式进行更准确的识别和转换，提高公式处理的准确性和可读性。 5. LLMComplexRegionProcessor 处理文档中的复杂区域，这些区域可能包含多种类型的元素，如文本、图像、表格等。大语言模型可以帮助理解这些复杂区域的结构和语义，进行更合理的处理和转换。 6. LLMImageDescriptionProcessor 利用大语言模型为文档中的图像生成描述信息。可以根据图像的内容、上下文等生成准确的图像描述，提高文档的可访问性和信息完整性。 7. LLMEquationProcessor 结合大语言模型处理数学公式。与普通的 EquationProcessor 相比，它可以利用大语言模型的语义理解能力，对公式进行更深入的分析和处理，例如对公式进行解释、推导等。 8. LLMHandwritingProcessor 使用大语言模型处理手写内容。可以识别手写文字，将其转换为可编辑的文本，并对识别结果进行优化和纠错，提高手写内容处理的准确性。 9. LLMMathBlockProcessor 借助大语言模型处理独立的数学块。它可以对数学块进行更细致的分析和处理，确保数学块的内容和格式在转换后正确显示，同时可能会对数学块进行语义解释等操作。 调试相关 1. DebugProcessor 主要用于调试目的。它可以输出一些调试信息，帮助开发者检查文档处理过程中的中间结果、变量值等，以便发现和解决问题。 这些处理器共同作用，对PDF文档进行全面、细致的解析和处理，以实现将PDF转换为其他格式（如Markdown）的功能。 其它类型的文件处理方式： 对于docx，marker使用mammoth库把docx转换成HTML，然后再用weasyprint库把HTML转成PDF。中间隔了一个HTML，效果很差，亲测不如用 wps 把docx 转pdf。 对于pptx，使用python pptx库解析pptx元素，然后转化成HTML，再用weasyprint 将 HTML 渲染为 PDF。 对于xlsx，使用openpyxl库的 load workbook 加载 XLSX 文件，将每个工作表转换为包含合并单元格处理的 HTML 表格。通过weasyprint 转成pdf。 Renderers marker 提供了三种格式的输出：json、html、markdown，它们的代码都在marker/renderers。这三种格式包含的信息不是相同的，以下是分析： 因为 document 最容易转化为 json（都是树结构可以直接转），所以 json 包含的信息最多（比如包含了caption 的分类结果，还有目标检测bbox 框），但因为过于复杂所以一般用不上。 html 是可视化效果最好的，尤其是表格，marker 对表格的解析非常惊艳，不仅文本精确识别，而且能识别出复杂的表结构（比如合并单元格），这些都能用 html 很好的渲染。 markdown 包含的信息量最少，但是胜在简单，在 RAG 任务中适合作为下游 LLM 模型的输入。注意markdown 是从html 转换过来的而不是document，所以一些复杂结构（比如表格）会有失真。 renderers 中的代码可读性不错，可以自己修改得到想要的输出。比如我就修改过 markdown 的输出，让它包含页码、bbox、table html 等信息。 总结 marker 是一个非常优秀的基于深度学习的 pdf 解析工具，它可以在大部分场景下得到完美的解析结果，代码可读性和拓展性也很不错，很难想象这是一个人独自开发出来的。 marker 项目地址：https://github.com/VikParuchuri/marker"
   },
   {
     "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
     "date": "2025-01-24T01:37:25.000Z",
+    "updatedAt": "2025-01-24T01:37:25.000Z",
     "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
     "slug": "7624b8c1",
-    "excerpt": "思路![image-20250124101620483](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png)1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）",
+    "excerpt": "思路 1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）。把需要布局的组件（这里叫做waterfall item）放在瀑布流容器里面渲染出来。使用绝对定位（position: absolute），把它移到屏幕外面，不要占用页面高度，并且设置不可见（visibility:hidden）。 2.渲染",
     "tags": [
       "技能分享"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png"
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png",
+    "wordCount": 504,
+    "readingTime": 2,
+    "searchContent": "思路 1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）。把需要布局的组件（这里叫做waterfall item）放在瀑布流容器里面渲染出来。使用绝对定位（position: absolute），把它移到屏幕外面，不要占用页面高度，并且设置不可见（visibility:hidden）。 2.渲染出来之后才能计算高度。获取.waterfall item的dom元素，遍历这些元素，使用getBoundingClientRect()获取高度。 3.开始布局。以2列为例，新建两个变量分别表示2列的高度。遍历第2步获取的dom元素的高度，把dom元素的高度加到最小的高度上。这个过程还可以考虑在组件之间加上留白（gutter）。 4.使用transform样式将waterfall item移动到对应高度所在的位置。transform将组件移动到指定坐标，横坐标跟列有关，纵坐标跟高度有关。 5.更新瀑布流容器的高度为两列高度中最大者。 细节 实际场景中图片一般使用懒加载，这会导致在组件计算高度时因为图片还没有被加载出来，所以得到错误的高度。这时候就需要在组件里添加一个onImageLoaded函数，当图片加载完成后调用，重新布局。 屏幕尺寸变化时重新布局。设置两个监听器监听屏幕尺寸变化，当屏幕尺寸改变了之后，一个触发宽度重新设置，第二个触发重新布局。 防抖，意思就是防止频繁触发布局造成性能爆炸。这个问题可能会在图片非常多，或者屏幕宽度频繁变化时出现。解决思路很简单，就是在所有布局操作前加个定时器，使得在规定时间内只能触发有限次数。代码在细节1有体现。 代码参考：https://github.com/heikaimu/vue3 waterfall plugin 感谢作者开源。"
   },
   {
     "title": "品酒🍶——古井贡酒第六代55度",
     "date": "2024-12-09T14:49:43.000Z",
+    "updatedAt": "2024-12-09T14:49:43.000Z",
     "file": "品酒-古井贡酒第六代55度.md",
     "slug": "11baea90",
-    "excerpt": "古井贡酒第六代55度香型：浓香型度数：55原料：高粱、大米、小麦、糯米、玉米产地：安徽亳州价格：72元/500ml品鉴感受闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。![image-20241",
+    "excerpt": "古井贡酒第六代55度 香型：浓香型 度数：55 原料：高粱、大米、小麦、糯米、玉米 产地：安徽亳州 价格：72元/500ml 品鉴感受 闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。",
     "tags": [
       "随笔杂记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241209225923467.png"
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241209225923467.png",
+    "wordCount": 90,
+    "readingTime": 1,
+    "searchContent": "古井贡酒第六代55度 香型：浓香型 度数：55 原料：高粱、大米、小麦、糯米、玉米 产地：安徽亳州 价格：72元/500ml 品鉴感受 闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。"
   },
   {
     "title": "电脑启动需要经历哪些过程？",
     "date": "2024-11-27T06:51:10.000Z",
+    "updatedAt": "2024-11-27T06:51:10.000Z",
     "file": "电脑启动需要经历哪些过程？.md",
     "slug": "4e728164",
-    "excerpt": "传统BIOS启动流程1.BIOSBIOS启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。",
+    "excerpt": "传统BIOS启动流程 1. BIOS BIOS 启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。需要有一个外部储",
     "tags": [
       "笔记",
       "技能分享"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 1474,
+    "readingTime": 4,
+    "searchContent": "传统BIOS启动流程 1. BIOS BIOS 启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。需要有一个外部储存设备的排序，排在前面的设备就是优先转交控制权的设备。这种排序叫做启动顺序。可以在BIOS中设置。 2. 主引导 BIOS按照\"启动顺序\"读取第一位的储存设备。判断有没有MBR，如果有就读取。MBR：存储设备中的第一个扇区，磁盘最前面的512Byte，称为“主引导扇区”（Master boot record，缩写为MBR） MBR很小，只有512字节，存放程序很小，其主要作用是：告诉计算机在哪一个位置去找操作系统。 MBR由三个部分组成：调用操作系统的机器码、硬盘分区表（Partition table）、主引导记录签名（0x55和0xAA）（用于判断这段程序是不是主引导，不是的话就按启动顺序往下继续找） 3. 硬盘启动 这时，计算机的控制权就要转交给硬盘的某个分区了。分成三种情况：情况A：卷引导记录、情况B：扩展分区和逻辑分区、情况C：启动管理器。 Linux环境中，目前最流行的启动管理器是Grub。Windows是Windows Boot Manager。 4. 操作系统 控制权转交给操作系统后，操作系统的内核首先被载入内存。最后完成所有启动流程。 UEFI启动 UEFI：UEFI 是 BIOS 的升级版本，是一种更现代的固件接口，逐渐取代传统 BIOS。现在的华硕主板的BIOS界面都很好看，还能支持鼠标操作，这就是UEFI了。 UEFI 使用 GPT 分区标准，取代了旧的 MBR 标准。这让 UEFI 可以从超过 2TB 的大容量硬盘启动，而且理论上也没有磁盘大小限制。它支持 32 位和 64 位系统启动，并提供了安全启动 (Secure Boot) 等功能，不仅启动速度更快，还能检测恶意软件，确保启动过程未被篡改。 UEFI与BIOS的主要区别： 区别 BIOS UEFI 分区表 使用主引导记录 (MBR) 使用全局唯一标识分区表 (GPT) 数据存储 存储在主板的 BIOS 芯片上 存储在存储设备的 EFI 文件中 运行模式 只能在 16 位模式下工作 可以在 64 位模式下运行，可寻址内存更大 用户界面 仅支持键盘导航的文本界面 提供更直观的图形界面，支持鼠标操作 网络支持 无网络功能 有些具备网络功能，可在线更新固件，远程排除故障 UEFI 最终也是需要启动一个引导程序（如 GRUB 或 Windows Boot Manager）来完成操作系统的启动过程。 在启动了GRUB之后，是可以编辑启动配置项的。比如可以禁用一些驱动（例如nouvea）来解决bug。 UEFI是怎么处理双系统的 在UEFI系统的硬盘上，有一个专门的分区叫做 EFI 系统分区（ESP），这里存放着每个操作系统的引导程序，比如 Windows 的 bootmgfw.efi 和 Linux 的 grubx64.efi。 如果你的电脑装了双系统，比如 Windows 和 Linux，当你安装操作系统时，它们都会在 ESP 中添加自己的引导程序，同时告诉 UEFI 固件这个启动文件的位置。Windows 会创建自己的引导程序 bootmgfw.efi，默认直接启动 Windows。而 Linux 安装时，通常会使用 GRUB 作为引导程序，并把 GRUB 设置为默认的启动项。GRUB 很强大，它不仅能加载 Linux 系统，还能自动检测到 Windows 的存在，并在启动时提供一个菜单，让你选择启动 Windows 或 Linux。 如果安装顺序是先装 Windows 再装 Linux，Linux 的 GRUB 通常会接管启动流程。这意味着当你开机时，电脑会优先加载 GRUB，然后你可以从菜单里选择想进入的操作系统。但如果 Windows 后来更新系统，它可能会覆盖 GRUB，把自己设为默认启动项。这时你会发现电脑直接进入 Windows，而看不到 GRUB 的菜单。这种情况下，可以通过调整 UEFI 的启动顺序，或者用 Linux 的工具（比如 sudo update grub）重新修复启动菜单。 如果先装 Linux 再装 Windows，大概率会把 Linux 的引导程序（通常是 GRUB）覆盖掉，导致开机时直接进入 Windows 系统，而无法看到 Linux 的启动菜单。这是因为 Windows 安装程序在处理引导设置时，不会主动识别或保留其他操作系统的引导程序。Windows 安装完成后，会覆盖原来的引导加载程序（GRUB），导致无法直接启动 Ubuntu。这时需要修复 GRUB 来恢复双系统启动选项。可以使用 Ubuntu 安装介质（U盘）启动计算机，进入 Ubuntu 的 “试用” 模式（在安装界面选择 “试用 Ubuntu” 而不是 “安装 Ubuntu”）。然后打开终端，使用命令来重新安装和修复 GRUB。例如，在终端中输入 “sudo mount /dev/sdaX/mnt”（其中 sdaX 是 Ubuntu 系统分区的设备名称，需要根据实际情况替换），将 Ubuntu 分区挂载到 /mnt 目录下，接着输入 “sudo grub install root directory=/mnt/dev/sda”（假设硬盘设备名称是 sda）来重新安装 GRUB，这样就可以恢复双系统启动选项，在启动时可以选择进入 Ubuntu 或者 Windows。"
   },
   {
     "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
     "date": "2024-11-27T06:47:24.000Z",
+    "updatedAt": "2024-11-27T06:47:24.000Z",
     "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
     "slug": "024ab30e",
-    "excerpt": "无核显主机U盘安装Ubuntu先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。原因是nouveau这个倒霉驱动跟N卡不适",
+    "excerpt": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouv",
     "tags": [
       "笔记",
       "技能分享"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png"
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png",
+    "wordCount": 521,
+    "readingTime": 2,
+    "searchContent": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouveau是一个通过逆向工程开发的开源驱动，被Ubuntu 默认使用，但是Nouveau 一直未获得英伟达官方的认可，所以在使用的时候bug层出不穷。 解决方案是禁用这个驱动，禁用的方法是在开启进入GRUB界面编辑命令，加一小段代码就可以在本次启动禁用nouveau。进入系统之后在Ubuntu的blacklist里添加nouveau，这样以后启动都默认禁用了。然后再安装英伟达官方的驱动。具体教程网上很多。 为什么禁用了显卡驱动，依然可以进系统，并且正常显示图形界面呢？这是因为Ubuntu还内置了通用显卡驱动，只不过这个通用驱动性能非常低，表现为进系统之后只能以很低的分辨率显示。不过没关系，我们只要装好了nvidia官方驱动就能正常显示了。 安装nvidia官方驱动 到官网选择显卡型号，就能下载驱动。下载完是一个.run文件，用sudo运行就可以了。 坑点是安装gcc版本可能要改变，我用的Ubuntu22，默认gcc版本11，但是需要切换成12才行。 安装cuda toolkit 这个也是官网选择合适显卡版本，下载最新的就可以。 坑点是gcc版本和内核版本要对应，有的时候即使对应了也还是会报错，我就是这样。可以点进下方的Installation Guide for Linux链接，我按照这个教程执行了下面这个命令就可以安装了。"
   },
   {
     "title": "Leetcode_209长度最小的子数组——滑动窗口",
     "date": "2024-11-21T13:28:00.000Z",
+    "updatedAt": "2024-11-21T13:28:00.000Z",
     "file": "Leetcode_209长度最小的子数组.md",
     "slug": "35124327",
-    "excerpt": "Leetcode_209长度最小的子数组给定一个含有`n`个正整数的数组和一个正整数`target`。找出该数组中满足其总和大于等于`target`的长度最小的子数组`[numsl,numsl+1,...,numsr-1,numsr]`，并返回",
+    "excerpt": "Leetcode 209长度最小的子数组 给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其总和大于等于 target 的长度最小的 子数组 [numsl, numsl+1, ..., numsr 1, numsr] ，并返回其长度 。 如果不存在符合条件的子数组，返",
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 201,
+    "readingTime": 1,
+    "searchContent": "Leetcode 209长度最小的子数组 给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其总和大于等于 target 的长度最小的 子数组 [numsl, numsl+1, ..., numsr 1, numsr] ，并返回其长度 。 如果不存在符合条件的子数组，返回 0 。 示例 1： 示例 2： 示例 3： 题解 这题的核心思想是滑动窗口，窗口右端把所有可能都遍历一遍（for循环），左端则需要不断地缩小以找到最优解（while循环）。 我自己的代码是适合我自己理解的。官方题解虽然简洁，我是真理解不了细节。 最讨厌这种需要处理很多细节的问题，我是大老粗，整不来这些。"
   },
   {
     "title": "高光谱遥感深度学习调研",
     "date": "2024-11-15T08:36:41.000Z",
+    "updatedAt": "2024-11-15T08:36:41.000Z",
     "file": "高光谱遥感深度学习调研.md",
     "slug": "40c266ad",
-    "excerpt": "高光谱遥感深度学习调研综述高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。>WangC,LiuB,LiuL,etal.Areviewofdeeplearningusedinthehyperspectralim",
+    "excerpt": "高光谱遥感深度学习调研 综述 高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。 Wang C, Liu B, Liu L, et al. A review of deep learning used in the hyperspectral image analysi",
     "tags": [
       "笔记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png"
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png",
+    "wordCount": 1900,
+    "readingTime": 5,
+    "searchContent": "高光谱遥感深度学习调研 综述 高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。 Wang C, Liu B, Liu L, et al. A review of deep learning used in the hyperspectral image analysis for agriculture[J]. Artificial Intelligence Review, 2021, 54(7): 5205 5253. 被引208 Moharram M A, Sundaram D M. Land use and land cover classification with hyperspectral data: A comprehensive review of methods, challenges and future directions[J]. Neurocomputing, 2023, 536: 90 113. 被引61 Audebert N, Le Saux B, Lefèvre S. Deep learning for classification of hyperspectral data: A comparative review[J]. IEEE geoscience and remote sensing magazine, 2019, 7(2): 159 173. 被引608 Chen B, Liu L, Zou Z, et al. Target detection in hyperspectral remote sensing image: Current status and challenges[J]. Remote Sensing, 2023, 15(13): 3223.被引22 高光谱场景分类 首先利用3D和2D卷积层提取图像的光谱 空间特征，然后通过高斯加权特征分词器将特征转换为token，最后使用变换器编码器模块学习高级语义特征，并采用线性层识别样本标签，从而有效地捕捉光谱 空间特征和高级语义特征，提高分类性能。 Sun L, Zhao G, Zheng Y, et al. Spectral–spatial feature tokenization transformer for hyperspectral image classification[J]. IEEE Transactions on Geoscience and Remote Sensing, 2022, 60: 1 14. 被引：527 高光谱场景分类域泛化 域适应指的是使用高光谱图像A（含有标签）和高光谱图像B（不含标签）一起训练，然后推理在B上进行。域泛化指的是使用高光谱高光谱图像A（含有标签）训练，在高光谱图像B上推理。下面的例子是一篇域泛化的文章。 Zhang Y, Li W, Sun W, et al. Single source domain expansion network for cross scene hyperspectral image classification[J]. IEEE Transactions on Image Processing, 2023, 32: 1498 1512. 被引163 高光谱目标检测 Rao W, Gao L, Qu Y, et al. Siamese transformer network for hyperspectral image target detection[J]. IEEE Transactions on Geoscience and Remote Sensing, 2022, 60: 1 19. 被引92 高光谱目标检测和CV目标检测有很大不同，高光谱目标检测输入由两部分组成，分别是是目标图像（比如一个城市的图像）和待检测样本图像（比如飞机），然后对目标图像逐像素与待检测样本做相似度匹配，高相似度的就标记上，直到把这个城市中的飞机逐像素的标记出来。 比较流行的方法：SRD, CSCR, HTD, LRS STD, STTD。考虑一下能不能使用。 高光谱异常检测 + 背景重建 ：使用自编码器（AE）模型来重建图像的背景。自编码器的训练是基于纯净的背景样本，这些样本通过鲁棒主成分分析（RPCA）方法得到，以确保自编码器主要学习背景特征。为了使背景重建更准确，文章引入了子空间恢复自编码器（SRAE）和子空间恢复层（SRL），这有助于将背景像素聚集在原始位置附近，同时将异常像素推远，从而提升对背景的表征效果。 + 残差计算 ：将重建的背景图像与原始图像相减，计算残差图。由于背景在自编码器中得到了较好的重构，而异常无法被准确重构，因此残差图中异常部分的重构误差会较大，而背景部分的重构误差则较小。 + 异常检测 ：利用残差图中的差异，通过RX检测器或其他后处理方法来生成异常检测图。残差较大的区域被视为潜在的异常点。 + 多尺度融合 ：为了进一步提高检测精度，文章引入了多尺度超像素分割和多尺度融合策略，利用不同尺度下的空间信息来增强异常的可区分性，同时抑制背景噪声。 Cheng X, Zhang M, Lin S, et al. Deep self representation learning framework for hyperspectral anomaly detection[J]. IEEE Transactions on Instrumentation and Measurement, 2023. 高光谱语义分割 无论文 高光谱实例分割 语义分割可以为图像中的每个像素分配相应的类别，但它不能区分同一类别中的对象。这是语义分割和实例分割的区别 。 语义分割和场景分类一样都是逐像素预测，不同的是语义分割是输入一张图像，输出一幅掩膜图。而场景分类是一个一个patch输出类别。 Fang L, Jiang Y, Yan Y, et al. Hyperspectral image instance segmentation using spectral–spatial feature pyramid network[J]. IEEE Transactions on Geoscience and Remote Sensing, 2023, 61: 1 13. 高光谱超分/解混 这篇文章提出了一种名为EU2ADL（Enhanced Unmixing inspired Unsupervised Network with Attention Embedded Degradation Learning）的增强型自编码器网络，用于无监督的高光谱图像超分辨率（HS SR）任务。高光谱解混（Hyperspectral Unmixing）是高光谱图像分析中的一个重要环节，它涉及将混合像素的光谱信号分解为若干纯净物质（称为“端元”）的光谱签名及其相应的丰度（即每种物质在像素中的比例）。 文章中提到的EU2ADL网络通过两个耦合的自编码器来实现高光谱图像的超分辨率重建。这个网络的设计灵感来源于高光谱解混的原理，它通过学习输入图像的潜在丰度图和相应的端元，来重建高分辨率的高光谱图像（HrHSI）。具体来说，网络的编码器部分由一个空间 光谱双流子网络（SSTS Net）和一个参数共享的单流子网络（PSOS Net）组成，用于提取模态显著的特征并增强信息传递。此外，文章还提出了一种混合模型约束损失函数，用于指导网络生成更准确的丰度图和目标图像。 文章中的方法与高光谱解混的关系主要体现在以下几个方面： 1. 网络结构设计：EU2ADL网络的设计受到了高光谱解混理论的启发，特别是通过耦合的自编码器来学习丰度图和端元，这与解混过程中将像素分解为端元和丰度的思想相似。 2. 损失函数设计：文章提出的混合模型约束损失函数包括了一个感知丰度项和一个退化引导项，这些损失函数的设计有助于网络更好地学习丰度图和端元，从而提高超分辨率重建的质量。 3. 退化参数估计：文章中还提出了一个独立的网络（ADLnet），用于估计未知的退化参数（如点扩散函数PSF和光谱响应函数SRF），这些参数在高光谱解混中也是非常重要的，因为它们描述了观测图像与目标高分辨率图像之间的关系。 Gao L, Li J, Zheng K, et al. Enhanced autoencoders with attention embedded degradation learning for unsupervised hyperspectral image super resolution[J]. IEEE Transactions on Geoscience and Remote Sensing, 2023, 61: 1 17. 被引100 总结 + 高光谱图像数据规模太小，不仅数据规模小，标签也少，大家都在做小样本学习，而且它的各项研究也处于刚起步阶段，人们关心的各项任务的精度提升而不是速度提升。 + 高光谱目标检测的研究其实并不多，而且起步都在近几年，这一领域没有形成共识的Baseline，每个人都有自己的一套方法，而且很多文章都没有源代码。"
   },
   {
     "title": "品酒（尊美醇Jameson）",
     "date": "2024-11-04T15:18:54.000Z",
+    "updatedAt": "2024-11-04T15:18:54.000Z",
     "file": "品酒尊美醇Jameson.md",
     "slug": "b9f36e78",
-    "excerpt": "尊美醇Jameson![image-20241104232932122](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png)产地：爱尔兰。其最初在都柏林",
+    "excerpt": "尊美醇Jameson 产地 ：爱尔兰。其最初在都柏林的弓街酿酒厂生产，1975 年 7 月开始转移到爱尔兰科克郡的米德尔顿酿酒厂。 度数 ：40% vol。 酿造工艺 ：采用三重蒸馏工艺。把已发芽与未发芽的大麦放到一起发酵，成品要经过三次蒸馏并在橡木桶中经历 5 7 年以上的熟成，然后还需要加入一定",
     "tags": [
       "随笔杂记"
     ],
-    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png"
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png",
+    "wordCount": 460,
+    "readingTime": 2,
+    "searchContent": "尊美醇Jameson 产地 ：爱尔兰。其最初在都柏林的弓街酿酒厂生产，1975 年 7 月开始转移到爱尔兰科克郡的米德尔顿酿酒厂。 度数 ：40% vol。 酿造工艺 ：采用三重蒸馏工艺。把已发芽与未发芽的大麦放到一起发酵，成品要经过三次蒸馏并在橡木桶中经历 5 7 年以上的熟成，然后还需要加入一定量的谷物威士忌来进行最终的调和。 口感风味 ：具有标志性的顺滑度，口感柔和，香气轻盈清爽，带有香草、蜂蜜、坚果等味道，尾韵有胡椒感。 原料 ：使用来自南爱尔兰的当地大麦，尊美醇与 200 多名农民合作，麦田分布在距离米德尔顿酿酒厂 50 英里的范围内，面积从 15 英亩到 700 英亩不等。并且使用流经米德尔顿酿酒厂的邓格尼河（Dungourney River）水。 饮用方式： 纯饮 ：可以直接品尝尊美醇威士忌的原汁原味，感受其细腻的口感和丰富的风味。 加冰 ：加入冰块可以降低酒的温度，使口感更加清爽，同时也会稍微稀释酒液，让味道更加柔和。这也是我选择的方式。 加水 ：适量加入水可以释放出威士忌中的香气，让味道更加丰富，但要注意水的量不要过多，以免影响口感。 调制鸡尾酒 ：尊美醇是调制鸡尾酒的常用基酒之一，比如与姜汁汽水和酸橙混合可以制作出清爽的 “爱尔兰骡子” 鸡尾酒。 价格：105 元（700ml） 个人感受：这种威士忌没有白酒的辛辣感，喝起来真的很快乐，廉价的快乐。"
   },
   {
     "title": "数之和问题归纳——哈希、双指针",
     "date": "2024-11-04T12:10:30.000Z",
+    "updatedAt": "2024-11-04T12:10:30.000Z",
     "file": "数之和问题归纳哈希双指针.md",
     "slug": "c3608157",
-    "excerpt": "Leetcode1:两数之和题目https://leetcode.cn/problems/two-sum/给定一个整数数组nums和一个目标值target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是",
+    "excerpt": "Leetcode 1: 两数之和 题目 https://leetcode.cn/problems/two sum/ 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素",
     "tags": [
       "刷题"
     ],
-    "img": ""
-  },
-  {
-    "title": "Leetcode142:环形链表II——快慢指针",
-    "date": "2024-10-29T13:04:06.000Z",
-    "file": "Leetcode_142环形链表II.md",
-    "slug": "f870a3e8",
-    "excerpt": "Leetcode_142环形链表IIhttps://leetcode.cn/problems/linked-list-cycle-ii/description/给定一个链表的头节点`head`，返回链表开始入环的第一个节点。如果链表无环，则返回`null`。如果链表中有",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
+    "img": "",
+    "wordCount": 909,
+    "readingTime": 3,
+    "searchContent": "Leetcode 1: 两数之和 题目 https://leetcode.cn/problems/two sum/ 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。 示例: 给定 nums = [2, 7, 11, 15], target = 9 因为 nums[0] + nums[1] = 2 + 7 = 9 所以返回 [0, 1] 思路 哈希set，简单题 Leetcode 454: 四数相加II 题目 https://leetcode.cn/problems/4sum ii/description/ 给定四个包含整数的数组列表 A , B , C , D ,计算有多少个元组 (i, j, k, l) ，使得 A[i] + B[j] + C[k] + D[l] = 0。 为了使问题简单化，所有的 A, B, C, D 具有相同的长度 N，且 0 ≤ N ≤ 500 。所有整数的范围在 2^28 到 2^28 1 之间，最终结果不会超过 2^31 1 。 例如: 输入: A = [ 1, 2] B = [ 2, 1] C = [ 1, 2] D = [ 0, 2] 输出: 2 解释: 两个元组如下: 1. (0, 0, 0, 1) A[0] + B[0] + C[0] + D[1] = 1 + ( 2) + ( 1) + 2 = 0 2. (1, 1, 0, 0) A[1] + B[1] + C[0] + D[0] = 2 + ( 1) + ( 1) + 0 = 0 思路 哈希map，A 和 B 分一组，计算A[i] + B[j] 有多少种情况。再把 B 和 C 分一组，计算符合 (C[k] + D[l]) = A[i] + B[j] 的情况有几种。 这题简单就简单在不用去重，即不用考虑 A[i], B[j], C[k], D[l]四个数重复的问题。 Leetcode15: 三数之和 题目 https://leetcode.cn/problems/3sum/description/ 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。 注意： 答案中不可以包含重复的三元组。 示例： 给定数组 nums = [ 1, 0, 1, 2, 1, 4]， 满足要求的三元组集合为： [ [ 1, 0, 1], [ 1, 1, 2] ] 思路 这题需要去重，用双指针会更好做 首先将数组排序，然后有一层for循环，i从下标0的地方开始，同时定一个下标left 定义在i+1的位置上，定义下标right 在数组结尾的位置上。 依然还是在数组中找到 abc 使得a + b +c =0，我们这里相当于 a = nums[i]，b = nums[left]，c = nums[right]。 接下来如何移动left 和right呢， 如果nums[i] + nums[left] + nums[right] 0 就说明 此时三数之和大了，因为数组是排序后了，所以right下标就应该向左移动，这样才能让三数之和小一些。 如果 nums[i] + nums[left] + nums[right] < 0 说明 此时 三数之和小了，left 就向右移动，才能让三数之和大一些，直到left与right相遇为止。 去重操作通过控制i, left, right 跳过一些数来实现，有很多细节。具体看 https://www.programmercarl.com/0015.三数之和.html 思路 这题不简单 Leetcode18: 四数之和 题目 https://leetcode.cn/problems/4sum/description/ 题意：给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。 注意： 答案中不可以包含重复的四元组。 示例： 给定数组 nums = [1, 0, 1, 0, 2, 2]，和 target = 0。 满足要求的四元组集合为： [ [ 1, 0, 0, 1], [ 2, 1, 1, 2], [ 2, 0, 0, 2] ] 思路 和三数之和是一个思路，区别是多加一个for循环。"
   }
 ]

@@ -1,113 +1,153 @@
 [
   {
-    "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
-    "date": "2021-03-03T20:46:14.000Z",
-    "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
-    "slug": "13bf1535",
-    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主图中图```importmatplotlib.pyplotaspltfig=",
+    "title": "Pandas学习笔记",
+    "date": "2021-03-09T11:04:10.000Z",
+    "updatedAt": "2021-03-09T11:04:10.000Z",
+    "file": "Pandas学习笔记.md",
+    "slug": "84a00195",
+    "excerpt": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函",
     "tags": [
       "笔记"
     ],
     "img": "",
+    "wordCount": 685,
+    "readingTime": 2,
+    "searchContent": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函数的功能是将自定义函数作用于DataFrame的所有元素 案例可以看这个：https://www.cnblogs.com/jason /p/11427145.html 讲的非常清晰 能看出map,apply,apply还是蛮有用的，但是上手不太容易 sort\\ values()和sort\\ index()区别 1、sort\\ index() sort\\ index()通俗点讲，就是根据index的值进行排序，如果是按行排序，可以认为是根据index的值排序，如果是按列排序，可以认为是根据columns的值进行排序。用法如下： sort\\ values()对dataframe按某一列的值进行排序，或者按某一行的值进行排序。具体的参数设置如下： 摘自https://blog.csdn.net/u011412768/article/details/107251808 pd.read\\ csv()参数 filepath\\ or\\ buffer : 数据输入的路径：可以是文件路径、可以是URL，也可以是实现read方法的任意对象。这个参数，就是我们输入的第一个参数。 还可以是一个URL，如果访问该URL会返回一个文件的话，那么pandas的read\\ csv函数会自动将该文件进行读取。比如：我们用fastapi写一个服务，将刚才的文件返回。 sep : 读取csv文件时指定的分隔符，默认为逗号。注意：\"csv文件的分隔符\" 和 \"我们读取csv文件时指定的分隔符\" 一定要一致。 比如：上面的girl.csv，我们将其分隔符从逗号改成\"\\\\t\"，如果这个时候还是用默认的逗号分隔符，那么数据读取之后便混为一体。 delimiter : 分隔符的另一个名字，与 sep 功能相似。 header / names : 当names没被赋值时，header会变成0，即选取数据文件的第一行作为列名。 当 names 被赋值，header 没被赋值时，那么header会变成None。如果都赋值，就会实现两个参数的组合功能。 index\\ col : 我们在读取文件之后，生成的DataFrame的索引默认是0 1 2 3...，我们当然可以set\\ index，但是也可以在读取的时候就指定某个列为索引。 usecols : 如果列有很多，而我们不想要全部的列、而是只要指定的列就可以使用这个参数。 详细看这篇博文，写得非常好！！https://www.cnblogs.com/traditional/p/12514914.html 样式问题 困扰了我很久是pandas样式问题，在这篇博客里写的很详细！ https://www.gairuo.com/p/pandas style function",
     "totalPages": 28
+  },
+  {
+    "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
+    "date": "2021-03-03T20:46:14.000Z",
+    "updatedAt": "2021-03-03T20:46:14.000Z",
+    "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
+    "slug": "13bf1535",
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 图中图 次坐标轴 Animation动画 我试过了，jupyter notebook根本动不了 又试了pychar",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 68,
+    "readingTime": 1,
+    "searchContent": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 图中图 次坐标轴 Animation动画 我试过了，jupyter notebook根本动不了 又试了pycharm，也动不了 完结撒花，再次感谢莫烦老师"
   },
   {
     "title": "开学第二天明确学习方向",
     "date": "2021-03-02T20:31:39.000Z",
+    "updatedAt": "2021-03-02T20:31:39.000Z",
     "file": "开学第二天明确学习方向.md",
     "slug": "068dcf5e",
-    "excerpt": "可以进行的学习matplotlibkaggle刷题pandas等web前端（css,javascript）Python爬虫实战继续看课本（这个可能是最无聊的）现在就好迷，在寝室里不知道学啥。这样吧，学学云顶之弈把",
+    "excerpt": "可以进行的学习 matplotlib kaggle刷题pandas等 web前端（css,javascript） Python爬虫实战 继续看课本（这个可能是最无聊的） 现在就好迷，在寝室里不知道学啥。 这样吧，学学云顶之弈把",
     "tags": [
       "随笔杂记"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 61,
+    "readingTime": 1,
+    "searchContent": "可以进行的学习 matplotlib kaggle刷题pandas等 web前端（css,javascript） Python爬虫实战 继续看课本（这个可能是最无聊的） 现在就好迷，在寝室里不知道学啥。 这样吧，学学云顶之弈把"
   },
   {
     "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
     "date": "2021-02-26T12:06:38.000Z",
+    "updatedAt": "2021-02-26T12:06:38.000Z",
     "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
     "slug": "10141fce",
-    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver仅用于学习感谢莫烦up主image图片```importmatplotlib.pyplotaspltimp",
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 image图片 interpolation参数有这些 3D数据 Subplot 多合一显示 figure1 fig",
     "tags": [
       "笔记"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 59,
+    "readingTime": 1,
+    "searchContent": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 image图片 interpolation参数有这些 3D数据 Subplot 多合一显示 figure1 figure2 Subplot分格显示 method1和method2效果图 method2"
   },
   {
     "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
     "date": "2021-02-25T18:40:44.000Z",
+    "updatedAt": "2021-02-25T18:40:44.000Z",
     "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
     "slug": "9e6c0b5f",
-    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\_id\\_from=pageDriver仅供学习使用Legend图例```importmatplotlib.pyplotaspltimportnum",
+    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\ id\\ from=pageDriver 仅供学习使用 Legend图例 简单省事儿的写法 Annotation标注 坐标轴刻度（tick能见度） Scatter散点图 Bar柱状图",
     "tags": [
       "笔记"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 83,
+    "readingTime": 1,
+    "searchContent": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\ id\\ from=pageDriver 仅供学习使用 Legend图例 简单省事儿的写法 Annotation标注 坐标轴刻度（tick能见度） Scatter散点图 Bar柱状图 演示中的柱状图有两条，实际中一般用的用一条就够了 Contours等高线图"
   },
   {
     "title": "csv库的使用方法",
     "date": "2021-02-25T11:10:35.000Z",
+    "updatedAt": "2021-02-25T11:10:35.000Z",
     "file": "csv库的使用方法.md",
     "slug": "c9920664",
-    "excerpt": "上一篇我们讲了怎么用json格式保存数据，这一篇我们来看看如何用csv模块进行数据读写。一、csv简介CSV(CommaSeparatedValues)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。c",
+    "excerpt": "上一篇我们讲了怎么用 json格式保存数据，这一篇我们来看看如何用 csv模块进行数据读写。 一、csv简介 CSV (Comma Separated Values)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。 csv的使用很广",
     "tags": [
       "笔记"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 958,
+    "readingTime": 3,
+    "searchContent": "上一篇我们讲了怎么用 json格式保存数据，这一篇我们来看看如何用 csv模块进行数据读写。 一、csv简介 CSV (Comma Separated Values)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。 csv的使用很广泛，很多程序都会涉及到 csv的使用，但是 csv却没有通用的标准，所以在处理csv格式时常常会碰到麻烦。 因此在使用 csv时一定要遵循某一个标准，这不是固定的，但每个人都应该有一套自己的标准，这样在使用 csv时才不会犯低级错误。 二、csv库的使用 关于 csv库的使用，我们从写和读两个方面来讲。 csv库有四个主要的类 writer，DictWriter，reader，DictReader reader和 DictReader都接受一个可以逐行迭代的对象作为参数，一般是一个包含 csv格式数据的文件对象。 writer和 DictWriter则接受一个 csv文件对象，csv格式的数据将会写入到这个文件中。 他们都会返回一个对应的对象，我们通过这个对象来进行数据的读和写。 这四者中 reader和 writer对应，DictReader和 DictWriter对应，也就是说通过 writer类写的 csv文件只能通过 reader类来读取，DictReader同理。 1、csv将数据写入文件 前面讲到，csv没有统一的标准，通过上面的例子我们可以发现，csv对写入的数据不做任何检查，也就是说几乎没有任何标准可言。 我们发现 writerow方法不会对数据进行检查，即使前后两句 writerow语句写入的数据的格式不同也不会报错。 所以在用 csv写入数据时要特别注意数据的格式问题！！！ 也可以用 writerows(list) 一次写入多行，例如： 2、csv从文件读取数据 打印结果： 观察打印出的结果我们发现，reader读取的内容打印出来后还是列表格式，而 DictReader读取的内容却变为了列表加元组的格式，显然和我们刚开时传入的字典格式很不同。 而我们总是希望输入和输出能够一致，但是 csv模块并没有提供这样的方法，所以我们需要自己将 csv模块再进行一次封装，封装后的包应该满足下面的标准： 1. 统一的分隔符 delimiter 2. 统一的编码 3. 统一的打开文件的方式 4. 能够自己判断文件是否存在并且选择合适的方式打开文件 5. 输入格式和输出格式保持一致 6. 强制检查格式，格式错误禁止插入并报错 封装后的包的源码会在完成后贴出(￣▽￣)\" 最后让我们来总结一下使用 csv库的注意事项： 1. 打开文件时要 注意模式 读用 r，写用 w 2. 打开文件时要设置 newline=''（空字符） 3. 打开文件时要指定编码打开，写入时也一样 4. 如果设置过分隔符就要一直保持，读写时的分隔符必须一致 5. csv不会检查格式（虽然有个 strict模式，但 strict模式下也不会对格式进行检查），写入文件时一定要注意格式 以上就是 csv库的使用方法和注意事项，觉得不错就点个赞吧(●ˇ∀ˇ●) 作者：渔父歌 链接：https://www.jianshu.com/p/51211fcdf4b8%20 来源：简书 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。"
   },
   {
     "title": "json数据存储",
     "date": "2021-02-25T11:02:16.000Z",
+    "updatedAt": "2021-02-25T11:02:16.000Z",
     "file": "json数据存储.md",
     "slug": "f16cfec5",
-    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2在上一篇文章里我们讲了xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件",
+    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2 在上一篇文章里我们讲了 xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。 实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件的形",
     "tags": [
       "笔记"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 808,
+    "readingTime": 3,
+    "searchContent": "转载自https://www.jianshu.com/p/0ba2b643c0f2 在上一篇文章里我们讲了 xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。 实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件的形式，数据库我们后面再讲，现在让我们先看看怎么把信息保存到文件里。 这里我们主要讲讲 将数据保存为 json格式和 csv格式，这就要用到两个库 json库和 csv库，这两个库都是 python自带的库。 关于数据存储我们分两篇来讲，这一篇先讲 json，下一篇再讲 csv。 一、关于 json json的简介直接引用百度百科的定义： JSON(JavaScript Object Notation, JS 对象简谱) 是一种轻量级的数据交换格式。它基于 ECMAScript (欧洲计算机协会制定的js规范)的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。 实际上 json的格式和 python中的字典很像，也是由键值对组成，但是 python中的值可以为任何对象（列表、字典、字符串、数字等等），而 json中的值只能是数组（列表）、字典、字符串、数组、布尔值中的一中或几种。 其格式就像下面这样： 注意：json中的引号必须是双引号，否则会报错 二、json库的使用 json库一共有三个方法，分别是 dump、dumps、load、loads。 其中 dump和 dumps是用来把把字典和数组转换为 json格式的，dump把转换结果直接写入文件，dumps返回字符串。 load和 loads是把 json格式的数据转换为字典格式，load直接从 json文件中读取数据并返回字典对象，loads把字符串形式的 json数据转换成字典格式。 下面讲讲这些方法的具体用法。 1、dump和 dumps dump的函数原型是 dump(obj, fp) 第一个参数 obj是要转换的对象，第二个参数 fp是要写入数据的文件对象。 dumps的函数原型是 dumps(obj) 参数是要转换的对象 注意：如果要转换的对象里有中文字符的话，要把 ensure\\ ascii设置为 False否则中文会被编码为 ascii格式 打印结果： 2、load和 loads load的函数原型是 load(fp) 参数 fp是要读取的文件对象 loads的函数原型是 loads(string) 参数 string是要转换成 python对象的 json字符串，通常用来将网页中的 json数据转换为 python对象 打印结果 json的dump和dumps的区别 dumps是将dict转化成str格式，loads是将str转化成dict格式。 dump和load也是类似的功能，只是与文件操作结合起来了。"
   },
   {
     "title": "matplotlib学习笔记（一）基本语法,figure,坐标轴",
     "date": "2021-02-23T10:48:54.000Z",
+    "updatedAt": "2021-02-23T10:48:54.000Z",
     "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
     "slug": "5c2f0a26",
-    "excerpt": "学习视频地址：[https://www.bilibili.com/video/BV1Jx411L7LU?](https://www.bilibili.com/video/BV1Jx411L7LU?)github地址：[https://github.com/MorvanZhou/tutorial",
+    "excerpt": "学习视频地址：https://www.bilibili.com/video/BV1Jx411L7LU? github地址：https://github.com/MorvanZhou/tutorials/tree/master/matplotlibTUT 基本语法 一个figure就是一张图片 这里有",
     "tags": [
       "笔记"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 68,
+    "readingTime": 1,
+    "searchContent": "学习视频地址：https://www.bilibili.com/video/BV1Jx411L7LU? github地址：https://github.com/MorvanZhou/tutorials/tree/master/matplotlibTUT 基本语法 一个figure就是一张图片 这里有两个figure(两张图)，其中第二个figure有两个plot(两条线) 设置坐标轴 移动坐标轴"
   },
   {
     "title": "《新喜剧之王》观后感",
     "date": "2021-02-15T20:18:05.000Z",
+    "updatedAt": "2021-02-15T20:18:05.000Z",
     "file": "《新喜剧之王》观后感.md",
     "slug": "70f77e2f",
-    "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。剧情",
+    "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。 剧情 主要讲的就",
     "tags": [
       "书影记录"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 987,
+    "readingTime": 3,
+    "searchContent": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。 剧情 主要讲的就是一个叫如梦的年轻女演员，性格十分单纯。她是个十足的倒霉蛋，做演员十多年任然只是一个跑龙套的，男朋友是个骗子，闺蜜成为明星之后也抛弃了她。但是也偶尔有她自己的幸运，比如父母很爱她，有一个富二代喜欢上了她。尽管生活那么艰辛，她还是像打不死的小强，一直在努力奋斗。最后成功当上最佳女主角的励志故事。 题材就是这么一个丑小鸭变白天鹅的经典题材，顺便再歌颂一下父爱母爱，经典题材不免有一些老套，但是老套不一定是缺点。比如说，任天堂出的《塞尔达传说旷野之息》这款游戏，它的剧情可以用“勇者斗恶龙救公主” 八个字概括，但是这并不影响它成为神作，它的剧情一样可以让人感动到落泪。而我在看这部《新喜剧之王》时，也多次感动得热泪盈眶。 特点 这部《新喜剧之王》，和《喜剧之王》一样都有极端的人设，画面具有强烈的表现力，这一点很符合我的胃口。很多人说这种电影太不真实了，拍得没意义。我强烈反对，艺术来自于生活，但艺术高于生活。电影，小说等这些艺术形式，就应该是从真实生活中抽象出来的。 电影很短。两个半小时的时间里，它要讲述那么长的故事，还要让你印象深刻，引起你的思考，让你落泪，如果过于追求真实，剧情就像白开水一样平淡无味，那还看个卵的电影，去看纪录片不香么。 继续说特点，挺搞笑的，还有...我想想啊....好像就没啥特点了....和《美人鱼》，《喜剧之王》相比，总感觉少了点那味儿，感觉都不像是周星驰导的电影了。 败笔 上面提到的，就是这部电影的败笔 没那味儿了。 电影讲的不是粤语，镜头太干净，思路太清晰，还有好多互联网广告（58同城，荣耀手机）...看到广告的时候真是太出戏啦！！ 这部电影很多桥段都是十分动人的，单独拿出来看绝对堪称经典片段，但是，一块老鼠屎坏了一锅好汤，电影中的那些商业元素就是老鼠屎。 再扯一扯我们所处的时代，现在是短视频时代，大家都在变得浮躁，在这种浮躁的心态下，经典，往往是不能被欣赏的。打个比方，《2001太空漫游》这部电影如果把名字改成《2077太空漫游》在2021年上映，绝对会被骂惨。因为这部电影没啥剧情，镜头单调，节奏巨慢，不符合2021年观众的胃口。2021年观众比较喜欢《流浪地球》这种类型，看着爽就完事儿了。谁闲着没事儿去研究镜头背后蕴含的深刻含义呢？这可能就是这部《新喜剧之王》被大家骂的这么惨的时代原因吧。 总体来说，这部《新喜剧之王》，其实我觉得还是很不错的，星爷的电影我都很喜欢。"
   },
   {
     "title": "BeautifulSoup学习笔记",
     "date": "2021-02-14T19:08:15.000Z",
+    "updatedAt": "2021-02-14T19:08:15.000Z",
     "file": "BeautifulSoup学习笔记.md",
     "slug": "eb083bdf",
-    "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。[https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044](https://www.bilibili.com/video/BV1Pg4y1",
+    "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。 https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044 导入 from bs4 import BeautifulSoup 导入模块 soup",
     "tags": [
       "笔记"
     ],
-    "img": ""
-  },
-  {
-    "title": "《华尔街之狼》观后感",
-    "date": "2021-02-11T00:29:07.000Z",
-    "file": "《华尔街之狼》观后感.md",
-    "slug": "3d41ecc4",
-    "excerpt": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。剧情主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。公司破产后，他也学会了搞传销（果然在大",
-    "tags": [
-      "书影记录"
-    ],
-    "img": ""
+    "img": "",
+    "wordCount": 295,
+    "readingTime": 1,
+    "searchContent": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。 https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044 导入 from bs4 import BeautifulSoup 导入模块 soup = BeautifulSoup(text,'lxml') 实例化BeautifulSoup对象 获取所有的div标签 divs = soup.find\\ all('div') print(divs) divs不是列表，是bs4的ResultSet，输出结果是一个列表形式，每个div作为列表中的一个元素 获取指定的div标签 div = soup.find\\ all('div')\\[1\\] print(div) 输出第二个数据，还可以切片，不举例了 div = list(soup.find\\ all('div')) 把结果转换成列表，还是很方便的 获取拥有指定属性的标签(id=even的div标签) 方法一： divs = soup.find\\ all('div',id='even') 如果指定属性是class，会与Python关键字冲突，改为class 方法二： divs = soup.find\\ all('div',attrs={\"id\":\"even\",\"class\":\"L square\"}) 以字典的形式找到多个指定属性的div标签 获取标签的属性值 alist = soup.find\\ all('a') 方法一：通过下标方式提取 for a in alist: href = a\\['href'\\] print(href) 方法二：利用attrs方法提取 for a in alist: href = a.attrs\\['href'\\] print(href) 输出文字 使用string方法 print(div.string)"
   }
 ]

@@ -1,19 +1,25 @@
 <template>
-  <div class="bg">
+  <div ref="headerRef" class="bg">
     <!-- 纯 CSS 3D 卫星轨道动画背景 -->
     <div id="space">
       <div class="space_field_wrapper">
         <div class="space_field mother">
           <div class="planet">
-            <div class="avatar-wrapper" v-show="showBailey">
+            <div v-if="showBailey" class="avatar-wrapper">
               <div class="avatar-ring" :class="avatarStyle"></div>
+              <img :src="avatarUrl" class="avatar-img" alt="Bailey avatar">
             </div>
           </div>
         </div>
-        <div v-for="i in orbitCount" :key="'w'+i" class="space_field_wrapper">
-          <div class="space_field satellite">
-            <div class="planet"></div>
-          </div>
+      </div>
+      <div
+        v-for="i in orbitCount"
+        :key="'w' + i"
+        class="space_field_wrapper satellite-wrapper"
+        :style="getOrbitStyle(i)"
+      >
+        <div class="space_field satellite">
+          <div class="planet"></div>
         </div>
       </div>
     </div>
@@ -62,17 +68,20 @@
       </div>
     </div>
 
-    <div ref="navPlaceholder" class="nav-placeholder"></div>
-    <Nav :expandNav="expandNav"></Nav>
+    <div ref="navShell" class="nav-shell">
+      <Nav :expandNav="expandNav"></Nav>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import Nav from "@/components/Nav.vue";
-import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
+import avatarUrl from "@/assets/avatar.jpg";
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const expandNav = ref(false);
-const navPlaceholder = ref<HTMLElement | null>(null);
+const headerRef = ref<HTMLElement | null>(null);
+const navShell = ref<HTMLElement | null>(null);
 
 // 控制面板
 const showControls = ref(false);
@@ -94,24 +103,41 @@ const resetSettings = () => {
   showBailey.value = true;
 };
 
-const observer = new IntersectionObserver(
-  ([entry]) => {
-    expandNav.value = entry.intersectionRatio === 0;
-  },
-  { threshold: [0, 1] }
-);
+const satelliteColors = [
+  'rgba(255, 100, 150, 1)',
+  'rgba(100, 255, 150, 1)',
+  'rgba(150, 100, 255, 1)',
+  'rgba(255, 200, 100, 1)',
+  'rgba(100, 200, 255, 1)',
+  'rgba(200, 100, 200, 1)',
+  'rgba(255, 150, 200, 1)',
+  'rgba(150, 255, 200, 1)',
+];
+
+const getOrbitStyle = (index: number): Record<string, string> => ({
+  '--orbit-angle': `${(index - 1) * -22}deg`,
+  '--orbit-duration': `${2200 + (index - 1) * 420}ms`,
+  '--planet-color': satelliteColors[(index - 1) % satelliteColors.length],
+});
+
+const updateNavMode = () => {
+  if (!headerRef.value || !navShell.value) return;
+  const navOffset = window.innerWidth <= 520 ? 8 : 12;
+  const navHeight = navShell.value.offsetHeight || 52;
+  const headerBottom = headerRef.value.getBoundingClientRect().bottom;
+  expandNav.value = headerBottom <= navHeight + navOffset + 24;
+};
 
 onMounted(() => {
-  if (navPlaceholder.value) {
-    observer.observe(navPlaceholder.value);
-  }
   avatarStyle.value = ringStyles[Math.floor(Math.random() * ringStyles.length)];
+  updateNavMode();
+  window.addEventListener('scroll', updateNavMode, { passive: true });
+  window.addEventListener('resize', updateNavMode);
 });
 
 onBeforeUnmount(() => {
-  if (navPlaceholder.value) {
-    observer.unobserve(navPlaceholder.value);
-  }
+  window.removeEventListener('scroll', updateNavMode);
+  window.removeEventListener('resize', updateNavMode);
 });
 </script>
 
@@ -119,9 +145,6 @@ onBeforeUnmount(() => {
 .bg {
   width: 100%;
   height: 480px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
   overflow: hidden;
   background: #eef;
@@ -132,10 +155,12 @@ onBeforeUnmount(() => {
    ============================================= */
 #space {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 480px;
   transform-style: preserve-3d;
   perspective: 700px;
+  pointer-events: none;
 }
 
 .space_field_wrapper {
@@ -183,14 +208,19 @@ onBeforeUnmount(() => {
 }
 
 /* 卫星轨道 */
+.satellite-wrapper {
+  transform: rotateZ(var(--orbit-angle));
+}
+
 .space_field.satellite {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
-  height: 300px;
+  width: 340px;
+  height: 340px;
   transform: translate(-50%, -50%);
   transform-style: preserve-3d;
+  animation: orbit var(--orbit-duration) linear infinite;
 }
 
 .space_field.satellite .planet {
@@ -203,8 +233,9 @@ onBeforeUnmount(() => {
   border-radius: 100%;
   box-sizing: border-box;
   border: 8px solid #000;
-  background: rgba(50, 80, 255, 1);
+  background: var(--planet-color, rgba(50, 80, 255, 1));
   transform: translate(-50%, -50%);
+  animation: planet var(--orbit-duration) linear infinite;
 }
 
 .space_field.satellite .planet::before {
@@ -216,38 +247,9 @@ onBeforeUnmount(() => {
   height: 480px;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 100%;
+  pointer-events: none;
+  z-index: 2;
 }
-
-/* 轨道旋转动画 */
-.space_field_wrapper:nth-child(1) { transform: rotateZ(0deg); }
-.space_field_wrapper:nth-child(2) { transform: rotateZ(-20deg); }
-.space_field_wrapper:nth-child(3) { transform: rotateZ(-40deg); }
-.space_field_wrapper:nth-child(4) { transform: rotateZ(-60deg); }
-.space_field_wrapper:nth-child(5) { transform: rotateZ(-80deg); }
-.space_field_wrapper:nth-child(6) { transform: rotateZ(-100deg); }
-.space_field_wrapper:nth-child(7) { transform: rotateZ(-120deg); }
-.space_field_wrapper:nth-child(8) { transform: rotateZ(-140deg); }
-.space_field_wrapper:nth-child(9) { transform: rotateZ(-160deg); }
-
-.space_field_wrapper:nth-child(1) .space_field.satellite { animation: orbit 2000ms linear infinite; }
-.space_field_wrapper:nth-child(2) .space_field.satellite { animation: orbit 2400ms linear infinite; }
-.space_field_wrapper:nth-child(3) .space_field.satellite { animation: orbit 2800ms linear infinite; }
-.space_field_wrapper:nth-child(4) .space_field.satellite { animation: orbit 3200ms linear infinite; }
-.space_field_wrapper:nth-child(5) .space_field.satellite { animation: orbit 3600ms linear infinite; }
-.space_field_wrapper:nth-child(6) .space_field.satellite { animation: orbit 4000ms linear infinite; }
-.space_field_wrapper:nth-child(7) .space_field.satellite { animation: orbit 4400ms linear infinite; }
-.space_field_wrapper:nth-child(8) .space_field.satellite { animation: orbit 4800ms linear infinite; }
-.space_field_wrapper:nth-child(9) .space_field.satellite { animation: orbit 5200ms linear infinite; }
-
-.space_field_wrapper:nth-child(1) .space_field.satellite .planet { animation: planet 2000ms linear infinite; background: rgba(255, 100, 150, 1); }
-.space_field_wrapper:nth-child(2) .space_field.satellite .planet { animation: planet 2400ms linear infinite; background: rgba(100, 255, 150, 1); }
-.space_field_wrapper:nth-child(3) .space_field.satellite .planet { animation: planet 2800ms linear infinite; background: rgba(150, 100, 255, 1); }
-.space_field_wrapper:nth-child(4) .space_field.satellite .planet { animation: planet 3200ms linear infinite; background: rgba(255, 200, 100, 1); }
-.space_field_wrapper:nth-child(5) .space_field.satellite .planet { animation: planet 3600ms linear infinite; background: rgba(100, 200, 255, 1); }
-.space_field_wrapper:nth-child(6) .space_field.satellite .planet { animation: planet 4000ms linear infinite; background: rgba(200, 100, 200, 1); }
-.space_field_wrapper:nth-child(7) .space_field.satellite .planet { animation: planet 4400ms linear infinite; background: rgba(255, 150, 200, 1); }
-.space_field_wrapper:nth-child(8) .space_field.satellite .planet { animation: planet 4800ms linear infinite; background: rgba(150, 255, 200, 1); }
-.space_field_wrapper:nth-child(9) .space_field.satellite .planet { animation: planet 5200ms linear infinite; background: rgba(200, 150, 255, 1); }
 
 @keyframes orbit {
   0%   { transform: translate(-50%, -50%) rotateY(0deg); }
@@ -390,29 +392,42 @@ onBeforeUnmount(() => {
 }
 
 .header-content {
-  position: relative;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  width: min(92%, 520px);
+  text-align: center;
+  pointer-events: auto;
 }
 
 .avatar-wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .avatar-ring {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
+  inset: 0;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.35;
+  z-index: 2;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
 }
 
 .ring-gradient {
@@ -486,9 +501,9 @@ onBeforeUnmount(() => {
 }
 
 .name {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -504,9 +519,9 @@ onBeforeUnmount(() => {
 }
 
 .zym {
-  font-size: 16px;
+  font-size: 15px;
   color: #555;
-  margin: 0 0 20px 0;
+  margin: 0 0 8px 0;
   font-style: italic;
   position: relative;
   padding: 0 20px;
@@ -525,16 +540,16 @@ onBeforeUnmount(() => {
 
 .social-links {
   display: flex;
-  gap: 16px;
-  margin-top: 10px;
+  gap: 14px;
+  margin-top: 0;
 }
 
 .social-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.9);
   color: #333;
@@ -559,21 +574,28 @@ onBeforeUnmount(() => {
   background: white;
 }
 
-.social-icon svg { width: 22px; height: 22px; }
+.social-icon svg { width: 20px; height: 20px; }
 
-.nav-placeholder {
-  height: 10px;
-  width: 100%;
+.nav-shell {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  z-index: 30;
+  width: min(92%, 720px);
+  transform: translateX(-50%);
 }
 
 /* 移动端适配 */
 @media (max-width: 768px) {
   .name { font-size: 26px; }
   .zym { font-size: 14px; padding: 0 15px; }
-  .social-icon { width: 40px; height: 40px; }
-  .social-icon svg { width: 20px; height: 20px; }
+  .social-icon { width: 36px; height: 36px; }
+  .social-icon svg { width: 19px; height: 19px; }
   .control-panel { width: 200px; right: 10px; }
   .control-toggle { width: 36px; height: 36px; font-size: 16px; right: 10px; }
-  .header-content { padding-top: 12vh; }
+  .header-content { top: 20px; }
+  .space_field.mother .planet { width: 170px; height: 170px; }
+  .space_field.satellite { width: 260px; height: 260px; }
+  .nav-shell { bottom: 18px; width: calc(100% - 20px); }
 }
 </style>

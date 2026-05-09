@@ -1,113 +1,153 @@
 [
   {
-    "title": "环形链表——哈希、链表、双指针",
-    "date": "2022-03-05T08:08:03.000Z",
-    "file": "环形链表——哈希、链表、双指针.md",
-    "slug": "e30e2370",
-    "excerpt": "题目>题目来自：https://leetcode-cn.com/problems/linked-list-cycle/141.环形链表难度简单1376收藏分享切换为英文接收动态反馈给你一个链表的头节点`head`，判断链表中是否有环。如果链表中有某个节点，",
+    "title": "两个数组的交集——数组、哈希、双指针",
+    "date": "2022-03-06T08:00:46.000Z",
+    "updatedAt": "2022-03-06T08:00:46.000Z",
+    "file": "两个数组的交集——数组、哈希、双指针.md",
+    "slug": "658ce35f",
+    "excerpt": "题目 本题来自：https://leetcode cn.com/problems/intersection of two arrays ii/ [350. 两个数组的交集 II] 难度简单670收藏分享切换为英文接收动态反馈 给你两个整数数组 nums1 和 nums2 ，请你以数组形式返回两数组的",
     "tags": [
       "刷题"
     ],
     "img": "",
+    "wordCount": 317,
+    "readingTime": 1,
+    "searchContent": "题目 本题来自：https://leetcode cn.com/problems/intersection of two arrays ii/ [350. 两个数组的交集 II] 难度简单670收藏分享切换为英文接收动态反馈 给你两个整数数组 nums1 和 nums2 ，请你以数组形式返回两数组的交集。返回结果中每个元素出现的次数，应与元素在两个数组中都出现的次数一致（如果出现次数不一致，则考虑取较小值）。可以不考虑输出结果的顺序。 示例 1： 示例 2: 提示： 1 <= nums1.length, nums2.length <= 1000 0 <= nums1[i], nums2[i] <= 1000 \\ 进阶\\ ： 如果给定的数组已经排好序呢？你将如何优化你的算法？ 如果 nums1 的大小比 nums2 小，哪种方法更优？ 如果 nums2 的元素存储在磁盘上，内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？ 题解 用hashmap解决。今天忙着训练模型，懒得写题解了。 回答一下进阶的那几个问题吧： 已经排好序的话，用双指针做比较好。 用小的数组产生hashmap比较好。 存在磁盘上，每次只能读一部分数据，就不能排序了，得用方法1.",
     "totalPages": 28
+  },
+  {
+    "title": "环形链表——哈希、链表、双指针",
+    "date": "2022-03-05T08:08:03.000Z",
+    "updatedAt": "2022-03-05T08:08:03.000Z",
+    "file": "环形链表——哈希、链表、双指针.md",
+    "slug": "e30e2370",
+    "excerpt": "题目 题目来自：https://leetcode cn.com/problems/linked list cycle/ 141. 环形链表 难度简单1376收藏分享切换为英文接收动态反馈 给你一个链表的头节点 head ，判断链表中是否有环。 如果链表中有某个节点，可以通过连续跟踪 next 指针再",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 1406,
+    "readingTime": 4,
+    "searchContent": "题目 题目来自：https://leetcode cn.com/problems/linked list cycle/ 141. 环形链表 难度简单1376收藏分享切换为英文接收动态反馈 给你一个链表的头节点 head ，判断链表中是否有环。 如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 注意：pos 不作为参数进行传递 。仅仅是为了标识链表的实际情况。 如果链表中存在环 ，则返回 true 。 否则，返回 false 。 示例 1： 示例 2： 示例 3： 提示： 链表中节点的数目范围是 [0, 104] 105 参考作者：LeetCode Solution 链接：https://leetcode cn.com/problems/linked list cycle/solution/huan xing lian biao by leetcode solution/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 方法一：哈希表 最容易想到的方法，就是遍历这个链表，如果发现某个节点曾经被遍历过了，那么这就是环形链表。判断某个节点是否被遍历过可以用hashset。 代码： 这个代码我是写不出来的，只能先抄题解。有一点不明白的是，unordered set seen;这一行为什么 后要加个 ？ 加在前面表示定义指针，加在后面表示什么呢？知道的可以在评论区给我留言。 因为只遍历一次，时间复杂度：O(N) 。要开辟哈希表，空间复杂度O(N)。 方法二：快慢指针 这个方法很巧妙，leetcode给的解释非常易懂，还有演示视频。 本方法需要读者对「Floyd 判圈算法」（又称龟兔赛跑算法）有所了解。 假想「乌龟」和「兔子」在链表上移动，「兔子」跑得快，「乌龟」跑得慢。当「乌龟」和「兔子」从链表上的同一个节点开始移动时，如果该链表中没有环，那么「兔子」将一直处于「乌龟」的前方；如果该链表中有环，那么「兔子」会先于「乌龟」进入环，并且一直在环内移动。等到「乌龟」进入环时，由于「兔子」的速度快，它一定会在某个时刻与乌龟相遇，即套了「乌龟」若干圈。 我们可以根据上述思路来解决本题。具体地，我们定义两个指针，一快一满。慢指针每次只移动一步，而快指针每次移动两步。初始时，慢指针在位置 head，而快指针在位置 head.next。这样一来，如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表。否则快指针将到达链表尾部，该链表不为环形链表。 细节:为什么我们要规定初始时慢指针在位置 head，快指针在位置 head.next，而不是两个指针都在位置 head（即与「乌龟」和「兔子」中的叙述相同）？ 观察下面的代码，我们使用的是 while 循环，循环条件先于循环体。由于循环条件一定是判断快慢指针是否重合，如果我们将两个指针初始都置于 head，那么 while 循环就不会执行。因此，我们可以假想一个在 head 之前的虚拟节点，慢指针从虚拟节点移动一步到达 head，快指针从虚拟节点移动两步到达 head.next，这样我们就可以使用 while 循环了。 当然，我们也可以使用 do while 循环。此时，我们就可以把快慢指针的初始值都置为 head。 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/linked list cycle/solution/huan xing lian biao by leetcode solution/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 代码： 其实这个代码有点啰嗦。 时间复杂度：O(N)O(N)，其中 NN 是链表中的节点数。 当链表中不存在环时，快指针将先于慢指针到达链表尾部，链表中每个节点至多被访问两次。 当链表中存在环时，每一轮移动后，快慢指针的距离将减小一。而初始距离为环的长度，因此至多移动 NN 轮。 空间复杂度：O(1)。因为只使用了两个指针的额外空间。 [lostBookBoy]问了一个问题：“为什么慢指针每次只移动一步，而快指针每次移动两步而不是其他步？” [洛阳令]的回答：“这里的慢1快2还是有些讲究的，要是慢一快三未必可以解。快减慢等于1是一定有解的。可以将环理解为一个整数加法群，只有差为一才一定有解。” 其它方法： 看了评论区，各路大神各显神通。有的在遍历的时候把链表节点的值改成'bjfuvth'，再遇到就说明有环，这样就不用哈希了。还有跑了很多遍代码发现这题的链表最多有8029个节点，跑完8029个后如果还没结束就说明有环。哈哈哈，为了能过一道题真是无所不用其极。 这是一道很简单的题，做出来可能只需要5分钟，但是在整理这道题时我花了1个小时，学习就是这个样子，不怕折腾。"
   },
   {
     "title": "合并两个有序数组——数组、双指针、排序——这题的题解绝了",
     "date": "2022-03-04T07:32:13.000Z",
+    "updatedAt": "2022-03-04T07:32:13.000Z",
     "file": "合并两个有序数组——数组、双指针、排序——这题的题解绝了.md",
     "slug": "aee57094",
-    "excerpt": "题目>该题来自：https://leetcode-cn.com/problems/merge-sorted-array/[88.合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)难度简单130",
+    "excerpt": "题目 该题来自：https://leetcode cn.com/problems/merge sorted array/ 88. 合并两个有序数组 难度简单1308收藏分享切换为英文接收动态反馈 给你两个按 非递减顺序 排列的整数数组 nums1 和 nums2，另有两个整数 m 和 n ，分别表示",
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 267,
+    "readingTime": 1,
+    "searchContent": "题目 该题来自：https://leetcode cn.com/problems/merge sorted array/ 88. 合并两个有序数组 难度简单1308收藏分享切换为英文接收动态反馈 给你两个按 非递减顺序 排列的整数数组 nums1 和 nums2，另有两个整数 m 和 n ，分别表示 nums1 和 nums2 中的元素数目。 请你 合并 nums2 到 nums1 中，使合并后的数组同样按 非递减顺序 排列。 注意： 最终，合并后数组不应由函数返回，而是存储在数组 nums1 中。为了应对这种情况，nums1 的初始长度为 m + n，其中前 m 个元素表示应合并的元素，后 n 个元素为 0 ，应忽略。nums2 的长度为 n 。 示例 1： 示例 2： 示例 3： 提示： nums1.length == m + n nums2.length == n 0 = m p1 1+n p2 1 $$ 等价于 $$ p2 1 $$ 永远成立。所以不会被覆盖。 代码： 看完这个题解我真是觉得太牛逼了。 时间复杂度O(m+n)，因为不需要额外数组，所以空间复杂度O(1)。"
   },
   {
     "title": "有效的数独——数组、哈希表、矩阵",
     "date": "2022-03-03T08:46:16.000Z",
+    "updatedAt": "2022-03-03T08:46:16.000Z",
     "file": "有效的数独——数组、哈希表、矩阵.md",
     "slug": "c36750b2",
-    "excerpt": ">该题目来自：https://leetcode-cn.com/problems/valid-sudoku/题目[36.有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)难度中等786收藏分享切换为英文接收动态反",
+    "excerpt": "该题目来自：https://leetcode cn.com/problems/valid sudoku/ 题目 36. 有效的数独 难度中等786收藏分享切换为英文接收动态反馈 请你判断一个 9 x 9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。 1. 数字 1 9 在",
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 399,
+    "readingTime": 1,
+    "searchContent": "该题目来自：https://leetcode cn.com/problems/valid sudoku/ 题目 36. 有效的数独 难度中等786收藏分享切换为英文接收动态反馈 请你判断一个 9 x 9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。 1. 数字 1 9 在每一行只能出现一次。 2. 数字 1 9 在每一列只能出现一次。 3. 数字 1 9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。（请参考示例图） 注意： 一个有效的数独（部分已被填充）不一定是可解的。 只需要根据以上规则，验证已经填入的数字是否有效即可。 空白格用 '.' 表示。 示例 1： 示例 2： 提示： board.length == 9 board[i].length == 9 board[i][j] 是一位数字（1 9）或者 '.' 题解 呜呜呜，像我这种臭鱼烂虾也配做出leetcode中等难度的题了吗？ 我的方法，分别扫描行、扫描列、扫描九宫格，三次遍历得出结果 ： 大佬的方法，一次遍历就行了 ： 节省遍历次数的关键是创建了三个数组， rows[i][index]记录当前数字index在第i行出现的次数。 columns[j][index]记录当前数字index在第j列出现的次数。 subboxes[i/3][j/3][index]记录当前数字index在第[i/3][j/3]个九宫格中出现的次数。 因为有确定的遍历次数和确定的数组大小，所以时间和空间复杂度都是O(1)"
   },
   {
     "title": "由和找到两数——数组、哈希表",
     "date": "2022-03-02T11:25:55.000Z",
+    "updatedAt": "2022-03-02T11:25:55.000Z",
     "file": "由和找到两数——数组、哈希表.md",
     "slug": "2473ac1b",
-    "excerpt": "题目>该题目来自：https://leetcode-cn.com/problems/two-sum/[1.两数之和](https://leetcode-cn.com/problems/two-sum/)难度简单13591收藏分享切换为英文接收动态反馈给定一个整数数",
+    "excerpt": "题目 该题目来自：https://leetcode cn.com/problems/two sum/ 1. 两数之和 难度简单13591收藏分享切换为英文接收动态反馈 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它",
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 357,
+    "readingTime": 1,
+    "searchContent": "题目 该题目来自：https://leetcode cn.com/problems/two sum/ 1. 两数之和 难度简单13591收藏分享切换为英文接收动态反馈 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。 你可以按任意顺序返回答案。 示例 1 ： 示例 2 ： 示例 3 ： 提示 ： 2 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/two sum/solution/liang shu zhi he by leetcode solution/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 可以优化的地方就是对于每个元素x，寻找target x可以改用哈希表寻找，速度可以从O(N)降到O(1)。 只遍历一遍nums数组，对于每个x，寻找target x是否在哈希表中，如果不在就把x插入到哈希表中。 时间复杂度：O(N) 空间复杂度：O(N) 代码解释 ： hashtable: 由键 值组成（都是int类型）在这道题里键是nums[i]，值是索引i。 it second: it是迭代器，it second表示访问值，同理it first访问键，也可以写成( it).second，( it).first。"
   },
   {
     "title": "Yolov5训练自己的目标检测模型",
     "date": "2022-02-28T14:34:57.000Z",
+    "updatedAt": "2022-02-28T14:34:57.000Z",
     "file": "yolov5训练自己的目标检测模型.md",
     "slug": "8b193099",
-    "excerpt": "yolov5训练自己的目标检测模型yolov5yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代模型。项目地址：[https://github.com/ultralytics/yolov5](https://github.c",
+    "excerpt": "yolov5训练自己的目标检测模型 yolov5 yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代模型。 项目地址：https://github.com/ultralytics/yolov5 克隆下来之后，用pycharm打开，选择3.8版本的",
     "tags": [
       "技能分享"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 431,
+    "readingTime": 2,
+    "searchContent": "yolov5训练自己的目标检测模型 yolov5 yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代模型。 项目地址：https://github.com/ultralytics/yolov5 克隆下来之后，用pycharm打开，选择3.8版本的python解释器，自动安装依赖。 制作数据集 数据集在线打标网站：https://www.makesense.ai/ 打标完成后可以下载符合yolo格式的txt文件。 然后需要对数据集进行组织。 我的数据集目录如下： 注意：images目录下的图片文件名需和labels目录下的文件名保持一致（后缀名不同） 其中测试/训练图片的标签文件为文本文件，其格式如下： 0表示类别，这里我只用到一个类别，后面四个数字表示矩形选框四个顶点的位置。 还需准备一个yaml配置文件： 训练 在yolov5根目录下有train.py文件，修改其data字段： 右键运行即可开始训练，训练结果会保存到runs/train目录下。 可以使用colab提供的免费gpu算力进行训练，亲测很好用： https://colab.research.google.com/ 训练完把权重下载下来即可。 推理 负责推理的文件是detect.py。 使用命令行工具进行推理，在终端键入： 举个例子： 推理结果保存在runs/detect/exp 效果不错！ 参考资料 目标检测 YOLOv5 开源代码项目调试与讲解实战【土堆 x 布尔艺数】: https://www.bilibili.com/video/BV1tf4y1t7ru?p=8&spm id from=333.1007.top right bar window history.content.click 感谢土老师的教学视频。"
   },
   {
     "title": "最大子数组和——动态规划、分治",
     "date": "2022-02-28T11:35:21.000Z",
+    "updatedAt": "2022-02-28T11:35:21.000Z",
     "file": "最大子数组和——动态规划、分治.md",
     "slug": "91bc6956",
-    "excerpt": "题目>来自：https://leetcode-cn.com/problems/maximum-subarray/[53.最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/)难度简单4424收藏分享切换为",
+    "excerpt": "题目 来自：https://leetcode cn.com/problems/maximum subarray/ 53. 最大子数组和 难度简单4424收藏分享切换为英文接收动态反馈 给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。 子数组 ",
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 227,
+    "readingTime": 1,
+    "searchContent": "题目 来自：https://leetcode cn.com/problems/maximum subarray/ 53. 最大子数组和 难度简单4424收藏分享切换为英文接收动态反馈 给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。 子数组 是数组中的一个连续部分。 示例 1： 示例 2： 示例 3： 题解 法一：动态规划 用一个数组f[i]表示以第i个元素结尾的具有最大和的连续子数组，i从0开始。有如下式子： 这样就可以递推求出所有的f[i]啦。代码如下： 我这里写的很简陋，力扣官方给的题解说的很清楚：https://leetcode cn.com/problems/maximum subarray/solution/zui da zi xu he by leetcode solution/ 法二：分治 因为用法一把这题过了，懒得看法二了..."
   },
   {
     "title": "存在重复元素——排序、哈希",
     "date": "2022-02-26T11:22:16.000Z",
+    "updatedAt": "2022-02-26T11:22:16.000Z",
     "file": "存在重复元素——排序、哈希.md",
     "slug": "3dd918a8",
-    "excerpt": "题目>该题来自：https://leetcode-cn.com/problems/contains-duplicate/[217.存在重复元素]难度简单635收藏分享切换为英文接收动态反馈给你一个整数数组`nums`。如果任一值在数组中出现至少两次，",
+    "excerpt": "题目 该题来自：https://leetcode cn.com/problems/contains duplicate/ [217. 存在重复元素] 难度简单635收藏分享切换为英文接收动态反馈 给你一个整数数组 nums 。如果任一值在数组中出现 至少两次 ，返回 true ；如果数组中每个元素互",
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 660,
+    "readingTime": 2,
+    "searchContent": "题目 该题来自：https://leetcode cn.com/problems/contains duplicate/ [217. 存在重复元素] 难度简单635收藏分享切换为英文接收动态反馈 给你一个整数数组 nums 。如果任一值在数组中出现 至少两次 ，返回 true ；如果数组中每个元素互不相同，返回 false 。 示例 1： 示例 2： 示例 3： 提示： 1 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/contains duplicate/solution/cun zai zhong fu yuan su by leetcode sol iedd/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 法一：最慢的方法，把nums中的每个元素都拿出来，遍历nums数组找一下看有没有跟它相同的元素。时间复杂度O(n^2) 法二：用sort函数排个序，相同的元素会被排到一块儿，遍历一遍nums数组就找到了。思路很简单，但还是不够优雅。时间复杂度O(nlogn) 补充一下c++中的sort函数： sort(first pointer,first pointer+n,cmp) 该函数可以给数组，或者链表list、向量排序。 实现原理：sort并不是简单的快速排序，它对普通的快速排序进行了优化，此外，它还结合了插入排序和推排序。系统会根据你的数据形式和数据量自动选择合适的排序方法，这并不是说它每次排序只选择一种方法，它是在一次完整排序中不同的情况选用不同方法，比如给一个数据量较大的数组排序，开始采用快速排序，分段递归，分段之后每一段的数据量达到一个较小值后它就不继续往下递归，而是选择插入排序，如果递归的太深，他会选择推排序。 此函数有3个参数： 参数1：第一个参数是数组的首地址，一般写上数组名就可以，因为数组名是一个指针常量。 参数2：第二个参数相对较好理解，即首地址加上数组的长度n（代表尾地址的下一地址）。 参数3：默认可以不填，如果不填sort会默认按数组升序排序。也就是1,2,3,4排序。也可以自定义一个排序函数，改排序方式为降序什么的，也就是4,3,2,1这样。 代码： 法三（最优）：将nums数组中的每个元素插入哈希表，如果发现已存在，则说明有重复。时间复杂度O(N) 代码："
   },
   {
     "title": "找到小镇的法官——图论入门",
     "date": "2022-02-25T10:49:18.000Z",
+    "updatedAt": "2022-02-25T10:49:18.000Z",
     "file": "找到小镇的法官——图论入门.md",
     "slug": "d6d1b16d",
-    "excerpt": "题目>来源：力扣（LeetCode）>链接：https://leetcode-cn.com/problems/find-the-town-judge>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。小镇里有n个人，按从1到n的顺序编号。传言称，",
+    "excerpt": "题目 来源：力扣（LeetCode） 链接：https://leetcode cn.com/problems/find the town judge 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。 小镇里有 n 个人，按从 1 到 n 的顺序编号。传言称，这些人中有一个暗地里是",
     "tags": [
       "刷题"
     ],
-    "img": ""
+    "img": "",
+    "wordCount": 417,
+    "readingTime": 2,
+    "searchContent": "题目 来源：力扣（LeetCode） 链接：https://leetcode cn.com/problems/find the town judge 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。 小镇里有 n 个人，按从 1 到 n 的顺序编号。传言称，这些人中有一个暗地里是小镇法官。 如果小镇法官真的存在，那么： 小镇法官不会信任任何人。 每个人（除了小镇法官）都信任这位小镇法官。 只有一个人同时满足属性 1 和属性 2 。 给你一个数组 trust ，其中 trust[i] = [ai, bi] 表示编号为 ai 的人信任编号为 bi 的人。 如果小镇法官存在并且可以确定他的身份，请返回该法官的编号；否则，返回 1 。 示例 1： 输入：n = 2, trust = [[1,2]] 输出：2 示例 2： 输入：n = 3, trust = [[1,3],[2,3]] 输出：3 示例 3： 输入：n = 3, trust = [[1,3],[2,3],[3,1]] 输出： 1 题解 先吐槽一下：今天是开学第五天，是我第五次来图书馆。没办法，像我这种生活极不充实的人就只能在图书馆消磨时光。 回到正题：这是一道图论入门题目。把小镇上的每个人作为一个节点，信任关系作为边，那么所谓的“法官”其实就是出度为0，入度为n 1的节点。所以解体思路就是通过遍历trust数组把每个节点的出度和入度统计出来就可以啦。 代码： 其中auto的意思是自动确定变量类型。关于“&”的用法我还没搞明白。"
   },
   {
     "title": "完全背包问题——动态规划——这道题解是认真写的qwq",
     "date": "2022-02-23T11:24:06.000Z",
+    "updatedAt": "2022-02-23T11:24:06.000Z",
     "file": "完全背包问题——动态规划.md",
     "slug": "54394b2a",
-    "excerpt": ">完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。>>题目链接：https://www.acwing.com/problem/content/3/有NN种物品和一个容量是VV的背包，每种物品都有无限件可用。第ii种物品的体积是vivi，价值是wiwi",
+    "excerpt": "完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。 题目链接：https://www.acwing.com/problem/content/3/ 有 NN 种物品和一个容量是 VV 的背包，每种物品都有无限件可用。 第 ii 种物品的体积是 vivi，价值是 wiwi。 求解将哪些物",
     "tags": [
       "刷题"
     ],
-    "img": ""
-  },
-  {
-    "title": "01背包问题——动态规划",
-    "date": "2022-02-22T08:42:16.000Z",
-    "file": "01背包问题——动态规划.md",
-    "slug": "554aac27",
-    "excerpt": ">题目来自：https://www.acwing.com/problem/search/1/?csrfmiddlewaretoken=UwJf7O4w1mYDi1yfimoQC3A85cwxyluK0ixh0ZlBDLqKKVOlEWEHJVbdE4OlzzVr&search_content=%E",
-    "tags": [
-      "刷题"
-    ],
-    "img": ""
+    "img": "",
+    "wordCount": 422,
+    "readingTime": 2,
+    "searchContent": "完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。 题目链接：https://www.acwing.com/problem/content/3/ 有 NN 种物品和一个容量是 VV 的背包，每种物品都有无限件可用。 第 ii 种物品的体积是 vivi，价值是 wiwi。 求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。 输出最大价值。 题目 输入格式 第一行两个整数，N，VN，V，用空格隔开，分别表示物品种数和背包容积。 接下来有 NN 行，每行两个整数 vi,wivi,wi，用空格隔开，分别表示第 ii 种物品的体积和价值。 输出格式 输出一个整数，表示最大价值。 数据范围 0 参考作者：Charles 链接：https://www.acwing.com/solution/content/5345/ 来源：AcWing 在01背包问题中，有一段判断装不装该物品的代码： 我们可以用一个0到1的k循环改写，k的物理意义是物品的数量： 当k=0时，f[i][j] = f[i 1][j]; 当k=1时（k v[i]<=j的约束条件保证背包可以装得下）， ` 这样我们就可以推广01背包问题到完全背包问题啦，完全背包问题的答案如下： but，这样写性能貌似不太行啊，还得优化： 大佬通过数学推导，把循环都给破解了，核心代码优化成这样： 后面还能继续优化！但是到这里这道题已经能ac了，我这个懒逼就不继续思考了。 最终代码："
   }
 ]

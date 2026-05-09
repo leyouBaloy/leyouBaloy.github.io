@@ -11,7 +11,7 @@
       <div class="search-box">
         <n-input
           v-model:value="searchQuery"
-          placeholder="🔍 搜索文章标题或标签..."
+          placeholder="🔍 搜索文章标题、标签或正文..."
           clearable
           size="large"
           @update:value="handleSearch"
@@ -134,7 +134,7 @@
           <div v-if="!searchQuery" class="empty-state">
             <n-empty description="请在上方输入关键词搜索">
               <template #extra>
-                <span class="hint">支持搜索文章标题和标签</span>
+                <span class="hint">支持搜索标题、标签、摘要和正文</span>
               </template>
             </n-empty>
           </div>
@@ -159,6 +159,7 @@
                 :tags="getTags(post)"
                 highlight
                 :search-keyword="searchQuery"
+                :excerpt="getSearchSnippet(post)"
                 @click="router.push(`/post/${post.slug}`)" 
               />
             </timeline>
@@ -262,18 +263,37 @@ const displayPostsByTag = computed(() => {
 });
 
 // 搜索功能
+const matchesSearch = (post: PostMetadata, query: string) => {
+  const tags = getTags(post).join(' ');
+  const haystack = [
+    post.title,
+    tags,
+    post.excerpt,
+    post.searchContent
+  ].filter(Boolean).join(' ').toLowerCase();
+  return haystack.includes(query);
+};
+
+const getSearchSnippet = (post: PostMetadata) => {
+  const query = searchQuery.value.trim().toLowerCase();
+  const source = post.searchContent || post.excerpt || '';
+  if (!source) return post.excerpt || '';
+  if (!query) return source.slice(0, 100);
+  const lowerSource = source.toLowerCase();
+  const index = lowerSource.indexOf(query);
+  if (index === -1) return source.slice(0, 100);
+  const start = Math.max(0, index - 40);
+  const end = Math.min(source.length, index + query.length + 60);
+  const prefix = start > 0 ? '...' : '';
+  const suffix = end < source.length ? '...' : '';
+  return `${prefix}${source.slice(start, end)}${suffix}`;
+};
+
 const searchResults = computed(() => {
   if (!searchQuery.value.trim()) return [];
   
   const query = searchQuery.value.toLowerCase();
-  return allPosts.value.filter(post => {
-    // 搜索标题
-    if (post.title && post.title.toLowerCase().includes(query)) return true;
-    // 搜索标签
-    const tags = getTags(post);
-    if (tags && tags.some((tag: string) => tag.toLowerCase().includes(query))) return true;
-    return false;
-  });
+  return allPosts.value.filter(post => matchesSearch(post, query));
 });
 
 // 按年份筛选
@@ -290,12 +310,7 @@ const filteredPostsByYear = computed(() => {
     const query = searchQuery.value.toLowerCase();
     posts = posts.map(yearData => ({
       ...yearData,
-      posts: yearData.posts.filter(post => {
-        if (post.title && post.title.toLowerCase().includes(query)) return true;
-        const tags = getTags(post);
-        if (tags && tags.some((tag: string) => tag.toLowerCase().includes(query))) return true;
-        return false;
-      })
+      posts: yearData.posts.filter(post => matchesSearch(post, query))
     })).filter(yearData => yearData.posts.length > 0);
   }
   
@@ -314,13 +329,15 @@ const loadArchivesData = async () => {
     const postsByTagResponse = await axios.get<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_tag.json');
     postsByTag.value = postsByTagResponse.data;
 
-    // 获取所有文章用于搜索
-    const allMetadata: PostMetadata[] = [];
+    // 获取所有文章用于归档计数
+    let allMetadata: PostMetadata[] = [];
     const keys = Object.keys(postsByYear.value);
     for (const key of keys) {
       allMetadata.push(...postsByYear.value[key]);
     }
-    allPosts.value = allMetadata;
+
+    const searchIndexResponse = await axios.get<PostMetadata[]>('/markdown/metadata/search_index.json');
+    allPosts.value = searchIndexResponse.data.length ? searchIndexResponse.data : allMetadata;
 
     // 计算总文章数
     totalPosts.value = allMetadata.length;

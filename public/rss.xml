@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Bailey's Blog</title>
+  <link>https://leyoubaloy.github.io</link>
+  <description>读万卷书，行万里路</description>
+  <language>zh-CN</language>
+  <lastBuildDate>Fri, 08 May 2026 15:02:04 GMT</lastBuildDate>
+  <item>
+    <title>opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash</title>
+    <link>https://leyoubaloy.github.io/post/512e708e</link>
+    <guid>https://leyoubaloy.github.io/post/512e708e</guid>
+    <pubDate>Wed, 25 Mar 2026 12:53:00 GMT</pubDate>
+    <description>opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash 做 AI 编程助手（或类似工具）的核心，就是怎么让 AI 正确地读写文件、执行命令。本质上，LLM 是个&quot;脑子里有很多知识但手很短&quot;的存在——它能推理，但没法直接摸到你的代码。于是需要</description>
+  </item>
+  <item>
+    <title>single-agent现阶段明显强于multi-agent</title>
+    <link>https://leyoubaloy.github.io/post/7dbff82d</link>
+    <guid>https://leyoubaloy.github.io/post/7dbff82d</guid>
+    <pubDate>Wed, 25 Mar 2026 03:44:00 GMT</pubDate>
+    <description>single agent现阶段明显强于multi agent multi agent 系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。 反观那些真正跑出来的产品——OpenClaw、</description>
+  </item>
+  <item>
+    <title>自动发布博客</title>
+    <link>https://leyoubaloy.github.io/post/2f15163c</link>
+    <guid>https://leyoubaloy.github.io/post/2f15163c</guid>
+    <pubDate>Wed, 11 Mar 2026 14:22:25 GMT</pubDate>
+    <description>用 AI Skills 实现博客自动发布 🚀 🤖 本文由 AI 自动生成并自动发布 前言 今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。 什么是 Skills？ Sk</description>
+  </item>
+  <item>
+    <title>测试仪</title>
+    <link>https://leyoubaloy.github.io/post/7fde58cd</link>
+    <guid>https://leyoubaloy.github.io/post/7fde58cd</guid>
+    <pubDate>Wed, 11 Mar 2026 14:13:43 GMT</pubDate>
+    <description>测试仪 这里是内容的起始点。</description>
+  </item>
+  <item>
+    <title>langchain-faiss加载pkl文件速度提升</title>
+    <link>https://leyoubaloy.github.io/post/506f20a8</link>
+    <guid>https://leyoubaloy.github.io/post/506f20a8</guid>
+    <pubDate>Sun, 14 Dec 2025 06:19:28 GMT</pubDate>
+    <description>langchain faiss加载pkl文件速度提升 背景 Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。 langchain community.vectorstores中的Faiss写入一个向量库中包含两个文件：index.faiss</description>
+  </item>
+  <item>
+    <title>RAG图谱实体和边智能合并</title>
+    <link>https://leyoubaloy.github.io/post/46bbd497</link>
+    <guid>https://leyoubaloy.github.io/post/46bbd497</guid>
+    <pubDate>Sun, 13 Jul 2025 09:25:50 GMT</pubDate>
+    <description>RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple In</description>
+  </item>
+  <item>
+    <title>手撕卷积神经网络+反向传播梯度更新</title>
+    <link>https://leyoubaloy.github.io/post/8912df88</link>
+    <guid>https://leyoubaloy.github.io/post/8912df88</guid>
+    <pubDate>Sun, 13 Jul 2025 07:24:20 GMT</pubDate>
+    <description>手撕卷积神经网络 一个简单的卷积神经网络，就4层，分别是InputLayer, conv layer, hidden layer(全连接层 + ReLU激活), output layer 反向传播梯度更新推导 以下是四层网络中每层的反向传播公式（以损失函数 \( L \) 为起点，使用偏导数符号）：</description>
+  </item>
+  <item>
+    <title>手撕Attention</title>
+    <link>https://leyoubaloy.github.io/post/d764f796</link>
+    <guid>https://leyoubaloy.github.io/post/d764f796</guid>
+    <pubDate>Sun, 22 Jun 2025 08:49:55 GMT</pubDate>
+    <description>第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K</description>
+  </item>
+  <item>
+    <title>图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni</title>
+    <link>https://leyoubaloy.github.io/post/ff7483e1</link>
+    <guid>https://leyoubaloy.github.io/post/ff7483e1</guid>
+    <pubDate>Tue, 10 Jun 2025 10:14:29 GMT</pubDate>
+    <description>ChartVLM ChartVLM由两部分组成：图表结构解码器+大语言模型 截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct 显存占用基本保持在2506 MiB 普通图表 原图 识别结果 评价 CSV数据： Category,Percentage Visual A</description>
+  </item>
+  <item>
+    <title>深度学习模型图表理解chart2txt-8个模型对比实验</title>
+    <link>https://leyoubaloy.github.io/post/e9dd83c6</link>
+    <guid>https://leyoubaloy.github.io/post/e9dd83c6</guid>
+    <pubDate>Tue, 10 Jun 2025 08:48:23 GMT</pubDate>
+    <description>背景 为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法 多模态大模型测试 Prompt 测试环境：3090单卡 测试效果 模型 数据1：饼图 数据2：折线图 数据3：流程图 评价 MiniCPM V 2 6 vllm 这张饼图显示了2023年美国艺术类别分布。最大的部分是视</description>
+  </item>
+  <item>
+    <title>DeepResearch深度搜索实现方法调研</title>
+    <link>https://leyoubaloy.github.io/post/47f2a5ec</link>
+    <guid>https://leyoubaloy.github.io/post/47f2a5ec</guid>
+    <pubDate>Fri, 09 May 2025 14:03:42 GMT</pubDate>
+    <description>DeepResearch深度搜索实现方法调研 Deep Research 有三个核心能力 + 能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索） + 能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？） + 能力三：对多源的信息进行验</description>
+  </item>
+  <item>
+    <title>开源PDF解析工具Marker深度解析</title>
+    <link>https://leyoubaloy.github.io/post/19977fa8</link>
+    <guid>https://leyoubaloy.github.io/post/19977fa8</guid>
+    <pubDate>Mon, 05 May 2025 14:36:59 GMT</pubDate>
+    <description>开源PDF解析工具Marker深度解析 检索增强生成（RAG）系统的第一步就是做 pdf 解析，从复杂多样的 pdf 中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker 和 MinerU。因为 Marker 是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进行解析</description>
+  </item>
+  <item>
+    <title>Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践</title>
+    <link>https://leyoubaloy.github.io/post/7624b8c1</link>
+    <guid>https://leyoubaloy.github.io/post/7624b8c1</guid>
+    <pubDate>Fri, 24 Jan 2025 01:37:25 GMT</pubDate>
+    <description>思路 1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）。把需要布局的组件（这里叫做waterfall item）放在瀑布流容器里面渲染出来。使用绝对定位（position: absolute），把它移到屏幕外面，不要占用页面高度，并且设置不可见（visibility:hidden）。 2.渲染</description>
+  </item>
+  <item>
+    <title>品酒🍶——古井贡酒第六代55度</title>
+    <link>https://leyoubaloy.github.io/post/11baea90</link>
+    <guid>https://leyoubaloy.github.io/post/11baea90</guid>
+    <pubDate>Mon, 09 Dec 2024 14:49:43 GMT</pubDate>
+    <description>古井贡酒第六代55度 香型：浓香型 度数：55 原料：高粱、大米、小麦、糯米、玉米 产地：安徽亳州 价格：72元/500ml 品鉴感受 闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。</description>
+  </item>
+  <item>
+    <title>电脑启动需要经历哪些过程？</title>
+    <link>https://leyoubaloy.github.io/post/4e728164</link>
+    <guid>https://leyoubaloy.github.io/post/4e728164</guid>
+    <pubDate>Wed, 27 Nov 2024 06:51:10 GMT</pubDate>
+    <description>传统BIOS启动流程 1. BIOS BIOS 启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。需要有一个外部储</description>
+  </item>
+  <item>
+    <title>无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录</title>
+    <link>https://leyoubaloy.github.io/post/024ab30e</link>
+    <guid>https://leyoubaloy.github.io/post/024ab30e</guid>
+    <pubDate>Wed, 27 Nov 2024 06:47:24 GMT</pubDate>
+    <description>无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouv</description>
+  </item>
+  <item>
+    <title>Leetcode_209长度最小的子数组——滑动窗口</title>
+    <link>https://leyoubaloy.github.io/post/35124327</link>
+    <guid>https://leyoubaloy.github.io/post/35124327</guid>
+    <pubDate>Thu, 21 Nov 2024 13:28:00 GMT</pubDate>
+    <description>Leetcode 209长度最小的子数组 给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其总和大于等于 target 的长度最小的 子数组 [numsl, numsl+1, ..., numsr 1, numsr] ，并返回其长度 。 如果不存在符合条件的子数组，返</description>
+  </item>
+  <item>
+    <title>高光谱遥感深度学习调研</title>
+    <link>https://leyoubaloy.github.io/post/40c266ad</link>
+    <guid>https://leyoubaloy.github.io/post/40c266ad</guid>
+    <pubDate>Fri, 15 Nov 2024 08:36:41 GMT</pubDate>
+    <description>高光谱遥感深度学习调研 综述 高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。 Wang C, Liu B, Liu L, et al. A review of deep learning used in the hyperspectral image analysi</description>
+  </item>
+  <item>
+    <title>品酒（尊美醇Jameson）</title>
+    <link>https://leyoubaloy.github.io/post/b9f36e78</link>
+    <guid>https://leyoubaloy.github.io/post/b9f36e78</guid>
+    <pubDate>Mon, 04 Nov 2024 15:18:54 GMT</pubDate>
+    <description>尊美醇Jameson 产地 ：爱尔兰。其最初在都柏林的弓街酿酒厂生产，1975 年 7 月开始转移到爱尔兰科克郡的米德尔顿酿酒厂。 度数 ：40% vol。 酿造工艺 ：采用三重蒸馏工艺。把已发芽与未发芽的大麦放到一起发酵，成品要经过三次蒸馏并在橡木桶中经历 5 7 年以上的熟成，然后还需要加入一定</description>
+  </item>
+  <item>
+    <title>数之和问题归纳——哈希、双指针</title>
+    <link>https://leyoubaloy.github.io/post/c3608157</link>
+    <guid>https://leyoubaloy.github.io/post/c3608157</guid>
+    <pubDate>Mon, 04 Nov 2024 12:10:30 GMT</pubDate>
+    <description>Leetcode 1: 两数之和 题目 https://leetcode.cn/problems/two sum/ 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素</description>
+  </item>
+  <item>
+    <title>Leetcode142:环形链表II——快慢指针</title>
+    <link>https://leyoubaloy.github.io/post/f870a3e8</link>
+    <guid>https://leyoubaloy.github.io/post/f870a3e8</guid>
+    <pubDate>Tue, 29 Oct 2024 13:04:06 GMT</pubDate>
+    <description>Leetcode 142环形链表II https://leetcode.cn/problems/linked list cycle ii/description/ 给定一个链表的头节点 head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 如果链表中有某个节点，可以通过连续跟</description>
+  </item>
+  <item>
+    <title>Leetcode283:移动零——双指针</title>
+    <link>https://leyoubaloy.github.io/post/0b17329c</link>
+    <guid>https://leyoubaloy.github.io/post/0b17329c</guid>
+    <pubDate>Mon, 23 Sep 2024 12:01:16 GMT</pubDate>
+    <description>题目 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。 请注意 ，必须在不复制数组的情况下原地对数组进行操作。 示例 1: 示例 2: 官方题解 使用双指针，左指针指向当前已经处理好的序列的尾部，右指针指向待处理序列的头部。 右指针不断向右移动，每次右指</description>
+  </item>
+  <item>
+    <title>品酒🍶（古井贡酒-古8）</title>
+    <link>https://leyoubaloy.github.io/post/5086af34</link>
+    <guid>https://leyoubaloy.github.io/post/5086af34</guid>
+    <pubDate>Thu, 19 Sep 2024 15:38:28 GMT</pubDate>
+    <description>古 8 香型：浓香型 原料：水、高粱、大米、小麦、糯米、玉米 酒精度：42 度 产地：安徽亳州 价格：220 元/ 425ml 品尝感受：入口柔，后劲小，感觉像是稀释了的古 16，毕竟是低度酒，喝起来没有那么浓郁，但是古井的窖泥味儿还是很明显的。相比于 42 度的红盖汾酒来说，好喝多了。（虽然它两价</description>
+  </item>
+  <item>
+    <title>代码块功能测试</title>
+    <link>https://leyoubaloy.github.io/post/4692489c</link>
+    <guid>https://leyoubaloy.github.io/post/4692489c</guid>
+    <pubDate>Sat, 14 Sep 2024 00:00:00 GMT</pubDate>
+    <description>代码块 Copy 按钮和高亮功能测试 这个页面用于测试新添加的代码块功能，包括语法高亮和复制按钮。 JavaScript 代码块 Python 代码块 CSS 样式代码 SQL 查询 JSON 数据 Shell 脚本 行内代码测试 这是一个行内代码的例子：const message = &quot;Hello</description>
+  </item>
+  <item>
+    <title>绿植盆栽攻略</title>
+    <link>https://leyoubaloy.github.io/post/5953ed50</link>
+    <guid>https://leyoubaloy.github.io/post/5953ed50</guid>
+    <pubDate>Wed, 28 Aug 2024 10:24:07 GMT</pubDate>
+    <description>分类 以下是常见的绿植盆栽分类： 一、观叶类绿植盆栽 植物类型 ：绿萝、吊兰、龟背竹、发财树、文竹、虎皮兰等。 养护难度 ：总体来说养护难度相对较低。绿萝和吊兰适应能力强，能在不同环境下生长，只要保证适量的水分和散射光即可。龟背竹喜欢温暖湿润的环境，但也比较耐阴。发财树需注意浇水不能过多，否则容易烂</description>
+  </item>
+  <item>
+    <title>品酒🍶(古井贡酒-古16)</title>
+    <link>https://leyoubaloy.github.io/post/a2aab3af</link>
+    <guid>https://leyoubaloy.github.io/post/a2aab3af</guid>
+    <pubDate>Sat, 24 Aug 2024 14:52:24 GMT</pubDate>
+    <description>外观 古 16 这个酒属于古井贡酒系列的中端，品质还是不错的，包装非常精美，酒瓶是大红色，喜庆，很适合婚宴使用。 购买经历 家里有几瓶古 16，我一直想拿一瓶尝尝，但我妈死活不让。于是我就想了办法套路我妈，结果她还真收了我的钱，这是我没想到的O.o。 品鉴 原料 ：高粱、大米、小麦、糯米、玉米（还挺</description>
+  </item>
+  <item>
+    <title>品酒🍶（高脖绿瓶西凤酒陕西版）</title>
+    <link>https://leyoubaloy.github.io/post/a6894469</link>
+    <guid>https://leyoubaloy.github.io/post/a6894469</guid>
+    <pubDate>Wed, 21 Aug 2024 23:09:53 GMT</pubDate>
+    <description>今天品一下高脖绿瓶西凤酒，这是凤香型的代表酒。这个酒也是出了名的乱，有陕西版比省外版的好喝，批次早的比批次晚的好喝。我买的版本是 2023 年的陕西版。 原料 ：高粱、大麦、小麦、豌豆。 酒精度 ：55 度。 价格 ：约 50 元/500ml。 闻香 ：闻着像黄盖汾（清香型），有水果香，仔细闻还能闻</description>
+  </item>
+  <item>
+    <title>调研遥感数据压缩</title>
+    <link>https://leyoubaloy.github.io/post/a37163dc</link>
+    <guid>https://leyoubaloy.github.io/post/a37163dc</guid>
+    <pubDate>Tue, 20 Aug 2024 16:11:00 GMT</pubDate>
+    <description>什么是遥感数据压缩？ 遥感图像压缩是指利用特定的算法和技术减少遥感图像数据量的过程，以便更有效地存储和传输数据。这个过程涉及到数据的编码，以减少数据的比特数，同时尽量保持原始图像的重要视觉和分析信息。遥感图像压缩通常分为两类： 1. 无损压缩（Lossless Compression） ：在无损压缩</description>
+  </item>
+  <item>
+    <title>品酒🍶（国窖 1573）</title>
+    <link>https://leyoubaloy.github.io/post/7af852ce</link>
+    <guid>https://leyoubaloy.github.io/post/7af852ce</guid>
+    <pubDate>Sat, 17 Aug 2024 22:01:53 GMT</pubDate>
+    <description>今天品一下国窖 1573，拿泸州老窖特曲做个对比。 香味 ：国窖 1573 跟泸州老窖特曲的香味基调十分相似，但仔细闻有细微差别，国窖 1573 更加轻盈，丰富，有果香味儿。而特曲的窖泥味儿偏重，会更沉闷一些。 品尝 ：入口之后，国窖的这种轻盈感更加明显。无论是入口还是吞咽，国窖都要比特曲更绵柔、清</description>
+  </item>
+  <item>
+    <title>新加坡访学旅行</title>
+    <link>https://leyoubaloy.github.io/post/fe7200e4</link>
+    <guid>https://leyoubaloy.github.io/post/fe7200e4</guid>
+    <pubDate>Wed, 14 Aug 2024 08:01:42 GMT</pubDate>
+    <description>读万卷书，行万里路。因为今年学校出了一个境外访学资助政策，所以就申请了为期七天的新加坡南洋理工大学的访学项目。这是我第一次出国，有很多新奇体验，在这里分享一下 新加坡 新加坡位于东南亚马来半岛南端、马六甲海峡出入口，新加坡岛东西约50公里，南北约26公里，国土面积仅733.1平方千米（2021年）。</description>
+  </item>
+  <item>
+    <title>品酒🍶（古井贡酒-古20）以及小插曲</title>
+    <link>https://leyoubaloy.github.io/post/7120d25f</link>
+    <guid>https://leyoubaloy.github.io/post/7120d25f</guid>
+    <pubDate>Sat, 27 Jul 2024 23:01:53 GMT</pubDate>
+    <description>这个酒在安徽喝的是非常多的，我跟我爸去参加应酬的时候经常喝，但是之前我不认识酒，今天买来尝尝，果然是熟悉的味道。 我买的是小瓶装100ml，80 块钱，瓶子就巴掌大，还送了个小袋子，挺可爱的。 口感：入口非常绵柔，没有任何刺激，入口后的味道非常独特，感觉就像是烟雨江南里微风吹过雨水淋湿泥土再混杂着青</description>
+  </item>
+  <item>
+    <title>品酒🍶（汾酒黄盖&amp;泸州老窖特曲经典）</title>
+    <link>https://leyoubaloy.github.io/post/886209a4</link>
+    <guid>https://leyoubaloy.github.io/post/886209a4</guid>
+    <pubDate>Tue, 23 Jul 2024 23:18:53 GMT</pubDate>
+    <description>最近改论文压力挺大，经常失眠。品点小酒🍶，微醺更容易入睡。 汾酒黄盖 ：清香型。闻起来有股淡淡的清香（有一点点像山西老陈醋，但是没有那么腻，是很清淡的），喝起来也挺香，吞下之后香味会在嘴巴里回荡一小会儿。整个酒都是比较柔的，喝起来比较舒服，大部分人都能接受。 泸州老窖特曲经典 ：浓香型。闻起来是泸</description>
+  </item>
+  <item>
+    <title>遥感图像检索调研</title>
+    <link>https://leyoubaloy.github.io/post/3c174b3b</link>
+    <guid>https://leyoubaloy.github.io/post/3c174b3b</guid>
+    <pubDate>Sun, 21 Jul 2024 21:07:35 GMT</pubDate>
+    <description>遥感图像检索的形式 遥感图像检索最常见的形式是给定一张query image，去遥感数据库里查询跟它最相近的图像。研究最多的是这种。 除此之外，还有画草图检索，或者用SAR（一种雷达）、文本、音频来检索的，这种叫跨模态检索。 还有从地面照片来检索遥感图像的，属于不同视角的检索。 深度学习在遥感图像检</description>
+  </item>
+  <item>
+    <title>压缩域图像深度学习分类/分割论文调研</title>
+    <link>https://leyoubaloy.github.io/post/30e49844</link>
+    <guid>https://leyoubaloy.github.io/post/30e49844</guid>
+    <pubDate>Sun, 21 Jul 2024 17:28:35 GMT</pubDate>
+    <description>为什么要做压缩域图像深度学习分类/分割？ 互联网上充斥着大量图像，它们基本都是以压缩的形式存在。在传统的训练过程中，需要将图像数据从压缩域（Compressed Domain）解压到像素域（Pixel Domain），再输入到网络中进行训练。然而，解压这一步真的有意义吗？解压只是将数据形式进行转换，</description>
+  </item>
+  <item>
+    <title>《德米安》读后有感</title>
+    <link>https://leyoubaloy.github.io/post/e9ae0e15</link>
+    <guid>https://leyoubaloy.github.io/post/e9ae0e15</guid>
+    <pubDate>Wed, 01 May 2024 15:49:07 GMT</pubDate>
+    <description>最近读了黑塞的《德米安》，这是一个关于一个少年如何在彷徨时找寻自我的故事。故事的主人公叫辛克莱，他出生于一个宗教家庭，父母都是非常善良纯洁的人，小时候的他也非常懂事乖巧，生活在幸福当中。但是有一天他遇到了校园霸凌，他为这件事情使他非常苦恼，也正是因为这件事情使他觉醒了自我，他开始发现世界不是单纯善良</description>
+  </item>
+  <item>
+    <title>一部接地气的国产法律神剧——第二十条</title>
+    <link>https://leyoubaloy.github.io/post/a94b5eff</link>
+    <guid>https://leyoubaloy.github.io/post/a94b5eff</guid>
+    <pubDate>Wed, 21 Feb 2024 09:30:31 GMT</pubDate>
+    <description>春节假期末期，我和我爸妈一起去电影院观看了《第二十条》，我和我妈都觉得非常好看。《第二十条》是一部国产法律电影，其剧名指的是我国刑法第二十条关于正当防卫和防卫过当的法律条文。从来没有哪一条法律条文像第二十条这样容易引起争议。试想一下，如果一名歹徒要拿刀杀你，你在情急之中找到另外一把凶器并且将他反杀，</description>
+  </item>
+  <item>
+    <title>SCI论文润色经验分享</title>
+    <link>https://leyoubaloy.github.io/post/e736dfef</link>
+    <guid>https://leyoubaloy.github.io/post/e736dfef</guid>
+    <pubDate>Sat, 23 Dec 2023 13:39:08 GMT</pubDate>
+    <description>变量符号 第一次出现的变量符号需要解释，后面不需再解释。 文章中所有的变量符号要保持一致，不能前后歧义。解决这个问题最好的办法就是在写作时维护一个符号表。如果文章的公式变量较多，强烈建议这么做，否则后面改起来会很痛苦。 所有单字母变量，都要采用斜体。多字母变量和函数，采用正体。对于下标，若下标本身是</description>
+  </item>
+  <item>
+    <title>《置身事内》读书笔记</title>
+    <link>https://leyoubaloy.github.io/post/1e3d20cb</link>
+    <guid>https://leyoubaloy.github.io/post/1e3d20cb</guid>
+    <pubDate>Mon, 11 Dec 2023 12:55:26 GMT</pubDate>
+    <description>《置身事内》是复旦大学经济学院副教授兰小欢的科普读物。兰教授写这本书的目的是让更多的国人了解我国的经济政策。过去十年，我国的经济发展可以用“起飞”二字来形容。一提到中国经济，大家都非常自信且乐观的。但是到了疫情结束后的2023年，大家明显感到经济增速放缓了，生活和工作压力变大了。对于我们大学生来说，</description>
+  </item>
+  <item>
+    <title>如何在Windows上编译Python39源代码</title>
+    <link>https://leyoubaloy.github.io/post/9fd37d43</link>
+    <guid>https://leyoubaloy.github.io/post/9fd37d43</guid>
+    <pubDate>Sun, 10 Dec 2023 12:51:01 GMT</pubDate>
+    <description>安装Visual Studio 2017 先下载Visual Studio Installer https://learn.microsoft.com/en us/visualstudio/python/installing python support in visual studio?view=</description>
+  </item>
+  <item>
+    <title>蚌埠美食之旅</title>
+    <link>https://leyoubaloy.github.io/post/f6639fe4</link>
+    <guid>https://leyoubaloy.github.io/post/f6639fe4</guid>
+    <pubDate>Sun, 08 Oct 2023 12:11:39 GMT</pubDate>
+    <description>蚌埠简介 蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给蚌埠带来了繁荣的机会。除此之外，蚌埠还有千里淮河第一大港——蚌埠港，水路交通也十分发达。铁路和水路奠定了蚌埠重要的交通地位。交通有了，人也渐渐多起来，商业也逐</description>
+  </item>
+  <item>
+    <title>艺术品般的游戏—《荒野大镖客救赎2》</title>
+    <link>https://leyoubaloy.github.io/post/32769736</link>
+    <guid>https://leyoubaloy.github.io/post/32769736</guid>
+    <pubDate>Tue, 19 Sep 2023 08:59:13 GMT</pubDate>
+    <description>“地表最强游戏公司” 大名鼎鼎的侠盗猎车手系列(GTA, Grand Theft Auto)在游戏界应该无人不知，无人不晓，而由原班人马（R星，Rockstar Games）打造的荒野大镖客系列（RD, Red Dead）的知名度稍差一些。这可能是因为荒野大镖客系列目前仅有3 部作品（GTA系列有 </description>
+  </item>
+  <item>
+    <title>苏州印象</title>
+    <link>https://leyoubaloy.github.io/post/17a81efd</link>
+    <guid>https://leyoubaloy.github.io/post/17a81efd</guid>
+    <pubDate>Sat, 12 Aug 2023 12:06:07 GMT</pubDate>
+    <description>2023年8月3日 5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一座城市的呢？我非常好奇，终于有机会能一探究竟！ 从蚌埠坐绿皮火车仅需不到5小时就能到达苏州站（票价62.5），苏州站位于苏州的中心区域——姑苏区（听名字就觉得好</description>
+  </item>
+  <item>
+    <title>ChinaVis重庆之旅</title>
+    <link>https://leyoubaloy.github.io/post/8cb0549f</link>
+    <guid>https://leyoubaloy.github.io/post/8cb0549f</guid>
+    <pubDate>Mon, 31 Jul 2023 11:17:10 GMT</pubDate>
+    <description>ChinaVis大会于2023年7月21日 24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～ 出发！ 第一次坐飞机，飞机型号是波音737 800，起飞的时候感觉好神奇，在空中的景色也非常美。 重庆火锅 到达重庆的第一顿饭当然是重庆火锅，</description>
+  </item>
+  <item>
+    <title>好用的动画制作工具-Keynote</title>
+    <link>https://leyoubaloy.github.io/post/3f0c5268</link>
+    <guid>https://leyoubaloy.github.io/post/3f0c5268</guid>
+    <pubDate>Sat, 01 Jul 2023 02:41:41 GMT</pubDate>
+    <description>Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。 在通用性上，Keynote明显没有PPT那么普及。但是我认为Keynote在动画制作上完胜PPT，如果有足够需求，一定要试一试Keynote。Keynote内置了丰富的动画效果，多试几个，你</description>
+  </item>
+  <item>
+    <title>Flask的一些关于线程的特性</title>
+    <link>https://leyoubaloy.github.io/post/c2de1901</link>
+    <guid>https://leyoubaloy.github.io/post/c2de1901</guid>
+    <pubDate>Sat, 01 Jul 2023 02:15:46 GMT</pubDate>
+    <description>前言 Flask是我最喜欢用的后端，以为它实在是太简单了，拿来做小型项目速度嗖嗖的。最近做比赛需要将后端通过socket连接到硬件设备，socket是有状态的，有连接数量的限制，所以要格外注意它的状态，Flask的一些特性会改变状态，如果不注意的话会导致很多bug，我踩了很多坑，在这里总结一下。 F</description>
+  </item>
+  <item>
+    <title>《1984》读书笔记</title>
+    <link>https://leyoubaloy.github.io/post/72d96981</link>
+    <guid>https://leyoubaloy.github.io/post/72d96981</guid>
+    <pubDate>Mon, 01 May 2023 16:35:22 GMT</pubDate>
+    <description>1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较深入，16世纪文艺复兴时期，英国的莫尔就提出了空想社会主义（马克思的科学社会主义的前身）；后来19世纪英国人率先搞起了资产阶级革命，号称“自由、平等”；到了20</description>
+  </item>
+  <item>
+    <title>Vue+flask实现播放任何视频源（包括rtsp摄像头）</title>
+    <link>https://leyoubaloy.github.io/post/2453b9ad</link>
+    <guid>https://leyoubaloy.github.io/post/2453b9ad</guid>
+    <pubDate>Sat, 22 Apr 2023 02:40:50 GMT</pubDate>
+    <description>背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。 由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才</description>
+  </item>
+  <item>
+    <title>如何搭建一个ChatGPT镜像站</title>
+    <link>https://leyoubaloy.github.io/post/28b5db09</link>
+    <guid>https://leyoubaloy.github.io/post/28b5db09</guid>
+    <pubDate>Wed, 12 Apr 2023 06:11:41 GMT</pubDate>
+    <description>为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内IP，封梯子IP，封国内账号，搞得没法再国内使用，但是已经形成了依赖，不用不行呀。天下苦ChatGPT久矣～ 自从api接口开放之后，操作空间就大了。我们可以</description>
+  </item>
+  <item>
+    <title>CSS布局基础知识</title>
+    <link>https://leyoubaloy.github.io/post/433a59dc</link>
+    <guid>https://leyoubaloy.github.io/post/433a59dc</guid>
+    <pubDate>Mon, 20 Mar 2023 05:32:55 GMT</pubDate>
+    <description>需求 还是之前的那个需求，我需要做一个静态网页用于展示电子版教材。网页的布局非常重要，我需要一个顶部横向的导航栏，一个能够显示大纲的侧边栏，侧边栏的右边是教材的内容，听起来很简单，不是吗？但我需要再加一个条件，就是这些布局得是响应式的，要能够适应不同尺寸的屏幕，这可就不简单了。举个例子，当屏幕变窄时</description>
+  </item>
+  <item>
+    <title>在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号</title>
+    <link>https://leyoubaloy.github.io/post/61be5727</link>
+    <guid>https://leyoubaloy.github.io/post/61be5727</guid>
+    <pubDate>Thu, 16 Mar 2023 15:51:26 GMT</pubDate>
+    <description>highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 1. 先引入css文件和js文件 2. 再将你的代码用 包裹 3. 再调用hljs的高亮函数，它的原理是找到所有的code标签，然后通过操作DOM，给你的代码设置高亮样式。 hig</description>
+  </item>
+</channel>
+</rss>

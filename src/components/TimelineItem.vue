@@ -3,6 +3,7 @@
       <div class="timeline-item-content">
         <time>{{ time }}</time>
         <div class="title">{{ content }}</div>
+        <p v-if="excerpt" class="excerpt">{{ excerpt }}</p>
         <div class="tags" v-if="tags && tags.length > 0">
           <span 
             v-for="tag in tags" 
@@ -43,6 +44,10 @@
         default: false
       },
       searchKeyword: {
+        type: String,
+        default: ''
+      },
+      excerpt: {
         type: String,
         default: ''
       }
@@ -91,6 +96,17 @@
     color: #333;
     margin-bottom: 6px;
     line-height: 1.4;
+  }
+
+  .excerpt {
+    margin: 0 0 8px;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  :global([data-theme="dark"]) .excerpt {
+    color: #9ca3af;
   }
   
   .tags {

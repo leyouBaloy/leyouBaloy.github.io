@@ -247,8 +247,6 @@ function updateColWidth() {
   const containerWidth = container.clientWidth;
   // 计算后赋值
   colWidth.value = (containerWidth - 3 * gutter)/2;
-  console.log('containerWidth:', containerWidth);
-  console.log('colWidth:', colWidth.value);
 }
 
 onMounted(() => {
@@ -276,6 +274,10 @@ onBeforeUnmount(() => {
   if (observer) {
     observer.disconnect();
   }
+  window.removeEventListener('resize', checkIsMobile);
+  window.removeEventListener('resize', updateColWidth);
+  window.removeEventListener('resize', layoutHandle);
+  if (timer) clearTimeout(timer);
 });
 </script>
 

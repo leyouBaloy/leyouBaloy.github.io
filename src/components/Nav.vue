@@ -61,10 +61,10 @@
 </template>
 
 <script setup>
-import { ref, shallowRef, defineProps, watch, nextTick } from 'vue';
-import { NIcon,NAlert } from 'naive-ui';
+import { ref, shallowRef, defineProps } from 'vue';
+import { NIcon } from 'naive-ui';
 import { useRoute } from 'vue-router';
-import { Home, Archive, Person, Train, RadioButtonOn, Book, Film } from '@vicons/ionicons5';
+import { Home, Archive, Person, Train, RadioButtonOn, Book } from '@vicons/ionicons5';
 
 const props = defineProps({
   // fixed: Boolean,
@@ -94,9 +94,12 @@ const isActive = (path) => {
 <style scoped>
 .nav {
   display: flex;
+  align-items: center;
   justify-content: center;
-  background-color: #f8f9fa;
-  padding: 15px 0;
+  gap: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
   font-size: 17px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -111,8 +114,10 @@ const isActive = (path) => {
 
 .nav-fix-top {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 12px;
+  left: 50%;
+  width: min(900px, calc(100% - 24px));
+  transform: translateX(-50%);
   z-index: 1000;
 }
 
@@ -125,14 +130,18 @@ const isActive = (path) => {
 .nav-item {
   display: flex;
   align-items: center;
-  padding: 0px 10px;
+  justify-content: center;
+  gap: 5px;
+  min-height: 24px;
+  padding: 0 10px;
   text-decoration: none;
   color: #333;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
-.nav-item .icon {
-  margin-right: 8px;
+.nav-item :deep(.n-icon) {
+  flex: 0 0 auto;
 }
 
 .nav-item:hover {
@@ -149,16 +158,19 @@ const isActive = (path) => {
 }
 .nav-transition-enter-from, .nav-transition-leave-to {
   transform: translateY(-100%);
-  
+}
+
+.nav-transition-enter-from.nav-fix-top,
+.nav-transition-leave-to.nav-fix-top {
+  transform: translate(-50%, -120%);
 }
 
 a {
   display: flex;
-    align-items: center;
-    padding: 0px 15px;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .dropdown {
@@ -169,9 +181,9 @@ a {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 12px);
   left: 0;
-  background-color: #f8f9fa;
+  background-color: rgba(248, 249, 250, 0.96);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 10px 0;
@@ -189,6 +201,24 @@ a {
 
 .dropdown-item:hover {
   background-color: #e9ecef;
+}
+
+@media (max-width: 520px) {
+  .nav {
+    gap: 0;
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .nav-item {
+    flex: 1 1 auto;
+    padding: 0 5px;
+  }
+
+  .nav-fix-top {
+    top: 8px;
+    width: calc(100% - 16px);
+  }
 }
 
 </style>
