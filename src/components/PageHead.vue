@@ -578,11 +578,12 @@ onBeforeUnmount(() => {
 
 .nav-shell {
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
   bottom: 24px;
   z-index: 30;
   width: min(92%, 720px);
-  transform: translateX(-50%);
+  margin: 0 auto;
 }
 
 /* 移动端适配 */

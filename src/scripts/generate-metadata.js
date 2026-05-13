@@ -38,6 +38,7 @@ const generateSlug = (title) => {
 const metadataList = [];
 const slugMapping = {}; // slug -> filename
 const siteUrl = 'https://leyoubaloy.github.io';
+const staticPageLastmod = '2026-05-08T00:00:00.000Z';
 
 const normalizeList = (value) => {
   if (!value) return [];
@@ -126,6 +127,11 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
 
 // 按照时间倒序排列
 metadataList.sort((a, b) => new Date(b.date) - new Date(a.date));
+const latestPostDate = metadataList.reduce((latest, post) => {
+  const updatedAt = new Date(post.updatedAt || post.date).getTime();
+  return updatedAt > latest ? updatedAt : latest;
+}, 0);
+const feedLastBuildDate = new Date(latestPostDate || staticPageLastmod);
 
 // 每10个元数据一个文件
 const chunkSize = 10;
@@ -219,7 +225,7 @@ const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
   <link>${siteUrl}</link>
   <description>读万卷书，行万里路</description>
   <language>zh-CN</language>
-  <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+  <lastBuildDate>${feedLastBuildDate.toUTCString()}</lastBuildDate>
 ${rssItems}
 </channel>
 </rss>
@@ -229,7 +235,7 @@ const staticPages = ['', '/archive', '/media', '/about', '/resume'];
 const sitemapUrls = [
   ...staticPages.map(page => ({
     loc: `${siteUrl}${page}`,
-    lastmod: new Date().toISOString()
+    lastmod: staticPageLastmod
   })),
   ...metadataList.map(post => ({
     loc: `${siteUrl}/post/${post.slug}`,
