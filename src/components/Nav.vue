@@ -205,6 +205,40 @@ a {
   background-color: #e9ecef;
 }
 
+:global([data-theme="dark"] .nav) {
+  background-color: rgba(24, 34, 53, 0.86);
+  border: 1px solid rgba(148, 163, 184, 0.20);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+}
+
+:global([data-theme="dark"] .nav-blur) {
+  background-color: rgba(15, 23, 42, 0.92);
+}
+
+:global([data-theme="dark"] .nav-item),
+:global([data-theme="dark"] .dropdown-item) {
+  color: #dbeafe;
+}
+
+:global([data-theme="dark"] .nav-item:hover),
+:global([data-theme="dark"] .dropdown-item:hover) {
+  color: #7dd3fc;
+}
+
+:global([data-theme="dark"] .nav-item.active) {
+  color: #38bdf8;
+}
+
+:global([data-theme="dark"] .dropdown-menu) {
+  background-color: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.35);
+}
+
+:global([data-theme="dark"] .dropdown-item:hover) {
+  background-color: rgba(56, 189, 248, 0.12);
+}
+
 @media (max-width: 520px) {
   .nav {
     gap: 0;

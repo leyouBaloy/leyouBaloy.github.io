@@ -318,6 +318,10 @@ main {
   /* etc. */
 }
 
+:global([data-theme="dark"] .waterfall-card) {
+  background: #182235;
+}
+
 /* 移动端：不再用瀑布流 */
 @media screen and (max-width: 500px) {
   .waterfall-container {

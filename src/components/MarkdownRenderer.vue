@@ -482,19 +482,19 @@ onMounted(loadMarkdown);
   transform: translateY(-1px);
 }
 
-:global([data-theme="dark"]) .article-notice {
+:global([data-theme="dark"] .article-notice) {
   background: #422006;
   color: #fde68a;
   border-left-color: #f59e0b;
 }
 
-:global([data-theme="dark"]) .share-btn {
+:global([data-theme="dark"] .share-btn) {
   background: #1f2937;
   border-color: #374151;
   color: #bae6fd;
 }
 
-:global([data-theme="dark"]) .share-btn:hover {
+:global([data-theme="dark"] .share-btn:hover) {
   border-color: #38bdf8;
   color: #e0f2fe;
 }
@@ -867,5 +867,70 @@ img {
     max-width: 80px !important;
     max-height: 60px !important;
   }
+}
+
+:global([data-theme="dark"] .metadata),
+:global([data-theme="dark"] .meta-item) {
+  color: #b6c3d1;
+}
+
+:global([data-theme="dark"] .meta-split::before) {
+  color: #64748b;
+}
+
+:global([data-theme="dark"] .markdown-container) {
+  background-color: #182235;
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.28);
+}
+
+:global([data-theme="dark"] .meta-info) {
+  background-color: #111827;
+  border-left-color: #38bdf8;
+}
+
+:global([data-theme="dark"] .article .md) {
+  color: #e5edf7;
+}
+
+:global([data-theme="dark"] .article .title) {
+  background: linear-gradient(135deg, #1e293b 0%, #172554 55%, #312e81 100%);
+  border-color: rgba(147, 197, 253, 0.22);
+  color: #e0f2fe;
+  text-shadow: none;
+  box-shadow:
+    0 12px 30px rgba(2, 6, 23, 0.26),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+:global([data-theme="dark"] .article .md a) {
+  color: #67e8f9;
+}
+
+:global([data-theme="dark"] .article .md blockquote) {
+  background-color: rgba(14, 165, 233, 0.14);
+  border-left-color: #38bdf8;
+  color: #dbeafe;
+}
+
+:global([data-theme="dark"] .article .md code:not(pre code)) {
+  background-color: #082f49;
+  border-color: #075985;
+  color: #bae6fd;
+}
+
+:global([data-theme="dark"] .article .md table) {
+  background-color: #111827 !important;
+  color: #e5edf7;
+}
+
+:global([data-theme="dark"] .article .md th) {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f8fafc;
+}
+
+:global([data-theme="dark"] .article .md td) {
+  border-color: #334155 !important;
+  color: #dbeafe;
 }
 </style>

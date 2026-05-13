@@ -105,7 +105,7 @@
     line-height: 1.6;
   }
 
-  :global([data-theme="dark"]) .excerpt {
+  :global([data-theme="dark"] .timeline-item-content .excerpt) {
     color: #9ca3af;
   }
   

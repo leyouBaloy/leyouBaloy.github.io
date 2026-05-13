@@ -221,21 +221,21 @@ main {
   color: #6b7280;
 }
 
-:global([data-theme="dark"]) .related-posts h2,
-:global([data-theme="dark"]) .related-title {
+:global([data-theme="dark"] .related-posts h2),
+:global([data-theme="dark"] .related-title) {
   color: #e5e7eb;
 }
 
-:global([data-theme="dark"]) .related-card {
+:global([data-theme="dark"] .related-card) {
   background: #1f2937;
   border-color: #374151;
 }
 
-:global([data-theme="dark"]) .related-card:hover {
+:global([data-theme="dark"] .related-card:hover) {
   border-color: #38bdf8;
 }
 
-:global([data-theme="dark"]) .related-meta {
+:global([data-theme="dark"] .related-meta) {
   color: #9ca3af;
 }
 

@@ -2,13 +2,16 @@
 import { useRoute, RouterView } from 'vue-router'
 import { SpeedInsights } from "@vercel/speed-insights/vue"
 import { inject } from '@vercel/analytics';
-import { ref, onMounted, onUnmounted } from 'vue';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
+import { NIcon } from 'naive-ui';
+import { MoonOutline, SunnyOutline } from '@vicons/ionicons5';
 
 const route = useRoute()
 inject();
 
 // 暗色模式
 const isDark = ref(false);
+const themeIcon = computed(() => isDark.value ? SunnyOutline : MoonOutline);
 
 // 图片灯箱
 const lightboxImage = ref<string | null>(null);
@@ -64,8 +67,13 @@ const applyTheme = () => {
   <SpeedInsights/>
   
   <!-- 暗色模式切换按钮 -->
-  <button class="dark-toggle" @click="toggleDark" :title="isDark ? '切换亮色' : '切换暗色'">
-    {{ isDark ? '☀️' : '🌙' }}
+  <button
+    class="dark-toggle"
+    @click="toggleDark"
+    :title="isDark ? '切换亮色' : '切换暗色'"
+    :aria-label="isDark ? '切换亮色' : '切换暗色'"
+  >
+    <n-icon :size="22" :component="themeIcon" />
   </button>
   
   <!-- 图片灯箱 -->
@@ -96,17 +104,22 @@ const applyTheme = () => {
   height: 48px;
   border-radius: 50%;
   border: none;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  font-size: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #3730a3;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 28px rgba(79, 70, 229, 0.22);
   z-index: 9999;
-  transition: transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .dark-toggle:hover {
-  transform: scale(1.1);
+  transform: translateY(-2px) scale(1.04);
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(79, 70, 229, 0.30);
 }
 
 /* 图片灯箱 */
@@ -167,12 +180,12 @@ main {
 
 /* 暗色模式 */
 [data-theme="dark"] body {
-  background-color: #1a1a2e;
+  background-color: #101325;
 }
 
 [data-theme="dark"] main {
-  background-color: #16213e;
-  color: #e0e0e0;
+  background-color: #111827;
+  color: #e5edf7;
 }
 
 [data-theme="dark"] .post-card,
@@ -203,7 +216,6 @@ main {
   color: #9ca3af;
 }
 
-[data-theme="dark"] .tag,
 [data-theme="dark"] .post-tag {
   background-color: #374151;
   color: #e0e0e0;
@@ -225,6 +237,17 @@ main {
 
 [data-theme="dark"] .footer {
   color: #9ca3af;
+}
+
+[data-theme="dark"] .dark-toggle {
+  background: rgba(15, 23, 42, 0.88);
+  color: #fde68a;
+  box-shadow: 0 10px 28px rgba(2, 6, 23, 0.45);
+}
+
+[data-theme="dark"] .dark-toggle:hover {
+  background: #1e293b;
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.55);
 }
 
 /* 评论区暗色 */
