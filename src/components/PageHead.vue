@@ -135,11 +135,55 @@ onBeforeUnmount(() => {
   height: 500px;
   --header-height: 500px;
   --orbit-center-y: 155px;
-  --planet-size: 200px;
-  --orbit-size: 400px;
+  --planet-size: 180px;
+  --orbit-size: 360px;
   position: relative;
   overflow: hidden;
-  background: #eef;
+  background:
+    radial-gradient(circle at 50% 14%, rgba(150, 167, 255, 0.22), transparent 34%),
+    radial-gradient(circle at 76% 24%, rgba(115, 216, 255, 0.10), transparent 30%),
+    linear-gradient(180deg, #070b20 0%, #111735 48%, #dde2ff 100%);
+}
+
+.bg::before,
+.bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bg::before {
+  z-index: 0;
+  opacity: 0.58;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(180, 205, 255, 0.75) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.55) 0 0.8px, transparent 1.2px);
+  background-size: 92px 92px, 148px 148px, 226px 226px;
+  background-position: 12px 18px, 48px 36px, 78px 8px;
+  animation: starTwinkle 7s ease-in-out infinite;
+}
+
+.bg::after {
+  z-index: 1;
+  opacity: 0.26;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.8) 0 1px, transparent 2px),
+    radial-gradient(circle at 64% 11%, rgba(194, 216, 255, 0.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 86% 32%, rgba(255, 255, 255, 0.75) 0 1px, transparent 2px),
+    radial-gradient(circle at 31% 43%, rgba(172, 190, 255, 0.65) 0 1px, transparent 2px);
+  animation: starDrift 18s ease-in-out infinite alternate;
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.46; }
+  50% { opacity: 0.68; }
+}
+
+@keyframes starDrift {
+  from { transform: translateY(0); }
+  to { transform: translateY(8px); }
 }
 
 /* =============================================
@@ -150,6 +194,7 @@ onBeforeUnmount(() => {
   inset: 0;
   width: 100%;
   height: var(--header-height);
+  z-index: 2;
   transform-style: preserve-3d;
   perspective: 700px;
   pointer-events: none;
@@ -182,7 +227,7 @@ onBeforeUnmount(() => {
   overflow: hidden;
   border-radius: 100%;
   box-sizing: border-box;
-  border: 12px solid #000;
+  border: 11px solid #000;
   background: rgba(255, 80, 50, 1);
   transform: translate(-50%, -50%);
 }
@@ -377,7 +422,7 @@ onBeforeUnmount(() => {
 
 .header-content {
   position: absolute;
-  top: 270px;
+  top: 260px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -410,7 +455,7 @@ onBeforeUnmount(() => {
   font-size: 30px;
   font-weight: 700;
   margin: 0 0 6px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #d9ddff 0%, #9f8cff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -426,7 +471,7 @@ onBeforeUnmount(() => {
 
 .zym {
   font-size: 15px;
-  color: #555;
+  color: rgba(245, 247, 255, 0.86);
   margin: 0 0 10px 0;
   font-style: italic;
   position: relative;
@@ -441,7 +486,7 @@ onBeforeUnmount(() => {
   content: '"';
   font-size: 20px;
   color: #667eea;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .social-links {
@@ -498,7 +543,7 @@ onBeforeUnmount(() => {
     height: 500px;
     --header-height: 500px;
     --orbit-center-y: 145px;
-    --planet-size: 170px;
+    --planet-size: 153px;
     --orbit-size: 330px;
   }
 
@@ -508,7 +553,7 @@ onBeforeUnmount(() => {
   .social-icon svg { width: 19px; height: 19px; }
   .control-panel { width: 200px; right: 10px; }
   .control-toggle { width: 36px; height: 36px; font-size: 16px; right: 10px; }
-  .header-content { top: 250px; }
+  .header-content { top: 238px; }
   .nav-shell { bottom: 18px; width: calc(100% - 20px); }
 }
 </style>

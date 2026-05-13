@@ -93,7 +93,8 @@ const isActive = (path) => {
 
 <style scoped>
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
   gap: 4px;
@@ -132,6 +133,7 @@ const isActive = (path) => {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  min-width: 0;
   min-height: 24px;
   padding: 0 10px;
   text-decoration: none;
@@ -206,13 +208,19 @@ a {
 @media (max-width: 520px) {
   .nav {
     gap: 0;
-    padding: 10px 8px;
-    font-size: 14px;
+    padding: 9px 6px;
+    font-size: 13px;
   }
 
   .nav-item {
-    flex: 1 1 auto;
-    padding: 0 5px;
+    min-width: 0;
+    width: 100%;
+    gap: 3px;
+    padding: 0 3px;
+  }
+
+  .nav-item :deep(.n-icon) {
+    font-size: 15px !important;
   }
 
   .nav-fix-top {
