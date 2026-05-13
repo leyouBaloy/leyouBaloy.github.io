@@ -114,7 +114,7 @@ const isActive = (path) => {
 
 .nav-fix-top {
   position: fixed;
-  top: 12px;
+  top: 0;
   left: 50%;
   width: min(900px, calc(100% - 24px));
   transform: translateX(-50%);
@@ -216,7 +216,7 @@ a {
   }
 
   .nav-fix-top {
-    top: 8px;
+    top: 0;
     width: calc(100% - 16px);
   }
 }
