@@ -144,7 +144,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .bg {
   width: 100%;
-  height: 480px;
+  height: 620px;
   position: relative;
   overflow: hidden;
   background: #eef;
@@ -157,7 +157,7 @@ onBeforeUnmount(() => {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 480px;
+  height: 620px;
   transform-style: preserve-3d;
   perspective: 700px;
   pointer-events: none;
@@ -166,14 +166,14 @@ onBeforeUnmount(() => {
 .space_field_wrapper {
   position: absolute;
   width: 100%;
-  height: 480px;
+  height: 620px;
   transform-style: preserve-3d;
 }
 
 /* 母星 - 中心 */
 .space_field.mother {
   position: absolute;
-  top: 50%;
+  top: 190px;
   left: 50%;
   width: 300px;
   height: 300px;
@@ -201,7 +201,7 @@ onBeforeUnmount(() => {
   top: -12%;
   left: -12%;
   width: 100%;
-  height: 480px;
+  height: 620px;
   background: rgba(100, 40, 0, 1);
   border-radius: 100%;
   mix-blend-mode: screen;
@@ -214,7 +214,7 @@ onBeforeUnmount(() => {
 
 .space_field.satellite {
   position: absolute;
-  top: 50%;
+  top: 190px;
   left: 50%;
   width: 340px;
   height: 340px;
@@ -244,7 +244,7 @@ onBeforeUnmount(() => {
   top: -15%;
   left: -15%;
   width: 100%;
-  height: 480px;
+  height: 620px;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 100%;
   pointer-events: none;
@@ -393,7 +393,7 @@ onBeforeUnmount(() => {
 
 .header-content {
   position: absolute;
-  top: 18px;
+  top: 320px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -503,7 +503,7 @@ onBeforeUnmount(() => {
 .name {
   font-size: 30px;
   font-weight: 700;
-  margin: 0 0 4px 0;
+  margin: 0 0 6px 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -521,7 +521,7 @@ onBeforeUnmount(() => {
 .zym {
   font-size: 15px;
   color: #555;
-  margin: 0 0 8px 0;
+  margin: 0 0 14px 0;
   font-style: italic;
   position: relative;
   padding: 0 20px;
@@ -541,7 +541,7 @@ onBeforeUnmount(() => {
 .social-links {
   display: flex;
   gap: 14px;
-  margin-top: 0;
+  margin-top: 2px;
 }
 
 .social-icon {
@@ -580,7 +580,7 @@ onBeforeUnmount(() => {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 24px;
+  bottom: 34px;
   z-index: 30;
   width: min(92%, 720px);
   margin: 0 auto;
@@ -588,15 +588,22 @@ onBeforeUnmount(() => {
 
 /* 移动端适配 */
 @media (max-width: 768px) {
+  .bg,
+  #space,
+  .space_field_wrapper {
+    height: 560px;
+  }
+
   .name { font-size: 26px; }
   .zym { font-size: 14px; padding: 0 15px; }
   .social-icon { width: 36px; height: 36px; }
   .social-icon svg { width: 19px; height: 19px; }
   .control-panel { width: 200px; right: 10px; }
   .control-toggle { width: 36px; height: 36px; font-size: 16px; right: 10px; }
-  .header-content { top: 20px; }
+  .header-content { top: 270px; }
+  .space_field.mother { top: 165px; }
   .space_field.mother .planet { width: 170px; height: 170px; }
-  .space_field.satellite { width: 260px; height: 260px; }
+  .space_field.satellite { top: 165px; width: 260px; height: 260px; }
   .nav-shell { bottom: 18px; width: calc(100% - 20px); }
 }
 </style>
