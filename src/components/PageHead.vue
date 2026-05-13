@@ -6,7 +6,6 @@
         <div class="space_field mother">
           <div class="planet">
             <div v-if="showBailey" class="avatar-wrapper">
-              <div class="avatar-ring" :class="avatarStyle"></div>
               <img :src="avatarUrl" class="avatar-img" alt="Bailey avatar">
             </div>
           </div>
@@ -88,16 +87,6 @@ const showControls = ref(false);
 const orbitCount = ref(3);
 const showBailey = ref(true);
 
-// 头像框样式随机
-const avatarStyle = ref('ring-gradient');
-const ringStyles = [
-  'ring-gradient',
-  'ring-neon',
-  'ring-aurora',
-  'ring-stars',
-  'ring-dream',
-];
-
 const resetSettings = () => {
   orbitCount.value = 3;
   showBailey.value = true;
@@ -129,7 +118,6 @@ const updateNavMode = () => {
 };
 
 onMounted(() => {
-  avatarStyle.value = ringStyles[Math.floor(Math.random() * ringStyles.length)];
   updateNavMode();
   window.addEventListener('scroll', updateNavMode, { passive: true });
   window.addEventListener('resize', updateNavMode);
@@ -144,7 +132,11 @@ onBeforeUnmount(() => {
 <style scoped>
 .bg {
   width: 100%;
-  height: 620px;
+  height: 500px;
+  --header-height: 500px;
+  --orbit-center-y: 155px;
+  --planet-size: 200px;
+  --orbit-size: 400px;
   position: relative;
   overflow: hidden;
   background: #eef;
@@ -157,7 +149,7 @@ onBeforeUnmount(() => {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 620px;
+  height: var(--header-height);
   transform-style: preserve-3d;
   perspective: 700px;
   pointer-events: none;
@@ -166,17 +158,17 @@ onBeforeUnmount(() => {
 .space_field_wrapper {
   position: absolute;
   width: 100%;
-  height: 620px;
+  height: var(--header-height);
   transform-style: preserve-3d;
 }
 
 /* 母星 - 中心 */
 .space_field.mother {
   position: absolute;
-  top: 190px;
+  top: var(--orbit-center-y);
   left: 50%;
-  width: 300px;
-  height: 300px;
+  width: var(--planet-size);
+  height: var(--planet-size);
   transform: translate(-50%, -50%);
   transform-style: preserve-3d;
 }
@@ -185,8 +177,8 @@ onBeforeUnmount(() => {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px;
-  height: 200px;
+  width: var(--planet-size);
+  height: var(--planet-size);
   overflow: hidden;
   border-radius: 100%;
   box-sizing: border-box;
@@ -196,28 +188,20 @@ onBeforeUnmount(() => {
 }
 
 .space_field.mother .planet::before {
-  content: '';
-  position: absolute;
-  top: -12%;
-  left: -12%;
-  width: 100%;
-  height: 620px;
-  background: rgba(100, 40, 0, 1);
-  border-radius: 100%;
-  mix-blend-mode: screen;
+  content: none;
 }
 
 /* 卫星轨道 */
 .satellite-wrapper {
-  transform: rotateZ(var(--orbit-angle));
+  transform: none;
 }
 
 .space_field.satellite {
   position: absolute;
-  top: 190px;
+  top: var(--orbit-center-y);
   left: 50%;
-  width: 340px;
-  height: 340px;
+  width: var(--orbit-size);
+  height: var(--orbit-size);
   transform: translate(-50%, -50%);
   transform-style: preserve-3d;
   animation: orbit var(--orbit-duration) linear infinite;
@@ -244,7 +228,7 @@ onBeforeUnmount(() => {
   top: -15%;
   left: -15%;
   width: 100%;
-  height: 620px;
+  height: var(--header-height);
   background: rgba(255, 255, 255, 0.4);
   border-radius: 100%;
   pointer-events: none;
@@ -252,8 +236,8 @@ onBeforeUnmount(() => {
 }
 
 @keyframes orbit {
-  0%   { transform: translate(-50%, -50%) rotateY(0deg); }
-  100% { transform: translate(-50%, -50%) rotateY(360deg); }
+  0%   { transform: translate(-50%, -50%) rotateZ(var(--orbit-angle)) rotateY(0deg); }
+  100% { transform: translate(-50%, -50%) rotateZ(var(--orbit-angle)) rotateY(360deg); }
 }
 
 @keyframes planet {
@@ -393,7 +377,7 @@ onBeforeUnmount(() => {
 
 .header-content {
   position: absolute;
-  top: 320px;
+  top: 270px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -413,14 +397,6 @@ onBeforeUnmount(() => {
   z-index: 1;
 }
 
-.avatar-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  opacity: 0.35;
-  z-index: 2;
-}
-
 .avatar-img {
   width: 100%;
   height: 100%;
@@ -428,76 +404,6 @@ onBeforeUnmount(() => {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-}
-
-.ring-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
-  background-size: 200% 200%;
-  animation: gradientMove 3s ease-in-out infinite, breathe 2s ease-in-out infinite;
-}
-
-@keyframes gradientMove {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-@keyframes breathe {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.02); }
-}
-
-.ring-neon {
-  box-shadow: 0 0 20px rgba(102, 126, 234, 0.6),
-              0 0 40px rgba(118, 75, 162, 0.4),
-              0 0 60px rgba(102, 126, 234, 0.2);
-  animation: neonPulse 2s ease-in-out infinite;
-}
-
-@keyframes neonPulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.6), 0 0 40px rgba(118, 75, 162, 0.4); }
-  50% { box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.6); }
-}
-
-.ring-aurora {
-  background: linear-gradient(45deg,
-    rgba(0, 255, 127, 0.4) 0%,
-    rgba(102, 126, 234, 0.4) 25%,
-    rgba(118, 75, 162, 0.4) 50%,
-    rgba(0, 255, 127, 0.4) 75%,
-    rgba(102, 126, 234, 0.4) 100%);
-  filter: blur(3px);
-  animation: auroraMove 4s ease-in-out infinite;
-}
-
-@keyframes auroraMove {
-  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.4; }
-  50% { transform: scale(1.05) rotate(5deg); opacity: 0.7; }
-}
-
-.ring-stars {
-  background: radial-gradient(circle at 30% 30%,
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(102, 126, 234, 0.3) 30%,
-    transparent 70%);
-  animation: twinkle 1.5s ease-in-out infinite;
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.1); }
-}
-
-.ring-dream {
-  background: linear-gradient(180deg,
-    rgba(255, 182, 193, 0.5) 0%,
-    rgba(102, 126, 234, 0.4) 50%,
-    rgba(147, 112, 219, 0.5) 100%);
-  animation: dreamy 3s ease-in-out infinite;
-}
-
-@keyframes dreamy {
-  0%, 100% { opacity: 0.3; transform: scale(1); filter: hue-rotate(0deg); }
-  50% { opacity: 0.6; transform: scale(1.03); filter: hue-rotate(20deg); }
 }
 
 .name {
@@ -521,7 +427,7 @@ onBeforeUnmount(() => {
 .zym {
   font-size: 15px;
   color: #555;
-  margin: 0 0 14px 0;
+  margin: 0 0 10px 0;
   font-style: italic;
   position: relative;
   padding: 0 20px;
@@ -580,7 +486,7 @@ onBeforeUnmount(() => {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 34px;
+  bottom: 22px;
   z-index: 30;
   width: min(92%, 720px);
   margin: 0 auto;
@@ -588,10 +494,12 @@ onBeforeUnmount(() => {
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-  .bg,
-  #space,
-  .space_field_wrapper {
-    height: 560px;
+  .bg {
+    height: 500px;
+    --header-height: 500px;
+    --orbit-center-y: 145px;
+    --planet-size: 170px;
+    --orbit-size: 330px;
   }
 
   .name { font-size: 26px; }
@@ -600,10 +508,7 @@ onBeforeUnmount(() => {
   .social-icon svg { width: 19px; height: 19px; }
   .control-panel { width: 200px; right: 10px; }
   .control-toggle { width: 36px; height: 36px; font-size: 16px; right: 10px; }
-  .header-content { top: 270px; }
-  .space_field.mother { top: 165px; }
-  .space_field.mother .planet { width: 170px; height: 170px; }
-  .space_field.satellite { top: 165px; width: 260px; height: 260px; }
+  .header-content { top: 250px; }
   .nav-shell { bottom: 18px; width: calc(100% - 20px); }
 }
 </style>
