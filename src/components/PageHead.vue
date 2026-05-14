@@ -75,7 +75,7 @@
 
 <script setup lang="ts">
 import Nav from "@/components/Nav.vue";
-import avatarUrl from "@/assets/avatar.jpg";
+import avatarUrl from "@/assets/about-ai-default.jpg";
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const expandNav = ref(false);

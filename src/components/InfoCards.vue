@@ -1,549 +1,570 @@
 <template>
-    <div class="cards">
-        <div class="left-box">
-            <div class="left-left">
-                <div class="zhaopian">
-                    <img class="xueweizhao" src="../assets/学位照-裁切压缩.jpg" />
-                    <div class="hover-text">长相还算说得过去😅</div>
-                </div>
-                <!-- <div class="nianling" @click="downLoad()">
-                    <div class="nianling-text">PDF简历下载</div><n-icon size="30"><CloudDownloadOutline/></n-icon>
-                </div> -->
-                <div class="nianling">
-                    <div class="nianling-text" @click="jumpToResume()">个人简历</div>
-                </div>
-            </div>
-            <div class="left-right">
-                <div class="mbti">
-                    <img src="../assets/infj.svg" />
-              <div class="text-right">
-                <span>MBTI人格类型:</span>
-                <h3>
-                  INFJ <br />
-                  提倡者
-                </h3>
-              </div>
-              <div class="hover-overlay">
-                <span>我是绿老头👴</span>
-              </div>
-                </div>
-                <div class="guxiang">
-                    <div class="text1">故乡</div>
-                    <div class="text2">安<br>徽<br>蚌<br>埠</div>
-                </div>
-            </div>
-        </div>
-        <div class="right-box">
-            <div class="right-upper">
-                <div class="benke">
-                    <div class="text">
-                <span>本硕院校</span>
-                <h3 class="zgsydx">中国石油大学（华东）</h3>
-                <h3 class="hover-overlay">帝国男子石油高中🔨</h3>
-              </div>
-                
-                </div>
-                <div class="yanjiusheng"><span>兴趣爱好<br>读书📚、跑步🏃‍♂️、做饭🥘、电子产品💻、折腾Blog📝</span>
-                </div>
-            </div>
-            <div class="right-lower">
-                <div class="zhuanye">所学专业🎯<br>计算机科学与技术、软件工程、人工智能</div>
-                <div class="yanjiufangxiang">研究方向🏅<br>可视化与可视分析、数据表征、数据压缩</div>
-            </div>
+  <div class="cards">
+    <div class="left-box">
+      <div class="left-left">
+        <div class="zhaopian">
+          <img class="portrait-img portrait-default" :src="aboutDefault" alt="AI 生成的抽象写作头像" />
+          <img class="portrait-img portrait-hover" :src="aboutHover" alt="" aria-hidden="true" />
+          <div class="hover-text">灵感模式</div>
         </div>
 
+        <button class="nianling" type="button" @click="jumpToResume">
+          <span class="nianling-text">个人简历</span>
+        </button>
+      </div>
+
+      <div class="left-right">
+        <div class="mbti">
+          <img src="../assets/infj.svg" alt="INFJ 插图" />
+          <div class="text-right">
+            <span>MBTI人格类型</span>
+            <h3>
+              INFJ <br />
+              提倡者
+            </h3>
+          </div>
+          <div class="hover-overlay">
+            安静观察<br />
+            认真共情
+          </div>
+        </div>
+
+        <div class="privacy-card">
+          <img class="city-img" :src="qingdaoCard" alt="" aria-hidden="true" />
+          <div class="privacy-copy">
+            <span>坐标</span>
+            <strong>山东青岛</strong>
+            <p>红瓦、海风、山海之间。</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="right-box">
+      <div class="right-upper">
+        <div class="learning-card">
+          <div class="text">
+            <span>学习路径</span>
+            <h3>工科底色 / 软件训练 / AI 兴趣</h3>
+            <p>比起列履历，更想展示正在生长的能力。</p>
+          </div>
+          <div class="hover-overlay">从写代码<br />到讲清楚</div>
+        </div>
+
+        <div class="yanjiusheng profile-card">
+          <span class="card-label">日常输入</span>
+          <h3>把生活也当素材库</h3>
+          <div class="chip-list">
+            <span>阅读</span>
+            <span>运动</span>
+            <span>下厨</span>
+            <span>数码</span>
+            <span>博客</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-lower">
+        <div class="zhuanye profile-card compact-card">
+          <span class="card-label">能力拼图</span>
+          <h3>工程实现</h3>
+          <p>把想法写成可运行、可维护、可复用的东西。</p>
+        </div>
+
+        <div class="yanjiufangxiang profile-card compact-card">
+          <span class="card-label">关注问题</span>
+          <h3>数据表达</h3>
+          <p>可视分析、表征学习，以及更轻量的数据传递。</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import {useRouter} from 'vue-router';
+import { useRouter } from "vue-router";
+import aboutDefault from "@/assets/about-ai-default.jpg";
+import aboutHover from "@/assets/about-ai-hover.jpg";
+import qingdaoCard from "@/assets/qingdao-card.jpg";
 
 const router = useRouter();
 
-const jumpToResume = ()=>{
-    router.push('/resume');
-}
-
+const jumpToResume = () => {
+  router.push("/resume");
+};
 </script>
 
-
 <style scoped>
-
 * {
-    font-family: "Noto Serif SC", serif;
+  box-sizing: border-box;
+  font-family: "Noto Serif SC", serif;
 }
 
-.guxiang .text1{
-    position: absolute;
-    top:0;
-    font-size: 20px;
-    left: 10px;
-    font-weight: 800;
-    color: white;
-    
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
-.guxiang .text2{
-    font-size: 30px;
-    font-weight: 800;
-    color: white;
-    
+.left-box,
+.right-box,
+.left-left,
+.left-right,
+.right-upper,
+.right-lower {
+  display: flex;
+  padding: 0;
+  gap: 15px;
 }
 
-.benke:hover .hover-overlay {
+.left-box {
+  width: 375px;
+  height: 490px;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.left-left,
+.left-right {
+  width: 180px;
+  height: 490px;
+  flex-direction: column;
+}
+
+.right-box {
+  width: 375px;
+  height: 490px;
+  flex-direction: column;
+}
+
+.right-upper {
+  width: 375px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-lower {
+  width: 375px;
+  height: 130px;
+  flex-direction: row;
+}
+
+.zhaopian,
+.nianling,
+.mbti,
+.privacy-card,
+.learning-card,
+.profile-card {
+  border-radius: 8px;
+  box-shadow:
+    rgba(0, 0, 0, 0) 0 0 0 0,
+    rgba(0, 0, 0, 0) 0 0 0 0,
+    rgb(229, 231, 235) 0 4px 6px -1px,
+    rgb(229, 231, 235) 0 2px 4px -2px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.zhaopian {
+  position: relative;
+  width: 180px;
+  height: 320px;
+  overflow: hidden;
+  background: #f4f0e9;
+}
+
+.portrait-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.portrait-hover {
+  opacity: 0;
+  transform: scale(1.02);
+}
+
+.zhaopian:hover .portrait-default {
+  opacity: 0;
+}
+
+.zhaopian:hover .portrait-hover {
   opacity: 1;
+  transform: scale(1.08);
 }
 
-.benke:hover .zgsydx {
-    opacity: 0;
-}
-
-
-.benke .text {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* gap:5px; */
-}
-
-.benke span {
-    color: #174078;
-    width: 100%;
-    font-size: 15px;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-}
-
-.benke h3 {
-    font-weight: 800;
-    color: #174078;
-    width: 100%;
-    font-size: 20px;
-    margin-top: 0px;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-}
-
-
-.nianling:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-    /* background-color: #4a4a4a; */
-}
-
-.mbti:hover {
-    transform: scale(1.1);
-}
-
-.xueweizhao {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* 初始阴影 */
-    /* box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px; */
-}
-
-.zhaopian:hover .xueweizhao {
-    content: url("../assets/学位照-扣人物.jpg");
-    transform: scale(1.11);
+.zhaopian:hover {
+  transform: scale(1.06);
+  box-shadow: rgba(21, 31, 46, 0.2) 0 14px 32px -12px;
 }
 
 .hover-text {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%);
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  width: calc(100% - 28px);
+  transform: translateX(-50%);
+  color: white;
+  font-size: 19px;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .zhaopian:hover .hover-text {
-    opacity: 1;
+  opacity: 1;
 }
 
-.text-right {
-  width: 100%;
-  height: 100px;
+.nianling {
+  position: relative;
+  width: 180px;
+  height: 120px;
+  border: 0;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  text-align: right;
-  transition: color 0.3s ease;
+  padding: 18px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #132030;
+  background: linear-gradient(120deg, #9bd2ff 0%, #bcebd9 100%);
 }
 
-.mbti h3 {
-  font-size: 20px;
-  color: rgb(51 164 116);
-  font-weight: 900;
-  margin: 0 0;
-  margin-right: 10px;
-  transition: color 0.3s ease;
+.nianling:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+  box-shadow: rgba(45, 123, 170, 0.24) 0 16px 30px -14px;
 }
 
-.mbti img {
-  height: 110%;
-  position: absolute;
-  bottom: 0;
-  left: -20px;
-}
-
-.mbti:hover .text-right {
-  color: transparent;
-}
-
-.mbti:hover h3 {
-  color: transparent;
-  background-color: transparent;
+.mbti {
+  position: relative;
+  width: 180px;
+  height: 105px;
+  background-color: #f3f4f6;
 }
 
 .mbti:hover {
-  background-color: #4a4a4a;
+  transform: scale(1.06);
+  background-color: #34423e;
+}
+
+.mbti img {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  height: 110%;
+  z-index: 1;
+}
+
+.text-right {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 10px;
+  text-align: right;
+  transition: opacity 0.3s ease;
+}
+
+.text-right span {
+  font-size: 13px;
+  color: #345148;
+}
+
+.mbti h3 {
+  margin: 0;
+  font-size: 20px;
+  color: rgb(51 164 116);
+  font-weight: 900;
+}
+
+.mbti:hover .text-right {
+  opacity: 0;
 }
 
 .hover-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: calc(100% - 28px);
   transform: translate(-50%, -50%);
   color: white;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 800;
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+  z-index: 3;
 }
 
-.mbti:hover .hover-overlay {
+.mbti:hover .hover-overlay,
+.learning-card:hover .hover-overlay {
   opacity: 1;
 }
 
-
-.cards {
-    position: relative;
-    /* width: 1089px;
-height: 1124px; */
-    /* opacity: 1; */
-
-    /* 自动布局 */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px 15px;
-    flex-wrap: wrap;
-    align-content: flex-start;
+.privacy-card {
+  position: relative;
+  width: 180px;
+  height: 335px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  color: #fff;
+  background: #244b5e;
 }
 
-.left-box {
-    position: static;
-    left: 90px;
-    top: 0px;
-    /* width: 417px; */
-    height: 490px;
-    opacity: 1;
-
-    /* 自动布局 */
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    padding: 0px;
-    gap: 17px;
-
-    /* background: #D56868; */
-
-    /* z-index: 0; */
+.privacy-card:hover {
+  transform: scale(1.06);
+  box-shadow: rgba(31, 79, 74, 0.26) 0 16px 30px -14px;
 }
 
-.left-left {
-    /* 自动布局子元素 */
-    position: static;
-    left: 0px;
-    top: 0px;
-    width: 180px;
-    height: 490px;
-    opacity: 1;
-
-    /* 自动布局 */
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    gap: 15px;
-
-    /* background: #547291; */
+.privacy-copy {
+  position: relative;
+  z-index: 2;
 }
 
-.left-right {
-    /* 自动布局子元素 */
-    position: static;
-    left: 217px;
-    top: 0px;
-    width: 180px;
-    height: 490px;
-    opacity: 1;
-
-    /* 自动布局 */
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    gap: 15px;
-
-    /* background: #A62AAC; */
+.city-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
 }
 
-.right-box {
-    position: static;
-    left: 522px;
-    top: 0px;
-    width: 375px;
-    height: 490px;
-    opacity: 1;
-
-    /* 自动布局 */
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    gap: 15px;
-
-    /* background: #28B13B; */
-
-    /* z-index: 1; */
+.privacy-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(23, 37, 47, 0.08) 0%, rgba(17, 32, 42, 0.14) 44%, rgba(15, 30, 38, 0.68) 100%);
+  z-index: 1;
 }
 
-.right-upper {
-    /* 自动布局子元素 */
-    position: static;
-    left: 0px;
-    top: 145px;
-    width: 375px;
-    /* height: 345px; */
-    opacity: 1;
-
-    /* 自动布局 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 15px;
-
-    /* background: #66D29E; */
+.privacy-card:hover .city-img {
+  transform: scale(1.08);
 }
 
-.right-lower {
-    /* 自动布局子元素 */
-    position: static;
-    left: 0px;
-    top: 0px;
-    width: 375px;
-    height: 130px;
-    opacity: 1;
-
-    /* 自动布局 */
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-    gap: 15px;
-    /* background: #882424; */
+.privacy-copy span,
+.card-label,
+.learning-card span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  letter-spacing: 0;
+  opacity: 0.78;
 }
 
-.zhaopian {
-    /* 自动布局子元素 */
-    position: relative;
-    left: 0px;
-    top: 0px;
-    width: 180px;
-    height: 320px;
-    opacity: 1;
-
-    box-sizing: border-box;
-    /* border: 1px solid #141313; */
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px;
+.privacy-copy strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1.12;
 }
 
-
-.nianling {
-    position: relative;
-    left: 0px;
-    /* top: 370px; */
-    width: 180px;
-    height: 120px;
-    opacity: 1;
-    box-sizing: border-box;
-    /* border: 1px solid #141313; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-    border-radius: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px;
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+.privacy-copy p {
+  margin: 12px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.88;
 }
 
-.mbti {
-    /* 自动布局子元素 */
-    position: relative;
-    left: 0px;
-    top: 0px;
-    width: 180px;
-    height: 105px;
-    opacity: 1;
-    background-color: #f3f4f6;
-
-    box-sizing: border-box;
-    /* border: 1px solid #000000; */
-    border-radius: 10px;
-    /* 阴影 */
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.learning-card {
+  position: relative;
+  width: 375px;
+  height: 150px;
+  overflow: hidden;
+  padding: 26px;
+  color: #15313b;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.72) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.56) 1px, transparent 1px),
+    linear-gradient(135deg, #bfe9db 0%, #f8d49b 52%, #f08b80 100%);
+  background-size: 22px 22px, 22px 22px, auto;
 }
 
-.guxiang {
-    /* 自动布局子元素 */
-    position: relative;
-    left: 0px;
-    /* top: 140px; */
-    width: 180px;
-    height: 335px;
-    opacity: 1;
-
-    box-sizing: border-box;
-    /* border: 1px solid #000000; */
-    border-radius: 10px;
-    background-image: url('../assets/蚌埠南北分界线.png');
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px;
-    background-blend-mode: overlay;
-    background-color: #646464;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.learning-card .text {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.3s ease;
 }
 
-.guxiang:hover {
-    transform: scale(1.1);
+.learning-card h3 {
+  margin: 0;
+  font-size: 23px;
+  line-height: 1.25;
 }
 
-.benke:hover {
-    transform: scale(1.1);
+.learning-card p {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
-.benke {
-    /* 自动布局子元素 */
-    position: relative;
-    left: 0px;
-    top: 0px;
-    width: 375px;
-    height: 150px;
-    opacity: 1;
+.learning-card:hover {
+  transform: scale(1.04);
+  background:
+    linear-gradient(rgba(16, 38, 50, 0.8), rgba(16, 38, 50, 0.8)),
+    linear-gradient(135deg, #2d8076 0%, #f08b80 100%);
+}
 
-    box-sizing: border-box;
-    /* border: 1px solid #000000; */
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px;
+.learning-card:hover .text {
+  opacity: 0;
+}
 
-    background-image: url('../assets//石大风景.jpg');
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow:
+    rgba(0, 0, 0, 0.22) 0 8px 18px -8px,
+    rgba(0, 0, 0, 0.16) 0 2px 6px -2px;
+}
+
+.profile-card:hover {
+  transform: scale(1.04);
+  box-shadow:
+    rgba(0, 0, 0, 0.32) 0 16px 28px -14px,
+    rgba(0, 0, 0, 0.22) 0 4px 10px -4px;
 }
 
 .yanjiusheng {
-    /* 自动布局子元素 */
-    position: static;
-    left: 0px;
-    top: 0px;
-    width: 375px;
-    height: 150px;
-    opacity: 1;
-
-    box-sizing: border-box;
-    /* border: 1px solid #000000; */
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px;
+  width: 375px;
+  min-height: 150px;
+  background: linear-gradient(135deg, #335c67 0%, #5fb49c 100%);
 }
 
-.yanjiusheng span {
-    font-size: 20px;
+.zhuanye,
+.yanjiufangxiang {
+  width: 180px;
+  min-height: 125px;
 }
 
 .zhuanye {
-    /* 自动布局子元素 */
-    position: static;
-    left: 215px;
-    top: 0px;
-    width: 180px;
-    height: 125px;
-    opacity: 1;
-
-    box-sizing: border-box;
-    /* border: 1px solid #000000; */
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px;
+  background: linear-gradient(135deg, #263238 0%, #547a8a 100%);
 }
 
 .yanjiufangxiang {
-    /* 自动布局子元素 */
-    position: static;
-    left: 215px;
-    top: 0px;
-    width: 180px;
-    height: 125px;
-    opacity: 1;
-
-    box-sizing: border-box;
-    /* border: 1px solid #000000; */
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-    rgb(229, 231, 235) 0px 4px 6px -1px, rgb(229, 231, 235) 0px 2px 4px -2px;
+  background: linear-gradient(135deg, #8f4b3a 0%, #d98f64 100%);
 }
 
-.yanjiusheng, .zhuanye, .yanjiufangxiang {
-    display: flex;
+.profile-card h3 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.compact-card h3 {
+  font-size: 19px;
+}
+
+.profile-card p {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.chip-list span {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 13px;
+  line-height: 1;
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 820px) {
+  .left-box,
+  .right-box {
+    width: min(100%, 375px);
+    height: auto;
+  }
+
+  .right-lower {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards,
+  .left-box,
+  .left-left,
+  .left-right,
+  .right-box,
+  .right-upper,
+  .right-lower {
+    width: 100%;
+  }
+
+  .left-box,
+  .right-lower {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px -1px, rgba(0, 0, 0, 0.5) 0px 2px 4px -1px;
-}
+  }
 
-/* 渐变背景 */
-.yanjiusheng {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
+  .left-left,
+  .left-right,
+  .right-box {
+    height: auto;
+  }
 
-.zhuanye {
-    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
-}
+  .zhaopian,
+  .nianling,
+  .mbti,
+  .privacy-card,
+  .learning-card,
+  .yanjiusheng,
+  .zhuanye,
+  .yanjiufangxiang {
+    width: 100%;
+  }
 
-.yanjiufangxiang {
-    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
-}
+  .zhaopian {
+    height: 360px;
+  }
 
-/* 悬浮动画 */
-.yanjiusheng:hover, .zhuanye:hover, .yanjiufangxiang:hover {
-    transform: scale(1.05);
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 6px 8px -1px, rgba(0, 0, 0, 0.8) 0px 4px 6px -1px;
-}
+  .privacy-card {
+    height: 220px;
+  }
 
+  .learning-card,
+  .yanjiusheng,
+  .zhuanye,
+  .yanjiufangxiang {
+    min-height: 145px;
+  }
+}
 </style>
