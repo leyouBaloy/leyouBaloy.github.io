@@ -20,10 +20,6 @@
             <n-icon size="17" :component="Train"></n-icon>
             <span>开往</span>
           </a>
-          <a href="https://foreverblog.cn/go.html" target="_blank" class="dropdown-item">
-            <n-icon size="17" :component="RadioButtonOn"></n-icon>
-            <span>虫洞</span>
-          </a>
         </div>
       </div>
       
@@ -50,10 +46,6 @@
             <n-icon size="17" :component="Train"></n-icon>
             <span>开往</span>
           </a>
-          <a href="https://foreverblog.cn/go.html" target="_blank" class="dropdown-item">
-            <n-icon size="17" :component="RadioButtonOn"></n-icon>
-            <span>虫洞</span>
-          </a>
         </div>
       </div>
     </nav>
@@ -64,7 +56,7 @@
 import { ref, shallowRef, defineProps } from 'vue';
 import { NIcon } from 'naive-ui';
 import { useRoute } from 'vue-router';
-import { Home, Archive, Person, Train, RadioButtonOn, Book } from '@vicons/ionicons5';
+import { Home, Archive, Person, Train, Book } from '@vicons/ionicons5';
 
 const props = defineProps({
   // fixed: Boolean,
