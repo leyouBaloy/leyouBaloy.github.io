@@ -107,6 +107,7 @@ const isActive = (path) => {
   transition: all 0.3s ease; /* 添加过渡效果 */
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(4px);
+  overflow: visible;
 }
 
 .hidden {
@@ -179,12 +180,21 @@ a {
   position: relative;
 }
 
+.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max(100%, 100px);
+  height: 12px;
+}
+
 .dropdown-menu {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: calc(100% + 12px);
-  left: 0;
+  right: 0;
   background-color: rgba(248, 249, 250, 0.96);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -260,6 +270,10 @@ a {
   .nav-fix-top {
     top: 0;
     width: calc(100% - 16px);
+  }
+
+  .dropdown-menu {
+    min-width: 88px;
   }
 }
 

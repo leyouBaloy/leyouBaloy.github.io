@@ -138,7 +138,7 @@ onBeforeUnmount(() => {
   --planet-size: 180px;
   --orbit-size: 360px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background:
     radial-gradient(circle at 50% 14%, rgba(150, 167, 255, 0.22), transparent 34%),
     radial-gradient(circle at 76% 24%, rgba(115, 216, 255, 0.10), transparent 30%),
@@ -194,6 +194,7 @@ onBeforeUnmount(() => {
   inset: 0;
   width: 100%;
   height: var(--header-height);
+  overflow: hidden;
   z-index: 2;
   transform-style: preserve-3d;
   perspective: 700px;
