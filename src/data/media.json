@@ -1,44 +1,278 @@
 {
   "reading": [
     {
-      "title": "《德米安》",
-      "excerpt": "关于一个少年如何在彷徨时找寻自我的故事...",
+      "title": "《德米安》读后有感",
+      "excerpt": "黑塞写少年在彷徨中寻找自我，也写人如何走出被保护的明亮世界。",
       "cover": "",
       "date": "2024-05-01",
-      "postFile": "德米安读后有感.md"
-    }
-  ],
-  "wantToRead": [],
-  "finished": [
+      "postFile": "德米安读后有感.md",
+      "slug": "e9ae0e15",
+      "type": "小说"
+    },
     {
-      "title": "《悉达多》",
-      "excerpt": "人生就是在不断的体验与感悟...",
-      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/demian-cover.jpg",
+      "title": "《置身事内》读书笔记",
+      "excerpt": "从地方政府、土地财政和产业政策理解中国经济发展的内在逻辑。",
+      "cover": "",
+      "date": "2023-12-11",
+      "postFile": "置身事内读书笔记.md",
+      "slug": "1e3d20cb",
+      "type": "社科"
+    },
+    {
+      "title": "《1984》读书笔记",
+      "excerpt": "关于权力、语言和精神控制的政治寓言，读完很难不长久回响。",
+      "cover": "",
+      "date": "2023-05-01",
+      "postFile": "《1984》读书笔记.md",
+      "slug": "72d96981",
+      "type": "小说"
+    },
+    {
+      "title": "《肠子的小心思》读书笔记",
+      "excerpt": "一本把肠胃科普写得轻松有趣的小书，也回应了真实的身体困扰。",
+      "cover": "",
+      "date": "2023-01-28",
+      "postFile": "《肠子的小心思》——读书笔记.md",
+      "slug": "4bf66344",
+      "type": "科普"
+    },
+    {
+      "title": "《悉达多》读后感",
+      "excerpt": "人的一生是在不断体验中理解自我，河流般的时间也让人重新学会当下。",
+      "cover": "",
       "date": "2022-11-12",
-      "postFile": "《悉达多》-人生就是在不断的体验与感悟.md"
+      "postFile": "《悉达多》-人生就是在不断的体验与感悟.md",
+      "slug": "68349a2c",
+      "type": "小说"
     },
     {
-      "title": "《1984》",
-      "excerpt": "老大哥在看着你...",
+      "title": "《乡土中国》读书笔记",
+      "excerpt": "从差序格局出发，重新理解中国社会结构和熟人社会的运行方式。",
       "cover": "",
-      "date": "2024-04-01",
-      "postFile": "《1984》读书笔记.md"
+      "date": "2022-07-01",
+      "postFile": "《乡土中国》读书笔记.md",
+      "slug": "29b4acc1",
+      "type": "社科"
     },
     {
-      "title": "《置身事内》",
-      "excerpt": "中国政府与经济发展...",
+      "title": "《从零开始的女性主义》读后有感",
+      "excerpt": "以更平实的方式进入女性主义议题，重新审视日常生活里的结构性问题。",
       "cover": "",
-      "date": "2024-03-01",
-      "postFile": "置身事内读书笔记.md"
+      "date": "2022-05-06",
+      "postFile": "《从零开始的女性主义》读后有感.md",
+      "slug": "f230d573",
+      "type": "社科"
+    },
+    {
+      "title": "《无人生还》读后有感",
+      "excerpt": "阿加莎的经典推理，用封闭空间把悬疑和人性推到极致。",
+      "cover": "",
+      "date": "2022-04-30",
+      "postFile": "《无人生还》读后有感.md",
+      "slug": "7d1d0e91",
+      "type": "推理"
+    },
+    {
+      "title": "《雪国》读书笔记",
+      "excerpt": "穿过长长的隧道，进入川端康成笔下清冷、暧昧又疏离的雪国。",
+      "cover": "",
+      "date": "2022-02-13",
+      "postFile": "《雪国》读书笔记.md",
+      "slug": "c04d3ca3",
+      "type": "小说"
+    },
+    {
+      "title": "《人类简史》读后有感",
+      "excerpt": "从认知革命、农业革命到科学革命，重新串起人类文明的长线索。",
+      "cover": "",
+      "date": "2021-08-16",
+      "postFile": "《人类简史》读后有感.md",
+      "slug": "05810db8",
+      "type": "历史"
+    },
+    {
+      "title": "87《红楼梦》观之有感",
+      "excerpt": "重看经典改编，在人物、音乐和细节里体会一代电视剧的分量。",
+      "cover": "",
+      "date": "2021-07-14",
+      "postFile": "87《红楼梦》观之有感.md",
+      "slug": "bb9c1edf",
+      "type": "名著"
+    },
+    {
+      "title": "《如何阅读一本书》读后感",
+      "excerpt": "在世界读书日重新讨论阅读方法，尤其是主动阅读和结构化理解。",
+      "cover": "",
+      "date": "2021-04-23",
+      "postFile": "《如何阅读一本书》读后感.md",
+      "slug": "84d3a75c",
+      "type": "方法"
+    },
+    {
+      "title": "中国是如何富起来的？",
+      "excerpt": "从重工业基础到改革开放之后的发展逻辑，梳理中国经济崛起的阶段。",
+      "cover": "",
+      "date": "2020-12-12",
+      "postFile": "中国是如何富起来的？.md",
+      "slug": "c2d24b0b",
+      "type": "经济"
     }
   ],
   "movies": [
     {
-      "title": "第二十条",
-      "excerpt": "一部接地气的国产法律神剧——正当防卫...",
+      "title": "一部接地气的国产法律神剧——第二十条",
+      "excerpt": "从正当防卫的法律争议讲到电影的朴实表达，严肃处有思考，动情处能落泪。",
       "cover": "",
       "date": "2024-02-21",
-      "postFile": "一部接地气的国产法律神剧-第二十条.md"
+      "postFile": "一部接地气的国产法律神剧-第二十条.md",
+      "slug": "a94b5eff",
+      "type": "电影"
+    },
+    {
+      "title": "《半泽直树》观后有感",
+      "excerpt": "银行、职场与复仇爽感之外，也能看到经济泡沫后的制度和人心。",
+      "cover": "",
+      "date": "2022-02-01",
+      "postFile": "《半泽直树》观后有感.md",
+      "slug": "8c24a0e2",
+      "type": "日剧"
+    },
+    {
+      "title": "《菊次郎的夏天》观后感",
+      "excerpt": "北野武的夏天里有童真、荒诞和温柔，喜剧外壳下藏着淡淡的忧伤。",
+      "cover": "",
+      "date": "2021-04-05",
+      "postFile": "《菊次郎的夏天》观后感.md",
+      "slug": "a93040b6",
+      "type": "电影"
+    },
+    {
+      "title": "《新喜剧之王》观后感",
+      "excerpt": "从周星驰的喜剧说到普通人的坚持，笑声背后仍然有小人物的酸楚。",
+      "cover": "",
+      "date": "2021-02-15",
+      "postFile": "《新喜剧之王》观后感.md",
+      "slug": "70f77e2f",
+      "type": "电影"
+    },
+    {
+      "title": "《华尔街之狼》观后感",
+      "excerpt": "三个小时的疯狂金融故事，让人看见欲望被放大后的眩晕感。",
+      "cover": "",
+      "date": "2021-02-11",
+      "postFile": "《华尔街之狼》观后感.md",
+      "slug": "3d41ecc4",
+      "type": "电影"
+    },
+    {
+      "title": "《十二公民》观后感",
+      "excerpt": "一间教室里的模拟陪审，讨论的不只是案件，也是偏见、立场和推理。",
+      "cover": "",
+      "date": "2020-12-21",
+      "postFile": "《十二公民》观后感.md",
+      "slug": "64c15f9f",
+      "type": "电影"
+    }
+  ],
+  "travels": [
+    {
+      "title": "新加坡访学旅行",
+      "excerpt": "第一次出国，借南洋理工大学访学的机会，把课堂、城市和异国日常都走了一遍。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_20240808_192834.jpg",
+      "date": "2024-08-14",
+      "postFile": "新加坡访学旅行.md",
+      "slug": "fe7200e4",
+      "type": "访学",
+      "location": "新加坡"
+    },
+    {
+      "title": "蚌埠美食之旅",
+      "excerpt": "从城市历史聊到街头滋味，给家乡蚌埠补上一份烟火气十足的美食地图。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20231206163956788.png",
+      "date": "2023-10-08",
+      "postFile": "蚌埠美食之旅.md",
+      "slug": "f6639fe4",
+      "type": "美食",
+      "location": "蚌埠"
+    },
+    {
+      "title": "苏州印象",
+      "excerpt": "江南园林、古城肌理和高新产业园并置，一座城市里同时有诗意和科技感。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_8237%E2%80%9D%E5%A4%A7.jpeg",
+      "date": "2023-08-12",
+      "postFile": "苏州印象.md",
+      "slug": "17a81efd",
+      "type": "城市",
+      "location": "苏州"
+    },
+    {
+      "title": "ChinaVis重庆之旅",
+      "excerpt": "参会、听报告、看江景，把一次学术会议变成了很饱满的山城记忆。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7704.jpeg",
+      "date": "2023-07-31",
+      "postFile": "ChinaVis重庆之旅.md",
+      "slug": "8cb0549f",
+      "type": "会议",
+      "location": "重庆"
+    },
+    {
+      "title": "跟妈妈一起的徐州一日游",
+      "excerpt": "离家不远的一日行程，写下城市印象，也写下和妈妈一起出门的快乐。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230213230100595.png",
+      "date": "2023-02-13",
+      "postFile": "跟妈妈一起的徐州一日游.md",
+      "slug": "19397ade",
+      "type": "亲子",
+      "location": "徐州"
+    },
+    {
+      "title": "黄山归来不看岳——黄山之旅",
+      "excerpt": "翡翠谷、黄山、宏村一路走下来，既有风景，也有路途中的小插曲。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/翡翠谷-1024x1024.jpg",
+      "date": "2021-10-06",
+      "postFile": "黄山归来不看岳——黄山之旅.md",
+      "slug": "2812cd66",
+      "type": "山岳",
+      "location": "黄山"
+    },
+    {
+      "title": "再认识我的家乡——蚌埠",
+      "excerpt": "一个暑假的城市漫游，沿着熟悉的街道重新观察自己的家乡。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/万达-1024x768.jpg",
+      "date": "2021-08-27",
+      "postFile": "再认识我的家乡——蚌埠.md",
+      "slug": "10580a2d",
+      "type": "城市",
+      "location": "蚌埠"
+    }
+  ],
+  "games": [
+    {
+      "title": "艺术品般的游戏——《荒野大镖客救赎2》",
+      "excerpt": "从开放世界、叙事和细节打磨聊起，解释为什么它像一件能互动的艺术品。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9Cec96892d0905de1851aeaca8df1c310d18f58540.jpg@1256w_708h_!web-article-pic%E2%80%9D%E5%A4%A7.jpeg",
+      "date": "2023-09-19",
+      "postFile": "艺术品般的游戏—荒野大镖客2救赎.md",
+      "slug": "32769736",
+      "type": "开放世界"
+    },
+    {
+      "title": "星露谷物语为什么这么好玩？",
+      "excerpt": "种田、钓鱼、挖矿、恋爱和社区生活组合在一起，形成了让人沉迷的循环。",
+      "cover": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20220831234211200.png",
+      "date": "2022-08-28",
+      "postFile": "星露谷物语为什么这么好玩？.md",
+      "slug": "2af8b0db",
+      "type": "模拟经营"
+    },
+    {
+      "title": "跟基友玩双人成行这辈子没这么开心过",
+      "excerpt": "一小时笑一小时，合作游戏真正好玩的地方，是有人和你一起胡闹。",
+      "cover": "",
+      "date": "2022-01-15",
+      "postFile": "跟基友玩双人成行这辈子没这么开心过.md",
+      "slug": "b0cf01f1",
+      "type": "合作"
     }
   ]
 }
