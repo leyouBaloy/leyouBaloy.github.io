@@ -14,12 +14,13 @@
   .timeline {
     position: relative;
     padding: 10px 0;
+    --timeline-axis-x: 24px;
   }
   
   .timeline::before {
     content: '';
     position: absolute;
-    left: 23px; /* 可以根据需要调整 */
+    left: calc(var(--timeline-axis-x) - 1px);
     top: 0;
     bottom: 0;
     width: 2px;

@@ -69,19 +69,30 @@
     cursor: pointer;
     transition: all 0.2s ease;
   }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    inset: 0 -10px;
+    z-index: 0;
+    border-radius: 8px;
+    background: transparent;
+    transition: background 0.2s ease;
+  }
   
   .timeline-item:hover {
+    background: transparent;
+  }
+
+  .timeline-item:hover::before {
     background: rgba(102, 126, 234, 0.05);
-    border-radius: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: -10px;
-    margin-right: -10px;
   }
   
   .timeline-item-content {
-    padding-left: 40px;
+    padding-left: calc(var(--timeline-axis-x, 24px) + 16px);
     flex: 1;
+    position: relative;
+    z-index: 1;
   }
   
   .timeline-item-content time {
@@ -146,13 +157,15 @@
   
   .circle {
     position: absolute;
-    left: 16px;
+    z-index: 1;
+    box-sizing: border-box;
+    left: calc(var(--timeline-axis-x, 24px) - 6px);
     width: 12px;
     height: 12px;
     background-color: #fff;
     border: 2px solid #d3d3d3;
     border-radius: 50%;
-    top: 16px;
+    top: 39px;
     transition: all 0.2s ease;
   }
   
