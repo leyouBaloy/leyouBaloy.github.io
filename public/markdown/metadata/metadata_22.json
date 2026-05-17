@@ -1,21 +1,5 @@
 [
   {
-    "title": "Pandas学习笔记",
-    "date": "2021-03-09T11:04:10.000Z",
-    "updatedAt": "2021-03-09T11:04:10.000Z",
-    "file": "Pandas学习笔记.md",
-    "slug": "84a00195",
-    "excerpt": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函",
-    "tags": [
-      "笔记"
-    ],
-    "img": "",
-    "wordCount": 685,
-    "readingTime": 2,
-    "searchContent": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函数的功能是将自定义函数作用于DataFrame的所有元素 案例可以看这个：https://www.cnblogs.com/jason /p/11427145.html 讲的非常清晰 能看出map,apply,apply还是蛮有用的，但是上手不太容易 sort\\ values()和sort\\ index()区别 1、sort\\ index() sort\\ index()通俗点讲，就是根据index的值进行排序，如果是按行排序，可以认为是根据index的值排序，如果是按列排序，可以认为是根据columns的值进行排序。用法如下： sort\\ values()对dataframe按某一列的值进行排序，或者按某一行的值进行排序。具体的参数设置如下： 摘自https://blog.csdn.net/u011412768/article/details/107251808 pd.read\\ csv()参数 filepath\\ or\\ buffer : 数据输入的路径：可以是文件路径、可以是URL，也可以是实现read方法的任意对象。这个参数，就是我们输入的第一个参数。 还可以是一个URL，如果访问该URL会返回一个文件的话，那么pandas的read\\ csv函数会自动将该文件进行读取。比如：我们用fastapi写一个服务，将刚才的文件返回。 sep : 读取csv文件时指定的分隔符，默认为逗号。注意：\"csv文件的分隔符\" 和 \"我们读取csv文件时指定的分隔符\" 一定要一致。 比如：上面的girl.csv，我们将其分隔符从逗号改成\"\\\\t\"，如果这个时候还是用默认的逗号分隔符，那么数据读取之后便混为一体。 delimiter : 分隔符的另一个名字，与 sep 功能相似。 header / names : 当names没被赋值时，header会变成0，即选取数据文件的第一行作为列名。 当 names 被赋值，header 没被赋值时，那么header会变成None。如果都赋值，就会实现两个参数的组合功能。 index\\ col : 我们在读取文件之后，生成的DataFrame的索引默认是0 1 2 3...，我们当然可以set\\ index，但是也可以在读取的时候就指定某个列为索引。 usecols : 如果列有很多，而我们不想要全部的列、而是只要指定的列就可以使用这个参数。 详细看这篇博文，写得非常好！！https://www.cnblogs.com/traditional/p/12514914.html 样式问题 困扰了我很久是pandas样式问题，在这篇博客里写的很详细！ https://www.gairuo.com/p/pandas style function",
-    "totalPages": 28
-  },
-  {
     "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
     "date": "2021-03-03T20:46:14.000Z",
     "updatedAt": "2021-03-03T20:46:14.000Z",
@@ -28,7 +12,8 @@
     "img": "",
     "wordCount": 68,
     "readingTime": 1,
-    "searchContent": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 图中图 次坐标轴 Animation动画 我试过了，jupyter notebook根本动不了 又试了pycharm，也动不了 完结撒花，再次感谢莫烦老师"
+    "searchContent": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 图中图 次坐标轴 Animation动画 我试过了，jupyter notebook根本动不了 又试了pycharm，也动不了 完结撒花，再次感谢莫烦老师",
+    "totalPages": 28
   },
   {
     "title": "开学第二天明确学习方向",
@@ -149,5 +134,20 @@
     "wordCount": 295,
     "readingTime": 1,
     "searchContent": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。 https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044 导入 from bs4 import BeautifulSoup 导入模块 soup = BeautifulSoup(text,'lxml') 实例化BeautifulSoup对象 获取所有的div标签 divs = soup.find\\ all('div') print(divs) divs不是列表，是bs4的ResultSet，输出结果是一个列表形式，每个div作为列表中的一个元素 获取指定的div标签 div = soup.find\\ all('div')\\[1\\] print(div) 输出第二个数据，还可以切片，不举例了 div = list(soup.find\\ all('div')) 把结果转换成列表，还是很方便的 获取拥有指定属性的标签(id=even的div标签) 方法一： divs = soup.find\\ all('div',id='even') 如果指定属性是class，会与Python关键字冲突，改为class 方法二： divs = soup.find\\ all('div',attrs={\"id\":\"even\",\"class\":\"L square\"}) 以字典的形式找到多个指定属性的div标签 获取标签的属性值 alist = soup.find\\ all('a') 方法一：通过下标方式提取 for a in alist: href = a\\['href'\\] print(href) 方法二：利用attrs方法提取 for a in alist: href = a.attrs\\['href'\\] print(href) 输出文字 使用string方法 print(div.string)"
+  },
+  {
+    "title": "《华尔街之狼》观后感",
+    "date": "2021-02-11T00:29:07.000Z",
+    "updatedAt": "2021-02-11T00:29:07.000Z",
+    "file": "《华尔街之狼》观后感.md",
+    "slug": "3d41ecc4",
+    "excerpt": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。 剧情 主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。 公司破产后，他也学会了搞传销（果然在大公司里就是能学到",
+    "tags": [
+      "书影记录"
+    ],
+    "img": "",
+    "wordCount": 985,
+    "readingTime": 3,
+    "searchContent": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。 剧情 主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。 公司破产后，他也学会了搞传销（果然在大公司里就是能学到东西），然后就带着一群人搞传销卖股票，还创建了一个公司。最先跟他干的那个人，看他这么能赚钱，于是主动找他聊天，跟他聊了一会就立刻决定把本职工作辞掉，很有魄力，最后成了二老板。 最后他们被FBI逮到，坐牢去了，干了这么多坏事，也就坐2年牢。 电影重点不是讲述这个搞传销的年轻人是怎么奋斗的，也不是讲这帮人最后怎么被绳之以法的，而是花了大量的篇幅讲男主（下面简称为“搞传销的”）是怎么挥霍这些钱财的。 “搞传销的”住豪宅，买豪车，，喝香槟，嫖名娼...这些东西即使是像我们这样穷人，也在想象力范围之内。 出乎你想象力的是，“搞传销的”把办公室开成了妓院！职员天天上班的时候一边捞钱，一边“释放压力”。男厕所的镜子前中出，摩天大楼的透明电梯里口X... “搞传销的”染上毒瘾，毒品藏在家里到处都是，他也随身携带着大麻，瘾上来了就吸一口。他还有性癖，嫖娼的时候不喜欢戴套，举办舞会的时候认识一个很漂亮的有夫之妇，就跟到她家把她给上了。这件事被老婆发现之后，果断选择跟老婆离婚，这才是真男人（误 电影的尺度非常非常大，单从情涩这个角度看，堪比AV，比AV还牛逼的是这部电影里的女优是三点全露不打码，而且个个都是影星级别的辣妹。 来源：ASC杂志（此文是官方授权翻译，如需转载，请标明来源影视工业网，十分感谢） 作者：Michael Goldman 翻译：吴晓晖 风格 电影是表现力极强，非常非常浮夸。男主莱昂纳多·迪卡普里奥还在前一年演过一部《了不起的盖茨比》，这两部电影都是看了之后让人印象非常深刻的。 我们在看电影的时候，会不由自主把自己代入到电影中，与主角感同身受，看这部电影的时候，我脑子里一直就是这个感觉“有钱太TM爽啦！” 思考 虽然看完之后我非常震惊，但我脑子里就一个“爽”字，没有任何思考的空间了。随便想了想，有以下几点： 上个世纪8,90年代，大量的精英来到华尔街，剥削“穷人”，大发股票横财，挥霍金钱。但是“穷人”们的生活其实也不差，至少比发展中国家好多了，所以美国那时候是真正的黄金时代，暴富的人肆意挥霍，没暴富的人做暴富的美梦，进入21世纪后才发现全都是泡沫，是一刹的花火。 我真的想不明白这电影是怎么拍出来的，怎么在美国放映的，尺度如此之大，涉及了毒品，性，还有敏感的政治问题。2004年那时候肯定是引起了轩然大波，那时候我才2岁，真想穿越回去调查一下。 最后，十分推荐这部电影，看完之后会对自己当前的生活有新的思考。"
   }
 ]

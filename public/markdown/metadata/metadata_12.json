@@ -1,21 +1,5 @@
 [
   {
-    "title": "Leetcode310:最小高度树",
-    "date": "2022-04-06T07:07:06.000Z",
-    "updatedAt": "2022-04-06T07:07:06.000Z",
-    "file": "Leetcode310_最小高度树.md",
-    "slug": "5ed1d85c",
-    "excerpt": "题目 https://leetcode cn.com/problems/minimum height trees/ 这是一道理论性很强，代码也很有技巧性的“中等”难度题目。 题解 暴力法 献上我的超时代码： 广度优先搜索 有如下结论： 用反证法证明，证明过程挺复杂的。 所以我们就把这题从寻找最短距离",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 522,
-    "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/minimum height trees/ 这是一道理论性很强，代码也很有技巧性的“中等”难度题目。 题解 暴力法 献上我的超时代码： 广度优先搜索 有如下结论： 用反证法证明，证明过程挺复杂的。 所以我们就把这题从寻找最短距离变成了寻找最长距离。然后把路径记录下来，路径的中点就是我们要找的根节点。 你不觉得这个结论很奇妙吗？我想到了一团乱的绳子，如果你从中间把这堆绳子拎起来，四周绳子的末梢就会垂下去... 这题代码我分段详解： 首先是第一段代码： 因为后面要在edges里面查找某个节点连接的另一个节点，所以这里第一步先是做了一个初始化，便于后面的查询。最后得到的结果是g[x]=[a,b,c...]，表示标号为x的节点，连接了a,b,c等节点。（在我的代码中也有类似处理，但我用的是字典） 第二段： 这是一个用队列实现的广度优先搜索。vis是记录已搜索过的节点。deque是双向队列（震惊！原来python也是有数据结构的，我才知道😂）。parents记录每个节点的父节点，用于下面找路径。 然后从0开始，找到最远节点x，再从x找最远节点y。那么x，y之间的距离就是最远的（这很奇妙）。 第三段： 在这里要找路径了，这时候parents就派上用场了。如果找到路径长度为奇数，那么正中间那个数就是我们要找的根节点。如果路径长度为偶数，中间的数有两个，那么两个都是我们要找的根节点。 其他解法 这题还有深度优先搜索（跟广度优先搜索差不多），拓扑序列，不断剔除度为1的节点等方法，我太懒了，不想研究了...",
-    "totalPages": 28
-  },
-  {
     "title": "Leetcode2:两数相加——链表",
     "date": "2022-04-05T08:50:12.000Z",
     "updatedAt": "2022-04-05T08:50:12.000Z",
@@ -28,7 +12,8 @@
     "img": "",
     "wordCount": 131,
     "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/add two numbers/ 这道题主要是debug 题解 我自己写的代码： 还用了一个反转链表的函数，属于绕弯形选手😂 评论里给出的代码，我认为是最简洁优雅易懂的（虽然是java，不过其实和c艹差不多： 时间复杂度O(max(m,n))；空间复杂度O(1)； 感想：这道题看起来很简单，但如果在csp考试中遇到我就完蛋了。因为细节太多，debug比较难。"
+    "searchContent": "题目 https://leetcode cn.com/problems/add two numbers/ 这道题主要是debug 题解 我自己写的代码： 还用了一个反转链表的函数，属于绕弯形选手😂 评论里给出的代码，我认为是最简洁优雅易懂的（虽然是java，不过其实和c艹差不多： 时间复杂度O(max(m,n))；空间复杂度O(1)； 感想：这道题看起来很简单，但如果在csp考试中遇到我就完蛋了。因为细节太多，debug比较难。",
+    "totalPages": 28
   },
   {
     "title": "Leetcode230:二叉搜索树中第K小的元素",
@@ -149,5 +134,20 @@
     "wordCount": 187,
     "readingTime": 1,
     "searchContent": "题目 https://leetcode cn.com/problems/binary tree zigzag level order traversal/ 做过102题后这题可以轻松做出来 题解 复习一下[102. 二叉树的层序遍历]： 首先根节点入队 当队列不为空： 求队列长度s 依次从队列中取s个元素拓展，然后进入下一次迭代 得到层序遍历结果后，把奇数层reverse一下，就能ac了 代码： 其实这题想让我们用一种数据结构deque双端队列。对于偶数层的节点，从后端插入元素；对于奇数层的节点，从前端插入元素。 我个人觉得并不比朴素的方法优秀很多，所以就不深入研究了哈哈。（其实是懒"
+  },
+  {
+    "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
+    "date": "2022-03-26T09:02:51.000Z",
+    "updatedAt": "2022-03-26T09:02:51.000Z",
+    "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
+    "slug": "6fb3bf4b",
+    "excerpt": "题目 https://leetcode cn.com/problems/construct binary tree from preorder and inorder traversal/ 上数据结构这门课时研究过这个问题，思路很快就有，难在debug 题解 递归法 众所周知，只有前序遍历或中序遍历",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 645,
+    "readingTime": 2,
+    "searchContent": "题目 https://leetcode cn.com/problems/construct binary tree from preorder and inorder traversal/ 上数据结构这门课时研究过这个问题，思路很快就有，难在debug 题解 递归法 众所周知，只有前序遍历或中序遍历的结果是推演不出原树的。但是前序遍历+中序遍历可以推演出来。因为它们包含的信息特征不同，可以互补。 前序遍历得到的结果形式可以表示为这样：[ 根节点, [左子树的前序遍历结果], [右子树的前序遍历结果] ] 中序遍历得到的结果形式可以表示为这样：[ [左子树的中序遍历结果], 根节点, [右子树的中序遍历结果] ] 所以说，由前序遍历数组的第一个元素可以确定根节点，然后在中序遍历中找到根节点的位置，这个位置左边是左子树，右边是右子树。递归的这么推演下去，就能把整颗树构造出来啦。 举个例子吧：比如preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]。那么首先确定的根节点是preorder[0]，即为3。然后把inorder劈成两半，一半是3左边的left inorder=[9]，另一半是3右边的right inorder=[15,20,7]。再把preorder劈成两半，left preorder=[9]和right preorder=[20,15,7]。 分别把left preorder和left inorder作为参数向左构造子树，把right preorder和right inorder作为参数向右构造子树。递归下去。 因为python的数组切片比较好用，所以这题就用了python： 细节 先确定left inorder，因为left inorder和left preorder的长度应该相同，所以由它的长度可以确定left preorder。right inorder和right preorder同理。 如果order数组为的长度为1，说明下一个节点是叶节点，后面就不用继续构造下去了。 如果order数组为的长度为0，即为[]，说明当前节点是叶节点，直接令下一个节点为None。 改进 这两段代码在preorder中搜索根节点要花费很多时间，我们在一开始就创建一个哈希表储存每个数的索引，这样搜索时间就是O(1)了。 另外官方题解并没有把数组切片，而是传了指针的位置。 官方题解做法python： 官方题解的c++代码，学习一下： 感想 解决树的问题，代码复杂度明显要高一点。以后我会更多使用较为熟悉方便的python而不是c++。"
   }
 ]

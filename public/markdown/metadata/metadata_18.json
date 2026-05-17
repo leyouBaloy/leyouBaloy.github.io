@@ -1,21 +1,5 @@
 [
   {
-    "title": "macOS下matplotlib无法显示中文字体问题解决",
-    "date": "2021-11-12T16:57:43.000Z",
-    "updatedAt": "2021-11-12T16:57:43.000Z",
-    "file": "macOS下matplotlib无法显示中文字体问题解决.md",
-    "slug": "2031667d",
-    "excerpt": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。 后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html 解决方法",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "",
-    "wordCount": 177,
-    "readingTime": 1,
-    "searchContent": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。 后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html 解决方法 找到字体路径 进入该路径然后编辑文件matplotlibrc可以直接在最下面加上三行： 然后把 /.matplotlib目录下的两个文件删除掉（缓存文件可以放心删）： rm rf /.matplotlib/\\ 重启python，并引入字体 plt.rcParams\\['font.sans serif'\\] = \\['Arial Unicode MS'\\] 即可解决中文及负号无法正常解决的问题。",
-    "totalPages": 28
-  },
-  {
     "title": "如何在英语朗读视频中添加文稿",
     "date": "2021-11-04T17:15:40.000Z",
     "updatedAt": "2021-11-04T17:15:40.000Z",
@@ -28,7 +12,8 @@
     "img": "",
     "wordCount": 349,
     "readingTime": 1,
-    "searchContent": "如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读视频中添加文稿呢？ 你所需要用到的工具是剪辑软件，下面推荐几个很好用的剪辑软件： 1.剪映（电脑和手机） 你可以把你的视频直接拖拽到导轨上，然后再把文稿以图片也拖拽进来。控制好每张图片时间区间，使其与你的视频对应。不到五分钟，你就可以处理完你的视频。 剪完后，点右上角导出视频，你可以像我一样使用下图的参数，这样你能得到一个清晰度够用但是占用内存特别小的视频。 剪映的下载地址（官方）：https://lv.ulikecam.com/?\\ s=4 在剪辑时，运用分割、分离、变速、快捷键等技巧会让视频更完美，你可以在b站学习这些知识。 2.花瓣剪辑（手机） 用手机也可以剪辑。花瓣剪辑是华为手机自带的剪辑软件。操作逻辑和剪映一样。 3.Premiere（电脑） 4.final cut pro（苹果电脑） 5.iMovie(ipad) ...... 工具其实都一样，选择一个称手的就好。"
+    "searchContent": "如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读视频中添加文稿呢？ 你所需要用到的工具是剪辑软件，下面推荐几个很好用的剪辑软件： 1.剪映（电脑和手机） 你可以把你的视频直接拖拽到导轨上，然后再把文稿以图片也拖拽进来。控制好每张图片时间区间，使其与你的视频对应。不到五分钟，你就可以处理完你的视频。 剪完后，点右上角导出视频，你可以像我一样使用下图的参数，这样你能得到一个清晰度够用但是占用内存特别小的视频。 剪映的下载地址（官方）：https://lv.ulikecam.com/?\\ s=4 在剪辑时，运用分割、分离、变速、快捷键等技巧会让视频更完美，你可以在b站学习这些知识。 2.花瓣剪辑（手机） 用手机也可以剪辑。花瓣剪辑是华为手机自带的剪辑软件。操作逻辑和剪映一样。 3.Premiere（电脑） 4.final cut pro（苹果电脑） 5.iMovie(ipad) ...... 工具其实都一样，选择一个称手的就好。",
+    "totalPages": 28
   },
   {
     "title": "Linux自由软件协会迎新结束有感",
@@ -149,5 +134,20 @@
     "wordCount": 91,
     "readingTime": 1,
     "searchContent": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change kernel = 环境名"
+  },
+  {
+    "title": "jupyter-paddle使用docker安装",
+    "date": "2021-08-29T21:19:42.000Z",
+    "updatedAt": "2021-08-29T21:19:42.000Z",
+    "file": "jupyter-paddle使用docker安装.md",
+    "slug": "30e1e85f",
+    "excerpt": "安装 参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux docker.html 先安装docker，参考官网 拉取镜像： docker pull registry.bai",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "wordCount": 202,
+    "readingTime": 1,
+    "searchContent": "安装 参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux docker.html 先安装docker，参考官网 拉取镜像： docker pull registry.baidubce.com/paddlepaddle/paddle:2.1.2 jupyter 运行容器 这里有个坑，访问ip地址:8080进入notebook的时候，还有一个账号，默认是paddle 容器内安装dlib 更新apt: 在安装 g++ 等工具时 会提示 Unable to locate package build essential，这种情况下先执行 更新一下， 更新完。继续 使用apt安装依赖： ` sudo apt get install build essential cmake sudo apt get install libgtk 3 dev sudo apt get install libboost all dev pip安装 dlib pip install dlib` 作者：花花儿 链接：https://www.zhihu.com/question/34524316/answer/182278536 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
   }
 ]
