@@ -208,6 +208,10 @@ onBeforeUnmount(() => {
   transform-style: preserve-3d;
 }
 
+.space_field_wrapper:not(.satellite-wrapper) {
+  z-index: 3;
+}
+
 /* 母星 - 中心 */
 .space_field.mother {
   position: absolute;
@@ -240,6 +244,8 @@ onBeforeUnmount(() => {
 /* 卫星轨道 */
 .satellite-wrapper {
   transform: none;
+  z-index: 4;
+  animation: satelliteDepth var(--orbit-duration) linear infinite;
 }
 
 .space_field.satellite {
@@ -289,6 +295,18 @@ onBeforeUnmount(() => {
 @keyframes planet {
   0%   { transform: translate(-50%, -50%) rotateY(0deg); }
   100% { transform: translate(-50%, -50%) rotateY(-360deg); }
+}
+
+@keyframes satelliteDepth {
+  0%,
+  49.99% {
+    z-index: 2;
+  }
+
+  50%,
+  100% {
+    z-index: 4;
+  }
 }
 
 /* =============================================
