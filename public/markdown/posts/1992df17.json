@@ -1,0 +1,20 @@
+{
+  "title": "Python-一元二次方程，保留两位小数",
+  "date": "2020-10-19T15:10:44.000Z",
+  "updatedAt": "2020-10-19T15:10:44.000Z",
+  "file": "Python-一元二次方程，保留两位小数.md",
+  "slug": "1992df17",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 103,
+  "readingTime": 1,
+  "body": "【问题描述】一元二次方程：ax2+bx+c=0 （a ╪ 0）  \n【输入形式】输入a、b和c的值（有理数）  \n【输出形式】输出x的两个值，或者No（即没有有理数的解）  \n【样例输入】1 2.5 3  \n【样例输出】No  \n【样例输入】1 -2 1  \n【样例输出】1.00 1.00\n\n【样例输出说明】输出的两个解保留两位小数，大的在前。\n\n```\ns = input()\nnumLst = s.split(' ')\nresultLst = map(float,numLst)\na,b,c = resultLst\n\nimport math\ndelta = b**2-4*a*c\nif delta < 0:\n    print('No')\nelse:\n    x1 = (-b+math.sqrt(delta))/(2*a)\n    x2 = (-b-math.sqrt(delta))/(2*a)\n    if x1 > x2:\n        print(\"%.2f\" % x1,\"%.2f\" % x2)\n    else:\n        print(\"%.2f\" % x2,\"%.2f\" % x1)\n```",
+  "html": "<p>【问题描述】一元二次方程：ax2+bx+c=0 （a ╪ 0）<br>\n【输入形式】输入a、b和c的值（有理数）<br>\n【输出形式】输出x的两个值，或者No（即没有有理数的解）<br>\n【样例输入】1 2.5 3<br>\n【样例输出】No<br>\n【样例输入】1 -2 1<br>\n【样例输出】1.00 1.00</p>\n<p>【样例输出说明】输出的两个解保留两位小数，大的在前。</p>\n<pre><code class=\"language-text\">s = input()\nnumLst = s.split(' ')\nresultLst = map(float,numLst)\na,b,c = resultLst\n\nimport math\ndelta = b**2-4*a*c\nif delta &lt; 0:\n    print('No')\nelse:\n    x1 = (-b+math.sqrt(delta))/(2*a)\n    x2 = (-b-math.sqrt(delta))/(2*a)\n    if x1 &gt; x2:\n        print(&quot;%.2f&quot; % x1,&quot;%.2f&quot; % x2)\n    else:\n        print(&quot;%.2f&quot; % x2,&quot;%.2f&quot; % x1)\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

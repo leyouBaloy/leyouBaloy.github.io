@@ -1,0 +1,20 @@
+{
+  "title": "使用reverse反向排列算法",
+  "date": "2020-12-28T16:21:28.000Z",
+  "updatedAt": "2020-12-28T16:21:28.000Z",
+  "file": "使用reverse反向排列算法.md",
+  "slug": "8924b63c",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 41,
+  "readingTime": 1,
+  "body": "```\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    srand(time(NULL));\n    vector<int>v(10);\n    for(int i=0;i<10;i++)\n    {\n        v[i] = rand()%100;\n    }\n    vector<int>::iterator it;\n    for(it=v.begin();it!=v.end();it++)\n    {\n        cout << *it << \" \";\n    }\n    cout << endl;\n    reverse(v.begin(),v.end());\n    for(it=v.begin();it!=v.end();it++)\n    {\n        cout << *it << ' ';\n    }\n    cout << endl;\n\n    return 0;\n}\n```\n\n运行结果\n\n94 66 52 71 33 43 91 59 78 69  \n69 78 59 91 43 33 71 52 66 94\n\nProcess returned 0 (0x0) execution time : 0.013 s  \nPress any key to continue.\n\nstring容器\n\n```\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    string s;\n    s = \"123456\";\n    reverse(s.begin(),s.end());\n    cout << s;\n    return 0;\n}\n```",
+  "html": "<pre><code class=\"language-text\">#include &lt;bits/stdc++.h&gt;\nusing namespace std;\n\nint main()\n{\n    srand(time(NULL));\n    vector&lt;int&gt;v(10);\n    for(int i=0;i&lt;10;i++)\n    {\n        v[i] = rand()%100;\n    }\n    vector&lt;int&gt;::iterator it;\n    for(it=v.begin();it!=v.end();it++)\n    {\n        cout &lt;&lt; *it &lt;&lt; &quot; &quot;;\n    }\n    cout &lt;&lt; endl;\n    reverse(v.begin(),v.end());\n    for(it=v.begin();it!=v.end();it++)\n    {\n        cout &lt;&lt; *it &lt;&lt; ' ';\n    }\n    cout &lt;&lt; endl;\n\n    return 0;\n}\n</code></pre>\n<p>运行结果</p>\n<p>94 66 52 71 33 43 91 59 78 69<br>\n69 78 59 91 43 33 71 52 66 94</p>\n<p>Process returned 0 (0x0) execution time : 0.013 s<br>\nPress any key to continue.</p>\n<p>string容器</p>\n<pre><code class=\"language-text\">#include &lt;bits/stdc++.h&gt;\nusing namespace std;\n\nint main()\n{\n    string s;\n    s = &quot;123456&quot;;\n    reverse(s.begin(),s.end());\n    cout &lt;&lt; s;\n    return 0;\n}\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

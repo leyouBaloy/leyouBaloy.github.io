@@ -1,0 +1,41 @@
+{
+  "title": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
+  "date": "2023-04-22T02:40:50.000Z",
+  "updatedAt": "2023-04-22T02:40:50.000Z",
+  "file": "vueflask实现播放任何视频源包括rtsp摄像头.md",
+  "slug": "2453b9ad",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 453,
+  "readingTime": 2,
+  "body": "## 背景\n\n最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。\n\n由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才能推流，比如转成rtmp或webRTC等其它流，这样就能在网页上播放了。GitHub上能找到很多转码推流的代码，但又因为海康还对这个协议做了魔改（主要是加密），所以这些代码也不支持！\n\n最后我看到一个很nice的方法：在后端（flask）使用cv库读取视频流，不断截取每一帧的图片，发送给前端。前端只需要用一个`<img>`标签就能渲染这个直播视频啦。\n\n## 代码\n\nFlask\n\n```flask\n# camera = cv2.VideoCapture(0) # 笔记本自带摄像头，支持macbook\ncamera = cv2.VideoCapture(os.path.join(app.config['UPLOAD_FOLDER'], 'zdws.mp4')) # 本地视频\n@app.route('/api/video_feed')\ndef video_feed():\n    def generate():\n        while True:\n            # time.sleep(0.0)\n            ret, frame = camera.read()\n            if not ret:\n                break\n            _, jpeg = cv2.imencode('.jpg', frame)\n            yield (b'--frame\\r\\n'\n                   b'Content-Type: image/jpeg\\r\\n\\r\\n' + jpeg.tobytes() + b'\\r\\n')\n    return Response(generate(), mimetype='multipart/x-mixed-replace; boundary=frame')\n```\n\nVue\n\n```vue\n<!-- 摄像头画面展示区域 -->\n        <img\n          style=\"width: 100%\"\n          src=\"api/video_feed\"\n        />\n```\n\n## 总结\n\n这个方法能够以最低的成本解决问题，但是每次都传整张图片，对网络质量的，所以它只适用于网络质量较高的局域网。\n\n视频本身就是由一帧一帧的图像组成的，但是我们传送数据时不可能原封不动地传送每一帧，因为它太大了。我们需要对视频进行压缩，去除帧与帧之间的冗余信息之后再发送到客户端，之后进行解压和渲染。压缩和解压是需要时间的，所以我们观看网络直播时肯定会有一定的延时。4G时代的网速依然是不够的，期待下一代网络技术的更新。\n",
+  "html": "<h2 id=\"背景\">背景</h2>\n<p>最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。</p>\n<p>由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才能推流，比如转成rtmp或webRTC等其它流，这样就能在网页上播放了。GitHub上能找到很多转码推流的代码，但又因为海康还对这个协议做了魔改（主要是加密），所以这些代码也不支持！</p>\n<p>最后我看到一个很nice的方法：在后端（flask）使用cv库读取视频流，不断截取每一帧的图片，发送给前端。前端只需要用一个<code>&lt;img&gt;</code>标签就能渲染这个直播视频啦。</p>\n<h2 id=\"代码\">代码</h2>\n<p>Flask</p>\n<pre><code class=\"language-flask\"># camera = cv2.VideoCapture(0) # 笔记本自带摄像头，支持macbook\ncamera = cv2.VideoCapture(os.path.join(app.config['UPLOAD_FOLDER'], 'zdws.mp4')) # 本地视频\n@app.route('/api/video_feed')\ndef video_feed():\n    def generate():\n        while True:\n            # time.sleep(0.0)\n            ret, frame = camera.read()\n            if not ret:\n                break\n            _, jpeg = cv2.imencode('.jpg', frame)\n            yield (b'--frame\\r\\n'\n                   b'Content-Type: image/jpeg\\r\\n\\r\\n' + jpeg.tobytes() + b'\\r\\n')\n    return Response(generate(), mimetype='multipart/x-mixed-replace; boundary=frame')\n</code></pre>\n<p>Vue</p>\n<pre><code class=\"language-vue\">&lt;!-- 摄像头画面展示区域 --&gt;\n        &lt;img\n          style=&quot;width: 100%&quot;\n          src=&quot;api/video_feed&quot;\n        /&gt;\n</code></pre>\n<h2 id=\"总结\">总结</h2>\n<p>这个方法能够以最低的成本解决问题，但是每次都传整张图片，对网络质量的，所以它只适用于网络质量较高的局域网。</p>\n<p>视频本身就是由一帧一帧的图像组成的，但是我们传送数据时不可能原封不动地传送每一帧，因为它太大了。我们需要对视频进行压缩，去除帧与帧之间的冗余信息之后再发送到客户端，之后进行解压和渲染。压缩和解压是需要时间的，所以我们观看网络直播时肯定会有一定的延时。4G时代的网速依然是不够的，期待下一代网络技术的更新。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "背景",
+      "id": "背景"
+    },
+    {
+      "level": 2,
+      "text": "代码",
+      "id": "代码"
+    },
+    {
+      "level": 1,
+      "text": "camera = cv2.VideoCapture(0) # 笔记本自带摄像头，支持macbook",
+      "id": "camera-cv2videocapture0-笔记本自带摄像头支持macbook"
+    },
+    {
+      "level": 2,
+      "text": "总结",
+      "id": "总结"
+    }
+  ],
+  "hasMath": false
+}

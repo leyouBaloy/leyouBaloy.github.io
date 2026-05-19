@@ -1,0 +1,56 @@
+{
+  "title": "jupyter-paddle使用docker安装",
+  "date": "2021-08-29T21:19:42.000Z",
+  "updatedAt": "2021-08-29T21:19:42.000Z",
+  "file": "jupyter-paddle使用docker安装.md",
+  "slug": "30e1e85f",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 202,
+  "readingTime": 1,
+  "body": "### 安装\n\n参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html\n\n先安装docker，参考官网\n\n拉取镜像：\n\n`docker pull registry.baidubce.com/paddlepaddle/paddle:2.1.2-jupyter`\n\n运行容器\n\n```python\ndocker run -d -p 8080:80 --rm --env USER_PASSWD=sbl -v /root/jupyter_docker:/home/paddle registry.baidubce.com/paddlepaddle/paddle:2.1.2-jupyter\n\n# -d表示后台运行\n# -p端口，指定宿主机的8080端口映射到容器内80端口\n# --rm运行完删除容器\n# USER_PASSWD=密码\n# -v挂载，对应容器内的jupyter目录\n```\n\n这里有个坑，访问ip地址:8080进入notebook的时候，还有一个账号，默认是paddle\n\n### 容器内安装dlib\n\n更新apt:\n\n在安装 g++ 等工具时 会提示 Unable to locate package build-essential，这种情况下先执行\n\n```\nsudo apt-get update\n```\n\n更新一下， 更新完。继续\n\n```\nsudo apt-get install build-essential\n```\n\n使用apt安装依赖：\n\n`` `sudo apt-get install build-essential cmake` ``\n\n`` `sudo apt-get install libgtk-3-dev` ``\n\n`` `sudo apt-get install libboost-all-dev` ``\n\npip安装 dlib\n\n`pip install dlib`\n\n> 作者：花花儿 链接：[https://www.zhihu.com/question/34524316/answer/182278536](https://www.zhihu.com/question/34524316/answer/182278536) 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。",
+  "html": "<h3 id=\"安装\">安装</h3>\n<p>参考地址：<a href=\"http://paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html\">paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux-docker.html</a></p>\n<p>先安装docker，参考官网</p>\n<p>拉取镜像：</p>\n<p><code>docker pull registry.baidubce.com/paddlepaddle/paddle:2.1.2-jupyter</code></p>\n<p>运行容器</p>\n<pre><code class=\"language-python\">docker run -d -p 8080:80 --rm --env USER_PASSWD=sbl -v /root/jupyter_docker:/home/paddle registry.baidubce.com/paddlepaddle/paddle:2.1.2-jupyter\n\n# -d表示后台运行\n# -p端口，指定宿主机的8080端口映射到容器内80端口\n# --rm运行完删除容器\n# USER_PASSWD=密码\n# -v挂载，对应容器内的jupyter目录\n</code></pre>\n<p>这里有个坑，访问ip地址:8080进入notebook的时候，还有一个账号，默认是paddle</p>\n<h3 id=\"容器内安装dlib\">容器内安装dlib</h3>\n<p>更新apt:</p>\n<p>在安装 g++ 等工具时 会提示 Unable to locate package build-essential，这种情况下先执行</p>\n<pre><code class=\"language-text\">sudo apt-get update\n</code></pre>\n<p>更新一下， 更新完。继续</p>\n<pre><code class=\"language-text\">sudo apt-get install build-essential\n</code></pre>\n<p>使用apt安装依赖：</p>\n<p><code>`sudo apt-get install build-essential cmake`</code></p>\n<p><code>`sudo apt-get install libgtk-3-dev`</code></p>\n<p><code>`sudo apt-get install libboost-all-dev`</code></p>\n<p>pip安装 dlib</p>\n<p><code>pip install dlib</code></p>\n<blockquote>\n<p>作者：花花儿 链接：<a href=\"https://www.zhihu.com/question/34524316/answer/182278536\">https://www.zhihu.com/question/34524316/answer/182278536</a> 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>\n</blockquote>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "安装",
+      "id": "安装"
+    },
+    {
+      "level": 1,
+      "text": "-d表示后台运行",
+      "id": "d表示后台运行"
+    },
+    {
+      "level": 1,
+      "text": "-p端口，指定宿主机的8080端口映射到容器内80端口",
+      "id": "p端口指定宿主机的8080端口映射到容器内80端口"
+    },
+    {
+      "level": 1,
+      "text": "--rm运行完删除容器",
+      "id": "rm运行完删除容器"
+    },
+    {
+      "level": 1,
+      "text": "USER_PASSWD=密码",
+      "id": "user_passwd密码"
+    },
+    {
+      "level": 1,
+      "text": "-v挂载，对应容器内的jupyter目录",
+      "id": "v挂载对应容器内的jupyter目录"
+    },
+    {
+      "level": 3,
+      "text": "容器内安装dlib",
+      "id": "容器内安装dlib"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,41 @@
+{
+  "title": "离散数学结课总结+笔记",
+  "date": "2021-05-29T16:23:46.000Z",
+  "updatedAt": "2021-05-29T16:23:46.000Z",
+  "file": "离散数学结课总结+笔记.md",
+  "slug": "fd13c30b",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 280,
+  "readingTime": 1,
+  "body": "### 课程时长\n\n离散数学上了大一上，大一下两个学期（貌似是80个学时。\n\n### 课程目录\n\n总共四个篇章，分别是“集合论”、“数理逻辑”、“抽象代数”、“图论基础”。\n\n### 课程感悟\n\n*   这是一门数学课，但是和数学分析、概率论又完全不同。离散数学研究的真的是离散的数学知识，与微积分完全无关。其中各个章节相关性不大，也有部分章节相关。\n*   这门课程要求不高，难度不大，离散数学中出现的新概念非常多，书中有了大量的定义和定理，因此特别适合画思维导图学习。\n*   考试题型一半是概念考察，另一半是证明考察。\n*   上学期学了前两篇，没体会到这门课的精髓，下学期学后面两篇，感觉后面才是这门课的重点内容。\n\n### 思维导图\n\n上下学期的思维导图我都画了，在QQ群里可以找到，但是我懒得扒拉了。 这里只展示下半学期的两篇。\n<!-- more -->\n*   ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/05/DC3ACAD0-D541-47C7-91B9-63003E771E84-202x300.png)\n    \n     \n*   ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/05/A011CB41-1C5C-4FA9-B134-61185FE1C888-154x300.png)\n    \n     \n*   ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/05/1D7BD394-CC19-41A0-BFF6-C5E5093ADEF6-100x300.png)",
+  "html": "<h3 id=\"课程时长\">课程时长</h3>\n<p>离散数学上了大一上，大一下两个学期（貌似是80个学时。</p>\n<h3 id=\"课程目录\">课程目录</h3>\n<p>总共四个篇章，分别是“集合论”、“数理逻辑”、“抽象代数”、“图论基础”。</p>\n<h3 id=\"课程感悟\">课程感悟</h3>\n<ul>\n<li>这是一门数学课，但是和数学分析、概率论又完全不同。离散数学研究的真的是离散的数学知识，与微积分完全无关。其中各个章节相关性不大，也有部分章节相关。</li>\n<li>这门课程要求不高，难度不大，离散数学中出现的新概念非常多，书中有了大量的定义和定理，因此特别适合画思维导图学习。</li>\n<li>考试题型一半是概念考察，另一半是证明考察。</li>\n<li>上学期学了前两篇，没体会到这门课的精髓，下学期学后面两篇，感觉后面才是这门课的重点内容。</li>\n</ul>\n<h3 id=\"思维导图\">思维导图</h3>\n<p>上下学期的思维导图我都画了，在QQ群里可以找到，但是我懒得扒拉了。 这里只展示下半学期的两篇。</p>\n<!-- more -->\n<ul>\n<li>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/05/DC3ACAD0-D541-47C7-91B9-63003E771E84-202x300.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p></p>\n</li>\n<li>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/05/A011CB41-1C5C-4FA9-B134-61185FE1C888-154x300.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p></p>\n</li>\n<li>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/05/1D7BD394-CC19-41A0-BFF6-C5E5093ADEF6-100x300.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n</li>\n</ul>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "课程时长",
+      "id": "课程时长"
+    },
+    {
+      "level": 3,
+      "text": "课程目录",
+      "id": "课程目录"
+    },
+    {
+      "level": 3,
+      "text": "课程感悟",
+      "id": "课程感悟"
+    },
+    {
+      "level": 3,
+      "text": "思维导图",
+      "id": "思维导图"
+    }
+  ],
+  "hasMath": false
+}

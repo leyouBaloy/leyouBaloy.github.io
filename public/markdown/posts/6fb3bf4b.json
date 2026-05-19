@@ -1,0 +1,76 @@
+{
+  "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
+  "date": "2022-03-26T09:02:51.000Z",
+  "updatedAt": "2022-03-26T09:02:51.000Z",
+  "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
+  "slug": "6fb3bf4b",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 645,
+  "readingTime": 2,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/\n\n上数据结构这门课时研究过这个问题，思路很快就有，难在debug\n\n## 题解\n\n### 递归法\n\n众所周知，只有前序遍历或中序遍历的结果是推演不出原树的。但是前序遍历+中序遍历可以推演出来。因为它们包含的信息特征不同，可以互补。\n\n前序遍历得到的结果形式可以表示为这样：`[ 根节点, [左子树的前序遍历结果], [右子树的前序遍历结果] ]`\n\n中序遍历得到的结果形式可以表示为这样：`[ [左子树的中序遍历结果], 根节点, [右子树的中序遍历结果] ]`\n\n所以说，由前序遍历数组的第一个元素可以确定根节点，然后在中序遍历中找到根节点的位置，这个位置左边是左子树，右边是右子树。递归的这么推演下去，就能把整颗树构造出来啦。\n\n举个例子吧：比如`preorder = [3,9,20,15,7]`, `inorder = [9,3,15,20,7]`。那么首先确定的根节点是`preorder[0]`，即为`3`。然后把`inorder`劈成两半，一半是3左边的`left_inorder=[9]`，另一半是3右边的`right_inorder=[15,20,7]`。再把`preorder`劈成两半，`left_preorder=[9]`和`right_preorder=[20,15,7]`。\n\n分别把`left_preorder`和`left_inorder`作为参数向左构造子树，把`right_preorder`和`right_inorder`作为参数向右构造子树。递归下去。\n\n因为python的数组切片比较好用，所以这题就用了python：\n\n```python\n# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n\n    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:\n\n        def bt(preorder, inorder, node):\n            node.val = preorder[0]\n            left_inorder = inorder[0:inorder.index(preorder[0])]\n            left_preorder = preorder[1:len(left_inorder)+1]\n            right_inorder = inorder[inorder.index(preorder[0])+1:]\n            right_preorder = preorder[len(left_inorder)+1:]\n            if len(left_preorder)==1:\n                node.left = TreeNode(left_preorder[0],None,None)\n            elif len(left_preorder)==0:\n                node.left = None\n            else:\n                node.left = TreeNode()\n                bt(left_preorder,left_inorder,node.left)\n\n            if len(right_preorder)==1:\n                node.right = TreeNode(right_preorder[0],None,None)\n            elif len(right_preorder)==0:\n                node.right = None\n            else:\n                node.right = TreeNode()\n                bt(right_preorder,right_inorder,node.right)\n            \n\n        root = TreeNode()\n        bt(preorder,inorder,root)\n        return root\n```\n\n\n\n细节\n\n* 先确定`left_inorder`，因为`left_inorder`和`left_preorder`的长度应该相同，所以由它的`长度`可以确定`left_preorder`。`right_inorder`和`right_preorder`同理。\n* 如果order数组为的长度为1，说明下一个节点是叶节点，后面就不用继续构造下去了。\n* 如果order数组为的长度为0，即为`[]`，说明当前节点是叶节点，直接令下一个节点为None。\n\n### 改进\n\n```python\nleft_inorder = inorder[0:inorder.index(preorder[0])]\nright_inorder = inorder[inorder.index(preorder[0])+1:]\n```\n\n这两段代码在`preorder`中搜索根节点要花费很多时间，我们在一开始就创建一个哈希表储存每个数的索引，这样搜索时间就是O(1)了。\n\n另外官方题解并没有把数组切片，而是传了指针的位置。\n\n官方题解做法python：\n\n```python\nclass Solution:\n    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:\n        def myBuildTree(preorder_left: int, preorder_right: int, inorder_left: int, inorder_right: int):\n            if preorder_left > preorder_right:\n                return None\n            \n            # 前序遍历中的第一个节点就是根节点\n            preorder_root = preorder_left\n            # 在中序遍历中定位根节点\n            inorder_root = index[preorder[preorder_root]]\n            \n            # 先把根节点建立出来\n            root = TreeNode(preorder[preorder_root])\n            # 得到左子树中的节点数目\n            size_left_subtree = inorder_root - inorder_left\n            # 递归地构造左子树，并连接到根节点\n            # 先序遍历中「从 左边界+1 开始的 size_left_subtree」个元素就对应了中序遍历中「从 左边界 开始到 根节点定位-1」的元素\n            root.left = myBuildTree(preorder_left + 1, preorder_left + size_left_subtree, inorder_left, inorder_root - 1)\n            # 递归地构造右子树，并连接到根节点\n            # 先序遍历中「从 左边界+1+左子树节点数目 开始到 右边界」的元素就对应了中序遍历中「从 根节点定位+1 到 右边界」的元素\n            root.right = myBuildTree(preorder_left + size_left_subtree + 1, preorder_right, inorder_root + 1, inorder_right)\n            return root\n        \n        n = len(preorder)\n        # 构造哈希映射，帮助我们快速定位根节点\n        index = {element: i for i, element in enumerate(inorder)}\n        return myBuildTree(0, n - 1, 0, n - 1)\n\n作者：LeetCode-Solution\n链接：https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-9/\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n```\n\n官方题解的c++代码，学习一下：\n\n```c++\nclass Solution {\nprivate:\n    unordered_map<int, int> index;\n\npublic:\n    TreeNode* myBuildTree(const vector<int>& preorder, const vector<int>& inorder, int preorder_left, int preorder_right, int inorder_left, int inorder_right) {\n        if (preorder_left > preorder_right) {\n            return nullptr;\n        }\n        \n        // 前序遍历中的第一个节点就是根节点\n        int preorder_root = preorder_left;\n        // 在中序遍历中定位根节点\n        int inorder_root = index[preorder[preorder_root]];\n        \n        // 先把根节点建立出来\n        TreeNode* root = new TreeNode(preorder[preorder_root]);\n        // 得到左子树中的节点数目\n        int size_left_subtree = inorder_root - inorder_left;\n        // 递归地构造左子树，并连接到根节点\n        // 先序遍历中「从 左边界+1 开始的 size_left_subtree」个元素就对应了中序遍历中「从 左边界 开始到 根节点定位-1」的元素\n        root->left = myBuildTree(preorder, inorder, preorder_left + 1, preorder_left + size_left_subtree, inorder_left, inorder_root - 1);\n        // 递归地构造右子树，并连接到根节点\n        // 先序遍历中「从 左边界+1+左子树节点数目 开始到 右边界」的元素就对应了中序遍历中「从 根节点定位+1 到 右边界」的元素\n        root->right = myBuildTree(preorder, inorder, preorder_left + size_left_subtree + 1, preorder_right, inorder_root + 1, inorder_right);\n        return root;\n    }\n\n    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {\n        int n = preorder.size();\n        // 构造哈希映射，帮助我们快速定位根节点\n        for (int i = 0; i < n; ++i) {\n            index[inorder[i]] = i;\n        }\n        return myBuildTree(preorder, inorder, 0, n - 1, 0, n - 1);\n    }\n};\n\n作者：LeetCode-Solution\n链接：https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-9/\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n```\n\n### 感想\n\n解决树的问题，代码复杂度明显要高一点。以后我会更多使用较为熟悉方便的python而不是c++。\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/\">https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/</a></p>\n<p>上数据结构这门课时研究过这个问题，思路很快就有，难在debug</p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"递归法\">递归法</h3>\n<p>众所周知，只有前序遍历或中序遍历的结果是推演不出原树的。但是前序遍历+中序遍历可以推演出来。因为它们包含的信息特征不同，可以互补。</p>\n<p>前序遍历得到的结果形式可以表示为这样：<code>[ 根节点, [左子树的前序遍历结果], [右子树的前序遍历结果] ]</code></p>\n<p>中序遍历得到的结果形式可以表示为这样：<code>[ [左子树的中序遍历结果], 根节点, [右子树的中序遍历结果] ]</code></p>\n<p>所以说，由前序遍历数组的第一个元素可以确定根节点，然后在中序遍历中找到根节点的位置，这个位置左边是左子树，右边是右子树。递归的这么推演下去，就能把整颗树构造出来啦。</p>\n<p>举个例子吧：比如<code>preorder = [3,9,20,15,7]</code>, <code>inorder = [9,3,15,20,7]</code>。那么首先确定的根节点是<code>preorder[0]</code>，即为<code>3</code>。然后把<code>inorder</code>劈成两半，一半是3左边的<code>left_inorder=[9]</code>，另一半是3右边的<code>right_inorder=[15,20,7]</code>。再把<code>preorder</code>劈成两半，<code>left_preorder=[9]</code>和<code>right_preorder=[20,15,7]</code>。</p>\n<p>分别把<code>left_preorder</code>和<code>left_inorder</code>作为参数向左构造子树，把<code>right_preorder</code>和<code>right_inorder</code>作为参数向右构造子树。递归下去。</p>\n<p>因为python的数组切片比较好用，所以这题就用了python：</p>\n<pre><code class=\"language-python\"># Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n\n    def buildTree(self, preorder: List[int], inorder: List[int]) -&gt; TreeNode:\n\n        def bt(preorder, inorder, node):\n            node.val = preorder[0]\n            left_inorder = inorder[0:inorder.index(preorder[0])]\n            left_preorder = preorder[1:len(left_inorder)+1]\n            right_inorder = inorder[inorder.index(preorder[0])+1:]\n            right_preorder = preorder[len(left_inorder)+1:]\n            if len(left_preorder)==1:\n                node.left = TreeNode(left_preorder[0],None,None)\n            elif len(left_preorder)==0:\n                node.left = None\n            else:\n                node.left = TreeNode()\n                bt(left_preorder,left_inorder,node.left)\n\n            if len(right_preorder)==1:\n                node.right = TreeNode(right_preorder[0],None,None)\n            elif len(right_preorder)==0:\n                node.right = None\n            else:\n                node.right = TreeNode()\n                bt(right_preorder,right_inorder,node.right)\n            \n\n        root = TreeNode()\n        bt(preorder,inorder,root)\n        return root\n</code></pre>\n<p>细节</p>\n<ul>\n<li>先确定<code>left_inorder</code>，因为<code>left_inorder</code>和<code>left_preorder</code>的长度应该相同，所以由它的<code>长度</code>可以确定<code>left_preorder</code>。<code>right_inorder</code>和<code>right_preorder</code>同理。</li>\n<li>如果order数组为的长度为1，说明下一个节点是叶节点，后面就不用继续构造下去了。</li>\n<li>如果order数组为的长度为0，即为<code>[]</code>，说明当前节点是叶节点，直接令下一个节点为None。</li>\n</ul>\n<h3 id=\"改进\">改进</h3>\n<pre><code class=\"language-python\">left_inorder = inorder[0:inorder.index(preorder[0])]\nright_inorder = inorder[inorder.index(preorder[0])+1:]\n</code></pre>\n<p>这两段代码在<code>preorder</code>中搜索根节点要花费很多时间，我们在一开始就创建一个哈希表储存每个数的索引，这样搜索时间就是O(1)了。</p>\n<p>另外官方题解并没有把数组切片，而是传了指针的位置。</p>\n<p>官方题解做法python：</p>\n<pre><code class=\"language-python\">class Solution:\n    def buildTree(self, preorder: List[int], inorder: List[int]) -&gt; TreeNode:\n        def myBuildTree(preorder_left: int, preorder_right: int, inorder_left: int, inorder_right: int):\n            if preorder_left &gt; preorder_right:\n                return None\n            \n            # 前序遍历中的第一个节点就是根节点\n            preorder_root = preorder_left\n            # 在中序遍历中定位根节点\n            inorder_root = index[preorder[preorder_root]]\n            \n            # 先把根节点建立出来\n            root = TreeNode(preorder[preorder_root])\n            # 得到左子树中的节点数目\n            size_left_subtree = inorder_root - inorder_left\n            # 递归地构造左子树，并连接到根节点\n            # 先序遍历中「从 左边界+1 开始的 size_left_subtree」个元素就对应了中序遍历中「从 左边界 开始到 根节点定位-1」的元素\n            root.left = myBuildTree(preorder_left + 1, preorder_left + size_left_subtree, inorder_left, inorder_root - 1)\n            # 递归地构造右子树，并连接到根节点\n            # 先序遍历中「从 左边界+1+左子树节点数目 开始到 右边界」的元素就对应了中序遍历中「从 根节点定位+1 到 右边界」的元素\n            root.right = myBuildTree(preorder_left + size_left_subtree + 1, preorder_right, inorder_root + 1, inorder_right)\n            return root\n        \n        n = len(preorder)\n        # 构造哈希映射，帮助我们快速定位根节点\n        index = {element: i for i, element in enumerate(inorder)}\n        return myBuildTree(0, n - 1, 0, n - 1)\n\n作者：LeetCode-Solution\n链接：https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-9/\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n</code></pre>\n<p>官方题解的c++代码，学习一下：</p>\n<pre><code class=\"language-c++\">class Solution {\nprivate:\n    unordered_map&lt;int, int&gt; index;\n\npublic:\n    TreeNode* myBuildTree(const vector&lt;int&gt;&amp; preorder, const vector&lt;int&gt;&amp; inorder, int preorder_left, int preorder_right, int inorder_left, int inorder_right) {\n        if (preorder_left &gt; preorder_right) {\n            return nullptr;\n        }\n        \n        // 前序遍历中的第一个节点就是根节点\n        int preorder_root = preorder_left;\n        // 在中序遍历中定位根节点\n        int inorder_root = index[preorder[preorder_root]];\n        \n        // 先把根节点建立出来\n        TreeNode* root = new TreeNode(preorder[preorder_root]);\n        // 得到左子树中的节点数目\n        int size_left_subtree = inorder_root - inorder_left;\n        // 递归地构造左子树，并连接到根节点\n        // 先序遍历中「从 左边界+1 开始的 size_left_subtree」个元素就对应了中序遍历中「从 左边界 开始到 根节点定位-1」的元素\n        root-&gt;left = myBuildTree(preorder, inorder, preorder_left + 1, preorder_left + size_left_subtree, inorder_left, inorder_root - 1);\n        // 递归地构造右子树，并连接到根节点\n        // 先序遍历中「从 左边界+1+左子树节点数目 开始到 右边界」的元素就对应了中序遍历中「从 根节点定位+1 到 右边界」的元素\n        root-&gt;right = myBuildTree(preorder, inorder, preorder_left + size_left_subtree + 1, preorder_right, inorder_root + 1, inorder_right);\n        return root;\n    }\n\n    TreeNode* buildTree(vector&lt;int&gt;&amp; preorder, vector&lt;int&gt;&amp; inorder) {\n        int n = preorder.size();\n        // 构造哈希映射，帮助我们快速定位根节点\n        for (int i = 0; i &lt; n; ++i) {\n            index[inorder[i]] = i;\n        }\n        return myBuildTree(preorder, inorder, 0, n - 1, 0, n - 1);\n    }\n};\n\n作者：LeetCode-Solution\n链接：https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-9/\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n</code></pre>\n<h3 id=\"感想\">感想</h3>\n<p>解决树的问题，代码复杂度明显要高一点。以后我会更多使用较为熟悉方便的python而不是c++。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "递归法",
+      "id": "递归法"
+    },
+    {
+      "level": 1,
+      "text": "Definition for a binary tree node.",
+      "id": "definition-for-a-binary-tree-node"
+    },
+    {
+      "level": 1,
+      "text": "class TreeNode:",
+      "id": "class-treenode"
+    },
+    {
+      "level": 1,
+      "text": "def __init__(self, val=0, left=None, right=None):",
+      "id": "def-__init__self-val0-leftnone-rightnone"
+    },
+    {
+      "level": 1,
+      "text": "self.val = val",
+      "id": "selfval-val"
+    },
+    {
+      "level": 1,
+      "text": "self.left = left",
+      "id": "selfleft-left"
+    },
+    {
+      "level": 1,
+      "text": "self.right = right",
+      "id": "selfright-right"
+    },
+    {
+      "level": 3,
+      "text": "改进",
+      "id": "改进"
+    },
+    {
+      "level": 3,
+      "text": "感想",
+      "id": "感想"
+    }
+  ],
+  "hasMath": false
+}

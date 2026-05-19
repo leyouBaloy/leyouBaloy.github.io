@@ -1,0 +1,41 @@
+{
+  "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
+  "date": "2021-11-21T09:04:54.000Z",
+  "updatedAt": "2021-11-21T09:04:54.000Z",
+  "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
+  "slug": "400b9839",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 292,
+  "readingTime": 1,
+  "body": "### 问题描述\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-3-1024x215.png)\n\n如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。\n\n### 解决方案\n\n看它给的提示，Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.\n\n> [2020年7月](https://github.blog/2020-07-30-token-authentication-requirements-for-api-and-git-operations/)，我们宣布打算要求对所有经过身份验证的Git操作使用基于令牌的身份验证（例如，个人访问、OAuth或GitHub应用程序安装令牌）。从2021年8月13日开始，在GitHub.com上验证Git操作时，我们将不再接受帐户密码。\n\n也就是说输入的Password不是登录密码，而是这个Access Token！另外，Username也不是用户名，而是登录邮箱。\n\n获取个人Access Token的方法：https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token\n\n记得一定要把repo的权限勾选上\n\n![选择令牌范围](https://docs.github.com/assets/images/help/settings/token_scopes.gif)\n\n## 在命令行上使用令牌\n\n一旦您拥有了令牌，在通过HTTPS执行Git操作时，您可以输入令牌而不是密码。\n\n例如，在命令行中，您将输入以下内容：\n\n```\n$ git clone https://github.com/username/repo.git\nUsername: your_username\nPassword: your_token\n```\n\n### 后续\n\n怎么把Access Token添加到环境变量里呢？",
+  "html": "<h3 id=\"问题描述\">问题描述</h3>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-3-1024x215.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。</p>\n<h3 id=\"解决方案\">解决方案</h3>\n<p>看它给的提示，Please see <a href=\"https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/\">https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/</a> for more information.</p>\n<blockquote>\n<p><a href=\"https://github.blog/2020-07-30-token-authentication-requirements-for-api-and-git-operations/\">2020年7月</a>，我们宣布打算要求对所有经过身份验证的Git操作使用基于令牌的身份验证（例如，个人访问、OAuth或GitHub应用程序安装令牌）。从2021年8月13日开始，在GitHub.com上验证Git操作时，我们将不再接受帐户密码。</p>\n</blockquote>\n<p>也就是说输入的Password不是登录密码，而是这个Access Token！另外，Username也不是用户名，而是登录邮箱。</p>\n<p>获取个人Access Token的方法：<a href=\"https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token\">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></p>\n<p>记得一定要把repo的权限勾选上</p>\n<p><img src=\"https://docs.github.com/assets/images/help/settings/token_scopes.gif\" alt=\"选择令牌范围\" loading=\"lazy\" decoding=\"async\"></p>\n<h2 id=\"在命令行上使用令牌\">在命令行上使用令牌</h2>\n<p>一旦您拥有了令牌，在通过HTTPS执行Git操作时，您可以输入令牌而不是密码。</p>\n<p>例如，在命令行中，您将输入以下内容：</p>\n<pre><code class=\"language-text\">$ git clone https://github.com/username/repo.git\nUsername: your_username\nPassword: your_token\n</code></pre>\n<h3 id=\"后续\">后续</h3>\n<p>怎么把Access Token添加到环境变量里呢？</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "问题描述",
+      "id": "问题描述"
+    },
+    {
+      "level": 3,
+      "text": "解决方案",
+      "id": "解决方案"
+    },
+    {
+      "level": 2,
+      "text": "在命令行上使用令牌",
+      "id": "在命令行上使用令牌"
+    },
+    {
+      "level": 3,
+      "text": "后续",
+      "id": "后续"
+    }
+  ],
+  "hasMath": false
+}

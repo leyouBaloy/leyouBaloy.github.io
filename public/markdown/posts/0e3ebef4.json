@@ -1,0 +1,66 @@
+{
+  "title": "如何将语雀文档导出为html（使用语雀API）",
+  "date": "2023-03-09T08:12:56.000Z",
+  "updatedAt": "2023-03-09T08:12:56.000Z",
+  "file": "如何将语雀文档导出为html（使用语雀API）.md",
+  "slug": "0e3ebef4",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 447,
+  "readingTime": 2,
+  "body": "## 需求\n\n语雀本身是用web端访问的，按理来说，导出为html文件应该是最接近原生文档的观感的，但是却不支持，反倒是可以导出为pdf、markdown、word等格式。\n\n可以用爬虫把文档给爬下来，但是我很不喜欢用爬虫，因为大型网站总是会使用各种反爬技术，这些阻拦会使我爬出的结果不够优雅。\n\n如果优雅的解决这个问题呢，思路是利用语雀的API，很轻松就能获取一个文档的各种信息（作者、页面的markdown内容，html内容等）。很多个人博客可以跟语雀相关联，也是通过API实现的。这是一个可玩性很高的功能。\n\n## 解决方法\n\n1. 在语雀的`账户设置`->`Token`里新建一个token\n2. 问ChatGPT，如何使用语雀API拿到一个页面的内容（它真的能给你一个可运行的代码！）\n3. 这里记录一下我修改后，适用于我自己的需求的代码：\n\n```python\nimport requests\nimport os\n\n# 设置API访问令牌\ntoken = 'YOUR_ACCESS_TOKEN'\n\n# 设置API请求URL\nurl = 'https://www.yuque.com/api/v2/repos/upcxailixin/ua125n/docs/'\nchapters = ['rqwsfpzkh97ivvxm','hl788mwbbw2d82is','hcxgg7','afrstd','iz3dks','khnvy8','bhbw2z','qvzagc','dky80n','zzw6o7','qrg1f2eds2h8talq']\n\n\n# 设置API请求头\nheaders = {\n    'User-Agent': 'Mozilla/5.0',\n    'X-Auth-Token': token\n}\n\nfor i in range(len(chapters)):\n    # 发送API请求\n    response = requests.get(os.path.join(url,chapters[i]), headers=headers)\n\n    # 解析API响应\n    if response.status_code == 200:\n        doc = response.json()\n        # print(doc['data']['body_html'])\n        print('标题:', doc['data']['title'])\n        # print('内容:', doc['body'])\n    else:\n        print('请求失败:', response.status_code)\n\n        \n    # 写入\n    with open(f\"/Users/sunbaile/临时/语雀2html/{doc['data']['title'].replace('/','')}.html\",'w') as f:\n        f.write(doc['data']['body_html'])\n\n    # import json\n    # with open('./raw.json','w',encoding='utf8') as f:\n    #     f.write(json.dumps(doc,ensure_ascii=False))\n```\n\n4. 这时候html文档已经搞出来了，但是文档中的图片、以及svg公式都指向语雀的cdn，这是不能直接放在服务器上的，因为会有跨域的问题。所以我们得再写个脚本把文档中的img都下载到本地的images目录下（这一步的代码仍然是通过问ChatGPT获得的），下面记录适用于我自己的需求的修改后的代码：\n\n```python\nimport os\nimport requests\nfrom bs4 import BeautifulSoup\nfrom urllib.parse import urljoin\nimport time\n\nbasepath = '/Users/sunbaile/临时/语雀2html/下载图片'\n# # 创建存储图片的文件夹\n# if not os.path.exists('/Users/sunbaile/临时/语雀2html/下载图片/images'):\n#     os.makedirs('/Users/sunbaile/临时/语雀2html/下载图片/images')\nfor filename in os.listdir(basepath):\n    if filename.endswith('.php'):\n\n        # 读取HTML文件\n        with open(os.path.join(basepath,filename), 'r') as f:\n            html = f.read()\n\n        # 解析HTML文件\n        soup = BeautifulSoup(html, 'html.parser')\n\n        # 获取所有图片链接\n        img_tags = soup.find_all('img')\n        img_urls = [img['src'] for img in img_tags]\n        print(filename)\n        print(img_urls)\n\n        # 下载图片\n        for url in img_urls:\n            # img_url = urljoin('http://example.com', url)  # 根据相对链接生成绝对链接\n            img_url = url\n            response = requests.get(img_url)\n            filename = os.path.join(os.path.join(basepath,'images'), os.path.basename(url))  # 使用图片链接的文件名作为下载的文件名\n            with open(filename, 'wb') as f:\n                f.write(response.content)\n        time.sleep(1)\n\n```\n\n5. 最后，要将html文档中img标签的src内容修改一下，把绝对路径改成相对路径\n\n```python\nfrom bs4 import BeautifulSoup\nimport os\n\nbasepath = '/Users/sunbaile/临时/语雀2html/下载图片'\nfor fname in os.listdir(basepath):\n    if fname.endswith('.php'):\n        # 读取HTML文件\n        with open(os.path.join(basepath,fname), 'r') as f:\n            html = f.read()\n\n        # 解析HTML文件\n        soup = BeautifulSoup(html, 'html.parser')\n\n        # 获取所有图片标签\n        img_tags = soup.find_all('img')\n\n        # 替换所有图片链接\n        for img_tag in img_tags:\n            img_url = img_tag['src']\n            if img_url.startswith('http'):  # 判断是否为绝对链接\n                filename = os.path.basename(img_url)  # 获取文件名\n                img_tag['src'] = 'book/images/{}'.format(filename)\n\n        # 将修改后的HTML文档写回原始文件\n        with open(os.path.join(basepath,fname), 'w') as f:\n            f.write(soup.prettify())\n\n```\n\n## 总结\n\nChatGPT真好用～以后就不用自己思考代码框架了，直接面向ChatGPT编程。\n\n",
+  "html": "<h2 id=\"需求\">需求</h2>\n<p>语雀本身是用web端访问的，按理来说，导出为html文件应该是最接近原生文档的观感的，但是却不支持，反倒是可以导出为pdf、markdown、word等格式。</p>\n<p>可以用爬虫把文档给爬下来，但是我很不喜欢用爬虫，因为大型网站总是会使用各种反爬技术，这些阻拦会使我爬出的结果不够优雅。</p>\n<p>如果优雅的解决这个问题呢，思路是利用语雀的API，很轻松就能获取一个文档的各种信息（作者、页面的markdown内容，html内容等）。很多个人博客可以跟语雀相关联，也是通过API实现的。这是一个可玩性很高的功能。</p>\n<h2 id=\"解决方法\">解决方法</h2>\n<ol>\n<li>在语雀的<code>账户设置</code>-&gt;<code>Token</code>里新建一个token</li>\n<li>问ChatGPT，如何使用语雀API拿到一个页面的内容（它真的能给你一个可运行的代码！）</li>\n<li>这里记录一下我修改后，适用于我自己的需求的代码：</li>\n</ol>\n<pre><code class=\"language-python\">import requests\nimport os\n\n# 设置API访问令牌\ntoken = 'YOUR_ACCESS_TOKEN'\n\n# 设置API请求URL\nurl = 'https://www.yuque.com/api/v2/repos/upcxailixin/ua125n/docs/'\nchapters = ['rqwsfpzkh97ivvxm','hl788mwbbw2d82is','hcxgg7','afrstd','iz3dks','khnvy8','bhbw2z','qvzagc','dky80n','zzw6o7','qrg1f2eds2h8talq']\n\n\n# 设置API请求头\nheaders = {\n    'User-Agent': 'Mozilla/5.0',\n    'X-Auth-Token': token\n}\n\nfor i in range(len(chapters)):\n    # 发送API请求\n    response = requests.get(os.path.join(url,chapters[i]), headers=headers)\n\n    # 解析API响应\n    if response.status_code == 200:\n        doc = response.json()\n        # print(doc['data']['body_html'])\n        print('标题:', doc['data']['title'])\n        # print('内容:', doc['body'])\n    else:\n        print('请求失败:', response.status_code)\n\n        \n    # 写入\n    with open(f&quot;/Users/sunbaile/临时/语雀2html/{doc['data']['title'].replace('/','')}.html&quot;,'w') as f:\n        f.write(doc['data']['body_html'])\n\n    # import json\n    # with open('./raw.json','w',encoding='utf8') as f:\n    #     f.write(json.dumps(doc,ensure_ascii=False))\n</code></pre>\n<ol start=\"4\">\n<li>这时候html文档已经搞出来了，但是文档中的图片、以及svg公式都指向语雀的cdn，这是不能直接放在服务器上的，因为会有跨域的问题。所以我们得再写个脚本把文档中的img都下载到本地的images目录下（这一步的代码仍然是通过问ChatGPT获得的），下面记录适用于我自己的需求的修改后的代码：</li>\n</ol>\n<pre><code class=\"language-python\">import os\nimport requests\nfrom bs4 import BeautifulSoup\nfrom urllib.parse import urljoin\nimport time\n\nbasepath = '/Users/sunbaile/临时/语雀2html/下载图片'\n# # 创建存储图片的文件夹\n# if not os.path.exists('/Users/sunbaile/临时/语雀2html/下载图片/images'):\n#     os.makedirs('/Users/sunbaile/临时/语雀2html/下载图片/images')\nfor filename in os.listdir(basepath):\n    if filename.endswith('.php'):\n\n        # 读取HTML文件\n        with open(os.path.join(basepath,filename), 'r') as f:\n            html = f.read()\n\n        # 解析HTML文件\n        soup = BeautifulSoup(html, 'html.parser')\n\n        # 获取所有图片链接\n        img_tags = soup.find_all('img')\n        img_urls = [img['src'] for img in img_tags]\n        print(filename)\n        print(img_urls)\n\n        # 下载图片\n        for url in img_urls:\n            # img_url = urljoin('http://example.com', url)  # 根据相对链接生成绝对链接\n            img_url = url\n            response = requests.get(img_url)\n            filename = os.path.join(os.path.join(basepath,'images'), os.path.basename(url))  # 使用图片链接的文件名作为下载的文件名\n            with open(filename, 'wb') as f:\n                f.write(response.content)\n        time.sleep(1)\n\n</code></pre>\n<ol start=\"5\">\n<li>最后，要将html文档中img标签的src内容修改一下，把绝对路径改成相对路径</li>\n</ol>\n<pre><code class=\"language-python\">from bs4 import BeautifulSoup\nimport os\n\nbasepath = '/Users/sunbaile/临时/语雀2html/下载图片'\nfor fname in os.listdir(basepath):\n    if fname.endswith('.php'):\n        # 读取HTML文件\n        with open(os.path.join(basepath,fname), 'r') as f:\n            html = f.read()\n\n        # 解析HTML文件\n        soup = BeautifulSoup(html, 'html.parser')\n\n        # 获取所有图片标签\n        img_tags = soup.find_all('img')\n\n        # 替换所有图片链接\n        for img_tag in img_tags:\n            img_url = img_tag['src']\n            if img_url.startswith('http'):  # 判断是否为绝对链接\n                filename = os.path.basename(img_url)  # 获取文件名\n                img_tag['src'] = 'book/images/{}'.format(filename)\n\n        # 将修改后的HTML文档写回原始文件\n        with open(os.path.join(basepath,fname), 'w') as f:\n            f.write(soup.prettify())\n\n</code></pre>\n<h2 id=\"总结\">总结</h2>\n<p>ChatGPT真好用～以后就不用自己思考代码框架了，直接面向ChatGPT编程。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "需求",
+      "id": "需求"
+    },
+    {
+      "level": 2,
+      "text": "解决方法",
+      "id": "解决方法"
+    },
+    {
+      "level": 1,
+      "text": "设置API访问令牌",
+      "id": "设置api访问令牌"
+    },
+    {
+      "level": 1,
+      "text": "设置API请求URL",
+      "id": "设置api请求url"
+    },
+    {
+      "level": 1,
+      "text": "设置API请求头",
+      "id": "设置api请求头"
+    },
+    {
+      "level": 1,
+      "text": "# 创建存储图片的文件夹",
+      "id": "创建存储图片的文件夹"
+    },
+    {
+      "level": 1,
+      "text": "if not os.path.exists('/Users/sunbaile/临时/语雀2html/下载图片/images'):",
+      "id": "if-not-ospathexistsuserssunbaile临时语雀2html下载图片images"
+    },
+    {
+      "level": 1,
+      "text": "os.makedirs('/Users/sunbaile/临时/语雀2html/下载图片/images')",
+      "id": "osmakedirsuserssunbaile临时语雀2html下载图片images"
+    },
+    {
+      "level": 2,
+      "text": "总结",
+      "id": "总结"
+    }
+  ],
+  "hasMath": false
+}

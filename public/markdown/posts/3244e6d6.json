@@ -1,0 +1,26 @@
+{
+  "title": "给string对象插入字符",
+  "date": "2020-12-28T16:52:10.000Z",
+  "updatedAt": "2020-12-28T16:52:10.000Z",
+  "file": "给string对象插入字符.md",
+  "slug": "3244e6d6",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 48,
+  "readingTime": 1,
+  "body": "```\n#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    string s;\n    s = \"123456\";\n    string::iterator it;\n    it=s.begin();\n    s.insert(it+1,'p');     //把p插到第1个字符前，从0开始计数\n    cout << s << endl;\n\n    return 0;\n}\n```\n\n运行结果\n\n1p23456\n\nProcess returned 0 (0x0) execution time : 0.011 s  \nPress any key to continue.\n\n## 看了课本后面的内容，发现新大陆了。string其实也是容器，而且功能很强大。",
+  "html": "<pre><code class=\"language-text\">#include &lt;bits/stdc++.h&gt;\nusing namespace std;\n\nint main()\n{\n    string s;\n    s = &quot;123456&quot;;\n    string::iterator it;\n    it=s.begin();\n    s.insert(it+1,'p');     //把p插到第1个字符前，从0开始计数\n    cout &lt;&lt; s &lt;&lt; endl;\n\n    return 0;\n}\n</code></pre>\n<p>运行结果</p>\n<p>1p23456</p>\n<p>Process returned 0 (0x0) execution time : 0.011 s<br>\nPress any key to continue.</p>\n<h2 id=\"看了课本后面的内容发现新大陆了string其实也是容器而且功能很强大\">看了课本后面的内容，发现新大陆了。string其实也是容器，而且功能很强大。</h2>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "看了课本后面的内容，发现新大陆了。string其实也是容器，而且功能很强大。",
+      "id": "看了课本后面的内容发现新大陆了string其实也是容器而且功能很强大"
+    }
+  ],
+  "hasMath": false
+}

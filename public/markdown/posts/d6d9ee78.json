@@ -1,0 +1,20 @@
+{
+  "title": "结构体排序-sort()-typedef",
+  "date": "2020-11-21T09:18:25.000Z",
+  "updatedAt": "2020-11-21T09:18:25.000Z",
+  "file": "结构体排序-sort()-typedef.md",
+  "slug": "d6d9ee78",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 340,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n中超联赛拥有大量的现场观众和收视观众，球迷都渴望观看比赛，同时希望能有一个平台更深度的了解中超联赛，体验中超球队的辛苦和努力。每场足球比赛历时90分钟，分为上半场和下半场。\n\n中超的积分规则如下：赢得一场比赛得3分，平一场得1分，输球不得分。例如一个球队的胜平负的场次分别为11,2和 2，那么积分就是11\\*3+2\\*1=35。9102年的中超联赛已经落下帷幕，请你帮忙计算出各球队的总积分并按照积分给出球队最终的排名吧！\n\n【输入】\n\n有多行。第1行是球队数量n（1<n≤16）。\n\n接下来有n行，每行数据包含球队的名称（不含空格，长度不超过30个字符）和胜、平、负的场次，数据间以空格分开。\n\n【输出】\n\n各个球队按照积分的排名情况（保证所有球队的积分各不相同），每行输出球队的名次、名称和该队的积分，数据间用一个空格分开，每行末尾没有空格。\n\nFor example:\n\nInput\n\nResult\n\n3  \nshanghaishanggang 11 2 2  \nbeijingguoan 12 2 1  \nshandonglunengtaishan 10 1 4\n\n1 beijingguoan 38  \n2 shanghaishanggang 35  \n3 shandonglunengtaishan 31\n\nAnswer:(penalty regime: 20 %)\n\n```\n#include <iostream>\n#include <algorithm>\n\nusing namespace std;\n\ntypedef struct footballteam  //不懂\n{\n    char name[1000];\n    int win;\n    int equals;\n    int fail;\n    int sum;\n}TEAM;\nint cmp(TEAM &a,TEAM &b)    //不懂\n{\n    return a.sum > b.sum;\n}\n\nint main()\n{\n    TEAM a[20];\n    int n,i;\n    cin >> n;\n    for(i=0;i<n;i++)\n    {\n        cin >> a[i].name >> a[i].win >> a[i].equals >> a[i].fail;\n        a[i].sum = a[i].win*3 + a[i].equals;\n    }\n    sort(a,a+n,cmp);\n    for(i=0;i<n;i++)\n    {\n        cout << i+1 <<' '<<a[i].name <<' '<<a[i].sum << endl;\n    }\n    return 0;\n}\n```",
+  "html": "<p>【题目描述】</p>\n<p>中超联赛拥有大量的现场观众和收视观众，球迷都渴望观看比赛，同时希望能有一个平台更深度的了解中超联赛，体验中超球队的辛苦和努力。每场足球比赛历时90分钟，分为上半场和下半场。</p>\n<p>中超的积分规则如下：赢得一场比赛得3分，平一场得1分，输球不得分。例如一个球队的胜平负的场次分别为11,2和 2，那么积分就是11*3+2*1=35。9102年的中超联赛已经落下帷幕，请你帮忙计算出各球队的总积分并按照积分给出球队最终的排名吧！</p>\n<p>【输入】</p>\n<p>有多行。第1行是球队数量n（1&lt;n≤16）。</p>\n<p>接下来有n行，每行数据包含球队的名称（不含空格，长度不超过30个字符）和胜、平、负的场次，数据间以空格分开。</p>\n<p>【输出】</p>\n<p>各个球队按照积分的排名情况（保证所有球队的积分各不相同），每行输出球队的名次、名称和该队的积分，数据间用一个空格分开，每行末尾没有空格。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>3<br>\nshanghaishanggang 11 2 2<br>\nbeijingguoan 12 2 1<br>\nshandonglunengtaishan 10 1 4</p>\n<p>1 beijingguoan 38<br>\n2 shanghaishanggang 35<br>\n3 shandonglunengtaishan 31</p>\n<p>Answer:(penalty regime: 20 %)</p>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;algorithm&gt;\n\nusing namespace std;\n\ntypedef struct footballteam  //不懂\n{\n    char name[1000];\n    int win;\n    int equals;\n    int fail;\n    int sum;\n}TEAM;\nint cmp(TEAM &amp;a,TEAM &amp;b)    //不懂\n{\n    return a.sum &gt; b.sum;\n}\n\nint main()\n{\n    TEAM a[20];\n    int n,i;\n    cin &gt;&gt; n;\n    for(i=0;i&lt;n;i++)\n    {\n        cin &gt;&gt; a[i].name &gt;&gt; a[i].win &gt;&gt; a[i].equals &gt;&gt; a[i].fail;\n        a[i].sum = a[i].win*3 + a[i].equals;\n    }\n    sort(a,a+n,cmp);\n    for(i=0;i&lt;n;i++)\n    {\n        cout &lt;&lt; i+1 &lt;&lt;' '&lt;&lt;a[i].name &lt;&lt;' '&lt;&lt;a[i].sum &lt;&lt; endl;\n    }\n    return 0;\n}\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

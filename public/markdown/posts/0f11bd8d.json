@@ -1,0 +1,36 @@
+{
+  "title": "Leetcode17:电话号码的字母组合——回溯",
+  "date": "2022-04-27T07:36:14.000Z",
+  "updatedAt": "2022-04-27T07:36:14.000Z",
+  "file": "Leetcode17_电话号码的字母组合——回溯.md",
+  "slug": "0f11bd8d",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 160,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/\n\n终于能自己做出一道题了😭，之前的回溯题没白刷\n\n## 题解\n\n### 回溯\n\n思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径。\n\n画个图帮助理解：\n\n{{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220427155047587.png\" >}}\n\n\n\n代码：\n\n```python\nclass Solution:\n    def letterCombinations(self, digits: str) -> List[str]:\n        if digits==\"\":\n            return []\n        tel = {\"2\":\"abc\",\"3\":\"def\",\"4\":\"ghi\",\"5\":\"jkl\",\"6\":\"mno\",\"7\":\"pqrs\",\"8\":\"tuv\",\"9\":\"wxyz\"}\n        size = len(digits)\n        path = []\n        res = []\n        def backtracking(i, path, res):\n            for letter in tel[digits[i]]:\n                path.append(letter)\n                if i==size-1:\n                    res.append(\"\".join(path))\n                    path.pop()\n                else:\n                    backtracking(i+1, path, res)\n                    path.pop()\n        backtracking(0, path, res)\n        return res\n```\n\n时间复杂度：O(3^m * 4^n)，m是电话键盘上有三个字母对应的数的个数，n是电话键盘上有四个字母对应的数的个数。需要遍历一遍所有的组合。\n\n空间复杂度：O(m+n)，主要为记录路径的开销，路径最长也只有`len(digits)`\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/\">https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/</a></p>\n<p>终于能自己做出一道题了😭，之前的回溯题没白刷</p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"回溯\">回溯</h3>\n<p>思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径。</p>\n<p>画个图帮助理解：</p>\n<p>{{&lt; figure src=“<a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220427155047587.png\">https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220427155047587.png</a>” &gt;}}</p>\n<p>代码：</p>\n<pre><code class=\"language-python\">class Solution:\n    def letterCombinations(self, digits: str) -&gt; List[str]:\n        if digits==&quot;&quot;:\n            return []\n        tel = {&quot;2&quot;:&quot;abc&quot;,&quot;3&quot;:&quot;def&quot;,&quot;4&quot;:&quot;ghi&quot;,&quot;5&quot;:&quot;jkl&quot;,&quot;6&quot;:&quot;mno&quot;,&quot;7&quot;:&quot;pqrs&quot;,&quot;8&quot;:&quot;tuv&quot;,&quot;9&quot;:&quot;wxyz&quot;}\n        size = len(digits)\n        path = []\n        res = []\n        def backtracking(i, path, res):\n            for letter in tel[digits[i]]:\n                path.append(letter)\n                if i==size-1:\n                    res.append(&quot;&quot;.join(path))\n                    path.pop()\n                else:\n                    backtracking(i+1, path, res)\n                    path.pop()\n        backtracking(0, path, res)\n        return res\n</code></pre>\n<p>时间复杂度：O(3^m * 4^n)，m是电话键盘上有三个字母对应的数的个数，n是电话键盘上有四个字母对应的数的个数。需要遍历一遍所有的组合。</p>\n<p>空间复杂度：O(m+n)，主要为记录路径的开销，路径最长也只有<code>len(digits)</code></p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "回溯",
+      "id": "回溯"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,20 @@
+{
+  "title": "递归法求最大公约数",
+  "date": "2020-11-17T12:58:03.000Z",
+  "updatedAt": "2020-11-17T12:58:03.000Z",
+  "file": "递归法求最大公约数.md",
+  "slug": "0b1af30e",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 10,
+  "readingTime": 1,
+  "body": "求m和n的最大公约数\n\n```\nint gcd(int m,int n)\n{\n    if(m%n==0)\n    {\n        return n;\n    }\n    else\n    {\n        return gcd(n,m%n);\n    }\n}\n```",
+  "html": "<p>求m和n的最大公约数</p>\n<pre><code class=\"language-text\">int gcd(int m,int n)\n{\n    if(m%n==0)\n    {\n        return n;\n    }\n    else\n    {\n        return gcd(n,m%n);\n    }\n}\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

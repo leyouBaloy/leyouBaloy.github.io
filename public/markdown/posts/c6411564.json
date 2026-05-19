@@ -1,0 +1,31 @@
+{
+  "title": "每日一题--二维数组",
+  "date": "2020-10-06T14:25:18.000Z",
+  "updatedAt": "2020-10-06T14:25:18.000Z",
+  "file": "每日一题--二维数组.md",
+  "slug": "c6411564",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 192,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n输入一个正整数 n，输出 n×n 的回型方阵。例如，n=5 时，输出：\n\n1 1 1 1 1\n\n1 2 2 2 1\n\n1 2 3 2 1\n\n1 2 2 2 1\n\n1 1 1 1 1\n\n【输入格式】\n\n一行，包含一个正整数 n，2≤n≤9。\n\n【输出格式】\n\n共 n 行，每行包含 n 个正整数，之间用一个空格隔开。\n\n## 答案1\n\n先给左上角负值，再通过下标的对称性复制到左下角，右上角，右下角\n\n```\n#include <iostream>\n#include <algorithm>\n\nusing namespace std;\n\nint main()\n{\n    int n,i,j,a[10][10];\n\n    cin >> n;\n\n    for(i=1;i<=(n+1)/2;i++)             //只写入整个数组的四分之一，多出四分之一的部分无所谓\n    {\n      for(j=1;j<=(n+1)/2;j++)               //i控制行数，j控制列数\n      {\n          a[i][j] = min(i,j);               //min函数引用了algorithm库,i和j中较小的那个值恰好是需要写入的值\n          a[i][n+1-j] = a[n+1-i][j] = a[n+1-i][n+1-j] = a[i][j];            //左右对称，上线对称，对角线对称\n      }\n    }\n\n    for(i=1;i<=n;i++)                   //输出部分\n    {\n        for(j=1;j<=n-1;j++)\n        {\n            cout << a[i][j] << \" \";\n        }\n        cout << a[i][n] << endl;        //最后一个输出单独写，因为空格\n    }\n    return 0;\n}\n```\n\n## 答案2\n\n通过“一圈一圈”赋值的方法做，先给a\\[1\\]\\[1\\]到a\\[n\\]\\[n\\]全部赋值1，然后给a\\[2\\]\\[2\\]到a\\[n-1\\]\\[n-1\\]全部赋值2，......共n/2圈（如果n是奇数，则最后一圈就是一个数）\n\n```\n#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n    int n,i,j,k,a[10][10];\n    cin >> n;\n\n    for(k=1;k<=(n+1)/2;k++)         //输入部分，看不懂就另n=5,k=1,k=2,i=1,i=1,j=1,j=2演算一遍\n    {\n        for(i=k;i<=n+1-k;i++)\n        {\n            for(j=k;j<=n+1-k;j++)\n            {\n                a[i][j] = k;\n            }\n        }\n    }\n\n    for(i=1;i<=n;i++)                   //输出部分\n    {\n        for(j=1;j<=n-1;j++)\n        {\n            cout << a[i][j] << \" \";\n        }\n        cout << a[i][n] << endl;\n    }\n    return 0;\n}\n```",
+  "html": "<p>【题目描述】</p>\n<p>输入一个正整数 n，输出 n×n 的回型方阵。例如，n=5 时，输出：</p>\n<p>1 1 1 1 1</p>\n<p>1 2 2 2 1</p>\n<p>1 2 3 2 1</p>\n<p>1 2 2 2 1</p>\n<p>1 1 1 1 1</p>\n<p>【输入格式】</p>\n<p>一行，包含一个正整数 n，2≤n≤9。</p>\n<p>【输出格式】</p>\n<p>共 n 行，每行包含 n 个正整数，之间用一个空格隔开。</p>\n<h2 id=\"答案1\">答案1</h2>\n<p>先给左上角负值，再通过下标的对称性复制到左下角，右上角，右下角</p>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;algorithm&gt;\n\nusing namespace std;\n\nint main()\n{\n    int n,i,j,a[10][10];\n\n    cin &gt;&gt; n;\n\n    for(i=1;i&lt;=(n+1)/2;i++)             //只写入整个数组的四分之一，多出四分之一的部分无所谓\n    {\n      for(j=1;j&lt;=(n+1)/2;j++)               //i控制行数，j控制列数\n      {\n          a[i][j] = min(i,j);               //min函数引用了algorithm库,i和j中较小的那个值恰好是需要写入的值\n          a[i][n+1-j] = a[n+1-i][j] = a[n+1-i][n+1-j] = a[i][j];            //左右对称，上线对称，对角线对称\n      }\n    }\n\n    for(i=1;i&lt;=n;i++)                   //输出部分\n    {\n        for(j=1;j&lt;=n-1;j++)\n        {\n            cout &lt;&lt; a[i][j] &lt;&lt; &quot; &quot;;\n        }\n        cout &lt;&lt; a[i][n] &lt;&lt; endl;        //最后一个输出单独写，因为空格\n    }\n    return 0;\n}\n</code></pre>\n<h2 id=\"答案2\">答案2</h2>\n<p>通过“一圈一圈”赋值的方法做，先给a[1][1]到a[n][n]全部赋值1，然后给a[2][2]到a[n-1][n-1]全部赋值2，…共n/2圈（如果n是奇数，则最后一圈就是一个数）</p>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n\nusing namespace std;\n\nint main()\n{\n    int n,i,j,k,a[10][10];\n    cin &gt;&gt; n;\n\n    for(k=1;k&lt;=(n+1)/2;k++)         //输入部分，看不懂就另n=5,k=1,k=2,i=1,i=1,j=1,j=2演算一遍\n    {\n        for(i=k;i&lt;=n+1-k;i++)\n        {\n            for(j=k;j&lt;=n+1-k;j++)\n            {\n                a[i][j] = k;\n            }\n        }\n    }\n\n    for(i=1;i&lt;=n;i++)                   //输出部分\n    {\n        for(j=1;j&lt;=n-1;j++)\n        {\n            cout &lt;&lt; a[i][j] &lt;&lt; &quot; &quot;;\n        }\n        cout &lt;&lt; a[i][n] &lt;&lt; endl;\n    }\n    return 0;\n}\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "答案1",
+      "id": "答案1"
+    },
+    {
+      "level": 2,
+      "text": "答案2",
+      "id": "答案2"
+    }
+  ],
+  "hasMath": true
+}

@@ -1,0 +1,36 @@
+{
+  "title": "存在重复元素——排序、哈希",
+  "date": "2022-02-26T11:22:16.000Z",
+  "updatedAt": "2022-02-26T11:22:16.000Z",
+  "file": "存在重复元素——排序、哈希.md",
+  "slug": "3dd918a8",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 660,
+  "readingTime": 2,
+  "body": "## 题目\n> 该题来自：https://leetcode-cn.com/problems/contains-duplicate/\n\n#### [217. 存在重复元素]\n\n难度简单635收藏分享切换为英文接收动态反馈\n\n给你一个整数数组 `nums` 。如果任一值在数组中出现 **至少两次** ，返回 `true` ；如果数组中每个元素互不相同，返回 `false` 。\n\n \n\n**示例 1：**\n\n```\n输入：nums = [1,2,3,1]\n输出：true\n```\n\n**示例 2：**\n\n```\n输入：nums = [1,2,3,4]\n输出：false\n```\n\n**示例 3：**\n\n```\n输入：nums = [1,1,1,3,3,4,3,2,4,2]\n输出：true\n```\n\n \n\n**提示：**\n\n- `1 <= nums.length <= 105`\n- `-109 <= nums[i] <= 109`\n\n## 题解\n\n> 作者：LeetCode-Solution\n> 链接：https://leetcode-cn.com/problems/contains-duplicate/solution/cun-zai-zhong-fu-yuan-su-by-leetcode-sol-iedd/\n> 来源：力扣（LeetCode）\n> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n\n法一：最慢的方法，把nums中的每个元素都拿出来，遍历nums数组找一下看有没有跟它相同的元素。时间复杂度O(n^2)\n\n法二：用sort函数排个序，相同的元素会被排到一块儿，遍历一遍nums数组就找到了。思路很简单，但还是不够优雅。时间复杂度O(nlogn)\n\n> **补充一下c++中的sort函数：**\n>\n> sort(first_pointer,first_pointer+n,cmp)\n>\n> 该函数可以给数组，或者链表list、向量排序。\n>\n> 实现原理：sort并不是简单的快速排序，它对普通的快速排序进行了优化，此外，它还结合了插入排序和推排序。系统会根据你的数据形式和数据量自动选择合适的排序方法，这并不是说它每次排序只选择一种方法，它是在一次完整排序中不同的情况选用不同方法，比如给一个数据量较大的数组排序，开始采用快速排序，分段递归，分段之后每一段的数据量达到一个较小值后它就不继续往下递归，而是选择插入排序，如果递归的太深，他会选择推排序。\n>\n> 此函数有3个参数：\n>\n> 参数1：第一个参数是数组的首地址，一般写上数组名就可以，因为数组名是一个指针常量。\n>\n> 参数2：第二个参数相对较好理解，即首地址加上数组的长度n（代表尾地址的下一地址）。\n>\n> 参数3：默认可以不填，如果不填sort会默认按数组升序排序。也就是1,2,3,4排序。也可以自定义一个排序函数，改排序方式为降序什么的，也就是4,3,2,1这样。\n\n代码：\n\n```c++\nclass Solution {\npublic:\n    bool containsDuplicate(vector<int>& nums) {\n        sort(nums.begin(), nums.end());\n        int n = nums.size();\n        for (int i = 0; i < n - 1; i++) {\n            if (nums[i] == nums[i + 1]) {\n                return true;\n            }\n        }\n        return false;\n    }\n};\n```\n\n法三（最优）：将nums数组中的每个元素插入哈希表，如果发现已存在，则说明有重复。时间复杂度O(N)\n\n代码：\n\n```c++\nclass Solution {\npublic:\n    bool containsDuplicate(vector<int>& nums) {\n        unordered_set<int> s;\n        for (int x: nums) {\n            if (s.find(x) != s.end()) {\n                return true;\n            }\n            s.insert(x);\n        }\n        return false;\n    }\n};\n```\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<blockquote>\n<p>该题来自：<a href=\"https://leetcode-cn.com/problems/contains-duplicate/\">https://leetcode-cn.com/problems/contains-duplicate/</a></p>\n</blockquote>\n<h4 id=\"217-存在重复元素\">[217. 存在重复元素]</h4>\n<p>难度简单635收藏分享切换为英文接收动态反馈</p>\n<p>给你一个整数数组 <code>nums</code> 。如果任一值在数组中出现 <strong>至少两次</strong> ，返回 <code>true</code> ；如果数组中每个元素互不相同，返回 <code>false</code> 。</p>\n<p><strong>示例 1：</strong></p>\n<pre><code class=\"language-text\">输入：nums = [1,2,3,1]\n输出：true\n</code></pre>\n<p><strong>示例 2：</strong></p>\n<pre><code class=\"language-text\">输入：nums = [1,2,3,4]\n输出：false\n</code></pre>\n<p><strong>示例 3：</strong></p>\n<pre><code class=\"language-text\">输入：nums = [1,1,1,3,3,4,3,2,4,2]\n输出：true\n</code></pre>\n<p><strong>提示：</strong></p>\n<ul>\n<li><code>1 &lt;= nums.length &lt;= 105</code></li>\n<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>\n</ul>\n<h2 id=\"题解\">题解</h2>\n<blockquote>\n<p>作者：LeetCode-Solution\n链接：<a href=\"https://leetcode-cn.com/problems/contains-duplicate/solution/cun-zai-zhong-fu-yuan-su-by-leetcode-sol-iedd/\">https://leetcode-cn.com/problems/contains-duplicate/solution/cun-zai-zhong-fu-yuan-su-by-leetcode-sol-iedd/</a>\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>\n</blockquote>\n<p>法一：最慢的方法，把nums中的每个元素都拿出来，遍历nums数组找一下看有没有跟它相同的元素。时间复杂度O(n^2)</p>\n<p>法二：用sort函数排个序，相同的元素会被排到一块儿，遍历一遍nums数组就找到了。思路很简单，但还是不够优雅。时间复杂度O(nlogn)</p>\n<blockquote>\n<p><strong>补充一下c++中的sort函数：</strong></p>\n<p>sort(first_pointer,first_pointer+n,cmp)</p>\n<p>该函数可以给数组，或者链表list、向量排序。</p>\n<p>实现原理：sort并不是简单的快速排序，它对普通的快速排序进行了优化，此外，它还结合了插入排序和推排序。系统会根据你的数据形式和数据量自动选择合适的排序方法，这并不是说它每次排序只选择一种方法，它是在一次完整排序中不同的情况选用不同方法，比如给一个数据量较大的数组排序，开始采用快速排序，分段递归，分段之后每一段的数据量达到一个较小值后它就不继续往下递归，而是选择插入排序，如果递归的太深，他会选择推排序。</p>\n<p>此函数有3个参数：</p>\n<p>参数1：第一个参数是数组的首地址，一般写上数组名就可以，因为数组名是一个指针常量。</p>\n<p>参数2：第二个参数相对较好理解，即首地址加上数组的长度n（代表尾地址的下一地址）。</p>\n<p>参数3：默认可以不填，如果不填sort会默认按数组升序排序。也就是1,2,3,4排序。也可以自定义一个排序函数，改排序方式为降序什么的，也就是4,3,2,1这样。</p>\n</blockquote>\n<p>代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    bool containsDuplicate(vector&lt;int&gt;&amp; nums) {\n        sort(nums.begin(), nums.end());\n        int n = nums.size();\n        for (int i = 0; i &lt; n - 1; i++) {\n            if (nums[i] == nums[i + 1]) {\n                return true;\n            }\n        }\n        return false;\n    }\n};\n</code></pre>\n<p>法三（最优）：将nums数组中的每个元素插入哈希表，如果发现已存在，则说明有重复。时间复杂度O(N)</p>\n<p>代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    bool containsDuplicate(vector&lt;int&gt;&amp; nums) {\n        unordered_set&lt;int&gt; s;\n        for (int x: nums) {\n            if (s.find(x) != s.end()) {\n                return true;\n            }\n            s.insert(x);\n        }\n        return false;\n    }\n};\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 4,
+      "text": "[217. 存在重复元素]",
+      "id": "217-存在重复元素"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

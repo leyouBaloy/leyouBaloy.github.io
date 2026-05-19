@@ -1,0 +1,81 @@
+{
+  "title": "DeepResearch深度搜索实现方法调研",
+  "date": "2025-05-09T14:03:42.000Z",
+  "updatedAt": "2025-05-09T14:03:42.000Z",
+  "file": "DeepResearch深度搜索实现方法调研.md",
+  "slug": "47f2a5ec",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png",
+  "wordCount": 1546,
+  "readingTime": 4,
+  "body": "# DeepResearch深度搜索实现方法调研\n\n## Deep Research 有三个核心能力\n\n+ 能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索）\n+ 能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？）\n+ 能力三：对多源的信息进行验证，整合（一个文档说 37 岁，另一个文档说 27 岁，怎么分辨？）\n\n## 非强化学习方法：\n\n### 《Search-o1: Agentic Search-Enhanced Large Reasoning Models》（能力二）\n\n作者：人大+清华\n\n[https://github.com/sunnynexus/Search-o1](https://github.com/sunnynexus/Search-o1) (Star 800）\n\n### ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png)\n\n+ 当遇到知识不确定的情况时，模型会自动生成搜索查询，格式为 `<|begin_search_query|>搜索词<|end_search_query|>`\n+ 系统检测到这一标记后，暂停模型推理，执行网络搜索\n+ 搜索结果被包装在 `<|begin_search_result|>检索到的内容<|end_search_result|>` 标记中返回给模型\n+ 如果检索到的结果特别长，就用大语言模型对其进行精炼，再放进推理链条中。\n\n优势：\n\n检索触发机制：传统 RAG 是静态的、预先定义的；Search-o1 是动态的、由模型主动触发的，可以在一定程度上实现能力二。\n\n### Deep-Searcher\n\n[https://github.com/zilliztech/deep-searcher](https://github.com/zilliztech/deep-searcher)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744854952174-96a19c35-39a1-4b12-a98d-974a63c79519.png)\n\n基本流程：\n\n1. 将原始问题进行拆解，分成多个子问题。\n2. 子问题分别进行检索，得到对应的答案。\n3. 子问题和答案进行整合，由模型生成下一轮子问题。\n4. 达到指定检索轮数后，汇总最终的答案。\n\n### OpenDeepResearcher\n\n[https://github.com/mshumer/OpenDeepResearcher](https://github.com/mshumer/OpenDeepResearcher)\n\n1. 用户输入一个研究主题后，LLM会生成最多四个不同的搜索关键词。\n2. 每个搜索关键词都通过调用SERPAPI接口进行搜索。\n3. 将所有获取到的链接进行聚合和去重处理。\n4. 对每个唯一链接调用JINA网页内容解析接口，利用LLM评估网页的有用性，如果页面被判定为有效，则提取相关文本内容。\n5. 汇总所有信息，判断是否需要进一步生成新的搜索关键词。如果需要，则生成新的查询；否则，循环终止。\n6. 将所有收集到的上下文信息整合后，由LLM生成一份全面、详尽的报告。\n\n### deep-research\n\n[https://github.com/dzhng/deep-research](https://github.com/dzhng/deep-research)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744855466605-eddd18bc-57a0-412a-a753-b946cd3aff5f.png)\n\n1. 获取用户的查询和研究参数（广度与深度）并生成SERP查询。\n2. 处理搜索结果，提取关键内容用于生成后续研究方向。\n3. 如果深度 > 0，则根据新的研究方向继续探索。\n4. 将所有上下文汇总成一份全面的Markdown报告。\n\n## 强化学习方法：\n\n### 《DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning》(能力一)\n\n作者：伊利诺伊大学香槟分校+高丽大学\n\n[https://github.com/pat-jj/DeepRetrieval](https://github.com/pat-jj/DeepRetrieval) (Star 360)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744768517611-b4e56f9b-b29a-4646-9579-2c9267d63d90.png)\n\n**query改写**已被证实是检索流程中的关键步骤。当用户提交问题时，大型语言模型(LLM)通常会对其进行重新表述(称为增强查询)，然后再执行检索。DeepRetrieval采用创新方法，利用强化学习(RL)而非传统的监督式微调(SFT)来优化这一关键步骤。\n\nDeepRetrieval的突出之处在于它能够通过\"试错\"方式直接学习，使用检索指标作为奖励，无需昂贵的监督数据。这种方法使模型能够针对实际性能指标进行优化，而不仅仅是模仿人工编写的查询。\n\n训练策略使用 PPO。\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781530065-259758a1-a106-469e-ab20-2e56c4f028e7.png)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781544794-b77deb0c-eaf5-4170-9156-663a4c62fab0.png)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781576293-2e80df88-e4d1-43a4-a1d2-6d8e345f46a0.png)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781595698-20bfe085-e6e5-4f66-b145-fba455e48ec4.png)\n\n数据集：PubMed、ClinicalTrials.gov...公开数据集\n\n### 《Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning》（能力一、二、三）\n\n伊利诺伊大学香槟分校\n\n[https://github.com/PeterGriffinJin/Search-R1](https://github.com/PeterGriffinJin/Search-R1)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1745118058701-1e6bffad-50e3-469a-a90d-e122858d2c77.png)\n\n+ 将搜索引擎建模为环境的一部分 模型可以在生成中插入 `<search>query</search>` 指令，系统则响应 `<information>results</information>`，最终答案用 `<answer>` 标签输出，推理过程包裹在 `<think>` 中。\n+ 支持多轮思考-检索循环 模型可以识别信息缺口并主动发起下一轮搜索，而不是一次性拼接上下文。\n+ 基于强化学习策略学习 训练采用 PPO （Proximal Policy Optimization）或 GRPO （Group Relative Policy Optimization）算法，奖励信号基于最终结果（如 Exact Match）而非过程监督。\n+ 避免优化干扰的技术细节 引入 Retrieved Token Loss Masking，对搜索返回内容不反向传播，从而保持训练稳定。\n\n从下图来看，它用 7B 模型就能超越 Search-o1 和 680B 参数的 R1？这种“小模型大能力”的背后，正是 RL 训练出的搜索策略弥补了知识覆盖和参数规模的不足。\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1745117856763-4b3f25ba-186b-490d-a88e-081666b363f3.png)\n\n+ **数据集**：在七个问答数据集上进行评估，包括一般问答（NQ、TriviaQA、PopQA）和多跳问答（HotpotQA、2WikiMultiHopQA、Musique、Bamboogle）。\n+ **基线比较**：与多种方法进行比较，包括无检索的推理、检索增强生成（RAG）、工具调用方法（如IRCoT和Search-o1）、监督微调（SFT）和基于RL的微调（R1）。\n+ **模型和检索设置**：使用Qwen-2.5-3B和Qwen-2.5-7B模型，以2018年维基百科转储作为知识源，E5作为检索器，每次检索返回3个段落。\n\n奖励函数：\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1745127012506-14bdfd11-879c-4df2-bf83-dbca3eb7248a.png)\n\n## 总结\n\n+ 非强化学习方法从技术上来看技术路线都是一样的，即**使用推理模型分析**，结合**联网搜索**以及**ReAct机制**，根据用户输入扩展问题，再对每个问题进行多次联网查找，推理、再查找的过程，最终输出一个综合性的答案。这套方法也比较容易复现。\n+ 使用强化学习对整体进行进行端到端训练固然可以提升效果，用小模型代替大模型。但缺点也很明显，依赖于高质量的数据，会限制其应用范围，比如无法支持多种模型。\n+ 使用强化学习对个别流程进行针对性训练的是比较有可行性的，比如针对query生成专门训练。\n+ 当前的方法主要讨论的都是能力一、二，对能力三较少有针对性优化。\n\n\n\n\n\n\n\n",
+  "html": "<h1 id=\"deepresearch深度搜索实现方法调研\">DeepResearch深度搜索实现方法调研</h1>\n<h2 id=\"deep-research-有三个核心能力\">Deep Research 有三个核心能力</h2>\n<ul>\n<li>能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索）</li>\n<li>能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？）</li>\n<li>能力三：对多源的信息进行验证，整合（一个文档说 37 岁，另一个文档说 27 岁，怎么分辨？）</li>\n</ul>\n<h2 id=\"非强化学习方法\">非强化学习方法：</h2>\n<h3 id=\"search-o1-agentic-search-enhanced-large-reasoning-models能力二\">《Search-o1: Agentic Search-Enhanced Large Reasoning Models》（能力二）</h3>\n<p>作者：人大+清华</p>\n<p><a href=\"https://github.com/sunnynexus/Search-o1\">https://github.com/sunnynexus/Search-o1</a> (Star 800）</p>\n<h3 id=\"httpsmyblog-1257298572cosap-shanghaimyqcloudcomimg1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129png\"><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></h3>\n<ul>\n<li>当遇到知识不确定的情况时，模型会自动生成搜索查询，格式为 <code>&lt;|begin_search_query|&gt;搜索词&lt;|end_search_query|&gt;</code></li>\n<li>系统检测到这一标记后，暂停模型推理，执行网络搜索</li>\n<li>搜索结果被包装在 <code>&lt;|begin_search_result|&gt;检索到的内容&lt;|end_search_result|&gt;</code> 标记中返回给模型</li>\n<li>如果检索到的结果特别长，就用大语言模型对其进行精炼，再放进推理链条中。</li>\n</ul>\n<p>优势：</p>\n<p>检索触发机制：传统 RAG 是静态的、预先定义的；Search-o1 是动态的、由模型主动触发的，可以在一定程度上实现能力二。</p>\n<h3 id=\"deep-searcher\">Deep-Searcher</h3>\n<p><a href=\"https://github.com/zilliztech/deep-searcher\">https://github.com/zilliztech/deep-searcher</a></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744854952174-96a19c35-39a1-4b12-a98d-974a63c79519.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>基本流程：</p>\n<ol>\n<li>将原始问题进行拆解，分成多个子问题。</li>\n<li>子问题分别进行检索，得到对应的答案。</li>\n<li>子问题和答案进行整合，由模型生成下一轮子问题。</li>\n<li>达到指定检索轮数后，汇总最终的答案。</li>\n</ol>\n<h3 id=\"opendeepresearcher\">OpenDeepResearcher</h3>\n<p><a href=\"https://github.com/mshumer/OpenDeepResearcher\">https://github.com/mshumer/OpenDeepResearcher</a></p>\n<ol>\n<li>用户输入一个研究主题后，LLM会生成最多四个不同的搜索关键词。</li>\n<li>每个搜索关键词都通过调用SERPAPI接口进行搜索。</li>\n<li>将所有获取到的链接进行聚合和去重处理。</li>\n<li>对每个唯一链接调用JINA网页内容解析接口，利用LLM评估网页的有用性，如果页面被判定为有效，则提取相关文本内容。</li>\n<li>汇总所有信息，判断是否需要进一步生成新的搜索关键词。如果需要，则生成新的查询；否则，循环终止。</li>\n<li>将所有收集到的上下文信息整合后，由LLM生成一份全面、详尽的报告。</li>\n</ol>\n<h3 id=\"deep-research\">deep-research</h3>\n<p><a href=\"https://github.com/dzhng/deep-research\">https://github.com/dzhng/deep-research</a></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744855466605-eddd18bc-57a0-412a-a753-b946cd3aff5f.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<ol>\n<li>获取用户的查询和研究参数（广度与深度）并生成SERP查询。</li>\n<li>处理搜索结果，提取关键内容用于生成后续研究方向。</li>\n<li>如果深度 &gt; 0，则根据新的研究方向继续探索。</li>\n<li>将所有上下文汇总成一份全面的Markdown报告。</li>\n</ol>\n<h2 id=\"强化学习方法\">强化学习方法：</h2>\n<h3 id=\"deepretrieval-hacking-real-search-engines-and-retrievers-with-large-language-models-via-reinforcement-learning能力一\">《DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning》(能力一)</h3>\n<p>作者：伊利诺伊大学香槟分校+高丽大学</p>\n<p><a href=\"https://github.com/pat-jj/DeepRetrieval\">https://github.com/pat-jj/DeepRetrieval</a> (Star 360)</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744768517611-b4e56f9b-b29a-4646-9579-2c9267d63d90.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p><strong>query改写</strong>已被证实是检索流程中的关键步骤。当用户提交问题时，大型语言模型(LLM)通常会对其进行重新表述(称为增强查询)，然后再执行检索。DeepRetrieval采用创新方法，利用强化学习(RL)而非传统的监督式微调(SFT)来优化这一关键步骤。</p>\n<p>DeepRetrieval的突出之处在于它能够通过&quot;试错&quot;方式直接学习，使用检索指标作为奖励，无需昂贵的监督数据。这种方法使模型能够针对实际性能指标进行优化，而不仅仅是模仿人工编写的查询。</p>\n<p>训练策略使用 PPO。</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781530065-259758a1-a106-469e-ab20-2e56c4f028e7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781544794-b77deb0c-eaf5-4170-9156-663a4c62fab0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781576293-2e80df88-e4d1-43a4-a1d2-6d8e345f46a0.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781595698-20bfe085-e6e5-4f66-b145-fba455e48ec4.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>数据集：PubMed、<a href=\"http://ClinicalTrials.gov\">ClinicalTrials.gov</a>…公开数据集</p>\n<h3 id=\"search-r1-training-llms-to-reason-and-leverage-search-engines-with-reinforcement-learning能力一二三\">《Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning》（能力一、二、三）</h3>\n<p>伊利诺伊大学香槟分校</p>\n<p><a href=\"https://github.com/PeterGriffinJin/Search-R1\">https://github.com/PeterGriffinJin/Search-R1</a></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1745118058701-1e6bffad-50e3-469a-a90d-e122858d2c77.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<ul>\n<li>将搜索引擎建模为环境的一部分 模型可以在生成中插入 <code>&lt;search&gt;query&lt;/search&gt;</code> 指令，系统则响应 <code>&lt;information&gt;results&lt;/information&gt;</code>，最终答案用 <code>&lt;answer&gt;</code> 标签输出，推理过程包裹在 <code>&lt;think&gt;</code> 中。</li>\n<li>支持多轮思考-检索循环 模型可以识别信息缺口并主动发起下一轮搜索，而不是一次性拼接上下文。</li>\n<li>基于强化学习策略学习 训练采用 PPO （Proximal Policy Optimization）或 GRPO （Group Relative Policy Optimization）算法，奖励信号基于最终结果（如 Exact Match）而非过程监督。</li>\n<li>避免优化干扰的技术细节 引入 Retrieved Token Loss Masking，对搜索返回内容不反向传播，从而保持训练稳定。</li>\n</ul>\n<p>从下图来看，它用 7B 模型就能超越 Search-o1 和 680B 参数的 R1？这种“小模型大能力”的背后，正是 RL 训练出的搜索策略弥补了知识覆盖和参数规模的不足。</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1745117856763-4b3f25ba-186b-490d-a88e-081666b363f3.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<ul>\n<li><strong>数据集</strong>：在七个问答数据集上进行评估，包括一般问答（NQ、TriviaQA、PopQA）和多跳问答（HotpotQA、2WikiMultiHopQA、Musique、Bamboogle）。</li>\n<li><strong>基线比较</strong>：与多种方法进行比较，包括无检索的推理、检索增强生成（RAG）、工具调用方法（如IRCoT和Search-o1）、监督微调（SFT）和基于RL的微调（R1）。</li>\n<li><strong>模型和检索设置</strong>：使用Qwen-2.5-3B和Qwen-2.5-7B模型，以2018年维基百科转储作为知识源，E5作为检索器，每次检索返回3个段落。</li>\n</ul>\n<p>奖励函数：</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1745127012506-14bdfd11-879c-4df2-bf83-dbca3eb7248a.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<h2 id=\"总结\">总结</h2>\n<ul>\n<li>非强化学习方法从技术上来看技术路线都是一样的，即<strong>使用推理模型分析</strong>，结合<strong>联网搜索</strong>以及<strong>ReAct机制</strong>，根据用户输入扩展问题，再对每个问题进行多次联网查找，推理、再查找的过程，最终输出一个综合性的答案。这套方法也比较容易复现。</li>\n<li>使用强化学习对整体进行进行端到端训练固然可以提升效果，用小模型代替大模型。但缺点也很明显，依赖于高质量的数据，会限制其应用范围，比如无法支持多种模型。</li>\n<li>使用强化学习对个别流程进行针对性训练的是比较有可行性的，比如针对query生成专门训练。</li>\n<li>当前的方法主要讨论的都是能力一、二，对能力三较少有针对性优化。</li>\n</ul>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "DeepResearch深度搜索实现方法调研",
+      "id": "deepresearch深度搜索实现方法调研"
+    },
+    {
+      "level": 2,
+      "text": "Deep Research 有三个核心能力",
+      "id": "deep-research-有三个核心能力"
+    },
+    {
+      "level": 2,
+      "text": "非强化学习方法：",
+      "id": "非强化学习方法"
+    },
+    {
+      "level": 3,
+      "text": "《Search-o1: Agentic Search-Enhanced Large Reasoning Models》（能力二）",
+      "id": "search-o1-agentic-search-enhanced-large-reasoning-models能力二"
+    },
+    {
+      "level": 3,
+      "text": "![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png)",
+      "id": "httpsmyblog-1257298572cosap-shanghaimyqcloudcomimg1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129png"
+    },
+    {
+      "level": 3,
+      "text": "Deep-Searcher",
+      "id": "deep-searcher"
+    },
+    {
+      "level": 3,
+      "text": "OpenDeepResearcher",
+      "id": "opendeepresearcher"
+    },
+    {
+      "level": 3,
+      "text": "deep-research",
+      "id": "deep-research"
+    },
+    {
+      "level": 2,
+      "text": "强化学习方法：",
+      "id": "强化学习方法"
+    },
+    {
+      "level": 3,
+      "text": "《DeepRetrieval: Hacking Real Search Engines and Retrievers with Large Language Models via Reinforcement Learning》(能力一)",
+      "id": "deepretrieval-hacking-real-search-engines-and-retrievers-with-large-language-models-via-reinforcement-learning能力一"
+    },
+    {
+      "level": 3,
+      "text": "《Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning》（能力一、二、三）",
+      "id": "search-r1-training-llms-to-reason-and-leverage-search-engines-with-reinforcement-learning能力一二三"
+    },
+    {
+      "level": 2,
+      "text": "总结",
+      "id": "总结"
+    }
+  ],
+  "hasMath": false
+}

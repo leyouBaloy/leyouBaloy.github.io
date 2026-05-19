@@ -1,0 +1,51 @@
+{
+  "title": "Leetcode1823:找出游戏的获胜者——约瑟夫环",
+  "date": "2022-05-04T08:24:22.000Z",
+  "updatedAt": "2022-05-04T08:24:22.000Z",
+  "file": "Leetcode1823_找出游戏的获胜者——约瑟夫环.md",
+  "slug": "28771507",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 482,
+  "readingTime": 2,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/\n\n约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。\n\n## 题解\n\n### 朴素的模拟法\n\n即真正按照题目的描述，维护一个初始长度为`n`的数组和计数变量`cnt`，迭代找到最终解。最朴素的方法，一般都会超时。\n\n### 模拟+队列\n\n使用队列来模拟这个过程，首先创建一个双端队列（python中有此数据结构），包括`n`个数。然后在接下来的`n-1`次迭代中每次从队首pop出`k-1`个数到队尾。最终剩下的数就是答案。\n\n```python\nclass Solution:\n    def findTheWinner(self, n: int, k: int) -> int:\n        q = deque(range(1, n + 1))\n        while len(q) > 1:\n            for _ in range(k - 1):\n                q.append(q.popleft())\n            q.popleft()\n        return q[0]\n```\n\n因为要执行`n-1`轮，每轮把`k-1`个数从队首拿到队尾，所以时间复杂度为O(nk)。和第一种方法差不多，但代码更简洁。\n\n### 直接pop\n\n对上面的方法进行优化，也是我采用的方法。就是在每轮迭代中省去计数这个过程，直接找到要pop的数。\n\n```python\nclass Solution:\n    def findTheWinner(self, n: int, k: int) -> int:\n        people = [i for i in range(1,n+1)]\n        kick = 1\n        while(len(people)!=1):\n            kick = (kick-1+k)%len(people)\n            if kick==0:kick=len(people)\n            people.pop(kick-1)\n            print(kick,end=\" \")\n            print(people)\n        return people[0]\n```\n\n细节：\n\n* 记录上一次杀掉的人的位置为kick（从1开始计数），那么下一次从第kick人开始计k个数，它的位置是`kick+k-1`。\n* 但考虑到是一个环，所以要把位置mod当前数组的长度。\n* mod时有一个问题，如果位置恰好是最后一个元素，mod结果为0，所以加一个判断条件，如果结果为0，就令它等于len(people)。\n* 因为我们分析的位置是从1开始计数，所以pop的时候要-1\n\n由于pop的时间复杂度比较高，所以这也不是一种十分优雅的方法。\n\n### 数学+递归/数学+迭代\n\n递归公式\n\n```\nf(n,m)=(f(n-1,m)+m)%n\nf(n,m)指n个人，报第m个编号出列最终编号\n```\n\n这个推理没搞懂...题解：https://leetcode-cn.com/circle/article/BOoxAL/\n\n时间复杂度O(n)\n\n\n\n\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/\">https://leetcode-cn.com/problems/find-the-winner-of-the-circular-game/</a></p>\n<p>约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。</p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"朴素的模拟法\">朴素的模拟法</h3>\n<p>即真正按照题目的描述，维护一个初始长度为<code>n</code>的数组和计数变量<code>cnt</code>，迭代找到最终解。最朴素的方法，一般都会超时。</p>\n<h3 id=\"模拟队列\">模拟+队列</h3>\n<p>使用队列来模拟这个过程，首先创建一个双端队列（python中有此数据结构），包括<code>n</code>个数。然后在接下来的<code>n-1</code>次迭代中每次从队首pop出<code>k-1</code>个数到队尾。最终剩下的数就是答案。</p>\n<pre><code class=\"language-python\">class Solution:\n    def findTheWinner(self, n: int, k: int) -&gt; int:\n        q = deque(range(1, n + 1))\n        while len(q) &gt; 1:\n            for _ in range(k - 1):\n                q.append(q.popleft())\n            q.popleft()\n        return q[0]\n</code></pre>\n<p>因为要执行<code>n-1</code>轮，每轮把<code>k-1</code>个数从队首拿到队尾，所以时间复杂度为O(nk)。和第一种方法差不多，但代码更简洁。</p>\n<h3 id=\"直接pop\">直接pop</h3>\n<p>对上面的方法进行优化，也是我采用的方法。就是在每轮迭代中省去计数这个过程，直接找到要pop的数。</p>\n<pre><code class=\"language-python\">class Solution:\n    def findTheWinner(self, n: int, k: int) -&gt; int:\n        people = [i for i in range(1,n+1)]\n        kick = 1\n        while(len(people)!=1):\n            kick = (kick-1+k)%len(people)\n            if kick==0:kick=len(people)\n            people.pop(kick-1)\n            print(kick,end=&quot; &quot;)\n            print(people)\n        return people[0]\n</code></pre>\n<p>细节：</p>\n<ul>\n<li>记录上一次杀掉的人的位置为kick（从1开始计数），那么下一次从第kick人开始计k个数，它的位置是<code>kick+k-1</code>。</li>\n<li>但考虑到是一个环，所以要把位置mod当前数组的长度。</li>\n<li>mod时有一个问题，如果位置恰好是最后一个元素，mod结果为0，所以加一个判断条件，如果结果为0，就令它等于len(people)。</li>\n<li>因为我们分析的位置是从1开始计数，所以pop的时候要-1</li>\n</ul>\n<p>由于pop的时间复杂度比较高，所以这也不是一种十分优雅的方法。</p>\n<h3 id=\"数学递归数学迭代\">数学+递归/数学+迭代</h3>\n<p>递归公式</p>\n<pre><code class=\"language-text\">f(n,m)=(f(n-1,m)+m)%n\nf(n,m)指n个人，报第m个编号出列最终编号\n</code></pre>\n<p>这个推理没搞懂…题解：<a href=\"https://leetcode-cn.com/circle/article/BOoxAL/\">https://leetcode-cn.com/circle/article/BOoxAL/</a></p>\n<p>时间复杂度O(n)</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "朴素的模拟法",
+      "id": "朴素的模拟法"
+    },
+    {
+      "level": 3,
+      "text": "模拟+队列",
+      "id": "模拟队列"
+    },
+    {
+      "level": 3,
+      "text": "直接pop",
+      "id": "直接pop"
+    },
+    {
+      "level": 3,
+      "text": "数学+递归/数学+迭代",
+      "id": "数学递归数学迭代"
+    }
+  ],
+  "hasMath": false
+}

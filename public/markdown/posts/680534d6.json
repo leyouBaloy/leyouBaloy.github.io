@@ -1,0 +1,26 @@
+{
+  "title": "每日一题(2)--很多个数排序问题",
+  "date": "2020-10-08T21:09:10.000Z",
+  "updatedAt": "2020-10-08T21:09:10.000Z",
+  "file": "每日一题(2)--很多个数排序问题.md",
+  "slug": "680534d6",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 227,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n给出n个同学的身高，请根据他们的身高升序排列并输出排序结果。\n\n【输入格式】\n\n第一行包含1个正整数 n（2<n≤100），表示有 n 个同学的身高。\n\n第二行包含 n 个正整数，之间用一个空格隔开，表示 n 个同学的身高。每个同学的身高都在 150~200 厘米之间。\n\n【输出格式】\n\n一行 n 个正整数，之间用一个空格隔开，表示 n 个同学根据身高升序排列的结果。\n\nFor example:\n\nInput\n\nResult\n\n7  \n180 170 176 160 155 150 160\n\n150 155 160 160 170 176 180\n\n## 答案\n\n```\n#include <iostream>\n#include <algorithm>\n\nusing namespace std;\n\nint main()\n{\n    int i,j,k,n,a[100];\n\n    //输入部分\n    cin >> n;\n    for(i=1;i<=n;i++)\n    {\n        cin >> a[i];\n    }\n\n    //输出部分\n    for(i=1;i<=n;i++)       //外层循环i,选出第i位小的数\n    {\n        k = i;      //a[k]是被比较的那个数\n        for(j=i+1;j<=n;j++)     //内层循环，选出第i位之后最小的数\n        {\n            if(a[j]<a[k])\n            {\n                k = j;      //遇到更小的数，替换a[k]\n            }\n        }\n        if(k!=i)\n        {\n            swap(a[i],a[k]);        //把最小数替换到前面\n        }\n    }\n\n    //输出部分\n    for(i=1;i<n;i++)\n    {\n        cout << a[i] << \" \";\n    }\n    cout << a[n] << endl;\n    return 0;\n}\n```\n\n思路：“打擂台”：每一趟把最小的数挑出来放好\n\n第一趟把n个数中最小的数放在第一个位置，第二趟把2到n这n-1个数中挑出最小的放在第二个位置，以此类推",
+  "html": "<p>【题目描述】</p>\n<p>给出n个同学的身高，请根据他们的身高升序排列并输出排序结果。</p>\n<p>【输入格式】</p>\n<p>第一行包含1个正整数 n（2&lt;n≤100），表示有 n 个同学的身高。</p>\n<p>第二行包含 n 个正整数，之间用一个空格隔开，表示 n 个同学的身高。每个同学的身高都在 150~200 厘米之间。</p>\n<p>【输出格式】</p>\n<p>一行 n 个正整数，之间用一个空格隔开，表示 n 个同学根据身高升序排列的结果。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>7<br>\n180 170 176 160 155 150 160</p>\n<p>150 155 160 160 170 176 180</p>\n<h2 id=\"答案\">答案</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;algorithm&gt;\n\nusing namespace std;\n\nint main()\n{\n    int i,j,k,n,a[100];\n\n    //输入部分\n    cin &gt;&gt; n;\n    for(i=1;i&lt;=n;i++)\n    {\n        cin &gt;&gt; a[i];\n    }\n\n    //输出部分\n    for(i=1;i&lt;=n;i++)       //外层循环i,选出第i位小的数\n    {\n        k = i;      //a[k]是被比较的那个数\n        for(j=i+1;j&lt;=n;j++)     //内层循环，选出第i位之后最小的数\n        {\n            if(a[j]&lt;a[k])\n            {\n                k = j;      //遇到更小的数，替换a[k]\n            }\n        }\n        if(k!=i)\n        {\n            swap(a[i],a[k]);        //把最小数替换到前面\n        }\n    }\n\n    //输出部分\n    for(i=1;i&lt;n;i++)\n    {\n        cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;\n    }\n    cout &lt;&lt; a[n] &lt;&lt; endl;\n    return 0;\n}\n</code></pre>\n<p>思路：“打擂台”：每一趟把最小的数挑出来放好</p>\n<p>第一趟把n个数中最小的数放在第一个位置，第二趟把2到n这n-1个数中挑出最小的放在第二个位置，以此类推</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "答案",
+      "id": "答案"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,121 @@
+{
+  "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
+  "date": "2021-02-26T12:06:38.000Z",
+  "updatedAt": "2021-02-26T12:06:38.000Z",
+  "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
+  "slug": "10141fce",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 59,
+  "readingTime": 1,
+  "body": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver  \n仅用于学习  \n感谢莫烦up主\n\n### image图片\n\n```\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# image data\na = np.array([0.313660827978, 0.365348418405, 0.423733120134,\n              0.365348418405, 0.439599930621, 0.525083754405,\n              0.423733120134, 0.525083754405, 0.651536351379]).reshape(3,3)\n\n\"\"\"\nfor the value of \"interpolation\", check this:\nhttp://matplotlib.org/examples/images_contours_and_fields/interpolation_methods.html\n参数interpolation见下图\nfor the value of \"origin\"= ['upper', 'lower'], check this:\nhttp://matplotlib.org/examples/pylab_examples/image_origin.html\n参数origin如果为'upper'图像就会反过来\n\"\"\"\nplt.imshow(a, interpolation='nearest', cmap='bone', origin='lower')\nplt.colorbar(shrink=.92) #shrink压缩到百分之九十二\n\nplt.xticks(())\nplt.yticks(())\nplt.show()\n```\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-1024x631.png)\n\ninterpolation参数有这些\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png)\n\n### 3D数据\n\n```\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_toolkits.mplot3d import Axes3D #添加3D坐标轴显示\n\nfig = plt.figure()\nax = Axes3D(fig) #在figure上加一个3D的Axes\n# X, Y value\nX = np.arange(-4, 4, 0.25)\nY = np.arange(-4, 4, 0.25)\nX, Y = np.meshgrid(X, Y)\nR = np.sqrt(X ** 2 + Y ** 2)\n# height value 高度是Z轴\nZ = np.sin(R)\n\n#创建3D图\nax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.get_cmap('rainbow'))\n\"\"\"\nr代表row, c代表col， rstride和cstride都是控制跨度的参数，简单理解，就是控制这个3D图像的稠密程度\n============= ================================================\n        Argument      Description\n        ============= ================================================\n        *X*, *Y*, *Z* Data values as 2D arrays\n        *rstride*     Array row stride (step size), defaults to 10\n        *cstride*     Array column stride (step size), defaults to 10\n        *color*       Color of the surface patches\n        *cmap*        A colormap for the surface patches.\n        *facecolors*  Face colors for the individual patches\n        *norm*        An instance of Normalize to map values to colors\n        *vmin*        Minimum value to map\n        *vmax*        Maximum value to map\n        *shade*       Whether to shade the facecolors\n        ============= ================================================\n\"\"\"\n\n# I think this is different from plt12_contours\n#在3D图下面创建一个等高线图\nax.contourf(X, Y, Z, zdir='z', offset=-2, cmap=plt.get_cmap('rainbow'))\n\"\"\"\nzdir='z'表示这个等高线图是从z轴压下去的，offset表示把等高线图放到-2这个位置\n==========  ================================================\n        Argument    Description\n        ==========  ================================================\n        *X*, *Y*,   Data values as numpy.arrays\n        *Z*\n        *zdir*      The direction to use: x, y or z (default)\n        *offset*    If specified plot a projection of the filled contour\n                    on this position in plane normal to zdir\n        ==========  ================================================\n\"\"\"\n\nax.set_zlim(-2, 2)\n\nplt.show()\n```\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-2.png)\n\n### Subplot 多合一显示\n\n```\nimport matplotlib.pyplot as plt\n\n# example 1:\n###############################\nplt.figure(figsize=(6, 4))\n# plt.subplot(n_rows, n_cols, plot_num)\nplt.subplot(2, 2, 1)\n#2行2列，共4张图，编辑第1张图\nplt.plot([0, 1], [0, 1])\n\nplt.subplot(222)\n#2行2列，共4张图，编辑第2张图，这里不写逗号也可以识别（惊了）\nplt.plot([0, 1], [0, 2])\n\nplt.subplot(223)\n#2行2列，共4张图，编辑第3张图\nplt.plot([0, 1], [0, 3])\n\nplt.subplot(224)\n#2行2列，共4张图，编辑第4张图\nplt.plot([0, 1], [0, 4])\n\nplt.tight_layout()\n\n# example 2:\n###############################\nplt.figure(figsize=(6, 4))\n# plt.subplot(n_rows, n_cols, plot_num)\nplt.subplot(2, 1, 1)\n# figure splits into 2 rows, 1 col, plot to the 1st sub-fig\nplt.plot([0, 1], [0, 1])\n\nplt.subplot(234)\n# figure splits into 2 rows, 3 col, plot to the 4th sub-fig\nplt.plot([0, 1], [0, 2])\n\nplt.subplot(235)\n# figure splits into 2 rows, 3 col, plot to the 5th sub-fig\nplt.plot([0, 1], [0, 3])\n\nplt.subplot(236)\n# figure splits into 2 rows, 3 col, plot to the 6th sub-fig\nplt.plot([0, 1], [0, 4])\n\n\nplt.tight_layout()\nplt.show()\n```\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png)\n\nfigure1\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png)\n\nfigure2\n\n### Subplot分格显示\n\n```\nimport matplotlib.pyplot as plt\nimport matplotlib.gridspec as gridspec\n\n# 方法一：method 1: subplot2grid\n##########################\nplt.figure()\nax1 = plt.subplot2grid((3, 3), (0, 0), colspan=3)  # 分3行3列的格子，从(0,0)开始，跨列=3,跨行colspan默认为1\nax1.plot([1, 2], [1, 2])\nax1.set_title('ax1_title')\nax2 = plt.subplot2grid((3, 3), (1, 0), colspan=2)\nax3 = plt.subplot2grid((3, 3), (1, 2), rowspan=2)\nax4 = plt.subplot2grid((3, 3), (2, 0))\nax4.scatter([1, 2], [2, 2])\nax4.set_xlabel('ax4_x')\nax4.set_ylabel('ax4_y')\nax5 = plt.subplot2grid((3, 3), (2, 1))\n\n# 方法二：method 2: gridspec\n#########################\nplt.figure()\ngs = gridspec.GridSpec(3, 3)\n# use index from 0\nax6 = plt.subplot(gs[0, :])\nax7 = plt.subplot(gs[1, :2])\nax8 = plt.subplot(gs[1:, 2])\nax9 = plt.subplot(gs[-1, 0])\nax10 = plt.subplot(gs[-1, -2])\n\n# 方法三：method 3: easy to define structure\n####################################\nf, ((ax11, ax12), (ax13, ax14)) = plt.subplots(2, 2, sharex=True, sharey=True)\n#用ax11,ax12,ax13,ax14接收返回的第一行第一列图，第一行第二列图，第二行第一列图，第二行第二列图\nax11.scatter([1,2], [1,2])\n\nplt.tight_layout()\nplt.show()\n```\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-5-1.png)\n\nmethod1和method2效果图\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png)\n\nmethod2",
+  "html": "<p>视频地址：<a href=\"https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm%5C_id%5C_from=pageDriver\">https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm\\_id\\_from=pageDriver</a><br>\n仅用于学习<br>\n感谢莫烦up主</p>\n<h3 id=\"image图片\">image图片</h3>\n<pre><code class=\"language-text\">import matplotlib.pyplot as plt\nimport numpy as np\n\n# image data\na = np.array([0.313660827978, 0.365348418405, 0.423733120134,\n              0.365348418405, 0.439599930621, 0.525083754405,\n              0.423733120134, 0.525083754405, 0.651536351379]).reshape(3,3)\n\n&quot;&quot;&quot;\nfor the value of &quot;interpolation&quot;, check this:\nhttp://matplotlib.org/examples/images_contours_and_fields/interpolation_methods.html\n参数interpolation见下图\nfor the value of &quot;origin&quot;= ['upper', 'lower'], check this:\nhttp://matplotlib.org/examples/pylab_examples/image_origin.html\n参数origin如果为'upper'图像就会反过来\n&quot;&quot;&quot;\nplt.imshow(a, interpolation='nearest', cmap='bone', origin='lower')\nplt.colorbar(shrink=.92) #shrink压缩到百分之九十二\n\nplt.xticks(())\nplt.yticks(())\nplt.show()\n</code></pre>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-1024x631.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>interpolation参数有这些</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-1-1024x797.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<h3 id=\"3d数据\">3D数据</h3>\n<pre><code class=\"language-text\">import numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_toolkits.mplot3d import Axes3D #添加3D坐标轴显示\n\nfig = plt.figure()\nax = Axes3D(fig) #在figure上加一个3D的Axes\n# X, Y value\nX = np.arange(-4, 4, 0.25)\nY = np.arange(-4, 4, 0.25)\nX, Y = np.meshgrid(X, Y)\nR = np.sqrt(X ** 2 + Y ** 2)\n# height value 高度是Z轴\nZ = np.sin(R)\n\n#创建3D图\nax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.get_cmap('rainbow'))\n&quot;&quot;&quot;\nr代表row, c代表col， rstride和cstride都是控制跨度的参数，简单理解，就是控制这个3D图像的稠密程度\n============= ================================================\n        Argument      Description\n        ============= ================================================\n        *X*, *Y*, *Z* Data values as 2D arrays\n        *rstride*     Array row stride (step size), defaults to 10\n        *cstride*     Array column stride (step size), defaults to 10\n        *color*       Color of the surface patches\n        *cmap*        A colormap for the surface patches.\n        *facecolors*  Face colors for the individual patches\n        *norm*        An instance of Normalize to map values to colors\n        *vmin*        Minimum value to map\n        *vmax*        Maximum value to map\n        *shade*       Whether to shade the facecolors\n        ============= ================================================\n&quot;&quot;&quot;\n\n# I think this is different from plt12_contours\n#在3D图下面创建一个等高线图\nax.contourf(X, Y, Z, zdir='z', offset=-2, cmap=plt.get_cmap('rainbow'))\n&quot;&quot;&quot;\nzdir='z'表示这个等高线图是从z轴压下去的，offset表示把等高线图放到-2这个位置\n==========  ================================================\n        Argument    Description\n        ==========  ================================================\n        *X*, *Y*,   Data values as numpy.arrays\n        *Z*\n        *zdir*      The direction to use: x, y or z (default)\n        *offset*    If specified plot a projection of the filled contour\n                    on this position in plane normal to zdir\n        ==========  ================================================\n&quot;&quot;&quot;\n\nax.set_zlim(-2, 2)\n\nplt.show()\n</code></pre>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<h3 id=\"subplot-多合一显示\">Subplot 多合一显示</h3>\n<pre><code class=\"language-text\">import matplotlib.pyplot as plt\n\n# example 1:\n###############################\nplt.figure(figsize=(6, 4))\n# plt.subplot(n_rows, n_cols, plot_num)\nplt.subplot(2, 2, 1)\n#2行2列，共4张图，编辑第1张图\nplt.plot([0, 1], [0, 1])\n\nplt.subplot(222)\n#2行2列，共4张图，编辑第2张图，这里不写逗号也可以识别（惊了）\nplt.plot([0, 1], [0, 2])\n\nplt.subplot(223)\n#2行2列，共4张图，编辑第3张图\nplt.plot([0, 1], [0, 3])\n\nplt.subplot(224)\n#2行2列，共4张图，编辑第4张图\nplt.plot([0, 1], [0, 4])\n\nplt.tight_layout()\n\n# example 2:\n###############################\nplt.figure(figsize=(6, 4))\n# plt.subplot(n_rows, n_cols, plot_num)\nplt.subplot(2, 1, 1)\n# figure splits into 2 rows, 1 col, plot to the 1st sub-fig\nplt.plot([0, 1], [0, 1])\n\nplt.subplot(234)\n# figure splits into 2 rows, 3 col, plot to the 4th sub-fig\nplt.plot([0, 1], [0, 2])\n\nplt.subplot(235)\n# figure splits into 2 rows, 3 col, plot to the 5th sub-fig\nplt.plot([0, 1], [0, 3])\n\nplt.subplot(236)\n# figure splits into 2 rows, 3 col, plot to the 6th sub-fig\nplt.plot([0, 1], [0, 4])\n\n\nplt.tight_layout()\nplt.show()\n</code></pre>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-4-1024x775.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>figure1</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-3-1024x769.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>figure2</p>\n<h3 id=\"subplot分格显示\">Subplot分格显示</h3>\n<pre><code class=\"language-text\">import matplotlib.pyplot as plt\nimport matplotlib.gridspec as gridspec\n\n# 方法一：method 1: subplot2grid\n##########################\nplt.figure()\nax1 = plt.subplot2grid((3, 3), (0, 0), colspan=3)  # 分3行3列的格子，从(0,0)开始，跨列=3,跨行colspan默认为1\nax1.plot([1, 2], [1, 2])\nax1.set_title('ax1_title')\nax2 = plt.subplot2grid((3, 3), (1, 0), colspan=2)\nax3 = plt.subplot2grid((3, 3), (1, 2), rowspan=2)\nax4 = plt.subplot2grid((3, 3), (2, 0))\nax4.scatter([1, 2], [2, 2])\nax4.set_xlabel('ax4_x')\nax4.set_ylabel('ax4_y')\nax5 = plt.subplot2grid((3, 3), (2, 1))\n\n# 方法二：method 2: gridspec\n#########################\nplt.figure()\ngs = gridspec.GridSpec(3, 3)\n# use index from 0\nax6 = plt.subplot(gs[0, :])\nax7 = plt.subplot(gs[1, :2])\nax8 = plt.subplot(gs[1:, 2])\nax9 = plt.subplot(gs[-1, 0])\nax10 = plt.subplot(gs[-1, -2])\n\n# 方法三：method 3: easy to define structure\n####################################\nf, ((ax11, ax12), (ax13, ax14)) = plt.subplots(2, 2, sharex=True, sharey=True)\n#用ax11,ax12,ax13,ax14接收返回的第一行第一列图，第一行第二列图，第二行第一列图，第二行第二列图\nax11.scatter([1,2], [1,2])\n\nplt.tight_layout()\nplt.show()\n</code></pre>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-5-1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>method1和method2效果图</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-6-1024x874.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>method2</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "image图片",
+      "id": "image图片"
+    },
+    {
+      "level": 1,
+      "text": "image data",
+      "id": "image-data"
+    },
+    {
+      "level": 3,
+      "text": "3D数据",
+      "id": "3d数据"
+    },
+    {
+      "level": 1,
+      "text": "X, Y value",
+      "id": "x-y-value"
+    },
+    {
+      "level": 1,
+      "text": "height value 高度是Z轴",
+      "id": "height-value-高度是z轴"
+    },
+    {
+      "level": 1,
+      "text": "I think this is different from plt12_contours",
+      "id": "i-think-this-is-different-from-plt12_contours"
+    },
+    {
+      "level": 3,
+      "text": "Subplot 多合一显示",
+      "id": "subplot-多合一显示"
+    },
+    {
+      "level": 1,
+      "text": "example 1:",
+      "id": "example-1"
+    },
+    {
+      "level": 1,
+      "text": "plt.subplot(n_rows, n_cols, plot_num)",
+      "id": "pltsubplotn_rows-n_cols-plot_num"
+    },
+    {
+      "level": 1,
+      "text": "example 2:",
+      "id": "example-2"
+    },
+    {
+      "level": 1,
+      "text": "plt.subplot(n_rows, n_cols, plot_num)",
+      "id": "pltsubplotn_rows-n_cols-plot_num"
+    },
+    {
+      "level": 1,
+      "text": "figure splits into 2 rows, 1 col, plot to the 1st sub-fig",
+      "id": "figure-splits-into-2-rows-1-col-plot-to-the-1st-sub-fig"
+    },
+    {
+      "level": 1,
+      "text": "figure splits into 2 rows, 3 col, plot to the 4th sub-fig",
+      "id": "figure-splits-into-2-rows-3-col-plot-to-the-4th-sub-fig"
+    },
+    {
+      "level": 1,
+      "text": "figure splits into 2 rows, 3 col, plot to the 5th sub-fig",
+      "id": "figure-splits-into-2-rows-3-col-plot-to-the-5th-sub-fig"
+    },
+    {
+      "level": 1,
+      "text": "figure splits into 2 rows, 3 col, plot to the 6th sub-fig",
+      "id": "figure-splits-into-2-rows-3-col-plot-to-the-6th-sub-fig"
+    },
+    {
+      "level": 3,
+      "text": "Subplot分格显示",
+      "id": "subplot分格显示"
+    },
+    {
+      "level": 1,
+      "text": "方法一：method 1: subplot2grid",
+      "id": "方法一method-1-subplot2grid"
+    },
+    {
+      "level": 1,
+      "text": "方法二：method 2: gridspec",
+      "id": "方法二method-2-gridspec"
+    },
+    {
+      "level": 1,
+      "text": "use index from 0",
+      "id": "use-index-from-0"
+    },
+    {
+      "level": 1,
+      "text": "方法三：method 3: easy to define structure",
+      "id": "方法三method-3-easy-to-define-structure"
+    }
+  ],
+  "hasMath": false
+}

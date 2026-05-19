@@ -1,0 +1,26 @@
+{
+  "title": "四舍五入小数",
+  "date": "2020-11-18T20:53:41.000Z",
+  "updatedAt": "2020-11-18T20:53:41.000Z",
+  "file": "四舍五入小数.md",
+  "slug": "0a5d3847",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 133,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n请编一个将浮点数四舍五入的函数Fun，其功能是使浮点数保留2位小数，并对第3位进行四舍五入（规定实型数为正数）。\n\n例如：实型数为1234.567，则函数返回1234.57；实型数为1234.564，则函数返回1234.56。\n\n【输入】\n\n一个浮点数。\n\n【输出】\n\n精确到小数点后面2位的浮点数。\n\n【函数声明】\n\ndouble Fun(double a)\n\nFor example:\n\nInput\n\nResult\n\n1234.567\n\n1234.57\n\n1234.561\n\n1234.56\n\n## Answer:\n\n```\ndouble Fun(double a)\n{\n    \n    //1.进行四舍五入\n    a = a + 0.005;\n    //2.将要保留的数据挪到整数位，再取整\n    int temp = a*100;\n    //一步到位\n    //int temp = (a+0.005)*100;\n    //3.转为所需数字\n    a = temp/100.0;\n    return a;\n}\n```\n\n点评：很有趣的写法！",
+  "html": "<p>【题目描述】</p>\n<p>请编一个将浮点数四舍五入的函数Fun，其功能是使浮点数保留2位小数，并对第3位进行四舍五入（规定实型数为正数）。</p>\n<p>例如：实型数为1234.567，则函数返回1234.57；实型数为1234.564，则函数返回1234.56。</p>\n<p>【输入】</p>\n<p>一个浮点数。</p>\n<p>【输出】</p>\n<p>精确到小数点后面2位的浮点数。</p>\n<p>【函数声明】</p>\n<p>double Fun(double a)</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>1234.567</p>\n<p>1234.57</p>\n<p>1234.561</p>\n<p>1234.56</p>\n<h2 id=\"answer\">Answer:</h2>\n<pre><code class=\"language-text\">double Fun(double a)\n{\n    \n    //1.进行四舍五入\n    a = a + 0.005;\n    //2.将要保留的数据挪到整数位，再取整\n    int temp = a*100;\n    //一步到位\n    //int temp = (a+0.005)*100;\n    //3.转为所需数字\n    a = temp/100.0;\n    return a;\n}\n</code></pre>\n<p>点评：很有趣的写法！</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Answer:",
+      "id": "answer"
+    }
+  ],
+  "hasMath": false
+}

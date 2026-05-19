@@ -1,0 +1,20 @@
+{
+  "title": "输入二进制转化为十进制",
+  "date": "2020-11-10T14:49:20.000Z",
+  "updatedAt": "2020-11-10T14:49:20.000Z",
+  "file": "输入二进制转化为十进制.md",
+  "slug": "08b6f13d",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 0,
+  "readingTime": 1,
+  "body": "```\n        bitset<16> bint;  // 16 bit 二进制数据，还有 bitset<32>\n\n        cin >> bint;\n        int a;\n        a = bint.to_ulong();\n        cout << a;\n```",
+  "html": "<pre><code class=\"language-text\">        bitset&lt;16&gt; bint;  // 16 bit 二进制数据，还有 bitset&lt;32&gt;\n\n        cin &gt;&gt; bint;\n        int a;\n        a = bint.to_ulong();\n        cout &lt;&lt; a;\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

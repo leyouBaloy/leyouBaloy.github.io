@@ -1,0 +1,26 @@
+{
+  "title": "删除重复的字符并重新排列-这个题太jb烦人了",
+  "date": "2020-11-07T08:48:03.000Z",
+  "updatedAt": "2020-11-07T08:48:03.000Z",
+  "file": "删除重复的字符并重新排列-这个题太jb烦人了.md",
+  "slug": "2e93ab72",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 126,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n输入一个长度不超过 100 的字符串，删除串中的重复字符。例如：输入的字符串为abacaeedabcdcd，\n\n删除重复字符串后为abced。\n\n【输入格式】\n\n一个长度不超过100个字符。\n\n【输出格式】\n\n删除重复字符后的字符串，保留原来的顺序。\n\nFor example:\n\nInput\n\nResult\n\nabacaeedabcd\n\nabced\n\n## Answer\n\n```\n#include <stdio.h>\n#define N 100\nint main()\n{\n    char a[N];\n    int i,j,m;\n    scanf(\"%s\",a);\n    for(i=0; a[i]!=0; i++)\n        for(j=i+1; a[j]!=0; j++)\n            if(a[i]==a[j])\n            {\n                for(m=j; a[m]!=0; m++)\n                {\n                    a[m]=a[m+1];\n                }\n                j--;\n            }\n    puts(a);\n    return 0;\n}\n```\n\n完全就是造轮子，没意思，明明知道有很好用的函数可以直接解决，但是我一个都不会！！",
+  "html": "<p>【题目描述】</p>\n<p>输入一个长度不超过 100 的字符串，删除串中的重复字符。例如：输入的字符串为abacaeedabcdcd，</p>\n<p>删除重复字符串后为abced。</p>\n<p>【输入格式】</p>\n<p>一个长度不超过100个字符。</p>\n<p>【输出格式】</p>\n<p>删除重复字符后的字符串，保留原来的顺序。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>abacaeedabcd</p>\n<p>abced</p>\n<h2 id=\"answer\">Answer</h2>\n<pre><code class=\"language-text\">#include &lt;stdio.h&gt;\n#define N 100\nint main()\n{\n    char a[N];\n    int i,j,m;\n    scanf(&quot;%s&quot;,a);\n    for(i=0; a[i]!=0; i++)\n        for(j=i+1; a[j]!=0; j++)\n            if(a[i]==a[j])\n            {\n                for(m=j; a[m]!=0; m++)\n                {\n                    a[m]=a[m+1];\n                }\n                j--;\n            }\n    puts(a);\n    return 0;\n}\n</code></pre>\n<p>完全就是造轮子，没意思，明明知道有很好用的函数可以直接解决，但是我一个都不会！！</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Answer",
+      "id": "answer"
+    }
+  ],
+  "hasMath": false
+}

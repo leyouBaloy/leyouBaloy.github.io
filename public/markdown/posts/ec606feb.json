@@ -1,0 +1,41 @@
+{
+  "title": "NGINX学习笔记",
+  "date": "2021-08-02T17:35:49.000Z",
+  "updatedAt": "2021-08-02T17:35:49.000Z",
+  "file": "NGINX学习笔记.md",
+  "slug": "ec606feb",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 26,
+  "readingTime": 1,
+  "body": "# NGINX\n\n### nginx常用命令\n\n```shell\nwhereis nginx #找到nginx目录\ncd /usr/local/nginx/sbin #sbin是存放命令的目录\n```\n\n```shell\n./nginx #启动nginx\n```\n\n```shell\n./nginx -s stop #停止\n```\n\n```shell\n./nginx -s quit #优雅退出\n```\n\n```shell\n./nginx -s reload #重新加载配置文件（常用\n```\n\n```shell\nps auxgrep nginx #查看Nginx进程\n```\n\n### 配置文件\n\n```shell\n# /usr/sbin/nginx -t\nnginx: the configuration file /etc/nginx/nginx.conf syntax is ok\nnginx: configuration file /etc/nginx/nginx.conf test is successful\n```\n\n配置文件解释参考： [https://blog.csdn.net/tjcyjd/article/details/50695922](https://blog.csdn.net/tjcyjd/article/details/50695922)",
+  "html": "<h1 id=\"nginx\">NGINX</h1>\n<h3 id=\"nginx常用命令\">nginx常用命令</h3>\n<pre><code class=\"language-shell\">whereis nginx #找到nginx目录\ncd /usr/local/nginx/sbin #sbin是存放命令的目录\n</code></pre>\n<pre><code class=\"language-shell\">./nginx #启动nginx\n</code></pre>\n<pre><code class=\"language-shell\">./nginx -s stop #停止\n</code></pre>\n<pre><code class=\"language-shell\">./nginx -s quit #优雅退出\n</code></pre>\n<pre><code class=\"language-shell\">./nginx -s reload #重新加载配置文件（常用\n</code></pre>\n<pre><code class=\"language-shell\">ps auxgrep nginx #查看Nginx进程\n</code></pre>\n<h3 id=\"配置文件\">配置文件</h3>\n<pre><code class=\"language-shell\"># /usr/sbin/nginx -t\nnginx: the configuration file /etc/nginx/nginx.conf syntax is ok\nnginx: configuration file /etc/nginx/nginx.conf test is successful\n</code></pre>\n<p>配置文件解释参考： <a href=\"https://blog.csdn.net/tjcyjd/article/details/50695922\">https://blog.csdn.net/tjcyjd/article/details/50695922</a></p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "NGINX",
+      "id": "nginx"
+    },
+    {
+      "level": 3,
+      "text": "nginx常用命令",
+      "id": "nginx常用命令"
+    },
+    {
+      "level": 3,
+      "text": "配置文件",
+      "id": "配置文件"
+    },
+    {
+      "level": 1,
+      "text": "/usr/sbin/nginx -t",
+      "id": "usrsbinnginx-t"
+    }
+  ],
+  "hasMath": false
+}

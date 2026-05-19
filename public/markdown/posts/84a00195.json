@@ -1,0 +1,51 @@
+{
+  "title": "Pandas学习笔记",
+  "date": "2021-03-09T11:04:10.000Z",
+  "updatedAt": "2021-03-09T11:04:10.000Z",
+  "file": "Pandas学习笔记.md",
+  "slug": "84a00195",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 685,
+  "readingTime": 2,
+  "body": "### map()和apply()和applymap()区别\n\nmap()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。\n\napply()函数的功能是将一个自定义函数作用于DataFrame的行或者列\n\napplymap()函数的功能是将自定义函数作用于DataFrame的所有元素\n\n案例可以看这个：[https://www.cnblogs.com/jason--/p/11427145.html](https://www.cnblogs.com/jason--/p/11427145.html)  \n讲的非常清晰\n\n能看出map,apply,apply还是蛮有用的，但是上手不太容易\n\n### sort\\_values()和sort\\_index()区别\n\n1、sort\\_index()\n\nsort\\_index()通俗点讲，就是根据index的值进行排序，如果是按行排序，可以认为是根据index的值排序，如果是按列排序，可以认为是根据columns的值进行排序。用法如下：\n\n```\n### 按索引排序，需要指定轴和方向，默认为列方向排序\nunsorted_df.sort_index()#默认为index升序\nunsorted_df.sort_index(ascending=False)#此时为index降序   \n \nunsorted_df.sort_index(axis=1,ascending=True,inplace=False,na_position='last')\n#此时为columns方向升序，inplace指明是否替代原df,na_position指明缺失值的位置（'last'，'first'）\n \nunsorted_df.sort_index().sort_index(axis=1,ascending=True,inplace=False,na_position='last')\n#index和colimns同时排序，可以直接粘在后面\n```\n\nsort\\_values()对dataframe按某一列的值进行排序，或者按某一行的值进行排序。具体的参数设置如下：\n\n```\n\n# 参数\nDataFrame.sort_values（by，axis = 0，ascending = True，inplace = False，kind =' quicksort '，na_position ='last' ）\n \n#参数说明\nby: str或str的列表，如果axis=0或axis='index'，那么by='列名'；如果axis=1或axis='columns'，那么by='行名'\n \naxis: {0或'index';1或'columns'} 默认为0，即纵向排序，如果为1，则为横向排序\n \nascending: 布尔型，默认为True,即升序\n \ninplace: 布尔型，是否用排序后的数据代替现有数据\n \nkind: 排序算法， {'quicksort'，'mergesort'，'heapsort'}，默认'quicksort'\n \nna_position: {'first'，'last'}，默认'last' ,即将缺失值放在最后。\n```\n\n摘自https://blog.csdn.net/u011412768/article/details/107251808\n\n### pd.read\\_csv()参数\n\n```\ndf=pd.read_csv(filepath,\nheader=None,encoding=\"gbk\",\nnames=[\"A\",\"B\",\"C\",\"D\",\"E\"],\n               skiprows=1,\nskipfooter=1,\nusecols=[\"A\",\"B\",\"C\"],\nindex_col=0,\nengine=\"python\")\n————————————————\n版权声明：本文为CSDN博主「此间的少年1128」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\n原文链接：https://blog.csdn.net/weixin_44056331/article/details/89366105\n```\n\n**filepath\\_or\\_buffer**: 数据输入的路径：可以是文件路径、可以是URL，也可以是实现read方法的任意对象。这个参数，就是我们输入的第一个参数。\n\n还可以是一个URL，如果访问该URL会返回一个文件的话，那么pandas的read\\_csv函数会自动将该文件进行读取。比如：我们用fastapi写一个服务，将刚才的文件返回。\n\n**sep**: 读取csv文件时指定的分隔符，默认为逗号。注意：\"csv文件的分隔符\" 和 \"我们读取csv文件时指定的分隔符\" 一定要一致。\n\n比如：上面的girl.csv，我们将其分隔符从逗号改成\"\\\\t\"，如果这个时候还是用默认的逗号分隔符，那么数据读取之后便混为一体。\n\n**delimiter**: 分隔符的另一个名字，与 sep 功能相似。\n\n**header**/**names**:\n\n*   当names没被赋值时，header会变成0，即选取数据文件的第一行作为列名。\n*   当 names 被赋值，header 没被赋值时，那么header会变成None。如果都赋值，就会实现两个参数的组合功能。\n\n**index\\_col**: 我们在读取文件之后，生成的DataFrame的索引默认是0 1 2 3...，我们当然可以set\\_index，但是也可以在读取的时候就指定某个列为索引。\n\n**usecols**: 如果列有很多，而我们不想要全部的列、而是只要指定的列就可以使用这个参数。\n\n详细看这篇博文，写得非常好！！[https://www.cnblogs.com/traditional/p/12514914.html](https://www.cnblogs.com/traditional/p/12514914.html)\n\n### 样式问题\n\n困扰了我很久是pandas样式问题，在这篇博客里写的很详细！\n\n[https://www.gairuo.com/p/pandas-style-function](https://www.gairuo.com/p/pandas-style-function)",
+  "html": "<h3 id=\"map和apply和applymap区别\">map()和apply()和applymap()区别</h3>\n<p>map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。</p>\n<p>apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列</p>\n<p>applymap()函数的功能是将自定义函数作用于DataFrame的所有元素</p>\n<p>案例可以看这个：<a href=\"https://www.cnblogs.com/jason--/p/11427145.html\">https://www.cnblogs.com/jason–/p/11427145.html</a><br>\n讲的非常清晰</p>\n<p>能看出map,apply,apply还是蛮有用的，但是上手不太容易</p>\n<h3 id=\"sort_values和sort_index区别\">sort_values()和sort_index()区别</h3>\n<p>1、sort_index()</p>\n<p>sort_index()通俗点讲，就是根据index的值进行排序，如果是按行排序，可以认为是根据index的值排序，如果是按列排序，可以认为是根据columns的值进行排序。用法如下：</p>\n<pre><code class=\"language-text\">### 按索引排序，需要指定轴和方向，默认为列方向排序\nunsorted_df.sort_index()#默认为index升序\nunsorted_df.sort_index(ascending=False)#此时为index降序   \n \nunsorted_df.sort_index(axis=1,ascending=True,inplace=False,na_position='last')\n#此时为columns方向升序，inplace指明是否替代原df,na_position指明缺失值的位置（'last'，'first'）\n \nunsorted_df.sort_index().sort_index(axis=1,ascending=True,inplace=False,na_position='last')\n#index和colimns同时排序，可以直接粘在后面\n</code></pre>\n<p>sort_values()对dataframe按某一列的值进行排序，或者按某一行的值进行排序。具体的参数设置如下：</p>\n<pre><code class=\"language-text\">\n# 参数\nDataFrame.sort_values（by，axis = 0，ascending = True，inplace = False，kind =' quicksort '，na_position ='last' ）\n \n#参数说明\nby: str或str的列表，如果axis=0或axis='index'，那么by='列名'；如果axis=1或axis='columns'，那么by='行名'\n \naxis: {0或'index';1或'columns'} 默认为0，即纵向排序，如果为1，则为横向排序\n \nascending: 布尔型，默认为True,即升序\n \ninplace: 布尔型，是否用排序后的数据代替现有数据\n \nkind: 排序算法， {'quicksort'，'mergesort'，'heapsort'}，默认'quicksort'\n \nna_position: {'first'，'last'}，默认'last' ,即将缺失值放在最后。\n</code></pre>\n<p>摘自<a href=\"https://blog.csdn.net/u011412768/article/details/107251808\">https://blog.csdn.net/u011412768/article/details/107251808</a></p>\n<h3 id=\"pdread_csv参数\">pd.read_csv()参数</h3>\n<pre><code class=\"language-text\">df=pd.read_csv(filepath,\nheader=None,encoding=&quot;gbk&quot;,\nnames=[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;],\n               skiprows=1,\nskipfooter=1,\nusecols=[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;],\nindex_col=0,\nengine=&quot;python&quot;)\n————————————————\n版权声明：本文为CSDN博主「此间的少年1128」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\n原文链接：https://blog.csdn.net/weixin_44056331/article/details/89366105\n</code></pre>\n<p><strong>filepath_or_buffer</strong>: 数据输入的路径：可以是文件路径、可以是URL，也可以是实现read方法的任意对象。这个参数，就是我们输入的第一个参数。</p>\n<p>还可以是一个URL，如果访问该URL会返回一个文件的话，那么pandas的read_csv函数会自动将该文件进行读取。比如：我们用fastapi写一个服务，将刚才的文件返回。</p>\n<p><strong>sep</strong>: 读取csv文件时指定的分隔符，默认为逗号。注意：“csv文件的分隔符” 和 “我们读取csv文件时指定的分隔符” 一定要一致。</p>\n<p>比如：上面的girl.csv，我们将其分隔符从逗号改成&quot;\\t&quot;，如果这个时候还是用默认的逗号分隔符，那么数据读取之后便混为一体。</p>\n<p><strong>delimiter</strong>: 分隔符的另一个名字，与 sep 功能相似。</p>\n<p><strong>header</strong>/<strong>names</strong>:</p>\n<ul>\n<li>当names没被赋值时，header会变成0，即选取数据文件的第一行作为列名。</li>\n<li>当 names 被赋值，header 没被赋值时，那么header会变成None。如果都赋值，就会实现两个参数的组合功能。</li>\n</ul>\n<p><strong>index_col</strong>: 我们在读取文件之后，生成的DataFrame的索引默认是0 1 2 3…，我们当然可以set_index，但是也可以在读取的时候就指定某个列为索引。</p>\n<p><strong>usecols</strong>: 如果列有很多，而我们不想要全部的列、而是只要指定的列就可以使用这个参数。</p>\n<p>详细看这篇博文，写得非常好！！<a href=\"https://www.cnblogs.com/traditional/p/12514914.html\">https://www.cnblogs.com/traditional/p/12514914.html</a></p>\n<h3 id=\"样式问题\">样式问题</h3>\n<p>困扰了我很久是pandas样式问题，在这篇博客里写的很详细！</p>\n<p><a href=\"https://www.gairuo.com/p/pandas-style-function\">https://www.gairuo.com/p/pandas-style-function</a></p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "map()和apply()和applymap()区别",
+      "id": "map和apply和applymap区别"
+    },
+    {
+      "level": 3,
+      "text": "sort\\_values()和sort\\_index()区别",
+      "id": "sort_values和sort_index区别"
+    },
+    {
+      "level": 3,
+      "text": "按索引排序，需要指定轴和方向，默认为列方向排序",
+      "id": "按索引排序需要指定轴和方向默认为列方向排序"
+    },
+    {
+      "level": 1,
+      "text": "参数",
+      "id": "参数"
+    },
+    {
+      "level": 3,
+      "text": "pd.read\\_csv()参数",
+      "id": "pdread_csv参数"
+    },
+    {
+      "level": 3,
+      "text": "样式问题",
+      "id": "样式问题"
+    }
+  ],
+  "hasMath": false
+}

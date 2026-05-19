@@ -1,0 +1,31 @@
+{
+  "title": "Leetcode435:重叠区间——动态规划、贪心",
+  "date": "2022-03-20T09:41:58.000Z",
+  "updatedAt": "2022-03-20T09:41:58.000Z",
+  "file": "Leetcode435_重叠区间——动态规划、贪心.md",
+  "slug": "7f0b86db",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 501,
+  "readingTime": 2,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/non-overlapping-intervals/\n\n这题我竟然一年前做过，第二遍再做的时候一点印象都没有。\n\n看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算法水平还不如一年前？？？\n\n## 题解\n\n做的时候思路跑偏了，总想着把有重叠的区间找出来剔除掉。换一个思路，可以去寻找不重叠的最大区间数`n`，然后拿`all-n`就是最小重叠区间的数量。\n\n贪心的解法其实不难理解，只是不太容易想到（因为我是菜鸡qwq）：\n\n思路：可以把这题的情境想象成一个`预定会议`问题，区间的左右两端就是会议的开始时间和结束时间，要求会议时间不能重叠，寻找一个能安排最多会议次数的序列。那么我们先找到最先结束的那个会议，放在最开头。然后从剩下的会议里找到最先结束的，同时开始时间不早于第一个会议结束时间的那个会议，放在第二个。以此类推...就完成啦。\n\n实际做题的时候有个技巧，就是可以先按照会议结束的时间（即区间右端点）进行排序。这样代码会好写很多。\n\n**上不是自己写的代码：**\n\n```c++\nclass Solution {\npublic:\n    int eraseOverlapIntervals(vector<vector<int>>& intervals) {\n        if (intervals.empty()) {\n            return 0;\n        }\n        \n        sort(intervals.begin(), intervals.end(), [](const auto& u, const auto& v) {\n            return u[1] < v[1];\n        });\n\n        int n = intervals.size();\n        int right = intervals[0][1];\n        int ans = 1;\n        for (int i = 1; i < n; ++i) {\n            if (intervals[i][0] >= right) {\n                ++ans;\n                right = intervals[i][1];\n            }\n        }\n        return n - ans;\n    }\n};\n\n作者：LeetCode-Solution\n链接：https://leetcode-cn.com/problems/non-overlapping-intervals/solution/wu-zhong-die-qu-jian-by-leetcode-solutio-cpsb/\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n```\n\n复杂度分析：排序nlogn+遍历n，因为nlogn的幂次高，所以O(nlogn+n)=O(nlogn)，故时间复杂度O(nlogn)\n\n空间复杂度：O(logn)，排序所需要的栈空间\n\n还有一种**动态规划**的方法，是按照左端点进行排序，然后用`f[i]`表示「以区间 *i* 为最后一个区间，可以选出的区间数量的最大值」来进行状态转移。\n\n代码比贪心复杂，时间复杂度也大一点，懒得去研究了。\n\n\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/non-overlapping-intervals/\">https://leetcode-cn.com/problems/non-overlapping-intervals/</a></p>\n<p>这题我竟然一年前做过，第二遍再做的时候一点印象都没有。</p>\n<p>看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算法水平还不如一年前？？？</p>\n<h2 id=\"题解\">题解</h2>\n<p>做的时候思路跑偏了，总想着把有重叠的区间找出来剔除掉。换一个思路，可以去寻找不重叠的最大区间数<code>n</code>，然后拿<code>all-n</code>就是最小重叠区间的数量。</p>\n<p>贪心的解法其实不难理解，只是不太容易想到（因为我是菜鸡qwq）：</p>\n<p>思路：可以把这题的情境想象成一个<code>预定会议</code>问题，区间的左右两端就是会议的开始时间和结束时间，要求会议时间不能重叠，寻找一个能安排最多会议次数的序列。那么我们先找到最先结束的那个会议，放在最开头。然后从剩下的会议里找到最先结束的，同时开始时间不早于第一个会议结束时间的那个会议，放在第二个。以此类推…就完成啦。</p>\n<p>实际做题的时候有个技巧，就是可以先按照会议结束的时间（即区间右端点）进行排序。这样代码会好写很多。</p>\n<p><strong>上不是自己写的代码：</strong></p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    int eraseOverlapIntervals(vector&lt;vector&lt;int&gt;&gt;&amp; intervals) {\n        if (intervals.empty()) {\n            return 0;\n        }\n        \n        sort(intervals.begin(), intervals.end(), [](const auto&amp; u, const auto&amp; v) {\n            return u[1] &lt; v[1];\n        });\n\n        int n = intervals.size();\n        int right = intervals[0][1];\n        int ans = 1;\n        for (int i = 1; i &lt; n; ++i) {\n            if (intervals[i][0] &gt;= right) {\n                ++ans;\n                right = intervals[i][1];\n            }\n        }\n        return n - ans;\n    }\n};\n\n作者：LeetCode-Solution\n链接：https://leetcode-cn.com/problems/non-overlapping-intervals/solution/wu-zhong-die-qu-jian-by-leetcode-solutio-cpsb/\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n</code></pre>\n<p>复杂度分析：排序nlogn+遍历n，因为nlogn的幂次高，所以O(nlogn+n)=O(nlogn)，故时间复杂度O(nlogn)</p>\n<p>空间复杂度：O(logn)，排序所需要的栈空间</p>\n<p>还有一种<strong>动态规划</strong>的方法，是按照左端点进行排序，然后用<code>f[i]</code>表示「以区间 <em>i</em> 为最后一个区间，可以选出的区间数量的最大值」来进行状态转移。</p>\n<p>代码比贪心复杂，时间复杂度也大一点，懒得去研究了。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

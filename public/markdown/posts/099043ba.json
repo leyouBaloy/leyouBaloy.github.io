@@ -1,0 +1,31 @@
+{
+  "title": "Leetcode695:岛屿的最大面积——中等难度的搜索算法",
+  "date": "2022-03-24T07:47:10.000Z",
+  "updatedAt": "2022-03-24T07:47:10.000Z",
+  "file": "Leetcode695_岛屿的最大面积——中等难度的搜索算法.md",
+  "slug": "099043ba",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 394,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/max-area-of-island/\n\nleetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。\n\n## 题解\n\n这道题相较于Leetcode994:腐烂的橘子，有哪些不一样呢？\n\n* 994题给了你几个源点，而这题你需要从每个连通图里自己选择一个源点，才能进行搜索。\n* 994题要统计的是轮数，而这题在搜索时你需要统计节点总共的数量。\n\n解决方案：\n\n* 初始时遍历整个图，一旦遇到岛屿就开始做搜索。为了避免重复搜索，可以把已搜索节点标为0。\n* 带有返回值的递归。把整个递归过程看成一颗树，那么叶节点返回应该为1，其他节点返回应该是1+所有子节点。\n\n\n\n![带有返回值的递归](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/带有返回值的递归.jpg)\n\n上面这个图是我随手画的，只是便于理解，跟这个测试案例没啥关系😂。\n\n上代码：\n\n```c++\nclass Solution {\npublic:\n    int get_area(vector<vector<int>>& grid, int i,int j){\n        if(i<0 || i>grid.size()-1 || j<0 || j>grid[0].size()-1 || grid[i][j]==0){\n            return 0;\n        }\n        grid[i][j] = 0;\n        int ans = 1;\n        vector<int> di = {0,0,1,-1};\n        vector<int> dj = {1,-1,0,0};\n        for(int x=0;x<4;x++){\n            int next_i = i+di[x];\n            int next_j = j+dj[x];\n            ans += get_area(grid, next_i, next_j);\n        }\n        return ans;\n    }\n\n    int maxAreaOfIsland(vector<vector<int>>& grid) {\n        int maxarea = 0;\n        for(int i=0;i<grid.size();i++){\n            for(int j=0;j<grid[0].size();j++){\n                if(grid[i][j] == 1){\n                    int area  = get_area(grid,i,j);\n                    if(maxarea < area){\n                        maxarea = area;\n                    }\n                }\n            }\n        }\n        return maxarea;\n    }\n};\n```\n\n细节：\n\n* 搜索一个节点的时候先判断传入的坐标是否越界，如果越界了，或者所搜索的节点是0，直接return 0;因为只有1才有必要进行下一步操作。\n* ans这个变量就很关键了，先赋初值为0，再累加。结合上面的图思考。\n* `di`和`dj`这两个数组的定义就是节省了代码，上一道搜索算法的题目我也是这样写的。\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/max-area-of-island/\">https://leetcode-cn.com/problems/max-area-of-island/</a></p>\n<p>leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。</p>\n<h2 id=\"题解\">题解</h2>\n<p>这道题相较于Leetcode994:腐烂的橘子，有哪些不一样呢？</p>\n<ul>\n<li>994题给了你几个源点，而这题你需要从每个连通图里自己选择一个源点，才能进行搜索。</li>\n<li>994题要统计的是轮数，而这题在搜索时你需要统计节点总共的数量。</li>\n</ul>\n<p>解决方案：</p>\n<ul>\n<li>初始时遍历整个图，一旦遇到岛屿就开始做搜索。为了避免重复搜索，可以把已搜索节点标为0。</li>\n<li>带有返回值的递归。把整个递归过程看成一颗树，那么叶节点返回应该为1，其他节点返回应该是1+所有子节点。</li>\n</ul>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E5%B8%A6%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E9%80%92%E5%BD%92.jpg\" alt=\"带有返回值的递归\" loading=\"lazy\" decoding=\"async\"></p>\n<p>上面这个图是我随手画的，只是便于理解，跟这个测试案例没啥关系😂。</p>\n<p>上代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    int get_area(vector&lt;vector&lt;int&gt;&gt;&amp; grid, int i,int j){\n        if(i&lt;0 || i&gt;grid.size()-1 || j&lt;0 || j&gt;grid[0].size()-1 || grid[i][j]==0){\n            return 0;\n        }\n        grid[i][j] = 0;\n        int ans = 1;\n        vector&lt;int&gt; di = {0,0,1,-1};\n        vector&lt;int&gt; dj = {1,-1,0,0};\n        for(int x=0;x&lt;4;x++){\n            int next_i = i+di[x];\n            int next_j = j+dj[x];\n            ans += get_area(grid, next_i, next_j);\n        }\n        return ans;\n    }\n\n    int maxAreaOfIsland(vector&lt;vector&lt;int&gt;&gt;&amp; grid) {\n        int maxarea = 0;\n        for(int i=0;i&lt;grid.size();i++){\n            for(int j=0;j&lt;grid[0].size();j++){\n                if(grid[i][j] == 1){\n                    int area  = get_area(grid,i,j);\n                    if(maxarea &lt; area){\n                        maxarea = area;\n                    }\n                }\n            }\n        }\n        return maxarea;\n    }\n};\n</code></pre>\n<p>细节：</p>\n<ul>\n<li>搜索一个节点的时候先判断传入的坐标是否越界，如果越界了，或者所搜索的节点是0，直接return 0;因为只有1才有必要进行下一步操作。</li>\n<li>ans这个变量就很关键了，先赋初值为0，再累加。结合上面的图思考。</li>\n<li><code>di</code>和<code>dj</code>这两个数组的定义就是节省了代码，上一道搜索算法的题目我也是这样写的。</li>\n</ul>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

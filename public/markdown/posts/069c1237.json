@@ -1,0 +1,31 @@
+{
+  "title": "计组线上实验-运算器设计",
+  "date": "2022-10-29T04:58:43.000Z",
+  "updatedAt": "2022-10-29T04:58:43.000Z",
+  "file": "计组线上实验-运算器设计.md",
+  "slug": "069c1237",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 99,
+  "readingTime": 1,
+  "body": "## Logisim\n\n这个软件还蛮好用的，用java写的，Windows直接按照老师的说明文档装就可以了，Mac从这里下载\n\nhttps://github.com/laurensk/logisim-macos\n\n学习资料：\n\nMooc视频--计算机硬件系统设计\n\nhttps://www.icourse163.org/course/HUST-1205809816?from=searchPage\n\n\n\n## 第1关：8位可控加减法电路设计\n\n![image-20221029130141063](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20221029130141063.png)\n\n后面的答案看这个\n\nhttps://blog.csdn.net/qq_53149358/article/details/124462989\n\n",
+  "html": "<h2 id=\"logisim\">Logisim</h2>\n<p>这个软件还蛮好用的，用java写的，Windows直接按照老师的说明文档装就可以了，Mac从这里下载</p>\n<p><a href=\"https://github.com/laurensk/logisim-macos\">https://github.com/laurensk/logisim-macos</a></p>\n<p>学习资料：</p>\n<p>Mooc视频–计算机硬件系统设计</p>\n<p><a href=\"https://www.icourse163.org/course/HUST-1205809816?from=searchPage\">https://www.icourse163.org/course/HUST-1205809816?from=searchPage</a></p>\n<h2 id=\"第1关8位可控加减法电路设计\">第1关：8位可控加减法电路设计</h2>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20221029130141063.png\" alt=\"image-20221029130141063\" loading=\"lazy\" decoding=\"async\"></p>\n<p>后面的答案看这个</p>\n<p><a href=\"https://blog.csdn.net/qq_53149358/article/details/124462989\">https://blog.csdn.net/qq_53149358/article/details/124462989</a></p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Logisim",
+      "id": "logisim"
+    },
+    {
+      "level": 2,
+      "text": "第1关：8位可控加减法电路设计",
+      "id": "第1关8位可控加减法电路设计"
+    }
+  ],
+  "hasMath": false
+}

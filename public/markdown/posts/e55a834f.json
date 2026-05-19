@@ -1,0 +1,46 @@
+{
+  "title": "Leetcode743:网络延迟时间——dijkstra算法",
+  "date": "2022-04-21T09:35:07.000Z",
+  "updatedAt": "2022-04-21T09:35:07.000Z",
+  "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
+  "slug": "e55a834f",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 544,
+  "readingTime": 2,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/network-delay-time/\n\n关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。\n\n## 题解\n\n关于dijkstra算法具体内容就不在这里细说了，网上一大堆，这里主要关注代码。\n\n### 代码\n\n```python\nclass Solution:\n    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:\n        g = [[float('inf')]*n for _ in range(n)]\n        for x, y, time in times:\n            g[x-1][y-1] = time\n\n        dist = [float('inf')] * n\n        dist[k-1] = 0\n        used = [False] * n\n        for _ in range(n):\n            x = -1\n            for y, u in enumerate(used):\n                if not u and (x == -1 or dist[y] < dist[x]):\n                    x = y\n            used[x] = True\n            for y,time in enumerate(g[x]):\n                dist[y] = min(dist[y], dist[x]+time)\n        ans = max(dist)\n        return ans if ans < float('inf') else -1\n```\n\n### 代码详解\n\n`g[][]`：用`邻接矩阵`来储存这个图。`g[x][y]`表示从节点`x`到节点`y`的距离。如果不能到达，储存距离为无穷大。注意这段代码中把所有的节点都-1，这只是表示方式的问题，不重要。\n\n这段代码就是在构建`g`：\n\n```python\ng = [[float('inf')]*n for _ in range(n)]\nfor x, y, time in times:\n  g[x-1][y-1] = time\n```\n\n`dist[]`：`dist[i]`表示从起点`k`到节点`i`的最短距离（当前已知）。赋初值为无穷大。\n\n`used[]`：记录算法运行时使用过的节点。初值是把起始节点赋值为True，其余False。\n\n```python\nfor y, u in enumerate(used):\n  if not u and (x == -1 or dist[y] < dist[x]):\n    x = y\n  used[x] = True\n```\n\n上面这段代码，每次从「未确定节点」中取一个与起点距离最短的点，将它归类为「已确定节点」，并用它「更新」从起点到其他所有「未确定节点」的距离。直到所有点都被归类为「已确定节点」。`x`就是要找的那个已确定节点，第一次x=k。\n\n```python\nfor y,time in enumerate(g[x]):\n\tdist[y] = min(dist[y], dist[x]+time)\n```\n\n用节点 A「更新」节点 B 的意思是，用起点到节点 A 的最短路长度加上从节点 A 到节点 B 的边的长度，去比较起点到节点 B 的最短路长度，如果前者小于后者，就用前者更新后者。这种操作也被叫做「松弛」。这里节点A就是`x`，节点B就是`y`。\n\n最后根据这题的要求，找`dist[]`里最大的返回就行了。\n\n时间复杂度：O(n^2+m)，其中 m 是数组times 的长度。\n\n空间复杂度：O(n^2)。邻接矩阵需占用 O(n^2)的空间。\n\ndijkstra算法的时间复杂度为O(n^2)\n\n\n\n###  用小根堆优化\n\n可以使用一个小根堆来寻找「未确定节点」中与起点距离最近的点。\n\n这个具体就不研究了，能把基本算法搞明白就不错了😂。\n\n\n\n\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/network-delay-time/\">https://leetcode-cn.com/problems/network-delay-time/</a></p>\n<p>关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。</p>\n<h2 id=\"题解\">题解</h2>\n<p>关于dijkstra算法具体内容就不在这里细说了，网上一大堆，这里主要关注代码。</p>\n<h3 id=\"代码\">代码</h3>\n<pre><code class=\"language-python\">class Solution:\n    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -&gt; int:\n        g = [[float('inf')]*n for _ in range(n)]\n        for x, y, time in times:\n            g[x-1][y-1] = time\n\n        dist = [float('inf')] * n\n        dist[k-1] = 0\n        used = [False] * n\n        for _ in range(n):\n            x = -1\n            for y, u in enumerate(used):\n                if not u and (x == -1 or dist[y] &lt; dist[x]):\n                    x = y\n            used[x] = True\n            for y,time in enumerate(g[x]):\n                dist[y] = min(dist[y], dist[x]+time)\n        ans = max(dist)\n        return ans if ans &lt; float('inf') else -1\n</code></pre>\n<h3 id=\"代码详解\">代码详解</h3>\n<p><code>g[][]</code>：用<code>邻接矩阵</code>来储存这个图。<code>g[x][y]</code>表示从节点<code>x</code>到节点<code>y</code>的距离。如果不能到达，储存距离为无穷大。注意这段代码中把所有的节点都-1，这只是表示方式的问题，不重要。</p>\n<p>这段代码就是在构建<code>g</code>：</p>\n<pre><code class=\"language-python\">g = [[float('inf')]*n for _ in range(n)]\nfor x, y, time in times:\n  g[x-1][y-1] = time\n</code></pre>\n<p><code>dist[]</code>：<code>dist[i]</code>表示从起点<code>k</code>到节点<code>i</code>的最短距离（当前已知）。赋初值为无穷大。</p>\n<p><code>used[]</code>：记录算法运行时使用过的节点。初值是把起始节点赋值为True，其余False。</p>\n<pre><code class=\"language-python\">for y, u in enumerate(used):\n  if not u and (x == -1 or dist[y] &lt; dist[x]):\n    x = y\n  used[x] = True\n</code></pre>\n<p>上面这段代码，每次从「未确定节点」中取一个与起点距离最短的点，将它归类为「已确定节点」，并用它「更新」从起点到其他所有「未确定节点」的距离。直到所有点都被归类为「已确定节点」。<code>x</code>就是要找的那个已确定节点，第一次x=k。</p>\n<pre><code class=\"language-python\">for y,time in enumerate(g[x]):\n\tdist[y] = min(dist[y], dist[x]+time)\n</code></pre>\n<p>用节点 A「更新」节点 B 的意思是，用起点到节点 A 的最短路长度加上从节点 A 到节点 B 的边的长度，去比较起点到节点 B 的最短路长度，如果前者小于后者，就用前者更新后者。这种操作也被叫做「松弛」。这里节点A就是<code>x</code>，节点B就是<code>y</code>。</p>\n<p>最后根据这题的要求，找<code>dist[]</code>里最大的返回就行了。</p>\n<p>时间复杂度：O(n^2+m)，其中 m 是数组times 的长度。</p>\n<p>空间复杂度：O(n^2)。邻接矩阵需占用 O(n^2)的空间。</p>\n<p>dijkstra算法的时间复杂度为O(n^2)</p>\n<h3 id=\"用小根堆优化\">用小根堆优化</h3>\n<p>可以使用一个小根堆来寻找「未确定节点」中与起点距离最近的点。</p>\n<p>这个具体就不研究了，能把基本算法搞明白就不错了😂。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "代码",
+      "id": "代码"
+    },
+    {
+      "level": 3,
+      "text": "代码详解",
+      "id": "代码详解"
+    },
+    {
+      "level": 3,
+      "text": "用小根堆优化",
+      "id": "用小根堆优化"
+    }
+  ],
+  "hasMath": false
+}

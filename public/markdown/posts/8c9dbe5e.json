@@ -1,0 +1,20 @@
+{
+  "title": "c++比较字典序的三种方法",
+  "date": "2020-12-04T08:04:09.000Z",
+  "updatedAt": "2020-12-04T08:04:09.000Z",
+  "file": "c++比较字典序的三种方法.md",
+  "slug": "8c9dbe5e",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 18,
+  "readingTime": 1,
+  "body": "[比较字符串字典序的三种方法【C++】 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/205953754)\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n char s1[2] = \"a\";\n char s2[2] = \"b\";\n cout << strcmp(s1, s2) << endl; //-1\n cout << strcmp(s2, s1) << endl; //1\n cout << strcmp(s1, s1) << endl; //0\n return 0;\n}\n```\n\n```\n#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n string s1 = \"a\";\n string s2 = \"b\";\n cout << s1.compare(s2) << endl; //-1\n cout << s2.compare(s1) << endl; //1\n cout << s1.compare(s1) << endl; //0\n return 0;\n}\n```\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n char s1[2] = \"a\";\n char s2[2] = \"b\";\n cout << (s1 < s2) << endl; //0\n cout << &s1 << endl;  //00BDFE74\n cout << &s2 << endl;  //00BDFE68\n cout << (string(s1) < string(s2)) << endl; //1\n cout << (string(s2) < string(s1)) << endl; //0\n cout << (string(s1) == string(s1)) << endl; //1\n return 0;\n}\n```",
+  "html": "<p><a href=\"https://zhuanlan.zhihu.com/p/205953754\">比较字符串字典序的三种方法【C++】 - 知乎 (zhihu.com)</a></p>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\nusing namespace std;\n\nint main() {\n char s1[2] = &quot;a&quot;;\n char s2[2] = &quot;b&quot;;\n cout &lt;&lt; strcmp(s1, s2) &lt;&lt; endl; //-1\n cout &lt;&lt; strcmp(s2, s1) &lt;&lt; endl; //1\n cout &lt;&lt; strcmp(s1, s1) &lt;&lt; endl; //0\n return 0;\n}\n</code></pre>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;string&gt;\nusing namespace std;\n\nint main() {\n string s1 = &quot;a&quot;;\n string s2 = &quot;b&quot;;\n cout &lt;&lt; s1.compare(s2) &lt;&lt; endl; //-1\n cout &lt;&lt; s2.compare(s1) &lt;&lt; endl; //1\n cout &lt;&lt; s1.compare(s1) &lt;&lt; endl; //0\n return 0;\n}\n</code></pre>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\nusing namespace std;\n\nint main() {\n char s1[2] = &quot;a&quot;;\n char s2[2] = &quot;b&quot;;\n cout &lt;&lt; (s1 &lt; s2) &lt;&lt; endl; //0\n cout &lt;&lt; &amp;s1 &lt;&lt; endl;  //00BDFE74\n cout &lt;&lt; &amp;s2 &lt;&lt; endl;  //00BDFE68\n cout &lt;&lt; (string(s1) &lt; string(s2)) &lt;&lt; endl; //1\n cout &lt;&lt; (string(s2) &lt; string(s1)) &lt;&lt; endl; //0\n cout &lt;&lt; (string(s1) == string(s1)) &lt;&lt; endl; //1\n return 0;\n}\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

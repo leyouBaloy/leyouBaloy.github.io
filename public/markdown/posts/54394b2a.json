@@ -1,0 +1,56 @@
+{
+  "title": "完全背包问题——动态规划——这道题解是认真写的qwq",
+  "date": "2022-02-23T11:24:06.000Z",
+  "updatedAt": "2022-02-23T11:24:06.000Z",
+  "file": "完全背包问题——动态规划.md",
+  "slug": "54394b2a",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 422,
+  "readingTime": 2,
+  "body": "> 完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。\n>\n> 题目链接：https://www.acwing.com/problem/content/3/\n\n有 NN 种物品和一个容量是 VV 的背包，每种物品都有无限件可用。\n\n第 ii 种物品的体积是 vivi，价值是 wiwi。\n\n求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。\n输出最大价值。\n\n## 题目\n\n#### 输入格式\n\n第一行两个整数，N，VN，V，用空格隔开，分别表示物品种数和背包容积。\n\n接下来有 NN 行，每行两个整数 vi,wivi,wi，用空格隔开，分别表示第 ii 种物品的体积和价值。\n\n#### 输出格式\n\n输出一个整数，表示最大价值。\n\n#### 数据范围\n\n0<N,V≤10000<N,V≤1000\n0<vi,wi≤10000<vi,wi≤1000\n\n#### 输入样例\n\n```\n4 5\n1 2\n2 4\n3 4\n4 5\n```\n\n#### 输出样例：\n\n```\n10\n```\n\n## 题解\n\n> 参考作者：Charles__\n> 链接：https://www.acwing.com/solution/content/5345/\n> 来源：AcWing\n\n在01背包问题中，有一段判断装不装该物品的代码：\n\n```c++\nfor(int i = 1; i <= n; i++) \n  for(int j = 1; j <= m; j++)\n  {\n    //  当前背包容量装不进第i个物品，则价值等于前i-1个物品\n    if(j < v[i]) \n      f[i][j] = f[i - 1][j];\n    // 能装，需进行决策是否选择第i个物品\n    else    \n      f[i][j] = max(f[i - 1][j], f[i - 1][j - v[i]] + w[i]);\n  }           \n```\n\n我们可以用一个0到1的k循环改写，k的物理意义是物品的数量：\n\n```c++\nfor(int i=1;i<=n;i++){\n  for(int j=1;j<=m;j++) {\n    for(int k = 0 ; k*v[i]<=j&&k<=1 ; k++)\n      f[i][j] = max(f[i][j],f[i-1][j-k*v[i]]+k*w[i]);\n  }\n}\n```\n\n当k=0时，`f[i][j] = f[i-1][j]`; \n\n当k=1时（k*v[i]<=j的约束条件保证背包可以装得下），\n\n```\nf[i][j]\n=max(f[i][j],f[i-1][j-v[i]]+w[i])\n=max(f[i-1][j],f[i-1][j-v[i]]+w[i])\n````\n\n这样我们就可以推广01背包问题到完全背包问题啦，完全背包问题的答案如下：\n\n```c++\n#include<iostream>\nusing namespace std;\nconst int N = 1010;\nint f[N][N];\nint v[N],w[N];\nint main()\n{\n    int n,m;\n    cin>>n>>m;\n    for(int i = 1 ; i <= n ;i ++)\n    {\n        cin>>v[i]>>w[i];\n    }\n\n    for(int i = 1 ; i<=n ;i++)\n    for(int j = 0 ; j<=m ;j++)\n    {\n        for(int k = 0 ; k*v[i]<=j ; k++)\n            f[i][j] = max(f[i][j],f[i-1][j-k*v[i]]+k*w[i]);\n    }\n\n    cout<<f[n][m]<<endl;\n}\n```\n\nbut，这样写性能貌似不太行啊，还得优化：\n\n大佬通过数学推导，把循环都给破解了，核心代码优化成这样：\n\n```c++\nfor(int i = 1 ; i <=n ;i++)\nfor(int j = 0 ; j <=m ;j++)\n{\n    f[i][j] = f[i-1][j];\n    if(j-v[i]>=0)\n        f[i][j]=max(f[i][j],f[i][j-v[i]]+w[i]);\n}\n```\n\n后面还能继续优化！但是到这里这道题已经能ac了，我这个懒逼就不继续思考了。\n\n最终代码：\n\n```c++\n\n#include <iostream>\n\nusing namespace std;\n\nconst int MAXN = 1005;\nint v[MAXN];    // 体积\nint w[MAXN];    // 价值\nint f[MAXN][MAXN]; // f[i][j], j体积下前i个物品的最大价值\n\nint main(){\n    int n,m;\n    cin >> n >> m;\n    for(int i=1;i<=n;i++){\n        cin >> v[i] >> w[i];\n    }\n\n    for(int i = 1 ; i <=n ;i++)\n        for(int j = 0 ; j <=m ;j++)\n        {\n            f[i][j] = f[i-1][j];\n            if(j-v[i]>=0)\n                f[i][j]=max(f[i][j],f[i][j-v[i]]+w[i]);\n        }\n    cout << f[n][m] << endl;\n    return 0;\n}\n```\n\n",
+  "html": "<blockquote>\n<p>完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。</p>\n<p>题目链接：<a href=\"https://www.acwing.com/problem/content/3/\">https://www.acwing.com/problem/content/3/</a></p>\n</blockquote>\n<p>有 NN 种物品和一个容量是 VV 的背包，每种物品都有无限件可用。</p>\n<p>第 ii 种物品的体积是 vivi，价值是 wiwi。</p>\n<p>求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。\n输出最大价值。</p>\n<h2 id=\"题目\">题目</h2>\n<h4 id=\"输入格式\">输入格式</h4>\n<p>第一行两个整数，N，VN，V，用空格隔开，分别表示物品种数和背包容积。</p>\n<p>接下来有 NN 行，每行两个整数 vi,wivi,wi，用空格隔开，分别表示第 ii 种物品的体积和价值。</p>\n<h4 id=\"输出格式\">输出格式</h4>\n<p>输出一个整数，表示最大价值。</p>\n<h4 id=\"数据范围\">数据范围</h4>\n<p>0&lt;N,V≤10000&lt;N,V≤1000\n0&lt;vi,wi≤10000&lt;vi,wi≤1000</p>\n<h4 id=\"输入样例\">输入样例</h4>\n<pre><code class=\"language-text\">4 5\n1 2\n2 4\n3 4\n4 5\n</code></pre>\n<h4 id=\"输出样例\">输出样例：</h4>\n<pre><code class=\"language-text\">10\n</code></pre>\n<h2 id=\"题解\">题解</h2>\n<blockquote>\n<p>参考作者：Charles__\n链接：<a href=\"https://www.acwing.com/solution/content/5345/\">https://www.acwing.com/solution/content/5345/</a>\n来源：AcWing</p>\n</blockquote>\n<p>在01背包问题中，有一段判断装不装该物品的代码：</p>\n<pre><code class=\"language-c++\">for(int i = 1; i &lt;= n; i++) \n  for(int j = 1; j &lt;= m; j++)\n  {\n    //  当前背包容量装不进第i个物品，则价值等于前i-1个物品\n    if(j &lt; v[i]) \n      f[i][j] = f[i - 1][j];\n    // 能装，需进行决策是否选择第i个物品\n    else    \n      f[i][j] = max(f[i - 1][j], f[i - 1][j - v[i]] + w[i]);\n  }           \n</code></pre>\n<p>我们可以用一个0到1的k循环改写，k的物理意义是物品的数量：</p>\n<pre><code class=\"language-c++\">for(int i=1;i&lt;=n;i++){\n  for(int j=1;j&lt;=m;j++) {\n    for(int k = 0 ; k*v[i]&lt;=j&amp;&amp;k&lt;=1 ; k++)\n      f[i][j] = max(f[i][j],f[i-1][j-k*v[i]]+k*w[i]);\n  }\n}\n</code></pre>\n<p>当k=0时，<code>f[i][j] = f[i-1][j]</code>;</p>\n<p>当k=1时（k*v[i]&lt;=j的约束条件保证背包可以装得下），</p>\n<pre><code class=\"language-text\">f[i][j]\n=max(f[i][j],f[i-1][j-v[i]]+w[i])\n=max(f[i-1][j],f[i-1][j-v[i]]+w[i])\n</code></pre>\n<p>这样我们就可以推广01背包问题到完全背包问题啦，完全背包问题的答案如下：</p>\n<pre><code class=\"language-c++\">#include&lt;iostream&gt;\nusing namespace std;\nconst int N = 1010;\nint f[N][N];\nint v[N],w[N];\nint main()\n{\n    int n,m;\n    cin&gt;&gt;n&gt;&gt;m;\n    for(int i = 1 ; i &lt;= n ;i ++)\n    {\n        cin&gt;&gt;v[i]&gt;&gt;w[i];\n    }\n\n    for(int i = 1 ; i&lt;=n ;i++)\n    for(int j = 0 ; j&lt;=m ;j++)\n    {\n        for(int k = 0 ; k*v[i]&lt;=j ; k++)\n            f[i][j] = max(f[i][j],f[i-1][j-k*v[i]]+k*w[i]);\n    }\n\n    cout&lt;&lt;f[n][m]&lt;&lt;endl;\n}\n</code></pre>\n<p>but，这样写性能貌似不太行啊，还得优化：</p>\n<p>大佬通过数学推导，把循环都给破解了，核心代码优化成这样：</p>\n<pre><code class=\"language-c++\">for(int i = 1 ; i &lt;=n ;i++)\nfor(int j = 0 ; j &lt;=m ;j++)\n{\n    f[i][j] = f[i-1][j];\n    if(j-v[i]&gt;=0)\n        f[i][j]=max(f[i][j],f[i][j-v[i]]+w[i]);\n}\n</code></pre>\n<p>后面还能继续优化！但是到这里这道题已经能ac了，我这个懒逼就不继续思考了。</p>\n<p>最终代码：</p>\n<pre><code class=\"language-c++\">\n#include &lt;iostream&gt;\n\nusing namespace std;\n\nconst int MAXN = 1005;\nint v[MAXN];    // 体积\nint w[MAXN];    // 价值\nint f[MAXN][MAXN]; // f[i][j], j体积下前i个物品的最大价值\n\nint main(){\n    int n,m;\n    cin &gt;&gt; n &gt;&gt; m;\n    for(int i=1;i&lt;=n;i++){\n        cin &gt;&gt; v[i] &gt;&gt; w[i];\n    }\n\n    for(int i = 1 ; i &lt;=n ;i++)\n        for(int j = 0 ; j &lt;=m ;j++)\n        {\n            f[i][j] = f[i-1][j];\n            if(j-v[i]&gt;=0)\n                f[i][j]=max(f[i][j],f[i][j-v[i]]+w[i]);\n        }\n    cout &lt;&lt; f[n][m] &lt;&lt; endl;\n    return 0;\n}\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 4,
+      "text": "输入格式",
+      "id": "输入格式"
+    },
+    {
+      "level": 4,
+      "text": "输出格式",
+      "id": "输出格式"
+    },
+    {
+      "level": 4,
+      "text": "数据范围",
+      "id": "数据范围"
+    },
+    {
+      "level": 4,
+      "text": "输入样例",
+      "id": "输入样例"
+    },
+    {
+      "level": 4,
+      "text": "输出样例：",
+      "id": "输出样例"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

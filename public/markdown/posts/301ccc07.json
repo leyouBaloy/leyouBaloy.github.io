@@ -1,0 +1,76 @@
+{
+  "title": "Leetcode230:二叉搜索树中第K小的元素",
+  "date": "2022-04-04T07:26:44.000Z",
+  "updatedAt": "2022-04-04T07:26:44.000Z",
+  "file": "Leetcode230_二叉搜索树中第K小的元素.md",
+  "slug": "301ccc07",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 357,
+  "readingTime": 1,
+  "body": "# 题目\n\nhttps://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/\n\n这是一道可拓展性很高的题目\n\n# 题解\n\n### 中序遍历递归法\n\n最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第`k-1`个元素。\n\n可是我们只需要第`k`个元素，不用把所有元素都遍历完再返回结果，那么如何优化呢？\n\n那就让它遍历到第k个元素时就终止递归，返回结果呗。但是递归不是想终止就终止的，它会有“惯性”～\n\n比如下面的代码：\n\n```python\n# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:\n        nums = []\n        def inorder(root):\n            if (not root) or (len(nums)>k):\n                return\n            if root.left:\n                inorder(root.left)\n            nums.append(root.val)\n            if root.right:\n                inorder(root.right)\n        inorder(root)\n        print(nums)\n        return nums[k-1]\n```\n\n对于k=1，我们想让`len(nums)>1`时就终止，实际上它一直运行到了`nums=3`。所以这种解法不够优雅。\n\n### 中序遍历迭代法\n\n中序遍历还有一个用栈实现的迭代法，其代码如下：\n\n```python\nstack = []\nwhile root or stack:\n  while root:\n    stack.append(root)\n    root = root.left\nroot = stack.pop()\nroot = root.right\n```\n\n迭代法相比递归法的优势就是随时可以终止，只需加上两句就可以啦。下面是完整代码：\n\n```python\nclass Solution:\n    def kthSmallest(self, root: TreeNode, k: int) -> int:\n        stack = []\n        while root or stack:\n            while root:\n                stack.append(root)\n                root = root.left\n            root = stack.pop()\n            k -= 1\n            if k == 0:\n                return root.val\n            root = root.right\n```\n\n时间复杂度：O(H+k)；空间复杂度：O(H)\n\n### 记录子树的节点\n\n这个方法适用于频繁地查找第k个最小的值。\n\n<img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220404154420485.png\" alt=\"image-20220404154420485\" style=\"zoom: 50%;\" />\n\n> 作者：LeetCode-Solution\n> 链接：https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yua-8o07/\n> 来源：力扣（LeetCode）\n> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n",
+  "html": "<h1 id=\"题目\">题目</h1>\n<p><a href=\"https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/\">https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/</a></p>\n<p>这是一道可拓展性很高的题目</p>\n<h1 id=\"题解\">题解</h1>\n<h3 id=\"中序遍历递归法\">中序遍历递归法</h3>\n<p>最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第<code>k-1</code>个元素。</p>\n<p>可是我们只需要第<code>k</code>个元素，不用把所有元素都遍历完再返回结果，那么如何优化呢？</p>\n<p>那就让它遍历到第k个元素时就终止递归，返回结果呗。但是递归不是想终止就终止的，它会有“惯性”～</p>\n<p>比如下面的代码：</p>\n<pre><code class=\"language-python\"># Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def kthSmallest(self, root: Optional[TreeNode], k: int) -&gt; int:\n        nums = []\n        def inorder(root):\n            if (not root) or (len(nums)&gt;k):\n                return\n            if root.left:\n                inorder(root.left)\n            nums.append(root.val)\n            if root.right:\n                inorder(root.right)\n        inorder(root)\n        print(nums)\n        return nums[k-1]\n</code></pre>\n<p>对于k=1，我们想让<code>len(nums)&gt;1</code>时就终止，实际上它一直运行到了<code>nums=3</code>。所以这种解法不够优雅。</p>\n<h3 id=\"中序遍历迭代法\">中序遍历迭代法</h3>\n<p>中序遍历还有一个用栈实现的迭代法，其代码如下：</p>\n<pre><code class=\"language-python\">stack = []\nwhile root or stack:\n  while root:\n    stack.append(root)\n    root = root.left\nroot = stack.pop()\nroot = root.right\n</code></pre>\n<p>迭代法相比递归法的优势就是随时可以终止，只需加上两句就可以啦。下面是完整代码：</p>\n<pre><code class=\"language-python\">class Solution:\n    def kthSmallest(self, root: TreeNode, k: int) -&gt; int:\n        stack = []\n        while root or stack:\n            while root:\n                stack.append(root)\n                root = root.left\n            root = stack.pop()\n            k -= 1\n            if k == 0:\n                return root.val\n            root = root.right\n</code></pre>\n<p>时间复杂度：O(H+k)；空间复杂度：O(H)</p>\n<h3 id=\"记录子树的节点\">记录子树的节点</h3>\n<p>这个方法适用于频繁地查找第k个最小的值。</p>\n<img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220404154420485.png\" alt=\"image-20220404154420485\" style=\"zoom: 50%;\" />\n<blockquote>\n<p>作者：LeetCode-Solution\n链接：<a href=\"https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yua-8o07/\">https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yua-8o07/</a>\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>\n</blockquote>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 1,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "中序遍历递归法",
+      "id": "中序遍历递归法"
+    },
+    {
+      "level": 1,
+      "text": "Definition for a binary tree node.",
+      "id": "definition-for-a-binary-tree-node"
+    },
+    {
+      "level": 1,
+      "text": "class TreeNode:",
+      "id": "class-treenode"
+    },
+    {
+      "level": 1,
+      "text": "def __init__(self, val=0, left=None, right=None):",
+      "id": "def-__init__self-val0-leftnone-rightnone"
+    },
+    {
+      "level": 1,
+      "text": "self.val = val",
+      "id": "selfval-val"
+    },
+    {
+      "level": 1,
+      "text": "self.left = left",
+      "id": "selfleft-left"
+    },
+    {
+      "level": 1,
+      "text": "self.right = right",
+      "id": "selfright-right"
+    },
+    {
+      "level": 3,
+      "text": "中序遍历迭代法",
+      "id": "中序遍历迭代法"
+    },
+    {
+      "level": 3,
+      "text": "记录子树的节点",
+      "id": "记录子树的节点"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,56 @@
+{
+  "title": "租用游艇——动态规划",
+  "date": "2022-02-21T12:19:11.000Z",
+  "updatedAt": "2022-02-21T12:19:11.000Z",
+  "file": "租用游艇——动态规划.md",
+  "slug": "04c9f708",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 336,
+  "readingTime": 1,
+  "body": "> 洛谷P1359 租用游艇\n>\n> https://www.luogu.com.cn/problem/solution/P1359\n\n## 题目描述\n\n长江游艇俱乐部在长江上设置了 n*n* 个游艇出租站 1,2,\\cdots,n1,2,⋯,*n*。游客可在这些游艇出租站租用游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站 i*i* 到游艇出租站 j*j* 之间的租金为 r(i,j)*r*(*i*,*j*)（1\\le i\\lt j\\le n1≤*i*<*j*≤*n*）。试设计一个算法，计算出从游艇出租站 11 到游艇出租站 n*n* 所需的最少租金。\n\n## 输入格式\n\n第一行中有一个正整数 n*n*，表示有 n*n* 个游艇出租站。接下来的 n-1*n*−1 行是一个半矩阵 r(i,j)*r*(*i*,*j*)（1\\le i<j\\le n1≤*i*<*j*≤*n*）。\n\n## 输出格式\n\n输出计算出的从游艇出租站 11 到游艇出租站 n*n* 所需的最少租金。\n\n## 输入输出样例\n\n**输入 #1**复制\n\n```\n3\n5 15\n7\n```\n\n**输出 #1**复制\n\n```\n12\n```\n\n## 说明/提示\n\nn\\le 200*n*≤200，保证计算过程中任何时刻数值都不超过 10^6106。\n\n\n\n## 解法\n\n```c++\n#include<iostream>\n#include<cmath>\nusing namespace std;\nint a[201][201],i,j,n,dp[201];\nint main(){\n\tcin>>n;\n\tfor(i=1;i<n;i++){\n\t\tfor(j=i+1;j<=n;j++)\n\t\t\tcin>>a[i][j];\n\t\tdp[i]=1e9;//初始化数组dp，使它\n\t}\n\tfor(i=n-1;i>=1;i--)//跑n上流的中转站\n\t\tfor(j=i+1;j<=n;j++)//跑i下流的所有中转站\n\t\t\tdp[i]=min(dp[i],a[i][j]+dp[j]);//记录\n\tcout<<dp[1];\n\treturn 0;\n}\n```\n\n\n\n## 感受\n\n第一次做动态规划，没啥思路，代码是复制别人的题解，代码很巧妙，当n=3时，dp[3]=0，从后往前找最短路径，使得代码很简洁。\n",
+  "html": "<blockquote>\n<p>洛谷P1359 租用游艇</p>\n<p><a href=\"https://www.luogu.com.cn/problem/solution/P1359\">https://www.luogu.com.cn/problem/solution/P1359</a></p>\n</blockquote>\n<h2 id=\"题目描述\">题目描述</h2>\n<p>长江游艇俱乐部在长江上设置了 n<em>n</em> 个游艇出租站 1,2,\\cdots,n1,2,⋯,<em>n</em>。游客可在这些游艇出租站租用游艇，并在下游的任何一个游艇出租站归还游艇。游艇出租站 i<em>i</em> 到游艇出租站 j<em>j</em> 之间的租金为 r(i,j)<em>r</em>(<em>i</em>,<em>j</em>)（1\\le i\\lt j\\le n1≤<em>i</em>&lt;<em>j</em>≤<em>n</em>）。试设计一个算法，计算出从游艇出租站 11 到游艇出租站 n<em>n</em> 所需的最少租金。</p>\n<h2 id=\"输入格式\">输入格式</h2>\n<p>第一行中有一个正整数 n<em>n</em>，表示有 n<em>n</em> 个游艇出租站。接下来的 n-1<em>n</em>−1 行是一个半矩阵 r(i,j)<em>r</em>(<em>i</em>,<em>j</em>)（1\\le i&lt;j\\le n1≤<em>i</em>&lt;<em>j</em>≤<em>n</em>）。</p>\n<h2 id=\"输出格式\">输出格式</h2>\n<p>输出计算出的从游艇出租站 11 到游艇出租站 n<em>n</em> 所需的最少租金。</p>\n<h2 id=\"输入输出样例\">输入输出样例</h2>\n<p><strong>输入 #1</strong>复制</p>\n<pre><code class=\"language-text\">3\n5 15\n7\n</code></pre>\n<p><strong>输出 #1</strong>复制</p>\n<pre><code class=\"language-text\">12\n</code></pre>\n<h2 id=\"说明提示\">说明/提示</h2>\n<p>n\\le 200<em>n</em>≤200，保证计算过程中任何时刻数值都不超过 10^6106。</p>\n<h2 id=\"解法\">解法</h2>\n<pre><code class=\"language-c++\">#include&lt;iostream&gt;\n#include&lt;cmath&gt;\nusing namespace std;\nint a[201][201],i,j,n,dp[201];\nint main(){\n\tcin&gt;&gt;n;\n\tfor(i=1;i&lt;n;i++){\n\t\tfor(j=i+1;j&lt;=n;j++)\n\t\t\tcin&gt;&gt;a[i][j];\n\t\tdp[i]=1e9;//初始化数组dp，使它\n\t}\n\tfor(i=n-1;i&gt;=1;i--)//跑n上流的中转站\n\t\tfor(j=i+1;j&lt;=n;j++)//跑i下流的所有中转站\n\t\t\tdp[i]=min(dp[i],a[i][j]+dp[j]);//记录\n\tcout&lt;&lt;dp[1];\n\treturn 0;\n}\n</code></pre>\n<h2 id=\"感受\">感受</h2>\n<p>第一次做动态规划，没啥思路，代码是复制别人的题解，代码很巧妙，当n=3时，dp[3]=0，从后往前找最短路径，使得代码很简洁。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目描述",
+      "id": "题目描述"
+    },
+    {
+      "level": 2,
+      "text": "输入格式",
+      "id": "输入格式"
+    },
+    {
+      "level": 2,
+      "text": "输出格式",
+      "id": "输出格式"
+    },
+    {
+      "level": 2,
+      "text": "输入输出样例",
+      "id": "输入输出样例"
+    },
+    {
+      "level": 2,
+      "text": "说明/提示",
+      "id": "说明提示"
+    },
+    {
+      "level": 2,
+      "text": "解法",
+      "id": "解法"
+    },
+    {
+      "level": 2,
+      "text": "感受",
+      "id": "感受"
+    }
+  ],
+  "hasMath": false
+}

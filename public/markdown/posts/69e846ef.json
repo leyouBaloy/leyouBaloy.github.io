@@ -1,0 +1,31 @@
+{
+  "title": "Leetcode55:跳跃游戏——贪心",
+  "date": "2022-04-01T08:03:13.000Z",
+  "updatedAt": "2022-04-01T08:03:13.000Z",
+  "file": "Leetcode55_跳跃游戏——贪心.md",
+  "slug": "69e846ef",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 169,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/jump-game/\n\n## 题解\n\n所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。\n\n那么这道题可以有这样的思路：从前往后遍历`nums`的元素，实时维护**最远可以到达的位置** `far`。\n\n对于当前遍历的位置`i`，先判断`i<=far`，再有`far = max(far, i+nums[i])`\n\n直到`far>=len(nums)`，则返回True，否则返回False。\n\n代码：\n\n```python\nclass Solution:\n    def canJump(self, nums: List[int]) -> bool:\n        far = nums[0]\n        size = len(nums)\n        for i in range(size):\n            if i > far:\n                return False\n            far = max(far, nums[i]+i)\n            if far >= size-1:\n                return True\n        return False\n```\n\n\n\nps:因为前面做了几题递归，所以本来想用递归做，尝试一下代码不太会写，但我觉得思路上应该是行得通的。看来我的技术还有很大的提升空间呀！\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/jump-game/\">https://leetcode-cn.com/problems/jump-game/</a></p>\n<h2 id=\"题解\">题解</h2>\n<p>所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。</p>\n<p>那么这道题可以有这样的思路：从前往后遍历<code>nums</code>的元素，实时维护<strong>最远可以到达的位置</strong> <code>far</code>。</p>\n<p>对于当前遍历的位置<code>i</code>，先判断<code>i&lt;=far</code>，再有<code>far = max(far, i+nums[i])</code></p>\n<p>直到<code>far&gt;=len(nums)</code>，则返回True，否则返回False。</p>\n<p>代码：</p>\n<pre><code class=\"language-python\">class Solution:\n    def canJump(self, nums: List[int]) -&gt; bool:\n        far = nums[0]\n        size = len(nums)\n        for i in range(size):\n            if i &gt; far:\n                return False\n            far = max(far, nums[i]+i)\n            if far &gt;= size-1:\n                return True\n        return False\n</code></pre>\n<p>ps:因为前面做了几题递归，所以本来想用递归做，尝试一下代码不太会写，但我觉得思路上应该是行得通的。看来我的技术还有很大的提升空间呀！</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

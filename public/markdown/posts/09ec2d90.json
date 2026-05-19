@@ -1,0 +1,83 @@
+{
+  "title": "C++和python常用函数",
+  "date": "2022-04-08T12:23:24.000Z",
+  "updatedAt": "2022-04-08T12:23:24.000Z",
+  "file": "c++和python常用函数.md",
+  "slug": "09ec2d90",
+  "categories": [
+    "刷题",
+    "笔记"
+  ],
+  "tags": [
+    "刷题",
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 549,
+  "readingTime": 2,
+  "body": "## c++常用函数\n\n### sort(v.begin(),v.end())\n\n```c++\n// 向量v\nvector<int> v;\nsort(v.begin(),v.end()) \n// 数组a\nsort(a,a+n);\n```\n\n```c++\n// 可以加参数cmp\n// 比如对intervals = [[1,2],[2,3],[3,4],[1,3]] 中每个向量第一个元素按从小到大排序\nsort(intervals.begin(), intervals.end(), [](const auto& u, const auto& v) {\n            return u[0] < v[0];\n        });\n```\n\n* 默认升序\n\n如果要逆序就麻烦了\n\n```c++\ntemplate <typename T>\nstruct cmp\n    {\n        bool operator()(const T &x, const T &y)\n        {\n            return x>y;\n        }\n    };\n\nsort(nums.begin(),nums.end(),cmp<int>());\n```\n\n\n\n### max_element(v.begin(),v.end())\n\n* 返回指针，指向最大元素\n\n\n\n### pair<int,int>\n\n1. `pair<int, int> p1(1, 2);` 定义和初始化\n2. 可以用已有对象初始化pair<int, int> p2(p1);\n3. 没有初始化，默认为(0,0)\n\n赋值：`p2 = pair<int, int> (1, 4);` 强制类型转换\n\n访问：`p2.first`,`p2.second`\n\n`make_pair(1,2)`\n\n\n\n\n\n### queue()\n\n`queue<pair<int,int>> que` 构造\n\n`que.emplace(1,2)` emplace自带调用构造函数，而push需要先自己搞出对象再传入\n\n`que.front()`返回队首元素的引用\n\n`que.back()`返回队尾元素的引用\n\n`que.pop()`删除第一个元素\n\n`queue.size()`元素数量\n\n\n\n### find()\n\n`find(v.begin(), v.end(), 3)` 查找v中==3的元素的位置，返回指针\n\n\n\n### priority_queue\n\n头文件： `#include<queue>`\n\n定义：`priority_queue<int> p;` 默认为大顶堆\n\n或priority_queue<Type, Container, Functional> Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。\n\n如`priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&cmp)> q(cmp);`\n\n其中比较函数为：\n\n```\nstatic bool cmp(pair<int, int>& m, pair<int, int>& n) {        return m.second > n.second;    } \n```\n\n这里定义的是一个储存pair<int,int>的小顶堆。\n\n操作（和队列基本操作相同：\n\n- top 访问队头元素\n- empty 队列是否为空\n- size 返回队列内元素个数\n- push 插入元素到队尾 (并排序)\n- emplace 原地构造一个元素并插入队列\n- pop 弹出队头元素\n- swap 交换内容\n\n参考：https://blog.csdn.net/weixin_36888577/article/details/79937886\n\n\n\n### unordered_set()\n\n创建：`unordered_set<char> occ;`\n\n删除：`occ.erase('a')`\n\n插入：`occ.insert('a')`\n\n判断是否在set中：`occ.count('a')`\n\n\n\n### vector<>\n\n创建一个n*n的二维数组：`vector<vector<int>> dp(n, vector<int>(n));`\n\n创建变量并赋初始值：`vector<int>  v(10,1)` 长度为10，初值1\n\n`dp.push_back()`，添加一个元素\n\n\n\n## python常用函数\n\n### sorted()\n\n```\nsorted(iterable, key=None, reverse=False)  \n```\n\n参数说明：\n\n- iterable -- 可迭代对象。\n- key -- 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。\n- reverse -- 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。\n\n返回重新排序的列表。\n\n\n\n### set()\n\n创建：`occ = set()`\n\n`occ = set(iterable比如列表、字符串)`\n\n删除：`occ.remove('a')`\n\n插入：`occ.add('a')`\n\n判断是否在set中：`'a' in occ`\n",
+  "html": "<h2 id=\"c常用函数\">c++常用函数</h2>\n<h3 id=\"sortvbeginvend\">sort(v.begin(),v.end())</h3>\n<pre><code class=\"language-c++\">// 向量v\nvector&lt;int&gt; v;\nsort(v.begin(),v.end()) \n// 数组a\nsort(a,a+n);\n</code></pre>\n<pre><code class=\"language-c++\">// 可以加参数cmp\n// 比如对intervals = [[1,2],[2,3],[3,4],[1,3]] 中每个向量第一个元素按从小到大排序\nsort(intervals.begin(), intervals.end(), [](const auto&amp; u, const auto&amp; v) {\n            return u[0] &lt; v[0];\n        });\n</code></pre>\n<ul>\n<li>默认升序</li>\n</ul>\n<p>如果要逆序就麻烦了</p>\n<pre><code class=\"language-c++\">template &lt;typename T&gt;\nstruct cmp\n    {\n        bool operator()(const T &amp;x, const T &amp;y)\n        {\n            return x&gt;y;\n        }\n    };\n\nsort(nums.begin(),nums.end(),cmp&lt;int&gt;());\n</code></pre>\n<h3 id=\"max_elementvbeginvend\">max_element(v.begin(),v.end())</h3>\n<ul>\n<li>返回指针，指向最大元素</li>\n</ul>\n<h3 id=\"pairintint\">pair&lt;int,int&gt;</h3>\n<ol>\n<li><code>pair&lt;int, int&gt; p1(1, 2);</code> 定义和初始化</li>\n<li>可以用已有对象初始化pair&lt;int, int&gt; p2(p1);</li>\n<li>没有初始化，默认为(0,0)</li>\n</ol>\n<p>赋值：<code>p2 = pair&lt;int, int&gt; (1, 4);</code> 强制类型转换</p>\n<p>访问：<code>p2.first</code>,<code>p2.second</code></p>\n<p><code>make_pair(1,2)</code></p>\n<h3 id=\"queue\">queue()</h3>\n<p><code>queue&lt;pair&lt;int,int&gt;&gt; que</code> 构造</p>\n<p><code>que.emplace(1,2)</code> emplace自带调用构造函数，而push需要先自己搞出对象再传入</p>\n<p><code>que.front()</code>返回队首元素的引用</p>\n<p><code>que.back()</code>返回队尾元素的引用</p>\n<p><code>que.pop()</code>删除第一个元素</p>\n<p><code>queue.size()</code>元素数量</p>\n<h3 id=\"find\">find()</h3>\n<p><code>find(v.begin(), v.end(), 3)</code> 查找v中==3的元素的位置，返回指针</p>\n<h3 id=\"priority_queue\">priority_queue</h3>\n<p>头文件： <code>#include&lt;queue&gt;</code></p>\n<p>定义：<code>priority_queue&lt;int&gt; p;</code> 默认为大顶堆</p>\n<p>或priority_queue&lt;Type, Container, Functional&gt; Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。</p>\n<p>如<code>priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, decltype(&amp;cmp)&gt; q(cmp);</code></p>\n<p>其中比较函数为：</p>\n<pre><code class=\"language-text\">static bool cmp(pair&lt;int, int&gt;&amp; m, pair&lt;int, int&gt;&amp; n) {        return m.second &gt; n.second;    } \n</code></pre>\n<p>这里定义的是一个储存pair&lt;int,int&gt;的小顶堆。</p>\n<p>操作（和队列基本操作相同：</p>\n<ul>\n<li>top 访问队头元素</li>\n<li>empty 队列是否为空</li>\n<li>size 返回队列内元素个数</li>\n<li>push 插入元素到队尾 (并排序)</li>\n<li>emplace 原地构造一个元素并插入队列</li>\n<li>pop 弹出队头元素</li>\n<li>swap 交换内容</li>\n</ul>\n<p>参考：<a href=\"https://blog.csdn.net/weixin_36888577/article/details/79937886\">https://blog.csdn.net/weixin_36888577/article/details/79937886</a></p>\n<h3 id=\"unordered_set\">unordered_set()</h3>\n<p>创建：<code>unordered_set&lt;char&gt; occ;</code></p>\n<p>删除：<code>occ.erase('a')</code></p>\n<p>插入：<code>occ.insert('a')</code></p>\n<p>判断是否在set中：<code>occ.count('a')</code></p>\n<h3 id=\"vector\">vector&lt;&gt;</h3>\n<p>创建一个n*n的二维数组：<code>vector&lt;vector&lt;int&gt;&gt; dp(n, vector&lt;int&gt;(n));</code></p>\n<p>创建变量并赋初始值：<code>vector&lt;int&gt;  v(10,1)</code> 长度为10，初值1</p>\n<p><code>dp.push_back()</code>，添加一个元素</p>\n<h2 id=\"python常用函数\">python常用函数</h2>\n<h3 id=\"sorted\">sorted()</h3>\n<pre><code class=\"language-text\">sorted(iterable, key=None, reverse=False)  \n</code></pre>\n<p>参数说明：</p>\n<ul>\n<li>iterable – 可迭代对象。</li>\n<li>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。</li>\n<li>reverse – 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。</li>\n</ul>\n<p>返回重新排序的列表。</p>\n<h3 id=\"set\">set()</h3>\n<p>创建：<code>occ = set()</code></p>\n<p><code>occ = set(iterable比如列表、字符串)</code></p>\n<p>删除：<code>occ.remove('a')</code></p>\n<p>插入：<code>occ.add('a')</code></p>\n<p>判断是否在set中：<code>'a' in occ</code></p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "c++常用函数",
+      "id": "c常用函数"
+    },
+    {
+      "level": 3,
+      "text": "sort(v.begin(),v.end())",
+      "id": "sortvbeginvend"
+    },
+    {
+      "level": 3,
+      "text": "max_element(v.begin(),v.end())",
+      "id": "max_elementvbeginvend"
+    },
+    {
+      "level": 3,
+      "text": "pair<int,int>",
+      "id": "pairintint"
+    },
+    {
+      "level": 3,
+      "text": "queue()",
+      "id": "queue"
+    },
+    {
+      "level": 3,
+      "text": "find()",
+      "id": "find"
+    },
+    {
+      "level": 3,
+      "text": "priority_queue",
+      "id": "priority_queue"
+    },
+    {
+      "level": 3,
+      "text": "unordered_set()",
+      "id": "unordered_set"
+    },
+    {
+      "level": 3,
+      "text": "vector<>",
+      "id": "vector"
+    },
+    {
+      "level": 2,
+      "text": "python常用函数",
+      "id": "python常用函数"
+    },
+    {
+      "level": 3,
+      "text": "sorted()",
+      "id": "sorted"
+    },
+    {
+      "level": 3,
+      "text": "set()",
+      "id": "set"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Leetcode_209长度最小的子数组——滑动窗口",
+  "date": "2024-11-21T13:28:00.000Z",
+  "updatedAt": "2024-11-21T13:28:00.000Z",
+  "file": "Leetcode_209长度最小的子数组.md",
+  "slug": "35124327",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 201,
+  "readingTime": 1,
+  "body": "# Leetcode_209长度最小的子数组\n\n给定一个含有 `n` 个正整数的数组和一个正整数 `target` **。**\n\n找出该数组中满足其总和大于等于 `target` 的长度最小的 **子数组**\n\n`[numsl, numsl+1, ..., numsr-1, numsr]` ，并返回其长度**。**如果不存在符合条件的子数组，返回 `0` 。\n\n**示例 1：**\n\n```\n输入：target = 7, nums = [2,3,1,2,4,3]\n输出：2\n解释：子数组 [4,3] 是该条件下的长度最小的子数组。\n```\n\n**示例 2：**\n\n```\n输入：target = 4, nums = [1,4,4]\n输出：1\n```\n\n**示例 3：**\n\n```\n输入：target = 11, nums = [1,1,1,1,1,1,1,1]\n输出：0\n```\n\n# 题解\n\n```\nclass Solution {\npublic:\n    int minSubArrayLen(int target, vector<int>& nums) {\n        int left = 0;\n        int right = 1;\n        if(nums[0]>=target){\n            return 1;\n        }\n        int sum = nums[left];\n        int min_con = nums.size()+1;\n        for(;right<nums.size();right++){\n            sum += nums[right];\n            while(sum>=target && left<=right){\n                if(right-left+1<min_con){\n                    min_con = right-left+1;\n                    cout << \"min: \" << min_con << \" left: \" << nums[left] << endl;\n                }\n                if(sum-nums[left]>=target){\n                    sum = sum-nums[left];\n                    left++;\n                    if(right-left+1<min_con){\n                    min_con = right-left+1;\n                    cout << \"min: \" << min_con << \"left: \" << nums[left] << endl;\n                }\n                }else{\n                    break;\n                }\n            }\n            \n        }\n        if(min_con==nums.size()+1){\n            return 0;\n        }\n        return min_con;\n        \n    }\n};\n```\n\n这题的核心思想是滑动窗口，窗口右端把所有可能都遍历一遍（for循环），左端则需要不断地缩小以找到最优解（while循环）。\n\n我自己的代码是适合我自己理解的。官方题解虽然简洁，我是真理解不了细节。\n\n最讨厌这种需要处理很多细节的问题，我是大老粗，整不来这些。\n\n",
+  "html": "<h1 id=\"leetcode_209长度最小的子数组\">Leetcode_209长度最小的子数组</h1>\n<p>给定一个含有 <code>n</code> 个正整数的数组和一个正整数 <code>target</code> <strong>。</strong></p>\n<p>找出该数组中满足其总和大于等于 <code>target</code> 的长度最小的 <strong>子数组</strong></p>\n<p><code>[numsl, numsl+1, ..., numsr-1, numsr]</code> ，并返回其长度**。**如果不存在符合条件的子数组，返回 <code>0</code> 。</p>\n<p><strong>示例 1：</strong></p>\n<pre><code class=\"language-text\">输入：target = 7, nums = [2,3,1,2,4,3]\n输出：2\n解释：子数组 [4,3] 是该条件下的长度最小的子数组。\n</code></pre>\n<p><strong>示例 2：</strong></p>\n<pre><code class=\"language-text\">输入：target = 4, nums = [1,4,4]\n输出：1\n</code></pre>\n<p><strong>示例 3：</strong></p>\n<pre><code class=\"language-text\">输入：target = 11, nums = [1,1,1,1,1,1,1,1]\n输出：0\n</code></pre>\n<h1 id=\"题解\">题解</h1>\n<pre><code class=\"language-text\">class Solution {\npublic:\n    int minSubArrayLen(int target, vector&lt;int&gt;&amp; nums) {\n        int left = 0;\n        int right = 1;\n        if(nums[0]&gt;=target){\n            return 1;\n        }\n        int sum = nums[left];\n        int min_con = nums.size()+1;\n        for(;right&lt;nums.size();right++){\n            sum += nums[right];\n            while(sum&gt;=target &amp;&amp; left&lt;=right){\n                if(right-left+1&lt;min_con){\n                    min_con = right-left+1;\n                    cout &lt;&lt; &quot;min: &quot; &lt;&lt; min_con &lt;&lt; &quot; left: &quot; &lt;&lt; nums[left] &lt;&lt; endl;\n                }\n                if(sum-nums[left]&gt;=target){\n                    sum = sum-nums[left];\n                    left++;\n                    if(right-left+1&lt;min_con){\n                    min_con = right-left+1;\n                    cout &lt;&lt; &quot;min: &quot; &lt;&lt; min_con &lt;&lt; &quot;left: &quot; &lt;&lt; nums[left] &lt;&lt; endl;\n                }\n                }else{\n                    break;\n                }\n            }\n            \n        }\n        if(min_con==nums.size()+1){\n            return 0;\n        }\n        return min_con;\n        \n    }\n};\n</code></pre>\n<p>这题的核心思想是滑动窗口，窗口右端把所有可能都遍历一遍（for循环），左端则需要不断地缩小以找到最优解（while循环）。</p>\n<p>我自己的代码是适合我自己理解的。官方题解虽然简洁，我是真理解不了细节。</p>\n<p>最讨厌这种需要处理很多细节的问题，我是大老粗，整不来这些。</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Leetcode_209长度最小的子数组",
+      "id": "leetcode_209长度最小的子数组"
+    },
+    {
+      "level": 1,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

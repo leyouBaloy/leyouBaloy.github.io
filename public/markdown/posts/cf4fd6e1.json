@@ -1,0 +1,36 @@
+{
+  "title": "python时间遇到的坑",
+  "date": "2021-08-22T15:21:03.000Z",
+  "updatedAt": "2021-08-22T15:21:03.000Z",
+  "file": "python时间遇到的坑.md",
+  "slug": "cf4fd6e1",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 361,
+  "readingTime": 1,
+  "body": "python中与时间相关的标准库有三个：\n\n*   time\n*   datetime\n*   calendar\n\n吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会\n\n### 时区坑\n\n查看时间的方式有很多\n\n法一：\n\n```python\nfrom datetime import datetime\nprint(datetime.now())\n```\n\n在windows上输出2021-08-22 15:04:09.958720，没问题\n\n法二：\n\n```python\nimport time\n\nlocaltime = time.localtime(time.time())\nprint(\"本地时间为 :\", localtime)\n```\n\n本地时间为 : time.struct\\_time(tm\\_year=2021, tm\\_mon=8, tm\\_mday=22, tm\\_hour=15, tm\\_min=5, tm\\_sec=20, tm\\_wday=6, tm\\_yday=234, tm\\_isdst=0)，没问题\n\n**注意：可是到了linux上都不对**\n\n*   GMT 时间：格林威治时间，基准时间\n*   UTC 时间：Coordinated Universal Time，全球协调时间，更精准的基准时间，与 GMT 基本等同\n*   CST 中国基准时间：为 UTC 时间 + 8 小时，即 UTC 时间的 0 点对应于中国基准时间的 8 点，即为一般称为东八区的时间\n\n在我的linux机器的shell里打`date`，可以显示正确CST的时间，但是在python里用上述两种方法，时区都是GMT，写程序的时候一直都没发现，真是害惨我了。\n\n### datetime引入\n\ndatetime下有个类名字还叫datetime，所以你得这样写代码\n\n```python\nimport datetime\ndatetime.datetime.now()\n```\n\n或者\n\n```python\nfrom datetime import datetime\ndatetime.now()\n```\n\n哇这真是太傻逼的，python这么好用的语言也有反人类的时候。\n\n### python获取当前时间（CST时间）\n\n很简单，如果你发现你用datetime获取到的是UTC时间，就把他加上8小时就是CST时间了\n\n```python\nimport datetime,timedelta\nlocaltime = datetime.now()+timedelta(hours=8)\n```\n\n获取小时（格式化字符串）\n\n```python\nimport datetime,timedelta\nlocaltime = datetime.now()+timedelta(hours=8)\nprint(localtime.strftime(\"%H\"))\n```",
+  "html": "<p>python中与时间相关的标准库有三个：</p>\n<ul>\n<li>time</li>\n<li>datetime</li>\n<li>calendar</li>\n</ul>\n<p>吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会</p>\n<h3 id=\"时区坑\">时区坑</h3>\n<p>查看时间的方式有很多</p>\n<p>法一：</p>\n<pre><code class=\"language-python\">from datetime import datetime\nprint(datetime.now())\n</code></pre>\n<p>在windows上输出2021-08-22 15:04:09.958720，没问题</p>\n<p>法二：</p>\n<pre><code class=\"language-python\">import time\n\nlocaltime = time.localtime(time.time())\nprint(&quot;本地时间为 :&quot;, localtime)\n</code></pre>\n<p>本地时间为 : time.struct_time(tm_year=2021, tm_mon=8, tm_mday=22, tm_hour=15, tm_min=5, tm_sec=20, tm_wday=6, tm_yday=234, tm_isdst=0)，没问题</p>\n<p><strong>注意：可是到了linux上都不对</strong></p>\n<ul>\n<li>GMT 时间：格林威治时间，基准时间</li>\n<li>UTC 时间：Coordinated Universal Time，全球协调时间，更精准的基准时间，与 GMT 基本等同</li>\n<li>CST 中国基准时间：为 UTC 时间 + 8 小时，即 UTC 时间的 0 点对应于中国基准时间的 8 点，即为一般称为东八区的时间</li>\n</ul>\n<p>在我的linux机器的shell里打<code>date</code>，可以显示正确CST的时间，但是在python里用上述两种方法，时区都是GMT，写程序的时候一直都没发现，真是害惨我了。</p>\n<h3 id=\"datetime引入\">datetime引入</h3>\n<p>datetime下有个类名字还叫datetime，所以你得这样写代码</p>\n<pre><code class=\"language-python\">import datetime\ndatetime.datetime.now()\n</code></pre>\n<p>或者</p>\n<pre><code class=\"language-python\">from datetime import datetime\ndatetime.now()\n</code></pre>\n<p>哇这真是太傻逼的，python这么好用的语言也有反人类的时候。</p>\n<h3 id=\"python获取当前时间cst时间\">python获取当前时间（CST时间）</h3>\n<p>很简单，如果你发现你用datetime获取到的是UTC时间，就把他加上8小时就是CST时间了</p>\n<pre><code class=\"language-python\">import datetime,timedelta\nlocaltime = datetime.now()+timedelta(hours=8)\n</code></pre>\n<p>获取小时（格式化字符串）</p>\n<pre><code class=\"language-python\">import datetime,timedelta\nlocaltime = datetime.now()+timedelta(hours=8)\nprint(localtime.strftime(&quot;%H&quot;))\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "时区坑",
+      "id": "时区坑"
+    },
+    {
+      "level": 3,
+      "text": "datetime引入",
+      "id": "datetime引入"
+    },
+    {
+      "level": 3,
+      "text": "python获取当前时间（CST时间）",
+      "id": "python获取当前时间cst时间"
+    }
+  ],
+  "hasMath": false
+}

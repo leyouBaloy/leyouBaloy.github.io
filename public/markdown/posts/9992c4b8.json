@@ -1,0 +1,66 @@
+{
+  "title": "gitee/github webhooks+nodejs实现自动拉取代码",
+  "date": "2022-01-25T20:50:41.000Z",
+  "updatedAt": "2022-01-25T20:50:41.000Z",
+  "file": "gitee webhooks+nodejs实现自动拉取代码.md",
+  "slug": "9992c4b8",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 746,
+  "readingTime": 2,
+  "body": "### 需求\n\n很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都好办，关键是如何让服务器监听webhook发来的请求。\n\n在网上一搜，各路大神各显神通，有用jenkins的，有用php的，还有travis CI…各位大佬，我就想实现一个简单的小功能，用这么牛逼的工具真没必要qwq（求饶\n\n终于在谷歌上（百度真的搜不到）搜到一个用nodejs解决的，确实很方便。原博主写的很好，但是有几个小坑，我在这里提醒一下。\n\n> 版权声明：CSDN博主「如风521」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。  \n> 原文链接：https://blog.csdn.net/qq\\_31667715/article/details/100117028\n\n### 什么是webhook\n\nwebhook也叫钩子。粗浅的来说，就是你写一个小脚本，每次提交代码的时候，让gitee或者github帮你执行一下。重点是这个脚本是你自己编写的，但不是你自己执行的，是GitHub或者gitee帮你执行的。就像在钩子上放个东西，让人家帮你拉一下，所以叫钩子。\n\n### 环境\n\n*   Git ，这个服务器上肯定要装的\n*   nodejs\n\n### 配置公钥\n\n配了公钥后，你打`git clone (repo地址)`就不用输入密码了。这个很简单，网上教程很多。\n\n有个小坑：配完公钥后git仓库地址一定要用ssh，而不是https\n\n![image-20220125201303579](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220125201303579.png)\n\n成功的结果就是你打git clone的时候不用输入密码了\n\n### 用nodejs监听web-hooks服务\n\n创建目录，用npm初始化，下载插件gitee-webhook-handler（ps:用了nodejs才发现它有很多好用的插件：\n\n```shell\nmkdir /usr/soft/web_hooks #创建目录\ncd /usr/soft/web_hooks\nnpm init \nnpm install  gitee-webhook-handler --save \n```\n\n创建js文件，按照自己的需求修改：\n\n```javascript\nvar http = require('http')\nvar createHandler = require('gitee-webhook-handler')\nvar handler = createHandler({ path: '/webhooks_push', secret: '654321'}) //post 所需要用到的密码，自己设置，跟下面对应就行\nfunction run_cmd(cmd, args, callback) {\n  var spawn = require('child_process').spawn;\n  var child = spawn(cmd, args);\n  var resp = \"\";\n  child.stdout.on('data', function(buffer) { resp += buffer.toString(); });\n  child.stdout.on('end', function() { callback (resp) });\n}\nhandler.on('error', function (err) {\n  console.error('Error:', err.message)\n})\nhandler.on('Push Hook', function (event) {\n  console.log('Received a push event for %s to %s',\n    event.payload.repository.name,\n    event.payload.ref);\n\n    var name = event.payload.repository.name    //这个name是仓库的名字\n    if (name === \"Gitee FeedBack\" || name === \"xaiweb\") { \n        run_cmd('sh', ['/www/xaiweb/pull.sh'], function (text) {// 需要执行的脚本位置\n            console.log(text)\n        });\n    }else {\n        console.log(\"unknow repository name:\" + name);\n    }\n})\ntry {\n  http.createServer(function (req, res) {\n    handler(req, res, function (err) {\n      res.statusCode = 404\n      res.end('no such location')\n    })\n  }).listen(6666) // 服务监听的端口，可以自行修改\n}catch(err){\n  console.error('Error:', err.message)\n}\n```\n\n原博主的这里的name没有定义，看日志才发现问题。\n\n还有个小坑，如果你用gitee的话，push代码和点击“测试”的时候name的值是不一样的。前者是\"Gitee FeedBack\"，后者是仓库名。（我的仓库名xaiweb\n\n![image-20220125202515465](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220125202515465.png)\n\ngitee和github应该也不一样，总之，测试的时候多看日志，就能发现问题。（日志下面有\n\n### 启动服务\n\n下载forever，这个能解决node服务自动停掉的问题。-g是全局安装\n\n```shell\nnpm install -g forever\n```\n\n把nodejs目录下的forever软链接到系统的/usr/bin目录下，这样就能全局访问了\n\n```shell\nln -s /usr/local/node(这里可能不一样)/lib/node_modules/forever/bin/forever /usr/bin/forever \n```\n\n不知道nodejs目录在哪的打whereis node或者which node试试，注意，这样找到的目录可能不是原始目录，而是软连接目录。\n\n启动：\n\n```shell\nforever start -l ./forever.log -o ./out.log -e ./err.log webhook.js #第一次启动\nforever start -a -l ./forever.log -o ./out.log -e ./err.log webhook.js #之后再启动打这个\n```\n\n这里给两个forever常用命令\n\n```shell\nforever list #列出服务，能看到日志在哪\nforever stop + id或文件名 #停止服务\n```\n\n### nginx反向代理\n\n```nginx\nlocation ^~ /webhooks_push {\n            proxy_set_header Host $host;\n            proxy_set_header X-Real-Ip $remote_addr;\n            proxy_set_header X-Forwarded-For $remote_addr;\n            proxy_pass http://127.0.0.1:6666;\n        }\n```\n\n如果你不会nginx也没啥问题，直接用ip:6666也行\n\n### gitee配置\n\n![在这里插入图片描述](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNjY3NzE1,size_16,color_FFFFFF,t_70.png)密码就是跟上面那个对应的。\n\n大功告成。\n\n### 1月31日补充\n\n如果用GitHub：\n\n```javascript\n//webhook.js\nvar http = require('http')\nvar createHandler = require('github-webhook-handler')\nvar handler = createHandler({ path: '/', secret: '密码' })\n// 上面的 secret 保持和 GitHub 后台设置的一致\n\nfunction run_cmd(cmd, args, callback) {\n    var spawn = require('child_process').spawn;\n    var child = spawn(cmd, args);\n    var resp = \"\";\n\n    child.stdout.on('data', function (buffer) { resp += buffer.toString(); });\n    child.stdout.on('end', function () { callback(resp) });\n}\n\nhttp.createServer(function (req, res) {\n    handler(req, res, function (err) {\n        res.statusCode = 404\n        res.end('no such location')\n    })\n}).listen(6666)\n\nhandler.on('error', function (err) {\n    console.error('Error:', err.message)\n})\n\nhandler.on('push', function (event) {\n    console.log('Received a push event form %s to %s',\n        event.payload.repository.name,\n        event.payload.ref);\n    run_cmd('sh', ['./pull.sh', event.payload.repository.name], function (text) { console.log(text) });\n})\n```\n\n请求：http://ip:6666/\n\ncontent type: application/json",
+  "html": "<h3 id=\"需求\">需求</h3>\n<p>很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都好办，关键是如何让服务器监听webhook发来的请求。</p>\n<p>在网上一搜，各路大神各显神通，有用jenkins的，有用php的，还有travis CI…各位大佬，我就想实现一个简单的小功能，用这么牛逼的工具真没必要qwq（求饶</p>\n<p>终于在谷歌上（百度真的搜不到）搜到一个用nodejs解决的，确实很方便。原博主写的很好，但是有几个小坑，我在这里提醒一下。</p>\n<blockquote>\n<p>版权声明：CSDN博主「如风521」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>\n原文链接：<a href=\"https://blog.csdn.net/qq%5C_31667715/article/details/100117028\">https://blog.csdn.net/qq\\_31667715/article/details/100117028</a></p>\n</blockquote>\n<h3 id=\"什么是webhook\">什么是webhook</h3>\n<p>webhook也叫钩子。粗浅的来说，就是你写一个小脚本，每次提交代码的时候，让gitee或者github帮你执行一下。重点是这个脚本是你自己编写的，但不是你自己执行的，是GitHub或者gitee帮你执行的。就像在钩子上放个东西，让人家帮你拉一下，所以叫钩子。</p>\n<h3 id=\"环境\">环境</h3>\n<ul>\n<li>Git ，这个服务器上肯定要装的</li>\n<li>nodejs</li>\n</ul>\n<h3 id=\"配置公钥\">配置公钥</h3>\n<p>配了公钥后，你打<code>git clone (repo地址)</code>就不用输入密码了。这个很简单，网上教程很多。</p>\n<p>有个小坑：配完公钥后git仓库地址一定要用ssh，而不是https</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220125201303579.png\" alt=\"image-20220125201303579\" loading=\"lazy\" decoding=\"async\"></p>\n<p>成功的结果就是你打git clone的时候不用输入密码了</p>\n<h3 id=\"用nodejs监听web-hooks服务\">用nodejs监听web-hooks服务</h3>\n<p>创建目录，用npm初始化，下载插件gitee-webhook-handler（ps:用了nodejs才发现它有很多好用的插件：</p>\n<pre><code class=\"language-shell\">mkdir /usr/soft/web_hooks #创建目录\ncd /usr/soft/web_hooks\nnpm init \nnpm install  gitee-webhook-handler --save \n</code></pre>\n<p>创建js文件，按照自己的需求修改：</p>\n<pre><code class=\"language-javascript\">var http = require('http')\nvar createHandler = require('gitee-webhook-handler')\nvar handler = createHandler({ path: '/webhooks_push', secret: '654321'}) //post 所需要用到的密码，自己设置，跟下面对应就行\nfunction run_cmd(cmd, args, callback) {\n  var spawn = require('child_process').spawn;\n  var child = spawn(cmd, args);\n  var resp = &quot;&quot;;\n  child.stdout.on('data', function(buffer) { resp += buffer.toString(); });\n  child.stdout.on('end', function() { callback (resp) });\n}\nhandler.on('error', function (err) {\n  console.error('Error:', err.message)\n})\nhandler.on('Push Hook', function (event) {\n  console.log('Received a push event for %s to %s',\n    event.payload.repository.name,\n    event.payload.ref);\n\n    var name = event.payload.repository.name    //这个name是仓库的名字\n    if (name === &quot;Gitee FeedBack&quot; || name === &quot;xaiweb&quot;) { \n        run_cmd('sh', ['/www/xaiweb/pull.sh'], function (text) {// 需要执行的脚本位置\n            console.log(text)\n        });\n    }else {\n        console.log(&quot;unknow repository name:&quot; + name);\n    }\n})\ntry {\n  http.createServer(function (req, res) {\n    handler(req, res, function (err) {\n      res.statusCode = 404\n      res.end('no such location')\n    })\n  }).listen(6666) // 服务监听的端口，可以自行修改\n}catch(err){\n  console.error('Error:', err.message)\n}\n</code></pre>\n<p>原博主的这里的name没有定义，看日志才发现问题。</p>\n<p>还有个小坑，如果你用gitee的话，push代码和点击“测试”的时候name的值是不一样的。前者是&quot;Gitee FeedBack&quot;，后者是仓库名。（我的仓库名xaiweb</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220125202515465.png\" alt=\"image-20220125202515465\" loading=\"lazy\" decoding=\"async\"></p>\n<p>gitee和github应该也不一样，总之，测试的时候多看日志，就能发现问题。（日志下面有</p>\n<h3 id=\"启动服务\">启动服务</h3>\n<p>下载forever，这个能解决node服务自动停掉的问题。-g是全局安装</p>\n<pre><code class=\"language-shell\">npm install -g forever\n</code></pre>\n<p>把nodejs目录下的forever软链接到系统的/usr/bin目录下，这样就能全局访问了</p>\n<pre><code class=\"language-shell\">ln -s /usr/local/node(这里可能不一样)/lib/node_modules/forever/bin/forever /usr/bin/forever \n</code></pre>\n<p>不知道nodejs目录在哪的打whereis node或者which node试试，注意，这样找到的目录可能不是原始目录，而是软连接目录。</p>\n<p>启动：</p>\n<pre><code class=\"language-shell\">forever start -l ./forever.log -o ./out.log -e ./err.log webhook.js #第一次启动\nforever start -a -l ./forever.log -o ./out.log -e ./err.log webhook.js #之后再启动打这个\n</code></pre>\n<p>这里给两个forever常用命令</p>\n<pre><code class=\"language-shell\">forever list #列出服务，能看到日志在哪\nforever stop + id或文件名 #停止服务\n</code></pre>\n<h3 id=\"nginx反向代理\">nginx反向代理</h3>\n<pre><code class=\"language-nginx\">location ^~ /webhooks_push {\n            proxy_set_header Host $host;\n            proxy_set_header X-Real-Ip $remote_addr;\n            proxy_set_header X-Forwarded-For $remote_addr;\n            proxy_pass http://127.0.0.1:6666;\n        }\n</code></pre>\n<p>如果你不会nginx也没啥问题，直接用ip:6666也行</p>\n<h3 id=\"gitee配置\">gitee配置</h3>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxNjY3NzE1,size_16,color_FFFFFF,t_70.png\" alt=\"在这里插入图片描述\" loading=\"lazy\" decoding=\"async\">密码就是跟上面那个对应的。</p>\n<p>大功告成。</p>\n<h3 id=\"1月31日补充\">1月31日补充</h3>\n<p>如果用GitHub：</p>\n<pre><code class=\"language-javascript\">//webhook.js\nvar http = require('http')\nvar createHandler = require('github-webhook-handler')\nvar handler = createHandler({ path: '/', secret: '密码' })\n// 上面的 secret 保持和 GitHub 后台设置的一致\n\nfunction run_cmd(cmd, args, callback) {\n    var spawn = require('child_process').spawn;\n    var child = spawn(cmd, args);\n    var resp = &quot;&quot;;\n\n    child.stdout.on('data', function (buffer) { resp += buffer.toString(); });\n    child.stdout.on('end', function () { callback(resp) });\n}\n\nhttp.createServer(function (req, res) {\n    handler(req, res, function (err) {\n        res.statusCode = 404\n        res.end('no such location')\n    })\n}).listen(6666)\n\nhandler.on('error', function (err) {\n    console.error('Error:', err.message)\n})\n\nhandler.on('push', function (event) {\n    console.log('Received a push event form %s to %s',\n        event.payload.repository.name,\n        event.payload.ref);\n    run_cmd('sh', ['./pull.sh', event.payload.repository.name], function (text) { console.log(text) });\n})\n</code></pre>\n<p>请求：<a href=\"http://ip:6666/\">http://ip:6666/</a></p>\n<p>content type: application/json</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "需求",
+      "id": "需求"
+    },
+    {
+      "level": 3,
+      "text": "什么是webhook",
+      "id": "什么是webhook"
+    },
+    {
+      "level": 3,
+      "text": "环境",
+      "id": "环境"
+    },
+    {
+      "level": 3,
+      "text": "配置公钥",
+      "id": "配置公钥"
+    },
+    {
+      "level": 3,
+      "text": "用nodejs监听web-hooks服务",
+      "id": "用nodejs监听web-hooks服务"
+    },
+    {
+      "level": 3,
+      "text": "启动服务",
+      "id": "启动服务"
+    },
+    {
+      "level": 3,
+      "text": "nginx反向代理",
+      "id": "nginx反向代理"
+    },
+    {
+      "level": 3,
+      "text": "gitee配置",
+      "id": "gitee配置"
+    },
+    {
+      "level": 3,
+      "text": "1月31日补充",
+      "id": "1月31日补充"
+    }
+  ],
+  "hasMath": false
+}

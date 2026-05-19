@@ -1,0 +1,26 @@
+{
+  "title": "识别字符",
+  "date": "2020-10-17T16:26:51.000Z",
+  "updatedAt": "2020-10-17T16:26:51.000Z",
+  "file": "识别字符.md",
+  "slug": "b35ce183",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 299,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n数学课上，楠楠学习了一个新的知识。\n\n两数相除，如果得不到整数商，会有两种情况：一种是得到有限小数，另一种是得到无限小数。从小数点后某一位开始依次不断地重复出现前一个或一节数字的十进制无限小数，叫做循环小数，如2.9666..., (在数学中它读作“二点九六，六循环” ）， 定义循环小数的缩写法是将第一个循环节以后的数字全部略去，并将第一个循环节首末用括号括起来。\n\n例如：\n\n2.966666... 缩写为 2.9(6)\n\n35.232323…缩写为 35.(23)\n\n楠楠发现，根据循环小数的特征，很快能算出这个循环小数中小数点后第n位的数字，你能吗？\n\n**【输入】**\n\n共2行。第一行，包含一个整数n(n≤100000)，表示求小数点后的第n位。第二行，一个字符串，用缩写法表示的一个循环小数。\n\n**【输出】**\n\n       一行，包含一个整数，表示循环小数中小数点后第n位的数字。\n\nFor example:\n\nInput\n\nResult\n\n10  \n352.19(7)\n\n7\n\n## 答案\n\n```\n#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n    char a[100];\n    int weishu,buxunhuan,xunhuan,m,jieguo1;\n    cin >> weishu ; //输入1\n\n    int n=0;\n    cin >> a[0];\n    while((a[++n]=getchar())!='\\n');    //输入2\n\n    int i,left,right,dian;\n\n\n    for(i=n;i>0;i--)\n    {\n        if(a[i] == ')')\n           right = i;\n        if(a[i] == '(')\n            left = i;\n        if(a[i] == '.')\n            dian = i;\n\n    }\n    buxunhuan = left - dian -1;\n    xunhuan = right - left -1;\n    if(weishu <= buxunhuan)\n    {\n        jieguo1 = weishu + dian;\n        cout << a[jieguo1];\n    }\n    else\n    {\n\n        m = (weishu - buxunhuan)%xunhuan;\n        if(m==0)\n        {\n            cout << a[left + xunhuan];\n        }\n        else\n        {\n            cout << a[m+left];\n        }\n\n    }\n\n\n    return 0;\n}\n```",
+  "html": "<p>【题目描述】</p>\n<p>数学课上，楠楠学习了一个新的知识。</p>\n<p>两数相除，如果得不到整数商，会有两种情况：一种是得到有限小数，另一种是得到无限小数。从小数点后某一位开始依次不断地重复出现前一个或一节数字的十进制无限小数，叫做循环小数，如2.9666…, (在数学中它读作“二点九六，六循环” ）， 定义循环小数的缩写法是将第一个循环节以后的数字全部略去，并将第一个循环节首末用括号括起来。</p>\n<p>例如：</p>\n<p>2.966666… 缩写为 2.9(6)</p>\n<p>35.232323…缩写为 35.(23)</p>\n<p>楠楠发现，根据循环小数的特征，很快能算出这个循环小数中小数点后第n位的数字，你能吗？</p>\n<p><strong>【输入】</strong></p>\n<p>共2行。第一行，包含一个整数n(n≤100000)，表示求小数点后的第n位。第二行，一个字符串，用缩写法表示的一个循环小数。</p>\n<p><strong>【输出】</strong></p>\n<p>一行，包含一个整数，表示循环小数中小数点后第n位的数字。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>10<br>\n352.19(7)</p>\n<p>7</p>\n<h2 id=\"答案\">答案</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n\nusing namespace std;\n\nint main()\n{\n    char a[100];\n    int weishu,buxunhuan,xunhuan,m,jieguo1;\n    cin &gt;&gt; weishu ; //输入1\n\n    int n=0;\n    cin &gt;&gt; a[0];\n    while((a[++n]=getchar())!='\\n');    //输入2\n\n    int i,left,right,dian;\n\n\n    for(i=n;i&gt;0;i--)\n    {\n        if(a[i] == ')')\n           right = i;\n        if(a[i] == '(')\n            left = i;\n        if(a[i] == '.')\n            dian = i;\n\n    }\n    buxunhuan = left - dian -1;\n    xunhuan = right - left -1;\n    if(weishu &lt;= buxunhuan)\n    {\n        jieguo1 = weishu + dian;\n        cout &lt;&lt; a[jieguo1];\n    }\n    else\n    {\n\n        m = (weishu - buxunhuan)%xunhuan;\n        if(m==0)\n        {\n            cout &lt;&lt; a[left + xunhuan];\n        }\n        else\n        {\n            cout &lt;&lt; a[m+left];\n        }\n\n    }\n\n\n    return 0;\n}\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "答案",
+      "id": "答案"
+    }
+  ],
+  "hasMath": false
+}

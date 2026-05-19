@@ -1,0 +1,41 @@
+{
+  "title": "ubuntu安装Python3的曲折之路",
+  "date": "2021-10-30T13:58:01.000Z",
+  "updatedAt": "2021-10-30T13:58:01.000Z",
+  "file": "ubuntu安装Python3的曲折之路.md",
+  "slug": "6434a878",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 429,
+  "readingTime": 2,
+  "body": "### 思路\n\n先安装Python版本管理器pyenv\n\n再用Pyenv安装Python\n\n### 安装pyenv\n\n标准安装：找到项目地址[pyenv/pyenv: Simple Python version management (github.com)](https://github.com/pyenv/pyenv)\n\n先git clone，再配环境变量。\n\n作者还提供了一个自动安装的脚本，只需一行命令。\n\n失败！因为国内云主机墙了github（真是emo了\n\n**我的方法：**\n\n参考[https://blog.csdn.net/m0\\_37616927/article/details/108770185](https://blog.csdn.net/m0_37616927/article/details/108770185)\n\n1.  从gitee上下载pyenv:\n\ngit clone https://gitee.com/ibuki\\_fuuko/pyenv.git ~/.pyenv\n\n会把pyenv下载到当前用户的～/.pyenv目录下\n\n2.  再把以下内容加到~/.bashrc 里，没有就新建\n\nexport PATH=~/.pyenv/bin:$PATH  \nexport PYENV\\_ROOT=~/.pyenv  \neval \"$(pyenv init -)\"\n\n3.  激活\n\nsource .bashrc\n\n4.  安装成功，可以看到pyenv提供可安装的python版本\n\npyenv install --list\n\n### 安装python\n\n标准思路：直接pyenv install 3.7.5 就能一键安装Python了\n\n失败！因为Python镜像默认是从官网下的，国内网络上不去（再次emo\n\n这之后我就开始瞎捣鼓了，参考：\n\nhttps://blog.csdn.net/yxiaom/article/details/103468954\n\n找了一个国内的镜像地址：\n\n[http://npm.taobao.org/mirrors/python/](http://npm.taobao.org/mirrors/python/)\n\n安装Python之前需要安装很多依赖，多用apt装一装\n\n最后查看一下已安装的Python版本\n\npyenv versions\n\n然后设置默认版本，这样你打`python`的时候默认使用这个版本\n\npyenv global 版本号\n\n最离谱的是，我尝试这个命令没有成功，什么都没做，到第二天居然可以了（第三次emo\n\n**没想到在linux上装Python比在Windows上难的多，win上装一个anaconda就能解决所有问题**\n\n### 懒人方案\n\n装一个宝塔面板，安装Python就比较方便了，但是也失去了学习的价值",
+  "html": "<h3 id=\"思路\">思路</h3>\n<p>先安装Python版本管理器pyenv</p>\n<p>再用Pyenv安装Python</p>\n<h3 id=\"安装pyenv\">安装pyenv</h3>\n<p>标准安装：找到项目地址<a href=\"https://github.com/pyenv/pyenv\">pyenv/pyenv: Simple Python version management (github.com)</a></p>\n<p>先git clone，再配环境变量。</p>\n<p>作者还提供了一个自动安装的脚本，只需一行命令。</p>\n<p>失败！因为国内云主机墙了github（真是emo了</p>\n<p><strong>我的方法：</strong></p>\n<p>参考<a href=\"https://blog.csdn.net/m0_37616927/article/details/108770185\">https://blog.csdn.net/m0_37616927/article/details/108770185</a></p>\n<ol>\n<li>从gitee上下载pyenv:</li>\n</ol>\n<p>git clone <a href=\"https://gitee.com/ibuki%5C_fuuko/pyenv.git\">https://gitee.com/ibuki\\_fuuko/pyenv.git</a> ~/.pyenv</p>\n<p>会把pyenv下载到当前用户的～/.pyenv目录下</p>\n<ol start=\"2\">\n<li>再把以下内容加到~/.bashrc 里，没有就新建</li>\n</ol>\n<p>export PATH=~/.pyenv/bin:$PATH<br>\nexport PYENV_ROOT=~/.pyenv<br>\neval “$(pyenv init -)”</p>\n<ol start=\"3\">\n<li>激活</li>\n</ol>\n<p>source .bashrc</p>\n<ol start=\"4\">\n<li>安装成功，可以看到pyenv提供可安装的python版本</li>\n</ol>\n<p>pyenv install --list</p>\n<h3 id=\"安装python\">安装python</h3>\n<p>标准思路：直接pyenv install 3.7.5 就能一键安装Python了</p>\n<p>失败！因为Python镜像默认是从官网下的，国内网络上不去（再次emo</p>\n<p>这之后我就开始瞎捣鼓了，参考：</p>\n<p><a href=\"https://blog.csdn.net/yxiaom/article/details/103468954\">https://blog.csdn.net/yxiaom/article/details/103468954</a></p>\n<p>找了一个国内的镜像地址：</p>\n<p><a href=\"http://npm.taobao.org/mirrors/python/\">http://npm.taobao.org/mirrors/python/</a></p>\n<p>安装Python之前需要安装很多依赖，多用apt装一装</p>\n<p>最后查看一下已安装的Python版本</p>\n<p>pyenv versions</p>\n<p>然后设置默认版本，这样你打<code>python</code>的时候默认使用这个版本</p>\n<p>pyenv global 版本号</p>\n<p>最离谱的是，我尝试这个命令没有成功，什么都没做，到第二天居然可以了（第三次emo</p>\n<p><strong>没想到在linux上装Python比在Windows上难的多，win上装一个anaconda就能解决所有问题</strong></p>\n<h3 id=\"懒人方案\">懒人方案</h3>\n<p>装一个宝塔面板，安装Python就比较方便了，但是也失去了学习的价值</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "思路",
+      "id": "思路"
+    },
+    {
+      "level": 3,
+      "text": "安装pyenv",
+      "id": "安装pyenv"
+    },
+    {
+      "level": 3,
+      "text": "安装python",
+      "id": "安装python"
+    },
+    {
+      "level": 3,
+      "text": "懒人方案",
+      "id": "懒人方案"
+    }
+  ],
+  "hasMath": true
+}

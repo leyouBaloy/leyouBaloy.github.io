@@ -1,0 +1,53 @@
+{
+  "title": "C语言中值传递、指针传递和引用传递",
+  "date": "2022-03-07T09:15:10.000Z",
+  "updatedAt": "2022-03-07T09:15:10.000Z",
+  "file": "C语言中值传递、指针传递和引用传递.md",
+  "slug": "65f5e948",
+  "categories": [
+    "刷题",
+    "技能分享"
+  ],
+  "tags": [
+    "刷题",
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 418,
+  "readingTime": 2,
+  "body": "## 2022年我才搞懂这个！\n\n## 比较\n\n| 传递方式 | 函数定义    | 函数调用 | 函数内对a修改的影响 |\n| :------- | :---------- | :------- | :------------------ |\n| 值传递   | fun(int a)  | fun(x)   | 外部x不变           |\n| 指针传递 | fun(int *a) | fun(&x)  | 外部x同步更改       |\n| 引用传递 | fun(int &a) | fun(x)   | 外部x同步更改       |\n\n## 值传递\n\n值传递是最常用的一种方式。它就是从函数外拷贝到函数内。\n\n## 指针传递\n\n指针传递跟值传递其实差不多，只是传递的内容从一个值换成了指针。定义函数的时候要写成`fun(int *a)`，函数内的`a`就是一个`int类型指针`要使用`a对象`的话就得写成`*a`。\n\n在函数外如果定义一个`int b=1`，想把它传到函数里的话需要用到取地址符`&`，像这样写`fun(&b)`。\n\n示例：\n\n```c++\n#include <stdio.h>\n \nvoid swap(int *a, int *b){\n    printf(\"swap enter\\n\");\n    printf(\"a = %d, ptr = %p\\n\", *a, a);\n    printf(\"b = %d, ptr = %p\\n\", *a, b);\n \n    int tmp = *b;\n    *b = *a;\n    *a = tmp;\n \n    printf(\"a = %d, ptr = %p\\n\", *a, a);\n    printf(\"b = %d, ptr = %p\\n\", *b, b);\n    printf(\"swap leave\\n\");\n}\n \nint main() {\n    int x = 1;\n    int y = 2;\n    printf(\"x = %d, ptr = %p\\n\", x, &x);\n    printf(\"y = %d, ptr = %p\\n\", y, &y);\n \n    swap(&x, &y);\n \n    printf(\"x = %d, ptr = %p\\n\", x, &x);\n    printf(\"y = %d, ptr = %p\\n\", y, &y);\n \n    return 0;\n}\n```\n\n结果：\n\n```c++\nx = 1, ptr = 000000000022FE4C\ny = 2, ptr = 000000000022FE48\nswap enter\na = 1, ptr = 000000000022FE4C\nb = 1, ptr = 000000000022FE48\na = 2, ptr = 000000000022FE4C\nb = 1, ptr = 000000000022FE48\nswap leave\nx = 2, ptr = 000000000022FE4C\ny = 1, ptr = 000000000022FE48\n```\n\n## 引用传递\n\n在定义的时候形参前要加一个`&`，这个不是取地址符，而是一个记号。（这就是c语言贼tm绕人的地方qwq）比如`int fun(int &a)`。\n\n调用函数时参数前不需要加任何记号，比如`int a=10`，`fun(a)`。\n\n在函数内使用的时候不用加任何东西，直接用即可，比如`a=20`。\n\n函数内和函数外a的值会同步改变。\n\n示例：\n\n```c++\nclass Solution {\npublic:\n    void preorder(TreeNode *root, vector<int> &res){ //这里res前要加一个&\n        if (root == nullptr){\n            return;\n        }\n        res.push_back(root->val);\n        preorder(root->left, res); // res可以直接访问到对象内容，且函数内外指向同一个对象\n        preorder(root->right, res);\n    }\n    vector<int> preorderTraversal(TreeNode* root) {\n        vector<int> res; //创建res对象\n        preorder(root, res);\n        return res;\n    }\n};\n```\n\n\n\n## 参考资料\n\n以上我自己的总结是非常简单的，仅能保证我在做题时看懂题解，但其实这里面还有很多细节没提到。学到现在终于能体会到当年为什么老师说c语言的指针很难了。\n\n参考csdn文章：http://t.csdn.cn/suCK6\n\n\n\n\n\n\n\n",
+  "html": "<h2 id=\"2022年我才搞懂这个\">2022年我才搞懂这个！</h2>\n<h2 id=\"比较\">比较</h2>\n<table>\n<thead>\n<tr>\n<th style=\"text-align:left\">传递方式</th>\n<th style=\"text-align:left\">函数定义</th>\n<th style=\"text-align:left\">函数调用</th>\n<th style=\"text-align:left\">函数内对a修改的影响</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align:left\">值传递</td>\n<td style=\"text-align:left\">fun(int a)</td>\n<td style=\"text-align:left\">fun(x)</td>\n<td style=\"text-align:left\">外部x不变</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">指针传递</td>\n<td style=\"text-align:left\">fun(int *a)</td>\n<td style=\"text-align:left\">fun(&amp;x)</td>\n<td style=\"text-align:left\">外部x同步更改</td>\n</tr>\n<tr>\n<td style=\"text-align:left\">引用传递</td>\n<td style=\"text-align:left\">fun(int &amp;a)</td>\n<td style=\"text-align:left\">fun(x)</td>\n<td style=\"text-align:left\">外部x同步更改</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"值传递\">值传递</h2>\n<p>值传递是最常用的一种方式。它就是从函数外拷贝到函数内。</p>\n<h2 id=\"指针传递\">指针传递</h2>\n<p>指针传递跟值传递其实差不多，只是传递的内容从一个值换成了指针。定义函数的时候要写成<code>fun(int *a)</code>，函数内的<code>a</code>就是一个<code>int类型指针</code>要使用<code>a对象</code>的话就得写成<code>*a</code>。</p>\n<p>在函数外如果定义一个<code>int b=1</code>，想把它传到函数里的话需要用到取地址符<code>&amp;</code>，像这样写<code>fun(&amp;b)</code>。</p>\n<p>示例：</p>\n<pre><code class=\"language-c++\">#include &lt;stdio.h&gt;\n \nvoid swap(int *a, int *b){\n    printf(&quot;swap enter\\n&quot;);\n    printf(&quot;a = %d, ptr = %p\\n&quot;, *a, a);\n    printf(&quot;b = %d, ptr = %p\\n&quot;, *a, b);\n \n    int tmp = *b;\n    *b = *a;\n    *a = tmp;\n \n    printf(&quot;a = %d, ptr = %p\\n&quot;, *a, a);\n    printf(&quot;b = %d, ptr = %p\\n&quot;, *b, b);\n    printf(&quot;swap leave\\n&quot;);\n}\n \nint main() {\n    int x = 1;\n    int y = 2;\n    printf(&quot;x = %d, ptr = %p\\n&quot;, x, &amp;x);\n    printf(&quot;y = %d, ptr = %p\\n&quot;, y, &amp;y);\n \n    swap(&amp;x, &amp;y);\n \n    printf(&quot;x = %d, ptr = %p\\n&quot;, x, &amp;x);\n    printf(&quot;y = %d, ptr = %p\\n&quot;, y, &amp;y);\n \n    return 0;\n}\n</code></pre>\n<p>结果：</p>\n<pre><code class=\"language-c++\">x = 1, ptr = 000000000022FE4C\ny = 2, ptr = 000000000022FE48\nswap enter\na = 1, ptr = 000000000022FE4C\nb = 1, ptr = 000000000022FE48\na = 2, ptr = 000000000022FE4C\nb = 1, ptr = 000000000022FE48\nswap leave\nx = 2, ptr = 000000000022FE4C\ny = 1, ptr = 000000000022FE48\n</code></pre>\n<h2 id=\"引用传递\">引用传递</h2>\n<p>在定义的时候形参前要加一个<code>&amp;</code>，这个不是取地址符，而是一个记号。（这就是c语言贼tm绕人的地方qwq）比如<code>int fun(int &amp;a)</code>。</p>\n<p>调用函数时参数前不需要加任何记号，比如<code>int a=10</code>，<code>fun(a)</code>。</p>\n<p>在函数内使用的时候不用加任何东西，直接用即可，比如<code>a=20</code>。</p>\n<p>函数内和函数外a的值会同步改变。</p>\n<p>示例：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    void preorder(TreeNode *root, vector&lt;int&gt; &amp;res){ //这里res前要加一个&amp;\n        if (root == nullptr){\n            return;\n        }\n        res.push_back(root-&gt;val);\n        preorder(root-&gt;left, res); // res可以直接访问到对象内容，且函数内外指向同一个对象\n        preorder(root-&gt;right, res);\n    }\n    vector&lt;int&gt; preorderTraversal(TreeNode* root) {\n        vector&lt;int&gt; res; //创建res对象\n        preorder(root, res);\n        return res;\n    }\n};\n</code></pre>\n<h2 id=\"参考资料\">参考资料</h2>\n<p>以上我自己的总结是非常简单的，仅能保证我在做题时看懂题解，但其实这里面还有很多细节没提到。学到现在终于能体会到当年为什么老师说c语言的指针很难了。</p>\n<p>参考csdn文章：<a href=\"http://t.csdn.cn/suCK6\">http://t.csdn.cn/suCK6</a></p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "2022年我才搞懂这个！",
+      "id": "2022年我才搞懂这个"
+    },
+    {
+      "level": 2,
+      "text": "比较",
+      "id": "比较"
+    },
+    {
+      "level": 2,
+      "text": "值传递",
+      "id": "值传递"
+    },
+    {
+      "level": 2,
+      "text": "指针传递",
+      "id": "指针传递"
+    },
+    {
+      "level": 2,
+      "text": "引用传递",
+      "id": "引用传递"
+    },
+    {
+      "level": 2,
+      "text": "参考资料",
+      "id": "参考资料"
+    }
+  ],
+  "hasMath": false
+}

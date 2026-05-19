@@ -1,0 +1,56 @@
+{
+  "title": "从wordpress迁移到hugo过程分享",
+  "date": "2022-01-28T07:52:50.000Z",
+  "updatedAt": "2022-01-28T07:52:50.000Z",
+  "file": "从wordpress迁移到hugo过程分享.md",
+  "slug": "eec5cb2f",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 389,
+  "readingTime": 1,
+  "body": "### 为什么抛弃wordpress选择hugo\n\n* 不用买服务器了\n* wordpress经常奔溃，易受攻击\n* hugo编译速度真tm快\n* 有一款钟爱的hugo主题\n\n### 文章迁移\n\n文章迁移使用一个hexo插件（你没看错，就是hexo插件）。\n\n首先新建一个hexo博客（用完就可以删了）。\n\n```shell\n$ hexo init <folder>\n$ cd <folder>\n$ npm install\n```\n\n再安装 `hexo-migrator-wordpress` 插件。\n\n```shell\n$ npm install hexo-migrator-wordpress --save\n```\n\n在 WordPress 仪表盘中导出数据(“Tools” → “Export” → “WordPress”)\n\n插件安装完成后，执行下列命令来迁移所有文章。`source` 可以是 WordPress 导出的文件路径或网址。\n\n```shell\n$ hexo migrate wordpress <source>\n```\n\n文章很快就能出现在source/_posts目录下，转换效果特别棒。\n\n### 修改文章的属性\n\n刚迁移完的每篇文章都有yaml配置，像这样：\n\n```yaml\ntitle: 年度总结\ntags: []\nid: '1191'\ncategories:\n  - - 生活\ndate: 2022-01-21 11:35:06\n```\n\n其实直接丢到hugo的posts文件夹里也没问题，但咱最好还是自己改一下。比如改成这样：\n\n```\nauthor: sunbaile\ncategories:\n- 随笔杂记\ndate: 2022-01-21 11:35:06\ndraft: false\ntitle: 年度总结\n```\n\n写了一个python脚本，100多篇文章，1秒钟全搞定（写脚本写了一下午qwq)：\n\n```python\nimport os\nimport yaml\nimport re\n\npath = \"/Users/sunbaile/myBlog/content/posts\"\n# path = \"/Users/sunbaile/myBlog/python脚本\"\ncnt = 0\n\nfor file in os.listdir(path):\n    if file[-3:]==\".md\" : #判断是否为md文件\n        cnt += 1\n        print(cnt,file)\n\n        with open(os.path.join(path,file),\"r+\") as f:\n            all_text = f.read()\n\n        yaml_text = re.findall(\"---([\\s\\S]*?)---\",all_text)[0] #找到yaml字符串\n        old_dic = yaml.load(yaml_text)  # 用yaml库转字典对象\n        # print(\"categories:\",old_dic[\"categories\"])\n        \n        new_dic = {\n            \"title\": old_dic[\"title\"],\n            \"author\": \"sunbaile\",\n            \"draft\": False,\n            \"categories\": old_dic['categories'],\n            \"date\": old_dic[\"date\"]\n        }\n        # print(\"new_dic\",new_dic)\n        yaml_res = yaml.dump(new_dic,allow_unicode=True)    #用yaml库将字典解析为yaml字符串\n        # print(\"***\",yaml_res,\"***\")\n\n        res = all_text.replace(yaml_text,\"\\n\"+yaml_res)\n        with open(os.path.join(path,file),\"w+\") as f:\n            f.write(res)\n```\n\n\n\n### 图片迁移\n\n如果你打算用github+jsdelivr做图床，迁移图片更简单。思路就是先从服务器上把wordpress的wp-content目录（里面有个uploads文件夹存了你所有的图片）下载下来，然后原封不动的丢到github仓库里，最后把文章中的路径改一下就可以啦。\n\n> 注意：每张图片都是由`固定链接`+`路径`+`名字`组成。\n\n比如说原来文章的图片链接是这样的：\n\n```markdown\n![](https://www.leyoubaloy.xyz/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)\n或者是这样的：\n![](/wp-content/uploads/2021/02/image-1-1024x431.png)\n```\n\n要替换成这样：\n\n```markdown\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)\n和这样\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/02/image-1-1024x431.png)\n```\n\n那肯定还是用python脚本啦，python，yyds!\n\n```python\nimport os\nimport re\n\npath = \"/Users/sunbaile/myBlog/content/posts\"\n# path = \"/Users/sunbaile/myBlog/python脚本\"\ncnt = 0\n\nfor file in os.listdir(path):\n    if file[-3:]==\".md\" :\n        cnt += 1\n        print(cnt,file)\n\n        with open(os.path.join(path,file),\"r+\") as f:\n            all_text = f.read()\n        res = re.sub(\"\\((\\/wp-content\\/uploads)\",\"(https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/\",all_text)\n        res = res.replace(\"www.leyoubaloy.xyz\",\"cdn.jsdelivr.net/gh/leyouBaloy/mypic\")\n        with open(os.path.join(path,file),\"w+\") as f:\n            f.write(res)\n```\n\n### 视频教程：\n\n{{< bilibili BV18S4y1y7jo >}}\n\n\n\n\n\n\n\n",
+  "html": "<h3 id=\"为什么抛弃wordpress选择hugo\">为什么抛弃wordpress选择hugo</h3>\n<ul>\n<li>不用买服务器了</li>\n<li>wordpress经常奔溃，易受攻击</li>\n<li>hugo编译速度真tm快</li>\n<li>有一款钟爱的hugo主题</li>\n</ul>\n<h3 id=\"文章迁移\">文章迁移</h3>\n<p>文章迁移使用一个hexo插件（你没看错，就是hexo插件）。</p>\n<p>首先新建一个hexo博客（用完就可以删了）。</p>\n<pre><code class=\"language-shell\">$ hexo init &lt;folder&gt;\n$ cd &lt;folder&gt;\n$ npm install\n</code></pre>\n<p>再安装 <code>hexo-migrator-wordpress</code> 插件。</p>\n<pre><code class=\"language-shell\">$ npm install hexo-migrator-wordpress --save\n</code></pre>\n<p>在 WordPress 仪表盘中导出数据(“Tools” → “Export” → “WordPress”)</p>\n<p>插件安装完成后，执行下列命令来迁移所有文章。<code>source</code> 可以是 WordPress 导出的文件路径或网址。</p>\n<pre><code class=\"language-shell\">$ hexo migrate wordpress &lt;source&gt;\n</code></pre>\n<p>文章很快就能出现在source/_posts目录下，转换效果特别棒。</p>\n<h3 id=\"修改文章的属性\">修改文章的属性</h3>\n<p>刚迁移完的每篇文章都有yaml配置，像这样：</p>\n<pre><code class=\"language-yaml\">title: 年度总结\ntags: []\nid: '1191'\ncategories:\n  - - 生活\ndate: 2022-01-21 11:35:06\n</code></pre>\n<p>其实直接丢到hugo的posts文件夹里也没问题，但咱最好还是自己改一下。比如改成这样：</p>\n<pre><code class=\"language-text\">author: sunbaile\ncategories:\n- 随笔杂记\ndate: 2022-01-21 11:35:06\ndraft: false\ntitle: 年度总结\n</code></pre>\n<p>写了一个python脚本，100多篇文章，1秒钟全搞定（写脚本写了一下午qwq)：</p>\n<pre><code class=\"language-python\">import os\nimport yaml\nimport re\n\npath = &quot;/Users/sunbaile/myBlog/content/posts&quot;\n# path = &quot;/Users/sunbaile/myBlog/python脚本&quot;\ncnt = 0\n\nfor file in os.listdir(path):\n    if file[-3:]==&quot;.md&quot; : #判断是否为md文件\n        cnt += 1\n        print(cnt,file)\n\n        with open(os.path.join(path,file),&quot;r+&quot;) as f:\n            all_text = f.read()\n\n        yaml_text = re.findall(&quot;---([\\s\\S]*?)---&quot;,all_text)[0] #找到yaml字符串\n        old_dic = yaml.load(yaml_text)  # 用yaml库转字典对象\n        # print(&quot;categories:&quot;,old_dic[&quot;categories&quot;])\n        \n        new_dic = {\n            &quot;title&quot;: old_dic[&quot;title&quot;],\n            &quot;author&quot;: &quot;sunbaile&quot;,\n            &quot;draft&quot;: False,\n            &quot;categories&quot;: old_dic['categories'],\n            &quot;date&quot;: old_dic[&quot;date&quot;]\n        }\n        # print(&quot;new_dic&quot;,new_dic)\n        yaml_res = yaml.dump(new_dic,allow_unicode=True)    #用yaml库将字典解析为yaml字符串\n        # print(&quot;***&quot;,yaml_res,&quot;***&quot;)\n\n        res = all_text.replace(yaml_text,&quot;\\n&quot;+yaml_res)\n        with open(os.path.join(path,file),&quot;w+&quot;) as f:\n            f.write(res)\n</code></pre>\n<h3 id=\"图片迁移\">图片迁移</h3>\n<p>如果你打算用github+jsdelivr做图床，迁移图片更简单。思路就是先从服务器上把wordpress的wp-content目录（里面有个uploads文件夹存了你所有的图片）下载下来，然后原封不动的丢到github仓库里，最后把文章中的路径改一下就可以啦。</p>\n<blockquote>\n<p>注意：每张图片都是由<code>固定链接</code>+<code>路径</code>+<code>名字</code>组成。</p>\n</blockquote>\n<p>比如说原来文章的图片链接是这样的：</p>\n<pre><code class=\"language-markdown\">![](https://www.leyoubaloy.xyz/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)\n或者是这样的：\n![](/wp-content/uploads/2021/02/image-1-1024x431.png)\n</code></pre>\n<p>要替换成这样：</p>\n<pre><code class=\"language-markdown\">![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/06/728da9773912b31b0c11b3568418367adab4e154.jpg)\n和这样\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/02/image-1-1024x431.png)\n</code></pre>\n<p>那肯定还是用python脚本啦，python，yyds!</p>\n<pre><code class=\"language-python\">import os\nimport re\n\npath = &quot;/Users/sunbaile/myBlog/content/posts&quot;\n# path = &quot;/Users/sunbaile/myBlog/python脚本&quot;\ncnt = 0\n\nfor file in os.listdir(path):\n    if file[-3:]==&quot;.md&quot; :\n        cnt += 1\n        print(cnt,file)\n\n        with open(os.path.join(path,file),&quot;r+&quot;) as f:\n            all_text = f.read()\n        res = re.sub(&quot;\\((\\/wp-content\\/uploads)&quot;,&quot;(https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/&quot;,all_text)\n        res = res.replace(&quot;www.leyoubaloy.xyz&quot;,&quot;cdn.jsdelivr.net/gh/leyouBaloy/mypic&quot;)\n        with open(os.path.join(path,file),&quot;w+&quot;) as f:\n            f.write(res)\n</code></pre>\n<h3 id=\"视频教程\">视频教程：</h3>\n<p>{{&lt; bilibili BV18S4y1y7jo &gt;}}</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "为什么抛弃wordpress选择hugo",
+      "id": "为什么抛弃wordpress选择hugo"
+    },
+    {
+      "level": 3,
+      "text": "文章迁移",
+      "id": "文章迁移"
+    },
+    {
+      "level": 3,
+      "text": "修改文章的属性",
+      "id": "修改文章的属性"
+    },
+    {
+      "level": 1,
+      "text": "path = \"/Users/sunbaile/myBlog/python脚本\"",
+      "id": "path-userssunbailemyblogpython脚本"
+    },
+    {
+      "level": 3,
+      "text": "图片迁移",
+      "id": "图片迁移"
+    },
+    {
+      "level": 1,
+      "text": "path = \"/Users/sunbaile/myBlog/python脚本\"",
+      "id": "path-userssunbailemyblogpython脚本"
+    },
+    {
+      "level": 3,
+      "text": "视频教程：",
+      "id": "视频教程"
+    }
+  ],
+  "hasMath": false
+}

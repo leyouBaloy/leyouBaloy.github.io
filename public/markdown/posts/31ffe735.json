@@ -1,0 +1,51 @@
+{
+  "title": "python发邮件",
+  "date": "2021-08-08T08:20:29.000Z",
+  "updatedAt": "2021-08-08T08:20:29.000Z",
+  "file": "python发邮件.md",
+  "slug": "31ffe735",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 12,
+  "readingTime": 1,
+  "body": "### QQ邮箱设置\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081637.jpg) ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081707.jpg) ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ截图20210808081720.jpg)\n\n### python代码\n\n```\nimport json\nimport requests\nimport smtplib\nfrom email.mime.text import MIMEText\nfrom email.utils import formataddr\nimport re\n\n#发邮件\ndef mail(my_sender,my_user,subject,msg_text):\n    my_pass = 'XXXX'  # 发件人邮箱密码\n    ret = 1\n    try:\n        msg = MIMEText(msg_text, 'html', 'utf-8')\n        msg['From'] = formataddr([\"XXX\", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号\n        msg['To'] = formataddr([\"收件人昵称\", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号\n        msg['Subject'] = subject  # 邮件的主题，也可以说是标题\n\n        server = smtplib.SMTP_SSL(\"smtp.qq.com\", 465)  # 发件人邮箱中的SMTP服务器，端口是25\n        server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码\n        server.sendmail(my_sender, [my_user, ], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件\n        server.quit()  # 关闭连接\n    except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False\n        ret = 0\n    return ret\n```\n\n### 时间判断\n\n```\nimport datetime\n\n# 范围时间\nd_time = datetime.datetime.strptime(str(datetime.datetime.now().date())+'9:30', '%Y-%m-%d%H:%M')\nd_time1 =  datetime.datetime.strptime(str(datetime.datetime.now().date())+'9:33', '%Y-%m-%d%H:%M')\n\n# 当前时间\nn_time = datetime.datetime.now()\n\n# 判断当前时间是否在范围时间内\nif n_time > d_time and n_time<d_time1:\n    pass\n```",
+  "html": "<h3 id=\"qq邮箱设置\">QQ邮箱设置</h3>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ%E6%88%AA%E5%9B%BE20210808081637.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ%E6%88%AA%E5%9B%BE20210808081707.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/QQ%E6%88%AA%E5%9B%BE20210808081720.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<h3 id=\"python代码\">python代码</h3>\n<pre><code class=\"language-text\">import json\nimport requests\nimport smtplib\nfrom email.mime.text import MIMEText\nfrom email.utils import formataddr\nimport re\n\n#发邮件\ndef mail(my_sender,my_user,subject,msg_text):\n    my_pass = 'XXXX'  # 发件人邮箱密码\n    ret = 1\n    try:\n        msg = MIMEText(msg_text, 'html', 'utf-8')\n        msg['From'] = formataddr([&quot;XXX&quot;, my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号\n        msg['To'] = formataddr([&quot;收件人昵称&quot;, my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号\n        msg['Subject'] = subject  # 邮件的主题，也可以说是标题\n\n        server = smtplib.SMTP_SSL(&quot;smtp.qq.com&quot;, 465)  # 发件人邮箱中的SMTP服务器，端口是25\n        server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码\n        server.sendmail(my_sender, [my_user, ], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件\n        server.quit()  # 关闭连接\n    except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False\n        ret = 0\n    return ret\n</code></pre>\n<h3 id=\"时间判断\">时间判断</h3>\n<pre><code class=\"language-text\">import datetime\n\n# 范围时间\nd_time = datetime.datetime.strptime(str(datetime.datetime.now().date())+'9:30', '%Y-%m-%d%H:%M')\nd_time1 =  datetime.datetime.strptime(str(datetime.datetime.now().date())+'9:33', '%Y-%m-%d%H:%M')\n\n# 当前时间\nn_time = datetime.datetime.now()\n\n# 判断当前时间是否在范围时间内\nif n_time &gt; d_time and n_time&lt;d_time1:\n    pass\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "QQ邮箱设置",
+      "id": "qq邮箱设置"
+    },
+    {
+      "level": 3,
+      "text": "python代码",
+      "id": "python代码"
+    },
+    {
+      "level": 3,
+      "text": "时间判断",
+      "id": "时间判断"
+    },
+    {
+      "level": 1,
+      "text": "范围时间",
+      "id": "范围时间"
+    },
+    {
+      "level": 1,
+      "text": "当前时间",
+      "id": "当前时间"
+    },
+    {
+      "level": 1,
+      "text": "判断当前时间是否在范围时间内",
+      "id": "判断当前时间是否在范围时间内"
+    }
+  ],
+  "hasMath": false
+}

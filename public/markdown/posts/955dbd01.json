@@ -1,0 +1,20 @@
+{
+  "title": "每日一题--给小朋友的自动出题自动批改",
+  "date": "2020-10-06T21:24:10.000Z",
+  "updatedAt": "2020-10-06T21:24:10.000Z",
+  "file": "每日一题--给小朋友的自动出题自动批改.md",
+  "slug": "955dbd01",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 47,
+  "readingTime": 1,
+  "body": "```\n#include <iostream>\n#include <cstdlib>\n#include <ctime>\n\nusing namespace std;\n\nint main()\n{\n    srand((int)time(0));  // 产生随机种子  把0换成NULL也行\n    int left,right,oper,result;\n    char char_oper;   //除了数字oper变量外，还有字符char_oper变量\n    left = rand() % 10;\n    right = rand() % 10;\n    oper = rand() % 4;  //这是加减乘除符号，用0,1,2,3四个数表示\n\n    switch(oper)\n    {\n        case 0:char_oper = '+';\n        cout << left << char_oper << right << \"=\";\n        cin >> result;\n        if(result == left + right)\n        {\n            cout << \"YES\";\n        }\n        else\n        {\n            cout << \"NO\";\n        }\n        break;\n\n        case 1:char_oper = '-';\n        cout << left << char_oper << right << \"=\";\n         cin >> result;\n        if(result == left - right)\n        {\n            cout << \"YES\";\n        }\n        else\n        {\n            cout << \"NO\";\n        }\n        break;\n        case 2:char_oper = '*';\n        cout << left << char_oper << right << \"=\";\n         cin >> result;\n        if(result == left * right)\n        {\n            cout << \"YES\";\n        }\n        else\n        {\n            cout << \"NO\";\n        }\n        break;\n        case 3:char_oper = '/';\n        cout << left << char_oper << right << \"=\";\n         cin >> result;\n        if(result == left / right)\n        {\n            cout << \"YES\";\n        }\n        else\n        {\n            cout << \"NO\";\n        }\n        break;\n    }\n\n\n\n    return 0;\n}\n```\n\n利用随机数实现非数字变量的随机\n\n0表示+\n\n1表示-\n\n2表示\\*\n\n3表示/\n\n用switch语句实现\n\n这段代码比较巧妙，稍微琢磨一下",
+  "html": "<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;cstdlib&gt;\n#include &lt;ctime&gt;\n\nusing namespace std;\n\nint main()\n{\n    srand((int)time(0));  // 产生随机种子  把0换成NULL也行\n    int left,right,oper,result;\n    char char_oper;   //除了数字oper变量外，还有字符char_oper变量\n    left = rand() % 10;\n    right = rand() % 10;\n    oper = rand() % 4;  //这是加减乘除符号，用0,1,2,3四个数表示\n\n    switch(oper)\n    {\n        case 0:char_oper = '+';\n        cout &lt;&lt; left &lt;&lt; char_oper &lt;&lt; right &lt;&lt; &quot;=&quot;;\n        cin &gt;&gt; result;\n        if(result == left + right)\n        {\n            cout &lt;&lt; &quot;YES&quot;;\n        }\n        else\n        {\n            cout &lt;&lt; &quot;NO&quot;;\n        }\n        break;\n\n        case 1:char_oper = '-';\n        cout &lt;&lt; left &lt;&lt; char_oper &lt;&lt; right &lt;&lt; &quot;=&quot;;\n         cin &gt;&gt; result;\n        if(result == left - right)\n        {\n            cout &lt;&lt; &quot;YES&quot;;\n        }\n        else\n        {\n            cout &lt;&lt; &quot;NO&quot;;\n        }\n        break;\n        case 2:char_oper = '*';\n        cout &lt;&lt; left &lt;&lt; char_oper &lt;&lt; right &lt;&lt; &quot;=&quot;;\n         cin &gt;&gt; result;\n        if(result == left * right)\n        {\n            cout &lt;&lt; &quot;YES&quot;;\n        }\n        else\n        {\n            cout &lt;&lt; &quot;NO&quot;;\n        }\n        break;\n        case 3:char_oper = '/';\n        cout &lt;&lt; left &lt;&lt; char_oper &lt;&lt; right &lt;&lt; &quot;=&quot;;\n         cin &gt;&gt; result;\n        if(result == left / right)\n        {\n            cout &lt;&lt; &quot;YES&quot;;\n        }\n        else\n        {\n            cout &lt;&lt; &quot;NO&quot;;\n        }\n        break;\n    }\n\n\n\n    return 0;\n}\n</code></pre>\n<p>利用随机数实现非数字变量的随机</p>\n<p>0表示+</p>\n<p>1表示-</p>\n<p>2表示*</p>\n<p>3表示/</p>\n<p>用switch语句实现</p>\n<p>这段代码比较巧妙，稍微琢磨一下</p>\n",
+  "headings": [],
+  "hasMath": false
+}

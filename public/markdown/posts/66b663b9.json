@@ -1,0 +1,36 @@
+{
+  "title": "Leetcode198:打家劫舍——动态规划",
+  "date": "2022-03-31T08:20:49.000Z",
+  "updatedAt": "2022-03-31T08:20:49.000Z",
+  "file": "Leetcode198_打家劫舍——动态规划.md",
+  "slug": "66b663b9",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 119,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/house-robber/\n\n## 题解\n\n看官方题解吧，官方题解写的真好。\n\n## 感想\n\n我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动态规划是很灵活的算法，很多题目想不到可以用动态规划来解决。要多练习才能融会贯通。\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/house-robber/\">https://leetcode-cn.com/problems/house-robber/</a></p>\n<h2 id=\"题解\">题解</h2>\n<p>看官方题解吧，官方题解写的真好。</p>\n<h2 id=\"感想\">感想</h2>\n<p>我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动态规划是很灵活的算法，很多题目想不到可以用动态规划来解决。要多练习才能融会贯通。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 2,
+      "text": "感想",
+      "id": "感想"
+    }
+  ],
+  "hasMath": false
+}

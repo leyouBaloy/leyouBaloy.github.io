@@ -1,0 +1,48 @@
+{
+  "title": "使用正则表达式进行高级替换",
+  "date": "2022-06-17T07:02:15.000Z",
+  "updatedAt": "2022-06-17T07:02:15.000Z",
+  "file": "使用正则表达式进行高级替换.md",
+  "slug": "17aa354e",
+  "categories": [
+    "技能分享",
+    "笔记"
+  ],
+  "tags": [
+    "技能分享",
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 358,
+  "readingTime": 1,
+  "body": "## 需求\n\n最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的：\n\n```python\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg)\n```\n\n但是这样渲染出的图片不能居中，也不能缩放，我得把它转换成博客主题的格式：\n\n```python\n\\{\\{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg\" >\\}\\}（为了防止渲染原文没有\\斜杠）\n```\n\n思路很简单，但不能简单的使用python的`replace`函数，因为不仅要匹配`![]()`，还要匹配括号里的url\n\n## 代码\n\n可以拿这个网站试一试：https://regex101.com\n\n点左边`FUNCTION`里的`Substitution`，就是替换模式\n\n`TOOLS`里的`Code Generator`可以生成代码（不过python的代码不太好用）\n\n```python\n# 匹配字符串\nr\"!\\[.*\\]\\((https:\\/\\/myblog.*)\\)\"\n```\n\n```python\n# 替换字符串\n'/{/{< figure src=\"\\\\1\" >/}/}'（为了防止渲染原文没有/斜杠）\n```\n\n这里面的`\\\\1`就表示匹配字符串里用括号包围起来的那部分，replace是没有这种功能的。\n\n完整代码：\n\n```python\nimport os\nimport re\npath = \"\" # 文件夹路径\nfile = \"\" # 文件名\n\nwith open(os.path.join(path, file),\"r\") as f:\n    all_text = f.read()\n    res = re.sub(r\"!\\[.*\\]\\((https:\\/\\/myblog.*)\\)\", '/{/{< figure src=\"\\\\1\" >/}/}', all_text, 0, re.MULTILINE) # （为了防止渲染原文没有/斜杠）\n    \n    \nwith open(os.path.join(path, file),\"w\") as f:\n    f.write(res)\n```\n\n## re.sub\n\n```python\ndef sub(pattern, repl, string, count=0, flags=0):\n    \"\"\"Return the string obtained by replacing the leftmost\n    non-overlapping occurrences of the pattern in string by the\n    replacement repl.  repl can be either a string or a callable;\n    if a string, backslash escapes in it are processed.  If it is\n    a callable, it's passed the match object and must return\n    a replacement string to be used.\"\"\"\n    return _compile(pattern, flags).sub(repl, string, count)\n```\n1）pattern：该参数表示正则中的模式字符串；\n（2）repl：该参数表示要替换的字符串（即匹配到pattern后替换为repl），也可以是个函数；\n（3）string：该参数表示要被处理（查找替换）的原始字符串；\n（4）count：可选参数，表示是要替换的最大次数，而且必须是非负整数，该参数默认为0，即所有的匹配都会被替换；\n（5）flags：可选参数，表示编译时用的匹配模式（如忽略大小写、多行模式等），数字形式，默认为0。\n\n`re.MULTILINE`:多行模式\n\n\n\n",
+  "html": "<h2 id=\"需求\">需求</h2>\n<p>最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的：</p>\n<pre><code class=\"language-python\">![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg)\n</code></pre>\n<p>但是这样渲染出的图片不能居中，也不能缩放，我得把它转换成博客主题的格式：</p>\n<pre><code class=\"language-python\">\\{\\{&lt; figure src=&quot;https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_1562%20%E5%A4%A7.jpeg&quot; &gt;\\}\\}（为了防止渲染原文没有\\斜杠）\n</code></pre>\n<p>思路很简单，但不能简单的使用python的<code>replace</code>函数，因为不仅要匹配<code>![]()</code>，还要匹配括号里的url</p>\n<h2 id=\"代码\">代码</h2>\n<p>可以拿这个网站试一试：<a href=\"https://regex101.com\">https://regex101.com</a></p>\n<p>点左边<code>FUNCTION</code>里的<code>Substitution</code>，就是替换模式</p>\n<p><code>TOOLS</code>里的<code>Code Generator</code>可以生成代码（不过python的代码不太好用）</p>\n<pre><code class=\"language-python\"># 匹配字符串\nr&quot;!\\[.*\\]\\((https:\\/\\/myblog.*)\\)&quot;\n</code></pre>\n<pre><code class=\"language-python\"># 替换字符串\n'/{/{&lt; figure src=&quot;\\\\1&quot; &gt;/}/}'（为了防止渲染原文没有/斜杠）\n</code></pre>\n<p>这里面的<code>\\\\1</code>就表示匹配字符串里用括号包围起来的那部分，replace是没有这种功能的。</p>\n<p>完整代码：</p>\n<pre><code class=\"language-python\">import os\nimport re\npath = &quot;&quot; # 文件夹路径\nfile = &quot;&quot; # 文件名\n\nwith open(os.path.join(path, file),&quot;r&quot;) as f:\n    all_text = f.read()\n    res = re.sub(r&quot;!\\[.*\\]\\((https:\\/\\/myblog.*)\\)&quot;, '/{/{&lt; figure src=&quot;\\\\1&quot; &gt;/}/}', all_text, 0, re.MULTILINE) # （为了防止渲染原文没有/斜杠）\n    \n    \nwith open(os.path.join(path, file),&quot;w&quot;) as f:\n    f.write(res)\n</code></pre>\n<h2 id=\"resub\">re.sub</h2>\n<pre><code class=\"language-python\">def sub(pattern, repl, string, count=0, flags=0):\n    &quot;&quot;&quot;Return the string obtained by replacing the leftmost\n    non-overlapping occurrences of the pattern in string by the\n    replacement repl.  repl can be either a string or a callable;\n    if a string, backslash escapes in it are processed.  If it is\n    a callable, it's passed the match object and must return\n    a replacement string to be used.&quot;&quot;&quot;\n    return _compile(pattern, flags).sub(repl, string, count)\n</code></pre>\n<p>1）pattern：该参数表示正则中的模式字符串；\n（2）repl：该参数表示要替换的字符串（即匹配到pattern后替换为repl），也可以是个函数；\n（3）string：该参数表示要被处理（查找替换）的原始字符串；\n（4）count：可选参数，表示是要替换的最大次数，而且必须是非负整数，该参数默认为0，即所有的匹配都会被替换；\n（5）flags：可选参数，表示编译时用的匹配模式（如忽略大小写、多行模式等），数字形式，默认为0。</p>\n<p><code>re.MULTILINE</code>:多行模式</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "需求",
+      "id": "需求"
+    },
+    {
+      "level": 2,
+      "text": "代码",
+      "id": "代码"
+    },
+    {
+      "level": 1,
+      "text": "匹配字符串",
+      "id": "匹配字符串"
+    },
+    {
+      "level": 1,
+      "text": "替换字符串",
+      "id": "替换字符串"
+    },
+    {
+      "level": 2,
+      "text": "re.sub",
+      "id": "resub"
+    }
+  ],
+  "hasMath": true
+}

@@ -1,0 +1,20 @@
+{
+  "title": "字符串与数字之间的转换",
+  "date": "2021-01-01T21:15:27.000Z",
+  "updatedAt": "2021-01-01T21:15:27.000Z",
+  "file": "字符串与数字之间的转换.md",
+  "slug": "eea33013",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 25,
+  "readingTime": 1,
+  "body": "方法一（利用<sstream>的stringstream，_**可以是浮点数**_）\n\n数字to字符串\n\n```\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main()\n{\n    double x;\n    string str;\n    stringstream ss;\n    cin >> x;\n    ss << x;\n    ss >> str;\n    cout << str;\n    return 0;\n}\n```\n\n字符串to数字\n\n```\n#include <iostream>\n#include <sstream>\nusing namespace std;\n\nint main()\n{\n    double x;\n    string str;\n    stringstream ss;\n    cin >> str;\n    ss << str;\n    ss >> x;\n    cout << x;\n    return 0;\n}\n```",
+  "html": "<p>方法一（利用<sstream>的stringstream，<em><strong>可以是浮点数</strong></em>）</p>\n<p>数字to字符串</p>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;sstream&gt;\nusing namespace std;\n\nint main()\n{\n    double x;\n    string str;\n    stringstream ss;\n    cin &gt;&gt; x;\n    ss &lt;&lt; x;\n    ss &gt;&gt; str;\n    cout &lt;&lt; str;\n    return 0;\n}\n</code></pre>\n<p>字符串to数字</p>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;sstream&gt;\nusing namespace std;\n\nint main()\n{\n    double x;\n    string str;\n    stringstream ss;\n    cin &gt;&gt; str;\n    ss &lt;&lt; str;\n    ss &gt;&gt; x;\n    cout &lt;&lt; x;\n    return 0;\n}\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

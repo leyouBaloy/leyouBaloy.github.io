@@ -1,0 +1,20 @@
+{
+  "title": "第一章练习题",
+  "date": "2020-09-30T23:09:21.000Z",
+  "updatedAt": "2020-09-30T23:09:21.000Z",
+  "file": "第一章练习题.md",
+  "slug": "043f53a9",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 263,
+  "readingTime": 1,
+  "body": "**修改pip源：**  \n[](https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html)[https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html](https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html)\n\n![](http://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2020/10/QQ截图20201003232747-1024x486.png)\n\n**修改jupyter默认目录：**  \n在jupyter中键入 !jupyter notebook –generate-config\n\n这样会在c盘的用户文件中写入一个叫jupyter\\_notebook\\_config.py的配置文件\n\n在c盘用户文件夹中找到.jupyter目录\n\n找到刚写入的文件jupyter\\_notebook\\_config.py\n\n可以用IDLE打开，上面菜单栏有edit>find查找工具\n\n（用其他编辑器如记事本啥的应该都行）\n\n找到#c.NotebookApp.notebook\\_dir =’ ‘去掉注释后，在‘ ’中输入你想启动目录路径\n\n注意目录的格式中的”\\\\”要改成”\\\\”否则jupyter无法运行。\n\n以上步骤做完后，需要更改快捷方式的位置，找到Jupyter的快捷方式，右键打开属性，将快捷方式中“目标”中的”%USERPROFILE%”去掉。(引号也要去掉)\n\n再启动服务器进入页面，就成功了\n\nqwq搜索了好多教程，每个教程都是不能成功，综合在一起捯饬了半天才总结如上方法qwq",
+  "html": "<p><strong>修改pip源：</strong><br>\n<a href=\"https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html\"></a><a href=\"https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html\">https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html</a></p>\n<p><img src=\"http://cdn.jsdelivr.net/gh/leyouBaloy/mypic/wp-content/uploads/2020/10/QQ%E6%88%AA%E5%9B%BE20201003232747-1024x486.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p><strong>修改jupyter默认目录：</strong><br>\n在jupyter中键入 !jupyter notebook –generate-config</p>\n<p>这样会在c盘的用户文件中写入一个叫jupyter_notebook_config.py的配置文件</p>\n<p>在c盘用户文件夹中找到.jupyter目录</p>\n<p>找到刚写入的文件jupyter_notebook_config.py</p>\n<p>可以用IDLE打开，上面菜单栏有edit&gt;find查找工具</p>\n<p>（用其他编辑器如记事本啥的应该都行）</p>\n<p>找到#c.NotebookApp.notebook_dir =’ ‘去掉注释后，在‘ ’中输入你想启动目录路径</p>\n<p>注意目录的格式中的”\\”要改成”\\”否则jupyter无法运行。</p>\n<p>以上步骤做完后，需要更改快捷方式的位置，找到Jupyter的快捷方式，右键打开属性，将快捷方式中“目标”中的”%USERPROFILE%”去掉。(引号也要去掉)</p>\n<p>再启动服务器进入页面，就成功了</p>\n<p>qwq搜索了好多教程，每个教程都是不能成功，综合在一起捯饬了半天才总结如上方法qwq</p>\n",
+  "headings": [],
+  "hasMath": false
+}

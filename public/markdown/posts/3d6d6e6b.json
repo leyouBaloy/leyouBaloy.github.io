@@ -1,0 +1,41 @@
+{
+  "title": "Leetcode386:字典序排数——dfs、迭代",
+  "date": "2022-04-18T09:26:02.000Z",
+  "updatedAt": "2022-04-18T09:26:02.000Z",
+  "file": "Leetcode386_字典序排数——dfs、迭代.md",
+  "slug": "3d6d6e6b",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 293,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/lexicographical-numbers/\n\n日常做不出来😭\n\n## 题解\n\n什么是字典序？（原谅我到了大二才搞明白什么是字典序😂）\n\n> 对于[字符串](https://so.csdn.net/so/search?q=字符串&spm=1001.2101.3001.7020)，先按首字符排序，如果首字符相同，再按第二个字符排序，以此类推。\n> 如aa,ab,ba,bb,bc就是一个[字典序](https://so.csdn.net/so/search?q=字典序&spm=1001.2101.3001.7020)。\n\n### dfs\n\n我们可以画一棵树。\n\n第一层设置为0。\n\n第二层是1,2,3...,9\n\n第三层是0,1,2,3,...,9\n\n第四层及往后层都同第三层\n\n![image.png](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/1650246458-ahFpqe-image.png)\n\n深度优先遍历这棵树，记录路径就是答案啦。\n\n当然了，把树具体化为代码其实是一件很难得事情：\n\n```python\nclass Solution:\n    def lexicalOrder(self, n: int) -> List[int]:\n        res = []\n        for i in range(1,10):\n            if i > n:\n                break\n            res.append(i)\n            self.dfs(i, n, res) # 以i为开头枚举\n        return res\n    \n    def dfs(self, i, n, res):\n        for k in range(0,10):\n            val = i*10+k\n            if val > n:\n                return\n            else:\n                res.append(val)\n                self.dfs(val, n, res)\n```\n\n细节：\n\n* 先枚举1,2,3...,9，因为第一个数不能为0。\n* 在后面枚举时要把0加上。\n\n时间复杂度O(n)，空间复杂度O(logn)，主要为栈的开销\n\n### 迭代法\n\n很有思维的一种方法！\n\n![image-20220418173712075](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220418173712075.png)\n\n\n\n代码：\n\n```python\nclass Solution:\n    def lexicalOrder(self, n: int) -> List[int]:\n        ans = [0] * n\n        num = 1\n        for i in range(n):\n            ans[i] = num\n            if num * 10 <= n:\n                num *= 10\n            else:\n                while num % 10 == 9 or num + 1 > n:\n                    num //= 10\n                num += 1\n        return ans\n```\n\n> 作者：LeetCode-Solution\n> 链接：https://leetcode-cn.com/problems/lexicographical-numbers/solution/zi-dian-xu-pai-shu-by-leetcode-solution-98mz/\n> 来源：力扣（LeetCode）\n> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/lexicographical-numbers/\">https://leetcode-cn.com/problems/lexicographical-numbers/</a></p>\n<p>日常做不出来😭</p>\n<h2 id=\"题解\">题解</h2>\n<p>什么是字典序？（原谅我到了大二才搞明白什么是字典序😂）</p>\n<blockquote>\n<p>对于<a href=\"https://so.csdn.net/so/search?q=%E5%AD%97%E7%AC%A6%E4%B8%B2&amp;spm=1001.2101.3001.7020\">字符串</a>，先按首字符排序，如果首字符相同，再按第二个字符排序，以此类推。\n如aa,ab,ba,bb,bc就是一个<a href=\"https://so.csdn.net/so/search?q=%E5%AD%97%E5%85%B8%E5%BA%8F&amp;spm=1001.2101.3001.7020\">字典序</a>。</p>\n</blockquote>\n<h3 id=\"dfs\">dfs</h3>\n<p>我们可以画一棵树。</p>\n<p>第一层设置为0。</p>\n<p>第二层是1,2,3…,9</p>\n<p>第三层是0,1,2,3,…,9</p>\n<p>第四层及往后层都同第三层</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/1650246458-ahFpqe-image.png\" alt=\"image.png\" loading=\"lazy\" decoding=\"async\"></p>\n<p>深度优先遍历这棵树，记录路径就是答案啦。</p>\n<p>当然了，把树具体化为代码其实是一件很难得事情：</p>\n<pre><code class=\"language-python\">class Solution:\n    def lexicalOrder(self, n: int) -&gt; List[int]:\n        res = []\n        for i in range(1,10):\n            if i &gt; n:\n                break\n            res.append(i)\n            self.dfs(i, n, res) # 以i为开头枚举\n        return res\n    \n    def dfs(self, i, n, res):\n        for k in range(0,10):\n            val = i*10+k\n            if val &gt; n:\n                return\n            else:\n                res.append(val)\n                self.dfs(val, n, res)\n</code></pre>\n<p>细节：</p>\n<ul>\n<li>先枚举1,2,3…,9，因为第一个数不能为0。</li>\n<li>在后面枚举时要把0加上。</li>\n</ul>\n<p>时间复杂度O(n)，空间复杂度O(logn)，主要为栈的开销</p>\n<h3 id=\"迭代法\">迭代法</h3>\n<p>很有思维的一种方法！</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220418173712075.png\" alt=\"image-20220418173712075\" loading=\"lazy\" decoding=\"async\"></p>\n<p>代码：</p>\n<pre><code class=\"language-python\">class Solution:\n    def lexicalOrder(self, n: int) -&gt; List[int]:\n        ans = [0] * n\n        num = 1\n        for i in range(n):\n            ans[i] = num\n            if num * 10 &lt;= n:\n                num *= 10\n            else:\n                while num % 10 == 9 or num + 1 &gt; n:\n                    num //= 10\n                num += 1\n        return ans\n</code></pre>\n<blockquote>\n<p>作者：LeetCode-Solution\n链接：<a href=\"https://leetcode-cn.com/problems/lexicographical-numbers/solution/zi-dian-xu-pai-shu-by-leetcode-solution-98mz/\">https://leetcode-cn.com/problems/lexicographical-numbers/solution/zi-dian-xu-pai-shu-by-leetcode-solution-98mz/</a>\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>\n</blockquote>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "dfs",
+      "id": "dfs"
+    },
+    {
+      "level": 3,
+      "text": "迭代法",
+      "id": "迭代法"
+    }
+  ],
+  "hasMath": false
+}

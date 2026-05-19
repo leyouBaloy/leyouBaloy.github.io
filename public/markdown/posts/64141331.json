@@ -1,0 +1,20 @@
+{
+  "title": "selenium爬GDP",
+  "date": "2020-12-01T23:11:02.000Z",
+  "updatedAt": "2020-12-01T23:11:02.000Z",
+  "file": "selenium爬GDP.md",
+  "slug": "64141331",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 0,
+  "readingTime": 1,
+  "body": "```\nfrom selenium import webdriver\nfrom bs4 import BeautifulSoup\nimport csv\n\nout = open('d:/data.csv','w', newline='')\ncsv_write = csv.writer(out,dialect='excel')\n\nfor year in range(1960,2018):\n    driver = webdriver.Chrome()\n    url = \"https://www.kylc.com/stats/global/yearly/g_gdp/%d.html\"%year\n    xpath = \"/html/body/div[2]/div[1]/div[5]/div[1]/div/div/div/table\"\n    driver.get(url)\n    table1 = driver.find_element_by_xpath(xpath).get_attribute(\"innerHTML\")\n\n    out = open('d:/data.csv','w', newline='')\n    csv_write = csv.writer(out,dialect='excel')\n\n    soup = BeautifulSoup(table1,\"html.parser\")\n    table = soup.find_all('tr')\n    for row in table:\n        cols = [col.text for col in row.find_all('td')]\n        if len(cols)==0 or not cols[0].isdigit():\n            continue\n        cols.append(year)   \n        csv_write.writerow(cols)\n        print(cols)\n    \ndriver.close()\n```",
+  "html": "<pre><code class=\"language-text\">from selenium import webdriver\nfrom bs4 import BeautifulSoup\nimport csv\n\nout = open('d:/data.csv','w', newline='')\ncsv_write = csv.writer(out,dialect='excel')\n\nfor year in range(1960,2018):\n    driver = webdriver.Chrome()\n    url = &quot;https://www.kylc.com/stats/global/yearly/g_gdp/%d.html&quot;%year\n    xpath = &quot;/html/body/div[2]/div[1]/div[5]/div[1]/div/div/div/table&quot;\n    driver.get(url)\n    table1 = driver.find_element_by_xpath(xpath).get_attribute(&quot;innerHTML&quot;)\n\n    out = open('d:/data.csv','w', newline='')\n    csv_write = csv.writer(out,dialect='excel')\n\n    soup = BeautifulSoup(table1,&quot;html.parser&quot;)\n    table = soup.find_all('tr')\n    for row in table:\n        cols = [col.text for col in row.find_all('td')]\n        if len(cols)==0 or not cols[0].isdigit():\n            continue\n        cols.append(year)   \n        csv_write.writerow(cols)\n        print(cols)\n    \ndriver.close()\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

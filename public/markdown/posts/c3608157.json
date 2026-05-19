@@ -1,0 +1,81 @@
+{
+  "title": "数之和问题归纳——哈希、双指针",
+  "date": "2024-11-04T12:10:30.000Z",
+  "updatedAt": "2024-11-04T12:10:30.000Z",
+  "file": "数之和问题归纳哈希双指针.md",
+  "slug": "c3608157",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 909,
+  "readingTime": 3,
+  "body": "# Leetcode 1: 两数之和\n\n## 题目\n\nhttps://leetcode.cn/problems/two-sum/\n\n给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。\n\n你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。\n\n**示例:**\n\n给定 nums = [2, 7, 11, 15], target = 9\n\n因为 nums[0] + nums[1] = 2 + 7 = 9\n\n所以返回 [0, 1]\n\n## 思路\n\n哈希set，简单题\n\n# Leetcode 454: 四数相加II\n\n## 题目\n\nhttps://leetcode.cn/problems/4sum-ii/description/\n\n给定四个包含整数的数组列表 A , B , C , D ,计算有多少个元组 (i, j, k, l) ，使得 A[i] + B[j] + C[k] + D[l] = 0。\n\n为了使问题简单化，所有的 A, B, C, D 具有相同的长度 N，且 0 ≤ N ≤ 500 。所有整数的范围在 -2^28 到 2^28 - 1 之间，最终结果不会超过 2^31 - 1 。\n\n**例如:**\n\n输入:\n\n- A = [ 1, 2]\n- B = [-2,-1]\n- C = [-1, 2]\n- D = [ 0, 2]\n\n输出:\n\n2\n\n**解释:**\n\n两个元组如下:\n\n1. (0, 0, 0, 1) -> A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0\n2. (1, 1, 0, 0) -> A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0\n\n## 思路\n\n哈希map，A 和 B 分一组，计算A[i] + B[j] 有多少种情况。再把 B 和 C 分一组，计算符合-(C[k] + D[l]) = A[i] + B[j] 的情况有几种。\n\n这题简单就简单在不用去重，即不用考虑 A[i], B[j], C[k], D[l]四个数重复的问题。\n\n# Leetcode15: 三数之和\n\n## 题目\n\nhttps://leetcode.cn/problems/3sum/description/\n\n给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。\n\n**注意：** 答案中不可以包含重复的三元组。\n\n示例：\n\n给定数组 nums = [-1, 0, 1, 2, -1, -4]，\n\n满足要求的三元组集合为： [ [-1, 0, 1], [-1, -1, 2] ]\n\n## 思路\n\n这题需要去重，用双指针会更好做\n\n首先将数组排序，然后有一层for循环，i从下标0的地方开始，同时定一个下标left 定义在i+1的位置上，定义下标right 在数组结尾的位置上。\n\n依然还是在数组中找到 abc 使得a + b +c =0，我们这里相当于 a = nums[i]，b = nums[left]，c = nums[right]。\n\n接下来如何移动left 和right呢， 如果nums[i] + nums[left] + nums[right] > 0 就说明 此时三数之和大了，因为数组是排序后了，所以right下标就应该向左移动，这样才能让三数之和小一些。\n\n如果 nums[i] + nums[left] + nums[right] < 0 说明 此时 三数之和小了，left 就向右移动，才能让三数之和大一些，直到left与right相遇为止。\n\n去重操作通过控制i, left, right 跳过一些数来实现，有很多细节。具体看\n\nhttps://www.programmercarl.com/0015.三数之和.html#思路\n\n这题不简单\n\n# Leetcode18: 四数之和\n\n## 题目\n\nhttps://leetcode.cn/problems/4sum/description/\n\n题意：给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。\n\n**注意：**\n\n答案中不可以包含重复的四元组。\n\n示例： 给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。 满足要求的四元组集合为： [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]\n\n## 思路\n\n和三数之和是一个思路，区别是多加一个for循环。\n",
+  "html": "<h1 id=\"leetcode-1-两数之和\">Leetcode 1: 两数之和</h1>\n<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode.cn/problems/two-sum/\">https://leetcode.cn/problems/two-sum/</a></p>\n<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>\n<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>\n<p><strong>示例:</strong></p>\n<p>给定 nums = [2, 7, 11, 15], target = 9</p>\n<p>因为 nums[0] + nums[1] = 2 + 7 = 9</p>\n<p>所以返回 [0, 1]</p>\n<h2 id=\"思路\">思路</h2>\n<p>哈希set，简单题</p>\n<h1 id=\"leetcode-454-四数相加ii\">Leetcode 454: 四数相加II</h1>\n<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode.cn/problems/4sum-ii/description/\">https://leetcode.cn/problems/4sum-ii/description/</a></p>\n<p>给定四个包含整数的数组列表 A , B , C , D ,计算有多少个元组 (i, j, k, l) ，使得 A[i] + B[j] + C[k] + D[l] = 0。</p>\n<p>为了使问题简单化，所有的 A, B, C, D 具有相同的长度 N，且 0 ≤ N ≤ 500 。所有整数的范围在 -2^28 到 2^28 - 1 之间，最终结果不会超过 2^31 - 1 。</p>\n<p><strong>例如:</strong></p>\n<p>输入:</p>\n<ul>\n<li>A = [ 1, 2]</li>\n<li>B = [-2,-1]</li>\n<li>C = [-1, 2]</li>\n<li>D = [ 0, 2]</li>\n</ul>\n<p>输出:</p>\n<p>2</p>\n<p><strong>解释:</strong></p>\n<p>两个元组如下:</p>\n<ol>\n<li>(0, 0, 0, 1) -&gt; A[0] + B[0] + C[0] + D[1] = 1 + (-2) + (-1) + 2 = 0</li>\n<li>(1, 1, 0, 0) -&gt; A[1] + B[1] + C[0] + D[0] = 2 + (-1) + (-1) + 0 = 0</li>\n</ol>\n<h2 id=\"思路\">思路</h2>\n<p>哈希map，A 和 B 分一组，计算A[i] + B[j] 有多少种情况。再把 B 和 C 分一组，计算符合-(C[k] + D[l]) = A[i] + B[j] 的情况有几种。</p>\n<p>这题简单就简单在不用去重，即不用考虑 A[i], B[j], C[k], D[l]四个数重复的问题。</p>\n<h1 id=\"leetcode15-三数之和\">Leetcode15: 三数之和</h1>\n<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode.cn/problems/3sum/description/\">https://leetcode.cn/problems/3sum/description/</a></p>\n<p>给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。</p>\n<p><strong>注意：</strong> 答案中不可以包含重复的三元组。</p>\n<p>示例：</p>\n<p>给定数组 nums = [-1, 0, 1, 2, -1, -4]，</p>\n<p>满足要求的三元组集合为： [ [-1, 0, 1], [-1, -1, 2] ]</p>\n<h2 id=\"思路\">思路</h2>\n<p>这题需要去重，用双指针会更好做</p>\n<p>首先将数组排序，然后有一层for循环，i从下标0的地方开始，同时定一个下标left 定义在i+1的位置上，定义下标right 在数组结尾的位置上。</p>\n<p>依然还是在数组中找到 abc 使得a + b +c =0，我们这里相当于 a = nums[i]，b = nums[left]，c = nums[right]。</p>\n<p>接下来如何移动left 和right呢， 如果nums[i] + nums[left] + nums[right] &gt; 0 就说明 此时三数之和大了，因为数组是排序后了，所以right下标就应该向左移动，这样才能让三数之和小一些。</p>\n<p>如果 nums[i] + nums[left] + nums[right] &lt; 0 说明 此时 三数之和小了，left 就向右移动，才能让三数之和大一些，直到left与right相遇为止。</p>\n<p>去重操作通过控制i, left, right 跳过一些数来实现，有很多细节。具体看</p>\n<p><a href=\"https://www.programmercarl.com/0015.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.html#%E6%80%9D%E8%B7%AF\">https://www.programmercarl.com/0015.三数之和.html#思路</a></p>\n<p>这题不简单</p>\n<h1 id=\"leetcode18-四数之和\">Leetcode18: 四数之和</h1>\n<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode.cn/problems/4sum/description/\">https://leetcode.cn/problems/4sum/description/</a></p>\n<p>题意：给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。</p>\n<p><strong>注意：</strong></p>\n<p>答案中不可以包含重复的四元组。</p>\n<p>示例： 给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。 满足要求的四元组集合为： [ [-1, 0, 0, 1], [-2, -1, 1, 2], [-2, 0, 0, 2] ]</p>\n<h2 id=\"思路\">思路</h2>\n<p>和三数之和是一个思路，区别是多加一个for循环。</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Leetcode 1: 两数之和",
+      "id": "leetcode-1-两数之和"
+    },
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "思路",
+      "id": "思路"
+    },
+    {
+      "level": 1,
+      "text": "Leetcode 454: 四数相加II",
+      "id": "leetcode-454-四数相加ii"
+    },
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "思路",
+      "id": "思路"
+    },
+    {
+      "level": 1,
+      "text": "Leetcode15: 三数之和",
+      "id": "leetcode15-三数之和"
+    },
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "思路",
+      "id": "思路"
+    },
+    {
+      "level": 1,
+      "text": "Leetcode18: 四数之和",
+      "id": "leetcode18-四数之和"
+    },
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "思路",
+      "id": "思路"
+    }
+  ],
+  "hasMath": false
+}

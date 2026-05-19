@@ -1,0 +1,26 @@
+{
+  "title": "本学期“人工智能”学习结束总结",
+  "date": "2021-06-13T23:16:09.000Z",
+  "updatedAt": "2021-06-13T23:16:09.000Z",
+  "file": "本学期“人工智能”学习结束总结.md",
+  "slug": "3dfae010",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 335,
+  "readingTime": 1,
+  "body": "  现在人工智能真是火到了极点，各个专业都想转行搞人工智能。作为本来就是人工智能专业的学生，更是要趁早开始。所以，大一下学期，在老师的指导，以及同学和合作下，我开始接触人工智能的学习。\n\n### 学习资料\n\n从机器学习开始：\n\n*   **_《统计学习方法》_**作者：李航 教科书/课本，理论性强，也很权威。分为`监督学习`和`非监督学习`两部分。b站有啃书指导，“深度之眼”有视频教程，github上有代码实现：[https://github.com/Dod-o/Statistical-Learning-Method\\_Code](https://github.com/Dod-o/Statistical-Learning-Method_Code)\n    \n*   **_和鲸社区_** 在这个平台上参加校内数据分析竞赛，学习资料蛮不错的，貌似是翻译的kaggle？\n    \n\n机器学习的算法很多，涉及到很多概率论知识（真的好多），对数学功底要求比较高。\n\n然后是深度学习：\n\n*   **_飞浆_** 真的好好用，可以直接运行。[https://aistudio.baidu.com/aistudio/projectdetail/1855447?qq-pf-to=pcqq.group](https://aistudio.baidu.com/aistudio/projectdetail/1855447?qq-pf-to=pcqq.group)\n*   **_d2l_** 国外的，有中文版，外国人的教程读起来都挺难受的，不过很全。[https://zh-v2.d2l.ai/chapter\\_preliminaries/linear-algebra.html](https://zh-v2.d2l.ai/chapter_preliminaries/linear-algebra.html)\n\n这学期只算是刚刚入门吧，连代码都没跑过。 半个月后开始暑假小学期，期待进入下一阶段！",
+  "html": "<p>现在人工智能真是火到了极点，各个专业都想转行搞人工智能。作为本来就是人工智能专业的学生，更是要趁早开始。所以，大一下学期，在老师的指导，以及同学和合作下，我开始接触人工智能的学习。</p>\n<h3 id=\"学习资料\">学习资料</h3>\n<p>从机器学习开始：</p>\n<ul>\n<li>\n<p>**<em>《统计学习方法》</em>**作者：李航 教科书/课本，理论性强，也很权威。分为<code>监督学习</code>和<code>非监督学习</code>两部分。b站有啃书指导，“深度之眼”有视频教程，github上有代码实现：<a href=\"https://github.com/Dod-o/Statistical-Learning-Method_Code\">https://github.com/Dod-o/Statistical-Learning-Method_Code</a></p>\n</li>\n<li>\n<p><strong><em>和鲸社区</em></strong> 在这个平台上参加校内数据分析竞赛，学习资料蛮不错的，貌似是翻译的kaggle？</p>\n</li>\n</ul>\n<p>机器学习的算法很多，涉及到很多概率论知识（真的好多），对数学功底要求比较高。</p>\n<p>然后是深度学习：</p>\n<ul>\n<li><strong><em>飞浆</em></strong> 真的好好用，可以直接运行。<a href=\"https://aistudio.baidu.com/aistudio/projectdetail/1855447?qq-pf-to=pcqq.group\">https://aistudio.baidu.com/aistudio/projectdetail/1855447?qq-pf-to=pcqq.group</a></li>\n<li><strong><em>d2l</em></strong> 国外的，有中文版，外国人的教程读起来都挺难受的，不过很全。<a href=\"https://zh-v2.d2l.ai/chapter_preliminaries/linear-algebra.html\">https://zh-v2.d2l.ai/chapter_preliminaries/linear-algebra.html</a></li>\n</ul>\n<p>这学期只算是刚刚入门吧，连代码都没跑过。 半个月后开始暑假小学期，期待进入下一阶段！</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "学习资料",
+      "id": "学习资料"
+    }
+  ],
+  "hasMath": false
+}

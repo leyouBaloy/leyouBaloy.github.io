@@ -1,0 +1,20 @@
+{
+  "title": "质数判断",
+  "date": "2020-12-03T10:13:20.000Z",
+  "updatedAt": "2020-12-03T10:13:20.000Z",
+  "file": "质数判断.md",
+  "slug": "7081f44b",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 66,
+  "readingTime": 1,
+  "body": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来\n\n```\n#include <iostream>\n#include <cmath>\n\nusing namespace std;\nbool sb(int x)\n{\n    int i,flag=0;\n    if(x==1) return 0;\n    else\n    {\n        for(i=2; i<=sqrt(x); i++)\n        {\n            if(x%i==0)\n            {\n                flag = 1;\n            }\n        }\n        if(flag==1)\n        {\n            return false;\n        }\n        else\n        {\n            return true;\n        }\n    }\n}\n\n\n```\n\n如果是质数，函数sb()返回1，不是就返回0；",
+  "html": "<p>质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来</p>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;cmath&gt;\n\nusing namespace std;\nbool sb(int x)\n{\n    int i,flag=0;\n    if(x==1) return 0;\n    else\n    {\n        for(i=2; i&lt;=sqrt(x); i++)\n        {\n            if(x%i==0)\n            {\n                flag = 1;\n            }\n        }\n        if(flag==1)\n        {\n            return false;\n        }\n        else\n        {\n            return true;\n        }\n    }\n}\n\n\n</code></pre>\n<p>如果是质数，函数sb()返回1，不是就返回0；</p>\n",
+  "headings": [],
+  "hasMath": false
+}

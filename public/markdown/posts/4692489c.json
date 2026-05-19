@@ -1,0 +1,106 @@
+{
+  "title": "代码块功能测试",
+  "date": "2024-09-14T00:00:00.000Z",
+  "updatedAt": "2024-09-14T00:00:00.000Z",
+  "file": "代码块测试.md",
+  "slug": "4692489c",
+  "categories": [
+    "技术测试"
+  ],
+  "tags": [
+    "技术测试"
+  ],
+  "img": "",
+  "wordCount": 273,
+  "readingTime": 1,
+  "body": "# 代码块 Copy 按钮和高亮功能测试\n\n这个页面用于测试新添加的代码块功能，包括语法高亮和复制按钮。\n\n## JavaScript 代码块\n\n```javascript\nfunction fibonacci(n) {\n  if (n <= 1) return n;\n\n  let a = 0, b = 1;\n  for (let i = 2; i <= n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return b;\n}\n\nconsole.log(fibonacci(10)); // 输出: 55\n```\n\n## Python 代码块\n\n```python\ndef quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n\n    return quicksort(left) + middle + quicksort(right)\n\n# 测试\nnumbers = [3, 6, 8, 10, 1, 2, 1]\nprint(quicksort(numbers))\n```\n\n## CSS 样式代码\n\n```css\n.container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 2rem;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n  border-radius: 12px;\n  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);\n}\n\n.button {\n  padding: 0.8rem 1.6rem;\n  border: none;\n  border-radius: 6px;\n  font-weight: 600;\n  transition: all 0.3s ease;\n  cursor: pointer;\n}\n```\n\n## SQL 查询\n\n```sql\nSELECT\n    u.username,\n    p.title,\n    p.content,\n    p.created_at,\n    COUNT(c.id) as comment_count\nFROM users u\nJOIN posts p ON u.id = p.user_id\nLEFT JOIN comments c ON p.id = c.post_id\nWHERE u.status = 'active'\n    AND p.created_at >= '2024-01-01'\nGROUP BY u.id, p.id\nORDER BY p.created_at DESC\nLIMIT 10;\n```\n\n## JSON 数据\n\n```json\n{\n  \"user\": {\n    \"id\": 12345,\n    \"name\": \"张三\",\n    \"email\": \"zhangsan@example.com\",\n    \"profile\": {\n      \"age\": 28,\n      \"city\": \"北京\",\n      \"skills\": [\"JavaScript\", \"Python\", \"React\", \"Vue.js\"],\n      \"social\": {\n        \"github\": \"https://github.com/zhangsan\",\n        \"linkedin\": \"https://linkedin.com/in/zhangsan\"\n      }\n    }\n  },\n  \"posts\": [\n    {\n      \"id\": 1,\n      \"title\": \"Vue 3 组合式 API 最佳实践\",\n      \"tags\": [\"vue\", \"javascript\", \"frontend\"],\n      \"published\": true\n    }\n  ]\n}\n```\n\n## Shell 脚本\n\n```bash\n#!/bin/bash\n\n# 自动部署脚本\nset -e\n\necho \"开始部署...\"\n\n# 检查 Node.js 版本\nnode_version=$(node -v)\necho \"Node.js 版本: $node_version\"\n\n# 安装依赖\necho \"安装依赖...\"\nnpm install\n\n# 构建项目\necho \"构建项目...\"\nnpm run build\n\n# 部署到服务器\necho \"部署到服务器...\"\nrsync -avz --delete dist/ user@server:/var/www/html/\n\necho \"部署完成！\"\n```\n\n## 行内代码测试\n\n这是一个行内代码的例子：`const message = \"Hello World!\"`。\n\n还有一些其他的行内代码：`npm install`、`git commit -m \"init\"`、`docker run -d nginx`。\n\n## 无语言标识的代码块\n\n```\n这是一个没有指定语言的代码块\n它应该被当作纯文本处理\n没有语法高亮\n但仍然有复制按钮\n```\n\n## 功能特性总结\n\n1. ✅ **语法高亮**: 支持 20+ 种编程语言的语法高亮\n2. ✅ **复制按钮**: 每个代码块都有复制功能\n3. ✅ **语言标识**: 显示代码块的语言类型\n4. ✅ **响应式设计**: 在移动设备上也能良好显示\n5. ✅ **深色主题**: 自动适配系统深色模式\n6. ✅ **行内代码**: 行内代码也有专门的样式\n\n## 支持的语言列表\n\n- JavaScript/TypeScript\n- Python\n- Java/C/C++\n- CSS/HTML\n- JSON/YAML\n- SQL\n- Bash/Shell\n- Go/Rust\n- PHP/Swift/Kotlin\n- Markdown\n- 以及更多...\n\n点击每个代码块右上角的\"复制\"按钮即可复制代码到剪贴板！",
+  "html": "<h1 id=\"代码块-copy-按钮和高亮功能测试\">代码块 Copy 按钮和高亮功能测试</h1>\n<p>这个页面用于测试新添加的代码块功能，包括语法高亮和复制按钮。</p>\n<h2 id=\"javascript-代码块\">JavaScript 代码块</h2>\n<pre><code class=\"language-javascript\">function fibonacci(n) {\n  if (n &lt;= 1) return n;\n\n  let a = 0, b = 1;\n  for (let i = 2; i &lt;= n; i++) {\n    [a, b] = [b, a + b];\n  }\n  return b;\n}\n\nconsole.log(fibonacci(10)); // 输出: 55\n</code></pre>\n<h2 id=\"python-代码块\">Python 代码块</h2>\n<pre><code class=\"language-python\">def quicksort(arr):\n    if len(arr) &lt;= 1:\n        return arr\n\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x &lt; pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x &gt; pivot]\n\n    return quicksort(left) + middle + quicksort(right)\n\n# 测试\nnumbers = [3, 6, 8, 10, 1, 2, 1]\nprint(quicksort(numbers))\n</code></pre>\n<h2 id=\"css-样式代码\">CSS 样式代码</h2>\n<pre><code class=\"language-css\">.container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 2rem;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n  border-radius: 12px;\n  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);\n}\n\n.button {\n  padding: 0.8rem 1.6rem;\n  border: none;\n  border-radius: 6px;\n  font-weight: 600;\n  transition: all 0.3s ease;\n  cursor: pointer;\n}\n</code></pre>\n<h2 id=\"sql-查询\">SQL 查询</h2>\n<pre><code class=\"language-sql\">SELECT\n    u.username,\n    p.title,\n    p.content,\n    p.created_at,\n    COUNT(c.id) as comment_count\nFROM users u\nJOIN posts p ON u.id = p.user_id\nLEFT JOIN comments c ON p.id = c.post_id\nWHERE u.status = 'active'\n    AND p.created_at &gt;= '2024-01-01'\nGROUP BY u.id, p.id\nORDER BY p.created_at DESC\nLIMIT 10;\n</code></pre>\n<h2 id=\"json-数据\">JSON 数据</h2>\n<pre><code class=\"language-json\">{\n  &quot;user&quot;: {\n    &quot;id&quot;: 12345,\n    &quot;name&quot;: &quot;张三&quot;,\n    &quot;email&quot;: &quot;zhangsan@example.com&quot;,\n    &quot;profile&quot;: {\n      &quot;age&quot;: 28,\n      &quot;city&quot;: &quot;北京&quot;,\n      &quot;skills&quot;: [&quot;JavaScript&quot;, &quot;Python&quot;, &quot;React&quot;, &quot;Vue.js&quot;],\n      &quot;social&quot;: {\n        &quot;github&quot;: &quot;https://github.com/zhangsan&quot;,\n        &quot;linkedin&quot;: &quot;https://linkedin.com/in/zhangsan&quot;\n      }\n    }\n  },\n  &quot;posts&quot;: [\n    {\n      &quot;id&quot;: 1,\n      &quot;title&quot;: &quot;Vue 3 组合式 API 最佳实践&quot;,\n      &quot;tags&quot;: [&quot;vue&quot;, &quot;javascript&quot;, &quot;frontend&quot;],\n      &quot;published&quot;: true\n    }\n  ]\n}\n</code></pre>\n<h2 id=\"shell-脚本\">Shell 脚本</h2>\n<pre><code class=\"language-bash\">#!/bin/bash\n\n# 自动部署脚本\nset -e\n\necho &quot;开始部署...&quot;\n\n# 检查 Node.js 版本\nnode_version=$(node -v)\necho &quot;Node.js 版本: $node_version&quot;\n\n# 安装依赖\necho &quot;安装依赖...&quot;\nnpm install\n\n# 构建项目\necho &quot;构建项目...&quot;\nnpm run build\n\n# 部署到服务器\necho &quot;部署到服务器...&quot;\nrsync -avz --delete dist/ user@server:/var/www/html/\n\necho &quot;部署完成！&quot;\n</code></pre>\n<h2 id=\"行内代码测试\">行内代码测试</h2>\n<p>这是一个行内代码的例子：<code>const message = &quot;Hello World!&quot;</code>。</p>\n<p>还有一些其他的行内代码：<code>npm install</code>、<code>git commit -m &quot;init&quot;</code>、<code>docker run -d nginx</code>。</p>\n<h2 id=\"无语言标识的代码块\">无语言标识的代码块</h2>\n<pre><code class=\"language-text\">这是一个没有指定语言的代码块\n它应该被当作纯文本处理\n没有语法高亮\n但仍然有复制按钮\n</code></pre>\n<h2 id=\"功能特性总结\">功能特性总结</h2>\n<ol>\n<li>✅ <strong>语法高亮</strong>: 支持 20+ 种编程语言的语法高亮</li>\n<li>✅ <strong>复制按钮</strong>: 每个代码块都有复制功能</li>\n<li>✅ <strong>语言标识</strong>: 显示代码块的语言类型</li>\n<li>✅ <strong>响应式设计</strong>: 在移动设备上也能良好显示</li>\n<li>✅ <strong>深色主题</strong>: 自动适配系统深色模式</li>\n<li>✅ <strong>行内代码</strong>: 行内代码也有专门的样式</li>\n</ol>\n<h2 id=\"支持的语言列表\">支持的语言列表</h2>\n<ul>\n<li>JavaScript/TypeScript</li>\n<li>Python</li>\n<li>Java/C/C++</li>\n<li>CSS/HTML</li>\n<li>JSON/YAML</li>\n<li>SQL</li>\n<li>Bash/Shell</li>\n<li>Go/Rust</li>\n<li>PHP/Swift/Kotlin</li>\n<li>Markdown</li>\n<li>以及更多…</li>\n</ul>\n<p>点击每个代码块右上角的&quot;复制&quot;按钮即可复制代码到剪贴板！</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "代码块 Copy 按钮和高亮功能测试",
+      "id": "代码块-copy-按钮和高亮功能测试"
+    },
+    {
+      "level": 2,
+      "text": "JavaScript 代码块",
+      "id": "javascript-代码块"
+    },
+    {
+      "level": 2,
+      "text": "Python 代码块",
+      "id": "python-代码块"
+    },
+    {
+      "level": 1,
+      "text": "测试",
+      "id": "测试"
+    },
+    {
+      "level": 2,
+      "text": "CSS 样式代码",
+      "id": "css-样式代码"
+    },
+    {
+      "level": 2,
+      "text": "SQL 查询",
+      "id": "sql-查询"
+    },
+    {
+      "level": 2,
+      "text": "JSON 数据",
+      "id": "json-数据"
+    },
+    {
+      "level": 2,
+      "text": "Shell 脚本",
+      "id": "shell-脚本"
+    },
+    {
+      "level": 1,
+      "text": "自动部署脚本",
+      "id": "自动部署脚本"
+    },
+    {
+      "level": 1,
+      "text": "检查 Node.js 版本",
+      "id": "检查-nodejs-版本"
+    },
+    {
+      "level": 1,
+      "text": "安装依赖",
+      "id": "安装依赖"
+    },
+    {
+      "level": 1,
+      "text": "构建项目",
+      "id": "构建项目"
+    },
+    {
+      "level": 1,
+      "text": "部署到服务器",
+      "id": "部署到服务器"
+    },
+    {
+      "level": 2,
+      "text": "行内代码测试",
+      "id": "行内代码测试"
+    },
+    {
+      "level": 2,
+      "text": "无语言标识的代码块",
+      "id": "无语言标识的代码块"
+    },
+    {
+      "level": 2,
+      "text": "功能特性总结",
+      "id": "功能特性总结"
+    },
+    {
+      "level": 2,
+      "text": "支持的语言列表",
+      "id": "支持的语言列表"
+    }
+  ],
+  "hasMath": false
+}

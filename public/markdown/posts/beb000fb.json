@@ -1,0 +1,61 @@
+{
+  "title": "Leetcode103:二叉树的锯齿形层序遍历",
+  "date": "2022-03-27T11:36:29.000Z",
+  "updatedAt": "2022-03-27T11:36:29.000Z",
+  "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
+  "slug": "beb000fb",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 187,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/\n\n做过102题后这题可以轻松做出来\n\n## 题解\n\n复习一下`[102. 二叉树的层序遍历]`：\n\n* 首先根节点入队\n* 当队列不为空：\n\n* * 求队列长度s\n  * 依次从队列中取s个元素拓展，然后进入下一次迭代\n\n得到层序遍历结果后，把奇数层reverse一下，就能ac了\n\n代码：\n\n```python\n# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:\n        res = []\n        if not root:\n            return res\n        queue = [root]\n        while len(queue):\n            inner = []\n            for i in range(len(queue)):\n                node = queue.pop()\n                inner.append(node.val)\n                if node.left:\n                    queue.insert(0,node.left)\n                if node.right:\n                    queue.insert(0,node.right)\n            res.append(inner.copy())\n        for i in range(len(res)):\n            if i%2:\n                res[i].reverse()\n        return res\n```\n\n其实这题想让我们用一种数据结构`deque双端队列`。对于偶数层的节点，从后端插入元素；对于奇数层的节点，从前端插入元素。\n\n我个人觉得并不比朴素的方法优秀很多，所以就不深入研究了哈哈。（其实是懒\n\n\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/\">https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/</a></p>\n<p>做过102题后这题可以轻松做出来</p>\n<h2 id=\"题解\">题解</h2>\n<p>复习一下<code>[102. 二叉树的层序遍历]</code>：</p>\n<ul>\n<li>\n<p>首先根节点入队</p>\n</li>\n<li>\n<p>当队列不为空：</p>\n</li>\n<li>\n<ul>\n<li>求队列长度s</li>\n<li>依次从队列中取s个元素拓展，然后进入下一次迭代</li>\n</ul>\n</li>\n</ul>\n<p>得到层序遍历结果后，把奇数层reverse一下，就能ac了</p>\n<p>代码：</p>\n<pre><code class=\"language-python\"># Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def zigzagLevelOrder(self, root: TreeNode) -&gt; List[List[int]]:\n        res = []\n        if not root:\n            return res\n        queue = [root]\n        while len(queue):\n            inner = []\n            for i in range(len(queue)):\n                node = queue.pop()\n                inner.append(node.val)\n                if node.left:\n                    queue.insert(0,node.left)\n                if node.right:\n                    queue.insert(0,node.right)\n            res.append(inner.copy())\n        for i in range(len(res)):\n            if i%2:\n                res[i].reverse()\n        return res\n</code></pre>\n<p>其实这题想让我们用一种数据结构<code>deque双端队列</code>。对于偶数层的节点，从后端插入元素；对于奇数层的节点，从前端插入元素。</p>\n<p>我个人觉得并不比朴素的方法优秀很多，所以就不深入研究了哈哈。（其实是懒</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 1,
+      "text": "Definition for a binary tree node.",
+      "id": "definition-for-a-binary-tree-node"
+    },
+    {
+      "level": 1,
+      "text": "class TreeNode:",
+      "id": "class-treenode"
+    },
+    {
+      "level": 1,
+      "text": "def __init__(self, val=0, left=None, right=None):",
+      "id": "def-__init__self-val0-leftnone-rightnone"
+    },
+    {
+      "level": 1,
+      "text": "self.val = val",
+      "id": "selfval-val"
+    },
+    {
+      "level": 1,
+      "text": "self.left = left",
+      "id": "selfleft-left"
+    },
+    {
+      "level": 1,
+      "text": "self.right = right",
+      "id": "selfright-right"
+    }
+  ],
+  "hasMath": false
+}

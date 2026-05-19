@@ -1,0 +1,26 @@
+{
+  "title": "cout输出精确到小数点后两位",
+  "date": "2020-11-01T17:13:53.000Z",
+  "updatedAt": "2020-11-01T17:13:53.000Z",
+  "file": "cout输出精确到小数点后两位.md",
+  "slug": "519da68d",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 300,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n给出两幅相同大小的黑白图像（用 0表示黑，1表示白）表示，求它们的相似度。说明：若两幅图像在相同位置上的像素点颜色相同，则称它们在该位置具有相同的像素点。两幅图像的相似度定义为相同像素点数占总像素点数的百分比。\n\n【输入】\n\n第一行包含两个整数 m 和 n，表示图像的行数和列数，中间用单个空格隔开。1≤ m≤ 100, 1≤ n≤ 100。\n\n之后 m 行，每行 n 个整数，表示第一幅黑白图像上各像素点的颜色。相邻两个数之间用单个空格隔开。\n\n之后 m 行，每行 n 个整数，表示第二幅黑白图像上各像素点的颜色。相邻两个数之间用单个空格隔开。\n\n【输出】\n\n两幅图像的相似度，结果保留小数点后两位。\n\nFor example:\n\nInput\n\nResult\n\n3 3  \n1 0 1  \n0 0 1  \n1 1 0  \n1 1 0  \n0 0 1  \n0 0 1\n\n44.44\n\n## 答案\n\n```\n#include <iostream>\n#include <iomanip>\n\nusing namespace std;\n\nint main()\n{\n    int a[500][500];\n    int b[500][500];\n    int m,n,j,k;\n\n\n    //输入部分\n    cin >> n >> m;\n    for(j=1;j<=n;j++)\n    {\n        for(k=1;k<=m;k++)\n        {\n            cin >> a[j][k];\n        }\n    }\n\n\n    for(j=1;j<=n;j++)\n    {\n        for(k=1;k<=m;k++)\n        {\n            cin >> b[j][k];\n        }\n    }\n\n\n    //计算部分\n    float cnt=0;\n    for(j=1;j<=n;j++)\n    {\n        for(k=1;k<=m;k++)\n        {\n            if(a[j][k]==b[j][k])\n                cnt++;\n        }\n    }\n    cnt = cnt * 100;\n\n\n    //输出部分\n    cout << fixed << setprecision(2) << cnt/(m*n);\n    return 0;\n}\n```\n\n输出精确的方式：\n\n#include cout << fixed << setprecision(2) << a; //其中fixed自动补0，setprecision(2)是精确到小数点后两位",
+  "html": "<p>【题目描述】</p>\n<p>给出两幅相同大小的黑白图像（用 0表示黑，1表示白）表示，求它们的相似度。说明：若两幅图像在相同位置上的像素点颜色相同，则称它们在该位置具有相同的像素点。两幅图像的相似度定义为相同像素点数占总像素点数的百分比。</p>\n<p>【输入】</p>\n<p>第一行包含两个整数 m 和 n，表示图像的行数和列数，中间用单个空格隔开。1≤ m≤ 100, 1≤ n≤ 100。</p>\n<p>之后 m 行，每行 n 个整数，表示第一幅黑白图像上各像素点的颜色。相邻两个数之间用单个空格隔开。</p>\n<p>之后 m 行，每行 n 个整数，表示第二幅黑白图像上各像素点的颜色。相邻两个数之间用单个空格隔开。</p>\n<p>【输出】</p>\n<p>两幅图像的相似度，结果保留小数点后两位。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>3 3<br>\n1 0 1<br>\n0 0 1<br>\n1 1 0<br>\n1 1 0<br>\n0 0 1<br>\n0 0 1</p>\n<p>44.44</p>\n<h2 id=\"答案\">答案</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;iomanip&gt;\n\nusing namespace std;\n\nint main()\n{\n    int a[500][500];\n    int b[500][500];\n    int m,n,j,k;\n\n\n    //输入部分\n    cin &gt;&gt; n &gt;&gt; m;\n    for(j=1;j&lt;=n;j++)\n    {\n        for(k=1;k&lt;=m;k++)\n        {\n            cin &gt;&gt; a[j][k];\n        }\n    }\n\n\n    for(j=1;j&lt;=n;j++)\n    {\n        for(k=1;k&lt;=m;k++)\n        {\n            cin &gt;&gt; b[j][k];\n        }\n    }\n\n\n    //计算部分\n    float cnt=0;\n    for(j=1;j&lt;=n;j++)\n    {\n        for(k=1;k&lt;=m;k++)\n        {\n            if(a[j][k]==b[j][k])\n                cnt++;\n        }\n    }\n    cnt = cnt * 100;\n\n\n    //输出部分\n    cout &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; cnt/(m*n);\n    return 0;\n}\n</code></pre>\n<p>输出精确的方式：</p>\n<p>#include cout &lt;&lt; fixed &lt;&lt; setprecision(2) &lt;&lt; a; //其中fixed自动补0，setprecision(2)是精确到小数点后两位</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "答案",
+      "id": "答案"
+    }
+  ],
+  "hasMath": false
+}

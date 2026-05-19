@@ -1,0 +1,26 @@
+{
+  "title": "每日一题--有进位的加法运算",
+  "date": "2020-10-10T09:22:16.000Z",
+  "updatedAt": "2020-10-10T09:22:16.000Z",
+  "file": "每日一题--有进位的加法运算.md",
+  "slug": "b103ca10",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 365,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n营业额我叫王大锤，昨天还是一名C++老师。万万没想到，我又失业了。昨天上课前我写的程序让整个学校的电脑中了病毒。为了生计，无可奈何，在学校旁边的唐师傅理发店找了一份兼职。\n\n唐师傅理发店已经开张十年有余，生意红火。唐币是一种专门用来唐师傅营业额的，用int以至于long long int已经无法表示唐师傅的总营业额了。而唐师傅又想要计算自开业以来的总营业额。他给了我两个账本和我的第一个任务，能不能获得这份工作，在此一举！\n\n每个账本都已经在最后一页写上了这一时期的总营业额，设计一个程序，计算出它们的和。\n\n【输入】\n\n共2行，每行1个正整数(不超过100位)，分别表示每个账本上写着的总营业额（单位：唐币）。\n\n【输出】\n\n       一行，包含一个整数，表示总的营业额。\n\nFor example:\n\nInput\n\nResult\n\n1  \n9\n\n10\n\n## 答案\n\n```\n#include <iostream>\n#include <cstring>\n#include <algorithm>\n\nusing namespace std;\n\nint main()\n{\n        int a[110]={0},b[110]={0},c[110]={0};\n        int i,j,lent,lens,len;\n        char s[110],t[110];\n        cin >> s >> t;\n        lens = strlen(s);\n        lent = strlen(t);\n        len = max(lens,lent);\n\n        for(i=lens-1,j=0;i>=0;i--,j++) //将s逆序存储到整型组a中\n        {\n            a[j] = s[i] - '0';\n        }\n\n        for(i=lent-1,j=0;i>=0;i--,j++) //将s逆序存储到整型组a中\n        {\n            b[j] = t[i] - '0';\n        }\n\n        for(i=0;i<len;i++)      //进位运算\n        {\n            c[i] = c[i] + a[i] + b[i];\n            if(c[i] > 9)\n            {\n                c[i+1]++;\n                c[i] = c[i] % 10;\n            }\n        }\n\n        if(c[len]!=0)  //判断最高位是否进位，即计算结果数据长度是否加1\n        {\n            len++;\n        }\n\n        for(i=len-1;i>=0;i--)   //逆序输出\n        {\n            cout << c[i];\n        }\n\n        cout << endl;\n        return 0;\n}\n```\n\n*   q1为什么要倒序相加？\n\n因为两个相加的数字的位数可能不同，倒序之后可以对齐\n\n*   q2为什么我看不懂一些参数的数值控制，比如len-1...\n\n因为数组是从0开始的，a\\[0\\]是第一位，看不懂就自己拿笔写一遍",
+  "html": "<p>【题目描述】</p>\n<p>营业额我叫王大锤，昨天还是一名C++老师。万万没想到，我又失业了。昨天上课前我写的程序让整个学校的电脑中了病毒。为了生计，无可奈何，在学校旁边的唐师傅理发店找了一份兼职。</p>\n<p>唐师傅理发店已经开张十年有余，生意红火。唐币是一种专门用来唐师傅营业额的，用int以至于long long int已经无法表示唐师傅的总营业额了。而唐师傅又想要计算自开业以来的总营业额。他给了我两个账本和我的第一个任务，能不能获得这份工作，在此一举！</p>\n<p>每个账本都已经在最后一页写上了这一时期的总营业额，设计一个程序，计算出它们的和。</p>\n<p>【输入】</p>\n<p>共2行，每行1个正整数(不超过100位)，分别表示每个账本上写着的总营业额（单位：唐币）。</p>\n<p>【输出】</p>\n<p>一行，包含一个整数，表示总的营业额。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>1<br>\n9</p>\n<p>10</p>\n<h2 id=\"答案\">答案</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;cstring&gt;\n#include &lt;algorithm&gt;\n\nusing namespace std;\n\nint main()\n{\n        int a[110]={0},b[110]={0},c[110]={0};\n        int i,j,lent,lens,len;\n        char s[110],t[110];\n        cin &gt;&gt; s &gt;&gt; t;\n        lens = strlen(s);\n        lent = strlen(t);\n        len = max(lens,lent);\n\n        for(i=lens-1,j=0;i&gt;=0;i--,j++) //将s逆序存储到整型组a中\n        {\n            a[j] = s[i] - '0';\n        }\n\n        for(i=lent-1,j=0;i&gt;=0;i--,j++) //将s逆序存储到整型组a中\n        {\n            b[j] = t[i] - '0';\n        }\n\n        for(i=0;i&lt;len;i++)      //进位运算\n        {\n            c[i] = c[i] + a[i] + b[i];\n            if(c[i] &gt; 9)\n            {\n                c[i+1]++;\n                c[i] = c[i] % 10;\n            }\n        }\n\n        if(c[len]!=0)  //判断最高位是否进位，即计算结果数据长度是否加1\n        {\n            len++;\n        }\n\n        for(i=len-1;i&gt;=0;i--)   //逆序输出\n        {\n            cout &lt;&lt; c[i];\n        }\n\n        cout &lt;&lt; endl;\n        return 0;\n}\n</code></pre>\n<ul>\n<li>q1为什么要倒序相加？</li>\n</ul>\n<p>因为两个相加的数字的位数可能不同，倒序之后可以对齐</p>\n<ul>\n<li>q2为什么我看不懂一些参数的数值控制，比如len-1…</li>\n</ul>\n<p>因为数组是从0开始的，a[0]是第一位，看不懂就自己拿笔写一遍</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "答案",
+      "id": "答案"
+    }
+  ],
+  "hasMath": true
+}

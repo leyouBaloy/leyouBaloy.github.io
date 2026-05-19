@@ -1,0 +1,20 @@
+{
+  "title": "字符数组的输入输出",
+  "date": "2020-11-02T10:56:17.000Z",
+  "updatedAt": "2020-11-02T10:56:17.000Z",
+  "file": "字符数组的输入输出.md",
+  "slug": "bb8c6a25",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 75,
+  "readingTime": 1,
+  "body": "[https://blog.csdn.net/lost\\_in\\_jungle\\_/article/details/82716778](https://blog.csdn.net/lost_in_jungle_/article/details/82716778)\n\n写得针不戳\n\ncin >> a; 可以直接输入字符串，但是这个输入貌似很操蛋。\n\nputs这个还蛮好用的；\n\ngets在codeblocks里可以用，但是在网页编程上确实用不了；可以用cin.getline(数组名)代替。",
+  "html": "<p><a href=\"https://blog.csdn.net/lost_in_jungle_/article/details/82716778\">https://blog.csdn.net/lost_in_jungle_/article/details/82716778</a></p>\n<p>写得针不戳</p>\n<p>cin &gt;&gt; a; 可以直接输入字符串，但是这个输入貌似很操蛋。</p>\n<p>puts这个还蛮好用的；</p>\n<p>gets在codeblocks里可以用，但是在网页编程上确实用不了；可以用cin.getline(数组名)代替。</p>\n",
+  "headings": [],
+  "hasMath": false
+}

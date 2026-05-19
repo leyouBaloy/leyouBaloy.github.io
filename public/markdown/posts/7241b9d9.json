@@ -1,0 +1,36 @@
+{
+  "title": "Pandas使用技巧",
+  "date": "2022-04-16T07:42:08.000Z",
+  "updatedAt": "2022-04-16T07:42:08.000Z",
+  "file": "Pandas使用技巧.md",
+  "slug": "7241b9d9",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 24,
+  "readingTime": 1,
+  "body": "## read_csv()参数\n\n### header\n\n`header=None` 读取时不设置表头\n\n\n\n## drop()\n\n`df.drop(0)` 删除第一行\n\n\n\n",
+  "html": "<h2 id=\"read_csv参数\">read_csv()参数</h2>\n<h3 id=\"header\">header</h3>\n<p><code>header=None</code> 读取时不设置表头</p>\n<h2 id=\"drop\">drop()</h2>\n<p><code>df.drop(0)</code> 删除第一行</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "read_csv()参数",
+      "id": "read_csv参数"
+    },
+    {
+      "level": 3,
+      "text": "header",
+      "id": "header"
+    },
+    {
+      "level": 2,
+      "text": "drop()",
+      "id": "drop"
+    }
+  ],
+  "hasMath": false
+}

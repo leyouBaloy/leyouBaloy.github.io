@@ -1,0 +1,46 @@
+{
+  "title": "Leetcode310:最小高度树",
+  "date": "2022-04-06T07:07:06.000Z",
+  "updatedAt": "2022-04-06T07:07:06.000Z",
+  "file": "Leetcode310_最小高度树.md",
+  "slug": "5ed1d85c",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 522,
+  "readingTime": 2,
+  "body": "# 题目\n\nhttps://leetcode-cn.com/problems/minimum-height-trees/\n\n这是一道理论性很强，代码也很有技巧性的“中等”难度题目。\n\n# 题解\n\n## 暴力法\n\n献上我的超时代码：\n\n```python\nclass Solution:\n    def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:\n        find = {}\n        for edge in edges:\n            if edge[0] in find.keys():\n                find[edge[0]].append(edge[1])\n            else:\n                find[edge[0]] = [edge[1]]\n            if edge[1] in find.keys():\n                find[edge[1]].append(edge[0])\n            else:\n                find[edge[1]] = [edge[0]]\n        if not len(find):\n            return [0]\n        def findlevel(edges, root):\n            que = [root]\n            used = []\n            cnt = 0\n            while(len(que)):\n                # print(que)\n                for i in range(len(que)):\n                    root = que.pop(0)\n                    used.append(root)\n                    for f in find[root]:\n                        if f not in used:\n                            que.append(f)\n                cnt+=1\n            return cnt-1\n        res_num = [findlevel(edges, root) for root in range(n)]\n        min_num = min(res_num)\n        return [i for i in range(len(res_num)) if res_num[i]==min_num]\n```\n\n## 广度优先搜索\n\n有如下结论：\n\n![最小高度树](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91.png)\n\n用反证法证明，证明过程挺复杂的。\n\n所以我们就把这题从寻找最短距离变成了寻找最长距离。然后把路径记录下来，路径的中点就是我们要找的根节点。\n\n你不觉得这个结论很奇妙吗？我想到了一团乱的绳子，如果你从中间把这堆绳子拎起来，四周绳子的末梢就会垂下去...\n\n这题代码我分段详解：\n\n首先是第一段代码：\n\n```python\ng = [[] for _ in range(n)]\nfor x, y in edges:\n  g[x].append(y)\n  g[y].append(x)\nparents = [0] * n\n```\n\n因为后面要在`edges`里面查找某个节点连接的另一个节点，所以这里第一步先是做了一个初始化，便于后面的查询。最后得到的结果是`g[x]=[a,b,c...]`，表示标号为`x`的节点，连接了a,b,c等节点。（在我的代码中也有类似处理，但我用的是字典）\n\n第二段：\n\n```python\ndef bfs(start: int):\n  vis = [False] * n\n  vis[start] = True\n  q = deque([start])\n  while q:\n    x = q.popleft()\n    for y in g[x]:\n      if not vis[y]:\n        vis[y] = True\n        parents[y] = x\n        q.append(y)\n  return x\nx = bfs(0)  # 找到与节点 0 最远的节点 x\ny = bfs(x)  # 找到与节点 x 最远的节点 y\n```\n\n这是一个用队列实现的广度优先搜索。`vis`是记录已搜索过的节点。`deque`是双向队列（震惊！原来python也是有数据结构的，我才知道😂）。`parents`记录每个节点的父节点，用于下面找路径。\n\n然后从0开始，找到最远节点x，再从x找最远节点y。那么x，y之间的距离就是最远的（这很奇妙）。\n\n第三段：\n\n```python\npath = []\nparents[x] = -1\nwhile y != -1:\n  path.append(y)\n  y = parents[y]\n  m = len(path)\nreturn [path[m // 2]] if m % 2 else [path[m // 2 - 1], path[m // 2]]\n```\n\n在这里要找路径了，这时候`parents`就派上用场了。如果找到路径长度为奇数，那么正中间那个数就是我们要找的根节点。如果路径长度为偶数，中间的数有两个，那么两个都是我们要找的根节点。\n\n## 其他解法\n\n这题还有深度优先搜索（跟广度优先搜索差不多），拓扑序列，不断剔除度为1的节点等方法，我太懒了，不想研究了...\n\n\n\n",
+  "html": "<h1 id=\"题目\">题目</h1>\n<p><a href=\"https://leetcode-cn.com/problems/minimum-height-trees/\">https://leetcode-cn.com/problems/minimum-height-trees/</a></p>\n<p>这是一道理论性很强，代码也很有技巧性的“中等”难度题目。</p>\n<h1 id=\"题解\">题解</h1>\n<h2 id=\"暴力法\">暴力法</h2>\n<p>献上我的超时代码：</p>\n<pre><code class=\"language-python\">class Solution:\n    def findMinHeightTrees(self, n: int, edges: List[List[int]]) -&gt; List[int]:\n        find = {}\n        for edge in edges:\n            if edge[0] in find.keys():\n                find[edge[0]].append(edge[1])\n            else:\n                find[edge[0]] = [edge[1]]\n            if edge[1] in find.keys():\n                find[edge[1]].append(edge[0])\n            else:\n                find[edge[1]] = [edge[0]]\n        if not len(find):\n            return [0]\n        def findlevel(edges, root):\n            que = [root]\n            used = []\n            cnt = 0\n            while(len(que)):\n                # print(que)\n                for i in range(len(que)):\n                    root = que.pop(0)\n                    used.append(root)\n                    for f in find[root]:\n                        if f not in used:\n                            que.append(f)\n                cnt+=1\n            return cnt-1\n        res_num = [findlevel(edges, root) for root in range(n)]\n        min_num = min(res_num)\n        return [i for i in range(len(res_num)) if res_num[i]==min_num]\n</code></pre>\n<h2 id=\"广度优先搜索\">广度优先搜索</h2>\n<p>有如下结论：</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91.png\" alt=\"最小高度树\" loading=\"lazy\" decoding=\"async\"></p>\n<p>用反证法证明，证明过程挺复杂的。</p>\n<p>所以我们就把这题从寻找最短距离变成了寻找最长距离。然后把路径记录下来，路径的中点就是我们要找的根节点。</p>\n<p>你不觉得这个结论很奇妙吗？我想到了一团乱的绳子，如果你从中间把这堆绳子拎起来，四周绳子的末梢就会垂下去…</p>\n<p>这题代码我分段详解：</p>\n<p>首先是第一段代码：</p>\n<pre><code class=\"language-python\">g = [[] for _ in range(n)]\nfor x, y in edges:\n  g[x].append(y)\n  g[y].append(x)\nparents = [0] * n\n</code></pre>\n<p>因为后面要在<code>edges</code>里面查找某个节点连接的另一个节点，所以这里第一步先是做了一个初始化，便于后面的查询。最后得到的结果是<code>g[x]=[a,b,c...]</code>，表示标号为<code>x</code>的节点，连接了a,b,c等节点。（在我的代码中也有类似处理，但我用的是字典）</p>\n<p>第二段：</p>\n<pre><code class=\"language-python\">def bfs(start: int):\n  vis = [False] * n\n  vis[start] = True\n  q = deque([start])\n  while q:\n    x = q.popleft()\n    for y in g[x]:\n      if not vis[y]:\n        vis[y] = True\n        parents[y] = x\n        q.append(y)\n  return x\nx = bfs(0)  # 找到与节点 0 最远的节点 x\ny = bfs(x)  # 找到与节点 x 最远的节点 y\n</code></pre>\n<p>这是一个用队列实现的广度优先搜索。<code>vis</code>是记录已搜索过的节点。<code>deque</code>是双向队列（震惊！原来python也是有数据结构的，我才知道😂）。<code>parents</code>记录每个节点的父节点，用于下面找路径。</p>\n<p>然后从0开始，找到最远节点x，再从x找最远节点y。那么x，y之间的距离就是最远的（这很奇妙）。</p>\n<p>第三段：</p>\n<pre><code class=\"language-python\">path = []\nparents[x] = -1\nwhile y != -1:\n  path.append(y)\n  y = parents[y]\n  m = len(path)\nreturn [path[m // 2]] if m % 2 else [path[m // 2 - 1], path[m // 2]]\n</code></pre>\n<p>在这里要找路径了，这时候<code>parents</code>就派上用场了。如果找到路径长度为奇数，那么正中间那个数就是我们要找的根节点。如果路径长度为偶数，中间的数有两个，那么两个都是我们要找的根节点。</p>\n<h2 id=\"其他解法\">其他解法</h2>\n<p>这题还有深度优先搜索（跟广度优先搜索差不多），拓扑序列，不断剔除度为1的节点等方法，我太懒了，不想研究了…</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 1,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 2,
+      "text": "暴力法",
+      "id": "暴力法"
+    },
+    {
+      "level": 2,
+      "text": "广度优先搜索",
+      "id": "广度优先搜索"
+    },
+    {
+      "level": 2,
+      "text": "其他解法",
+      "id": "其他解法"
+    }
+  ],
+  "hasMath": false
+}

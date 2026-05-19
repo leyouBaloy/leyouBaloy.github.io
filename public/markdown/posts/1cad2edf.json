@@ -1,0 +1,43 @@
+{
+  "title": "Linux在指定时间区间内的随机时间点执行任务",
+  "date": "2022-10-23T15:52:09.000Z",
+  "updatedAt": "2022-10-23T15:52:09.000Z",
+  "file": "Linux在指定时间区间内的随机时间点执行任务.md",
+  "slug": "1cad2edf",
+  "categories": [
+    "技能分享",
+    "笔记"
+  ],
+  "tags": [
+    "技能分享",
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 196,
+  "readingTime": 1,
+  "body": "在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。\n\n现在升级需求，比如说我想在6:00到9:00之间，随机找一个时间执行这个任务，怎么做呢？\n\n思路：我们不能在crontab里指定一个随机的时间（只能指定一个具体的时间），但是我们可以指定一个具体的时间运行`shell`脚本，再在shell脚本里设置一个延迟执行，这样就能解决问题啦！\n\n## example\n\n假如xxx.py是我们要执行的程序，我们需要它执行的时间是从6:00到9:00之间随机一个时间，那么，\n\ncrontab中这样编辑：\n\n```\n0 6 * * * sh /home/ubuntu/xxxx.sh >> /home/ubuntu/xxxx.log 2>&1 &\n```\n\nxxxx.sh这样写:\n\n```shell\n#!bin/bash\n# 随机等待0～180分钟\nsleep $[( $RANDOM % 180 )*60]\ncurtime = $(date \"+%Y-%m-%d %H:%M:%S\")\n# 输出当前时间\necho $curtime\n# 运行程序\n/usr/bin/python3.8 /home/ubuntu/xxxx.py >> /home/ubuntu/xxxx.log \n```\n\n完成！\n",
+  "html": "<p>在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。</p>\n<p>现在升级需求，比如说我想在6:00到9:00之间，随机找一个时间执行这个任务，怎么做呢？</p>\n<p>思路：我们不能在crontab里指定一个随机的时间（只能指定一个具体的时间），但是我们可以指定一个具体的时间运行<code>shell</code>脚本，再在shell脚本里设置一个延迟执行，这样就能解决问题啦！</p>\n<h2 id=\"example\">example</h2>\n<p>假如xxx.py是我们要执行的程序，我们需要它执行的时间是从6:00到9:00之间随机一个时间，那么，</p>\n<p>crontab中这样编辑：</p>\n<pre><code class=\"language-text\">0 6 * * * sh /home/ubuntu/xxxx.sh &gt;&gt; /home/ubuntu/xxxx.log 2&gt;&amp;1 &amp;\n</code></pre>\n<p>xxxx.sh这样写:</p>\n<pre><code class=\"language-shell\">#!bin/bash\n# 随机等待0～180分钟\nsleep $[( $RANDOM % 180 )*60]\ncurtime = $(date &quot;+%Y-%m-%d %H:%M:%S&quot;)\n# 输出当前时间\necho $curtime\n# 运行程序\n/usr/bin/python3.8 /home/ubuntu/xxxx.py &gt;&gt; /home/ubuntu/xxxx.log \n</code></pre>\n<p>完成！</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "example",
+      "id": "example"
+    },
+    {
+      "level": 1,
+      "text": "随机等待0～180分钟",
+      "id": "随机等待0180分钟"
+    },
+    {
+      "level": 1,
+      "text": "输出当前时间",
+      "id": "输出当前时间"
+    },
+    {
+      "level": 1,
+      "text": "运行程序",
+      "id": "运行程序"
+    }
+  ],
+  "hasMath": false
+}

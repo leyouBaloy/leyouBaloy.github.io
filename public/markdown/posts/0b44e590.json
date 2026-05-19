@@ -1,0 +1,20 @@
+{
+  "title": "requests爬表情包",
+  "date": "2020-12-13T17:23:02.000Z",
+  "updatedAt": "2020-12-13T17:23:02.000Z",
+  "file": "requests爬表情包.md",
+  "slug": "0b44e590",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 15,
+  "readingTime": 1,
+  "body": "需要的库：\n\n!pip install lxml\n\n!pip install request\n\n!pip install pathlib\n\n代码：\n\n```\nimport time\n#代码合集并修改为下载多页表情\nimport requests\nfrom bs4 import BeautifulSoup\nfrom pathlib import Path\n\nfor i in range(1,4):\n    url =  f'https://www.fabiaoqing.com/biaoqing/lists/page/{i}.html'\n    response = requests.get(url)\n    time.sleep(3)\n    soup = BeautifulSoup(response.content,'lxml')\n    img_list = soup.find_all('img', class_=\"ui image lazy\")\n    for index,img in enumerate(img_list):\n        image = img.get('data-original')\n        content = requests.get(image).content\n        file = Path('d:/emotion') / f'{index}{Path(image).suffix}'\n        file.write_bytes(content)\n```",
+  "html": "<p>需要的库：</p>\n<p>!pip install lxml</p>\n<p>!pip install request</p>\n<p>!pip install pathlib</p>\n<p>代码：</p>\n<pre><code class=\"language-text\">import time\n#代码合集并修改为下载多页表情\nimport requests\nfrom bs4 import BeautifulSoup\nfrom pathlib import Path\n\nfor i in range(1,4):\n    url =  f'https://www.fabiaoqing.com/biaoqing/lists/page/{i}.html'\n    response = requests.get(url)\n    time.sleep(3)\n    soup = BeautifulSoup(response.content,'lxml')\n    img_list = soup.find_all('img', class_=&quot;ui image lazy&quot;)\n    for index,img in enumerate(img_list):\n        image = img.get('data-original')\n        content = requests.get(image).content\n        file = Path('d:/emotion') / f'{index}{Path(image).suffix}'\n        file.write_bytes(content)\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

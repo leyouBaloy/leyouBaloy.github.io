@@ -1,0 +1,31 @@
+{
+  "title": "Leetcode142:环形链表II——快慢指针",
+  "date": "2024-10-29T13:04:06.000Z",
+  "updatedAt": "2024-10-29T13:04:06.000Z",
+  "file": "Leetcode_142环形链表II.md",
+  "slug": "f870a3e8",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 255,
+  "readingTime": 1,
+  "body": "# Leetcode_142环形链表II\n\nhttps://leetcode.cn/problems/linked-list-cycle-ii/description/\n\n给定一个链表的头节点  `head` ，返回链表开始入环的第一个节点。 *如果链表无环，则返回 `null`。*\n\n如果链表中有某个节点，可以通过连续跟踪 `next` 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 `pos` 来表示链表尾连接到链表中的位置（**索引从 0 开始**）。如果 `pos` 是 `-1`，则在该链表中没有环。**注意：`pos` 不作为参数进行传递**，仅仅是为了标识链表的实际情况。\n\n**不允许修改** 链表。\n\n \n\n**示例 1：**\n\n![img](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgcircularlinkedlist.png)\n\n```\n输入：head = [3,2,0,-4], pos = 1\n输出：返回索引为 1 的链表节点\n解释：链表中有一个环，其尾部连接到第二个节点。\n```\n\n## 题解\n\n快指针一次走两个，慢指针一次走一个，最终一定在环内相遇。从相遇节点和头节点开始走，一定同时走到入环节点。理论推导看：https://www.programmercarl.com/0142.环形链表II.html#思路\n\n这题我想死也不可能想到的。\n\n```python\n/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode(int x) : val(x), next(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode *detectCycle(ListNode *head) {\n        if(head==nullptr){\n            return nullptr;\n        }\n        ListNode* fastPoint = head;\n        ListNode* slowPoint = head;\n        ListNode* meetPoint = nullptr;\n        \n        while(1){\n            fastPoint = fastPoint->next; // fast走一步\n            if(fastPoint==nullptr){\n                return nullptr;\n            }\n\n            fastPoint = fastPoint->next; // fast走一步\n            if(fastPoint==nullptr){\n                return nullptr;\n            }\n\n            slowPoint = slowPoint->next; // slow走一步\n            if(fastPoint==slowPoint){\n                meetPoint = fastPoint;\n                break;\n            }\n        }\n        printf(\"找到meet: %d\", meetPoint->val);\n        \n        while(meetPoint != head){\n            meetPoint = meetPoint->next;\n            head = head->next;\n        }\n        return meetPoint;\n        \n    }\n};\n```\n\n",
+  "html": "<h1 id=\"leetcode_142环形链表ii\">Leetcode_142环形链表II</h1>\n<p><a href=\"https://leetcode.cn/problems/linked-list-cycle-ii/description/\">https://leetcode.cn/problems/linked-list-cycle-ii/description/</a></p>\n<p>给定一个链表的头节点  <code>head</code> ，返回链表开始入环的第一个节点。 <em>如果链表无环，则返回 <code>null</code>。</em></p>\n<p>如果链表中有某个节点，可以通过连续跟踪 <code>next</code> 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（<strong>索引从 0 开始</strong>）。如果 <code>pos</code> 是 <code>-1</code>，则在该链表中没有环。<strong>注意：<code>pos</code> 不作为参数进行传递</strong>，仅仅是为了标识链表的实际情况。</p>\n<p><strong>不允许修改</strong> 链表。</p>\n<p><strong>示例 1：</strong></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgcircularlinkedlist.png\" alt=\"img\" loading=\"lazy\" decoding=\"async\"></p>\n<pre><code class=\"language-text\">输入：head = [3,2,0,-4], pos = 1\n输出：返回索引为 1 的链表节点\n解释：链表中有一个环，其尾部连接到第二个节点。\n</code></pre>\n<h2 id=\"题解\">题解</h2>\n<p>快指针一次走两个，慢指针一次走一个，最终一定在环内相遇。从相遇节点和头节点开始走，一定同时走到入环节点。理论推导看：<a href=\"https://www.programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html#%E6%80%9D%E8%B7%AF\">https://www.programmercarl.com/0142.环形链表II.html#思路</a></p>\n<p>这题我想死也不可能想到的。</p>\n<pre><code class=\"language-python\">/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode(int x) : val(x), next(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode *detectCycle(ListNode *head) {\n        if(head==nullptr){\n            return nullptr;\n        }\n        ListNode* fastPoint = head;\n        ListNode* slowPoint = head;\n        ListNode* meetPoint = nullptr;\n        \n        while(1){\n            fastPoint = fastPoint-&gt;next; // fast走一步\n            if(fastPoint==nullptr){\n                return nullptr;\n            }\n\n            fastPoint = fastPoint-&gt;next; // fast走一步\n            if(fastPoint==nullptr){\n                return nullptr;\n            }\n\n            slowPoint = slowPoint-&gt;next; // slow走一步\n            if(fastPoint==slowPoint){\n                meetPoint = fastPoint;\n                break;\n            }\n        }\n        printf(&quot;找到meet: %d&quot;, meetPoint-&gt;val);\n        \n        while(meetPoint != head){\n            meetPoint = meetPoint-&gt;next;\n            head = head-&gt;next;\n        }\n        return meetPoint;\n        \n    }\n};\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Leetcode_142环形链表II",
+      "id": "leetcode_142环形链表ii"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

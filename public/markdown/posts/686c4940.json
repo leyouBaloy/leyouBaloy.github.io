@@ -1,0 +1,36 @@
+{
+  "title": "matplotlib作热机效率随负载大小变化曲线图",
+  "date": "2021-04-02T09:28:08.000Z",
+  "updatedAt": "2021-04-02T09:28:08.000Z",
+  "file": "matplotlib作热机效率随负载大小变化曲线图.md",
+  "slug": "686c4940",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 26,
+  "readingTime": 1,
+  "body": "大物实验得到的数据，用python的matplotlib很方便处理\n\n数据准备：\n\n```\nr = np.arange(0.5,6.0,0.5)\nu2 = np.array([6.66,6.49,6.37,6.37,6.17,6.12,6.18,5.98,5.97,5.93,5.91])\ni2 = np.array([2.06,2.01,1.97,1.98,1.91,1.90,1.92,1.85,1.85,1.84,1.83])\nuw = np.array([0.145,0.259,0.338,0.419,0.467,0.513,0.552,0.586,0.616,0.641,0.663])\nn = ((uw*uw)/r)/(u2*i2)\n# len(r)\n# r\nn\n```\n\n画图：\n\n```\nimport matplotlib.pyplot as plt\nimport numpy as np\n%matplotlib inline\n\nx = np.linspace(0.5,5.5,11) #横坐标11个数据\n# y = np.array([0.31,]) #纵坐标11个数据\n\nplt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签\nplt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号\nplt.grid(True)#网格线\nplt.title('热机效率随负载大小变化曲线图')#标题\n\n\nplt.plot(x,n,'r') #显示红线\nplt.plot(x, n, 'k.') #显示黑点\n\nplt.xlabel(r'负载大小/R') \nplt.ylabel(r'热机效率') \n\nplt.xticks(x) #重新设置x坐标\n\n\n\nplt.show\nplt.savefig('./热机效率随负载大小变化曲线图.png',dpi=200) #保存图片，清晰度200\n```\n\n效果\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/04/热机效率随负载大小变化曲线图-1024x683.jpg)",
+  "html": "<p>大物实验得到的数据，用python的matplotlib很方便处理</p>\n<p>数据准备：</p>\n<pre><code class=\"language-text\">r = np.arange(0.5,6.0,0.5)\nu2 = np.array([6.66,6.49,6.37,6.37,6.17,6.12,6.18,5.98,5.97,5.93,5.91])\ni2 = np.array([2.06,2.01,1.97,1.98,1.91,1.90,1.92,1.85,1.85,1.84,1.83])\nuw = np.array([0.145,0.259,0.338,0.419,0.467,0.513,0.552,0.586,0.616,0.641,0.663])\nn = ((uw*uw)/r)/(u2*i2)\n# len(r)\n# r\nn\n</code></pre>\n<p>画图：</p>\n<pre><code class=\"language-text\">import matplotlib.pyplot as plt\nimport numpy as np\n%matplotlib inline\n\nx = np.linspace(0.5,5.5,11) #横坐标11个数据\n# y = np.array([0.31,]) #纵坐标11个数据\n\nplt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签\nplt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号\nplt.grid(True)#网格线\nplt.title('热机效率随负载大小变化曲线图')#标题\n\n\nplt.plot(x,n,'r') #显示红线\nplt.plot(x, n, 'k.') #显示黑点\n\nplt.xlabel(r'负载大小/R') \nplt.ylabel(r'热机效率') \n\nplt.xticks(x) #重新设置x坐标\n\n\n\nplt.show\nplt.savefig('./热机效率随负载大小变化曲线图.png',dpi=200) #保存图片，清晰度200\n</code></pre>\n<p>效果</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/04/%E7%83%AD%E6%9C%BA%E6%95%88%E7%8E%87%E9%9A%8F%E8%B4%9F%E8%BD%BD%E5%A4%A7%E5%B0%8F%E5%8F%98%E5%8C%96%E6%9B%B2%E7%BA%BF%E5%9B%BE-1024x683.jpg\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "len(r)",
+      "id": "lenr"
+    },
+    {
+      "level": 1,
+      "text": "r",
+      "id": "r"
+    },
+    {
+      "level": 1,
+      "text": "y = np.array([0.31,]) #纵坐标11个数据",
+      "id": "y-nparray031-纵坐标11个数据"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Conda 配置虚拟环境",
+  "date": "2021-08-29T21:20:21.000Z",
+  "updatedAt": "2021-08-29T21:20:21.000Z",
+  "file": "Conda 配置虚拟环境.md",
+  "slug": "bcde8727",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 91,
+  "readingTime": 1,
+  "body": "### 创建虚拟环境\n\n```\nconda create -n 名字 python=3.8\n```\n\n### 进入虚拟环境\n\n```\nconda activate 名字\n```\n\n### 退出虚拟环境\n\n```\nconda deactivate\n```\n\n### 删除虚拟环境\n\n```\nconda remove -n 名字 --all\n```\n\n### 查看环境下已有安装包\n\n```\nconda list\n```\n\n### 查看已有虚拟环境\n\n```\nconda-env list\n```\n\n### jupyter notebook使用虚拟环境\n\n安装一个库\n\n```\npip install ipykernel\n```\n\n往kernel里写入虚拟环境\n\n```\npython -m ipykernel install --user --name 环境名字 --display-name 显式的名字 a\n```\n\n虚拟环境里没有notebook，安装一下\n\n```\npip install notebook\n```\n\n启动\n\n```\nipython notebook\n```\n\n在Notebook里更换环境：\n\nKernel => Change kernel => 环境名\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/image-20210813181313433-1024x634.png)",
+  "html": "<h3 id=\"创建虚拟环境\">创建虚拟环境</h3>\n<pre><code class=\"language-text\">conda create -n 名字 python=3.8\n</code></pre>\n<h3 id=\"进入虚拟环境\">进入虚拟环境</h3>\n<pre><code class=\"language-text\">conda activate 名字\n</code></pre>\n<h3 id=\"退出虚拟环境\">退出虚拟环境</h3>\n<pre><code class=\"language-text\">conda deactivate\n</code></pre>\n<h3 id=\"删除虚拟环境\">删除虚拟环境</h3>\n<pre><code class=\"language-text\">conda remove -n 名字 --all\n</code></pre>\n<h3 id=\"查看环境下已有安装包\">查看环境下已有安装包</h3>\n<pre><code class=\"language-text\">conda list\n</code></pre>\n<h3 id=\"查看已有虚拟环境\">查看已有虚拟环境</h3>\n<pre><code class=\"language-text\">conda-env list\n</code></pre>\n<h3 id=\"jupyter-notebook使用虚拟环境\">jupyter notebook使用虚拟环境</h3>\n<p>安装一个库</p>\n<pre><code class=\"language-text\">pip install ipykernel\n</code></pre>\n<p>往kernel里写入虚拟环境</p>\n<pre><code class=\"language-text\">python -m ipykernel install --user --name 环境名字 --display-name 显式的名字 a\n</code></pre>\n<p>虚拟环境里没有notebook，安装一下</p>\n<pre><code class=\"language-text\">pip install notebook\n</code></pre>\n<p>启动</p>\n<pre><code class=\"language-text\">ipython notebook\n</code></pre>\n<p>在Notebook里更换环境：</p>\n<p>Kernel =&gt; Change kernel =&gt; 环境名</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/image-20210813181313433-1024x634.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "创建虚拟环境",
+      "id": "创建虚拟环境"
+    },
+    {
+      "level": 3,
+      "text": "进入虚拟环境",
+      "id": "进入虚拟环境"
+    },
+    {
+      "level": 3,
+      "text": "退出虚拟环境",
+      "id": "退出虚拟环境"
+    },
+    {
+      "level": 3,
+      "text": "删除虚拟环境",
+      "id": "删除虚拟环境"
+    },
+    {
+      "level": 3,
+      "text": "查看环境下已有安装包",
+      "id": "查看环境下已有安装包"
+    },
+    {
+      "level": 3,
+      "text": "查看已有虚拟环境",
+      "id": "查看已有虚拟环境"
+    },
+    {
+      "level": 3,
+      "text": "jupyter notebook使用虚拟环境",
+      "id": "jupyter-notebook使用虚拟环境"
+    }
+  ],
+  "hasMath": false
+}

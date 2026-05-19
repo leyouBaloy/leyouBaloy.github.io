@@ -1,0 +1,31 @@
+{
+  "title": "Leetcode455:分发饼干——排序、贪心",
+  "date": "2022-03-18T08:01:16.000Z",
+  "updatedAt": "2022-03-18T08:01:16.000Z",
+  "file": "Leetcode455_分发饼干——排序、贪心.md",
+  "slug": "5c20a2a3",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 244,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/assign-cookies/\n\n## 题解\n\n为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子）\n\n然后对于每个胃口小的孩子，找到一个能刚好满足他的饼干。\n\n思路很简单，我是个菜鸡，看了题解才想出来qwq\n\n这是我第一次写的代码：\n\n```c++\nclass Solution {\npublic:\n    int findContentChildren(vector<int>& g, vector<int>& s) {\n        sort(g.begin(),g.end());\n        sort(s.begin(),s.end());\n        int cnt = 0;\n\n        for(int i=0;i<g.size();i++){\n            for(int j=0;j<s.size();j++){\n                if(s[j]>=g[i]){\n                    cnt+=1;\n                    s[j]=0;\n                    break;\n                }\n            }\n        }\n        return cnt;\n        \n\n    }\n};\n```\n\n`i`和`j`分别是孩子和饼干的指针，由于`j`指针有回溯，所以效率很低。776ms\n\n改进一下：\n\n```c++\nclass Solution {\npublic:\n    int findContentChildren(vector<int>& g, vector<int>& s) {\n        sort(g.begin(),g.end());\n        sort(s.begin(),s.end());\n        int cnt = 0;\n        int j = 0;\n        for(int i=0;i<g.size();i++){\n            while(j<s.size()){\n                if(s[j]>=g[i]){\n                    cnt++;\n                    s[j]=0;\n                    break;\n                }else{\n                    j++;\n                }\n            }\n        }\n        return cnt;\n        \n\n    }\n};\n```\n\n如果饼干不能满足小胃口的孩子，那么大胃口的孩子肯定也满足不了。不让`j`指针回溯，效率一下子提上来了，20ms\n\n\n\n时间复杂度：O(mlogm+nlogn)主要是排序的时间复杂度。\n\n空间复杂度：O(logm+logn)主要是排序的空间复杂度。\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/assign-cookies/\">https://leetcode-cn.com/problems/assign-cookies/</a></p>\n<h2 id=\"题解\">题解</h2>\n<p>为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子）</p>\n<p>然后对于每个胃口小的孩子，找到一个能刚好满足他的饼干。</p>\n<p>思路很简单，我是个菜鸡，看了题解才想出来qwq</p>\n<p>这是我第一次写的代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    int findContentChildren(vector&lt;int&gt;&amp; g, vector&lt;int&gt;&amp; s) {\n        sort(g.begin(),g.end());\n        sort(s.begin(),s.end());\n        int cnt = 0;\n\n        for(int i=0;i&lt;g.size();i++){\n            for(int j=0;j&lt;s.size();j++){\n                if(s[j]&gt;=g[i]){\n                    cnt+=1;\n                    s[j]=0;\n                    break;\n                }\n            }\n        }\n        return cnt;\n        \n\n    }\n};\n</code></pre>\n<p><code>i</code>和<code>j</code>分别是孩子和饼干的指针，由于<code>j</code>指针有回溯，所以效率很低。776ms</p>\n<p>改进一下：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    int findContentChildren(vector&lt;int&gt;&amp; g, vector&lt;int&gt;&amp; s) {\n        sort(g.begin(),g.end());\n        sort(s.begin(),s.end());\n        int cnt = 0;\n        int j = 0;\n        for(int i=0;i&lt;g.size();i++){\n            while(j&lt;s.size()){\n                if(s[j]&gt;=g[i]){\n                    cnt++;\n                    s[j]=0;\n                    break;\n                }else{\n                    j++;\n                }\n            }\n        }\n        return cnt;\n        \n\n    }\n};\n</code></pre>\n<p>如果饼干不能满足小胃口的孩子，那么大胃口的孩子肯定也满足不了。不让<code>j</code>指针回溯，效率一下子提上来了，20ms</p>\n<p>时间复杂度：O(mlogm+nlogn)主要是排序的时间复杂度。</p>\n<p>空间复杂度：O(logm+logn)主要是排序的空间复杂度。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

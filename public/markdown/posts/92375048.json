@@ -1,0 +1,26 @@
+{
+  "title": "每日一题-数组去重和排序",
+  "date": "2020-10-24T08:42:50.000Z",
+  "updatedAt": "2020-10-24T08:42:50.000Z",
+  "file": "每日一题-数组去重和排序.md",
+  "slug": "92375048",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 271,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n明明想在学校中请一些同学一起做一项问卷调查，为了实验的客观性，他先用计算机生成了N个1到1000之间的随机整数（N≤100），对于其中重复的数字，只保留一个，把其余相同的数去掉，不同的数对应着不同的学生的学号。然后再把这些数从小到大排序，按照排好的顺序去找同学做调查。请你协助明明完成“去重”与“排序”的工作。\n\n【输入】\n\n有2行。第1行为1个正整数N ，表示所生成的随机数的个数。第2行有N个用空格隔开的正整数，为所产生的随机数。\n\n【输出】\n\n共2行，第1行为1个正整数M，表示不相同的随机数的个数。第2行为M个用空格隔开的正整数，为从小到大排好序的不相同的随机数。\n\nFor example:\n\nInput  \n10  \n20 40 32 67 40 20 89 300 400 15\n\nResult  \n8  \n15 20 32 40 67 89 300 400\n\n## 答案\n\n```\n#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n    int a[100];\n    int n,i,j,k;\n    int cnt = 0;\n    //输入数组\n    cin >> n;\n    for(i=0;i<n;i++)\n    {\n        cin >> a[i];\n    }\n\n\n\n    //去重\n\n    for(i = 0;i<n;i++)\n    {\n        for(j=i+1;j<n;j++)\n        {\n            if(a[i]==a[j])\n            {\n                cnt++; //cnt为重复个数\n                //排序1\n                for(k=i;k<n;k++)\n                {\n                    a[k] = a[k+1];\n                }\n            }\n        }\n    }\n\n    //排序\n    int temp;\n    for(i=0;i<n-cnt;i++)\n    {\n        for(j=i+1;j<n-cnt;j++)\n        {\n            if(a[j]<a[i])\n            {\n                temp = a[j];\n                a[j] = a[i];\n                a[i] = temp;\n\n            }\n        }\n    }\n\n\n    //输出数组\n    cout << n - cnt - 1 << endl;\n    for(i=0;i<n-cnt;i++)\n    {\n        cout << a[i] << \" \";\n    }\n    return 0;\n}\n```",
+  "html": "<p>【题目描述】</p>\n<p>明明想在学校中请一些同学一起做一项问卷调查，为了实验的客观性，他先用计算机生成了N个1到1000之间的随机整数（N≤100），对于其中重复的数字，只保留一个，把其余相同的数去掉，不同的数对应着不同的学生的学号。然后再把这些数从小到大排序，按照排好的顺序去找同学做调查。请你协助明明完成“去重”与“排序”的工作。</p>\n<p>【输入】</p>\n<p>有2行。第1行为1个正整数N ，表示所生成的随机数的个数。第2行有N个用空格隔开的正整数，为所产生的随机数。</p>\n<p>【输出】</p>\n<p>共2行，第1行为1个正整数M，表示不相同的随机数的个数。第2行为M个用空格隔开的正整数，为从小到大排好序的不相同的随机数。</p>\n<p>For example:</p>\n<p>Input<br>\n10<br>\n20 40 32 67 40 20 89 300 400 15</p>\n<p>Result<br>\n8<br>\n15 20 32 40 67 89 300 400</p>\n<h2 id=\"答案\">答案</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n\nusing namespace std;\n\nint main()\n{\n    int a[100];\n    int n,i,j,k;\n    int cnt = 0;\n    //输入数组\n    cin &gt;&gt; n;\n    for(i=0;i&lt;n;i++)\n    {\n        cin &gt;&gt; a[i];\n    }\n\n\n\n    //去重\n\n    for(i = 0;i&lt;n;i++)\n    {\n        for(j=i+1;j&lt;n;j++)\n        {\n            if(a[i]==a[j])\n            {\n                cnt++; //cnt为重复个数\n                //排序1\n                for(k=i;k&lt;n;k++)\n                {\n                    a[k] = a[k+1];\n                }\n            }\n        }\n    }\n\n    //排序\n    int temp;\n    for(i=0;i&lt;n-cnt;i++)\n    {\n        for(j=i+1;j&lt;n-cnt;j++)\n        {\n            if(a[j]&lt;a[i])\n            {\n                temp = a[j];\n                a[j] = a[i];\n                a[i] = temp;\n\n            }\n        }\n    }\n\n\n    //输出数组\n    cout &lt;&lt; n - cnt - 1 &lt;&lt; endl;\n    for(i=0;i&lt;n-cnt;i++)\n    {\n        cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;\n    }\n    return 0;\n}\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "答案",
+      "id": "答案"
+    }
+  ],
+  "hasMath": false
+}

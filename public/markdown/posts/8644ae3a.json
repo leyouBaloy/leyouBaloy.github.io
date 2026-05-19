@@ -1,0 +1,41 @@
+{
+  "title": "certbot自动配置nginx给wordpress站点加https",
+  "date": "2021-09-08T22:42:40.000Z",
+  "updatedAt": "2021-09-08T22:42:40.000Z",
+  "file": "certbot自动配置nginx给wordpress站点加https.md",
+  "slug": "8644ae3a",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 288,
+  "readingTime": 1,
+  "body": "# 思路\n\n1.  安装snap\n2.  安装certbot\n3.  自动配置nginx\n\n完事儿了，确实很方便。具体执行语句访问 [https://certbot.eff.org/](https://certbot.eff.org/) 按下图选择环境后就能看到所有执行语句 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/certbot选择环境-1024x222.png)\n\n# 踩过的坑\n\n### 配置nginx的时候报错如图\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/certbot报错-1024x432.png)\n\n报错的意思就是说，在nginx的配置文件中server\\_name字段不正确。我把它修改成了aiupc.xyz，仍然报错。\n\n后来问了我哥，才知道nginx配置文件最底下有一行：\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/includevhost.png)\n\nwordpress真正的配置文件其实是在/usr/local/nginx/conf/vhost文件夹里。把这个里面的server\\_name改一下就OK了。\n\n### server\\_name不能随意\n\n`server_name = aiupc.xyz` 和 `server_name = www.aiupc.xyz` 是不一样的，弄混的话会导致站点一些图片链接浏览器不予显示。\n\n我的解决方案：nginx配置`server_name = www.aiupc.xyz`，`server_name = aiupc.xyz`, 域名解析`aiupc.xyz`和`www.aiupc.xyz`， certbot给`aiupc.xyz`和`www.aiupc.xyz`都申请证书， wordpress后台设置里url写`https://www.aiupc.xyz`， 这样，在浏览器中打`aiupc.xyz`也会跳转到`www.aiupc.xyz` 的，这个问题应该已经彻底解决了。\n",
+  "html": "<h1 id=\"思路\">思路</h1>\n<ol>\n<li>安装snap</li>\n<li>安装certbot</li>\n<li>自动配置nginx</li>\n</ol>\n<p>完事儿了，确实很方便。具体执行语句访问 <a href=\"https://certbot.eff.org/\">https://certbot.eff.org/</a> 按下图选择环境后就能看到所有执行语句 <img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/certbot%E9%80%89%E6%8B%A9%E7%8E%AF%E5%A2%83-1024x222.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<h1 id=\"踩过的坑\">踩过的坑</h1>\n<h3 id=\"配置nginx的时候报错如图\">配置nginx的时候报错如图</h3>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/certbot%E6%8A%A5%E9%94%99-1024x432.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>报错的意思就是说，在nginx的配置文件中server_name字段不正确。我把它修改成了aiupc.xyz，仍然报错。</p>\n<p>后来问了我哥，才知道nginx配置文件最底下有一行：</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/includevhost.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>wordpress真正的配置文件其实是在/usr/local/nginx/conf/vhost文件夹里。把这个里面的server_name改一下就OK了。</p>\n<h3 id=\"server_name不能随意\">server_name不能随意</h3>\n<p><code>server_name = aiupc.xyz</code> 和 <code>server_name = www.aiupc.xyz</code> 是不一样的，弄混的话会导致站点一些图片链接浏览器不予显示。</p>\n<p>我的解决方案：nginx配置<code>server_name = www.aiupc.xyz</code>，<code>server_name = aiupc.xyz</code>, 域名解析<code>aiupc.xyz</code>和<code>www.aiupc.xyz</code>， certbot给<code>aiupc.xyz</code>和<code>www.aiupc.xyz</code>都申请证书， wordpress后台设置里url写<code>https://www.aiupc.xyz</code>， 这样，在浏览器中打<code>aiupc.xyz</code>也会跳转到<code>www.aiupc.xyz</code> 的，这个问题应该已经彻底解决了。</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "思路",
+      "id": "思路"
+    },
+    {
+      "level": 1,
+      "text": "踩过的坑",
+      "id": "踩过的坑"
+    },
+    {
+      "level": 3,
+      "text": "配置nginx的时候报错如图",
+      "id": "配置nginx的时候报错如图"
+    },
+    {
+      "level": 3,
+      "text": "server\\_name不能随意",
+      "id": "server_name不能随意"
+    }
+  ],
+  "hasMath": false
+}

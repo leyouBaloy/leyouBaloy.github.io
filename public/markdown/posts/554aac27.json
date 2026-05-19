@@ -1,0 +1,56 @@
+{
+  "title": "01背包问题——动态规划",
+  "date": "2022-02-22T08:42:16.000Z",
+  "updatedAt": "2022-02-22T08:42:16.000Z",
+  "file": "01背包问题——动态规划.md",
+  "slug": "554aac27",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 291,
+  "readingTime": 1,
+  "body": "> 题目来自：https://www.acwing.com/problem/search/1/?csrfmiddlewaretoken=UwJf7O4w1mYDi1yfimoQC3A85cwxyluK0ixh0ZlBDLqKKVOlEWEHJVbdE4OlzzVr&search_content=%E8%83%8C%E5%8C%85\n\n有 NN 件物品和一个容量是 VV 的背包。每件物品只能使用一次。\n\n第 ii 件物品的体积是 vivi，价值是 wiwi。\n\n求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。\n输出最大价值。\n\n#### 输入格式\n\n第一行两个整数，N，VN，V，用空格隔开，分别表示物品数量和背包容积。\n\n接下来有 NN 行，每行两个整数 vi,wivi,wi，用空格隔开，分别表示第 ii 件物品的体积和价值。\n\n#### 输出格式\n\n输出一个整数，表示最大价值。\n\n#### 数据范围\n\n0<N,V≤10000<N,V≤1000\n0<vi,wi≤10000<vi,wi≤1000\n\n#### 输入样例\n\n```\n4 5\n1 2\n2 4\n3 4\n4 5\n```\n\n#### 输出样例：\n\n```\n8\n```\n\n| 难度：**简单**          |\n| ----------------------- |\n| 时/空限制：1s / 64MB    |\n| 总通过数：95474         |\n| 总尝试数：158804        |\n| 来源：背包九讲 , 模板题 |\n| 算法标签                |\n\n------\n\n#### 题解\n\n```c++\n#include<bits/stdc++.h>\n\nusing namespace std;\n\nconst int MAXN = 1005;\nint v[MAXN];    // 体积\nint w[MAXN];    // 价值 \nint f[MAXN][MAXN];  // f[i][j], j体积下前i个物品的最大价值 \n\nint main() \n{\n    int n, m;   \n    cin >> n >> m;\n    for(int i = 1; i <= n; i++) \n        cin >> v[i] >> w[i];\n\n    for(int i = 1; i <= n; i++) \n        for(int j = 1; j <= m; j++)\n        {\n            //  当前背包容量装不进第i个物品，则价值等于前i-1个物品\n            if(j < v[i]) \n                f[i][j] = f[i - 1][j];\n            // 能装，需进行决策是否选择第i个物品\n            else    \n                f[i][j] = max(f[i - 1][j], f[i - 1][j - v[i]] + w[i]);\n        }           \n\n    cout << f[n][m] << endl;\n\n    return 0;\n}\n\n作者：深蓝\n链接：https://www.acwing.com/solution/content/1374/\n来源：AcWing\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n```\n\n#### 感想\n\n01背包问题可以衍生出很多题目，是很重要的问题。\n\n核心公式\n\n```c++\n// 状态转移方程\ndp[i][k] = max(value[i] + dp[i-1][k-weight[i]], dp[i-1][k])\n```\n\n理解：\n\n看这个博客讲的特别好https://www.cnblogs.com/kkbill/p/12081172.html\n\n\n\n![状态转移方程](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E6%96%B9%E7%A8%8B.jpeg)\n",
+  "html": "<blockquote>\n<p>题目来自：<a href=\"https://www.acwing.com/problem/search/1/?csrfmiddlewaretoken=UwJf7O4w1mYDi1yfimoQC3A85cwxyluK0ixh0ZlBDLqKKVOlEWEHJVbdE4OlzzVr&amp;search_content=%E8%83%8C%E5%8C%85\">https://www.acwing.com/problem/search/1/?csrfmiddlewaretoken=UwJf7O4w1mYDi1yfimoQC3A85cwxyluK0ixh0ZlBDLqKKVOlEWEHJVbdE4OlzzVr&amp;search_content=背包</a></p>\n</blockquote>\n<p>有 NN 件物品和一个容量是 VV 的背包。每件物品只能使用一次。</p>\n<p>第 ii 件物品的体积是 vivi，价值是 wiwi。</p>\n<p>求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。\n输出最大价值。</p>\n<h4 id=\"输入格式\">输入格式</h4>\n<p>第一行两个整数，N，VN，V，用空格隔开，分别表示物品数量和背包容积。</p>\n<p>接下来有 NN 行，每行两个整数 vi,wivi,wi，用空格隔开，分别表示第 ii 件物品的体积和价值。</p>\n<h4 id=\"输出格式\">输出格式</h4>\n<p>输出一个整数，表示最大价值。</p>\n<h4 id=\"数据范围\">数据范围</h4>\n<p>0&lt;N,V≤10000&lt;N,V≤1000\n0&lt;vi,wi≤10000&lt;vi,wi≤1000</p>\n<h4 id=\"输入样例\">输入样例</h4>\n<pre><code class=\"language-text\">4 5\n1 2\n2 4\n3 4\n4 5\n</code></pre>\n<h4 id=\"输出样例\">输出样例：</h4>\n<pre><code class=\"language-text\">8\n</code></pre>\n<table>\n<thead>\n<tr>\n<th>难度：<strong>简单</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>时/空限制：1s / 64MB</td>\n</tr>\n<tr>\n<td>总通过数：95474</td>\n</tr>\n<tr>\n<td>总尝试数：158804</td>\n</tr>\n<tr>\n<td>来源：背包九讲 , 模板题</td>\n</tr>\n<tr>\n<td>算法标签</td>\n</tr>\n</tbody>\n</table>\n<hr>\n<h4 id=\"题解\">题解</h4>\n<pre><code class=\"language-c++\">#include&lt;bits/stdc++.h&gt;\n\nusing namespace std;\n\nconst int MAXN = 1005;\nint v[MAXN];    // 体积\nint w[MAXN];    // 价值 \nint f[MAXN][MAXN];  // f[i][j], j体积下前i个物品的最大价值 \n\nint main() \n{\n    int n, m;   \n    cin &gt;&gt; n &gt;&gt; m;\n    for(int i = 1; i &lt;= n; i++) \n        cin &gt;&gt; v[i] &gt;&gt; w[i];\n\n    for(int i = 1; i &lt;= n; i++) \n        for(int j = 1; j &lt;= m; j++)\n        {\n            //  当前背包容量装不进第i个物品，则价值等于前i-1个物品\n            if(j &lt; v[i]) \n                f[i][j] = f[i - 1][j];\n            // 能装，需进行决策是否选择第i个物品\n            else    \n                f[i][j] = max(f[i - 1][j], f[i - 1][j - v[i]] + w[i]);\n        }           \n\n    cout &lt;&lt; f[n][m] &lt;&lt; endl;\n\n    return 0;\n}\n\n作者：深蓝\n链接：https://www.acwing.com/solution/content/1374/\n来源：AcWing\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n</code></pre>\n<h4 id=\"感想\">感想</h4>\n<p>01背包问题可以衍生出很多题目，是很重要的问题。</p>\n<p>核心公式</p>\n<pre><code class=\"language-c++\">// 状态转移方程\ndp[i][k] = max(value[i] + dp[i-1][k-weight[i]], dp[i-1][k])\n</code></pre>\n<p>理解：</p>\n<p>看这个博客讲的特别好<a href=\"https://www.cnblogs.com/kkbill/p/12081172.html\">https://www.cnblogs.com/kkbill/p/12081172.html</a></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E6%96%B9%E7%A8%8B.jpeg\" alt=\"状态转移方程\" loading=\"lazy\" decoding=\"async\"></p>\n",
+  "headings": [
+    {
+      "level": 4,
+      "text": "输入格式",
+      "id": "输入格式"
+    },
+    {
+      "level": 4,
+      "text": "输出格式",
+      "id": "输出格式"
+    },
+    {
+      "level": 4,
+      "text": "数据范围",
+      "id": "数据范围"
+    },
+    {
+      "level": 4,
+      "text": "输入样例",
+      "id": "输入样例"
+    },
+    {
+      "level": 4,
+      "text": "输出样例：",
+      "id": "输出样例"
+    },
+    {
+      "level": 4,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 4,
+      "text": "感想",
+      "id": "感想"
+    }
+  ],
+  "hasMath": false
+}

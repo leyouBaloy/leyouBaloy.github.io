@@ -1,0 +1,26 @@
+{
+  "title": "每个字母代表一个数字，输出字符串代表的数字之和",
+  "date": "2020-11-05T17:38:36.000Z",
+  "updatedAt": "2020-11-05T17:38:36.000Z",
+  "file": "每个字母代表一个数字，输出字符串代表的数字之和.md",
+  "slug": "cad421de",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 317,
+  "readingTime": 1,
+  "body": "【题目描述】\n\nIf we define each of the upper case letters a number, that is, 1 for A, 2 for B, 3for C, ... 25 for Y, 26 for Z, we\n\ncan calculate a mark for any word or sentence.\n\nWe believe that 100 points is the full mark, so for those word with a mark larger than 100, we should just ignore\n\nthat, with a label \"INVALID\" .Then let's see interesting results:\n\nWhat is the most important for your success?\n\nHARDWORK? H+A+R+D+W+O+R+K=8+1+18+4+23+15+18+11=98\n\nKNOWLEDGE? K+N+O+W+L+E+D+G+E=11+14+15+23+12+5+4+7+5=96\n\nMONEY? M+O+N+E+Y=13+15+14+5+25=72\n\nLUCK? L+U+C+K=12+21+3+11=47\n\nATTITUDE! A+T+T+I+T+U+D+E=1+20+20+9+20+21+4+5=100\n\nSo just be with good attitude and you will be on your way to success.\n\n【输入格式】\n\nFor each case of the input, it contains a single line. For each line, some characters will appear with maybe some of them being upper case letters. All characters are printable. Each line will have at most 127 characters.\n\n【输出格式】\n\nFor each case, you should only pay attention to upper case letters and calculate the total points. If it is over 100, \"INVALID\" should be returned. Or you should print the exact point of that.\n\nFor example:\n\nInput\n\nResult\n\nDELICIOUS FOOD  \nYY, and YY again!  \ndid i lose anything?\n\nINVALID  \n100  \n0\n\n## Answer\n\n```\n#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n\n\n    //输入1至26个字母\n    char a[9999];\n    int i,j,cnt,x=0;\n    for(i=1;i<=26;i++)\n    {\n        a[i] = 'A' + i - 1;\n    }\n\n    //输入字符\n    char b[9999];\n    while(cin.getline(b,9999)) //这个while是后来加上去的，没有while就不能多次输入\n    {\n\n    cnt = 0;\n\n    //逐个计数\n    for(i=0;b[i]!='\\0';i++)\n    {\n        for(j=1;j<=26;j++)\n        {\n            if(b[i] == a[j])\n            {\n                x = j;  \n                break;\n            }\n            else\n            {\n                x = 0; //这里本来是没有这个else和x的，但是如果不加这个else，会出bug\n            }\n        }\n        cnt = cnt + x;\n    }\n\n        if(cnt > 100)\n        {\n            cout << \"INVALID\" <<endl;\n        }\n        else\n        {\n            cout << cnt << endl;\n        }\n    }\n    return 0;\n}\n```\n\n这个吊题目不难，但是需要细心，写出算法用了十分钟，改bug用三十分钟。还问了恺毅同学，他是真的强。",
+  "html": "<p>【题目描述】</p>\n<p>If we define each of the upper case letters a number, that is, 1 for A, 2 for B, 3for C, … 25 for Y, 26 for Z, we</p>\n<p>can calculate a mark for any word or sentence.</p>\n<p>We believe that 100 points is the full mark, so for those word with a mark larger than 100, we should just ignore</p>\n<p>that, with a label “INVALID” .Then let’s see interesting results:</p>\n<p>What is the most important for your success?</p>\n<p>HARDWORK? H+A+R+D+W+O+R+K=8+1+18+4+23+15+18+11=98</p>\n<p>KNOWLEDGE? K+N+O+W+L+E+D+G+E=11+14+15+23+12+5+4+7+5=96</p>\n<p>MONEY? M+O+N+E+Y=13+15+14+5+25=72</p>\n<p>LUCK? L+U+C+K=12+21+3+11=47</p>\n<p>ATTITUDE! A+T+T+I+T+U+D+E=1+20+20+9+20+21+4+5=100</p>\n<p>So just be with good attitude and you will be on your way to success.</p>\n<p>【输入格式】</p>\n<p>For each case of the input, it contains a single line. For each line, some characters will appear with maybe some of them being upper case letters. All characters are printable. Each line will have at most 127 characters.</p>\n<p>【输出格式】</p>\n<p>For each case, you should only pay attention to upper case letters and calculate the total points. If it is over 100, “INVALID” should be returned. Or you should print the exact point of that.</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>DELICIOUS FOOD<br>\nYY, and YY again!<br>\ndid i lose anything?</p>\n<p>INVALID<br>\n100<br>\n0</p>\n<h2 id=\"answer\">Answer</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n\nusing namespace std;\n\nint main()\n{\n\n\n    //输入1至26个字母\n    char a[9999];\n    int i,j,cnt,x=0;\n    for(i=1;i&lt;=26;i++)\n    {\n        a[i] = 'A' + i - 1;\n    }\n\n    //输入字符\n    char b[9999];\n    while(cin.getline(b,9999)) //这个while是后来加上去的，没有while就不能多次输入\n    {\n\n    cnt = 0;\n\n    //逐个计数\n    for(i=0;b[i]!='\\0';i++)\n    {\n        for(j=1;j&lt;=26;j++)\n        {\n            if(b[i] == a[j])\n            {\n                x = j;  \n                break;\n            }\n            else\n            {\n                x = 0; //这里本来是没有这个else和x的，但是如果不加这个else，会出bug\n            }\n        }\n        cnt = cnt + x;\n    }\n\n        if(cnt &gt; 100)\n        {\n            cout &lt;&lt; &quot;INVALID&quot; &lt;&lt;endl;\n        }\n        else\n        {\n            cout &lt;&lt; cnt &lt;&lt; endl;\n        }\n    }\n    return 0;\n}\n</code></pre>\n<p>这个吊题目不难，但是需要细心，写出算法用了十分钟，改bug用三十分钟。还问了恺毅同学，他是真的强。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Answer",
+      "id": "answer"
+    }
+  ],
+  "hasMath": false
+}

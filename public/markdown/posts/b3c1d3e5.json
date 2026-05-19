@@ -1,0 +1,36 @@
+{
+  "title": "Leetcode11:盛水最多的容器——双指针",
+  "date": "2022-04-25T09:26:41.000Z",
+  "updatedAt": "2022-04-25T09:26:41.000Z",
+  "file": "Leetcode11_盛水最多的容器——双指针.md",
+  "slug": "b3c1d3e5",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 232,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/container-with-most-water/\n\n每次看题解：“我又会了！”\n\n下一题：“我是废物。”\n\n## 题解\n\n### 双指针\n\n定义两个指针`left`和`right`分别在最左边和最右边，指向两个柱子，那么面积肯定等于两柱子中最小的柱子乘上宽度。\n\n求出面积后要移动指针，那么移动哪一个指针呢？当然是指向柱子中较矮的那个指针。因为如果移动高的珠子，宽度减小，而由于短板效应，高度仍取决于矮柱子，所以移动后的面积只减不增。\n\n那如果两指针指向柱子的高度相同呢？那就两个指针一起向中间移动，原理同上。\n\n代码：\n\n```c++\nclass Solution {\npublic:\n    int maxArea(vector<int>& height) {\n        int max_area = 0;\n        int left=0,right=height.size()-1;\n        while(left<right){\n            if(height[left]<height[right]){\n                max_area = max(max_area, height[left]*(right-left));\n                left++;\n            }\n            else if(height[left]>height[right]){\n                max_area = max(max_area, height[right]*(right-left));\n                right--;\n            }\n            else{\n                max_area = max(max_area, height[left]*(right-left));\n                left++;\n                right--;\n            }\n        }\n        return max_area;\n    }\n};\n```\n\n相比于暴力搜索，这种方法相当于是剪枝，把不可能的情况都嘎掉了。\n\n时间复杂度O(n)，空间复杂度O(1)。\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/container-with-most-water/\">https://leetcode-cn.com/problems/container-with-most-water/</a></p>\n<p>每次看题解：“我又会了！”</p>\n<p>下一题：“我是废物。”</p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"双指针\">双指针</h3>\n<p>定义两个指针<code>left</code>和<code>right</code>分别在最左边和最右边，指向两个柱子，那么面积肯定等于两柱子中最小的柱子乘上宽度。</p>\n<p>求出面积后要移动指针，那么移动哪一个指针呢？当然是指向柱子中较矮的那个指针。因为如果移动高的珠子，宽度减小，而由于短板效应，高度仍取决于矮柱子，所以移动后的面积只减不增。</p>\n<p>那如果两指针指向柱子的高度相同呢？那就两个指针一起向中间移动，原理同上。</p>\n<p>代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    int maxArea(vector&lt;int&gt;&amp; height) {\n        int max_area = 0;\n        int left=0,right=height.size()-1;\n        while(left&lt;right){\n            if(height[left]&lt;height[right]){\n                max_area = max(max_area, height[left]*(right-left));\n                left++;\n            }\n            else if(height[left]&gt;height[right]){\n                max_area = max(max_area, height[right]*(right-left));\n                right--;\n            }\n            else{\n                max_area = max(max_area, height[left]*(right-left));\n                left++;\n                right--;\n            }\n        }\n        return max_area;\n    }\n};\n</code></pre>\n<p>相比于暴力搜索，这种方法相当于是剪枝，把不可能的情况都嘎掉了。</p>\n<p>时间复杂度O(n)，空间复杂度O(1)。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "双指针",
+      "id": "双指针"
+    }
+  ],
+  "hasMath": false
+}

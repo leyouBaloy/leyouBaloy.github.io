@@ -1,0 +1,63 @@
+{
+  "title": "Kaggle图像分类竞赛实战总结详细代码解读",
+  "date": "2022-12-29T04:37:38.000Z",
+  "updatedAt": "2022-12-29T04:37:38.000Z",
+  "file": "Kaggle图像分类竞赛实战总结详细代码解读.md",
+  "slug": "92077544",
+  "categories": [
+    "笔记",
+    "技能分享"
+  ],
+  "tags": [
+    "笔记",
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 1254,
+  "readingTime": 4,
+  "body": "## 前言\n\n我是跟着李沐的`动手学深度学习v2`视频学习深度学习的，光看不做假把式，所以在学习完`第七章-现代卷积神经网络`之后，参加了一次李沐发布的Kaggle竞赛。自己动手，从组织数据集开始，到训练，再到推理，把整个流程走了一遍，收获颇丰，感觉学到了很多东西，（完整代码：https://www.kaggle.com/code/leyoubaloy/competition-classifyleaves/notebook?scriptVersionId=114980812 ）现总结如下：\n\n## 组织数据集\n\n我相信很多小伙伴跟我一样，学习深度学习不是为了在这个领域做出创新性的贡献，而是仅仅会用它解决实际问题即可，但是在用别人的模型的过程中卡在了第一步——组织数据集。\n\n先搞明白两个类，Dataset和Dataloader（需要有python面向对象知识基础）。Dataset是对整体数据集的一个抽象，它定义了数据的读取方法等属性，而Dataloader是用于训练和、评估和测试的迭代器，它能控制batch_size，shuffle等属性。Dataset代码的编写是很灵活的，针对不同的数据集有不同的写法，想要会用深度学习一定先学会写Dataset类。\n\n```python\nclass MyDataset(Dataset):\n    def __init__(self, mode='train', valid_ratio=0.2, resize_height=256, resize_width=256):\n        self.resize_height = resize_height\n        self.resize_width = resize_width\n        self.mode = mode\n        \n        \n        if mode == 'train':\n            data = pd.read_csv('/kaggle/input/classify-leaves/train.csv')\n            self.train_len = int(data.shape[0] * (1 - valid_ratio))\n            self.train_image = np.asarray(data.loc[:self.train_len, 'image'])\n            self.train_label = np.asarray(data.loc[:self.train_len, 'label'])\n            self.image_arr = self.train_image\n            self.label_arr = self.train_label\n        elif mode == 'valid':\n            data = pd.read_csv('/kaggle/input/classify-leaves/train.csv')\n            self.train_len = int(data.shape[0] * (1 - valid_ratio))\n            self.valid_image = np.asarray(data.loc[self.train_len:, 'image'])\n            self.valid_label = np.asarray(data.loc[self.train_len:, 'label'])\n            self.image_arr = self.valid_image\n            self.label_arr = self.valid_label\n        elif mode == 'test':\n            data = pd.read_csv('/kaggle/input/classify-leaves/test.csv')\n            self.test_image = np.asarray(data.loc[:, 'image'])\n            self.image_arr = self.test_image\n        self._len = len(self.image_arr)\n    \n    def __getitem__(self, index):\n        image_path = self.image_arr[index]\n        image = Image.open(os.path.join('/kaggle/input/classify-leaves/', image_path))\n        if self.mode == 'train':\n            transform = transforms.Compose([transforms.RandomResizedCrop(224),\n                                 transforms.RandomHorizontalFlip(),\n                                 transforms.ToTensor(),\n                                 transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])\n        else:\n            transform = transforms.Compose([transforms.Resize(256),\n                               transforms.CenterCrop(224),\n                               transforms.ToTensor(),\n                               transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])\n            \n        image = transform(image)\n        \n        if self.mode == 'test':\n            return image\n        \n        label = self.label_arr[index]\n        label_num = label2num[label]\n        return image, label_num\n    \n    def __len__(self):\n        return self._len\n```\n\n这次竞赛等数据集是一个树叶图像分类数据集，在我的代码中定义了一个MyDataset类，在init方法中，我用pandas读取图像列表为一个Series。在getitem方法中，传入一个参数index，用Image库读取第index个图像，再用transforms对它做一些预处理（包括resize、裁切、转化成tensor、标准化），使其能够被输入到神经网络。\n\n有三种模式，训练、验证和测试。训练和验证模式的数据是从训练集中划分的，是有标签的，而测试集是没有标签的，需要我们训练完推理得到答案，上传答案。在训练模式下，随机裁切图像即可，但是验证和测试模式最好用中心裁切，使待测试的图像尽可能完整的输入到网络中。训练和验证模式的getitem返回的是tensor和label，而测试模式返回的是tensor。\n\n然后就可以实例化，得到train_dataset，valid_dataset，test_dataset。\n\n```python\ntrain_dataset = MyDataset(mode='train')\nvalid_dataset = MyDataset(mode='valid')\ntest_dataset =  MyDataset(mode='test')\n```\n\n\n\n最后用dataset生成dataloader，这个就很简单了，传几个参数就可以。batch_size是每个batch的训练样本个数，shuffle是否打乱数据，num_worker是读取数据所用的进程数，因为读取数据通常比较花时间，所以有时候需要用不止一个进程来读取数据。对于训练和验证数据，需要打乱，对于测试数据就不需要打乱了。\n\n```python\ntrain_loader = DataLoader(train_dataset, batch_size=10, shuffle=True, num_workers=2)\nvalid_loader = DataLoader(valid_dataset, batch_size=10, shuffle=True, num_workers=2)\ntest_loader = DataLoader(test_dataset, batch_size=10, shuffle=False, num_workers=2)\n```\n\n\n\n## label的格式\n\n这个问题困扰了我比较久。这是一个176类的分类问题，模型输出的是有176个元素的向量，可以理解为向量中的每个元素表示该样本属于此类的概率，所以我们选择最大的元素值的index即可，也就是argmax。\n\n按理来说，我们的label的格式也应该是one-hot编码，然鹅这样太占内存了，所以，在pytorch中规定我们的label格式是index，即只有一个数字，表示所属类的下标。\n\n现实中的label往往是字符串，要先对其编码，用两个字典就可以了，num2label和label2num。\n\n```python\nlabels = train['label'].unique()\nlabel2num = {}\nfor idx,label in enumerate(labels):\n    label2num[label] = idx\nprint('label2num:',label2num)\nnum2label = { a : b for b, a in label2num.items()}\nprint('num2label:',num2label)\n```\n\n\n\n## 网络调整\n\n网络需要改的地方是输入size和输出size，在d2l第七章的教学中mnist数据集是黑白的，输入只有一个通道，而我们的数据集是彩色的，有三个通道，所以要改一下。mnist的输出是10类，而我们的输出有176类，这个也要改一下。\n\n## 损失函数\n\n训练过程是一个epoch一个epoch进行训练的，所以网络的输入输出都是是若干个样本，损失也是若干个样本一起计算一次损失。分类任务常用的是交叉熵损失，即nn.CronssEntropyLoss()，它的输入是y_hat和y_real，注意哟这两个格式是不一样的，y_hat是模型的输出，类似于one-hot编码，而y_real只是一个index。\n\n关于这个损失函数，最好理解一下，上百度搜一下它是怎么计算类别的损失的。\n\n## 如何推理\n\n验证精度和推理测试集的时候都需要用到推理，推理也是分epoch进行的，推理时要把自动梯度关掉。在训练的代码中有一个细节是torch.max()函数不仅返回的是最大值，还有它的index，我们所需要的主要是它的index。\n\n```python\nnet.load_state_dict(torch.load('./net.ckpt'))\nnet.eval()\ntest_labels = []\nwith torch.no_grad():\n    for test_x in test_loader:\n        test_x = test_x.to(device)\n        output = net(test_x)\n        for label in torch.max(output, 1)[1]:\n#             print('label:',)\n            test_labels.append(num2label[label.item()])\n```\n\n## 总结\n\n很多看似简单的代码其实包含了很多理论知识，可以花个一两天的时间把这些代码好好理一理，观察一下每行代码的输出形式是什么样的。\n\n\n\n\n\n",
+  "html": "<h2 id=\"前言\">前言</h2>\n<p>我是跟着李沐的<code>动手学深度学习v2</code>视频学习深度学习的，光看不做假把式，所以在学习完<code>第七章-现代卷积神经网络</code>之后，参加了一次李沐发布的Kaggle竞赛。自己动手，从组织数据集开始，到训练，再到推理，把整个流程走了一遍，收获颇丰，感觉学到了很多东西，（完整代码：<a href=\"https://www.kaggle.com/code/leyoubaloy/competition-classifyleaves/notebook?scriptVersionId=114980812\">https://www.kaggle.com/code/leyoubaloy/competition-classifyleaves/notebook?scriptVersionId=114980812</a> ）现总结如下：</p>\n<h2 id=\"组织数据集\">组织数据集</h2>\n<p>我相信很多小伙伴跟我一样，学习深度学习不是为了在这个领域做出创新性的贡献，而是仅仅会用它解决实际问题即可，但是在用别人的模型的过程中卡在了第一步——组织数据集。</p>\n<p>先搞明白两个类，Dataset和Dataloader（需要有python面向对象知识基础）。Dataset是对整体数据集的一个抽象，它定义了数据的读取方法等属性，而Dataloader是用于训练和、评估和测试的迭代器，它能控制batch_size，shuffle等属性。Dataset代码的编写是很灵活的，针对不同的数据集有不同的写法，想要会用深度学习一定先学会写Dataset类。</p>\n<pre><code class=\"language-python\">class MyDataset(Dataset):\n    def __init__(self, mode='train', valid_ratio=0.2, resize_height=256, resize_width=256):\n        self.resize_height = resize_height\n        self.resize_width = resize_width\n        self.mode = mode\n        \n        \n        if mode == 'train':\n            data = pd.read_csv('/kaggle/input/classify-leaves/train.csv')\n            self.train_len = int(data.shape[0] * (1 - valid_ratio))\n            self.train_image = np.asarray(data.loc[:self.train_len, 'image'])\n            self.train_label = np.asarray(data.loc[:self.train_len, 'label'])\n            self.image_arr = self.train_image\n            self.label_arr = self.train_label\n        elif mode == 'valid':\n            data = pd.read_csv('/kaggle/input/classify-leaves/train.csv')\n            self.train_len = int(data.shape[0] * (1 - valid_ratio))\n            self.valid_image = np.asarray(data.loc[self.train_len:, 'image'])\n            self.valid_label = np.asarray(data.loc[self.train_len:, 'label'])\n            self.image_arr = self.valid_image\n            self.label_arr = self.valid_label\n        elif mode == 'test':\n            data = pd.read_csv('/kaggle/input/classify-leaves/test.csv')\n            self.test_image = np.asarray(data.loc[:, 'image'])\n            self.image_arr = self.test_image\n        self._len = len(self.image_arr)\n    \n    def __getitem__(self, index):\n        image_path = self.image_arr[index]\n        image = Image.open(os.path.join('/kaggle/input/classify-leaves/', image_path))\n        if self.mode == 'train':\n            transform = transforms.Compose([transforms.RandomResizedCrop(224),\n                                 transforms.RandomHorizontalFlip(),\n                                 transforms.ToTensor(),\n                                 transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])\n        else:\n            transform = transforms.Compose([transforms.Resize(256),\n                               transforms.CenterCrop(224),\n                               transforms.ToTensor(),\n                               transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])\n            \n        image = transform(image)\n        \n        if self.mode == 'test':\n            return image\n        \n        label = self.label_arr[index]\n        label_num = label2num[label]\n        return image, label_num\n    \n    def __len__(self):\n        return self._len\n</code></pre>\n<p>这次竞赛等数据集是一个树叶图像分类数据集，在我的代码中定义了一个MyDataset类，在init方法中，我用pandas读取图像列表为一个Series。在getitem方法中，传入一个参数index，用Image库读取第index个图像，再用transforms对它做一些预处理（包括resize、裁切、转化成tensor、标准化），使其能够被输入到神经网络。</p>\n<p>有三种模式，训练、验证和测试。训练和验证模式的数据是从训练集中划分的，是有标签的，而测试集是没有标签的，需要我们训练完推理得到答案，上传答案。在训练模式下，随机裁切图像即可，但是验证和测试模式最好用中心裁切，使待测试的图像尽可能完整的输入到网络中。训练和验证模式的getitem返回的是tensor和label，而测试模式返回的是tensor。</p>\n<p>然后就可以实例化，得到train_dataset，valid_dataset，test_dataset。</p>\n<pre><code class=\"language-python\">train_dataset = MyDataset(mode='train')\nvalid_dataset = MyDataset(mode='valid')\ntest_dataset =  MyDataset(mode='test')\n</code></pre>\n<p>最后用dataset生成dataloader，这个就很简单了，传几个参数就可以。batch_size是每个batch的训练样本个数，shuffle是否打乱数据，num_worker是读取数据所用的进程数，因为读取数据通常比较花时间，所以有时候需要用不止一个进程来读取数据。对于训练和验证数据，需要打乱，对于测试数据就不需要打乱了。</p>\n<pre><code class=\"language-python\">train_loader = DataLoader(train_dataset, batch_size=10, shuffle=True, num_workers=2)\nvalid_loader = DataLoader(valid_dataset, batch_size=10, shuffle=True, num_workers=2)\ntest_loader = DataLoader(test_dataset, batch_size=10, shuffle=False, num_workers=2)\n</code></pre>\n<h2 id=\"label的格式\">label的格式</h2>\n<p>这个问题困扰了我比较久。这是一个176类的分类问题，模型输出的是有176个元素的向量，可以理解为向量中的每个元素表示该样本属于此类的概率，所以我们选择最大的元素值的index即可，也就是argmax。</p>\n<p>按理来说，我们的label的格式也应该是one-hot编码，然鹅这样太占内存了，所以，在pytorch中规定我们的label格式是index，即只有一个数字，表示所属类的下标。</p>\n<p>现实中的label往往是字符串，要先对其编码，用两个字典就可以了，num2label和label2num。</p>\n<pre><code class=\"language-python\">labels = train['label'].unique()\nlabel2num = {}\nfor idx,label in enumerate(labels):\n    label2num[label] = idx\nprint('label2num:',label2num)\nnum2label = { a : b for b, a in label2num.items()}\nprint('num2label:',num2label)\n</code></pre>\n<h2 id=\"网络调整\">网络调整</h2>\n<p>网络需要改的地方是输入size和输出size，在d2l第七章的教学中mnist数据集是黑白的，输入只有一个通道，而我们的数据集是彩色的，有三个通道，所以要改一下。mnist的输出是10类，而我们的输出有176类，这个也要改一下。</p>\n<h2 id=\"损失函数\">损失函数</h2>\n<p>训练过程是一个epoch一个epoch进行训练的，所以网络的输入输出都是是若干个样本，损失也是若干个样本一起计算一次损失。分类任务常用的是交叉熵损失，即nn.CronssEntropyLoss()，它的输入是y_hat和y_real，注意哟这两个格式是不一样的，y_hat是模型的输出，类似于one-hot编码，而y_real只是一个index。</p>\n<p>关于这个损失函数，最好理解一下，上百度搜一下它是怎么计算类别的损失的。</p>\n<h2 id=\"如何推理\">如何推理</h2>\n<p>验证精度和推理测试集的时候都需要用到推理，推理也是分epoch进行的，推理时要把自动梯度关掉。在训练的代码中有一个细节是torch.max()函数不仅返回的是最大值，还有它的index，我们所需要的主要是它的index。</p>\n<pre><code class=\"language-python\">net.load_state_dict(torch.load('./net.ckpt'))\nnet.eval()\ntest_labels = []\nwith torch.no_grad():\n    for test_x in test_loader:\n        test_x = test_x.to(device)\n        output = net(test_x)\n        for label in torch.max(output, 1)[1]:\n#             print('label:',)\n            test_labels.append(num2label[label.item()])\n</code></pre>\n<h2 id=\"总结\">总结</h2>\n<p>很多看似简单的代码其实包含了很多理论知识，可以花个一两天的时间把这些代码好好理一理，观察一下每行代码的输出形式是什么样的。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "前言",
+      "id": "前言"
+    },
+    {
+      "level": 2,
+      "text": "组织数据集",
+      "id": "组织数据集"
+    },
+    {
+      "level": 2,
+      "text": "label的格式",
+      "id": "label的格式"
+    },
+    {
+      "level": 2,
+      "text": "网络调整",
+      "id": "网络调整"
+    },
+    {
+      "level": 2,
+      "text": "损失函数",
+      "id": "损失函数"
+    },
+    {
+      "level": 2,
+      "text": "如何推理",
+      "id": "如何推理"
+    },
+    {
+      "level": 1,
+      "text": "print('label:',)",
+      "id": "printlabel"
+    },
+    {
+      "level": 2,
+      "text": "总结",
+      "id": "总结"
+    }
+  ],
+  "hasMath": false
+}

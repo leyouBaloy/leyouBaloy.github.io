@@ -1,0 +1,36 @@
+{
+  "title": "jupyter打开项目文件夹",
+  "date": "2021-01-19T17:52:50.000Z",
+  "updatedAt": "2021-01-19T17:52:50.000Z",
+  "file": "jupyter打开项目文件夹.md",
+  "slug": "3e721cb0",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 255,
+  "readingTime": 1,
+  "body": "#### 一.添加环境变量\n\n直接在windows里面搜索“查看高级系统设置”，选择<高级>,<环境变量>，点开<path>，以下三行填入其中：\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-2.png)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image.png)\n\n然后点确定。  \n在我的电脑里<环境变量>和<系统变量>里面都有path，我也不知道该填哪个，索性把两个都填上了，这三个变量我觉得应该也有多余的，反正这个东西我是搞不太清楚的，只是照着网上说的做。\n\n#### 二.打开终端，进入目标文件夹，运行jupyter notebook这条指令\n\n1.打开cmd之后cd进目标文件夹。  \n2.在目标文件夹里用git终端（需要安装git）  \n3.在目标文件夹按shift+右键，点<在此处打开powershell窗口>  \n以上三种方法打开终端都可以。\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-1.png)\n\n然后jupyter的黑窗口就跳出来了，或者是直接在终端里显示，进入notebook页面里就能看见打开了目标文件夹，还挺方便。\n\n### 2月17日更新\n\n新方法\n\n打开anaconda prompt(按win搜索)\n\n键入jupyter notebook + 目标文件地址\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-3-1024x534.png)",
+  "html": "<h4 id=\"一添加环境变量\">一.添加环境变量</h4>\n<p>直接在windows里面搜索“查看高级系统设置”，选择&lt;高级&gt;,&lt;环境变量&gt;，点开<path>，以下三行填入其中：</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>然后点确定。<br>\n在我的电脑里&lt;环境变量&gt;和&lt;系统变量&gt;里面都有path，我也不知道该填哪个，索性把两个都填上了，这三个变量我觉得应该也有多余的，反正这个东西我是搞不太清楚的，只是照着网上说的做。</p>\n<h4 id=\"二打开终端进入目标文件夹运行jupyter-notebook这条指令\">二.打开终端，进入目标文件夹，运行jupyter notebook这条指令</h4>\n<p>1.打开cmd之后cd进目标文件夹。<br>\n2.在目标文件夹里用git终端（需要安装git）<br>\n3.在目标文件夹按shift+右键，点&lt;在此处打开powershell窗口&gt;<br>\n以上三种方法打开终端都可以。</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-1.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>然后jupyter的黑窗口就跳出来了，或者是直接在终端里显示，进入notebook页面里就能看见打开了目标文件夹，还挺方便。</p>\n<h3 id=\"2月17日更新\">2月17日更新</h3>\n<p>新方法</p>\n<p>打开anaconda prompt(按win搜索)</p>\n<p>键入jupyter notebook + 目标文件地址</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/02/image-3-1024x534.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n",
+  "headings": [
+    {
+      "level": 4,
+      "text": "一.添加环境变量",
+      "id": "一添加环境变量"
+    },
+    {
+      "level": 4,
+      "text": "二.打开终端，进入目标文件夹，运行jupyter notebook这条指令",
+      "id": "二打开终端进入目标文件夹运行jupyter-notebook这条指令"
+    },
+    {
+      "level": 3,
+      "text": "2月17日更新",
+      "id": "2月17日更新"
+    }
+  ],
+  "hasMath": false
+}

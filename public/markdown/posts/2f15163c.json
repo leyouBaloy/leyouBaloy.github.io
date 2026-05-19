@@ -1,0 +1,56 @@
+{
+  "title": "自动发布博客",
+  "date": "2026-03-11T14:22:25.000Z",
+  "updatedAt": "2026-03-11T14:22:25.000Z",
+  "file": "自动发布博客.md",
+  "slug": "2f15163c",
+  "categories": [
+    "技术教程"
+  ],
+  "tags": [
+    "技术教程"
+  ],
+  "img": "",
+  "wordCount": 330,
+  "readingTime": 1,
+  "body": "# 用 AI Skills 实现博客自动发布 🚀\n\n> 🤖 **本文由 AI 自动生成并自动发布**\n\n## 前言\n\n今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。\n\n## 什么是 Skills？\n\nSkills (技能) 是 OpenClaw 的扩展机制，让 AI 能够执行特定领域的任务。比如这个 `imbailey_blog` skill，就是专门为博客发布而设计的。\n\n## 核心功能\n\n- 📝 **自动创建文章** - 只需提供标题，AI 自动生成 Markdown 文件\n- 🔄 **自动提交发布** - 写完文章后自动 git add → commit → push\n- 🤖 **全程无需人工干预** - 从写作到发布一条龙服务\n\n## 工作流程\n\n1. 用户向 AI 发送写作需求\n2. AI 根据 skill 指引克隆仓库、安装依赖\n3. 执行 `npm run newp <标题>` 创建新文章\n4. AI 撰写文章内容\n5. 自动提交并推送到 GitHub\n\n## 适用场景\n\n- 快速记录技术笔记\n- 自动同步 AI 生成的内容到博客\n- 定时批量发布文章\n\n## 总结\n\n有了 AI + Skills 的组合，博客写作变得前所未有的简单！你需要做的，只是告诉 AI 想写什么主题 🎉\n\n---\n\n*本文由 OpenClaw AI Agent 自动生成并发布*\n",
+  "html": "<h1 id=\"用-ai-skills-实现博客自动发布\">用 AI Skills 实现博客自动发布 🚀</h1>\n<blockquote>\n<p>🤖 <strong>本文由 AI 自动生成并自动发布</strong></p>\n</blockquote>\n<h2 id=\"前言\">前言</h2>\n<p>今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。</p>\n<h2 id=\"什么是-skills\">什么是 Skills？</h2>\n<p>Skills (技能) 是 OpenClaw 的扩展机制，让 AI 能够执行特定领域的任务。比如这个 <code>imbailey_blog</code> skill，就是专门为博客发布而设计的。</p>\n<h2 id=\"核心功能\">核心功能</h2>\n<ul>\n<li>📝 <strong>自动创建文章</strong> - 只需提供标题，AI 自动生成 Markdown 文件</li>\n<li>🔄 <strong>自动提交发布</strong> - 写完文章后自动 git add → commit → push</li>\n<li>🤖 <strong>全程无需人工干预</strong> - 从写作到发布一条龙服务</li>\n</ul>\n<h2 id=\"工作流程\">工作流程</h2>\n<ol>\n<li>用户向 AI 发送写作需求</li>\n<li>AI 根据 skill 指引克隆仓库、安装依赖</li>\n<li>执行 <code>npm run newp &lt;标题&gt;</code> 创建新文章</li>\n<li>AI 撰写文章内容</li>\n<li>自动提交并推送到 GitHub</li>\n</ol>\n<h2 id=\"适用场景\">适用场景</h2>\n<ul>\n<li>快速记录技术笔记</li>\n<li>自动同步 AI 生成的内容到博客</li>\n<li>定时批量发布文章</li>\n</ul>\n<h2 id=\"总结\">总结</h2>\n<p>有了 AI + Skills 的组合，博客写作变得前所未有的简单！你需要做的，只是告诉 AI 想写什么主题 🎉</p>\n<hr>\n<p><em>本文由 OpenClaw AI Agent 自动生成并发布</em></p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "用 AI Skills 实现博客自动发布 🚀",
+      "id": "用-ai-skills-实现博客自动发布"
+    },
+    {
+      "level": 2,
+      "text": "前言",
+      "id": "前言"
+    },
+    {
+      "level": 2,
+      "text": "什么是 Skills？",
+      "id": "什么是-skills"
+    },
+    {
+      "level": 2,
+      "text": "核心功能",
+      "id": "核心功能"
+    },
+    {
+      "level": 2,
+      "text": "工作流程",
+      "id": "工作流程"
+    },
+    {
+      "level": 2,
+      "text": "适用场景",
+      "id": "适用场景"
+    },
+    {
+      "level": 2,
+      "text": "总结",
+      "id": "总结"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,46 @@
+{
+  "title": "二叉树的前中后序遍历",
+  "date": "2022-03-07T08:33:28.000Z",
+  "updatedAt": "2022-03-07T08:33:28.000Z",
+  "file": "二叉树的前中后序遍历.md",
+  "slug": "1cf25f8c",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 180,
+  "readingTime": 1,
+  "body": "## 题目\n\n> 前序遍历：https://leetcode-cn.com/problems/binary-tree-preorder-traversal/\n>\n> 中序遍历：https://leetcode-cn.com/problems/binary-tree-inorder-traversal/\n>\n> 后序遍历：https://leetcode-cn.com/problems/binary-tree-postorder-traversal/\n\n树的定义：\n\n```c++\n/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\n```\n\n\n\n## 题解\n\n### 前序遍历\n\n前序遍历的顺序是：根 -> 左 -> 右。（这个顺序一开始还被我记错了qwq）\n\n用递归的方式很简单：\n\n```c++\nclass Solution {\npublic:\n    void preorder(TreeNode *root, vector<int> &res){\n        if (root == nullptr){\n            return;\n        }\n        res.push_back(root->val);\n        preorder(root->left, res);\n        preorder(root->right, res);\n    }\n    vector<int> preorderTraversal(TreeNode* root) {\n        vector<int> res;\n        preorder(root, res);\n        return res;\n    }\n};\n```\n\n递归的本质是使用了栈。如果不想用递归，也可以显式地使用栈来做。但是看懂了递归后再看这种方法会觉得脑子疼。\n\n### 中序遍历\n\n改一下输出顺序就可以啦。\n\n```c++\ninorder(node->left, res);\nres.push_back(node->val);\ninorder(node->right, res);\n```\n\n### 后序遍历\n\n```c++\npostorder(node->left, res);\npostorder(node->right, res);\nres.push_back(node->val);\n```\n\n话说今天是思美节诶，图书馆的女生打扮的都好漂亮呀～祝节日快乐！\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<blockquote>\n<p>前序遍历：<a href=\"https://leetcode-cn.com/problems/binary-tree-preorder-traversal/\">https://leetcode-cn.com/problems/binary-tree-preorder-traversal/</a></p>\n<p>中序遍历：<a href=\"https://leetcode-cn.com/problems/binary-tree-inorder-traversal/\">https://leetcode-cn.com/problems/binary-tree-inorder-traversal/</a></p>\n<p>后序遍历：<a href=\"https://leetcode-cn.com/problems/binary-tree-postorder-traversal/\">https://leetcode-cn.com/problems/binary-tree-postorder-traversal/</a></p>\n</blockquote>\n<p>树的定义：</p>\n<pre><code class=\"language-c++\">/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\n</code></pre>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"前序遍历\">前序遍历</h3>\n<p>前序遍历的顺序是：根 -&gt; 左 -&gt; 右。（这个顺序一开始还被我记错了qwq）</p>\n<p>用递归的方式很简单：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    void preorder(TreeNode *root, vector&lt;int&gt; &amp;res){\n        if (root == nullptr){\n            return;\n        }\n        res.push_back(root-&gt;val);\n        preorder(root-&gt;left, res);\n        preorder(root-&gt;right, res);\n    }\n    vector&lt;int&gt; preorderTraversal(TreeNode* root) {\n        vector&lt;int&gt; res;\n        preorder(root, res);\n        return res;\n    }\n};\n</code></pre>\n<p>递归的本质是使用了栈。如果不想用递归，也可以显式地使用栈来做。但是看懂了递归后再看这种方法会觉得脑子疼。</p>\n<h3 id=\"中序遍历\">中序遍历</h3>\n<p>改一下输出顺序就可以啦。</p>\n<pre><code class=\"language-c++\">inorder(node-&gt;left, res);\nres.push_back(node-&gt;val);\ninorder(node-&gt;right, res);\n</code></pre>\n<h3 id=\"后序遍历\">后序遍历</h3>\n<pre><code class=\"language-c++\">postorder(node-&gt;left, res);\npostorder(node-&gt;right, res);\nres.push_back(node-&gt;val);\n</code></pre>\n<p>话说今天是思美节诶，图书馆的女生打扮的都好漂亮呀～祝节日快乐！</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "前序遍历",
+      "id": "前序遍历"
+    },
+    {
+      "level": 3,
+      "text": "中序遍历",
+      "id": "中序遍历"
+    },
+    {
+      "level": 3,
+      "text": "后序遍历",
+      "id": "后序遍历"
+    }
+  ],
+  "hasMath": false
+}

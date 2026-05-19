@@ -1,0 +1,38 @@
+{
+  "title": "Linux输出重定向以及crontab的坑",
+  "date": "2022-07-13T03:14:42.000Z",
+  "updatedAt": "2022-07-13T03:14:42.000Z",
+  "file": "Linux输出重定向以及crontab的坑.md",
+  "slug": "78bcbc75",
+  "categories": [
+    "技能分享",
+    "笔记"
+  ],
+  "tags": [
+    "技能分享",
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 347,
+  "readingTime": 1,
+  "body": "有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑：\n\n## 编辑crontab\n\n首先执行\n\n```shell\ncrontab -e\n```\n\n编辑cron表达式，注意：每个用户都有自己的crontab，如果想省事的话建议直接\n\n```shell\nsudo crontab -e\n```\n\n只使用root用户的就好了。\n\n## 写cron表达式\n\n一行一个。一般自己在执行脚本的时候在终端里打的是`python 脚本.py`，但是在cron里可能会有问题。最好把所有的路径都换成绝对路径，比如`/usr/bin/python3.8 /home/ubuntu/脚本.py`，前面加上时间（比如说每天23点执行），完整如下：\n\n```shell\n0 23 * * * /usr/bin/python3.8 /home/ubuntu/脚本.py\n```\n\n注意：有的时候python脚本里会打开其它文件（存在其它文件的相对路径），这个时候必须得cd到当前目录下才可以正确执行，改成如下：\n\n```shell\n0 23 * * * cd /home/ubuntu/ && /usr/bin/python3.8 /home/ubuntu/脚本.py\n```\n\n## 输出重定向\n\n有几个符号要认识一下：\n\n```\n> file      // 标准输出重定向到文件-覆盖\n>>file      // 标准输出重定向到文件-追加\n2>file      // 标准错误重定向到文件-覆盖\n2>>file     // 标准错误重定向到文件-追加\n2>/dev/null // 标准错误重定向到回收站\n&>file      // 标准输出和标准错误重定向到文件-覆盖\n>>file 2>&1 // 标准输出和标准错误重定向到文件-追加\n```\n\n偷懒的话，就用最后一个就可以啦。把所有的输出（包括报错）都输出到自己定义的日志文件里，这个很实用，因为你的脚本一旦出现问题，查日志是很好的追溯手段。所以表达式又复杂一点：\n\n```shell\n0 23 * * * cd /home/ubuntu/ && /usr/bin/python3.8 /home/ubuntu/脚本.py >> /home/ubuntu/out.log 2>&1\n```\n\n最后还可以加一个`&`，表示后台执行：\n\n```shell\n0 23 * * * cd /home/ubuntu/ && /usr/bin/python3.8 /home/ubuntu/脚本.py >> /home/ubuntu/out.log 2>&1 &\n```\n\n\n\n",
+  "html": "<p>有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑：</p>\n<h2 id=\"编辑crontab\">编辑crontab</h2>\n<p>首先执行</p>\n<pre><code class=\"language-shell\">crontab -e\n</code></pre>\n<p>编辑cron表达式，注意：每个用户都有自己的crontab，如果想省事的话建议直接</p>\n<pre><code class=\"language-shell\">sudo crontab -e\n</code></pre>\n<p>只使用root用户的就好了。</p>\n<h2 id=\"写cron表达式\">写cron表达式</h2>\n<p>一行一个。一般自己在执行脚本的时候在终端里打的是<code>python 脚本.py</code>，但是在cron里可能会有问题。最好把所有的路径都换成绝对路径，比如<code>/usr/bin/python3.8 /home/ubuntu/脚本.py</code>，前面加上时间（比如说每天23点执行），完整如下：</p>\n<pre><code class=\"language-shell\">0 23 * * * /usr/bin/python3.8 /home/ubuntu/脚本.py\n</code></pre>\n<p>注意：有的时候python脚本里会打开其它文件（存在其它文件的相对路径），这个时候必须得cd到当前目录下才可以正确执行，改成如下：</p>\n<pre><code class=\"language-shell\">0 23 * * * cd /home/ubuntu/ &amp;&amp; /usr/bin/python3.8 /home/ubuntu/脚本.py\n</code></pre>\n<h2 id=\"输出重定向\">输出重定向</h2>\n<p>有几个符号要认识一下：</p>\n<pre><code class=\"language-text\">&gt; file      // 标准输出重定向到文件-覆盖\n&gt;&gt;file      // 标准输出重定向到文件-追加\n2&gt;file      // 标准错误重定向到文件-覆盖\n2&gt;&gt;file     // 标准错误重定向到文件-追加\n2&gt;/dev/null // 标准错误重定向到回收站\n&amp;&gt;file      // 标准输出和标准错误重定向到文件-覆盖\n&gt;&gt;file 2&gt;&amp;1 // 标准输出和标准错误重定向到文件-追加\n</code></pre>\n<p>偷懒的话，就用最后一个就可以啦。把所有的输出（包括报错）都输出到自己定义的日志文件里，这个很实用，因为你的脚本一旦出现问题，查日志是很好的追溯手段。所以表达式又复杂一点：</p>\n<pre><code class=\"language-shell\">0 23 * * * cd /home/ubuntu/ &amp;&amp; /usr/bin/python3.8 /home/ubuntu/脚本.py &gt;&gt; /home/ubuntu/out.log 2&gt;&amp;1\n</code></pre>\n<p>最后还可以加一个<code>&amp;</code>，表示后台执行：</p>\n<pre><code class=\"language-shell\">0 23 * * * cd /home/ubuntu/ &amp;&amp; /usr/bin/python3.8 /home/ubuntu/脚本.py &gt;&gt; /home/ubuntu/out.log 2&gt;&amp;1 &amp;\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "编辑crontab",
+      "id": "编辑crontab"
+    },
+    {
+      "level": 2,
+      "text": "写cron表达式",
+      "id": "写cron表达式"
+    },
+    {
+      "level": 2,
+      "text": "输出重定向",
+      "id": "输出重定向"
+    }
+  ],
+  "hasMath": false
+}

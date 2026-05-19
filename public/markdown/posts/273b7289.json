@@ -1,0 +1,41 @@
+{
+  "title": "Leetcode977:有序数组的平方——双指针",
+  "date": "2022-03-23T12:35:46.000Z",
+  "updatedAt": "2022-03-23T12:35:46.000Z",
+  "file": "Leetcode977_有序数组的平方——双指针.md",
+  "slug": "273b7289",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 210,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/squares-of-a-sorted-array/\n\n## 题解\n\n### 先平方再排序\n\n```c++\nclass Solution {\npublic:\n    vector<int> sortedSquares(vector<int>& nums) {\n        for(int i=0;i<nums.size();i++){\n            nums[i] = nums[i]*nums[i];\n        }\n        sort(nums.begin(),nums.end());\n        return nums;\n\n    }\n};\n```\n\n没啥好说的，打败40%的用户😂\n\n### 双指针\n\n不难发现，一个一般的nums数组前面是负数后面是正数，nums数组平方后的最大值一是第一个元素或最后一个元素。所以在第一位和最后一位分别放两个指针`i`和`j`。\n\n判断`if nums[i]*nums[i] > nums[j]*nums[j]`，则把`nums[i]*nums[i]`放到`res`数组最后一位，否则把`nums[j]*nums[j]`放到最后一位。然后往前移动`i`，或者往后移动`j`。\n\n这里有个动画：[977.有序数组的平方.gif](https://code-thinking.cdn.bcebos.com/gifs/977.有序数组的平方.gif)\n\n代码：\n\n```c++\nclass Solution {\npublic:\n    vector<int> sortedSquares(vector<int>& nums) {\n        int i = 0;\n        int j = nums.size()-1;\n        int k = j;\n        vector<int> res(nums.size());\n        while(i<=j){\n            if(nums[i]*nums[i] <= nums[j]*nums[j]){\n                res[k--] = nums[j]*nums[j];\n                j--;\n            }else{\n                res[k--] = nums[i]*nums[i];\n                i++;\n            }\n        }\n    return res;\n    }\n};\n```\n\n细节：\n\n* 因为可能`i`和`j`所指的元素相等，所以判断里要加个等于\n* while循环停止的条件，可以是`i<=j`，或许也可以是`k>=0`  ?\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/squares-of-a-sorted-array/\">https://leetcode-cn.com/problems/squares-of-a-sorted-array/</a></p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"先平方再排序\">先平方再排序</h3>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) {\n        for(int i=0;i&lt;nums.size();i++){\n            nums[i] = nums[i]*nums[i];\n        }\n        sort(nums.begin(),nums.end());\n        return nums;\n\n    }\n};\n</code></pre>\n<p>没啥好说的，打败40%的用户😂</p>\n<h3 id=\"双指针\">双指针</h3>\n<p>不难发现，一个一般的nums数组前面是负数后面是正数，nums数组平方后的最大值一是第一个元素或最后一个元素。所以在第一位和最后一位分别放两个指针<code>i</code>和<code>j</code>。</p>\n<p>判断<code>if nums[i]*nums[i] &gt; nums[j]*nums[j]</code>，则把<code>nums[i]*nums[i]</code>放到<code>res</code>数组最后一位，否则把<code>nums[j]*nums[j]</code>放到最后一位。然后往前移动<code>i</code>，或者往后移动<code>j</code>。</p>\n<p>这里有个动画：<a href=\"https://code-thinking.cdn.bcebos.com/gifs/977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.gif\">977.有序数组的平方.gif</a></p>\n<p>代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) {\n        int i = 0;\n        int j = nums.size()-1;\n        int k = j;\n        vector&lt;int&gt; res(nums.size());\n        while(i&lt;=j){\n            if(nums[i]*nums[i] &lt;= nums[j]*nums[j]){\n                res[k--] = nums[j]*nums[j];\n                j--;\n            }else{\n                res[k--] = nums[i]*nums[i];\n                i++;\n            }\n        }\n    return res;\n    }\n};\n</code></pre>\n<p>细节：</p>\n<ul>\n<li>因为可能<code>i</code>和<code>j</code>所指的元素相等，所以判断里要加个等于</li>\n<li>while循环停止的条件，可以是<code>i&lt;=j</code>，或许也可以是<code>k&gt;=0</code>  ?</li>\n</ul>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "先平方再排序",
+      "id": "先平方再排序"
+    },
+    {
+      "level": 3,
+      "text": "双指针",
+      "id": "双指针"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,26 @@
+{
+  "title": "每日一题--a到z26个字母循环输出",
+  "date": "2020-10-10T23:07:49.000Z",
+  "updatedAt": "2020-10-10T23:07:49.000Z",
+  "file": "每日一题--a到z26个字母循环输出.md",
+  "slug": "3ad3af40",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 85,
+  "readingTime": 1,
+  "body": "题目描述】\n\n       根据样例在屏幕上输出一个平行四边形，如果每行字母超过了z，则从a重新开始。\n\n【输入】\n\n       一行，包含一个整数n（2<n≤26）。\n\n【输出】\n\n       见样例。\n\nFor example:\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/10/image.png)\n\n## 答案\n\n```\n#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n    int i,j,k,n;\n    char ch;\n    cin >> n;\n    for(i=0;i<n;i++)\n    {\n        for(k=0;k<i;k++)\n        {\n            cout<<\" \";\n        }\n        for(j = 0; j<n;j++)\n        {\n            ch = 'a'+ (j + i)%26;\n\n            cout << ch;\n\n        }\n        cout << endl;\n    }\n    return 0;\n}\n```\n\nch = 'a'+ (j + i)%26; 这段代码很有味道，控制了首个字母，以及循环。",
+  "html": "<p>题目描述】</p>\n<p>根据样例在屏幕上输出一个平行四边形，如果每行字母超过了z，则从a重新开始。</p>\n<p>【输入】</p>\n<p>一行，包含一个整数n（2&lt;n≤26）。</p>\n<p>【输出】</p>\n<p>见样例。</p>\n<p>For example:</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/10/image.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<h2 id=\"答案\">答案</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n\nusing namespace std;\n\nint main()\n{\n    int i,j,k,n;\n    char ch;\n    cin &gt;&gt; n;\n    for(i=0;i&lt;n;i++)\n    {\n        for(k=0;k&lt;i;k++)\n        {\n            cout&lt;&lt;&quot; &quot;;\n        }\n        for(j = 0; j&lt;n;j++)\n        {\n            ch = 'a'+ (j + i)%26;\n\n            cout &lt;&lt; ch;\n\n        }\n        cout &lt;&lt; endl;\n    }\n    return 0;\n}\n</code></pre>\n<p>ch = ‘a’+ (j + i)%26; 这段代码很有味道，控制了首个字母，以及循环。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "答案",
+      "id": "答案"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,0 +1,43 @@
+{
+  "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
+  "date": "2022-04-20T11:01:29.000Z",
+  "updatedAt": "2022-04-20T11:01:29.000Z",
+  "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
+  "slug": "519b05f8",
+  "categories": [
+    "刷题",
+    "笔记"
+  ],
+  "tags": [
+    "刷题",
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 437,
+  "readingTime": 2,
+  "body": "##  题目\n\n**题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？**\n\n初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法：\n\n### 第一步：快速排斥实验\n\n**如果两线段在x，y的投影都不重合，是不可能会相交的。**换一种说法，就是以两条线段为对角线画矩形，两矩形如果没有重合的地方，那么两线段也一定不相交。\n\n假设给出的四个点为`Ax1, Ay1,Ax2,Ay2,Bx1,By1,Bx2,By2`，代码如下：\n\n```c++\nmax(Ax1,Ax2)>=min(Bx1,Bx2)&&min(Ax1,Ax2)<=max(Bx1,Bx2)//判断x\nmax(Ay1,Ay2)>=min(By1,By2)&&min(Ay1,Ay2)<=max(By1,By2)//判断y\n```\n\n{{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420192637246.png\" >}}\n\n\n\n除此之外，这一步还能排除一个特殊情况：共线不相交\n\n{{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420192903407.png\" >}}\n\n\n\n## 第二步：跨立实验\n\n先了解一个线性代数知识：叉积\n\n向量A和向量B叉积，如果AxB>0，那么B在A的逆时针方向，如果AxB<0，那么B在A的顺时针方向。如果AxB=0，那么B与A共线。\n\n图我就不画了，很好理解，`AxB = a*b*sin(theta)`\n\n把端点移到原点，向量`(x1,y1)`与向量 `（x2，y2）`的叉积为 `x1*y2-x2*y1`\n\n{{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420194457870.png\" >}}\n\n然后对于两直线相交的情况，我们发现它有一个性质，就是向量A1B1叉乘向量A1A2的符号一定与向量A1B2叉乘向量A1A2的符号相反。为了方便写代码，我们把其中一个端点移到零点。\n\n{{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420194742929.png\" >}}\n\n代码：\n\n```c++\nif(\n            ( (Bx1-Ax1)*(Ay2-Ay1)-(By1-Ay1)*(Ax2-Ax1) ) *          //判断B是否跨过A\n            ( (Bx2-Ax1)*(Ay2-Ay1)-(By2-Ay1)*(Ax2-Ax1) ) <=0 &&\n            ( (Ax1-Bx1)*(By2-By1)-(Ay1-By1)*(Bx2-Bx1) ) *          //判断A是否跨过B\n            ( (Ax2-Bx1)*(By2-By1)-(Ay2-By1)*(Bx2-Bx1) ) <=0\n          )\n\n```\n\n还有一种特殊的情况，一条线段的端点在另一条线段上，这样的话A1B1与A1A2的叉积为0，我们只要把判断条件加一个等于号就行了。\n\n{{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420195012826.png\" >}}\n\n\n\n## 完整代码\n\n```C++\nbool judge(int Ax1,int Ay1,int Ax2,int Ay2,int Bx1,int By1,int Bx2,int By2)\n{\n    if(\n       ( max(Ax1,Ax2)>=min(Bx1,Bx2)&&min(Ax1,Ax2)<=max(Bx1,Bx2) )&&  //判断x轴投影\n       ( max(Ay1,Ay2)>=min(By1,By2)&&min(Ay1,Ay2)<=max(By1,By2) )    //判断y轴投影\n      )\n    {\n        if(\n            ( (Bx1-Ax1)*(Ay2-Ay1)-(By1-Ay1)*(Ax2-Ax1) ) *          //判断B是否跨过A\n            ( (Bx2-Ax1)*(Ay2-Ay1)-(By2-Ay1)*(Ax2-Ax1) ) <=0 &&\n            ( (Ax1-Bx1)*(By2-By1)-(Ay1-By1)*(Bx2-Bx1) ) *          //判断A是否跨过B\n            ( (Ax2-Bx1)*(By2-By1)-(Ay2-By1)*(Bx2-Bx1) ) <=0\n          )\n        {\n            return 1;\n        }\n        else\n            return 0;\n    }\n    else\n        return 0;\n}\n\n```\n\n\n\n> 参考资料：https://blog.csdn.net/NEFU_kadia/article/details/104462906\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><strong>题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？</strong></p>\n<p>初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法：</p>\n<h3 id=\"第一步快速排斥实验\">第一步：快速排斥实验</h3>\n<p>**如果两线段在x，y的投影都不重合，是不可能会相交的。**换一种说法，就是以两条线段为对角线画矩形，两矩形如果没有重合的地方，那么两线段也一定不相交。</p>\n<p>假设给出的四个点为<code>Ax1, Ay1,Ax2,Ay2,Bx1,By1,Bx2,By2</code>，代码如下：</p>\n<pre><code class=\"language-c++\">max(Ax1,Ax2)&gt;=min(Bx1,Bx2)&amp;&amp;min(Ax1,Ax2)&lt;=max(Bx1,Bx2)//判断x\nmax(Ay1,Ay2)&gt;=min(By1,By2)&amp;&amp;min(Ay1,Ay2)&lt;=max(By1,By2)//判断y\n</code></pre>\n<p>{{&lt; figure src=“<a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420192637246.png\">https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420192637246.png</a>” &gt;}}</p>\n<p>除此之外，这一步还能排除一个特殊情况：共线不相交</p>\n<p>{{&lt; figure src=“<a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420192903407.png\">https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420192903407.png</a>” &gt;}}</p>\n<h2 id=\"第二步跨立实验\">第二步：跨立实验</h2>\n<p>先了解一个线性代数知识：叉积</p>\n<p>向量A和向量B叉积，如果AxB&gt;0，那么B在A的逆时针方向，如果AxB&lt;0，那么B在A的顺时针方向。如果AxB=0，那么B与A共线。</p>\n<p>图我就不画了，很好理解，<code>AxB = a*b*sin(theta)</code></p>\n<p>把端点移到原点，向量<code>(x1,y1)</code>与向量 <code>（x2，y2）</code>的叉积为 <code>x1*y2-x2*y1</code></p>\n<p>{{&lt; figure src=“<a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420194457870.png\">https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420194457870.png</a>” &gt;}}</p>\n<p>然后对于两直线相交的情况，我们发现它有一个性质，就是向量A1B1叉乘向量A1A2的符号一定与向量A1B2叉乘向量A1A2的符号相反。为了方便写代码，我们把其中一个端点移到零点。</p>\n<p>{{&lt; figure src=“<a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420194742929.png\">https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420194742929.png</a>” &gt;}}</p>\n<p>代码：</p>\n<pre><code class=\"language-c++\">if(\n            ( (Bx1-Ax1)*(Ay2-Ay1)-(By1-Ay1)*(Ax2-Ax1) ) *          //判断B是否跨过A\n            ( (Bx2-Ax1)*(Ay2-Ay1)-(By2-Ay1)*(Ax2-Ax1) ) &lt;=0 &amp;&amp;\n            ( (Ax1-Bx1)*(By2-By1)-(Ay1-By1)*(Bx2-Bx1) ) *          //判断A是否跨过B\n            ( (Ax2-Bx1)*(By2-By1)-(Ay2-By1)*(Bx2-Bx1) ) &lt;=0\n          )\n\n</code></pre>\n<p>还有一种特殊的情况，一条线段的端点在另一条线段上，这样的话A1B1与A1A2的叉积为0，我们只要把判断条件加一个等于号就行了。</p>\n<p>{{&lt; figure src=“<a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420195012826.png\">https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220420195012826.png</a>” &gt;}}</p>\n<h2 id=\"完整代码\">完整代码</h2>\n<pre><code class=\"language-C++\">bool judge(int Ax1,int Ay1,int Ax2,int Ay2,int Bx1,int By1,int Bx2,int By2)\n{\n    if(\n       ( max(Ax1,Ax2)&gt;=min(Bx1,Bx2)&amp;&amp;min(Ax1,Ax2)&lt;=max(Bx1,Bx2) )&amp;&amp;  //判断x轴投影\n       ( max(Ay1,Ay2)&gt;=min(By1,By2)&amp;&amp;min(Ay1,Ay2)&lt;=max(By1,By2) )    //判断y轴投影\n      )\n    {\n        if(\n            ( (Bx1-Ax1)*(Ay2-Ay1)-(By1-Ay1)*(Ax2-Ax1) ) *          //判断B是否跨过A\n            ( (Bx2-Ax1)*(Ay2-Ay1)-(By2-Ay1)*(Ax2-Ax1) ) &lt;=0 &amp;&amp;\n            ( (Ax1-Bx1)*(By2-By1)-(Ay1-By1)*(Bx2-Bx1) ) *          //判断A是否跨过B\n            ( (Ax2-Bx1)*(By2-By1)-(Ay2-By1)*(Bx2-Bx1) ) &lt;=0\n          )\n        {\n            return 1;\n        }\n        else\n            return 0;\n    }\n    else\n        return 0;\n}\n\n</code></pre>\n<blockquote>\n<p>参考资料：<a href=\"https://blog.csdn.net/NEFU_kadia/article/details/104462906\">https://blog.csdn.net/NEFU_kadia/article/details/104462906</a></p>\n</blockquote>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 3,
+      "text": "第一步：快速排斥实验",
+      "id": "第一步快速排斥实验"
+    },
+    {
+      "level": 2,
+      "text": "第二步：跨立实验",
+      "id": "第二步跨立实验"
+    },
+    {
+      "level": 2,
+      "text": "完整代码",
+      "id": "完整代码"
+    }
+  ],
+  "hasMath": false
+}

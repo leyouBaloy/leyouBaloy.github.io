@@ -1,0 +1,36 @@
+{
+  "title": "Roboflow+colab优雅地训练yolov5模型",
+  "date": "2022-03-19T05:37:49.000Z",
+  "updatedAt": "2022-03-19T05:37:49.000Z",
+  "file": "roboflow+colab优雅地训练yolov5模型.md",
+  "slug": "dbb064f5",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 293,
+  "readingTime": 1,
+  "body": "## roboflow\n\nroboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。\n\n网址：https://roboflow.com/\n\n提示：\n\n* 可以免费使用\n* 需要挂代理\n* 套餐一定要选public，选择private后导出数据集会很麻烦\n\n## colab\n\n谷歌提供的计算平台\n\n优点：\n\n* 提供免费的tesla k80算力\n* 可以很方便的上传下载文件，还可挂载谷歌云盘\n* 用的人多，环境配置起来方便\n* 网速不错，git clone,pip install都麻利的\n\n## 训练yolov5模型\n\n完全在云端操作，你只需要一个浏览器就行了。\n\n1. 在roboflow上标好数据，点export导出，不用下载，只要复制这段代码就可以了\n\n![image-20220319133335481](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220319133335481.png)\n\n2. 打开https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb\n\n替换你的下载代码，点`运行全部单元格`\n\n3. 然后你就什么都不用管了，这个脚本会帮你训练、评估效果，最后把权重下载下来。\n\n\n\n是不是非常优雅～\n",
+  "html": "<h2 id=\"roboflow\">roboflow</h2>\n<p>roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。</p>\n<p>网址：<a href=\"https://roboflow.com/\">https://roboflow.com/</a></p>\n<p>提示：</p>\n<ul>\n<li>可以免费使用</li>\n<li>需要挂代理</li>\n<li>套餐一定要选public，选择private后导出数据集会很麻烦</li>\n</ul>\n<h2 id=\"colab\">colab</h2>\n<p>谷歌提供的计算平台</p>\n<p>优点：</p>\n<ul>\n<li>提供免费的tesla k80算力</li>\n<li>可以很方便的上传下载文件，还可挂载谷歌云盘</li>\n<li>用的人多，环境配置起来方便</li>\n<li>网速不错，git clone,pip install都麻利的</li>\n</ul>\n<h2 id=\"训练yolov5模型\">训练yolov5模型</h2>\n<p>完全在云端操作，你只需要一个浏览器就行了。</p>\n<ol>\n<li>在roboflow上标好数据，点export导出，不用下载，只要复制这段代码就可以了</li>\n</ol>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/image-20220319133335481.png\" alt=\"image-20220319133335481\" loading=\"lazy\" decoding=\"async\"></p>\n<ol start=\"2\">\n<li>打开<a href=\"https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb\">https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb</a></li>\n</ol>\n<p>替换你的下载代码，点<code>运行全部单元格</code></p>\n<ol start=\"3\">\n<li>然后你就什么都不用管了，这个脚本会帮你训练、评估效果，最后把权重下载下来。</li>\n</ol>\n<p>是不是非常优雅～</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "roboflow",
+      "id": "roboflow"
+    },
+    {
+      "level": 2,
+      "text": "colab",
+      "id": "colab"
+    },
+    {
+      "level": 2,
+      "text": "训练yolov5模型",
+      "id": "训练yolov5模型"
+    }
+  ],
+  "hasMath": false
+}

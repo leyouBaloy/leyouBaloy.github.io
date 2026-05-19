@@ -1,0 +1,36 @@
+{
+  "title": "Mac上自动连接校园网的脚本",
+  "date": "2021-11-24T18:58:03.000Z",
+  "updatedAt": "2021-11-24T18:58:03.000Z",
+  "file": "Mac上自动连接校园网的脚本.md",
+  "slug": "1f902f05",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 299,
+  "readingTime": 1,
+  "body": "## 起因\n\n傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-5.png)\n\nmac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。\n\n## 第一步\n\n从GitHub上下载一段自动连接校园网的python代码，地址：[https://github.com/UPCUnofficial/UPCNet](https://github.com/UPCUnofficial/UPCNet)\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-6.png)\n\n然后解压，修改其中config.py文件。\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-7.png)\n\n在config.py文件下输入学号、密码和运营商编号，然后运行\n\n```\npython3 NetworkAuth.py\n```\n\n运营商对应编号：\n\n```\ndefault -> 校园网\nunicom -> 联通\ncmcc -> 移动\nctcc -> 电信\nlocal -> 校园内网\n```\n\n再用终端cd进入该文件夹，pip install 所依赖的库。\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-8-1024x823.png)\n\n运行代码。(以上所述在readme里都有）\n\n```\npython3 NetworkAuth.py\n```\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-9-1024x666.png)\n\n成功啦！\n\n## 第二步\n\n用文本编辑器创建一个文件，里面打上这行代码：\n\n```\npython 你的路径/NetworkAuth.py\n```\n\n将文件重命名为XXXX.sh\n\n然后右键—>打开方式—>其它—>所有应用程序—>终端\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-10-1024x573.png)\n\n然后把它放在桌面，每次等连上wifi后点一下就能连接校园网啦。[](https://github.com/UPCUnofficial/UPCNet#%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B)",
+  "html": "<h2 id=\"起因\">起因</h2>\n<p>傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-5.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。</p>\n<h2 id=\"第一步\">第一步</h2>\n<p>从GitHub上下载一段自动连接校园网的python代码，地址：<a href=\"https://github.com/UPCUnofficial/UPCNet\">https://github.com/UPCUnofficial/UPCNet</a></p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-6.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>然后解压，修改其中config.py文件。</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-7.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>在config.py文件下输入学号、密码和运营商编号，然后运行</p>\n<pre><code class=\"language-text\">python3 NetworkAuth.py\n</code></pre>\n<p>运营商对应编号：</p>\n<pre><code class=\"language-text\">default -&gt; 校园网\nunicom -&gt; 联通\ncmcc -&gt; 移动\nctcc -&gt; 电信\nlocal -&gt; 校园内网\n</code></pre>\n<p>再用终端cd进入该文件夹，pip install 所依赖的库。</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-8-1024x823.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>运行代码。(以上所述在readme里都有）</p>\n<pre><code class=\"language-text\">python3 NetworkAuth.py\n</code></pre>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-9-1024x666.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>成功啦！</p>\n<h2 id=\"第二步\">第二步</h2>\n<p>用文本编辑器创建一个文件，里面打上这行代码：</p>\n<pre><code class=\"language-text\">python 你的路径/NetworkAuth.py\n</code></pre>\n<p><a href=\"http://xn--XXXX-uh5fz2bv3vuza890cfnwfk5i.sh\">将文件重命名为XXXX.sh</a></p>\n<p>然后右键—&gt;打开方式—&gt;其它—&gt;所有应用程序—&gt;终端</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-10-1024x573.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>然后把它放在桌面，每次等连上wifi后点一下就能连接校园网啦。<a href=\"https://github.com/UPCUnofficial/UPCNet#%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B\"></a></p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "起因",
+      "id": "起因"
+    },
+    {
+      "level": 2,
+      "text": "第一步",
+      "id": "第一步"
+    },
+    {
+      "level": 2,
+      "text": "第二步",
+      "id": "第二步"
+    }
+  ],
+  "hasMath": false
+}

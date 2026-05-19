@@ -1,0 +1,20 @@
+{
+  "title": "selenium爬教务处课表",
+  "date": "2020-11-16T20:45:35.000Z",
+  "updatedAt": "2020-11-16T20:45:35.000Z",
+  "file": "selenium爬教务处课表.md",
+  "slug": "9e2ef618",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 66,
+  "readingTime": 1,
+  "body": "```\nfrom selenium import webdriver\nfrom bs4 import BeautifulSoup\nfrom selenium.webdriver import ActionChains\nimport time\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\ndef wait(xpath,driver):\n    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, xpath)))\n```\n\n```\n#登录：\ndef login(driver):\n\n    id_box = '//*[@id=\"userAccount\"]'\n    wait(id_box,driver)\n\n    driver.find_element_by_xpath(id_box).send_keys('2007010218')\n\n    password_box = '//*[@id=\"userPassword\"]'\n    driver.find_element_by_xpath(password_box).send_keys('2007010218')\n\n    yan_zhen = '//*[@id=\"RANDOMCODE\"]'\n    driver.find_element_by_xpath(yan_zhen).click()\n    time.sleep(5)\n    \n    login_btn = '//*[@id=\"btnSubmit\"]'\n    driver.find_element_by_xpath(login_btn).click()\n    time.sleep(2)\n    \n    ke_biao = '/html/body/div[5]/a[2]/div'\n    driver.find_element_by_xpath(ke_biao).click()\n    time.sleep(2)\n```\n\n```\n#执行\ndriver = webdriver.Chrome()\nurl = 'http://jwxt.upc.edu.cn/'\ndriver.get(url)\ntime.sleep(1)\nlogin(driver)\n\ndriver.get_screenshot_as_file(\"C:\\\\Users\\\\Administrator\\\\Desktop\\\\kb.png\")\ndriver.quit()\n\n\n```\n\n依次执行以上cell，1.打开chrome自动输入账号密码。2.有五秒钟的时间人工输入验证码。3.自动进入课表页面，自动截图，保存在桌面（保存文件夹在目录可能需要更改）",
+  "html": "<pre><code class=\"language-text\">from selenium import webdriver\nfrom bs4 import BeautifulSoup\nfrom selenium.webdriver import ActionChains\nimport time\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\ndef wait(xpath,driver):\n    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, xpath)))\n</code></pre>\n<pre><code class=\"language-text\">#登录：\ndef login(driver):\n\n    id_box = '//*[@id=&quot;userAccount&quot;]'\n    wait(id_box,driver)\n\n    driver.find_element_by_xpath(id_box).send_keys('2007010218')\n\n    password_box = '//*[@id=&quot;userPassword&quot;]'\n    driver.find_element_by_xpath(password_box).send_keys('2007010218')\n\n    yan_zhen = '//*[@id=&quot;RANDOMCODE&quot;]'\n    driver.find_element_by_xpath(yan_zhen).click()\n    time.sleep(5)\n    \n    login_btn = '//*[@id=&quot;btnSubmit&quot;]'\n    driver.find_element_by_xpath(login_btn).click()\n    time.sleep(2)\n    \n    ke_biao = '/html/body/div[5]/a[2]/div'\n    driver.find_element_by_xpath(ke_biao).click()\n    time.sleep(2)\n</code></pre>\n<pre><code class=\"language-text\">#执行\ndriver = webdriver.Chrome()\nurl = 'http://jwxt.upc.edu.cn/'\ndriver.get(url)\ntime.sleep(1)\nlogin(driver)\n\ndriver.get_screenshot_as_file(&quot;C:\\\\Users\\\\Administrator\\\\Desktop\\\\kb.png&quot;)\ndriver.quit()\n\n\n</code></pre>\n<p>依次执行以上cell，1.打开chrome自动输入账号密码。2.有五秒钟的时间人工输入验证码。3.自动进入课表页面，自动截图，保存在桌面（保存文件夹在目录可能需要更改）</p>\n",
+  "headings": [],
+  "hasMath": false
+}

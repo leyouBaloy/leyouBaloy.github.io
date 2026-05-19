@@ -1,0 +1,20 @@
+{
+  "title": "字符处理软件-substr-insert-find",
+  "date": "2020-12-17T21:10:39.000Z",
+  "updatedAt": "2020-12-17T21:10:39.000Z",
+  "file": "字符处理软件-substr-insert-find.md",
+  "slug": "81d1a575",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 189,
+  "readingTime": 1,
+  "body": "题目描述\n\n你需要开发一款文字处理软件。最开始时输入一个字符串（不超过 100 个字符）作为初始文档。可以认为文档开头是第 0 个字符。需要支持以下操作：\n\n*   `1 str`：后接插入，在文档后面插入字符串 str，并输出文档的字符串。\n*   `2 a b`：截取文档部分，只保留文档中从第 a 个字符起 b 个字符，并输出文档的字符串。\n*   `3 a str`：插入片段，在文档中第 a 个字符前面插入字符串 str，并输出文档的字符串。\n*   `4 str`：查找子串，查找字符串 str 在文档中最先的位置并输出；如果找不到输出 -1。\n\n```\n#include <bits/stdc++.h>\n\nusing namespace std;\n\nint main()\n{\n    int n,i;\n    cin >> n;\n    string s;\n    cin >> s;\n    for(i=0;i<n;i++)\n    {\n        int menu;\n        cin >> menu;\n        if(menu==1)\n        {\n            string tmp;\n            cin >> tmp;\n            s = s + tmp;\n            cout << s << endl;\n        }\n        if(menu==2)\n        {\n            int a,b;\n            cin >> a >> b;\n            s = s.substr(a,b);\n            cout << s << endl;\n        }\n        if(menu==3)\n        {\n            int location;\n            string tmp;\n            cin >> location >> tmp;\n            s.insert(location,tmp);\n            cout << s << endl;\n        }\n        if(menu==4)\n        {\n            string tmp;\n            cin >> tmp;\n            if(s.find(tmp)<s.size())\n                cout << s.find(tmp) << endl;\n            else\n                cout << -1 << endl;\n        }\n    }\n    return 0;\n}\n```",
+  "html": "<p>题目描述</p>\n<p>你需要开发一款文字处理软件。最开始时输入一个字符串（不超过 100 个字符）作为初始文档。可以认为文档开头是第 0 个字符。需要支持以下操作：</p>\n<ul>\n<li><code>1 str</code>：后接插入，在文档后面插入字符串 str，并输出文档的字符串。</li>\n<li><code>2 a b</code>：截取文档部分，只保留文档中从第 a 个字符起 b 个字符，并输出文档的字符串。</li>\n<li><code>3 a str</code>：插入片段，在文档中第 a 个字符前面插入字符串 str，并输出文档的字符串。</li>\n<li><code>4 str</code>：查找子串，查找字符串 str 在文档中最先的位置并输出；如果找不到输出 -1。</li>\n</ul>\n<pre><code class=\"language-text\">#include &lt;bits/stdc++.h&gt;\n\nusing namespace std;\n\nint main()\n{\n    int n,i;\n    cin &gt;&gt; n;\n    string s;\n    cin &gt;&gt; s;\n    for(i=0;i&lt;n;i++)\n    {\n        int menu;\n        cin &gt;&gt; menu;\n        if(menu==1)\n        {\n            string tmp;\n            cin &gt;&gt; tmp;\n            s = s + tmp;\n            cout &lt;&lt; s &lt;&lt; endl;\n        }\n        if(menu==2)\n        {\n            int a,b;\n            cin &gt;&gt; a &gt;&gt; b;\n            s = s.substr(a,b);\n            cout &lt;&lt; s &lt;&lt; endl;\n        }\n        if(menu==3)\n        {\n            int location;\n            string tmp;\n            cin &gt;&gt; location &gt;&gt; tmp;\n            s.insert(location,tmp);\n            cout &lt;&lt; s &lt;&lt; endl;\n        }\n        if(menu==4)\n        {\n            string tmp;\n            cin &gt;&gt; tmp;\n            if(s.find(tmp)&lt;s.size())\n                cout &lt;&lt; s.find(tmp) &lt;&lt; endl;\n            else\n                cout &lt;&lt; -1 &lt;&lt; endl;\n        }\n    }\n    return 0;\n}\n</code></pre>\n",
+  "headings": [],
+  "hasMath": false
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Leetcode39:组合总和——回溯",
+  "date": "2022-05-06T09:09:58.000Z",
+  "updatedAt": "2022-05-06T09:09:58.000Z",
+  "file": "Leetcode39_组合总和——回溯.md",
+  "slug": "7883cd5e",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 214,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/combination-sum/\n\n做回溯题就像见老同学，你觉得它还像以前一样简单，但是你错了😭\n\n## 题解\n\n### 搜索回溯\n\n思路：对于`candidates`中的每一个数你有两个选项，要么选，要么不选。所以回溯的过程是一颗二叉树，用`idx`表示下标，左子树表示选择第`idx`个数放入路径，右子树不选择。如果不选择，下一次是`idx+1`，如果选择，下一次仍然是`idx`，这样可以做到重复选择一个数，但最终结果不会有数字相同但顺序不同的情况。\n\n先看代码：\n\n```python\nclass Solution:\n    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:\n        path = []\n        res = []\n        def backtrack(target, idx):\n            if idx > len(candidates)-1:\n                return\n            print(\"tar\",target,\"n\",candidates[idx],\"path\",path)\n            \n            if target == 0:\n                res.append(path.copy())\n                return\n            \n            # 不选择\n            backtrack(target, idx+1) \n            # 选择\n            if target-candidates[idx]>=0:\n                path.append(candidates[idx])\n                backtrack(target-candidates[idx], idx)\n                path.pop()\n\n        backtrack(target, 0)\n        return res\n```\n\n标准的回溯模板，但又充满了细节：\n\n* return要放在合适的位置\n* 不选择的时候idx+1，选择的时候idx不+1\n\n再看这张图就能理解了：\n\n{{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/39_fig1.png\" >}}\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/combination-sum/\">https://leetcode-cn.com/problems/combination-sum/</a></p>\n<p>做回溯题就像见老同学，你觉得它还像以前一样简单，但是你错了😭</p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"搜索回溯\">搜索回溯</h3>\n<p>思路：对于<code>candidates</code>中的每一个数你有两个选项，要么选，要么不选。所以回溯的过程是一颗二叉树，用<code>idx</code>表示下标，左子树表示选择第<code>idx</code>个数放入路径，右子树不选择。如果不选择，下一次是<code>idx+1</code>，如果选择，下一次仍然是<code>idx</code>，这样可以做到重复选择一个数，但最终结果不会有数字相同但顺序不同的情况。</p>\n<p>先看代码：</p>\n<pre><code class=\"language-python\">class Solution:\n    def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]:\n        path = []\n        res = []\n        def backtrack(target, idx):\n            if idx &gt; len(candidates)-1:\n                return\n            print(&quot;tar&quot;,target,&quot;n&quot;,candidates[idx],&quot;path&quot;,path)\n            \n            if target == 0:\n                res.append(path.copy())\n                return\n            \n            # 不选择\n            backtrack(target, idx+1) \n            # 选择\n            if target-candidates[idx]&gt;=0:\n                path.append(candidates[idx])\n                backtrack(target-candidates[idx], idx)\n                path.pop()\n\n        backtrack(target, 0)\n        return res\n</code></pre>\n<p>标准的回溯模板，但又充满了细节：</p>\n<ul>\n<li>return要放在合适的位置</li>\n<li>不选择的时候idx+1，选择的时候idx不+1</li>\n</ul>\n<p>再看这张图就能理解了：</p>\n<p>{{&lt; figure src=“<a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/39_fig1.png\">https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/39_fig1.png</a>” &gt;}}</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "搜索回溯",
+      "id": "搜索回溯"
+    }
+  ],
+  "hasMath": false
+}

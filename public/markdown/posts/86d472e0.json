@@ -1,0 +1,131 @@
+{
+  "title": "docker笔记",
+  "date": "2021-07-19T20:57:21.000Z",
+  "updatedAt": "2021-07-19T20:57:21.000Z",
+  "file": "docker笔记.md",
+  "slug": "86d472e0",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 247,
+  "readingTime": 1,
+  "body": "# 打开docker服务\n\n```shell\nsystemctl start docker\n```\n\n# docker一直在后台运行\n\n`` `docker run -dit judge:0.2 /bin/bash` ``\n\n# 复制\n\n`` `docker cp 容器id:容器内路径 目的主机路径` `` `` `docker cp /root/testPython/test01/ $(docker ps -q):/usr/src/app` `` `` `docker cp /root/testPython/judge_file_o.py $(docker ps -q):/usr/src/app/test01/judge` ``\n\n# 容器外执行命令\n\n`` `docker exec -it $(docker ps -q) /bin/bash -c \"python /usr/src/app/test01/judge/judge_file_o.py\"` ``\n\n# 进入正在运行的容器\n\n`` `docker exec -it $(docker ps -q) /bin/bash` `` `` `docker attach 容器id` ``\n\n# 显示容器编号\n\n`` `$(docker ps -q)` ``\n\n# 将文件拷贝出来\n\n`` `docker cp $(docker ps -q):/usr/src/app/test01/user/tmp.txt /root/testPython/` ``\n\n# 强制删除容器\n\n`` `docker rm -f $(docker ps -q)` ``\n\n# 停止容器\n\n```\ndocker stop 容器ID或容器名\n```\n\n优雅的停止容器\n\n# 删除镜像\n\n```\ndocker rmi -f 镜像id\ndocker rmi -f $(docker images -aq)\n```\n\n# MySql同步数据\n\n### 拉取\n\n```\ndocker search mysql\ndocker pull mysql:5.7\n```\n\n### 运行\n\n```\ndocker run -d -p 3310:3306 -v /home/mysql/conf:/etc/mysql/conf.d -v /home/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=12345 --name mysql01 mysql:5.7\n```\n\n# \\-d后台运行\n\n# 3306是容器外端口\n\n# \\-v数据挂载；本地：容器\n\n# 要配密码，怎么配？在dockerhub上帮助文档\n\n# 容器名\n\n# 所选镜像\n\n# python操作数据库\n\n`` `pip install mysqlclient` ``\n\n使用mysqlclient，要自己写sql语句\n\n```\nconn= MySQLdb.connect(\n        host='localhost',\n        port = 3306,\n        user='root',\n        passwd='123456',\n        db ='test',\n        )\n```\n\n# 数据库权限\n\n```sql\nmysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;\n mysql>flush privileges;\n// 其中各字符的含义：\n// *.* 对任意数据库任意表有效\n// \"root\" \"123456\" 是数据库用户名和密码\n// '%' 允许访问数据库的IP地址，%意思是任意IP，也可以指定IP\n// flush privileges 刷新权限信息\n```\n\n# Dockerfile\n\n```\nFROM # 基础镜像，当前新镜像是基于哪个镜像的 \nMAINTAINER # 镜像维护者的姓名混合邮箱地址 \nRUN # 容器构建时需要运行的命令 \nEXPOSE # 当前容器对外保留出的端口 \nWORKDIR # 指定在创建容器后，终端默认登录的进来工作目录，一个落脚点 \nENV # 用来在构建镜像过程中设置环境变量 \nADD # 将宿主机目录下的文件拷贝进镜像且ADD命令会自动处理URL和解压tar压缩包 \nCOPY # 类似ADD，拷贝文件和目录到镜像中！ \nVOLUME # 容器数据卷，用于数据保存和持久化工作 \nCMD # 指定一个容器启动时要运行的命令，dockerFile中可以有多个CMD指令，但只有最 后一个生效！ \nENTRYPOINT # 指定一个容器启动时要运行的命令！和CMD一样 \nONBUILD # 当构建一个被继承的DockerFile时运行命令，父镜像在被子镜像继承后，父镜像的 ONBUILD被触发\n```",
+  "html": "<h1 id=\"打开docker服务\">打开docker服务</h1>\n<pre><code class=\"language-shell\">systemctl start docker\n</code></pre>\n<h1 id=\"docker一直在后台运行\">docker一直在后台运行</h1>\n<p><code>`docker run -dit judge:0.2 /bin/bash`</code></p>\n<h1 id=\"复制\">复制</h1>\n<p><code>`docker cp 容器id:容器内路径 目的主机路径`</code> <code>`docker cp /root/testPython/test01/ $(docker ps -q):/usr/src/app`</code> <code>`docker cp /root/testPython/judge_file_o.py $(docker ps -q):/usr/src/app/test01/judge`</code></p>\n<h1 id=\"容器外执行命令\">容器外执行命令</h1>\n<p><code>`docker exec -it $(docker ps -q) /bin/bash -c &quot;python /usr/src/app/test01/judge/judge_file_o.py&quot;`</code></p>\n<h1 id=\"进入正在运行的容器\">进入正在运行的容器</h1>\n<p><code>`docker exec -it $(docker ps -q) /bin/bash`</code> <code>`docker attach 容器id`</code></p>\n<h1 id=\"显示容器编号\">显示容器编号</h1>\n<p><code>`$(docker ps -q)`</code></p>\n<h1 id=\"将文件拷贝出来\">将文件拷贝出来</h1>\n<p><code>`docker cp $(docker ps -q):/usr/src/app/test01/user/tmp.txt /root/testPython/`</code></p>\n<h1 id=\"强制删除容器\">强制删除容器</h1>\n<p><code>`docker rm -f $(docker ps -q)`</code></p>\n<h1 id=\"停止容器\">停止容器</h1>\n<pre><code class=\"language-text\">docker stop 容器ID或容器名\n</code></pre>\n<p>优雅的停止容器</p>\n<h1 id=\"删除镜像\">删除镜像</h1>\n<pre><code class=\"language-text\">docker rmi -f 镜像id\ndocker rmi -f $(docker images -aq)\n</code></pre>\n<h1 id=\"mysql同步数据\">MySql同步数据</h1>\n<h3 id=\"拉取\">拉取</h3>\n<pre><code class=\"language-text\">docker search mysql\ndocker pull mysql:5.7\n</code></pre>\n<h3 id=\"运行\">运行</h3>\n<pre><code class=\"language-text\">docker run -d -p 3310:3306 -v /home/mysql/conf:/etc/mysql/conf.d -v /home/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=12345 --name mysql01 mysql:5.7\n</code></pre>\n<h1 id=\"d后台运行\">-d后台运行</h1>\n<h1 id=\"3306是容器外端口\">3306是容器外端口</h1>\n<h1 id=\"v数据挂载本地容器\">-v数据挂载；本地：容器</h1>\n<h1 id=\"要配密码怎么配在dockerhub上帮助文档\">要配密码，怎么配？在dockerhub上帮助文档</h1>\n<h1 id=\"容器名\">容器名</h1>\n<h1 id=\"所选镜像\">所选镜像</h1>\n<h1 id=\"python操作数据库\">python操作数据库</h1>\n<p><code>`pip install mysqlclient`</code></p>\n<p>使用mysqlclient，要自己写sql语句</p>\n<pre><code class=\"language-text\">conn= MySQLdb.connect(\n        host='localhost',\n        port = 3306,\n        user='root',\n        passwd='123456',\n        db ='test',\n        )\n</code></pre>\n<h1 id=\"数据库权限\">数据库权限</h1>\n<pre><code class=\"language-sql\">mysql&gt;GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;\n mysql&gt;flush privileges;\n// 其中各字符的含义：\n// *.* 对任意数据库任意表有效\n// &quot;root&quot; &quot;123456&quot; 是数据库用户名和密码\n// '%' 允许访问数据库的IP地址，%意思是任意IP，也可以指定IP\n// flush privileges 刷新权限信息\n</code></pre>\n<h1 id=\"dockerfile\">Dockerfile</h1>\n<pre><code class=\"language-text\">FROM # 基础镜像，当前新镜像是基于哪个镜像的 \nMAINTAINER # 镜像维护者的姓名混合邮箱地址 \nRUN # 容器构建时需要运行的命令 \nEXPOSE # 当前容器对外保留出的端口 \nWORKDIR # 指定在创建容器后，终端默认登录的进来工作目录，一个落脚点 \nENV # 用来在构建镜像过程中设置环境变量 \nADD # 将宿主机目录下的文件拷贝进镜像且ADD命令会自动处理URL和解压tar压缩包 \nCOPY # 类似ADD，拷贝文件和目录到镜像中！ \nVOLUME # 容器数据卷，用于数据保存和持久化工作 \nCMD # 指定一个容器启动时要运行的命令，dockerFile中可以有多个CMD指令，但只有最 后一个生效！ \nENTRYPOINT # 指定一个容器启动时要运行的命令！和CMD一样 \nONBUILD # 当构建一个被继承的DockerFile时运行命令，父镜像在被子镜像继承后，父镜像的 ONBUILD被触发\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "打开docker服务",
+      "id": "打开docker服务"
+    },
+    {
+      "level": 1,
+      "text": "docker一直在后台运行",
+      "id": "docker一直在后台运行"
+    },
+    {
+      "level": 1,
+      "text": "复制",
+      "id": "复制"
+    },
+    {
+      "level": 1,
+      "text": "容器外执行命令",
+      "id": "容器外执行命令"
+    },
+    {
+      "level": 1,
+      "text": "进入正在运行的容器",
+      "id": "进入正在运行的容器"
+    },
+    {
+      "level": 1,
+      "text": "显示容器编号",
+      "id": "显示容器编号"
+    },
+    {
+      "level": 1,
+      "text": "将文件拷贝出来",
+      "id": "将文件拷贝出来"
+    },
+    {
+      "level": 1,
+      "text": "强制删除容器",
+      "id": "强制删除容器"
+    },
+    {
+      "level": 1,
+      "text": "停止容器",
+      "id": "停止容器"
+    },
+    {
+      "level": 1,
+      "text": "删除镜像",
+      "id": "删除镜像"
+    },
+    {
+      "level": 1,
+      "text": "MySql同步数据",
+      "id": "mysql同步数据"
+    },
+    {
+      "level": 3,
+      "text": "拉取",
+      "id": "拉取"
+    },
+    {
+      "level": 3,
+      "text": "运行",
+      "id": "运行"
+    },
+    {
+      "level": 1,
+      "text": "\\-d后台运行",
+      "id": "d后台运行"
+    },
+    {
+      "level": 1,
+      "text": "3306是容器外端口",
+      "id": "3306是容器外端口"
+    },
+    {
+      "level": 1,
+      "text": "\\-v数据挂载；本地：容器",
+      "id": "v数据挂载本地容器"
+    },
+    {
+      "level": 1,
+      "text": "要配密码，怎么配？在dockerhub上帮助文档",
+      "id": "要配密码怎么配在dockerhub上帮助文档"
+    },
+    {
+      "level": 1,
+      "text": "容器名",
+      "id": "容器名"
+    },
+    {
+      "level": 1,
+      "text": "所选镜像",
+      "id": "所选镜像"
+    },
+    {
+      "level": 1,
+      "text": "python操作数据库",
+      "id": "python操作数据库"
+    },
+    {
+      "level": 1,
+      "text": "数据库权限",
+      "id": "数据库权限"
+    },
+    {
+      "level": 1,
+      "text": "Dockerfile",
+      "id": "dockerfile"
+    }
+  ],
+  "hasMath": true
+}

@@ -1,0 +1,41 @@
+{
+  "title": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
+  "date": "2023-03-16T15:51:26.000Z",
+  "updatedAt": "2023-03-16T15:51:26.000Z",
+  "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md",
+  "slug": "61be5727",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 367,
+  "readingTime": 1,
+  "body": "## highlight.js\n\n实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是：\n\n1. 先引入css文件和js文件\n\n```html\n<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js\"></script>\n```\n\n2. 再将你的代码用`<code>`包裹\n\n```html\n<code>{{ 你的代码 }}</code>\n```\n\n3. 再调用hljs的高亮函数，它的原理是找到所有的code标签，然后通过操作DOM，给你的代码设置高亮样式。\n\n```html\n<script>\n\t\thljs.initHighlightingOnLoad();\n\t</script>\n```\n\n## highlightjs-line-numbers.js\n\nhilightjs-line-numbers.js在highlight.js的基础上，给代码增加了行号，项目地址👇：\n\nhttps://github.com/wcoder/highlightjs-line-numbers.js\n\n它的原理是将highlight.js渲染结构改装成`<table>`，第一列是行号，第二列才是代码。这种思路是非常棒的！\n\n它的使用方法是在highlight.js的使用方法上加了两步：\n\n1. 除了引用highlight.js之外，还要引用highlightjs-line-numbers.js\n\n```html\n<link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css\">\n\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js\"></script>\n  <script src=\"../src/highlightjs-line-numbers.js\"></script>\n```\n\n2. 将你的代码用`<pre>`和`<code>`包裹\n\n```html\n<pre><code>{{ 你的代码 }}</code></pre>\n```\n\n3. 调用\n\n```html\n<script>\n\t\thljs.initHighlightingOnLoad();\n\t\thljs.initLineNumbersOnLoad({\n            // singleLine:true,\n            // startFrom: 5,\n        });\n\t</script>\n```\n\n## 在vue中使用\n\n奶奶的，在vue的组件中引用这个库，发现总是不能正确调用。我试了好久，终于找到了一个很nice的方法，就是直接在public下的`index.html`中引用，然后在组件中调用。\n\n![image-20230317001209249](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001209249.png)\n\n效果差强人意，但总算是把功能实现了\n\n![image-20230317001321999](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001321999.png)\n\n## 其它实现方法\n\n在网上搜索，会发现还有另一种实现原理：使用vue.directive，自动在代码前面加一个`<ul>`，显示行号；这种方法也可以实现，但是样式很难调整，容易出现行号错位。\n\n",
+  "html": "<h2 id=\"highlightjs\">highlight.js</h2>\n<p>实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是：</p>\n<ol>\n<li>先引入css文件和js文件</li>\n</ol>\n<pre><code class=\"language-html\">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css&quot;&gt;\n&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<ol start=\"2\">\n<li>再将你的代码用<code>&lt;code&gt;</code>包裹</li>\n</ol>\n<pre><code class=\"language-html\">&lt;code&gt;{{ 你的代码 }}&lt;/code&gt;\n</code></pre>\n<ol start=\"3\">\n<li>再调用hljs的高亮函数，它的原理是找到所有的code标签，然后通过操作DOM，给你的代码设置高亮样式。</li>\n</ol>\n<pre><code class=\"language-html\">&lt;script&gt;\n\t\thljs.initHighlightingOnLoad();\n\t&lt;/script&gt;\n</code></pre>\n<h2 id=\"highlightjs-line-numbersjs\">highlightjs-line-numbers.js</h2>\n<p>hilightjs-line-numbers.js在highlight.js的基础上，给代码增加了行号，项目地址👇：</p>\n<p><a href=\"https://github.com/wcoder/highlightjs-line-numbers.js\">https://github.com/wcoder/highlightjs-line-numbers.js</a></p>\n<p>它的原理是将highlight.js渲染结构改装成<code>&lt;table&gt;</code>，第一列是行号，第二列才是代码。这种思路是非常棒的！</p>\n<p>它的使用方法是在highlight.js的使用方法上加了两步：</p>\n<ol>\n<li>除了引用highlight.js之外，还要引用highlightjs-line-numbers.js</li>\n</ol>\n<pre><code class=\"language-html\">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css&quot;&gt;\n\t&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js&quot;&gt;&lt;/script&gt;\n  &lt;script src=&quot;../src/highlightjs-line-numbers.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<ol start=\"2\">\n<li>将你的代码用<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code>包裹</li>\n</ol>\n<pre><code class=\"language-html\">&lt;pre&gt;&lt;code&gt;{{ 你的代码 }}&lt;/code&gt;&lt;/pre&gt;\n</code></pre>\n<ol start=\"3\">\n<li>调用</li>\n</ol>\n<pre><code class=\"language-html\">&lt;script&gt;\n\t\thljs.initHighlightingOnLoad();\n\t\thljs.initLineNumbersOnLoad({\n            // singleLine:true,\n            // startFrom: 5,\n        });\n\t&lt;/script&gt;\n</code></pre>\n<h2 id=\"在vue中使用\">在vue中使用</h2>\n<p>奶奶的，在vue的组件中引用这个库，发现总是不能正确调用。我试了好久，终于找到了一个很nice的方法，就是直接在public下的<code>index.html</code>中引用，然后在组件中调用。</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001209249.png\" alt=\"image-20230317001209249\" loading=\"lazy\" decoding=\"async\"></p>\n<p>效果差强人意，但总算是把功能实现了</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230317001321999.png\" alt=\"image-20230317001321999\" loading=\"lazy\" decoding=\"async\"></p>\n<h2 id=\"其它实现方法\">其它实现方法</h2>\n<p>在网上搜索，会发现还有另一种实现原理：使用vue.directive，自动在代码前面加一个<code>&lt;ul&gt;</code>，显示行号；这种方法也可以实现，但是样式很难调整，容易出现行号错位。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "highlight.js",
+      "id": "highlightjs"
+    },
+    {
+      "level": 2,
+      "text": "highlightjs-line-numbers.js",
+      "id": "highlightjs-line-numbersjs"
+    },
+    {
+      "level": 2,
+      "text": "在vue中使用",
+      "id": "在vue中使用"
+    },
+    {
+      "level": 2,
+      "text": "其它实现方法",
+      "id": "其它实现方法"
+    }
+  ],
+  "hasMath": false
+}

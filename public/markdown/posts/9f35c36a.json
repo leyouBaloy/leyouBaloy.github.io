@@ -1,0 +1,20 @@
+{
+  "title": "c++傻缺错误集锦",
+  "date": "2020-12-02T20:09:14.000Z",
+  "updatedAt": "2020-12-02T20:09:14.000Z",
+  "file": "c++傻缺错误集锦.md",
+  "slug": "9f35c36a",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 191,
+  "readingTime": 1,
+  "body": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！  \n千万不要把“==”写成“=”\n\n输出小数时函数用成了int Fun()  \n应该用double Fun() 习惯了使用int Fun()  \n也是看了半天，没有看出问题来\n\n输入M和N  \n我只写了cin >> N;  \n导致后面全错，查了半天也没查出来；\n\n定义了数组a\\[9999\\];  \n后面定义了变量a  \n报错invalid types 'int\\[int\\]' for array subscript\n\n使用cnt变量进行计数时，没有赋初始值0；\n\n算法是对的，一送进Oj就错  \n搞了半天，数组开小了\n\n明天就程序设计考试了，我作为程序设计课代表（假课代表），不能考的太差呀！  \n加油吧",
+  "html": "<p>nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！<br>\n千万不要把“==”写成“=”</p>\n<p>输出小数时函数用成了int Fun()<br>\n应该用double Fun() 习惯了使用int Fun()<br>\n也是看了半天，没有看出问题来</p>\n<p>输入M和N<br>\n我只写了cin &gt;&gt; N;<br>\n导致后面全错，查了半天也没查出来；</p>\n<p>定义了数组a[9999];<br>\n后面定义了变量a<br>\n报错invalid types ‘int[int]’ for array subscript</p>\n<p>使用cnt变量进行计数时，没有赋初始值0；</p>\n<p>算法是对的，一送进Oj就错<br>\n搞了半天，数组开小了</p>\n<p>明天就程序设计考试了，我作为程序设计课代表（假课代表），不能考的太差呀！<br>\n加油吧</p>\n",
+  "headings": [],
+  "hasMath": true
+}

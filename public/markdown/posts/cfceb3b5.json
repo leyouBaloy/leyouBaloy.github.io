@@ -1,0 +1,26 @@
+{
+  "title": "猴子选大王-结构体",
+  "date": "2020-11-21T08:46:45.000Z",
+  "updatedAt": "2020-11-21T08:46:45.000Z",
+  "file": "猴子选大王-结构体.md",
+  "slug": "cfceb3b5",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 246,
+  "readingTime": 1,
+  "body": "【问题描述】\n\n有n只猴子围成一圈，从1~n编号，大家决定从中选出一个大王。经过协商，决定选大王的规则为：从编号为1的猴子开始报数，报到k的猴子出圈，然后再从下一只开始继续报1到k，最后剩下来的那一只就是大王。\n\n【输入】\n\n       一行，包含两个正整数n和k（2≤n≤1000,2≤k≤109）。\n\n【输出】\n\n       一行，一个正整数，表示猴王的编号。\n\nFor example:\n\nInput\n\nResult\n\n3 2\n\n3\n\n### Answer\n\n```\n#include <iostream>\n\nusing namespace std;\n\nstruct MONKEY\n{\n    int code;\n    int next;\n};\n\nint main()\n{\n    MONKEY mons[1000];\n    int n;\n    int k;\n    cin >> n >> k;\n\n    //init\n    int i,j,index=1,pre;\n    for(i=1;i<n;i++)\n    {\n        mons[i].code = i;\n        mons[i].next = i+1;\n    }\n    mons[n].code = n;\n    mons[n].next = 1;\n\n    //run\n    for(i=1;i<n;i++)\n    {\n        //do a roll\n        for(j=1;j<k;j++)\n        {\n            pre =  index;\n            index = mons[index].next;\n        }\n        //index will leave\n        mons[pre].next = mons[index].next;\n        pre  =  mons[pre].next; //这两句是加的\n        index = mons[index].next;\n    }\n\n    cout << mons[index].code << endl;\n\n    return 0;\n}\n```\n\n分析：\n\n这题比较难，老宫上课时写了一段代码，我把它记下来了，提交后发现不能通过全部测试数据。然后我就自己捣鼓。我知道问题是出在//index will leave 这个地方，但我不知道怎么改，最后我就打算放弃了，随便加了两句竟然瞎猫碰死耗子碰对了。\n\n  \nInput\n\nExpected\n\nGot\n\n3 2\n\n3\n\n3\n\n285 844\n\n97\n\n97\n\nPassed all tests!",
+  "html": "<p>【问题描述】</p>\n<p>有n只猴子围成一圈，从1~n编号，大家决定从中选出一个大王。经过协商，决定选大王的规则为：从编号为1的猴子开始报数，报到k的猴子出圈，然后再从下一只开始继续报1到k，最后剩下来的那一只就是大王。</p>\n<p>【输入】</p>\n<p>一行，包含两个正整数n和k（2≤n≤1000,2≤k≤109）。</p>\n<p>【输出】</p>\n<p>一行，一个正整数，表示猴王的编号。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>3 2</p>\n<p>3</p>\n<h3 id=\"answer\">Answer</h3>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n\nusing namespace std;\n\nstruct MONKEY\n{\n    int code;\n    int next;\n};\n\nint main()\n{\n    MONKEY mons[1000];\n    int n;\n    int k;\n    cin &gt;&gt; n &gt;&gt; k;\n\n    //init\n    int i,j,index=1,pre;\n    for(i=1;i&lt;n;i++)\n    {\n        mons[i].code = i;\n        mons[i].next = i+1;\n    }\n    mons[n].code = n;\n    mons[n].next = 1;\n\n    //run\n    for(i=1;i&lt;n;i++)\n    {\n        //do a roll\n        for(j=1;j&lt;k;j++)\n        {\n            pre =  index;\n            index = mons[index].next;\n        }\n        //index will leave\n        mons[pre].next = mons[index].next;\n        pre  =  mons[pre].next; //这两句是加的\n        index = mons[index].next;\n    }\n\n    cout &lt;&lt; mons[index].code &lt;&lt; endl;\n\n    return 0;\n}\n</code></pre>\n<p>分析：</p>\n<p>这题比较难，老宫上课时写了一段代码，我把它记下来了，提交后发现不能通过全部测试数据。然后我就自己捣鼓。我知道问题是出在//index will leave 这个地方，但我不知道怎么改，最后我就打算放弃了，随便加了两句竟然瞎猫碰死耗子碰对了。</p>\n<p>Input</p>\n<p>Expected</p>\n<p>Got</p>\n<p>3 2</p>\n<p>3</p>\n<p>3</p>\n<p>285 844</p>\n<p>97</p>\n<p>97</p>\n<p>Passed all tests!</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "Answer",
+      "id": "answer"
+    }
+  ],
+  "hasMath": false
+}

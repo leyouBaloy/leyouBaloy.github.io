@@ -1,0 +1,96 @@
+{
+  "title": "对图像操作",
+  "date": "2021-08-29T21:21:29.000Z",
+  "updatedAt": "2021-08-29T21:21:29.000Z",
+  "file": "对图像操作.md",
+  "slug": "3bdd31d7",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 772,
+  "readingTime": 2,
+  "body": "# 图像\n\n### 位图（raster graphics)和矢量图（vector graphics)\n\n位图是有像素的，色彩丰富。矢量图放大不会失真。\n\n### 通道\n\n#### 单通道\n\n灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256 = 2_2_2\\*2)，那么他的像素值0(黑)~255(白)；\n\n#### 三通道\n\n也就是通过见到的彩色图，每个像素点有三个值表示，如果图像深度是4-(256 = 2_2_2\\*2),那么他的像素值有红(0~255)、绿(0~255)、蓝(0~255)叠加表示，色彩更加艳丽;\n\n#### 四通道\n\n四通道：也就是在三通道图像基础上加上透明程度，Alpha色彩空间，如果图像深度是4-(256 = 2_2_2\\*2),那么0是完全透明，255是完全不透明；**png图像是四通道。**\n\n### 读取图片（numpy的array)\n\n```python\nimport matplotlib.image as mpimg\nim = mpimg.imread(fname)\n```\n\n读取一张200\\*200的png图像\n\n`im.shape() >> (200, 200, 4)`\n\n表示像素是200\\*200，有四个通道\n\n数组是这个样子：\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/image-20210811112058185.png)\n\nim\\[0\\]矩阵，长为200, 宽为4，自己体会一下。\n\n### 显示图片\n\n```\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nplt.imshow(arr)\n#根据像素绘制图片 origin表示渐变程度\n```\n\n### numpy.array 的shape属性理解\n\n#### 二维情况\n\n```python\n>>> import numpy as np\n>>> y = np.array([[1,2,3],[4,5,6]])\n>>> print(y)\n[[1 2 3]\n [4 5 6]]\n>>> print(y.shape)\n(2, 3)\n>>> print(y.shape[0])\n2\n>>> print(y.shape[1])\n3\n```\n\n可以看到y是一个两行三列的二维数组，y.shape\\[0\\]代表行数，y.shape\\[1\\]代表列数。\n\n#### 三维情况\n\n```python\n>>> x  = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[0,1,2]],[[3,4,5],[6,7,8]]])\n>>>> print(x)\n[[[1 2 3]\n  [4 5 6]]\n\n [[7 8 9]\n  [0 1 2]]\n\n [[3 4 5]\n  [6 7 8]]]\n>>> print(x.shape)\n(3, 2, 3)\n>>> print(x.shape[0])\n3\n>>> print(x.shape[1])\n2\n>>> print(x.shape[2])\n3\n```\n\n可以看到x是一个包含了3个两行三列的二维数组的三维数组，x.shape\\[0\\]代表包含二维数组的个数，x.shape\\[1\\]表示二维数组的行数，x.shape\\[2\\]表示二维数组的列数。\n\n#### 总结\n\n可以看到，shape\\[0\\]表示最外围的数组的维数，shape\\[1\\]表示次外围的数组的维数，数字不断增大，维数由外到内。\n\n> ———————————————— 版权声明：本文为CSDN博主「Lavi\\_qq\\_2910138025」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：[https://blog.csdn.net/liuweiyuxiang/article/details/79384435](https://blog.csdn.net/liuweiyuxiang/article/details/79384435)\n\n### numpy的梯度函数np.gradient(f)\n\nnp.gradient(f):用于计算数组f中元素的梯度，当f为多维时，返回每个维度的梯度。\n\n#### 一维\n\n```python\na = np.random.randint(0,20,(5,))>>array([10,  0,  7,  0, 19])\n```\n\n```python\nnp.gradient(a)>>array([-10. ,  -1.5,   0. ,   6. ,  19. ])\n```\n\n由梯度计算公式得到梯度计算结果:\n\n\\-10=（0-10）/1\n\n\\-1.5=（7-10）/2\n\n#### 二维\n\n```python\nc = np.random.randint(0,50,(3,5))\n>>array([[25, 49, 14, 13, 20],\n       [43,  6, 13, 15, 24],\n       [ 9,  2,  7,  5, 36]])\n```\n\n```python\nnp.gradient(c)\n>>[array([[ 18. , -43. ,  -1. ,   2. ,   4. ],\n        [ -8. , -23.5,  -3.5,  -4. ,   8. ],\n        [-34. ,  -4. ,  -6. , -10. ,  12. ]]),\n array([[ 24. ,  -5.5, -18. ,   3. ,   7. ],\n        [-37. , -15. ,   4.5,   5.5,   9. ],\n        [ -7. ,  -1. ,   1.5,  14.5,  31. ]])]\n```\n\n对于二维数组，任意一个元素的梯度存在两个方向，所以求得的梯度为两个数组对象，第一个数组表示最外层维度的梯度值，第二个数组表示第二层维度的梯度值。 对于n维数组，gradient函数会生成n个数组，每个数组代表元素在第n个维度的梯度变化值，梯度反应了元素的变化率，尤其是我们在进行图像，声音等数据处理，梯度有助于帮助我们发现图像和声音的边缘，在那些变化不是很平缓的地方，可以很容易的发现。\n\n> ———————————————— 版权声明：本文为CSDN博主「June �」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：[https://blog.csdn.net/MachineLearner/article/details/104403097](https://blog.csdn.net/MachineLearner/article/details/104403097)",
+  "html": "<h1 id=\"图像\">图像</h1>\n<h3 id=\"位图raster-graphics和矢量图vector-graphics\">位图（raster graphics)和矢量图（vector graphics)</h3>\n<p>位图是有像素的，色彩丰富。矢量图放大不会失真。</p>\n<h3 id=\"通道\">通道</h3>\n<h4 id=\"单通道\">单通道</h4>\n<p>灰度图，每个像素点只有一个值表示，如果图像的深度是4-(256 = 2_2_2*2)，那么他的像素值0(黑)~255(白)；</p>\n<h4 id=\"三通道\">三通道</h4>\n<p>也就是通过见到的彩色图，每个像素点有三个值表示，如果图像深度是4-(256 = 2_2_2*2),那么他的像素值有红(0~255)、绿(0~255)、蓝(0~255)叠加表示，色彩更加艳丽;</p>\n<h4 id=\"四通道\">四通道</h4>\n<p>四通道：也就是在三通道图像基础上加上透明程度，Alpha色彩空间，如果图像深度是4-(256 = 2_2_2*2),那么0是完全透明，255是完全不透明；<strong>png图像是四通道。</strong></p>\n<h3 id=\"读取图片numpy的array\">读取图片（numpy的array)</h3>\n<pre><code class=\"language-python\">import matplotlib.image as mpimg\nim = mpimg.imread(fname)\n</code></pre>\n<p>读取一张200*200的png图像</p>\n<p><code>im.shape() &gt;&gt; (200, 200, 4)</code></p>\n<p>表示像素是200*200，有四个通道</p>\n<p>数组是这个样子：</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/image-20210811112058185.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>im[0]矩阵，长为200, 宽为4，自己体会一下。</p>\n<h3 id=\"显示图片\">显示图片</h3>\n<pre><code class=\"language-text\">import numpy as np\nimport matplotlib.pyplot as plt\n\nplt.imshow(arr)\n#根据像素绘制图片 origin表示渐变程度\n</code></pre>\n<h3 id=\"numpyarray-的shape属性理解\">numpy.array 的shape属性理解</h3>\n<h4 id=\"二维情况\">二维情况</h4>\n<pre><code class=\"language-python\">&gt;&gt;&gt; import numpy as np\n&gt;&gt;&gt; y = np.array([[1,2,3],[4,5,6]])\n&gt;&gt;&gt; print(y)\n[[1 2 3]\n [4 5 6]]\n&gt;&gt;&gt; print(y.shape)\n(2, 3)\n&gt;&gt;&gt; print(y.shape[0])\n2\n&gt;&gt;&gt; print(y.shape[1])\n3\n</code></pre>\n<p>可以看到y是一个两行三列的二维数组，y.shape[0]代表行数，y.shape[1]代表列数。</p>\n<h4 id=\"三维情况\">三维情况</h4>\n<pre><code class=\"language-python\">&gt;&gt;&gt; x  = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[0,1,2]],[[3,4,5],[6,7,8]]])\n&gt;&gt;&gt;&gt; print(x)\n[[[1 2 3]\n  [4 5 6]]\n\n [[7 8 9]\n  [0 1 2]]\n\n [[3 4 5]\n  [6 7 8]]]\n&gt;&gt;&gt; print(x.shape)\n(3, 2, 3)\n&gt;&gt;&gt; print(x.shape[0])\n3\n&gt;&gt;&gt; print(x.shape[1])\n2\n&gt;&gt;&gt; print(x.shape[2])\n3\n</code></pre>\n<p>可以看到x是一个包含了3个两行三列的二维数组的三维数组，x.shape[0]代表包含二维数组的个数，x.shape[1]表示二维数组的行数，x.shape[2]表示二维数组的列数。</p>\n<h4 id=\"总结\">总结</h4>\n<p>可以看到，shape[0]表示最外围的数组的维数，shape[1]表示次外围的数组的维数，数字不断增大，维数由外到内。</p>\n<blockquote>\n<p>———————————————— 版权声明：本文为CSDN博主「Lavi_qq_2910138025」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：<a href=\"https://blog.csdn.net/liuweiyuxiang/article/details/79384435\">https://blog.csdn.net/liuweiyuxiang/article/details/79384435</a></p>\n</blockquote>\n<h3 id=\"numpy的梯度函数npgradientf\">numpy的梯度函数np.gradient(f)</h3>\n<p>np.gradient(f):用于计算数组f中元素的梯度，当f为多维时，返回每个维度的梯度。</p>\n<h4 id=\"一维\">一维</h4>\n<pre><code class=\"language-python\">a = np.random.randint(0,20,(5,))&gt;&gt;array([10,  0,  7,  0, 19])\n</code></pre>\n<pre><code class=\"language-python\">np.gradient(a)&gt;&gt;array([-10. ,  -1.5,   0. ,   6. ,  19. ])\n</code></pre>\n<p>由梯度计算公式得到梯度计算结果:</p>\n<p>-10=（0-10）/1</p>\n<p>-1.5=（7-10）/2</p>\n<h4 id=\"二维\">二维</h4>\n<pre><code class=\"language-python\">c = np.random.randint(0,50,(3,5))\n&gt;&gt;array([[25, 49, 14, 13, 20],\n       [43,  6, 13, 15, 24],\n       [ 9,  2,  7,  5, 36]])\n</code></pre>\n<pre><code class=\"language-python\">np.gradient(c)\n&gt;&gt;[array([[ 18. , -43. ,  -1. ,   2. ,   4. ],\n        [ -8. , -23.5,  -3.5,  -4. ,   8. ],\n        [-34. ,  -4. ,  -6. , -10. ,  12. ]]),\n array([[ 24. ,  -5.5, -18. ,   3. ,   7. ],\n        [-37. , -15. ,   4.5,   5.5,   9. ],\n        [ -7. ,  -1. ,   1.5,  14.5,  31. ]])]\n</code></pre>\n<p>对于二维数组，任意一个元素的梯度存在两个方向，所以求得的梯度为两个数组对象，第一个数组表示最外层维度的梯度值，第二个数组表示第二层维度的梯度值。 对于n维数组，gradient函数会生成n个数组，每个数组代表元素在第n个维度的梯度变化值，梯度反应了元素的变化率，尤其是我们在进行图像，声音等数据处理，梯度有助于帮助我们发现图像和声音的边缘，在那些变化不是很平缓的地方，可以很容易的发现。</p>\n<blockquote>\n<p>———————————————— 版权声明：本文为CSDN博主「June �」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：<a href=\"https://blog.csdn.net/MachineLearner/article/details/104403097\">https://blog.csdn.net/MachineLearner/article/details/104403097</a></p>\n</blockquote>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "图像",
+      "id": "图像"
+    },
+    {
+      "level": 3,
+      "text": "位图（raster graphics)和矢量图（vector graphics)",
+      "id": "位图raster-graphics和矢量图vector-graphics"
+    },
+    {
+      "level": 3,
+      "text": "通道",
+      "id": "通道"
+    },
+    {
+      "level": 4,
+      "text": "单通道",
+      "id": "单通道"
+    },
+    {
+      "level": 4,
+      "text": "三通道",
+      "id": "三通道"
+    },
+    {
+      "level": 4,
+      "text": "四通道",
+      "id": "四通道"
+    },
+    {
+      "level": 3,
+      "text": "读取图片（numpy的array)",
+      "id": "读取图片numpy的array"
+    },
+    {
+      "level": 3,
+      "text": "显示图片",
+      "id": "显示图片"
+    },
+    {
+      "level": 3,
+      "text": "numpy.array 的shape属性理解",
+      "id": "numpyarray-的shape属性理解"
+    },
+    {
+      "level": 4,
+      "text": "二维情况",
+      "id": "二维情况"
+    },
+    {
+      "level": 4,
+      "text": "三维情况",
+      "id": "三维情况"
+    },
+    {
+      "level": 4,
+      "text": "总结",
+      "id": "总结"
+    },
+    {
+      "level": 3,
+      "text": "numpy的梯度函数np.gradient(f)",
+      "id": "numpy的梯度函数npgradientf"
+    },
+    {
+      "level": 4,
+      "text": "一维",
+      "id": "一维"
+    },
+    {
+      "level": 4,
+      "text": "二维",
+      "id": "二维"
+    }
+  ],
+  "hasMath": true
+}

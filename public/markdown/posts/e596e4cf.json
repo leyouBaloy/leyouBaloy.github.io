@@ -1,0 +1,41 @@
+{
+  "title": "Leetcode451:根据字符出现频率排序——桶排序",
+  "date": "2022-04-15T10:00:29.000Z",
+  "updatedAt": "2022-04-15T10:00:29.000Z",
+  "file": "Leetcode451_根据字符出现频率排序——桶排序.md",
+  "slug": "e596e4cf",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 453,
+  "readingTime": 2,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/sort-characters-by-frequency/\n\n\n\n## 题解\n\n### 思路\n\n用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个大写，0-9数字），所以使用桶排序是最好的选择。\n\n### 桶排序\n\n假设你对2，5，3三个数字排序，最大的数字是5，所以你拿来五个桶，从头到尾遍历这三个数字。然后把数字放在相同标号的桶里，比如第一个数字是2，就把它放在标号为2的桶里，5就放在标号为5的桶，3就放在标号为3的桶里。最后再把1号到5号桶遍历，空的跳过，就完成了排序。典型的空间换时间，当已知不会消耗很大的空间时，桶排序无非是效率最高的。\n\n具体做法如下：\n\n* 遍历字符串，统计每个字符出现的频率，同时记录最高频率maxFreq；\n\n* 创建桶，存储从 11 到 maxFreq 的每个出现频率的字符；\n\n* 按照出现频率从大到小的顺序遍历桶，对于每个出现频率，获得对应的字符，然后将每个字符按照出现频率拼接到排序后的字符串。\n\n代码：\n\n```c++\nclass Solution {\npublic:\n    string frequencySort(string s) {\n        unordered_map<char, int> mp;\n        int maxFreq = 0;\n        int length = s.size();\n        for (auto &ch : s) {\n            maxFreq = max(maxFreq, ++mp[ch]);\n        }\n        vector<string> buckets(maxFreq + 1);\n        for (auto &[ch, num] : mp) {\n            buckets[num].push_back(ch);\n        }\n        string ret;\n        for (int i = maxFreq; i > 0; i--) {\n            string &bucket = buckets[i];\n            for (auto &ch : bucket) {\n                for (int k = 0; k < i; k++) {\n                    ret.push_back(ch);\n                }\n            }\n        }\n        return ret;\n    }\n};\n\n```\n\n> 作者：LeetCode-Solution\n> 链接：https://leetcode-cn.com/problems/sort-characters-by-frequency/solution/gen-ju-zi-fu-chu-xian-pin-lu-pai-xu-by-l-zmvy/\n> 来源：力扣（LeetCode）\n> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n\n时间复杂度：O*(*n*+*k)，其中 *n* 是字符串 *s* 的长度，*k* 是字符串 *s* 包含的不同字符的个数。\n\n空间复杂度：O*(*n*+*k)\n\n\n\n\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/sort-characters-by-frequency/\">https://leetcode-cn.com/problems/sort-characters-by-frequency/</a></p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"思路\">思路</h3>\n<p>用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个大写，0-9数字），所以使用桶排序是最好的选择。</p>\n<h3 id=\"桶排序\">桶排序</h3>\n<p>假设你对2，5，3三个数字排序，最大的数字是5，所以你拿来五个桶，从头到尾遍历这三个数字。然后把数字放在相同标号的桶里，比如第一个数字是2，就把它放在标号为2的桶里，5就放在标号为5的桶，3就放在标号为3的桶里。最后再把1号到5号桶遍历，空的跳过，就完成了排序。典型的空间换时间，当已知不会消耗很大的空间时，桶排序无非是效率最高的。</p>\n<p>具体做法如下：</p>\n<ul>\n<li>\n<p>遍历字符串，统计每个字符出现的频率，同时记录最高频率maxFreq；</p>\n</li>\n<li>\n<p>创建桶，存储从 11 到 maxFreq 的每个出现频率的字符；</p>\n</li>\n<li>\n<p>按照出现频率从大到小的顺序遍历桶，对于每个出现频率，获得对应的字符，然后将每个字符按照出现频率拼接到排序后的字符串。</p>\n</li>\n</ul>\n<p>代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    string frequencySort(string s) {\n        unordered_map&lt;char, int&gt; mp;\n        int maxFreq = 0;\n        int length = s.size();\n        for (auto &amp;ch : s) {\n            maxFreq = max(maxFreq, ++mp[ch]);\n        }\n        vector&lt;string&gt; buckets(maxFreq + 1);\n        for (auto &amp;[ch, num] : mp) {\n            buckets[num].push_back(ch);\n        }\n        string ret;\n        for (int i = maxFreq; i &gt; 0; i--) {\n            string &amp;bucket = buckets[i];\n            for (auto &amp;ch : bucket) {\n                for (int k = 0; k &lt; i; k++) {\n                    ret.push_back(ch);\n                }\n            }\n        }\n        return ret;\n    }\n};\n\n</code></pre>\n<blockquote>\n<p>作者：LeetCode-Solution\n链接：<a href=\"https://leetcode-cn.com/problems/sort-characters-by-frequency/solution/gen-ju-zi-fu-chu-xian-pin-lu-pai-xu-by-l-zmvy/\">https://leetcode-cn.com/problems/sort-characters-by-frequency/solution/gen-ju-zi-fu-chu-xian-pin-lu-pai-xu-by-l-zmvy/</a>\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>\n</blockquote>\n<p>时间复杂度：O*(<em>n</em>+*k)，其中 <em>n</em> 是字符串 <em>s</em> 的长度，<em>k</em> 是字符串 <em>s</em> 包含的不同字符的个数。</p>\n<p>空间复杂度：O*(<em>n</em>+*k)</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "思路",
+      "id": "思路"
+    },
+    {
+      "level": 3,
+      "text": "桶排序",
+      "id": "桶排序"
+    }
+  ],
+  "hasMath": false
+}

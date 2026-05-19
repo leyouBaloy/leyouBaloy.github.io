@@ -1,0 +1,43 @@
+{
+  "title": "Flask+vue使用jwt验证",
+  "date": "2022-05-22T05:00:39.000Z",
+  "updatedAt": "2022-05-22T05:00:39.000Z",
+  "file": "flask+vue使用jwt验证.md",
+  "slug": "26d4ea53",
+  "categories": [
+    "技能分享",
+    "笔记"
+  ],
+  "tags": [
+    "技能分享",
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 349,
+  "readingTime": 1,
+  "body": "## 为什么要使用jwt验证？\n\njwt（json web token）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫（天猫属于淘宝的子网站），那么你需不需要重新登录呢？答案是不用，你会发现天猫。在一个站点登录后，在其它子站点就不需要重复登录，这就是单点登录。\n\n传统的方法用session解决，session保存在服务端，记录用户的登录信息。然而像淘宝这种大型网站往往有多个服务器，服务器之间需要session共享才能实现上述功能。\n\njwt能较好解决这个问题。用户登录完成后，由服务端签发一个token，包含了用户登录信息，过期时间等等。然后把它加密发给用户，用户下次请求的时候把它放在请求头传给服务端，服务端经过愉快的解密就可以知道用户已经登录啦！\n\n在我的小项目当中，用户登录只需要密码，用session不好处理，所以也采用了jwt验证方法。\n\n## Flask后端代码\n\n```shell\npip install pyjwt\n```\n\n```python\nimport jwt\napp.secret_key = b'secret_key'\n\n@app.route(\"/login\", methods=[\"POST\"])\ndef login():\n    if request.method == 'POST':\n        print(\"password\",request.json['password'])\n        token = jwt.encode({'exp': datetime.now(tz=timezone.utc) + timedelta(seconds=3600), 'password':request.json['password']}, current_app.config['SECRET_KEY'], algorithm=\"HS256\") # 生成token\n        print(token)\n        return jsonify(err=\"已生成token\", token=token)\n\n# 装饰器函数\ndef login_required(func):\n    @functools.wraps(func) # 修饰内层函数，防止当前装饰器去修改被装饰函数的属性\n    def inner(*args, **kwargs):\n        print(\"token\",request.headers.get('token'),type(request.headers.get('token')))\n        if request.headers.get('token')!='null':\n            password = jwt.decode(request.headers.get('token'), current_app.config['SECRET_KEY'], algorithms=\"HS256\")['password']\n            # print(password)\n            if password == '123':\n                return func(*args, **kwargs)\n            else:\n                return jsonify(err=\"无效token\")\n        else:\n            return jsonify(err=\"请输入密码\")\n    return inner\n```\n\n## Vue前端代码\n\n前端需要用到cookies，把token保存在浏览器里\n\n```shell\nnpm install vue-cookies --save\n```\n\nmain.js\n\n```js\nimport VueCookies from 'vue-cookies'\nVue.use(VueCookies)\n```\n\napp.js\n\n```js\ncreated(){\n      // 设置cookies 30天后过期\n      this.$cookies.config('30d')\n\n      // window object\n      window.$cookies.config('30d')\n      \n    }\n```\n\n保存token到cookies里\n\n```js\nrequest.post('/login',{\"password\":value}).then(res=>{\n            that.$cookies.set(\"token\",res['token'])}\n```\n\n在请求头里携带token发送请求\n\n```js\nrequest.post(\"/submit_edit\",  this.form, {headers:{token: this.$cookies.get('token')}})\n```\n\n",
+  "html": "<h2 id=\"为什么要使用jwt验证\">为什么要使用jwt验证？</h2>\n<p>jwt（json web token）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫（天猫属于淘宝的子网站），那么你需不需要重新登录呢？答案是不用，你会发现天猫。在一个站点登录后，在其它子站点就不需要重复登录，这就是单点登录。</p>\n<p>传统的方法用session解决，session保存在服务端，记录用户的登录信息。然而像淘宝这种大型网站往往有多个服务器，服务器之间需要session共享才能实现上述功能。</p>\n<p>jwt能较好解决这个问题。用户登录完成后，由服务端签发一个token，包含了用户登录信息，过期时间等等。然后把它加密发给用户，用户下次请求的时候把它放在请求头传给服务端，服务端经过愉快的解密就可以知道用户已经登录啦！</p>\n<p>在我的小项目当中，用户登录只需要密码，用session不好处理，所以也采用了jwt验证方法。</p>\n<h2 id=\"flask后端代码\">Flask后端代码</h2>\n<pre><code class=\"language-shell\">pip install pyjwt\n</code></pre>\n<pre><code class=\"language-python\">import jwt\napp.secret_key = b'secret_key'\n\n@app.route(&quot;/login&quot;, methods=[&quot;POST&quot;])\ndef login():\n    if request.method == 'POST':\n        print(&quot;password&quot;,request.json['password'])\n        token = jwt.encode({'exp': datetime.now(tz=timezone.utc) + timedelta(seconds=3600), 'password':request.json['password']}, current_app.config['SECRET_KEY'], algorithm=&quot;HS256&quot;) # 生成token\n        print(token)\n        return jsonify(err=&quot;已生成token&quot;, token=token)\n\n# 装饰器函数\ndef login_required(func):\n    @functools.wraps(func) # 修饰内层函数，防止当前装饰器去修改被装饰函数的属性\n    def inner(*args, **kwargs):\n        print(&quot;token&quot;,request.headers.get('token'),type(request.headers.get('token')))\n        if request.headers.get('token')!='null':\n            password = jwt.decode(request.headers.get('token'), current_app.config['SECRET_KEY'], algorithms=&quot;HS256&quot;)['password']\n            # print(password)\n            if password == '123':\n                return func(*args, **kwargs)\n            else:\n                return jsonify(err=&quot;无效token&quot;)\n        else:\n            return jsonify(err=&quot;请输入密码&quot;)\n    return inner\n</code></pre>\n<h2 id=\"vue前端代码\">Vue前端代码</h2>\n<p>前端需要用到cookies，把token保存在浏览器里</p>\n<pre><code class=\"language-shell\">npm install vue-cookies --save\n</code></pre>\n<p>main.js</p>\n<pre><code class=\"language-js\">import VueCookies from 'vue-cookies'\nVue.use(VueCookies)\n</code></pre>\n<p>app.js</p>\n<pre><code class=\"language-js\">created(){\n      // 设置cookies 30天后过期\n      this.$cookies.config('30d')\n\n      // window object\n      window.$cookies.config('30d')\n      \n    }\n</code></pre>\n<p>保存token到cookies里</p>\n<pre><code class=\"language-js\">request.post('/login',{&quot;password&quot;:value}).then(res=&gt;{\n            that.$cookies.set(&quot;token&quot;,res['token'])}\n</code></pre>\n<p>在请求头里携带token发送请求</p>\n<pre><code class=\"language-js\">request.post(&quot;/submit_edit&quot;,  this.form, {headers:{token: this.$cookies.get('token')}})\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "为什么要使用jwt验证？",
+      "id": "为什么要使用jwt验证"
+    },
+    {
+      "level": 2,
+      "text": "Flask后端代码",
+      "id": "flask后端代码"
+    },
+    {
+      "level": 1,
+      "text": "装饰器函数",
+      "id": "装饰器函数"
+    },
+    {
+      "level": 2,
+      "text": "Vue前端代码",
+      "id": "vue前端代码"
+    }
+  ],
+  "hasMath": true
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Leetcode821:字符的最短距离——两次遍历",
+  "date": "2022-04-19T08:45:09.000Z",
+  "updatedAt": "2022-04-19T08:45:09.000Z",
+  "file": "Leetcode821_字符的最短距离——两次遍历.md",
+  "slug": "0690f1e1",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 162,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/shortest-distance-to-a-character/\n\n## 题解\n\n### 遍历k次，取最小\n\n思路：创建结果数组`v`，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍`s`，记录下每个`c`的位置`ci`。然后对于每个`ci`遍历一次`s`，如果`abs(ci-当前位置) < v[i]`，那么就令`v[i] = ci`。最后得到的答案就是距离最近的。\n\n代码：\n\n```c++\nclass Solution {\npublic:\n    vector<int> shortestToChar(string s, char c) {\n        int size = s.size();\n        vector<int> v(size, size+1);\n        vector<int> cv;\n        for(int i=0;i<size;i++){\n            if(s[i]==c){\n                cv.push_back(i);\n            }\n        }\n        // cout << \"cv:\";\n        // for(int i=0;i<cv.size();i++){\n        //     cout << cv[i] << \",\";\n        // }\n        for(const int& ccv:cv){\n            for(int j=0;j<size;j++){\n                if(abs(ccv-j)<v[j]){\n                    v[j]=abs(ccv-j);\n                }\n            }\n        }\n        return v;\n\n    }\n};\n```\n\n如果有k个c，那么就要遍历k+1遍。时间复杂度O((k+1)*n)。空间复杂度O(1)，返回数组不计入。\n\n### 两次遍历\n\n事实上，只需要两次遍历，一次从左到右遍历`s`，若 s[i]=c 则记录下此时字符 c 的的下标 idx。遍历的同时更新 answer[i]=i-idx。\n\n从右往左遍历 s，若 s[i]=c 则记录下此时字符 c 的的下标 idx。遍历的同时更新 answer[i]=min(answer[i],idx−i)。\n\n代码实现时，在开始遍历的时候 idx 可能不存在，为了简化逻辑，我们可以用 −n 或 2n 表示，这里 n 是 s 的长度。\n\n代码：\n\n```c++\nclass Solution {\npublic:\n    vector<int> shortestToChar(string s, char c) {\n        int n = s.length();\n        vector<int> ans(n);\n\n        for (int i = 0, idx = -n; i < n; ++i) {\n            if (s[i] == c) {\n                idx = i;\n            }\n            ans[i] = i - idx;\n        }\n\n        for (int i = n - 1, idx = 2 * n; i >= 0; --i) {\n            if (s[i] == c) {\n                idx = i;\n            }\n            ans[i] = min(ans[i], idx - i);\n        }\n        return ans;\n    }\n};\n```\n\n\n\n> 作者：LeetCode-Solution\n> 链接：https://leetcode-cn.com/problems/shortest-distance-to-a-character/solution/zi-fu-de-zui-duan-ju-chi-by-leetcode-sol-2t49/\n> 来源：力扣（LeetCode）\n> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n\n虽然是道简单题，但我还是被秀了一脸。\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/shortest-distance-to-a-character/\">https://leetcode-cn.com/problems/shortest-distance-to-a-character/</a></p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"遍历k次取最小\">遍历k次，取最小</h3>\n<p>思路：创建结果数组<code>v</code>，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍<code>s</code>，记录下每个<code>c</code>的位置<code>ci</code>。然后对于每个<code>ci</code>遍历一次<code>s</code>，如果<code>abs(ci-当前位置) &lt; v[i]</code>，那么就令<code>v[i] = ci</code>。最后得到的答案就是距离最近的。</p>\n<p>代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    vector&lt;int&gt; shortestToChar(string s, char c) {\n        int size = s.size();\n        vector&lt;int&gt; v(size, size+1);\n        vector&lt;int&gt; cv;\n        for(int i=0;i&lt;size;i++){\n            if(s[i]==c){\n                cv.push_back(i);\n            }\n        }\n        // cout &lt;&lt; &quot;cv:&quot;;\n        // for(int i=0;i&lt;cv.size();i++){\n        //     cout &lt;&lt; cv[i] &lt;&lt; &quot;,&quot;;\n        // }\n        for(const int&amp; ccv:cv){\n            for(int j=0;j&lt;size;j++){\n                if(abs(ccv-j)&lt;v[j]){\n                    v[j]=abs(ccv-j);\n                }\n            }\n        }\n        return v;\n\n    }\n};\n</code></pre>\n<p>如果有k个c，那么就要遍历k+1遍。时间复杂度O((k+1)*n)。空间复杂度O(1)，返回数组不计入。</p>\n<h3 id=\"两次遍历\">两次遍历</h3>\n<p>事实上，只需要两次遍历，一次从左到右遍历<code>s</code>，若 s[i]=c 则记录下此时字符 c 的的下标 idx。遍历的同时更新 answer[i]=i-idx。</p>\n<p>从右往左遍历 s，若 s[i]=c 则记录下此时字符 c 的的下标 idx。遍历的同时更新 answer[i]=min(answer[i],idx−i)。</p>\n<p>代码实现时，在开始遍历的时候 idx 可能不存在，为了简化逻辑，我们可以用 −n 或 2n 表示，这里 n 是 s 的长度。</p>\n<p>代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    vector&lt;int&gt; shortestToChar(string s, char c) {\n        int n = s.length();\n        vector&lt;int&gt; ans(n);\n\n        for (int i = 0, idx = -n; i &lt; n; ++i) {\n            if (s[i] == c) {\n                idx = i;\n            }\n            ans[i] = i - idx;\n        }\n\n        for (int i = n - 1, idx = 2 * n; i &gt;= 0; --i) {\n            if (s[i] == c) {\n                idx = i;\n            }\n            ans[i] = min(ans[i], idx - i);\n        }\n        return ans;\n    }\n};\n</code></pre>\n<blockquote>\n<p>作者：LeetCode-Solution\n链接：<a href=\"https://leetcode-cn.com/problems/shortest-distance-to-a-character/solution/zi-fu-de-zui-duan-ju-chi-by-leetcode-sol-2t49/\">https://leetcode-cn.com/problems/shortest-distance-to-a-character/solution/zi-fu-de-zui-duan-ju-chi-by-leetcode-sol-2t49/</a>\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>\n</blockquote>\n<p>虽然是道简单题，但我还是被秀了一脸。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "遍历k次，取最小",
+      "id": "遍历k次取最小"
+    },
+    {
+      "level": 3,
+      "text": "两次遍历",
+      "id": "两次遍历"
+    }
+  ],
+  "hasMath": false
+}

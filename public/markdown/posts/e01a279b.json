@@ -1,0 +1,26 @@
+{
+  "title": "对称字符串处理",
+  "date": "2020-11-27T08:45:18.000Z",
+  "updatedAt": "2020-11-27T08:45:18.000Z",
+  "file": "对称字符串处理.md",
+  "slug": "e01a279b",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 282,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n某某国王（不是萨拉克门托！）有一个神奇的魔镜，它可以把东西变为原来的两倍(可惜是反的)。某日，他感到很无聊，于是把皇后的一串珠子变了不知道几次，皇后回来之后不是很高兴，她还是喜欢原来那串珠子，现在告诉你改变之后珠子的形状，请你告诉她，原来的珠子是什么样子的。\n\n【输入】\n\n输入有多组测试用例，每组一行，每行一串字符，表示现在的珠串，长度小于100。\n\n【输出】\n\n输出对应有多行，每行输出原来的珠串。\n\nFor example:\n\nInput\n\nResult\n\n1232232112322321  \n121121  \nabba\n\n1232  \n121  \nab\n\n## Answer:(penalty regime: 20 %)\n\n```\n#include <iostream>\n#include <cstring>\n#include <string>\nusing namespace std;\n\nbool myfun(string &s)\n{\n    int beg = 0;\n    int end = s.size()-1;\n    while(beg < end)\n    {\n        if(s[beg] != s[end])\n        {\n            return false;\n        }\n        beg++;\n        end--;\n    }\n    return true;\n}\n\nint main()\n{\n    string s;\n    while(cin >> s)\n    {\n\n\n        while(myfun(s) && s.size()%2==0)\n            s = s.substr(0,s.size()/2);\n        cout << s << endl;\n    }\n    return 0;\n}\n```\n\n搞了老久了妈的\n\n没想到，c++的string字符串中的单个字符也可以通过s\\[\\]的形式来访问，发现了新大陆，感觉还是蛮方便的；\n\n这题的算法很巧妙，当然不是我想出来的，参考[https://blog.csdn.net/jacketinsysu/article/details/38335453](https://blog.csdn.net/jacketinsysu/article/details/38335453)；\n\nt=s.substr(a,b)是将s中的从a开始的b个元素复制到t中；",
+  "html": "<p>【题目描述】</p>\n<p>某某国王（不是萨拉克门托！）有一个神奇的魔镜，它可以把东西变为原来的两倍(可惜是反的)。某日，他感到很无聊，于是把皇后的一串珠子变了不知道几次，皇后回来之后不是很高兴，她还是喜欢原来那串珠子，现在告诉你改变之后珠子的形状，请你告诉她，原来的珠子是什么样子的。</p>\n<p>【输入】</p>\n<p>输入有多组测试用例，每组一行，每行一串字符，表示现在的珠串，长度小于100。</p>\n<p>【输出】</p>\n<p>输出对应有多行，每行输出原来的珠串。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>1232232112322321<br>\n121121<br>\nabba</p>\n<p>1232<br>\n121<br>\nab</p>\n<h2 id=\"answerpenalty-regime-20\">Answer:(penalty regime: 20 %)</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include &lt;cstring&gt;\n#include &lt;string&gt;\nusing namespace std;\n\nbool myfun(string &amp;s)\n{\n    int beg = 0;\n    int end = s.size()-1;\n    while(beg &lt; end)\n    {\n        if(s[beg] != s[end])\n        {\n            return false;\n        }\n        beg++;\n        end--;\n    }\n    return true;\n}\n\nint main()\n{\n    string s;\n    while(cin &gt;&gt; s)\n    {\n\n\n        while(myfun(s) &amp;&amp; s.size()%2==0)\n            s = s.substr(0,s.size()/2);\n        cout &lt;&lt; s &lt;&lt; endl;\n    }\n    return 0;\n}\n</code></pre>\n<p>搞了老久了妈的</p>\n<p>没想到，c++的string字符串中的单个字符也可以通过s[]的形式来访问，发现了新大陆，感觉还是蛮方便的；</p>\n<p>这题的算法很巧妙，当然不是我想出来的，参考<a href=\"https://blog.csdn.net/jacketinsysu/article/details/38335453\">https://blog.csdn.net/jacketinsysu/article/details/38335453</a>；</p>\n<p>t=s.substr(a,b)是将s中的从a开始的b个元素复制到t中；</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Answer:(penalty regime: 20 %)",
+      "id": "answerpenalty-regime-20"
+    }
+  ],
+  "hasMath": false
+}

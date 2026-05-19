@@ -1,0 +1,26 @@
+{
+  "title": "统计字符串中字符出现的个数-int与char类型的转换",
+  "date": "2020-11-05T16:31:07.000Z",
+  "updatedAt": "2020-11-05T16:31:07.000Z",
+  "file": "统计字符串中字符出现的个数-int与char类型的转换.md",
+  "slug": "0dc727b2",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 109,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n从键盘输入一行文本，统计其中数字字符‘0’~‘9’出现的频率并输出。没出现的不需要输出。\n\n【输入格式】\n\n一行文本，长度不超过1000。\n\n【输出格式】\n\n按照从0到9顺序输出统计结果。每个数字的信息占一行，如“0:2”表示数字字符0出现了2次。\n\nFor example:\n\nInput\n\nResult\n\nHello No 007.\n\n0:2  \n7:1\n\n## Answer\n\n```\n#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n    char a[9999];\n    int i,j,cnt;\n    \n    //输入部分\n    cin.getline(a,9999);\n    \n    //处理部分\n    for(i=0;i<10;i++) \n    {\n        cnt = 0;\n        char x;\n        x = i + '0';  //这里将i的值从int类型变成char类型，存入x中，不能再存回i中，因为i的类型为int\n        for(j=0;a[j]!='\\0';j++)\n        {\n\n            if(a[j] == x)\n            {\n                cnt++;\n            }\n        }\n        \n        //输出部分\n        if(cnt != 0)\n        {\n            cout << x << ':'<<cnt<<endl;\n        }\n    }\n\n\n    return 0;\n}\n```",
+  "html": "<p>【题目描述】</p>\n<p>从键盘输入一行文本，统计其中数字字符‘0’~‘9’出现的频率并输出。没出现的不需要输出。</p>\n<p>【输入格式】</p>\n<p>一行文本，长度不超过1000。</p>\n<p>【输出格式】</p>\n<p>按照从0到9顺序输出统计结果。每个数字的信息占一行，如“0:2”表示数字字符0出现了2次。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>Hello No 007.</p>\n<p>0:2<br>\n7:1</p>\n<h2 id=\"answer\">Answer</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n\nusing namespace std;\n\nint main()\n{\n    char a[9999];\n    int i,j,cnt;\n    \n    //输入部分\n    cin.getline(a,9999);\n    \n    //处理部分\n    for(i=0;i&lt;10;i++) \n    {\n        cnt = 0;\n        char x;\n        x = i + '0';  //这里将i的值从int类型变成char类型，存入x中，不能再存回i中，因为i的类型为int\n        for(j=0;a[j]!='\\0';j++)\n        {\n\n            if(a[j] == x)\n            {\n                cnt++;\n            }\n        }\n        \n        //输出部分\n        if(cnt != 0)\n        {\n            cout &lt;&lt; x &lt;&lt; ':'&lt;&lt;cnt&lt;&lt;endl;\n        }\n    }\n\n\n    return 0;\n}\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Answer",
+      "id": "answer"
+    }
+  ],
+  "hasMath": false
+}

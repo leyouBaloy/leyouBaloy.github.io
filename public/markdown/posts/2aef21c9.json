@@ -1,0 +1,26 @@
+{
+  "title": "浏览器不支持getUserMedia",
+  "date": "2021-09-23T15:58:12.000Z",
+  "updatedAt": "2021-09-23T15:58:12.000Z",
+  "file": "浏览器不支持getUserMedia.md",
+  "slug": "2aef21c9",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 105,
+  "readingTime": 1,
+  "body": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,[http://localhost](http://localhost)，\n\n### 解决方法\n\nchrome\n\n地址栏输入：chrome://flags/#unsafely-treat-insecure-origin-as-secure\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/chromegetmedia-1024x570.png)\n\n然后就ok了",
+  "html": "<p>现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,<a href=\"http://localhost\">http://localhost</a>，</p>\n<h3 id=\"解决方法\">解决方法</h3>\n<p>chrome</p>\n<p>地址栏输入：chrome://flags/#unsafely-treat-insecure-origin-as-secure</p>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/chromegetmedia-1024x570.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<p>然后就ok了</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "解决方法",
+      "id": "解决方法"
+    }
+  ],
+  "hasMath": false
+}

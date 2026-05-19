@@ -1,0 +1,36 @@
+{
+  "title": "Python-洗牌算法",
+  "date": "2020-10-11T16:11:03.000Z",
+  "updatedAt": "2020-10-11T16:11:03.000Z",
+  "file": "Python-洗牌算法.md",
+  "slug": "6c7a9fd6",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 99,
+  "readingTime": 1,
+  "body": "原理在这[https://www.bilibili.com/video/BV1k7411q7jo](https://www.bilibili.com/video/BV1k7411q7jo)\n\n## 倒序写法\n\n```\nimport random\ndef shuffle(lis):\n    for i in range(len(lis) -1,0,-1):\n        p = random.randrange(0,i+1)\n        lis[i],lis[p] = lis[p],lis[i]\n    return lis\n```\n\n*   这里在random库下定义了一个函数shuffle\n*   之所以是i+1是因为random.randrange()是左闭右开的，不包括i+1\n\n```\nlst = [1,2,2,3,3,4,5,10]\nrandom.shuffle(lst)\nprint(lst)\n```\n\n*   每次运行这段代码结果应该都是不一样的\n\n## 正序写法\n\n```\nimport random\ndef shuffle(lis):\n    for i in range(0,len(lis) -1,1):\n        p = random.randrange(i,len(lis)+1)\n        lis[i],lis[p] = lis[p],lis[i]\n    return lis\n```\n\n```\nlst = [1,2,2,3,3,4,5,10]\nrandom.shuffle(lst)\nprint(lst)\n```\n\n### 实际上在random库中本事提供了这样的函数\n\n这样直接写也是可以的\n\n```\nimport random\nlst = [1,2,2,3,3,4,5,10]\nrandom.shuffle(lst)\nprint(lst)\n```",
+  "html": "<p>原理在这<a href=\"https://www.bilibili.com/video/BV1k7411q7jo\">https://www.bilibili.com/video/BV1k7411q7jo</a></p>\n<h2 id=\"倒序写法\">倒序写法</h2>\n<pre><code class=\"language-text\">import random\ndef shuffle(lis):\n    for i in range(len(lis) -1,0,-1):\n        p = random.randrange(0,i+1)\n        lis[i],lis[p] = lis[p],lis[i]\n    return lis\n</code></pre>\n<ul>\n<li>这里在random库下定义了一个函数shuffle</li>\n<li>之所以是i+1是因为random.randrange()是左闭右开的，不包括i+1</li>\n</ul>\n<pre><code class=\"language-text\">lst = [1,2,2,3,3,4,5,10]\nrandom.shuffle(lst)\nprint(lst)\n</code></pre>\n<ul>\n<li>每次运行这段代码结果应该都是不一样的</li>\n</ul>\n<h2 id=\"正序写法\">正序写法</h2>\n<pre><code class=\"language-text\">import random\ndef shuffle(lis):\n    for i in range(0,len(lis) -1,1):\n        p = random.randrange(i,len(lis)+1)\n        lis[i],lis[p] = lis[p],lis[i]\n    return lis\n</code></pre>\n<pre><code class=\"language-text\">lst = [1,2,2,3,3,4,5,10]\nrandom.shuffle(lst)\nprint(lst)\n</code></pre>\n<h3 id=\"实际上在random库中本事提供了这样的函数\">实际上在random库中本事提供了这样的函数</h3>\n<p>这样直接写也是可以的</p>\n<pre><code class=\"language-text\">import random\nlst = [1,2,2,3,3,4,5,10]\nrandom.shuffle(lst)\nprint(lst)\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "倒序写法",
+      "id": "倒序写法"
+    },
+    {
+      "level": 2,
+      "text": "正序写法",
+      "id": "正序写法"
+    },
+    {
+      "level": 3,
+      "text": "实际上在random库中本事提供了这样的函数",
+      "id": "实际上在random库中本事提供了这样的函数"
+    }
+  ],
+  "hasMath": false
+}

@@ -1,8 +1,25 @@
 <!-- MarkdownRenderer.vue -->
 <template>
   <div class="article" ref="articleRef">
+    <template v-if="isLoading && !hasArticleContent">
+      <div class="article-skeleton" aria-live="polite" aria-label="文章正在加载">
+        <div class="skeleton-line skeleton-title"></div>
+        <div class="skeleton-line skeleton-meta"></div>
+        <div class="skeleton-actions">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="skeleton-line skeleton-body wide"></div>
+        <div class="skeleton-line skeleton-body"></div>
+        <div class="skeleton-line skeleton-body medium"></div>
+        <p class="loading-copy">文章内容加载中...</p>
+      </div>
+    </template>
+
+    <template v-else>
     <h1 class="title">{{ metaData.title }}</h1>
-    <div class="metadata">
+    <div v-if="metaData.title" class="metadata">
       <n-icon size="13">
         <CalendarOutline />
       </n-icon>
@@ -25,26 +42,29 @@
       <button class="share-btn" @click="nativeShare">系统分享</button>
     </div>
     <div class="md" ref="mdRef">
-      <component :is="renderedContent" />
+      <component v-if="renderedContent" :is="renderedContent" />
+      <div v-else-if="renderedHtml" v-html="renderedHtml"></div>
+      <div v-else-if="loadError" class="article-error" role="alert">
+        <strong>文章加载失败</strong>
+        <span>请稍后刷新页面，或检查当前网络连接。</span>
+        <button type="button" class="retry-btn" @click="loadMarkdown">重新加载</button>
+      </div>
     </div>
+    </template>
   </div>
 </template>
 
 <script setup>
-import { computed, ref, onMounted, h, Fragment, nextTick } from 'vue';
-import axios from 'axios';
-import frontMatter from 'front-matter';
-import { NIcon, NImage } from 'naive-ui';
+import { computed, defineAsyncComponent, ref, onMounted, onServerPrefetch, h, Fragment, nextTick } from 'vue';
+import { NIcon } from 'naive-ui';
 import { CalendarOutline, ArchiveOutline } from '@vicons/ionicons5';
-import MarkdownIt from 'markdown-it';
 import { markRaw } from 'vue';
-import texmath from 'markdown-it-texmath'; // 导入公式渲染插件
-import 'katex/dist/katex.min.css'; // 导入公式渲染样式
-import katex from 'katex'; // 导入 katex
-import CodeBlock from './CodeBlock.vue'; // 导入代码块组件
+import { getPostPayload } from '@/utils/postData';
+
+const CodeBlock = defineAsyncComponent(() => import('./CodeBlock.vue'));
 
 const props = defineProps({
-  filename: {
+  slug: {
     type: String
   }
 });
@@ -53,13 +73,18 @@ const emit = defineEmits(['headings-ready', 'metadata-ready']);
 
 const metaData = ref({});
 const renderedContent = ref();
+const renderedHtml = ref('');
 const articleRef = ref(null);
 const mdRef = ref(null);
 const copyText = ref('复制链接');
+const isLoading = ref(false);
+const loadError = ref(null);
+
+const hasArticleContent = computed(() => Boolean(renderedContent.value || renderedHtml.value));
 
 const formatDate = (date) => {
   if (!date) return '';
-  return new Date(date).toLocaleDateString();
+  return new Date(date).toLocaleDateString('zh-CN');
 };
 
 const isOutdated = computed(() => {
@@ -93,48 +118,74 @@ const extractHeadings = (markdown) => {
   return headings;
 };
 
-const stripMarkdown = (content) => {
-  return content
-    .replace(/```[\s\S]*?```/g, ' ')
-    .replace(/`([^`]+)`/g, '$1')
-    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
-    .replace(/\[([^\]]+)]\([^)]*\)/g, '$1')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/[#>*_\-|~]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+const hasMathContent = (content) => {
+  return /(^|[^\\])\$\$[\s\S]+?\$\$/.test(content)
+    || /(^|[^\\])\$[^\s$][\s\S]*?[^\s\\]\$/.test(content)
+    || /\\\([\s\S]+?\\\)/.test(content)
+    || /\\\[[\s\S]+?\\\]/.test(content);
 };
 
-const countWords = (content) => {
-  const chineseChars = content.match(/[\u4e00-\u9fa5]/g) || [];
-  const latinWords = content
-    .replace(/[\u4e00-\u9fa5]/g, ' ')
-    .match(/[A-Za-z0-9]+(?:[-_][A-Za-z0-9]+)*/g) || [];
-  return chineseChars.length + latinWords.length;
-};
-
-const md = new MarkdownIt({
-  html: true,
-  xhtmlOut: false,
-  breaks: false,
-  linkify: true,
-  typographer: true,
-  highlight: function (str, lang) {
-    // 只需要设置语言类名，实际高亮由 CodeBlock 组件处理
-    const escaped = md.utils.escapeHtml(str);
-    if (lang) {
-      return '<pre><code class="language-' + lang + '">' + escaped + '</code></pre>';
+const createMarkdownRenderer = async (content) => {
+  const { default: MarkdownIt } = await import('markdown-it');
+  const md = new MarkdownIt({
+    html: true,
+    xhtmlOut: false,
+    breaks: false,
+    linkify: true,
+    typographer: true,
+    highlight: function (str, lang) {
+      // 只需要设置语言类名，实际高亮由 CodeBlock 组件处理
+      const escaped = md.utils.escapeHtml(str);
+      if (lang) {
+        return '<pre><code class="language-' + lang + '">' + escaped + '</code></pre>';
+      }
+      return '<pre><code class="language-text">' + escaped + '</code></pre>';
     }
-    return '<pre><code class="language-text">' + escaped + '</code></pre>';
+  });
+
+  const defaultHeadingOpen = md.renderer.rules.heading_open || ((tokens, idx, options, env, self) => {
+    return self.renderToken(tokens, idx, options);
+  });
+  md.renderer.rules.heading_open = (tokens, idx, options, env, self) => {
+    const nextToken = tokens[idx + 1];
+    const text = nextToken?.type === 'inline' ? nextToken.content : '';
+    if (text) {
+      tokens[idx].attrSet('id', slugify(text));
+    }
+    return defaultHeadingOpen(tokens, idx, options, env, self);
+  };
+
+  if (hasMathContent(content)) {
+    const [{ default: texmath }, katex] = await Promise.all([
+      import('markdown-it-texmath'),
+      import('katex'),
+      import('katex/dist/katex.min.css')
+    ]);
+
+    md.use(texmath, {
+      engine: katex.default || katex,
+      delimiters: ['dollars', 'brackets'], // 支持 $ 和 \( \) 语法
+      katexOptions: {
+        throwOnError: false,
+        errorColor: '#cc0000'
+      }
+    });
   }
-}).use(texmath, {
-  engine: katex,
-  delimiters: ['dollars', 'brackets'], // 支持 $ 和 \( \) 语法
-  katexOptions: {
-    throwOnError: false,
-    errorColor: '#cc0000'
+
+  return md;
+};
+
+const renderPostHtml = async (post, body) => {
+  if (post.html) {
+    if (post.hasMath) {
+      await import('katex/dist/katex.min.css');
+    }
+    return post.html;
   }
-});
+
+  const md = await createMarkdownRenderer(body);
+  return md.render(body);
+};
 
 const getArticleUrl = () => {
   if (typeof window === 'undefined') return '';
@@ -231,7 +282,7 @@ const renderVNode = (nodes) => {
       if (tagName === 'img') {
         const isInTable = isInsideTable(node);
 
-        return h(NImage, {
+        return h('img', {
           style: {
             maxWidth: isInTable ? '120px' : '100%',
             maxHeight: isInTable ? '80px' : 'auto',
@@ -246,9 +297,8 @@ const renderVNode = (nodes) => {
           },
           src: node.getAttribute('src'),
           alt: node.getAttribute('alt'),
-          previewSrc: node.getAttribute('src'),
-          showToolbar: true,
-          showToolbarTooltip: true
+          loading: 'lazy',
+          decoding: 'async'
         });
       }
 
@@ -359,31 +409,46 @@ const parseStyleString = (styleString) => {
   return styles;
 };
 
-const loadMarkdown = async () => {
+const loadMarkdown = async (options = {}) => {
+  const { showPending = true } = options;
+  if (!props.slug) return;
+  if (showPending && !hasArticleContent.value) {
+    isLoading.value = true;
+  }
+  loadError.value = null;
   try {
-    const response = await axios.get(`/markdown/${props.filename}`);
-    const { attributes, body } = frontMatter(response.data);
-    const categories = Array.isArray(attributes.categories)
-      ? attributes.categories
-      : (attributes.categories ? [attributes.categories] : []);
-    const tags = Array.isArray(attributes.tags)
-      ? attributes.tags
-      : (attributes.tags ? [attributes.tags] : []);
+    const post = await getPostPayload(props.slug);
+    const body = post.body || '';
+    const categories = Array.isArray(post.categories)
+      ? post.categories
+      : (post.categories ? [post.categories] : []);
+    const tags = Array.isArray(post.tags)
+      ? post.tags
+      : (post.tags ? [post.tags] : []);
     const displayTags = categories.length ? categories : tags;
-    attributes.date = formatDate(attributes.date);
-    attributes.updatedAt = formatDate(attributes.updatedAt || attributes.updated || attributes.date);
-    attributes.categories = displayTags.length ? displayTags.join(', ') : '未分类';
-    attributes.tags = displayTags;
-    attributes.file = props.filename;
-    const wordCount = countWords(stripMarkdown(body));
-    attributes.wordCount = attributes.wordCount || wordCount;
-    attributes.readingTime = attributes.readingTime || Math.max(1, Math.ceil(wordCount / 400));
+    const attributes = {
+      ...post,
+      date: formatDate(post.date),
+      updatedAt: formatDate(post.updatedAt || post.updated || post.date),
+      categories: displayTags.length ? displayTags.join(', ') : '未分类',
+      tags: displayTags
+    };
     metaData.value = attributes;
 
-    // 提取 headings
-    const headings = extractHeadings(body);
+    const headings = Array.isArray(post.headings) ? post.headings : extractHeadings(body);
+    const html = await renderPostHtml(post, body);
+    renderedHtml.value = html;
 
-    const html = md.render(body);
+    emit('headings-ready', headings.map(h => ({
+      ...h,
+      id: slugify(h.text)
+    })));
+    emit('metadata-ready', metaData.value);
+
+    if (typeof document === 'undefined') {
+      return;
+    }
+
     const div = document.createElement('div');
     div.innerHTML = html;
     renderedContent.value = markRaw(renderVNode(div.childNodes));
@@ -399,21 +464,19 @@ const loadMarkdown = async () => {
         el.id = id;
       });
 
-      // 更新 headings 列表中的 id（确保和 DOM 一致）
-      const updatedHeadings = headings.map(h => ({
-        ...h,
-        id: slugify(h.text)
-      }));
-
-      // emit 给父组件
-      emit('headings-ready', updatedHeadings);
-      emit('metadata-ready', metaData.value);
     }
   } catch (error) {
+    loadError.value = error;
+    metaData.value = {};
+    renderedContent.value = null;
+    renderedHtml.value = '';
     console.error('Error loading markdown file:', error);
+  } finally {
+    isLoading.value = false;
   }
 };
 
+onServerPrefetch(() => loadMarkdown({ showPending: false }));
 onMounted(loadMarkdown);
 </script>
 
@@ -502,6 +565,133 @@ onMounted(loadMarkdown);
 .md {
   width: 100%;
   box-sizing: border-box;
+}
+
+.article-skeleton {
+  width: 100%;
+  padding-top: 76px;
+  text-align: center;
+}
+
+.skeleton-line,
+.skeleton-actions span {
+  display: block;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #edf2f7 25%, #f8fafc 37%, #edf2f7 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+}
+
+.skeleton-title {
+  width: min(56%, 340px);
+  height: 36px;
+  margin: 0 auto 18px;
+}
+
+.skeleton-meta {
+  width: min(72%, 460px);
+  height: 18px;
+  margin: 0 auto 24px;
+}
+
+.skeleton-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.skeleton-actions span {
+  width: 76px;
+  height: 34px;
+}
+
+.skeleton-body {
+  width: 92%;
+  height: 18px;
+  margin: 0 auto 14px;
+}
+
+.skeleton-body.wide {
+  width: 100%;
+}
+
+.skeleton-body.medium {
+  width: 64%;
+}
+
+.loading-copy {
+  margin-top: 18px;
+  color: #73828c;
+  font-size: 14px;
+}
+
+.article-error {
+  width: 100%;
+  margin: 80px auto 40px;
+  padding: 18px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff7f7;
+  color: #991b1b;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.article-error span {
+  color: #7f1d1d;
+  font-size: 14px;
+}
+
+.retry-btn {
+  margin-top: 4px;
+  border: 1px solid #fca5a5;
+  background: #fff;
+  color: #991b1b;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.retry-btn:hover {
+  border-color: #ef4444;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+:global([data-theme="dark"] .skeleton-line),
+:global([data-theme="dark"] .skeleton-actions span) {
+  background: linear-gradient(90deg, #1f2937 25%, #374151 37%, #1f2937 63%);
+  background-size: 400% 100%;
+}
+
+:global([data-theme="dark"] .loading-copy) {
+  color: #9ca3af;
+}
+
+:global([data-theme="dark"] .article-error) {
+  background: #3f1d1d;
+  border-color: #7f1d1d;
+  color: #fecaca;
+}
+
+:global([data-theme="dark"] .article-error span) {
+  color: #fecaca;
+}
+
+:global([data-theme="dark"] .retry-btn) {
+  background: #1f2937;
+  border-color: #7f1d1d;
+  color: #fecaca;
 }
 
 /* 确保所有内容不超出容器 */
@@ -725,28 +915,6 @@ img {
   display: block;
 }
 
-.md :deep(table .n-image) {
-  max-width: 150px !important;
-  max-height: 100px !important;
-  width: auto !important;
-}
-
-/* 约束表格中的图片容器 */
-.md :deep(table .n-image img) {
-  max-width: 150px !important;
-  max-height: 100px !important;
-  width: auto !important;
-  height: auto !important;
-  object-fit: cover;
-}
-
-/* 包含图片的表格单元格 */
-.md :deep(td:has(.n-image)) {
-  white-space: normal;
-  text-align: center;
-  padding: 8px;
-  vertical-align: middle;
-}
 </style>
 
 <style scoped>
@@ -824,28 +992,6 @@ img {
   line-height: 1.4 !important;
 }
 
-/* 表格中的图片特殊处理 */
-.md :deep(td .n-image) {
-  max-width: 120px !important;
-  max-height: 80px !important;
-  width: auto !important;
-  margin: 4px auto !important;
-}
-
-.md :deep(td .n-image img) {
-  max-width: 120px !important;
-  max-height: 80px !important;
-  width: auto !important;
-  height: auto !important;
-  object-fit: cover !important;
-}
-
-/* 包含图片的单元格居中 */
-.md :deep(td:has(.n-image)) {
-  text-align: center !important;
-  vertical-align: middle !important;
-}
-
 /* 长文本处理 */
 .md :deep(td p) {
   margin: 0 !important;
@@ -863,10 +1009,6 @@ img {
     max-width: 150px !important;
   }
   
-  .md :deep(td .n-image) {
-    max-width: 80px !important;
-    max-height: 60px !important;
-  }
 }
 
 :global([data-theme="dark"] .metadata),

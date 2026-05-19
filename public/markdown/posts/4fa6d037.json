@@ -1,0 +1,81 @@
+{
+  "title": "linux学习笔记",
+  "date": "2021-08-08T11:09:47.000Z",
+  "updatedAt": "2021-08-08T11:09:47.000Z",
+  "file": "linux学习笔记.md",
+  "slug": "4fa6d037",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 443,
+  "readingTime": 2,
+  "body": "### 安装python\n\n**1）安装依赖包** 安装 “Development tools” 软件组：\n\n```\nsudo yum groupinstall \"Development tools\"\n```\n\n因为 Python 3.7 源文件使用 zlib 格式打包，所以需要安装 zlib 软件包；Python 3.7 编译安装时需要使用 zlib 的头文件和链接库，所以需要安装 zlib 的头文件和链接库 zlib-devel 软件包：\n\n```\nsudo yum -y install zlib zlib-devel\n```\n\nPython 3 有个内置模块 ctypes，它是 Python 3 的外部函数库（Foreign function library），它需要使用系统外部函数库（libffi）的头文件和链接库，所以需要安装外部函数库（libffi）头文件和链接库 libffi-devel 软件包：\n\n```\nsudo yum -y install libffi-devel\n```\n\n2）运行如下命令配置、编译、安装 Python 3.7\n\n```\nwget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz\ntar xJf Python-3.7.0.tar.xz\ncd Python-3.7.0\nsudo ./configure\nsudo make\nsudo make install\n```\n\n如果在编译安装时提示 zipimport.ZipImportError: can’t decompress data; zlib not available 错误，请查看关于 zlib 的解决方法。 如果在编译安装时提示 ModuleNotFoundError: No module named ‘\\_ctypes’ 错误，请查看关于 ctypes 的解决方法。 3）安装完成后，Python 3.7 安装在了/usr/local文件夹中，可运行文件/usr/local/bin，库文件/usr/local/lib。因为 /usr/local/bin 在 Shell 路径中，所以可以直接在 Shell 中输入如下命令 python3 运行 Python 3.7 解释器。\n\n### 升级sqllite3\n\n亲测有效\n\n```shell\n[root@localhost /]#  sqlite3 --version\n[root@localhost /]# wget https://www.sqlite.org/2019/sqlite-autoconf-3270200.tar.gz\n[root@localhost /]# tar -zxvf sqlite-autoconf-3270200.tar.gz\n[root@localhost /]# cd sqlite-autoconf-3270200\n[root@localhost /]# ./configure --prefix=/usr/local\n[root@localhost /]# make \n[root@localhost /]# make install\n[root@localhost /]# find /usr/ -name sqlite3\n＃检查版本\n## 最新安装的sqlite3版本\n[root@localhost /]## /usr/local/bin/sqlite3 --version\n3.27.2 2019-02-25 16:06:06 bd49a8271d650fa89e446b42e513b595a717b9212c91dd384aab871fc1d0f6d7\n[root@localhost /]# \n\n## Centos7自带的sqlite3版本\n[root@localhost /]# /usr/bin/sqlite3 --version\n3.7.17 2013-05-20 00:56:22 118a3b35693b134d56ebd780123b7fd6f1497668\n[root@djangoServer ~]# \n\n## 可以看到sqlite3的版本还是旧版本，那么需要更新一下。\n[root@localhost /]# sqlite3 --version\n3.7.17 2013-05-20 00:56:22 118a3b35693b134d56ebd780123b7fd6f1497668\n[root@localhost /]#\n\n## 更改旧的sqlite3\n[root@localhost /]# mv /usr/bin/sqlite3  /usr/bin/sqlite3_old\n\n## 软链接将新的sqlite3设置到/usr/bin目录下\n[root@localhost /]# ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3\n\n## 查看当前全局sqlite3的版本\n[root@localhost /]# sqlite3 --version\n3.27.2 2019-02-25 16:06:06 bd49a8271d650fa89e446b42e513b595a717b9212c91dd384aab871fc1d0f6d7\n[root@localhost /]#\n\n＃将路径传递给共享库\n# 设置开机自启动执行，可以将下面的export语句写入 ~/.bashrc 文件中，如果如果你想立即生效，可以执行source 〜/.bashrc 将在每次启动终端时执行\n[root@localhost /]# export LD_LIBRARY_PATH=\"/usr/local/lib\"\n\n＃检查Python的SQLite3版本\n[root@localhost /]#  ipython3\nPython 3.7.1 (default, May  3 2019, 09:55:04) \nType 'copyright', 'credits' or 'license' for more information\nIPython 7.5.0 -- An enhanced Interactive Python. Type '?' for help.\n\nIn [1]: import sqlite3                                                     \n\nIn [2]: sqlite3.sqlite_version                                             \nOut[2]: '3.27.2'\n\nIn [3]: exit                                             \n————————————————\n版权声明：本文为CSDN博主「Echo......」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\n原文链接：https://blog.csdn.net/weixin_43883625/article/details/100709484\n```\n\n### cron表达式\n\nlinux中cron表达式有五位数 （秒）\\[分 时 日 月 星期\\] （年） 秒和年都不是unix系统自带的\n\n```\n21 17 14 7 7 #在7月14日星期天17时21分执行，只执行一次\n```\n\n“\\*” 表示每一\n\n```shell\n20 * * * * #每小时的20分钟执行一次，一天执行24次\n```\n\n```shell\n20,40 * * * * #每小时的20分钟，40分钟执行一次，一天执行48次\n```\n\n```shell\n20-40 * * * * #每小时的20到40分钟执行，每分钟执行一次，闭区间，每小时执行21次\n```\n\n```shell\n*/2 * * * * #0,2,4,6...58分钟时执行\n```\n\n其它，在这里https://www.bilibili.com/video/BV19t411G7KU?from=search&seid=1398478951454031547 有的时候，在crontab里必须把命令写全，路径要是绝对路径，例如： \\* \\* \\* \\* \\* /root/.pyenv/shims/python3.7 /home/mail.py >> /home/mail.log\n\n### 解压\n\nfilename.zip的解压: `unzip filename.zip` filename.tar.gz的解压: `tar -zxvf filename.tar.gz` 其中zxvf含义分别如下 z: 　　gzip 　　　　　　　　 压缩格式 x: 　　extract　　　　　　　　 解压 v:　　 verbose　　　　　　　　详细信息 f: 　　file(file=archieve)　　　　文件\n\n### 查看时间\n\n```\ndate\n```",
+  "html": "<h3 id=\"安装python\">安装python</h3>\n<p><strong>1）安装依赖包</strong> 安装 “Development tools” 软件组：</p>\n<pre><code class=\"language-text\">sudo yum groupinstall &quot;Development tools&quot;\n</code></pre>\n<p>因为 Python 3.7 源文件使用 zlib 格式打包，所以需要安装 zlib 软件包；Python 3.7 编译安装时需要使用 zlib 的头文件和链接库，所以需要安装 zlib 的头文件和链接库 zlib-devel 软件包：</p>\n<pre><code class=\"language-text\">sudo yum -y install zlib zlib-devel\n</code></pre>\n<p>Python 3 有个内置模块 ctypes，它是 Python 3 的外部函数库（Foreign function library），它需要使用系统外部函数库（libffi）的头文件和链接库，所以需要安装外部函数库（libffi）头文件和链接库 libffi-devel 软件包：</p>\n<pre><code class=\"language-text\">sudo yum -y install libffi-devel\n</code></pre>\n<p>2）运行如下命令配置、编译、安装 Python 3.7</p>\n<pre><code class=\"language-text\">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz\ntar xJf Python-3.7.0.tar.xz\ncd Python-3.7.0\nsudo ./configure\nsudo make\nsudo make install\n</code></pre>\n<p>如果在编译安装时提示 zipimport.ZipImportError: can’t decompress data; zlib not available 错误，请查看关于 zlib 的解决方法。 如果在编译安装时提示 ModuleNotFoundError: No module named ‘_ctypes’ 错误，请查看关于 ctypes 的解决方法。 3）安装完成后，Python 3.7 安装在了/usr/local文件夹中，可运行文件/usr/local/bin，库文件/usr/local/lib。因为 /usr/local/bin 在 Shell 路径中，所以可以直接在 Shell 中输入如下命令 python3 运行 Python 3.7 解释器。</p>\n<h3 id=\"升级sqllite3\">升级sqllite3</h3>\n<p>亲测有效</p>\n<pre><code class=\"language-shell\">[root@localhost /]#  sqlite3 --version\n[root@localhost /]# wget https://www.sqlite.org/2019/sqlite-autoconf-3270200.tar.gz\n[root@localhost /]# tar -zxvf sqlite-autoconf-3270200.tar.gz\n[root@localhost /]# cd sqlite-autoconf-3270200\n[root@localhost /]# ./configure --prefix=/usr/local\n[root@localhost /]# make \n[root@localhost /]# make install\n[root@localhost /]# find /usr/ -name sqlite3\n＃检查版本\n## 最新安装的sqlite3版本\n[root@localhost /]## /usr/local/bin/sqlite3 --version\n3.27.2 2019-02-25 16:06:06 bd49a8271d650fa89e446b42e513b595a717b9212c91dd384aab871fc1d0f6d7\n[root@localhost /]# \n\n## Centos7自带的sqlite3版本\n[root@localhost /]# /usr/bin/sqlite3 --version\n3.7.17 2013-05-20 00:56:22 118a3b35693b134d56ebd780123b7fd6f1497668\n[root@djangoServer ~]# \n\n## 可以看到sqlite3的版本还是旧版本，那么需要更新一下。\n[root@localhost /]# sqlite3 --version\n3.7.17 2013-05-20 00:56:22 118a3b35693b134d56ebd780123b7fd6f1497668\n[root@localhost /]#\n\n## 更改旧的sqlite3\n[root@localhost /]# mv /usr/bin/sqlite3  /usr/bin/sqlite3_old\n\n## 软链接将新的sqlite3设置到/usr/bin目录下\n[root@localhost /]# ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3\n\n## 查看当前全局sqlite3的版本\n[root@localhost /]# sqlite3 --version\n3.27.2 2019-02-25 16:06:06 bd49a8271d650fa89e446b42e513b595a717b9212c91dd384aab871fc1d0f6d7\n[root@localhost /]#\n\n＃将路径传递给共享库\n# 设置开机自启动执行，可以将下面的export语句写入 ~/.bashrc 文件中，如果如果你想立即生效，可以执行source 〜/.bashrc 将在每次启动终端时执行\n[root@localhost /]# export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;\n\n＃检查Python的SQLite3版本\n[root@localhost /]#  ipython3\nPython 3.7.1 (default, May  3 2019, 09:55:04) \nType 'copyright', 'credits' or 'license' for more information\nIPython 7.5.0 -- An enhanced Interactive Python. Type '?' for help.\n\nIn [1]: import sqlite3                                                     \n\nIn [2]: sqlite3.sqlite_version                                             \nOut[2]: '3.27.2'\n\nIn [3]: exit                                             \n————————————————\n版权声明：本文为CSDN博主「Echo......」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\n原文链接：https://blog.csdn.net/weixin_43883625/article/details/100709484\n</code></pre>\n<h3 id=\"cron表达式\">cron表达式</h3>\n<p>linux中cron表达式有五位数 （秒）[分 时 日 月 星期] （年） 秒和年都不是unix系统自带的</p>\n<pre><code class=\"language-text\">21 17 14 7 7 #在7月14日星期天17时21分执行，只执行一次\n</code></pre>\n<p>“*” 表示每一</p>\n<pre><code class=\"language-shell\">20 * * * * #每小时的20分钟执行一次，一天执行24次\n</code></pre>\n<pre><code class=\"language-shell\">20,40 * * * * #每小时的20分钟，40分钟执行一次，一天执行48次\n</code></pre>\n<pre><code class=\"language-shell\">20-40 * * * * #每小时的20到40分钟执行，每分钟执行一次，闭区间，每小时执行21次\n</code></pre>\n<pre><code class=\"language-shell\">*/2 * * * * #0,2,4,6...58分钟时执行\n</code></pre>\n<p>其它，在这里<a href=\"https://www.bilibili.com/video/BV19t411G7KU?from=search&amp;seid=1398478951454031547\">https://www.bilibili.com/video/BV19t411G7KU?from=search&amp;seid=1398478951454031547</a> 有的时候，在crontab里必须把命令写全，路径要是绝对路径，例如： * * * * * /root/.pyenv/shims/python3.7 /home/mail.py &gt;&gt; /home/mail.log</p>\n<h3 id=\"解压\">解压</h3>\n<p>filename.zip的解压: <code>unzip filename.zip</code> filename.tar.gz的解压: <code>tar -zxvf filename.tar.gz</code> 其中zxvf含义分别如下 z: 　　gzip 　　　　　　　　 压缩格式 x: 　　extract　　　　　　　　 解压 v:　　 verbose　　　　　　　　详细信息 f: 　　file(file=archieve)　　　　文件</p>\n<h3 id=\"查看时间\">查看时间</h3>\n<pre><code class=\"language-text\">date\n</code></pre>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "安装python",
+      "id": "安装python"
+    },
+    {
+      "level": 3,
+      "text": "升级sqllite3",
+      "id": "升级sqllite3"
+    },
+    {
+      "level": 2,
+      "text": "最新安装的sqlite3版本",
+      "id": "最新安装的sqlite3版本"
+    },
+    {
+      "level": 2,
+      "text": "Centos7自带的sqlite3版本",
+      "id": "centos7自带的sqlite3版本"
+    },
+    {
+      "level": 2,
+      "text": "可以看到sqlite3的版本还是旧版本，那么需要更新一下。",
+      "id": "可以看到sqlite3的版本还是旧版本那么需要更新一下"
+    },
+    {
+      "level": 2,
+      "text": "更改旧的sqlite3",
+      "id": "更改旧的sqlite3"
+    },
+    {
+      "level": 2,
+      "text": "软链接将新的sqlite3设置到/usr/bin目录下",
+      "id": "软链接将新的sqlite3设置到usrbin目录下"
+    },
+    {
+      "level": 2,
+      "text": "查看当前全局sqlite3的版本",
+      "id": "查看当前全局sqlite3的版本"
+    },
+    {
+      "level": 1,
+      "text": "设置开机自启动执行，可以将下面的export语句写入 ~/.bashrc 文件中，如果如果你想立即生效，可以执行source 〜/.bashrc 将在每次启动终端时执行",
+      "id": "设置开机自启动执行可以将下面的export语句写入-bashrc-文件中如果如果你想立即生效可以执行source-bashrc-将在每次启动终端时执行"
+    },
+    {
+      "level": 3,
+      "text": "cron表达式",
+      "id": "cron表达式"
+    },
+    {
+      "level": 3,
+      "text": "解压",
+      "id": "解压"
+    },
+    {
+      "level": 3,
+      "text": "查看时间",
+      "id": "查看时间"
+    }
+  ],
+  "hasMath": true
+}

@@ -1,0 +1,51 @@
+{
+  "title": "BeautifulSoup学习笔记",
+  "date": "2021-02-14T19:08:15.000Z",
+  "updatedAt": "2021-02-14T19:08:15.000Z",
+  "file": "BeautifulSoup学习笔记.md",
+  "slug": "eb083bdf",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 295,
+  "readingTime": 1,
+  "body": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。\n\n[https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044](https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044)\n\n### 导入\n\nfrom bs4 import BeautifulSoup `#导入模块`\n\nsoup = BeautifulSoup(text,'lxml') `#实例化BeautifulSoup对象`\n\n### 获取所有的div标签\n\ndivs = soup.find\\_all('div')\n\nprint(divs)\n\n`divs不是列表，是bs4的ResultSet，输出结果是一个列表形式，每个div作为列表中的一个元素`\n\n### 获取指定的div标签\n\ndiv = soup.find\\_all('div')\\[1\\]\n\nprint(div)\n\n`#输出第二个数据，还可以切片，不举例了`\n\ndiv = list(soup.find\\_all('div'))\n\n`把结果转换成列表，还是很方便的`\n\n### 获取拥有指定属性的标签(id=even的div标签)\n\n方法一：\n\ndivs = soup.find\\_all('div',id='even')\n\n`如果指定属性是class，会与Python关键字冲突，改为class_`\n\n方法二：\n\ndivs = soup.find\\_all('div',attrs={\"id\":\"even\",\"class\":\"L square\"}) `#以字典的形式找到多个指定属性的`div标签\n\n### 获取标签的属性值\n\nalist = soup.find\\_all('a')\n\n方法一：通过下标方式提取\n\nfor a in alist:\n\nhref = a\\['href'\\]\n\nprint(href)\n\n方法二：利用attrs方法提取\n\nfor a in alist:\n\nhref = a.attrs\\['href'\\]\n\nprint(href)\n\n### 输出文字\n\n`使用string方法`\n\nprint(div.string)\n",
+  "html": "<p>发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。</p>\n<p><a href=\"https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&amp;seid=13958657789515093044\">https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&amp;seid=13958657789515093044</a></p>\n<h3 id=\"导入\">导入</h3>\n<p>from bs4 import BeautifulSoup <code>#导入模块</code></p>\n<p>soup = BeautifulSoup(text,‘lxml’) <code>#实例化BeautifulSoup对象</code></p>\n<h3 id=\"获取所有的div标签\">获取所有的div标签</h3>\n<p>divs = soup.find_all(‘div’)</p>\n<p>print(divs)</p>\n<p><code>divs不是列表，是bs4的ResultSet，输出结果是一个列表形式，每个div作为列表中的一个元素</code></p>\n<h3 id=\"获取指定的div标签\">获取指定的div标签</h3>\n<p>div = soup.find_all(‘div’)[1]</p>\n<p>print(div)</p>\n<p><code>#输出第二个数据，还可以切片，不举例了</code></p>\n<p>div = list(soup.find_all(‘div’))</p>\n<p><code>把结果转换成列表，还是很方便的</code></p>\n<h3 id=\"获取拥有指定属性的标签ideven的div标签\">获取拥有指定属性的标签(id=even的div标签)</h3>\n<p>方法一：</p>\n<p>divs = soup.find_all(‘div’,id=‘even’)</p>\n<p><code>如果指定属性是class，会与Python关键字冲突，改为class_</code></p>\n<p>方法二：</p>\n<p>divs = soup.find_all(‘div’,attrs={“id”:“even”,“class”:“L square”}) <code>#以字典的形式找到多个指定属性的</code>div标签</p>\n<h3 id=\"获取标签的属性值\">获取标签的属性值</h3>\n<p>alist = soup.find_all(‘a’)</p>\n<p>方法一：通过下标方式提取</p>\n<p>for a in alist:</p>\n<p>href = a[‘href’]</p>\n<p>print(href)</p>\n<p>方法二：利用attrs方法提取</p>\n<p>for a in alist:</p>\n<p>href = a.attrs[‘href’]</p>\n<p>print(href)</p>\n<h3 id=\"输出文字\">输出文字</h3>\n<p><code>使用string方法</code></p>\n<p>print(div.string)</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "导入",
+      "id": "导入"
+    },
+    {
+      "level": 3,
+      "text": "获取所有的div标签",
+      "id": "获取所有的div标签"
+    },
+    {
+      "level": 3,
+      "text": "获取指定的div标签",
+      "id": "获取指定的div标签"
+    },
+    {
+      "level": 3,
+      "text": "获取拥有指定属性的标签(id=even的div标签)",
+      "id": "获取拥有指定属性的标签ideven的div标签"
+    },
+    {
+      "level": 3,
+      "text": "获取标签的属性值",
+      "id": "获取标签的属性值"
+    },
+    {
+      "level": 3,
+      "text": "输出文字",
+      "id": "输出文字"
+    }
+  ],
+  "hasMath": true
+}

@@ -1,0 +1,26 @@
+{
+  "title": "测试仪",
+  "date": "2026-03-11T14:13:43.000Z",
+  "updatedAt": "2026-03-11T14:13:43.000Z",
+  "file": "测试仪.md",
+  "slug": "7fde58cd",
+  "categories": [
+    "随笔杂记"
+  ],
+  "tags": [
+    "随笔杂记"
+  ],
+  "img": "",
+  "wordCount": 12,
+  "readingTime": 1,
+  "body": "# 测试仪\n\n这里是内容的起始点。\n\n",
+  "html": "<h1 id=\"测试仪\">测试仪</h1>\n<p>这里是内容的起始点。</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "测试仪",
+      "id": "测试仪"
+    }
+  ],
+  "hasMath": false
+}

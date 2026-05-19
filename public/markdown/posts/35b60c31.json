@@ -1,0 +1,71 @@
+{
+  "title": "Leetcode450:删除二叉搜索树中的节点",
+  "date": "2022-04-02T02:20:05.000Z",
+  "updatedAt": "2022-04-02T02:20:05.000Z",
+  "file": "Leetcode450_删除二叉搜索树中的节点.md",
+  "slug": "35b60c31",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 672,
+  "readingTime": 2,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/delete-node-in-a-bst/\n\n这道题完全可以当作一个知识点来对待。\n\n## 题解\n\n### 思路\n\n众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。\n\n某个节点`node`的后继节点`successor`，就是中序遍历中仅次于`node`的后一个节点，是比`node`大的节点当中最小的节点。`node`的右子树中最左边那个节点就是`successor`。\n\n某个节点`node`的前继节点`predecessor`，就是中序遍历中稍大于`node`的前一个节点，是比`node`小的节点当中最大的节点。`node`的左子树中最右边那个节点就是`successor`。\n\n我们要维护这个性质，所以，当删除一个节点时，我们要拿这个节点的后继节点`successor`或者前继节点`predecessor`来替换它，然后递归的删除它的后继节点或者前继节点。比如删除[1,2,3,4,5]中的3，我们就拿4来替换它（或者拿2替换）。然后为了删除4，拿5来替换。5后面没有节点了，就直接删除5。\n\n删除的时候可能有三种情况：\n\n1. 要删除节点是叶节点。直接删除就好了。\n2. 要删除的节点只有左子树，或者只有右子树。如果是左子树，就找前继节点替换；如果是右子树，就找后继节点替换。\n3. 要删除的节点既有左子树又有右子树。前继，后继都可以。一般我们选择后继。\n\n上面的描述比较易于理解，但为了写代码方便，我们稍作改变：\n\n1. 要删除节点是叶节点。直接删除。\n2. 要删除的节点有右子树，就拿后继替换。\n3. 否则，拿左继替换。\n\n### 代码\n\n先看下ac的代码吧：\n\n```python\n# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def get_successor(self, node):\n        node = node.right\n        while node.left:\n            node = node.left\n        return node.val\n      \n    def get_predecessor(self, node):\n        node = node.left\n        while node.right:\n            node = node.right\n        return node.val\n      \n    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:\n        if not root:\n            return None\n        if key > root.val:\n            root.right = self.deleteNode(root.right, key)\n        elif key < root.val:\n            root.left = self.deleteNode(root.left, key)\n        else:\n            if (not root.left) and (not root.right):\n                root = None\n            elif root.right:\n                root.val = self.get_successor(root)\n                root.right = self.deleteNode(root.right, root.val) # 从root.right开始删除，\n                # 如果从当前root删除，会死循环\n            else:\n                root.val = self.get_predecessor(root)\n                root.left = self.deleteNode(root.left, root.val)\n        return root\n```\n\n为什么非要优先找后继节点呢？其实你优先找前继节点也可以，把这段代码改成这样：\n\n```python\n            elif root.left:\n                root.val = self.get_predecessor(root)\n                root.left = self.deleteNode(root.left, root.val)\n            else:\n                root.val = self.get_successor(root)\n                root.right = self.deleteNode(root.right, root.val)\n```\n\n为什么非要写成`root.left = xxx`，`root.right = xxx`呢？\n\n我把`root.right = self.deleteNode(root.right, key)`改成`self.deleteNode(root.right, key)`；\n\n以及后面三处的赋值语句都改成了直接递归，结果只和正确答案差了一点，就是在递归的末端的叶子节点当中`root=None`没有生效。也就是说叶子节点没有成功删除。\n\n我猜想可能是因为python的引用传递有关，这条赋值语句修改的只是形参而不是实参，所以无效！\n\n总之递归的代码好难写qwq，孩子根本想不到...\n\n\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/delete-node-in-a-bst/\">https://leetcode-cn.com/problems/delete-node-in-a-bst/</a></p>\n<p>这道题完全可以当作一个知识点来对待。</p>\n<h2 id=\"题解\">题解</h2>\n<h3 id=\"思路\">思路</h3>\n<p>众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。</p>\n<p>某个节点<code>node</code>的后继节点<code>successor</code>，就是中序遍历中仅次于<code>node</code>的后一个节点，是比<code>node</code>大的节点当中最小的节点。<code>node</code>的右子树中最左边那个节点就是<code>successor</code>。</p>\n<p>某个节点<code>node</code>的前继节点<code>predecessor</code>，就是中序遍历中稍大于<code>node</code>的前一个节点，是比<code>node</code>小的节点当中最大的节点。<code>node</code>的左子树中最右边那个节点就是<code>successor</code>。</p>\n<p>我们要维护这个性质，所以，当删除一个节点时，我们要拿这个节点的后继节点<code>successor</code>或者前继节点<code>predecessor</code>来替换它，然后递归的删除它的后继节点或者前继节点。比如删除[1,2,3,4,5]中的3，我们就拿4来替换它（或者拿2替换）。然后为了删除4，拿5来替换。5后面没有节点了，就直接删除5。</p>\n<p>删除的时候可能有三种情况：</p>\n<ol>\n<li>要删除节点是叶节点。直接删除就好了。</li>\n<li>要删除的节点只有左子树，或者只有右子树。如果是左子树，就找前继节点替换；如果是右子树，就找后继节点替换。</li>\n<li>要删除的节点既有左子树又有右子树。前继，后继都可以。一般我们选择后继。</li>\n</ol>\n<p>上面的描述比较易于理解，但为了写代码方便，我们稍作改变：</p>\n<ol>\n<li>要删除节点是叶节点。直接删除。</li>\n<li>要删除的节点有右子树，就拿后继替换。</li>\n<li>否则，拿左继替换。</li>\n</ol>\n<h3 id=\"代码\">代码</h3>\n<p>先看下ac的代码吧：</p>\n<pre><code class=\"language-python\"># Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def get_successor(self, node):\n        node = node.right\n        while node.left:\n            node = node.left\n        return node.val\n      \n    def get_predecessor(self, node):\n        node = node.left\n        while node.right:\n            node = node.right\n        return node.val\n      \n    def deleteNode(self, root: Optional[TreeNode], key: int) -&gt; Optional[TreeNode]:\n        if not root:\n            return None\n        if key &gt; root.val:\n            root.right = self.deleteNode(root.right, key)\n        elif key &lt; root.val:\n            root.left = self.deleteNode(root.left, key)\n        else:\n            if (not root.left) and (not root.right):\n                root = None\n            elif root.right:\n                root.val = self.get_successor(root)\n                root.right = self.deleteNode(root.right, root.val) # 从root.right开始删除，\n                # 如果从当前root删除，会死循环\n            else:\n                root.val = self.get_predecessor(root)\n                root.left = self.deleteNode(root.left, root.val)\n        return root\n</code></pre>\n<p>为什么非要优先找后继节点呢？其实你优先找前继节点也可以，把这段代码改成这样：</p>\n<pre><code class=\"language-python\">            elif root.left:\n                root.val = self.get_predecessor(root)\n                root.left = self.deleteNode(root.left, root.val)\n            else:\n                root.val = self.get_successor(root)\n                root.right = self.deleteNode(root.right, root.val)\n</code></pre>\n<p>为什么非要写成<code>root.left = xxx</code>，<code>root.right = xxx</code>呢？</p>\n<p>我把<code>root.right = self.deleteNode(root.right, key)</code>改成<code>self.deleteNode(root.right, key)</code>；</p>\n<p>以及后面三处的赋值语句都改成了直接递归，结果只和正确答案差了一点，就是在递归的末端的叶子节点当中<code>root=None</code>没有生效。也就是说叶子节点没有成功删除。</p>\n<p>我猜想可能是因为python的引用传递有关，这条赋值语句修改的只是形参而不是实参，所以无效！</p>\n<p>总之递归的代码好难写qwq，孩子根本想不到…</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 3,
+      "text": "思路",
+      "id": "思路"
+    },
+    {
+      "level": 3,
+      "text": "代码",
+      "id": "代码"
+    },
+    {
+      "level": 1,
+      "text": "Definition for a binary tree node.",
+      "id": "definition-for-a-binary-tree-node"
+    },
+    {
+      "level": 1,
+      "text": "class TreeNode:",
+      "id": "class-treenode"
+    },
+    {
+      "level": 1,
+      "text": "def __init__(self, val=0, left=None, right=None):",
+      "id": "def-__init__self-val0-leftnone-rightnone"
+    },
+    {
+      "level": 1,
+      "text": "self.val = val",
+      "id": "selfval-val"
+    },
+    {
+      "level": 1,
+      "text": "self.left = left",
+      "id": "selfleft-left"
+    },
+    {
+      "level": 1,
+      "text": "self.right = right",
+      "id": "selfright-right"
+    }
+  ],
+  "hasMath": false
+}

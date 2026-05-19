@@ -1,0 +1,31 @@
+{
+  "title": "Leetcode160:相交链表——哈希、双指针",
+  "date": "2022-03-16T12:06:00.000Z",
+  "updatedAt": "2022-03-16T12:06:00.000Z",
+  "file": "Leetcode160_相交链表——哈希、双指针.md",
+  "slug": "4aad0dc0",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 242,
+  "readingTime": 1,
+  "body": "## 题目\n\nhttps://leetcode-cn.com/problems/intersection-of-two-linked-lists/\n\n## 题解\n\n**法一：哈希表**\n\n先把一个链表放到哈希表里，再遍历另一个链表。\n\n```c++\nclass Solution {\npublic:\n    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {\n        unordered_set<ListNode *> visited;\n        ListNode *temp = headA;\n        while (temp != nullptr) {\n            visited.insert(temp);\n            temp = temp->next;\n        }\n        temp = headB;\n        while (temp != nullptr) {\n            if (visited.count(temp)) {\n                return temp;\n            }\n            temp = temp->next;\n        }\n        return nullptr;\n    }\n};\n```\n\n时间复杂度O(m+n)\n\n空间复杂度O(m)\n\n**法二：双指针**\n\n这个方法还是很巧妙的！\n\n两个指针分别指向headA和headB，然后同时同速向后移动，A指针到结尾了就转移到headB，B指针到结尾了就转移到headA。\n\n如果两个链表相交，那一定可以在第二次遍历时指向同一个节点。如果不相交，一定会同时指向nullptr。\n\n详情请看官方题解的证明，不难理解。\n\n自己写的垃圾代码：\n\n```c++\nclass Solution {\npublic:\n    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {\n        ListNode *A = headA;\n        ListNode *B = headB;\n        while(headA!=nullptr || headB!=nullptr){\n            if(A==B){\n                return A;\n            }\n            if(A==nullptr){\n                A = headB;\n            }else{\n                A = A->next;\n            }\n            if(B==nullptr){\n                B = headA;\n            }else{\n                B = B->next;\n            }\n        }\n        return nullptr;\n        \n    }\n};\n```\n\n时间复杂度O(m+n)\n\n空间复杂度O(1)\n\n看到一条评论：\n\n> 错的人就算走过了对方的路也还是会错过😔 这题我希望大家都返回`true`\n\n蚌埠住了兄弟们，刷个算法题都能emo。\n\n",
+  "html": "<h2 id=\"题目\">题目</h2>\n<p><a href=\"https://leetcode-cn.com/problems/intersection-of-two-linked-lists/\">https://leetcode-cn.com/problems/intersection-of-two-linked-lists/</a></p>\n<h2 id=\"题解\">题解</h2>\n<p><strong>法一：哈希表</strong></p>\n<p>先把一个链表放到哈希表里，再遍历另一个链表。</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {\n        unordered_set&lt;ListNode *&gt; visited;\n        ListNode *temp = headA;\n        while (temp != nullptr) {\n            visited.insert(temp);\n            temp = temp-&gt;next;\n        }\n        temp = headB;\n        while (temp != nullptr) {\n            if (visited.count(temp)) {\n                return temp;\n            }\n            temp = temp-&gt;next;\n        }\n        return nullptr;\n    }\n};\n</code></pre>\n<p>时间复杂度O(m+n)</p>\n<p>空间复杂度O(m)</p>\n<p><strong>法二：双指针</strong></p>\n<p>这个方法还是很巧妙的！</p>\n<p>两个指针分别指向headA和headB，然后同时同速向后移动，A指针到结尾了就转移到headB，B指针到结尾了就转移到headA。</p>\n<p>如果两个链表相交，那一定可以在第二次遍历时指向同一个节点。如果不相交，一定会同时指向nullptr。</p>\n<p>详情请看官方题解的证明，不难理解。</p>\n<p>自己写的垃圾代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {\n        ListNode *A = headA;\n        ListNode *B = headB;\n        while(headA!=nullptr || headB!=nullptr){\n            if(A==B){\n                return A;\n            }\n            if(A==nullptr){\n                A = headB;\n            }else{\n                A = A-&gt;next;\n            }\n            if(B==nullptr){\n                B = headA;\n            }else{\n                B = B-&gt;next;\n            }\n        }\n        return nullptr;\n        \n    }\n};\n</code></pre>\n<p>时间复杂度O(m+n)</p>\n<p>空间复杂度O(1)</p>\n<p>看到一条评论：</p>\n<blockquote>\n<p>错的人就算走过了对方的路也还是会错过😔 这题我希望大家都返回<code>true</code></p>\n</blockquote>\n<p>蚌埠住了兄弟们，刷个算法题都能emo。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 2,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

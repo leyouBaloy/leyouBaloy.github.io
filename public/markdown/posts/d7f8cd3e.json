@@ -1,0 +1,26 @@
+{
+  "title": "字符数组的拼接和排序-strcat()-sort()-strlen()",
+  "date": "2020-11-07T09:11:20.000Z",
+  "updatedAt": "2020-11-07T09:11:20.000Z",
+  "file": "字符数组的拼接和排序-strcat()-sort()-strlen().md",
+  "slug": "d7f8cd3e",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 240,
+  "readingTime": 1,
+  "body": "【题目描述】\n\n小明参加学校每年一度的大学生科技节活动的游戏，这次遇到的题目是字符接龙。主持人拿出2张卡片，每张卡片上都有一个顺序字符串，即字符串是按ASCII码顺序编排的。现在要求小明把2个字符串连接成一个字符串，而且连接以后的字符串内容还是按ASCII码顺序排列的。（假设每张卡片上的字符串都不包含空格）。\n\n【输入格式】\n\n有2行。分别为两个不包含空格的字符串，每个字符串长度不超过1000。\n\n【输出格式】\n\n       连接后的顺序字符串（按ASCII码顺序排列）。\n\nFor example:\n\nInput\n\nResult\n\nacd  \nbr\n\nabcdr\n\n## Answer\n\n```\n#include <iostream>\n#include<string.h>\n#include<cstdio>\n#include<algorithm>\nusing namespace std;\n\nint main()\n{\n    char a[100];\n    char b[100];\n    int len;\n    scanf(\"%s\",a);\n    scanf(\"%s\",b);\n    strcat(a,b);\n    len = strlen(a);\n    sort(a,a+len);\n    cout << a;\n    return 0;\n}\n```\n\n头文件好像没有全部用到。这段代码写得我还是比较满意的，如果要造轮子的话，光是一个拼接就够我搞一节课了。",
+  "html": "<p>【题目描述】</p>\n<p>小明参加学校每年一度的大学生科技节活动的游戏，这次遇到的题目是字符接龙。主持人拿出2张卡片，每张卡片上都有一个顺序字符串，即字符串是按ASCII码顺序编排的。现在要求小明把2个字符串连接成一个字符串，而且连接以后的字符串内容还是按ASCII码顺序排列的。（假设每张卡片上的字符串都不包含空格）。</p>\n<p>【输入格式】</p>\n<p>有2行。分别为两个不包含空格的字符串，每个字符串长度不超过1000。</p>\n<p>【输出格式】</p>\n<p>连接后的顺序字符串（按ASCII码顺序排列）。</p>\n<p>For example:</p>\n<p>Input</p>\n<p>Result</p>\n<p>acd<br>\nbr</p>\n<p>abcdr</p>\n<h2 id=\"answer\">Answer</h2>\n<pre><code class=\"language-text\">#include &lt;iostream&gt;\n#include&lt;string.h&gt;\n#include&lt;cstdio&gt;\n#include&lt;algorithm&gt;\nusing namespace std;\n\nint main()\n{\n    char a[100];\n    char b[100];\n    int len;\n    scanf(&quot;%s&quot;,a);\n    scanf(&quot;%s&quot;,b);\n    strcat(a,b);\n    len = strlen(a);\n    sort(a,a+len);\n    cout &lt;&lt; a;\n    return 0;\n}\n</code></pre>\n<p>头文件好像没有全部用到。这段代码写得我还是比较满意的，如果要造轮子的话，光是一个拼接就够我搞一节课了。</p>\n",
+  "headings": [
+    {
+      "level": 2,
+      "text": "Answer",
+      "id": "answer"
+    }
+  ],
+  "hasMath": false
+}

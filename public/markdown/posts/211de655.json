@@ -1,0 +1,31 @@
+{
+  "title": "Leetcode2:两数相加——链表",
+  "date": "2022-04-05T08:50:12.000Z",
+  "updatedAt": "2022-04-05T08:50:12.000Z",
+  "file": "Leetcode2_两数相加——链表.md",
+  "slug": "211de655",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 131,
+  "readingTime": 1,
+  "body": "# 题目\n\nhttps://leetcode-cn.com/problems/add-two-numbers/\n\n这道题主要是debug\n\n# 题解\n\n我自己写的代码：\n\n```c++\n/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        ListNode* prev = nullptr;\n        ListNode* curr = head;\n        while (curr) {\n            ListNode* next = curr->next;\n            curr->next = prev;\n            prev = curr;\n            curr = next;\n        }\n        return prev;\n    }\n    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\n        ListNode* res = nullptr;\n        int carry = 0;\n        while(l1!=nullptr || l2!=nullptr){\n            int sum = 0;\n            if(l1==nullptr){\n                sum = l2->val;\n            }\n            else if(l2==nullptr){\n                sum = l1->val;\n            }\n            else{\n                sum = l1->val + l2->val;\n            }\n            if(carry){\n                sum += carry;\n                carry = 0;\n            }\n            if(sum>=10){\n                carry = 1;\n                sum = sum%10;\n            }\n            res = new ListNode(sum, res);\n            if(l1!=nullptr) l1=l1->next;\n            if(l2!=nullptr) l2=l2->next;\n        }\n        if(carry){\n            res = new ListNode(1, res);\n        }\n        return reverseList(res);\n    }\n};\n```\n\n还用了一个反转链表的函数，属于绕弯形选手😂\n\n评论里给出的代码，我认为是最简洁优雅易懂的（虽然是java，不过其实和c艹差不多：\n\n```java\nclass Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode root = new ListNode(0); // 工具性的头节点\n        ListNode cursor = root;\n        int carry = 0;\n        while(l1 != null || l2 != null || carry != 0) {\n            int l1Val = l1 != null ? l1.val : 0;\n            int l2Val = l2 != null ? l2.val : 0;\n            int sumVal = l1Val + l2Val + carry;\n            carry = sumVal / 10;\n            \n            ListNode sumNode = new ListNode(sumVal % 10);\n            cursor.next = sumNode;\n            cursor = sumNode;\n            \n            if(l1 != null) l1 = l1.next;\n            if(l2 != null) l2 = l2.next;\n        }\n        \n        return root.next;\n    }\n}\n```\n\n时间复杂度O(max(m,n))；空间复杂度O(1)；\n\n感想：这道题看起来很简单，但如果在csp考试中遇到我就完蛋了。因为细节太多，debug比较难。\n",
+  "html": "<h1 id=\"题目\">题目</h1>\n<p><a href=\"https://leetcode-cn.com/problems/add-two-numbers/\">https://leetcode-cn.com/problems/add-two-numbers/</a></p>\n<p>这道题主要是debug</p>\n<h1 id=\"题解\">题解</h1>\n<p>我自己写的代码：</p>\n<pre><code class=\"language-c++\">/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        ListNode* prev = nullptr;\n        ListNode* curr = head;\n        while (curr) {\n            ListNode* next = curr-&gt;next;\n            curr-&gt;next = prev;\n            prev = curr;\n            curr = next;\n        }\n        return prev;\n    }\n    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\n        ListNode* res = nullptr;\n        int carry = 0;\n        while(l1!=nullptr || l2!=nullptr){\n            int sum = 0;\n            if(l1==nullptr){\n                sum = l2-&gt;val;\n            }\n            else if(l2==nullptr){\n                sum = l1-&gt;val;\n            }\n            else{\n                sum = l1-&gt;val + l2-&gt;val;\n            }\n            if(carry){\n                sum += carry;\n                carry = 0;\n            }\n            if(sum&gt;=10){\n                carry = 1;\n                sum = sum%10;\n            }\n            res = new ListNode(sum, res);\n            if(l1!=nullptr) l1=l1-&gt;next;\n            if(l2!=nullptr) l2=l2-&gt;next;\n        }\n        if(carry){\n            res = new ListNode(1, res);\n        }\n        return reverseList(res);\n    }\n};\n</code></pre>\n<p>还用了一个反转链表的函数，属于绕弯形选手😂</p>\n<p>评论里给出的代码，我认为是最简洁优雅易懂的（虽然是java，不过其实和c艹差不多：</p>\n<pre><code class=\"language-java\">class Solution {\n    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n        ListNode root = new ListNode(0); // 工具性的头节点\n        ListNode cursor = root;\n        int carry = 0;\n        while(l1 != null || l2 != null || carry != 0) {\n            int l1Val = l1 != null ? l1.val : 0;\n            int l2Val = l2 != null ? l2.val : 0;\n            int sumVal = l1Val + l2Val + carry;\n            carry = sumVal / 10;\n            \n            ListNode sumNode = new ListNode(sumVal % 10);\n            cursor.next = sumNode;\n            cursor = sumNode;\n            \n            if(l1 != null) l1 = l1.next;\n            if(l2 != null) l2 = l2.next;\n        }\n        \n        return root.next;\n    }\n}\n</code></pre>\n<p>时间复杂度O(max(m,n))；空间复杂度O(1)；</p>\n<p>感想：这道题看起来很简单，但如果在csp考试中遇到我就完蛋了。因为细节太多，debug比较难。</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 1,
+      "text": "题解",
+      "id": "题解"
+    }
+  ],
+  "hasMath": false
+}

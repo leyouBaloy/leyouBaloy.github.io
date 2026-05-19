@@ -1,0 +1,96 @@
+{
+  "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
+  "date": "2021-03-03T20:46:14.000Z",
+  "updatedAt": "2021-03-03T20:46:14.000Z",
+  "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
+  "slug": "13bf1535",
+  "categories": [
+    "笔记"
+  ],
+  "tags": [
+    "笔记"
+  ],
+  "img": "",
+  "wordCount": 68,
+  "readingTime": 1,
+  "body": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\_id\\_from=pageDriver  \n仅用于学习  \n感谢莫烦up主\n\n### 图中图\n\n```\nimport matplotlib.pyplot as plt\n\nfig = plt.figure()\nx = [1, 2, 3, 4, 5, 6, 7]\ny = [1, 3, 4, 2, 5, 8, 6]\n\n# below are all percentage\nleft, bottom, width, height = 0.1, 0.1, 0.8, 0.8\nax1 = fig.add_axes([left, bottom, width, height])  # main axes\nax1.plot(x, y, 'r') #r表示red，红颜色\nax1.set_xlabel('x')\nax1.set_ylabel('y')\nax1.set_title('title')\n\nax2 = fig.add_axes([0.2, 0.6, 0.25, 0.25])  # inside axes\nax2.plot(y, x, 'b')\nax2.set_xlabel('x')\nax2.set_ylabel('y')\nax2.set_title('title inside 1')\n\n\n# different method to add axes这是与上面两种不同的增加axes的方法\n####################################\nplt.axes([0.6, 0.2, 0.25, 0.25])\nplt.plot(y[::-1], x, 'g')\nplt.xlabel('x')\nplt.ylabel('y')\nplt.title('title inside 2')\n\nplt.show()\n```\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-7-1024x813.png)\n\n### 次坐标轴\n\n```\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nx = np.arange(0, 10, 0.1)\ny1 = 0.05 * x**2\ny2 = -1 *y1\n\nfig, ax1 = plt.subplots()\n\nax2 = ax1.twinx()    # mirror the ax1将ax1的坐标轴镜像对称过去\nax1.plot(x, y1, 'g-')\nax2.plot(x, y2, 'b-')\n\nax1.set_xlabel('X data')\nax1.set_ylabel('Y1 data', color='g')\nax2.set_ylabel('Y2 data', color='b')\n\nplt.show()\n```\n\n![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-8-2.png)\n\n### Animation动画\n\n```\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom matplotlib import animation\n\nfig, ax = plt.subplots()\n\nx = np.arange(0, 2*np.pi, 0.01)\nline, = ax.plot(x, np.sin(x))\n\n\ndef animate(i):\n    line.set_ydata(np.sin(x + i/10.0))  # update the data\n    return line,\n\n\n# Init only required for blitting to give a clean slate.\ndef init():\n    line.set_ydata(np.sin(x))\n    return line,\n\n# call the animator.  blit=True means only re-draw the parts that have changed.\n# blit=True dose not work on Mac, set blit=False\n# interval= update frequency\nani = animation.FuncAnimation(fig=fig, func=animate, frames=100, init_func=init,\n                              interval=20, blit=False)\n\n# save the animation as an mp4.  This requires ffmpeg or mencoder to be\n# installed.  The extra_args ensure that the x264 codec is used, so that\n# the video can be embedded in html5.  You may need to adjust this for\n# your system: for more information, see\n# http://matplotlib.sourceforge.net/api/animation_api.html\n# anim.save('basic_animation.mp4', fps=30, extra_args=['-vcodec', 'libx264'])\n\nplt.show()\n```\n\n我试过了，jupyter notebook根本动不了  \n又试了pycharm，也动不了\n\n完结撒花，再次感谢莫烦老师",
+  "html": "<p>视频地址：<a href=\"https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm%5C_id%5C_from=pageDriver\">https://www.bilibili.com/video/BV1Jx411L7LU?p=13&amp;spm\\_id\\_from=pageDriver</a><br>\n仅用于学习<br>\n感谢莫烦up主</p>\n<h3 id=\"图中图\">图中图</h3>\n<pre><code class=\"language-text\">import matplotlib.pyplot as plt\n\nfig = plt.figure()\nx = [1, 2, 3, 4, 5, 6, 7]\ny = [1, 3, 4, 2, 5, 8, 6]\n\n# below are all percentage\nleft, bottom, width, height = 0.1, 0.1, 0.8, 0.8\nax1 = fig.add_axes([left, bottom, width, height])  # main axes\nax1.plot(x, y, 'r') #r表示red，红颜色\nax1.set_xlabel('x')\nax1.set_ylabel('y')\nax1.set_title('title')\n\nax2 = fig.add_axes([0.2, 0.6, 0.25, 0.25])  # inside axes\nax2.plot(y, x, 'b')\nax2.set_xlabel('x')\nax2.set_ylabel('y')\nax2.set_title('title inside 1')\n\n\n# different method to add axes这是与上面两种不同的增加axes的方法\n####################################\nplt.axes([0.6, 0.2, 0.25, 0.25])\nplt.plot(y[::-1], x, 'g')\nplt.xlabel('x')\nplt.ylabel('y')\nplt.title('title inside 2')\n\nplt.show()\n</code></pre>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-7-7-1024x813.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<h3 id=\"次坐标轴\">次坐标轴</h3>\n<pre><code class=\"language-text\">import matplotlib.pyplot as plt\nimport numpy as np\n\nx = np.arange(0, 10, 0.1)\ny1 = 0.05 * x**2\ny2 = -1 *y1\n\nfig, ax1 = plt.subplots()\n\nax2 = ax1.twinx()    # mirror the ax1将ax1的坐标轴镜像对称过去\nax1.plot(x, y1, 'g-')\nax2.plot(x, y2, 'b-')\n\nax1.set_xlabel('X data')\nax1.set_ylabel('Y1 data', color='g')\nax2.set_ylabel('Y2 data', color='b')\n\nplt.show()\n</code></pre>\n<p><img src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/03/image-8-2.png\" alt=\"\" loading=\"lazy\" decoding=\"async\"></p>\n<h3 id=\"animation动画\">Animation动画</h3>\n<pre><code class=\"language-text\">import numpy as np\nfrom matplotlib import pyplot as plt\nfrom matplotlib import animation\n\nfig, ax = plt.subplots()\n\nx = np.arange(0, 2*np.pi, 0.01)\nline, = ax.plot(x, np.sin(x))\n\n\ndef animate(i):\n    line.set_ydata(np.sin(x + i/10.0))  # update the data\n    return line,\n\n\n# Init only required for blitting to give a clean slate.\ndef init():\n    line.set_ydata(np.sin(x))\n    return line,\n\n# call the animator.  blit=True means only re-draw the parts that have changed.\n# blit=True dose not work on Mac, set blit=False\n# interval= update frequency\nani = animation.FuncAnimation(fig=fig, func=animate, frames=100, init_func=init,\n                              interval=20, blit=False)\n\n# save the animation as an mp4.  This requires ffmpeg or mencoder to be\n# installed.  The extra_args ensure that the x264 codec is used, so that\n# the video can be embedded in html5.  You may need to adjust this for\n# your system: for more information, see\n# http://matplotlib.sourceforge.net/api/animation_api.html\n# anim.save('basic_animation.mp4', fps=30, extra_args=['-vcodec', 'libx264'])\n\nplt.show()\n</code></pre>\n<p>我试过了，jupyter notebook根本动不了<br>\n又试了pycharm，也动不了</p>\n<p>完结撒花，再次感谢莫烦老师</p>\n",
+  "headings": [
+    {
+      "level": 3,
+      "text": "图中图",
+      "id": "图中图"
+    },
+    {
+      "level": 1,
+      "text": "below are all percentage",
+      "id": "below-are-all-percentage"
+    },
+    {
+      "level": 1,
+      "text": "different method to add axes这是与上面两种不同的增加axes的方法",
+      "id": "different-method-to-add-axes这是与上面两种不同的增加axes的方法"
+    },
+    {
+      "level": 3,
+      "text": "次坐标轴",
+      "id": "次坐标轴"
+    },
+    {
+      "level": 3,
+      "text": "Animation动画",
+      "id": "animation动画"
+    },
+    {
+      "level": 1,
+      "text": "Init only required for blitting to give a clean slate.",
+      "id": "init-only-required-for-blitting-to-give-a-clean-slate"
+    },
+    {
+      "level": 1,
+      "text": "call the animator.  blit=True means only re-draw the parts that have changed.",
+      "id": "call-the-animator-blittrue-means-only-re-draw-the-parts-that-have-changed"
+    },
+    {
+      "level": 1,
+      "text": "blit=True dose not work on Mac, set blit=False",
+      "id": "blittrue-dose-not-work-on-mac-set-blitfalse"
+    },
+    {
+      "level": 1,
+      "text": "interval= update frequency",
+      "id": "interval-update-frequency"
+    },
+    {
+      "level": 1,
+      "text": "save the animation as an mp4.  This requires ffmpeg or mencoder to be",
+      "id": "save-the-animation-as-an-mp4-this-requires-ffmpeg-or-mencoder-to-be"
+    },
+    {
+      "level": 1,
+      "text": "installed.  The extra_args ensure that the x264 codec is used, so that",
+      "id": "installed-the-extra_args-ensure-that-the-x264-codec-is-used-so-that"
+    },
+    {
+      "level": 1,
+      "text": "the video can be embedded in html5.  You may need to adjust this for",
+      "id": "the-video-can-be-embedded-in-html5-you-may-need-to-adjust-this-for"
+    },
+    {
+      "level": 1,
+      "text": "your system: for more information, see",
+      "id": "your-system-for-more-information-see"
+    },
+    {
+      "level": 1,
+      "text": "http://matplotlib.sourceforge.net/api/animation_api.html",
+      "id": "httpmatplotlibsourceforgenetapianimation_apihtml"
+    },
+    {
+      "level": 1,
+      "text": "anim.save('basic_animation.mp4', fps=30, extra_args=['-vcodec', 'libx264'])",
+      "id": "animsavebasic_animationmp4-fps30-extra_args-vcodec-libx264"
+    }
+  ],
+  "hasMath": false
+}

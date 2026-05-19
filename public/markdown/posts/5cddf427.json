@@ -1,0 +1,51 @@
+{
+  "title": "Leetcode347:前K个高频元素——优先队列、堆",
+  "date": "2022-04-07T08:55:15.000Z",
+  "updatedAt": "2022-04-07T08:55:15.000Z",
+  "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
+  "slug": "5cddf427",
+  "categories": [
+    "刷题"
+  ],
+  "tags": [
+    "刷题"
+  ],
+  "img": "",
+  "wordCount": 709,
+  "readingTime": 2,
+  "body": "# 题目\n\nhttps://leetcode-cn.com/problems/top-k-frequent-elements/\n\n从这题开始学会使用堆\n\n# 题解\n\n## 堆（heap）\n\n大顶堆：父节点的值大于子节点的值。\n\n小顶堆：父节点的值小于子节点的值。\n\n性质：根节点一定是最大（最小）值\n\n这是一个小顶堆的例子：\n\n{{< figure src=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/webp-20220407170224537\"  title=\"小顶堆例子\" >}}\n\n参考：https://www.cnblogs.com/wmyskxz/p/9301021.html\n\nps：会有人把上学期刚学的东西忘得一干二净吗？会，是谁我不说😂。\n\n## 优先队列（priority_queue）\n\n优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个堆实现的。\n\n直接看c++ STL\n\n头文件： `#include<queue>`\n\n定义：`priority_queue<int> p;` 默认为大顶堆\n\n或priority_queue<Type, Container, Functional> Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。\n\n如`priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&cmp)> q(cmp);`\n\n其中比较函数为：\n\n```c++\nstatic bool cmp(pair<int, int>& m, pair<int, int>& n) {\n        return m.second > n.second;\n    }\n```\n\n这里定义的是一个储存pair<int,int>的小顶堆。\n\n操作（和队列基本操作相同：\n\n- top 访问队头元素\n- empty 队列是否为空\n- size 返回队列内元素个数\n- push 插入元素到队尾 (并排序)\n- emplace 原地构造一个元素并插入队列\n- pop 弹出队头元素\n- swap 交换内容\n\n参考：https://blog.csdn.net/weixin_36888577/article/details/79937886\n\n## 排序大法和大顶堆法\n\n先搞清楚这些咱们才开始做题：\n\n首先最容易想到的，就是统计次数，时间复杂度O(n)。再排序，时间复杂度O(nlogn)。总时间复杂度O(nlogn)\n\n下面是自己写的代码：\n\n```python\nclass Solution:\n    def topKFrequent(self, nums: List[int], k: int) -> List[int]:\n        s = {}\n        for i in nums:\n            if i not in s.keys():\n                s[i] = 1\n            else:\n                s[i] += 1\n        s1 = [(a,b) for a,b in s.items()]\n        s2 = sorted(s1, key=lambda x:x[1], reverse=True)\n        print(s2)\n        return [s2[i][0] for i in range(k)]\n```\n\n同样的，如果用大顶堆把所有`[数字,出现次数]`加入进去，然后k次返回堆顶元素，时间复杂度也是O(nlogn)。涉及到数据结构的话，最好还是用c艹来写：\n\n```c++\nclass Solution {\npublic:\n    static bool cmp(pair<int,int>&m, pair<int,int>&n){\n        return m.second < n.second;\n    }\n    vector<int> topKFrequent(vector<int>& nums, int k) {\n        unordered_map<int,int> occur;\n        for( auto& v:nums){\n            occur[v]++;\n        }\n\n        priority_queue<pair<int,int>,vector<pair<int,int>>,decltype(&cmp)> q(cmp);\n        for(auto& [num,count]:occur){\n            q.emplace(num,count);\n        }\n        vector<int> res;\n        while(k>0){\n            res.push_back(q.top().first);\n            q.pop();\n            k--;\n        }\n        return res;\n    }\n\n};\n```\n\n以上两种方法时间复杂度为O(nlogn)，都不符合题目要求。那么要做到“优于O(nlogn)”用什么方法呢？\n\n## 小顶堆法\n\n取自官方题解：\n\n> 在这里，我们可以利用堆的思想：建立一个小顶堆，然后遍历「出现次数数组」：\n>\n> * 如果堆的元素个数小于 k，就可以直接插入堆中。\n> * 如果堆的元素个数等于 k，则检查堆顶与当前出现次数的大小。如果堆顶更大，说明至少有 k 个数字的出现次数比当前值大，故舍弃当前值；否则，就弹出堆顶，并将当前值插入堆中。\n>\n> 遍历完成后，堆中的元素就代表了「出现次数数组」中前 k 大的值。\n\n代码：\n\n```c++\nclass Solution {\npublic:\n    static bool cmp(pair<int, int>& m, pair<int, int>& n) {\n        return m.second > n.second;\n    }\n\n    vector<int> topKFrequent(vector<int>& nums, int k) {\n        unordered_map<int, int> occurrences;\n        for (auto& v : nums) {\n            occurrences[v]++;\n        }\n\n        // pair 的第一个元素代表数组的值，第二个元素代表了该值出现的次数\n        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(&cmp)> q(cmp);\n        for (auto& [num, count] : occurrences) {\n            if (q.size() == k) {\n                if (q.top().second < count) {\n                    q.pop();\n                    q.emplace(num, count);\n                }\n            } else {\n                q.emplace(num, count);\n            }\n        }\n        vector<int> ret;\n        while (!q.empty()) {\n            ret.emplace_back(q.top().first);\n            q.pop();\n        }\n        return ret;\n    }\n};\n\n作者：LeetCode-Solution\n链接：https://leetcode-cn.com/problems/top-k-frequent-elements/solution/qian-k-ge-gao-pin-yuan-su-by-leetcode-solution/\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n```\n\n由于只需要维护大小为k的堆，所以空间复杂度会小。而且不用对于所有的元素都执行插入堆的操作，所以时间复杂度也优于上面的方法。\n\n",
+  "html": "<h1 id=\"题目\">题目</h1>\n<p><a href=\"https://leetcode-cn.com/problems/top-k-frequent-elements/\">https://leetcode-cn.com/problems/top-k-frequent-elements/</a></p>\n<p>从这题开始学会使用堆</p>\n<h1 id=\"题解\">题解</h1>\n<h2 id=\"堆heap\">堆（heap）</h2>\n<p>大顶堆：父节点的值大于子节点的值。</p>\n<p>小顶堆：父节点的值小于子节点的值。</p>\n<p>性质：根节点一定是最大（最小）值</p>\n<p>这是一个小顶堆的例子：</p>\n<p>{{&lt; figure src=“<a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/webp-20220407170224537\">https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/img/webp-20220407170224537</a>”  title=“小顶堆例子” &gt;}}</p>\n<p>参考：<a href=\"https://www.cnblogs.com/wmyskxz/p/9301021.html\">https://www.cnblogs.com/wmyskxz/p/9301021.html</a></p>\n<p>ps：会有人把上学期刚学的东西忘得一干二净吗？会，是谁我不说😂。</p>\n<h2 id=\"优先队列priority_queue\">优先队列（priority_queue）</h2>\n<p>优先队列具有队列的所有特性，包括基本操作，只是在这基础上添加了内部的一个排序，它本质是一个堆实现的。</p>\n<p>直接看c++ STL</p>\n<p>头文件： <code>#include&lt;queue&gt;</code></p>\n<p>定义：<code>priority_queue&lt;int&gt; p;</code> 默认为大顶堆</p>\n<p>或priority_queue&lt;Type, Container, Functional&gt; Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。</p>\n<p>如<code>priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, decltype(&amp;cmp)&gt; q(cmp);</code></p>\n<p>其中比较函数为：</p>\n<pre><code class=\"language-c++\">static bool cmp(pair&lt;int, int&gt;&amp; m, pair&lt;int, int&gt;&amp; n) {\n        return m.second &gt; n.second;\n    }\n</code></pre>\n<p>这里定义的是一个储存pair&lt;int,int&gt;的小顶堆。</p>\n<p>操作（和队列基本操作相同：</p>\n<ul>\n<li>top 访问队头元素</li>\n<li>empty 队列是否为空</li>\n<li>size 返回队列内元素个数</li>\n<li>push 插入元素到队尾 (并排序)</li>\n<li>emplace 原地构造一个元素并插入队列</li>\n<li>pop 弹出队头元素</li>\n<li>swap 交换内容</li>\n</ul>\n<p>参考：<a href=\"https://blog.csdn.net/weixin_36888577/article/details/79937886\">https://blog.csdn.net/weixin_36888577/article/details/79937886</a></p>\n<h2 id=\"排序大法和大顶堆法\">排序大法和大顶堆法</h2>\n<p>先搞清楚这些咱们才开始做题：</p>\n<p>首先最容易想到的，就是统计次数，时间复杂度O(n)。再排序，时间复杂度O(nlogn)。总时间复杂度O(nlogn)</p>\n<p>下面是自己写的代码：</p>\n<pre><code class=\"language-python\">class Solution:\n    def topKFrequent(self, nums: List[int], k: int) -&gt; List[int]:\n        s = {}\n        for i in nums:\n            if i not in s.keys():\n                s[i] = 1\n            else:\n                s[i] += 1\n        s1 = [(a,b) for a,b in s.items()]\n        s2 = sorted(s1, key=lambda x:x[1], reverse=True)\n        print(s2)\n        return [s2[i][0] for i in range(k)]\n</code></pre>\n<p>同样的，如果用大顶堆把所有<code>[数字,出现次数]</code>加入进去，然后k次返回堆顶元素，时间复杂度也是O(nlogn)。涉及到数据结构的话，最好还是用c艹来写：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    static bool cmp(pair&lt;int,int&gt;&amp;m, pair&lt;int,int&gt;&amp;n){\n        return m.second &lt; n.second;\n    }\n    vector&lt;int&gt; topKFrequent(vector&lt;int&gt;&amp; nums, int k) {\n        unordered_map&lt;int,int&gt; occur;\n        for( auto&amp; v:nums){\n            occur[v]++;\n        }\n\n        priority_queue&lt;pair&lt;int,int&gt;,vector&lt;pair&lt;int,int&gt;&gt;,decltype(&amp;cmp)&gt; q(cmp);\n        for(auto&amp; [num,count]:occur){\n            q.emplace(num,count);\n        }\n        vector&lt;int&gt; res;\n        while(k&gt;0){\n            res.push_back(q.top().first);\n            q.pop();\n            k--;\n        }\n        return res;\n    }\n\n};\n</code></pre>\n<p>以上两种方法时间复杂度为O(nlogn)，都不符合题目要求。那么要做到“优于O(nlogn)”用什么方法呢？</p>\n<h2 id=\"小顶堆法\">小顶堆法</h2>\n<p>取自官方题解：</p>\n<blockquote>\n<p>在这里，我们可以利用堆的思想：建立一个小顶堆，然后遍历「出现次数数组」：</p>\n<ul>\n<li>如果堆的元素个数小于 k，就可以直接插入堆中。</li>\n<li>如果堆的元素个数等于 k，则检查堆顶与当前出现次数的大小。如果堆顶更大，说明至少有 k 个数字的出现次数比当前值大，故舍弃当前值；否则，就弹出堆顶，并将当前值插入堆中。</li>\n</ul>\n<p>遍历完成后，堆中的元素就代表了「出现次数数组」中前 k 大的值。</p>\n</blockquote>\n<p>代码：</p>\n<pre><code class=\"language-c++\">class Solution {\npublic:\n    static bool cmp(pair&lt;int, int&gt;&amp; m, pair&lt;int, int&gt;&amp; n) {\n        return m.second &gt; n.second;\n    }\n\n    vector&lt;int&gt; topKFrequent(vector&lt;int&gt;&amp; nums, int k) {\n        unordered_map&lt;int, int&gt; occurrences;\n        for (auto&amp; v : nums) {\n            occurrences[v]++;\n        }\n\n        // pair 的第一个元素代表数组的值，第二个元素代表了该值出现的次数\n        priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, decltype(&amp;cmp)&gt; q(cmp);\n        for (auto&amp; [num, count] : occurrences) {\n            if (q.size() == k) {\n                if (q.top().second &lt; count) {\n                    q.pop();\n                    q.emplace(num, count);\n                }\n            } else {\n                q.emplace(num, count);\n            }\n        }\n        vector&lt;int&gt; ret;\n        while (!q.empty()) {\n            ret.emplace_back(q.top().first);\n            q.pop();\n        }\n        return ret;\n    }\n};\n\n作者：LeetCode-Solution\n链接：https://leetcode-cn.com/problems/top-k-frequent-elements/solution/qian-k-ge-gao-pin-yuan-su-by-leetcode-solution/\n来源：力扣（LeetCode）\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n</code></pre>\n<p>由于只需要维护大小为k的堆，所以空间复杂度会小。而且不用对于所有的元素都执行插入堆的操作，所以时间复杂度也优于上面的方法。</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "题目",
+      "id": "题目"
+    },
+    {
+      "level": 1,
+      "text": "题解",
+      "id": "题解"
+    },
+    {
+      "level": 2,
+      "text": "堆（heap）",
+      "id": "堆heap"
+    },
+    {
+      "level": 2,
+      "text": "优先队列（priority_queue）",
+      "id": "优先队列priority_queue"
+    },
+    {
+      "level": 2,
+      "text": "排序大法和大顶堆法",
+      "id": "排序大法和大顶堆法"
+    },
+    {
+      "level": 2,
+      "text": "小顶堆法",
+      "id": "小顶堆法"
+    }
+  ],
+  "hasMath": false
+}
