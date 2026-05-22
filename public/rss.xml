@@ -5,7 +5,14 @@
   <link>https://leyoubaloy.github.io</link>
   <description>读万卷书，行万里路</description>
   <language>zh-CN</language>
-  <lastBuildDate>Wed, 25 Mar 2026 12:53:00 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 22 May 2026 02:05:57 GMT</lastBuildDate>
+  <item>
+    <title>硕士毕业答辩总结</title>
+    <link>https://leyoubaloy.github.io/post/119fbeee</link>
+    <guid>https://leyoubaloy.github.io/post/119fbeee</guid>
+    <pubDate>Fri, 22 May 2026 02:05:57 GMT</pubDate>
+    <description>硕士毕业答辩总结 硕士毕业答辩结束之后，心里一下子空下来很多。回头看这一路，从开题、中期、写小论文、改大论文，到送盲审、做PPT、上台答辩，每一个节点在经历的时候都像是一座山，真正翻过去之后，又觉得很多事情其实都有章可循。 这篇文章算是给自己做一个阶段性复盘，也给后面要毕业的师弟师妹留一点经验。总结</description>
+  </item>
   <item>
     <title>opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash</title>
     <link>https://leyoubaloy.github.io/post/512e708e</link>
@@ -348,13 +355,6 @@
     <guid>https://leyoubaloy.github.io/post/433a59dc</guid>
     <pubDate>Mon, 20 Mar 2023 05:32:55 GMT</pubDate>
     <description>需求 还是之前的那个需求，我需要做一个静态网页用于展示电子版教材。网页的布局非常重要，我需要一个顶部横向的导航栏，一个能够显示大纲的侧边栏，侧边栏的右边是教材的内容，听起来很简单，不是吗？但我需要再加一个条件，就是这些布局得是响应式的，要能够适应不同尺寸的屏幕，这可就不简单了。举个例子，当屏幕变窄时</description>
-  </item>
-  <item>
-    <title>在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号</title>
-    <link>https://leyoubaloy.github.io/post/61be5727</link>
-    <guid>https://leyoubaloy.github.io/post/61be5727</guid>
-    <pubDate>Thu, 16 Mar 2023 15:51:26 GMT</pubDate>
-    <description>highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 1. 先引入css文件和js文件 2. 再将你的代码用 包裹 3. 再调用hljs的高亮函数，它的原理是找到所有的code标签，然后通过操作DOM，给你的代码设置高亮样式。 hig</description>
   </item>
 </channel>
 </rss>
