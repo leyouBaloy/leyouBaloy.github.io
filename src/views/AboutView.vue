@@ -1,6 +1,5 @@
 <template>
   <main>
-    <PageHead></PageHead>
     <div class="container">
       <!-- 关于我 -->
       <section class="about-section">
@@ -101,11 +100,8 @@
 </template>
 
 <script setup>
-import Nav from "@/components/Nav.vue";
 import InfoCards from "@/components/InfoCards.vue";
-import SocialMedia from "@/components/SocialMedia.vue";
 import { onMounted, nextTick, ref } from "vue";
-import PageHead from "@/components/PageHead.vue";
 import Foot from "@/components/Foot.vue";
 
 const scriptContainer = ref(null);

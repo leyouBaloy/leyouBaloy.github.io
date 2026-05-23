@@ -110,7 +110,7 @@ const isActive = (path) => {
   position: fixed;
   top: 0;
   left: 50%;
-  width: min(900px, calc(100% - 24px));
+  width: min(900px, 100%);
   transform: translateX(-50%);
   z-index: 1000;
 }
@@ -261,7 +261,7 @@ a {
 
   .nav-fix-top {
     top: 0;
-    width: calc(100% - 16px);
+    width: 100%;
   }
 
   .dropdown-menu {

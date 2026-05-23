@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { useRoute, RouterView } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { SpeedInsights } from "@vercel/speed-insights/vue"
 import { inject } from '@vercel/analytics';
 import { computed, ref, onMounted, onUnmounted } from 'vue';
 import { NIcon } from 'naive-ui';
 import { MoonOutline, SunnyOutline } from '@vicons/ionicons5';
+import PageHead from "@/components/PageHead.vue";
 
 const route = useRoute()
 inject();
@@ -15,6 +16,7 @@ const themeIcon = computed(() => isDark.value ? SunnyOutline : MoonOutline);
 
 // 图片灯箱
 const lightboxImage = ref<string | null>(null);
+const showPageHead = computed(() => route.meta.showPageHead === true);
 
 onMounted(() => {
   // 检查本地存储和系统主题
@@ -58,12 +60,22 @@ const applyTheme = () => {
 </script>
 
 <template>
-  <router-view v-slot="{ Component }">
-    <keep-alive>
-      <component :is="Component" v-if="$route.meta.keepAlive" />
-    </keep-alive>
-    <component :is="Component" v-if="!$route.meta.keepAlive" />
-  </router-view>
+  <div class="site-shell">
+    <PageHead v-if="showPageHead" />
+
+    <div class="page-stage">
+      <router-view v-slot="{ Component, route }">
+        <transition name="page-switch">
+          <keep-alive>
+            <component :is="Component" v-if="route.meta.keepAlive" :key="route.name || route.fullPath" />
+          </keep-alive>
+        </transition>
+        <transition name="page-switch">
+          <component :is="Component" v-if="!route.meta.keepAlive" :key="route.fullPath" />
+        </transition>
+      </router-view>
+    </div>
+  </div>
   <SpeedInsights/>
   
   <!-- 暗色模式切换按钮 -->
@@ -178,6 +190,39 @@ main {
   background-color: #FFFFFF;
 }
 
+.site-shell {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-stage {
+  position: relative;
+  width: 100%;
+}
+
+.page-switch-enter-active,
+.page-switch-leave-active {
+  transition: opacity 0.14s ease, transform 0.14s ease;
+}
+
+.page-switch-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.page-switch-leave-to {
+  opacity: 0;
+}
+
+.page-switch-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
 /* 暗色模式 */
 [data-theme="dark"] body {
   background-color: #101325;
@@ -253,6 +298,13 @@ main {
 /* 评论区暗色 */
 [data-theme="dark"] .giscus {
   background-color: #1f2937;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-switch-enter-active,
+  .page-switch-leave-active {
+    transition: none;
+  }
 }
 </style>
 

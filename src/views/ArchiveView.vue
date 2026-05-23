@@ -1,6 +1,5 @@
 <template>
   <main>
-    <PageHead></PageHead>
     <div class="container">
       <div class="header">
         <h1>文章归档 📚</h1>
@@ -180,7 +179,6 @@ import TimelineItem from "@/components/TimelineItem.vue";
 import { NTabs, NTabPane, NEmpty, NButton, NInput, NIcon, NTag } from "naive-ui";
 import { SearchOutline } from '@vicons/ionicons5';
 import type { PostMetadata } from "@/types/PostMetadata.ts";
-import PageHead from '@/components/PageHead.vue';
 import Foot from '@/components/Foot.vue';
 
 const totalPosts = ref(0);

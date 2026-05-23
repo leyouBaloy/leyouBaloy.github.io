@@ -5,11 +5,15 @@ export const routes = [
     component: () => import("../views/HomeView.vue"),
     meta: {
       keepAlive: true,
+      showPageHead: true,
     },
   },
   {
     path: "/archive",
     name: "archive",
+    meta: {
+      showPageHead: true,
+    },
     component: () => import("../views/ArchiveView.vue"),
     // meta: {
     //   keepAlive: true,
@@ -18,11 +22,17 @@ export const routes = [
   {
     path: "/media",
     name: "media",
+    meta: {
+      showPageHead: true,
+    },
     component: () => import("../views/MediaView.vue"),
   },
   {
     path: "/about",
     name: "AboutView",
+    meta: {
+      showPageHead: true,
+    },
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

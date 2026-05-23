@@ -1,6 +1,5 @@
 <template>
   <main>
-    <PageHead />
     <div class="content">
 
       <!-- 移动端：保留单列 or 直接渲染所有帖子 -->
@@ -66,7 +65,6 @@
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import axios from 'axios';
 import { NDivider, NBackTop} from 'naive-ui';
-import PageHead from "@/components/PageHead.vue";
 import Foot from "@/components/Foot.vue";
 import PostCard from "@/components/PostCard.vue";
 import type { PostMetadata } from "@/types/PostMetadata";

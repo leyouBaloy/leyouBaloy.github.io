@@ -1,6 +1,5 @@
 <template>
   <main>
-    <PageHead></PageHead>
     <div class="content">
       <section class="media-intro">
         <p class="eyebrow">Reading, travelling, watching, playing</p>
@@ -83,7 +82,6 @@ import { ref, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
 import { NBackTop } from 'naive-ui';
-import PageHead from "@/components/PageHead.vue";
 import Foot from "@/components/Foot.vue";
 
 type MediaTabKey = 'reading' | 'movies' | 'travels' | 'games';
