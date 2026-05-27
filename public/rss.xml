@@ -5,7 +5,14 @@
   <link>https://leyoubaloy.github.io</link>
   <description>读万卷书，行万里路</description>
   <language>zh-CN</language>
-  <lastBuildDate>Fri, 22 May 2026 02:05:57 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 27 May 2026 15:45:25 GMT</lastBuildDate>
+  <item>
+    <title>思考：Pi Agent 对比 LangGraph</title>
+    <link>https://leyoubaloy.github.io/post/d98f4875</link>
+    <guid>https://leyoubaloy.github.io/post/d98f4875</guid>
+    <pubDate>Wed, 27 May 2026 15:45:25 GMT</pubDate>
+    <description>思考：Pi Agent 对比 LangGraph 最近在思考两类 Agent 的差异：一种是 Pi Agent 这种模型主导的模式，另一种是 LangGraph 这种流程主导的模式。 它们都可以调用 LLM、工具、检索和代码，但核心差别不在“用了什么能力”，而在“下一步由谁决定”。 Pi Agent</description>
+  </item>
   <item>
     <title>硕士毕业答辩总结</title>
     <link>https://leyoubaloy.github.io/post/119fbeee</link>
@@ -348,13 +355,6 @@
     <guid>https://leyoubaloy.github.io/post/28b5db09</guid>
     <pubDate>Wed, 12 Apr 2023 06:11:41 GMT</pubDate>
     <description>为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内IP，封梯子IP，封国内账号，搞得没法再国内使用，但是已经形成了依赖，不用不行呀。天下苦ChatGPT久矣～ 自从api接口开放之后，操作空间就大了。我们可以</description>
-  </item>
-  <item>
-    <title>CSS布局基础知识</title>
-    <link>https://leyoubaloy.github.io/post/433a59dc</link>
-    <guid>https://leyoubaloy.github.io/post/433a59dc</guid>
-    <pubDate>Mon, 20 Mar 2023 05:32:55 GMT</pubDate>
-    <description>需求 还是之前的那个需求，我需要做一个静态网页用于展示电子版教材。网页的布局非常重要，我需要一个顶部横向的导航栏，一个能够显示大纲的侧边栏，侧边栏的右边是教材的内容，听起来很简单，不是吗？但我需要再加一个条件，就是这些布局得是响应式的，要能够适应不同尺寸的屏幕，这可就不简单了。举个例子，当屏幕变窄时</description>
   </item>
 </channel>
 </rss>

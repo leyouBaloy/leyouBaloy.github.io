@@ -1,5 +1,21 @@
 [
   {
+    "title": "质数判断",
+    "date": "2020-12-03T10:13:20.000Z",
+    "updatedAt": "2020-12-03T10:13:20.000Z",
+    "file": "质数判断.md",
+    "slug": "7081f44b",
+    "excerpt": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来 如果是质数，函数sb()返回1，不是就返回0；",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 66,
+    "readingTime": 1,
+    "searchContent": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来 如果是质数，函数sb()返回1，不是就返回0；",
+    "totalPages": 28
+  },
+  {
     "title": "c++傻缺错误集锦",
     "date": "2020-12-02T20:09:14.000Z",
     "updatedAt": "2020-12-02T20:09:14.000Z",
@@ -12,8 +28,7 @@
     "img": "",
     "wordCount": 191,
     "readingTime": 1,
-    "searchContent": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！ 千万不要把“==”写成“=” 输出小数时函数用成了int Fun() 应该用double Fun() 习惯了使用int Fun() 也是看了半天，没有看出问题来 输入M和N 我只写了cin N; 导致后面全错，查了半天也没查出来； 定义了数组a\\[9999\\]; 后面定义了变量a 报错invalid types 'int\\[int\\]' for array subscript 使用cnt变量进行计数时，没有赋初始值0； 算法是对的，一送进Oj就错 搞了半天，数组开小了 明天就程序设计考试了，我作为程序设计课代表（假课代表），不能考的太差呀！ 加油吧",
-    "totalPages": 28
+    "searchContent": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！ 千万不要把“==”写成“=” 输出小数时函数用成了int Fun() 应该用double Fun() 习惯了使用int Fun() 也是看了半天，没有看出问题来 输入M和N 我只写了cin N; 导致后面全错，查了半天也没查出来； 定义了数组a\\[9999\\]; 后面定义了变量a 报错invalid types 'int\\[int\\]' for array subscript 使用cnt变量进行计数时，没有赋初始值0； 算法是对的，一送进Oj就错 搞了半天，数组开小了 明天就程序设计考试了，我作为程序设计课代表（假课代表），不能考的太差呀！ 加油吧"
   },
   {
     "title": "selenium爬GDP",
@@ -134,20 +149,5 @@
     "wordCount": 66,
     "readingTime": 1,
     "searchContent": "依次执行以上cell，1.打开chrome自动输入账号密码。2.有五秒钟的时间人工输入验证码。3.自动进入课表页面，自动截图，保存在桌面（保存文件夹在目录可能需要更改）"
-  },
-  {
-    "title": "Python爬虫-selenium-request",
-    "date": "2020-11-16T15:20:41.000Z",
-    "updatedAt": "2020-11-16T15:20:41.000Z",
-    "file": "Python爬虫-selenium-request.md",
-    "slug": "aaaacb5c",
-    "excerpt": "seleniumrequest下载",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 3,
-    "readingTime": 1,
-    "searchContent": "seleniumrequest下载"
   }
 ]

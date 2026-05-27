@@ -1,4 +1,34 @@
 {
+  "技术思考": [
+    {
+      "title": "思考：Pi Agent 对比 LangGraph",
+      "date": "2026-05-27T15:45:25.000Z",
+      "updatedAt": "2026-05-27T15:45:25.000Z",
+      "file": "思考：Pi Agent 对比 LangGraph.md",
+      "slug": "d98f4875",
+      "excerpt": "思考：Pi Agent 对比 LangGraph 最近在思考两类 Agent 的差异：一种是 Pi Agent 这种模型主导的模式，另一种是 LangGraph 这种流程主导的模式。 它们都可以调用 LLM、工具、检索和代码，但核心差别不在“用了什么能力”，而在“下一步由谁决定”。 Pi Agent",
+      "tags": [
+        "技术思考"
+      ],
+      "img": "/images/pi-agent-vs-langgraph-header.png",
+      "wordCount": 1010,
+      "readingTime": 3
+    },
+    {
+      "title": "single-agent现阶段明显强于multi-agent",
+      "date": "2026-03-25T03:44:00.000Z",
+      "updatedAt": "2026-03-25T03:44:00.000Z",
+      "file": "single-agent-vs-multi-agent.md",
+      "slug": "7dbff82d",
+      "excerpt": "single agent现阶段明显强于multi agent multi agent 系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。 反观那些真正跑出来的产品——OpenClaw、",
+      "tags": [
+        "技术思考"
+      ],
+      "img": "",
+      "wordCount": 852,
+      "readingTime": 3
+    }
+  ],
   "随笔杂记": [
     {
       "title": "硕士毕业答辩总结",
@@ -848,22 +878,6 @@
       "img": "",
       "wordCount": 330,
       "readingTime": 1
-    }
-  ],
-  "技术思考": [
-    {
-      "title": "single-agent现阶段明显强于multi-agent",
-      "date": "2026-03-25T03:44:00.000Z",
-      "updatedAt": "2026-03-25T03:44:00.000Z",
-      "file": "single-agent-vs-multi-agent.md",
-      "slug": "7dbff82d",
-      "excerpt": "single agent现阶段明显强于multi agent multi agent 系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。 反观那些真正跑出来的产品——OpenClaw、",
-      "tags": [
-        "技术思考"
-      ],
-      "img": "",
-      "wordCount": 852,
-      "readingTime": 3
     }
   ],
   "技能分享": [

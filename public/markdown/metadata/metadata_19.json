@@ -1,5 +1,21 @@
 [
   {
+    "title": "Conda 配置虚拟环境",
+    "date": "2021-08-29T21:20:21.000Z",
+    "updatedAt": "2021-08-29T21:20:21.000Z",
+    "file": "Conda 配置虚拟环境.md",
+    "slug": "bcde8727",
+    "excerpt": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change ke",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "wordCount": 91,
+    "readingTime": 1,
+    "searchContent": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change kernel = 环境名",
+    "totalPages": 28
+  },
+  {
     "title": "jupyter-paddle使用docker安装",
     "date": "2021-08-29T21:19:42.000Z",
     "updatedAt": "2021-08-29T21:19:42.000Z",
@@ -12,8 +28,7 @@
     "img": "",
     "wordCount": 202,
     "readingTime": 1,
-    "searchContent": "安装 参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux docker.html 先安装docker，参考官网 拉取镜像： docker pull registry.baidubce.com/paddlepaddle/paddle:2.1.2 jupyter 运行容器 这里有个坑，访问ip地址:8080进入notebook的时候，还有一个账号，默认是paddle 容器内安装dlib 更新apt: 在安装 g++ 等工具时 会提示 Unable to locate package build essential，这种情况下先执行 更新一下， 更新完。继续 使用apt安装依赖： ` sudo apt get install build essential cmake sudo apt get install libgtk 3 dev sudo apt get install libboost all dev pip安装 dlib pip install dlib` 作者：花花儿 链接：https://www.zhihu.com/question/34524316/answer/182278536 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。",
-    "totalPages": 28
+    "searchContent": "安装 参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux docker.html 先安装docker，参考官网 拉取镜像： docker pull registry.baidubce.com/paddlepaddle/paddle:2.1.2 jupyter 运行容器 这里有个坑，访问ip地址:8080进入notebook的时候，还有一个账号，默认是paddle 容器内安装dlib 更新apt: 在安装 g++ 等工具时 会提示 Unable to locate package build essential，这种情况下先执行 更新一下， 更新完。继续 使用apt安装依赖： ` sudo apt get install build essential cmake sudo apt get install libgtk 3 dev sudo apt get install libboost all dev pip安装 dlib pip install dlib` 作者：花花儿 链接：https://www.zhihu.com/question/34524316/answer/182278536 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
   },
   {
     "title": "再认识我的家乡——蚌埠",
@@ -134,20 +149,5 @@
     "wordCount": 26,
     "readingTime": 1,
     "searchContent": "NGINX nginx常用命令 配置文件 配置文件解释参考： https://blog.csdn.net/tjcyjd/article/details/50695922"
-  },
-  {
-    "title": "和老同学的难得一见",
-    "date": "2021-08-01T11:07:38.000Z",
-    "updatedAt": "2021-08-01T11:07:38.000Z",
-    "file": "和老同学的难得一见.md",
-    "slug": "cf49f235",
-    "excerpt": "老同学没有忘记 高中同学感情很深，分别一年，互相想念。我才刚到家两天，泽枫，国荣，宇龙都发消息给我找我出去玩。我对高三博雅班的同学没有任何好感，但是对以前二班的同学我很愿意继续相处。 张宇龙的升学宴 一个五河的小伙子，我高中的好兄弟。今年复读一年考上北京的对外经贸大学，大喜，十分热情的邀请我去五河县",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "",
-    "wordCount": 467,
-    "readingTime": 2,
-    "searchContent": "老同学没有忘记 高中同学感情很深，分别一年，互相想念。我才刚到家两天，泽枫，国荣，宇龙都发消息给我找我出去玩。我对高三博雅班的同学没有任何好感，但是对以前二班的同学我很愿意继续相处。 张宇龙的升学宴 一个五河的小伙子，我高中的好兄弟。今年复读一年考上北京的对外经贸大学，大喜，十分热情的邀请我去五河县他家里吃席。 同去的还有一年没见的二班同学，刘星宇、周锐、叶雨辰。见了面我们几个老二班人聊得很开心，大家变化都不大。刘星宇还是那个吃货，复读一年考上安徽大学。周锐在西北农林科技大学大展身手，也是很牛的。叶雨辰去了北外，性取向仍然不明确。周锐和叶雨辰不知道啥时候能公开在一起（调皮） 去五河的路上还有一个小插曲，就是我们四个理科生全部理解错了张宇龙的意思，买错了票，坐错了车。而文科生都买对票了。哈哈哈太有趣了。 我跟他们在一起真的很舒服，说了好多有趣的话，之前没发现我口才这么好哈哈哈哈（自夸） 张宇龙 张宇龙我最佩服的是他的胸怀，他有真正男人的胸怀，以天下为己任，信仰共产党，热爱祖国热爱人民。他是优秀的文科生，跟浮躁的理科生是完全不同的。 我跟他兴趣爱好，家庭环境差别很大，但是我两就是很能聊得来。我对他感兴趣，他也对我感兴趣，这个朋友是要好好处的。"
   }
 ]
