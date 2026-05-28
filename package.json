@@ -4,14 +4,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node src/scripts/generate-metadata.js && vite",
+    "blog": "node src/scripts/blog-cli.js",
+    "dev": "node src/scripts/blog-cli.js server",
     "preinstall": "yarn config set registry https://registry.npmjs.org/",
     "prebuild": "node src/scripts/generate-metadata.js",
-    "build": "yarn install && run-p type-check \"build-only {@}\" --",
+    "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite-ssg build",
     "type-check": "vue-tsc --build --force",
-    "newp": "node src/scripts/generate-new-post.js"
+    "generate": "node src/scripts/blog-cli.js generate",
+    "server": "node src/scripts/blog-cli.js server",
+    "new": "node src/scripts/blog-cli.js new",
+    "newp": "node src/scripts/blog-cli.js new"
   },
   "dependencies": {
     "@css-render/vue3-ssr": "^0.15.14",

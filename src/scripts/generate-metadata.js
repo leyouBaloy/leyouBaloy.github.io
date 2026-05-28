@@ -20,14 +20,17 @@ const normalizedMarkdownDir = path.normalize(markdownDir);
 const normalizedOutputDir = path.normalize(outputDir);
 const normalizedPostsOutputDir = path.normalize(postsOutputDir);
 
-// 创建输出目录（如果不存在）
-if (!fs.existsSync(normalizedOutputDir)) {
-  fs.mkdirSync(normalizedOutputDir, { recursive: true });
+if (!fs.existsSync(normalizedMarkdownDir)) {
+  fs.mkdirSync(normalizedMarkdownDir, { recursive: true });
 }
 
-if (!fs.existsSync(normalizedPostsOutputDir)) {
-  fs.mkdirSync(normalizedPostsOutputDir, { recursive: true });
-}
+const prepareOutputDir = (dir) => {
+  fs.rmSync(dir, { recursive: true, force: true });
+  fs.mkdirSync(dir, { recursive: true });
+};
+
+prepareOutputDir(normalizedOutputDir);
+prepareOutputDir(normalizedPostsOutputDir);
 
 // 对文件名做 md5 hash，取前 8 位
 const hashFilename = (filename) => {
@@ -249,6 +252,11 @@ const feedLastBuildDate = new Date(latestPostDate || staticPageLastmod);
 // 每10个元数据一个文件
 const chunkSize = 10;
 const totalPages = Math.ceil(metadataList.length / chunkSize);
+
+if (metadataList.length === 0) {
+  fs.writeFileSync(path.join(normalizedOutputDir, 'metadata_1.json'), JSON.stringify([], null, 2));
+  console.log('Empty metadata chunk generated successfully!');
+}
 
 for (let i = 0; i < metadataList.length; i += chunkSize) {
   const chunk = metadataList.slice(i, i + chunkSize);
