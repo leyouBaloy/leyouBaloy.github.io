@@ -1,68 +1,175 @@
 # Bailey's Blog
 
-## 简介
+一个基于 Vue 3、Vite SSG、Naive UI 和 markdown-it 的纯静态博客。文章以 Markdown 文件存放在 `public/markdown`，构建前会生成文章索引、搜索索引、RSS、Sitemap 和每篇文章的 JSON payload，最终输出到 `dist`。
 
-本站是使用 Vue3 + Naive UI 开发的纯静态博客。使用markdown-it插件来对markdown文件进行渲染。具有简洁美观大方的UI和快速的性能。
-该博客借鉴了[LoveIt](https://github.com/dillonzq/LoveIt)和[SkyWT](https://skywt.cn/)，感谢你们给我提供了许多灵感！❤
+线上示例：[https://www.imbailey.cn/](https://www.imbailey.cn/)
 
-## 实现方法
+## 特性
 
-文章页的实现方法是用axios请求markdown文件，然后使用markdown-it渲染成html文档树。通过vue渲染函数将html文档树渲染到页面（可以使用其它组件）。
+- Markdown 写作，支持 frontmatter、代码块、数学公式和目录提取。
+- 预生成文章元数据，首页、归档、标签和搜索都直接读取 JSON。
+- Vite SSG 静态生成，适合部署到 GitHub Pages、Vercel、Nginx 等静态托管环境。
+- 内置博客 CLI，命令风格向 Hexo 靠齐，支持新建文章、生成静态文件和启动本地服务。
 
-列表页和归档页的实现方式是先对所有markdown文件进行预处理，脚本代码放在src/scripts目录下，将markdown文件中的标题、时间、分类等信息提取出来，然后存入json文件中（public/markdown/metadata/xxx.json）。在vue中通过axios请求json文件，然后渲染到页面。
+## 目录结构
 
-## Demo
+```txt
+.
+├── public/
+│   ├── markdown/              # Markdown 文章源文件
+│   │   ├── metadata/          # 自动生成的列表、归档、搜索等元数据
+│   │   └── posts/             # 自动生成的文章 JSON payload
+│   ├── data/                  # 媒体页等静态数据
+│   ├── rss.xml                # 自动生成的 RSS
+│   └── sitemap.xml            # 自动生成的 Sitemap
+├── scripts/                   # 辅助脚本，例如图片上传工具
+├── src/
+│   ├── assets/                # 前端资源
+│   ├── components/            # Vue 组件
+│   ├── data/                  # 源数据
+│   ├── router/                # 路由配置
+│   ├── scripts/               # 博客 CLI 和元数据生成脚本
+│   ├── types/                 # TypeScript 类型
+│   ├── utils/                 # 数据请求、缓存等工具
+│   └── views/                 # 页面视图
+├── dist/                      # 静态构建产物，默认不提交
+├── package.json               # 项目脚本和依赖
+└── vite.config.ts             # Vite 与 SSG 配置
+```
 
-可以访问[https://www.imbailey.cn/](https://www.imbailey.cn/)查看Demo。
+`public/markdown/metadata`、`public/markdown/posts`、`public/rss.xml` 和 `public/sitemap.xml` 都是由 `src/scripts/generate-metadata.js` 自动生成的派生文件。修改文章后重新执行生成命令即可刷新它们。
 
-## Todo
+## 环境要求
 
-目前这个博客还有很多不足，我会持续更新。
+- Node.js 20 或更高版本
+- Yarn 1.x
 
-- [x] 移动端屏幕适配
-- [x] 文章页的评论功能
-- [ ] 统一使用typescript（为了开发方便，目前处于ts/js混用状态）
-- [x] 路由跳转动画、页面/图像加载动画、页面滚动优化
-- [x] 速度提升（目前速度不是很理想，需要压缩一些资源）
-- [x] 美化主页和文章页的样式，包括代码块等
-- [ ] 修改归档页的样式和数据加载逻辑
-- [X] 主页改造为瀑布流布局
-- [ ] 添加搜索功能
-- [ ] markdown表格无法解析
-
-## 开发环境
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Project Setup
+安装依赖：
 
 ```sh
-npm install
+yarn install
 ```
 
-### Compile and Hot-Reload for Development
+## CLI 用法
+
+统一入口：
 
 ```sh
-npm run dev
+yarn blog <command> [options]
 ```
 
-### Type-Check, Compile and Minify for Production
+### 新建文章
 
 ```sh
-npm run build
+yarn blog new "我的新文章"
 ```
 
-### 添加新文章
+常用选项：
 
+```sh
+yarn blog new "Vue 学习笔记" --slug vue-notes --category 前端 --tag Vue --tag Vite
+yarn blog new "草稿标题" --draft
 ```
-npm run newp <文件名(不含.md)>
+
+生成文件位置：`public/markdown/<slug 或标题>.md`。
+
+兼容旧命令：
+
+```sh
+yarn new "我的新文章"
+yarn newp "我的新文章"
 ```
 
+### 生成静态文件
 
-### 瀑布流的实现原理
-1. 首先定义一个瀑布流容器，它的高度暂定（后面会更新）。把需要布局的组件（这里叫做waterfall-item）放在瀑布流容器里面渲染出来。使用绝对定位（position: absolute），把它移到屏幕外面，不要占用页面高度，并且设置不可见（visibility:hidden）。
-2. 渲染出来之后才能计算高度。获取.waterfall-item的dom元素，遍历这些元素，使用getBoundingClientRect()获取高度。
-3. 开始布局。以2列为例，新建两个变量分别表示2列的高度。遍历第2步获取的dom元素的高度，把dom元素的高度加到最小的高度上。这个过程还可以考虑在组件之间加上留白（gutter）。
-4. 使用transform样式将waterfall-item移动到对应高度所在的位置。transform将组件移动到指定坐标，横坐标跟列有关，纵坐标跟高度有关。
-5. 更新瀑布流容器的高度为两列高度中最大者。
-详情请见[https://www.imbailey.cn/post/Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md](https://www.imbailey.cn/post/Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md)
+```sh
+yarn blog generate
+```
+
+等价短命令：
+
+```sh
+yarn blog g
+```
+
+该命令会先刷新文章元数据，再执行 Vite SSG 构建，最终产物输出到 `dist`。
+
+### 启动本地服务
+
+```sh
+yarn blog server
+```
+
+等价短命令：
+
+```sh
+yarn blog s --port 3000
+```
+
+该命令会先刷新文章元数据，再启动 Vite 开发服务。也可以直接使用：
+
+```sh
+yarn dev
+```
+
+### 只刷新文章元数据
+
+```sh
+node src/scripts/generate-metadata.js
+```
+
+## 开发流程
+
+1. 安装依赖：`yarn install`
+2. 新建或编辑文章：`yarn blog new "文章标题"`，或直接修改 `public/markdown/*.md`
+3. 启动开发服务：`yarn blog server`
+4. 生成静态站点：`yarn blog generate`
+5. 预览构建产物：`yarn preview`
+
+## 文章 frontmatter
+
+推荐格式：
+
+```md
+---
+title: 我的新文章
+date: 2026-05-28 21:30:00
+categories:
+- 随笔杂记
+tags:
+- Vue
+- 博客
+img:
+---
+
+# 我的新文章
+```
+
+字段说明：
+
+- `title`：文章标题。
+- `date`：发布时间，参与排序、RSS 和 Sitemap 生成。
+- `updatedAt` 或 `updated`：可选，文章更新时间。
+- `categories` / `tags`：分类和标签，列表页优先使用 `categories`，搜索和归档会合并使用。
+- `slug`：可选，自定义文章 URL；未设置时会根据文件名生成稳定 hash。
+- `img` 或 `featuredImagePreview`：可选，首页卡片封面图。
+- `draft: true`：可选，生成元数据时跳过该文章。
+
+## 构建与部署
+
+```sh
+yarn blog generate
+```
+
+生成后的 `dist` 是完整静态站点，可部署到任意静态托管服务。Vite SSG 会根据 `public/markdown/metadata/slug_mapping.json` 自动生成所有文章详情页。
+
+## 空白站点模板
+
+仓库提供空白站点分支，里面不包含任何文章，适合其他人直接基于它搭建自己的博客。切换到该分支后执行：
+
+```sh
+yarn install
+yarn blog server
+```
+
+然后用 `yarn blog new "第一篇文章"` 开始写作。
