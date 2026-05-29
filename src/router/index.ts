@@ -1,8 +1,18 @@
+import { defineAsyncComponent } from "vue";
+import PageLoading from "@/components/PageLoading.vue";
+
+const pageComponent = (loader: () => Promise<unknown>) => defineAsyncComponent({
+  loader: loader as () => Promise<any>,
+  loadingComponent: PageLoading,
+  delay: 120,
+  suspensible: false,
+});
+
 export const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import("../views/HomeView.vue"),
+    component: pageComponent(() => import("../views/HomeView.vue")),
     meta: {
       keepAlive: true,
       showPageHead: true,
@@ -14,7 +24,7 @@ export const routes = [
     meta: {
       showPageHead: true,
     },
-    component: () => import("../views/ArchiveView.vue"),
+    component: pageComponent(() => import("../views/ArchiveView.vue")),
     // meta: {
     //   keepAlive: true,
     // }
@@ -25,7 +35,7 @@ export const routes = [
     meta: {
       showPageHead: true,
     },
-    component: () => import("../views/MediaView.vue"),
+    component: pageComponent(() => import("../views/MediaView.vue")),
   },
   {
     path: "/about",
@@ -36,12 +46,12 @@ export const routes = [
     // route level code-splitting
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import("../views/AboutView.vue"),
+    component: pageComponent(() => import("../views/AboutView.vue")),
   },
   {
     path: "/post/:slug",
     name: "PostView",
-    component: () => import("../views/PostView.vue"),
+    component: pageComponent(() => import("../views/PostView.vue")),
     props: true,
     // meta: {
     //   keepAlive: true,
@@ -50,6 +60,6 @@ export const routes = [
   {
     path: "/resume",
     name: "resume",
-    component: () => import("../views/Resume.vue"),
+    component: pageComponent(() => import("../views/Resume.vue")),
   },
 ];

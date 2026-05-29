@@ -1,9 +1,10 @@
 <template>
   <main>
     <div class="content">
+      <PageLoading v-if="initialLoading" label="文章加载中..." />
 
       <!-- 移动端：保留单列 or 直接渲染所有帖子 -->
-      <div v-if="isMobile">
+      <div v-show="!initialLoading && isMobile">
         <div v-for="post in posts" :key="post.title" class="post-wrapper">
           <PostCard
             :title="post.title"
@@ -18,7 +19,7 @@
       </div>
 
       <!-- 桌面端：绝对定位瀑布流 -->
-      <div class="waterfall-container" ref="waterfallWrapper" :style="{ height: wrapperHeight + 'px' }">
+      <div v-show="!initialLoading && !isMobile" class="waterfall-container" ref="waterfallWrapper" :style="{ height: wrapperHeight + 'px' }">
     <div
       v-for="(post, index) in posts"
       :key="post.title"
@@ -41,7 +42,7 @@
 
       <n-divider style="margin-bottom: 10px;"/>
       <!-- 加载更多-按钮 + 无限滚动触发器 -->
-      <div class="pagination-container" ref="loadMoreTrigger">
+      <div v-show="!initialLoading" class="pagination-container" ref="loadMoreTrigger">
         <button
           class="load-more-btn"
           @click="loadNextPage"
@@ -67,6 +68,7 @@ import axios from 'axios';
 import { NDivider, NBackTop} from 'naive-ui';
 import Foot from "@/components/Foot.vue";
 import PostCard from "@/components/PostCard.vue";
+import PageLoading from "@/components/PageLoading.vue";
 import type { PostMetadata } from "@/types/PostMetadata";
 
 /** 响应式判断：移动端 */
@@ -80,6 +82,7 @@ const numPage = ref(1);
 const pageCount = ref(1);
 const loading = ref(false);
 const posts = ref<PostMetadata[]>([]);
+const initialLoading = ref(true);
 
 // 底部加载元素引用（用于无限滚动）
 const loadMoreTrigger = ref<HTMLElement | null>(null);
@@ -112,13 +115,20 @@ const loadMarkdownMetadata = async () => {
       if ((response.data[0] as any).totalPages) {
         pageCount.value = (response.data[0] as any).totalPages;
       }
+      if (numPage.value === 1) {
+        initialLoading.value = false;
+      }
       await nextTick();
+      updateColWidth();
       layoutHandle(); // 布局
     }
   } catch (error) {
     console.error('Error loading metadata:', error);
   } finally {
     loading.value = false;
+    if (numPage.value === 1 && posts.value.length === 0) {
+      initialLoading.value = false;
+    }
   }
 };
 

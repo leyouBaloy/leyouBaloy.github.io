@@ -13,6 +13,7 @@
           placeholder="🔍 搜索文章标题、标签或正文..."
           clearable
           size="large"
+          :disabled="loadingArchives"
           @update:value="handleSearch"
         >
           <template #prefix>
@@ -23,7 +24,8 @@
       
       <n-tabs type="segment" animated class="archive-tabs">
         <n-tab-pane name="by-year" tab="📅 按时间">
-          <div v-if="filteredPostsByYear.length === 0" class="empty-state">
+          <PageLoading v-if="loadingArchives" label="归档数据加载中..." compact />
+          <div v-else-if="filteredPostsByYear.length === 0" class="empty-state">
             <n-empty :description="searchQuery ? '没有找到匹配的文章' : '暂无文章'">
               <template #extra>
                 <n-button type="primary" @click="router.push('/')">去首页看看</n-button>
@@ -62,6 +64,8 @@
         
         <n-tab-pane name="by-tag" tab="🏷️ 按标签">
           <!-- 标签云 -->
+          <PageLoading v-if="loadingArchives" label="标签数据加载中..." compact />
+          <template v-else>
           <div class="tag-cloud" v-if="allTags.length > 0">
             <n-tag
               v-for="tag in allTags"
@@ -127,10 +131,12 @@
               />
             </n-anchor>
           </div>
+          </template>
         </n-tab-pane>
 
         <n-tab-pane name="search" tab="🔎 搜索结果">
-          <div v-if="!searchQuery" class="empty-state">
+          <PageLoading v-if="loadingArchives" label="搜索索引加载中..." compact />
+          <div v-else-if="!searchQuery" class="empty-state">
             <n-empty description="请在上方输入关键词搜索">
               <template #extra>
                 <span class="hint">支持搜索标题、标签、摘要和正文</span>
@@ -180,6 +186,7 @@ import { NTabs, NTabPane, NEmpty, NButton, NInput, NIcon, NTag } from "naive-ui"
 import { SearchOutline } from '@vicons/ionicons5';
 import type { PostMetadata } from "@/types/PostMetadata.ts";
 import Foot from '@/components/Foot.vue';
+import PageLoading from '@/components/PageLoading.vue';
 
 const totalPosts = ref(0);
 const postsByYear = ref<Record<string, PostMetadata[]>>({});
@@ -188,6 +195,7 @@ const allPosts = ref<PostMetadata[]>([]);
 const router = useRouter();
 const searchQuery = ref('');
 const selectedTag = ref<string | null>(null);
+const loadingArchives = ref(true);
 
 // 标签类型映射
 const tagTypes: Array<'success' | 'info' | 'warning' | 'error' | 'default'> = ['success', 'info', 'warning', 'error', 'default'];
@@ -321,10 +329,14 @@ const handleSearch = (value: string) => {
 
 const loadArchivesData = async () => {
   try {
-    const postsByYearResponse = await axios.get<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_year.json');
-    postsByYear.value = postsByYearResponse.data;
+    loadingArchives.value = true;
+    const [postsByYearResponse, postsByTagResponse, searchIndexResponse] = await Promise.all([
+      axios.get<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_year.json'),
+      axios.get<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_tag.json'),
+      axios.get<PostMetadata[]>('/markdown/metadata/search_index.json'),
+    ]);
 
-    const postsByTagResponse = await axios.get<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_tag.json');
+    postsByYear.value = postsByYearResponse.data;
     postsByTag.value = postsByTagResponse.data;
 
     // 获取所有文章用于归档计数
@@ -334,13 +346,14 @@ const loadArchivesData = async () => {
       allMetadata.push(...postsByYear.value[key]);
     }
 
-    const searchIndexResponse = await axios.get<PostMetadata[]>('/markdown/metadata/search_index.json');
     allPosts.value = searchIndexResponse.data.length ? searchIndexResponse.data : allMetadata;
 
     // 计算总文章数
     totalPosts.value = allMetadata.length;
   } catch (error) {
     console.error('Error loading archives data:', error);
+  } finally {
+    loadingArchives.value = false;
   }
 };
 

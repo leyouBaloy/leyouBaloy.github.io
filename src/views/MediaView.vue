@@ -9,15 +9,15 @@
         </p>
         <div class="stats">
           <div class="stat-item">
-            <strong>{{ totalCount }}</strong>
+            <strong>{{ loadingMedia ? '...' : totalCount }}</strong>
             <span>篇记录</span>
           </div>
           <div class="stat-item">
-            <strong>{{ availableTabs.length }}</strong>
+            <strong>{{ loadingMedia ? '...' : availableTabs.length }}</strong>
             <span>个主题</span>
           </div>
           <div class="stat-item">
-            <strong>{{ latestYear }}</strong>
+            <strong>{{ loadingMedia ? '...' : latestYear }}</strong>
             <span>最近更新</span>
           </div>
         </div>
@@ -25,13 +25,14 @@
 
       <div class="media-tabs" role="tablist" aria-label="见闻录分类">
         <button
-          v-for="tab in availableTabs"
+          v-for="tab in visibleTabs"
           :key="tab.key"
           class="tab-btn"
           :class="{ active: activeTab === tab.key }"
           type="button"
           role="tab"
           :aria-selected="activeTab === tab.key"
+          :disabled="loadingMedia"
           @click="activeTab = tab.key"
         >
           <span class="tab-icon">{{ tab.icon }}</span>
@@ -40,7 +41,9 @@
         </button>
       </div>
 
-      <div class="media-grid">
+      <PageLoading v-if="loadingMedia" label="见闻录加载中..." compact />
+
+      <div v-else class="media-grid">
         <article
           v-for="item in currentMedia"
           :key="item.slug || item.postFile"
@@ -67,7 +70,7 @@
         </article>
       </div>
 
-      <div v-if="currentMedia.length === 0" class="empty-state">
+      <div v-if="!loadingMedia && currentMedia.length === 0" class="empty-state">
         <p>{{ emptyText }}</p>
       </div>
 
@@ -83,6 +86,7 @@ import { useRouter } from 'vue-router';
 import axios from 'axios';
 import { NBackTop } from 'naive-ui';
 import Foot from "@/components/Foot.vue";
+import PageLoading from "@/components/PageLoading.vue";
 
 type MediaTabKey = 'reading' | 'movies' | 'travels' | 'games';
 
@@ -102,6 +106,7 @@ type MediaData = Partial<Record<MediaTabKey, MediaItem[]>>;
 const router = useRouter();
 const activeTab = ref<MediaTabKey>('reading');
 const mediaData = ref<MediaData>({});
+const loadingMedia = ref(true);
 
 const tabConfig: Array<{ key: MediaTabKey; label: string; icon: string; emptyText: string }> = [
   { key: 'reading', label: '阅读', icon: '📖', emptyText: '暂无阅读记录' },
@@ -113,6 +118,8 @@ const tabConfig: Array<{ key: MediaTabKey; label: string; icon: string; emptyTex
 const getTabCount = (key: MediaTabKey) => mediaData.value[key]?.length || 0;
 
 const availableTabs = computed(() => tabConfig.filter(tab => getTabCount(tab.key) > 0));
+
+const visibleTabs = computed(() => loadingMedia.value ? tabConfig : availableTabs.value);
 
 const activeTabLabel = computed(() => tabConfig.find(tab => tab.key === activeTab.value)?.label || '记录');
 
@@ -162,6 +169,7 @@ const goToPost = (item: MediaItem) => {
 
 const loadMediaData = async () => {
   try {
+    loadingMedia.value = true;
     const response = await axios.get<MediaData>('/data/media.json');
     mediaData.value = response.data;
     if (!getTabCount(activeTab.value)) {
@@ -169,6 +177,8 @@ const loadMediaData = async () => {
     }
   } catch (error) {
     console.error('加载见闻录数据失败:', error);
+  } finally {
+    loadingMedia.value = false;
   }
 };
 
@@ -278,6 +288,17 @@ main {
   transform: translateY(-1px);
   border-color: rgba(71, 91, 170, 0.34);
   box-shadow: 0 8px 22px rgba(47, 63, 114, 0.10);
+}
+
+.tab-btn:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.tab-btn:disabled:hover {
+  transform: none;
+  border-color: rgba(106, 119, 160, 0.16);
+  box-shadow: none;
 }
 
 .tab-btn.active {
