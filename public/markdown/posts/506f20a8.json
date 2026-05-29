@@ -3,7 +3,11 @@
   "date": "2025-12-14T06:19:28.000Z",
   "updatedAt": "2025-12-14T06:19:28.000Z",
   "file": "langchain-faiss加载pkl文件速度提升.md",
-  "slug": "506f20a8",
+  "slug": "langchain-faiss-load-pkl-speed-up",
+  "legacySlug": "506f20a8",
+  "aliases": [
+    "506f20a8"
+  ],
   "excerpt": "langchain faiss加载pkl文件速度提升 背景 Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。 langchain community.vectorstores中的Faiss写入一个向量库中包含两个文件：index.faiss",
   "categories": [
     "技能分享"
@@ -33,5 +37,6 @@
       "id": "代码"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "506f20a8"
 }

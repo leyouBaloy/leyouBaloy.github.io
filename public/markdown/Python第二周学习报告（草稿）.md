@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2020-10-04 15:05:52
+slug: python-week-2-study-report
 draft: false
 title: Python第二周学习报告（草稿）
 ---

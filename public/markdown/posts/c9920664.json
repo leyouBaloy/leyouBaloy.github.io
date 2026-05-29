@@ -3,7 +3,11 @@
   "date": "2021-02-25T11:10:35.000Z",
   "updatedAt": "2021-02-25T11:10:35.000Z",
   "file": "csv库的使用方法.md",
-  "slug": "c9920664",
+  "slug": "csv-library-usage",
+  "legacySlug": "c9920664",
+  "aliases": [
+    "c9920664"
+  ],
   "excerpt": "上一篇我们讲了怎么用 json格式保存数据，这一篇我们来看看如何用 csv模块进行数据读写。 一、csv简介 CSV (Comma Separated Values)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。 csv的使用很广",
   "categories": [
     "笔记"
@@ -28,5 +32,6 @@
       "id": "二csv库的使用"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "c9920664"
 }

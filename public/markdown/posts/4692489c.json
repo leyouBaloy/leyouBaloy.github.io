@@ -3,7 +3,11 @@
   "date": "2024-09-14T00:00:00.000Z",
   "updatedAt": "2024-09-14T00:00:00.000Z",
   "file": "代码块测试.md",
-  "slug": "4692489c",
+  "slug": "code-block-feature-test",
+  "legacySlug": "4692489c",
+  "aliases": [
+    "4692489c"
+  ],
   "excerpt": "代码块 Copy 按钮和高亮功能测试 这个页面用于测试新添加的代码块功能，包括语法高亮和复制按钮。 JavaScript 代码块 Python 代码块 CSS 样式代码 SQL 查询 JSON 数据 Shell 脚本 行内代码测试 这是一个行内代码的例子：const message = \"Hello",
   "categories": [
     "技术测试"
@@ -103,5 +107,6 @@
       "id": "支持的语言列表"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "4692489c"
 }

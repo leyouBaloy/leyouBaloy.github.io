@@ -2,6 +2,7 @@
 title: "Leetcode240:搜索二维矩阵——二分、矩阵"
 author: 孙百乐
 date: 2022-03-19T17:55:44+08:00
+slug: leetcode-240-search-a-2d-matrix-ii-binary-search
 draft: false
 categories: 
 - 刷题

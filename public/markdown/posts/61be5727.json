@@ -3,7 +3,11 @@
   "date": "2023-03-16T15:51:26.000Z",
   "updatedAt": "2023-03-16T15:51:26.000Z",
   "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md",
-  "slug": "61be5727",
+  "slug": "vue-highlightjs-line-numbers-code-highlight",
+  "legacySlug": "61be5727",
+  "aliases": [
+    "61be5727"
+  ],
   "excerpt": "highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 1. 先引入css文件和js文件 2. 再将你的代码用 包裹 3. 再调用hljs的高亮函数，它的原理是找到所有的code标签，然后通过操作DOM，给你的代码设置高亮样式。 hig",
   "categories": [
     "技能分享"
@@ -38,5 +42,6 @@
       "id": "其它实现方法"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "61be5727"
 }

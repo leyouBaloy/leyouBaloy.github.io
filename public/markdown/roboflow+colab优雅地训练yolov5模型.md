@@ -2,6 +2,7 @@
 title: "Roboflow+colab优雅地训练yolov5模型"
 author: 孙百乐
 date: 2022-03-19T13:37:49+08:00
+slug: train-yolov5-model-roboflow-colab
 draft: false
 categories: 
 - 技能分享

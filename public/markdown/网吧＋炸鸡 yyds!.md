@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 随笔杂记
 date: 2021-08-11 20:57:33
+slug: internet-cafe-fried-chicken-gaming-diary
 draft: false
 title: 网吧＋炸鸡 yyds!
 ---

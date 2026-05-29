@@ -2,6 +2,7 @@
 title: "Linux输出重定向以及crontab的坑"
 author: 孙百乐
 date: 2022-07-13T11:14:42+08:00
+slug: linux-output-redirection-crontab-pitfalls
 draft: false
 categories: 
 - 技能分享

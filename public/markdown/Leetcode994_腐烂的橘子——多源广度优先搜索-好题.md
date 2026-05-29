@@ -2,6 +2,7 @@
 title: "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目"
 author: 孙百乐
 date: 2022-03-22T17:50:53+08:00
+slug: leetcode-994-rotting-oranges-bfs
 draft: false
 categories: 
 - 刷题

@@ -2,6 +2,7 @@
 categories:
 - 技术思考
 date: 2026-03-25 03:44:00
+slug: single-agent-better-than-multi-agent
 title: single-agent现阶段明显强于multi-agent
 img: 
 tags: [AI, Agent, Architecture]

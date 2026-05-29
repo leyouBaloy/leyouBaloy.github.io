@@ -2,6 +2,7 @@
 title: "Leetcode743:网络延迟时间——dijkstra算法"
 author: 孙百乐
 date: 2022-04-21T17:35:07+08:00
+slug: leetcode-743-network-delay-time-dijkstra
 draft: false
 categories: 
 - 刷题

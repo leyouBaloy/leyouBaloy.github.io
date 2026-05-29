@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-10-19 15:10:44
+slug: python-quadratic-equation-decimals
 draft: false
 title: Python-一元二次方程，保留两位小数
 ---

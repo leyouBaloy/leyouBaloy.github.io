@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-04-02 09:28:08
+slug: matplotlib-plot-heat-engine-efficiency-curve
 draft: false
 title: matplotlib作热机效率随负载大小变化曲线图
 ---

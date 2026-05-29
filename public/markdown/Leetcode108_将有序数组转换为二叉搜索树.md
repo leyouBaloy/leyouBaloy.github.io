@@ -2,6 +2,7 @@
 title: "Leetcode108:将有序数组转换为二叉搜索树"
 author: 孙百乐
 date: 2022-03-25T15:36:05+08:00
+slug: leetcode-108-convert-sorted-array-to-binary-search-tree
 draft: false
 categories: 
 - 刷题

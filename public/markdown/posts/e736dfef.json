@@ -3,7 +3,11 @@
   "date": "2023-12-23T13:39:08.000Z",
   "updatedAt": "2023-12-23T13:39:08.000Z",
   "file": "SCI论文润色经验分享.md",
-  "slug": "e736dfef",
+  "slug": "sci-paper-editing-experience-sharing",
+  "legacySlug": "e736dfef",
+  "aliases": [
+    "e736dfef"
+  ],
   "excerpt": "变量符号 第一次出现的变量符号需要解释，后面不需再解释。 文章中所有的变量符号要保持一致，不能前后歧义。解决这个问题最好的办法就是在写作时维护一个符号表。如果文章的公式变量较多，强烈建议这么做，否则后面改起来会很痛苦。 所有单字母变量，都要采用斜体。多字母变量和函数，采用正体。对于下标，若下标本身是",
   "categories": [
     "笔记"
@@ -88,5 +92,6 @@
       "id": "按顺序引用"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "e736dfef"
 }

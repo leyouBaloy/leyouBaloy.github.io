@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-10-30 13:58:01
+slug: ubuntu-install-python3-pyenv
 draft: false
 title: ubuntu安装Python3的曲折之路
 ---

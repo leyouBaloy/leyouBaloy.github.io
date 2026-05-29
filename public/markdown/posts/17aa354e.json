@@ -3,7 +3,11 @@
   "date": "2022-06-17T07:02:15.000Z",
   "updatedAt": "2022-06-17T07:02:15.000Z",
   "file": "使用正则表达式进行高级替换.md",
-  "slug": "17aa354e",
+  "slug": "advanced-regex-replacement",
+  "legacySlug": "17aa354e",
+  "aliases": [
+    "17aa354e"
+  ],
   "excerpt": "需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： 但是这样渲染出的图片不能居中，也不能缩放，我得把它转换成博客主题的格式： 思路很简单，但不能简单的使用python的replace函数，因为不仅要匹配 ，还要匹配括号里",
   "categories": [
     "技能分享",
@@ -45,5 +49,6 @@
       "id": "resub"
     }
   ],
-  "hasMath": true
+  "hasMath": true,
+  "routeSlug": "17aa354e"
 }

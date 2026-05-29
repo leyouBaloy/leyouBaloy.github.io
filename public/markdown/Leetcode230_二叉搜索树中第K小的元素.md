@@ -2,6 +2,7 @@
 title: "Leetcode230:二叉搜索树中第K小的元素"
 author: 孙百乐
 date: 2022-04-04T15:26:44+08:00
+slug: leetcode-230-kth-smallest-element-in-a-bst
 draft: false
 categories: 
 - 刷题

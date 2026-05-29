@@ -3,7 +3,11 @@
   "date": "2021-05-29T16:23:46.000Z",
   "updatedAt": "2021-05-29T16:23:46.000Z",
   "file": "离散数学结课总结+笔记.md",
-  "slug": "fd13c30b",
+  "slug": "discrete-mathematics-course-summary-notes",
+  "legacySlug": "fd13c30b",
+  "aliases": [
+    "fd13c30b"
+  ],
   "excerpt": "课程时长 离散数学上了大一上，大一下两个学期（貌似是80个学时。 课程目录 总共四个篇章，分别是“集合论”、“数理逻辑”、“抽象代数”、“图论基础”。 课程感悟 这是一门数学课，但是和数学分析、概率论又完全不同。离散数学研究的真的是离散的数学知识，与微积分完全无关。其中各个章节相关性不大，也有部分章",
   "categories": [
     "笔记"
@@ -38,5 +42,6 @@
       "id": "思维导图"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "fd13c30b"
 }

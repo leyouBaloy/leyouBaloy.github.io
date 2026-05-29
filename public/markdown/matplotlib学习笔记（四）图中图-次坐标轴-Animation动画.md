@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-03-03 20:46:14
+slug: matplotlib-tutorial-4-pip-secondary-axis-animation
 draft: false
 title: matplotlib学习笔记（四）图中图-次坐标轴-Animation动画
 ---

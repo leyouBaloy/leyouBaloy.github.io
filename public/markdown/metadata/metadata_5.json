@@ -4,7 +4,11 @@
     "date": "2023-12-10T12:51:01.000Z",
     "updatedAt": "2023-12-10T12:51:01.000Z",
     "file": "如何在Windows上编译Python39源代码.md",
-    "slug": "9fd37d43",
+    "slug": "compile-python39-source-code-on-windows",
+    "legacySlug": "9fd37d43",
+    "aliases": [
+      "9fd37d43"
+    ],
     "excerpt": "安装Visual Studio 2017 先下载Visual Studio Installer https://learn.microsoft.com/en us/visualstudio/python/installing python support in visual studio?view=",
     "tags": [
       "技能分享"
@@ -20,7 +24,11 @@
     "date": "2023-10-08T12:11:39.000Z",
     "updatedAt": "2023-10-08T12:11:39.000Z",
     "file": "蚌埠美食之旅.md",
-    "slug": "f6639fe4",
+    "slug": "bengbu-food-tour",
+    "legacySlug": "f6639fe4",
+    "aliases": [
+      "f6639fe4"
+    ],
     "excerpt": "蚌埠简介 蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给蚌埠带来了繁荣的机会。除此之外，蚌埠还有千里淮河第一大港——蚌埠港，水路交通也十分发达。铁路和水路奠定了蚌埠重要的交通地位。交通有了，人也渐渐多起来，商业也逐",
     "tags": [
       "随笔杂记"
@@ -35,7 +43,11 @@
     "date": "2023-09-19T08:59:13.000Z",
     "updatedAt": "2023-09-19T08:59:13.000Z",
     "file": "艺术品般的游戏—荒野大镖客2救赎.md",
-    "slug": "32769736",
+    "slug": "red-dead-redemption-2-game-review",
+    "legacySlug": "32769736",
+    "aliases": [
+      "32769736"
+    ],
     "excerpt": "“地表最强游戏公司” 大名鼎鼎的侠盗猎车手系列(GTA, Grand Theft Auto)在游戏界应该无人不知，无人不晓，而由原班人马（R星，Rockstar Games）打造的荒野大镖客系列（RD, Red Dead）的知名度稍差一些。这可能是因为荒野大镖客系列目前仅有3 部作品（GTA系列有 ",
     "tags": [
       "随笔杂记"
@@ -50,7 +62,11 @@
     "date": "2023-08-12T12:06:07.000Z",
     "updatedAt": "2023-08-12T12:06:07.000Z",
     "file": "苏州印象.md",
-    "slug": "17a81efd",
+    "slug": "suzhou-impressions",
+    "legacySlug": "17a81efd",
+    "aliases": [
+      "17a81efd"
+    ],
     "excerpt": "2023年8月3日 5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一座城市的呢？我非常好奇，终于有机会能一探究竟！ 从蚌埠坐绿皮火车仅需不到5小时就能到达苏州站（票价62.5），苏州站位于苏州的中心区域——姑苏区（听名字就觉得好",
     "tags": [
       "随笔杂记",
@@ -66,7 +82,11 @@
     "date": "2023-07-31T11:17:10.000Z",
     "updatedAt": "2023-07-31T11:17:10.000Z",
     "file": "ChinaVis重庆之旅.md",
-    "slug": "8cb0549f",
+    "slug": "chinavis-chongqing-trip",
+    "legacySlug": "8cb0549f",
+    "aliases": [
+      "8cb0549f"
+    ],
     "excerpt": "ChinaVis大会于2023年7月21日 24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～ 出发！ 第一次坐飞机，飞机型号是波音737 800，起飞的时候感觉好神奇，在空中的景色也非常美。 重庆火锅 到达重庆的第一顿饭当然是重庆火锅，",
     "tags": [
       "随笔杂记",
@@ -82,7 +102,11 @@
     "date": "2023-07-01T02:41:41.000Z",
     "updatedAt": "2023-07-01T02:41:41.000Z",
     "file": "好用的动画制作工具-keynote.md",
-    "slug": "3f0c5268",
+    "slug": "keynote-animation-maker-tool",
+    "legacySlug": "3f0c5268",
+    "aliases": [
+      "3f0c5268"
+    ],
     "excerpt": "Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。 在通用性上，Keynote明显没有PPT那么普及。但是我认为Keynote在动画制作上完胜PPT，如果有足够需求，一定要试一试Keynote。Keynote内置了丰富的动画效果，多试几个，你",
     "tags": [
       "技能分享"
@@ -97,7 +121,11 @@
     "date": "2023-07-01T02:15:46.000Z",
     "updatedAt": "2023-07-01T02:15:46.000Z",
     "file": "Flask的一些关于线程的特性.md",
-    "slug": "c2de1901",
+    "slug": "flask-thread-features",
+    "legacySlug": "c2de1901",
+    "aliases": [
+      "c2de1901"
+    ],
     "excerpt": "前言 Flask是我最喜欢用的后端，以为它实在是太简单了，拿来做小型项目速度嗖嗖的。最近做比赛需要将后端通过socket连接到硬件设备，socket是有状态的，有连接数量的限制，所以要格外注意它的状态，Flask的一些特性会改变状态，如果不注意的话会导致很多bug，我踩了很多坑，在这里总结一下。 F",
     "tags": [
       "笔记"
@@ -112,7 +140,11 @@
     "date": "2023-05-01T16:35:22.000Z",
     "updatedAt": "2023-05-01T16:35:22.000Z",
     "file": "《1984》读书笔记.md",
-    "slug": "72d96981",
+    "slug": "1984-reading-notes",
+    "legacySlug": "72d96981",
+    "aliases": [
+      "72d96981"
+    ],
     "excerpt": "1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较深入，16世纪文艺复兴时期，英国的莫尔就提出了空想社会主义（马克思的科学社会主义的前身）；后来19世纪英国人率先搞起了资产阶级革命，号称“自由、平等”；到了20",
     "tags": [
       "书影记录"
@@ -127,7 +159,11 @@
     "date": "2023-04-22T02:40:50.000Z",
     "updatedAt": "2023-04-22T02:40:50.000Z",
     "file": "vueflask实现播放任何视频源包括rtsp摄像头.md",
-    "slug": "2453b9ad",
+    "slug": "vue-flask-play-rtsp-video-stream-camera",
+    "legacySlug": "2453b9ad",
+    "aliases": [
+      "2453b9ad"
+    ],
     "excerpt": "背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。 由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才",
     "tags": [
       "技能分享"
@@ -142,7 +178,11 @@
     "date": "2023-04-12T06:11:41.000Z",
     "updatedAt": "2023-04-12T06:11:41.000Z",
     "file": "如何搭建一个ChatGPT镜像站.md",
-    "slug": "28b5db09",
+    "slug": "how-to-build-chatgpt-mirror-site",
+    "legacySlug": "28b5db09",
+    "aliases": [
+      "28b5db09"
+    ],
     "excerpt": "为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内IP，封梯子IP，封国内账号，搞得没法再国内使用，但是已经形成了依赖，不用不行呀。天下苦ChatGPT久矣～ 自从api接口开放之后，操作空间就大了。我们可以",
     "tags": [
       "技能分享",

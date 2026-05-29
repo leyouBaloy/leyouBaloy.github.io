@@ -3,7 +3,11 @@
   "date": "2021-11-21T09:04:54.000Z",
   "updatedAt": "2021-11-21T09:04:54.000Z",
   "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
-  "slug": "400b9839",
+  "slug": "github-push-fatal-authentication-failed-solution",
+  "legacySlug": "400b9839",
+  "aliases": [
+    "400b9839"
+  ],
   "excerpt": "问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案 看它给的提示，Please see https://github.blog/2020 12 15 token authentication require",
   "categories": [
     "技能分享"
@@ -38,5 +42,6 @@
       "id": "后续"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "400b9839"
 }

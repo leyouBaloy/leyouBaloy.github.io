@@ -3,7 +3,11 @@
   "date": "2024-11-27T06:47:24.000Z",
   "updatedAt": "2024-11-27T06:47:24.000Z",
   "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
-  "slug": "024ab30e",
+  "slug": "install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu",
+  "legacySlug": "024ab30e",
+  "aliases": [
+    "024ab30e"
+  ],
   "excerpt": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouv",
   "categories": [
     "笔记",
@@ -35,5 +39,6 @@
       "id": "安装cuda-toolkit"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "024ab30e"
 }

@@ -2,6 +2,7 @@
 title: "致动o手柄对比xbox原装手柄使用体验分享"
 author: 孙百乐
 date: 2023-01-15T08:59:39+08:00
+slug: zhidong-o-vs-xbox-controller-review
 draft: false
 categories: 
 - 技能分享

@@ -3,7 +3,11 @@
   "date": "2020-10-19T18:46:23.000Z",
   "updatedAt": "2020-10-19T18:46:23.000Z",
   "file": "《中国的官办经济》读后感.md",
-  "slug": "01bdba8e",
+  "slug": "chinas-state-owned-economy-book-review",
+  "legacySlug": "01bdba8e",
+  "aliases": [
+    "01bdba8e"
+  ],
   "excerpt": "本书的目录如下： （一）中国的官办经济 世界上最怪异的经济 （二）官办进出口：从“十个大庆”到八千亿美元外汇储备 （三）官办经济威力初级分析 （四）官办经济 不懂具体经济的老毛同志 （五）官办经济 中国苏联经济模式进阶分析 （六）官办经济 邓小平比拼戈尔巴乔夫 （七）官办经济 “猫摸”二论体现的实验",
   "categories": [
     "书影记录"
@@ -28,5 +32,6 @@
       "id": "整体感知"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "01bdba8e"
 }

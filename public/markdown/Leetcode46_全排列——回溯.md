@@ -2,6 +2,7 @@
 title: "Leetcode46:全排列——交换、回溯"
 author: 孙百乐
 date: 2022-04-29T17:22:24+08:00
+slug: leetcode-46-permutations-backtracking
 draft: false
 categories: 
 - 刷题

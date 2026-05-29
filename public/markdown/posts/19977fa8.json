@@ -3,7 +3,11 @@
   "date": "2025-05-05T14:36:59.000Z",
   "updatedAt": "2025-05-05T14:36:59.000Z",
   "file": "开源PDF解析工具Marker深度解析.md",
-  "slug": "19977fa8",
+  "slug": "open-source-pdf-parser-marker-deep-dive",
+  "legacySlug": "19977fa8",
+  "aliases": [
+    "19977fa8"
+  ],
   "excerpt": "开源PDF解析工具Marker深度解析 检索增强生成（RAG）系统的第一步就是做 pdf 解析，从复杂多样的 pdf 中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker 和 MinerU。因为 Marker 是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进行解析",
   "categories": [
     "技能分享"
@@ -43,5 +47,6 @@
       "id": "总结"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "19977fa8"
 }

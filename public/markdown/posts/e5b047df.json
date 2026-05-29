@@ -3,7 +3,11 @@
   "date": "2022-04-17T02:36:32.000Z",
   "updatedAt": "2022-04-17T02:36:32.000Z",
   "file": "Leetcode5_最长回文子串——中心扩展法.md",
-  "slug": "e5b047df",
+  "slug": "leetcode-5-longest-palindromic-substring",
+  "legacySlug": "e5b047df",
+  "aliases": [
+    "e5b047df"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/longest palindromic substring/ 题解 中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题... 这道题需要注意的细节： 回文子串长度既可以是奇数也可以是偶数，如",
   "categories": [
     "刷题"
@@ -28,5 +32,6 @@
       "id": "题解"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "e5b047df"
 }

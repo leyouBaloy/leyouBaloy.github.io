@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-11-21 09:18:25
+slug: struct-sorting-sort-typedef-cpp
 draft: false
 title: 结构体排序-sort()-typedef
 ---

@@ -3,7 +3,11 @@
   "date": "2021-06-17T20:33:22.000Z",
   "updatedAt": "2021-06-17T20:33:22.000Z",
   "file": "《概率论与数理统计》结课总结.md",
-  "slug": "94554f7a",
+  "slug": "probability-and-mathematical-statistics-course-summary",
+  "legacySlug": "94554f7a",
+  "aliases": [
+    "94554f7a"
+  ],
   "excerpt": "课程时长 这门课上的不长，就大半个学期。任课教师王老师，是一位教学经验丰富的老师。也是统计学方面的专家，跟着他学习，感觉在很短的时间内学到了很多知识。 课程感受 “概率论与数理统计”实际上是两门课，“概率论”内容包括：随机事件与概率、随机变量及其分布、随机变量的数字特征、大数定律与中心极限定理。“数",
   "categories": [
     "笔记"
@@ -33,5 +37,6 @@
       "id": "总结"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "94554f7a"
 }

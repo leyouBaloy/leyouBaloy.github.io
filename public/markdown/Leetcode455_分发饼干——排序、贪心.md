@@ -2,6 +2,7 @@
 title: "Leetcode455:分发饼干——排序、贪心"
 author: 孙百乐
 date: 2022-03-18T16:01:16+08:00
+slug: leetcode-455-assign-cookies-sort-greedy
 draft: false
 categories: 
 - 刷题

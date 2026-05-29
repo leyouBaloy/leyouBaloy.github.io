@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-07-28 14:58:29
+slug: summer-internship-online-judge-platform
 draft: false
 title: 暑期实习项目-onlinejudge在线测试平台
 ---

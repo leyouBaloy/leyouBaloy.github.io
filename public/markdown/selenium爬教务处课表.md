@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-11-16 20:45:35
+slug: selenium-crawl-class-schedule
 draft: false
 title: selenium爬教务处课表
 ---

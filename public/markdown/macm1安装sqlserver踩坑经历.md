@@ -2,6 +2,7 @@
 title: "mac m1 安装sqlserver踩坑经历"
 author: 孙百乐
 date: 2022-03-16T18:14:14+08:00
+slug: mac-m1-install-sql-server
 draft: false
 categories: 
 - 技能分享

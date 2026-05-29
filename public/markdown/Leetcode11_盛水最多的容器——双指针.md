@@ -2,6 +2,7 @@
 title: "Leetcode11:盛水最多的容器——双指针"
 author: 孙百乐
 date: 2022-04-25T17:26:41+08:00
+slug: leetcode-11-container-with-most-water-two-pointers
 draft: false
 categories: 
 - 刷题

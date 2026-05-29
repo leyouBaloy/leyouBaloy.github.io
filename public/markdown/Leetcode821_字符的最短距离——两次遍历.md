@@ -2,6 +2,7 @@
 title: "Leetcode821:字符的最短距离——两次遍历"
 author: 孙百乐
 date: 2022-04-19T16:45:09+08:00
+slug: leetcode-821-shortest-distance-to-a-character
 draft: false
 categories: 
 - 刷题

@@ -3,7 +3,11 @@
   "date": "2021-02-14T19:08:15.000Z",
   "updatedAt": "2021-02-14T19:08:15.000Z",
   "file": "BeautifulSoup学习笔记.md",
-  "slug": "eb083bdf",
+  "slug": "beautifulsoup-python-study-notes",
+  "legacySlug": "eb083bdf",
+  "aliases": [
+    "eb083bdf"
+  ],
   "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。 https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044 导入 from bs4 import BeautifulSoup 导入模块 soup",
   "categories": [
     "笔记"
@@ -48,5 +52,6 @@
       "id": "输出文字"
     }
   ],
-  "hasMath": true
+  "hasMath": true,
+  "routeSlug": "eb083bdf"
 }

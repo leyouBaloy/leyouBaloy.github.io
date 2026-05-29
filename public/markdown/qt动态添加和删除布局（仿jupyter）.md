@@ -2,6 +2,7 @@
 title: "Qt动态添加和删除布局（仿jupyter）"
 author: 孙百乐
 date: 2023-02-02T14:14:19+08:00
+slug: qt-dynamic-add-remove-layout-jupyter
 draft: false
 categories: 
 - 技能分享

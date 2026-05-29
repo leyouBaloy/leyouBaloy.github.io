@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2021-09-29 23:37:12
+slug: ai-knowledge-competition-upc-award-notice
 draft: false
 title: 全国高校AI知识竞赛UPC赛区获奖通知
 ---

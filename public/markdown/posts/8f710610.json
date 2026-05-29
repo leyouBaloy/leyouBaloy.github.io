@@ -3,7 +3,11 @@
   "date": "2023-01-15T00:59:39.000Z",
   "updatedAt": "2023-01-15T00:59:39.000Z",
   "file": "致动o手柄对比xbox原装手柄使用体验分享.md",
-  "slug": "8f710610",
+  "slug": "zhidong-o-vs-xbox-controller-review",
+  "legacySlug": "8f710610",
+  "aliases": [
+    "8f710610"
+  ],
   "excerpt": "对于游戏玩家来说，键盘鼠标可能不是最好的控制器（网游，fps玩家除外），拥有一个手柄，会让游戏体验更加舒适。尤其是对于一些需要慢慢品玩的3A大作，或者是需要各种微操的赛车游戏，手柄的体验绝对秒杀键鼠。 Xbox手柄 Xbox手柄是PC平台上最经典的手柄，由微软生产。它兼容性游戏多，做工精良，还很好看",
   "categories": [
     "技能分享"
@@ -33,5 +37,6 @@
       "id": "痛点and痒点"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "8f710610"
 }

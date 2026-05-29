@@ -4,7 +4,11 @@
     "date": "2025-06-10T10:14:29.000Z",
     "updatedAt": "2025-06-10T10:14:29.000Z",
     "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
-    "slug": "ff7483e1",
+    "slug": "chart2data-experiment-compare-chartvlm-qwen-omni",
+    "legacySlug": "ff7483e1",
+    "aliases": [
+      "ff7483e1"
+    ],
     "excerpt": "ChartVLM ChartVLM由两部分组成：图表结构解码器+大语言模型 截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct 显存占用基本保持在2506 MiB 普通图表 原图 识别结果 评价 CSV数据： Category,Percentage Visual A",
     "tags": [
       "技能分享"
@@ -20,7 +24,11 @@
     "date": "2025-06-10T08:48:23.000Z",
     "updatedAt": "2025-06-10T08:48:23.000Z",
     "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
-    "slug": "e9dd83c6",
+    "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+    "legacySlug": "e9dd83c6",
+    "aliases": [
+      "e9dd83c6"
+    ],
     "excerpt": "背景 为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法 多模态大模型测试 Prompt 测试环境：3090单卡 测试效果 模型 数据1：饼图 数据2：折线图 数据3：流程图 评价 MiniCPM V 2 6 vllm 这张饼图显示了2023年美国艺术类别分布。最大的部分是视",
     "tags": [
       "随笔杂记"
@@ -35,7 +43,11 @@
     "date": "2025-05-09T14:03:42.000Z",
     "updatedAt": "2025-05-09T14:03:42.000Z",
     "file": "DeepResearch深度搜索实现方法调研.md",
-    "slug": "47f2a5ec",
+    "slug": "deep-research-implementation-methods",
+    "legacySlug": "47f2a5ec",
+    "aliases": [
+      "47f2a5ec"
+    ],
     "excerpt": "DeepResearch深度搜索实现方法调研 Deep Research 有三个核心能力 + 能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索） + 能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？） + 能力三：对多源的信息进行验",
     "tags": [
       "技能分享"
@@ -50,7 +62,11 @@
     "date": "2025-05-05T14:36:59.000Z",
     "updatedAt": "2025-05-05T14:36:59.000Z",
     "file": "开源PDF解析工具Marker深度解析.md",
-    "slug": "19977fa8",
+    "slug": "open-source-pdf-parser-marker-deep-dive",
+    "legacySlug": "19977fa8",
+    "aliases": [
+      "19977fa8"
+    ],
     "excerpt": "开源PDF解析工具Marker深度解析 检索增强生成（RAG）系统的第一步就是做 pdf 解析，从复杂多样的 pdf 中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker 和 MinerU。因为 Marker 是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进行解析",
     "tags": [
       "技能分享"
@@ -65,7 +81,11 @@
     "date": "2025-01-24T01:37:25.000Z",
     "updatedAt": "2025-01-24T01:37:25.000Z",
     "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
-    "slug": "7624b8c1",
+    "slug": "vue3-waterfall-layout-dynamic-update-component",
+    "legacySlug": "7624b8c1",
+    "aliases": [
+      "7624b8c1"
+    ],
     "excerpt": "思路 1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）。把需要布局的组件（这里叫做waterfall item）放在瀑布流容器里面渲染出来。使用绝对定位（position: absolute），把它移到屏幕外面，不要占用页面高度，并且设置不可见（visibility:hidden）。 2.渲染",
     "tags": [
       "技能分享"
@@ -80,7 +100,11 @@
     "date": "2024-12-09T14:49:43.000Z",
     "updatedAt": "2024-12-09T14:49:43.000Z",
     "file": "品酒-古井贡酒第六代55度.md",
-    "slug": "11baea90",
+    "slug": "gujing-gongjiu-6th-gen-55-degree-tasting",
+    "legacySlug": "11baea90",
+    "aliases": [
+      "11baea90"
+    ],
     "excerpt": "古井贡酒第六代55度 香型：浓香型 度数：55 原料：高粱、大米、小麦、糯米、玉米 产地：安徽亳州 价格：72元/500ml 品鉴感受 闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。",
     "tags": [
       "随笔杂记"
@@ -95,7 +119,11 @@
     "date": "2024-11-27T06:51:10.000Z",
     "updatedAt": "2024-11-27T06:51:10.000Z",
     "file": "电脑启动需要经历哪些过程？.md",
-    "slug": "4e728164",
+    "slug": "computer-boot-process",
+    "legacySlug": "4e728164",
+    "aliases": [
+      "4e728164"
+    ],
     "excerpt": "传统BIOS启动流程 1. BIOS BIOS 启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。需要有一个外部储",
     "tags": [
       "笔记",
@@ -111,7 +139,11 @@
     "date": "2024-11-27T06:47:24.000Z",
     "updatedAt": "2024-11-27T06:47:24.000Z",
     "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
-    "slug": "024ab30e",
+    "slug": "install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu",
+    "legacySlug": "024ab30e",
+    "aliases": [
+      "024ab30e"
+    ],
     "excerpt": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouv",
     "tags": [
       "笔记",
@@ -127,7 +159,11 @@
     "date": "2024-11-21T13:28:00.000Z",
     "updatedAt": "2024-11-21T13:28:00.000Z",
     "file": "Leetcode_209长度最小的子数组.md",
-    "slug": "35124327",
+    "slug": "leetcode-209-minimum-size-subarray-sum-sliding-window",
+    "legacySlug": "35124327",
+    "aliases": [
+      "35124327"
+    ],
     "excerpt": "Leetcode 209长度最小的子数组 给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其总和大于等于 target 的长度最小的 子数组 [numsl, numsl+1, ..., numsr 1, numsr] ，并返回其长度 。 如果不存在符合条件的子数组，返",
     "tags": [
       "刷题"
@@ -142,7 +178,11 @@
     "date": "2024-11-15T08:36:41.000Z",
     "updatedAt": "2024-11-15T08:36:41.000Z",
     "file": "高光谱遥感深度学习调研.md",
-    "slug": "40c266ad",
+    "slug": "hyperspectral-remote-sensing-deep-learning-survey",
+    "legacySlug": "40c266ad",
+    "aliases": [
+      "40c266ad"
+    ],
     "excerpt": "高光谱遥感深度学习调研 综述 高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。 Wang C, Liu B, Liu L, et al. A review of deep learning used in the hyperspectral image analysi",
     "tags": [
       "笔记"

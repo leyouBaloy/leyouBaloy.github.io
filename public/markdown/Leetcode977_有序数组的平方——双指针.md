@@ -2,6 +2,7 @@
 title: "Leetcode977:有序数组的平方——双指针"
 author: 孙百乐
 date: 2022-03-23T20:35:46+08:00
+slug: leetcode-977-squares-of-a-sorted-array-two-pointers
 draft: false
 categories: 
 - 刷题

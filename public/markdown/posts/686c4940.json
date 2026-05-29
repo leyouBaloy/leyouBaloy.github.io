@@ -3,7 +3,11 @@
   "date": "2021-04-02T09:28:08.000Z",
   "updatedAt": "2021-04-02T09:28:08.000Z",
   "file": "matplotlib作热机效率随负载大小变化曲线图.md",
-  "slug": "686c4940",
+  "slug": "matplotlib-plot-heat-engine-efficiency-curve",
+  "legacySlug": "686c4940",
+  "aliases": [
+    "686c4940"
+  ],
   "excerpt": "大物实验得到的数据，用python的matplotlib很方便处理 数据准备： 画图： 效果",
   "categories": [
     "技能分享"
@@ -33,5 +37,6 @@
       "id": "y-nparray031-纵坐标11个数据"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "686c4940"
 }

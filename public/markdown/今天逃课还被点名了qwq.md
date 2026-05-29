@@ -2,6 +2,7 @@
 title: "今天逃课还被点名了qwq"
 author: 孙百乐
 date: 2022-03-29T09:36:46+08:00
+slug: skipped-class-got-called-out
 draft: false
 categories: 
 - 随笔杂记

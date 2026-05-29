@@ -3,7 +3,11 @@
   "date": "2023-04-12T06:11:41.000Z",
   "updatedAt": "2023-04-12T06:11:41.000Z",
   "file": "如何搭建一个ChatGPT镜像站.md",
-  "slug": "28b5db09",
+  "slug": "how-to-build-chatgpt-mirror-site",
+  "legacySlug": "28b5db09",
+  "aliases": [
+    "28b5db09"
+  ],
   "excerpt": "为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内IP，封梯子IP，封国内账号，搞得没法再国内使用，但是已经形成了依赖，不用不行呀。天下苦ChatGPT久矣～ 自从api接口开放之后，操作空间就大了。我们可以",
   "categories": [
     "技能分享",
@@ -40,5 +44,6 @@
       "id": "3-提速"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "28b5db09"
 }

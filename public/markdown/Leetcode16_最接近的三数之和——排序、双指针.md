@@ -2,6 +2,7 @@
 title: "Leetcode16:最接近的三数之和——排序、双指针"
 author: 孙百乐
 date: 2022-04-26T18:58:23+08:00
+slug: leetcode-16-3sum-closest-sort-two-pointers
 draft: false
 categories: 
 - 刷题

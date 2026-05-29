@@ -2,6 +2,7 @@
 title: "Leetcode347:前K个高频元素——优先队列、堆"
 author: 孙百乐
 date: 2022-04-07T16:55:15+08:00
+slug: leetcode-347-top-k-frequent-elements-priority-queue-heap
 draft: false
 categories: 
 - 刷题

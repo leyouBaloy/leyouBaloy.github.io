@@ -11,6 +11,9 @@ export interface PostPayload {
   updated?: string;
   file: string;
   slug: string;
+  legacySlug?: string;
+  aliases?: string[];
+  routeSlug?: string;
   excerpt?: string;
   categories?: string[];
   tags?: string[];

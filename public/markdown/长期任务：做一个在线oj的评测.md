@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-03-23 09:10:48
+slug: build-online-judge-system
 draft: false
 title: 长期任务：做一个在线oj的评测
 ---

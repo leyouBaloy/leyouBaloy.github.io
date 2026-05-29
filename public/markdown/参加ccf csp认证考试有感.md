@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-12-05 23:28:56
+slug: ccf-csp-certification-exam-experience
 draft: false
 title: 参加ccf csp认证考试有感
 ---

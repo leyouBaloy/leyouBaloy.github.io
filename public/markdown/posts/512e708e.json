@@ -3,7 +3,11 @@
   "date": "2026-03-25T12:53:00.000Z",
   "updatedAt": "2026-03-25T12:53:00.000Z",
   "file": "opencode-seven-core-tools.md",
-  "slug": "512e708e",
+  "slug": "opencode-7-basic-tools-read-write-edit-multiedit-glob-grep-bash",
+  "legacySlug": "512e708e",
+  "aliases": [
+    "512e708e"
+  ],
   "excerpt": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash 做 AI 编程助手（或类似工具）的核心，就是怎么让 AI 正确地读写文件、执行命令。本质上，LLM 是个\"脑子里有很多知识但手很短\"的存在——它能推理，但没法直接摸到你的代码。于是需要",
   "categories": [
     "技术教程"
@@ -168,5 +172,6 @@
       "id": "总结对比"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "512e708e"
 }

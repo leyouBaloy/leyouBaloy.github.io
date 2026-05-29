@@ -2,6 +2,7 @@
 title: "C语言中值传递、指针传递和引用传递"
 author: 孙百乐
 date: 2022-03-07T17:15:10+08:00
+slug: c-language-pass-by-value-pointer-reference
 draft: false
 categories: 
 - 刷题

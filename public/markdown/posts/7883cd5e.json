@@ -3,7 +3,11 @@
   "date": "2022-05-06T09:09:58.000Z",
   "updatedAt": "2022-05-06T09:09:58.000Z",
   "file": "Leetcode39_组合总和——回溯.md",
-  "slug": "7883cd5e",
+  "slug": "leetcode-39-combination-sum-backtracking",
+  "legacySlug": "7883cd5e",
+  "aliases": [
+    "7883cd5e"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/combination sum/ 做回溯题就像见老同学，你觉得它还像以前一样简单，但是你错了😭 题解 搜索回溯 思路：对于candidates中的每一个数你有两个选项，要么选，要么不选。所以回溯的过程是一颗二叉树，用idx表示",
   "categories": [
     "刷题"
@@ -33,5 +37,6 @@
       "id": "搜索回溯"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "7883cd5e"
 }

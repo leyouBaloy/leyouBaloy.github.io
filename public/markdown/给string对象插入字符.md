@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-12-28 16:52:10
+slug: insert-character-string-object
 draft: false
 title: 给string对象插入字符
 ---

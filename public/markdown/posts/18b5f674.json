@@ -3,7 +3,11 @@
   "date": "2023-01-01T08:11:53.000Z",
   "updatedAt": "2023-01-01T08:11:53.000Z",
   "file": "Livego——小而美的直播串流软件.md",
-  "slug": "18b5f674",
+  "slug": "livego-lightweight-live-streaming-software",
+  "legacySlug": "18b5f674",
+  "aliases": [
+    "18b5f674"
+  ],
   "excerpt": "近期想跟女朋友一起异地看电影，试了几种方式都不够优雅， 方式一：用chrome插件，双方同时打开一个视频源，然后通过这个插件能控制两个人的进度条保持一致。 缺点：因为有的视频源是收费的，两个人想一起看得交两份钱，还有的不支持网页播放（需要下载软件），所以这种方式灵活性很差，不好用。 方式二：用腾讯会",
   "categories": [
     "技能分享",
@@ -25,5 +29,6 @@
       "id": "livego"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "18b5f674"
 }

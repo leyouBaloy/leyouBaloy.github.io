@@ -3,7 +3,11 @@
   "date": "2022-07-13T03:14:42.000Z",
   "updatedAt": "2022-07-13T03:14:42.000Z",
   "file": "Linux输出重定向以及crontab的坑.md",
-  "slug": "78bcbc75",
+  "slug": "linux-output-redirection-crontab-pitfalls",
+  "legacySlug": "78bcbc75",
+  "aliases": [
+    "78bcbc75"
+  ],
   "excerpt": "有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑： 编辑crontab 首先执行 编辑cron表达式，注意：每个用户都有自己的crontab，如果想省事的话建议直接 只使用root用户的就好了。 写cr",
   "categories": [
     "技能分享",
@@ -35,5 +39,6 @@
       "id": "输出重定向"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "78bcbc75"
 }

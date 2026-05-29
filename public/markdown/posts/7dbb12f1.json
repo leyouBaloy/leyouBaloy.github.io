@@ -3,7 +3,11 @@
   "date": "2021-11-24T21:25:56.000Z",
   "updatedAt": "2021-11-24T21:25:56.000Z",
   "file": "讲一个能满足和感动自己的故事！.md",
-  "slug": "7dbb12f1",
+  "slug": "how-to-write-a-good-paper-tell-a-story",
+  "legacySlug": "7dbb12f1",
+  "aliases": [
+    "7dbb12f1"
+  ],
   "excerpt": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。 如何写好论文 细节，careful 仔细画每一幅图 不要有typo（词句小错误） 不要用长句 避免过度修饰，冗长 至少修改30遍 逻辑通顺 写提纲 理论、实验点支撑 支撑什么观点？从哪些角度？ 讲一个合理的故事，前呼后应，自圆其",
   "categories": [
     "笔记"
@@ -78,5 +82,6 @@
       "id": "讲一个能够满足和感动自己的故事"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "7dbb12f1"
 }

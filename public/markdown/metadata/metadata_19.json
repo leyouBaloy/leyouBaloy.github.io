@@ -4,7 +4,11 @@
     "date": "2021-08-29T21:20:21.000Z",
     "updatedAt": "2021-08-29T21:20:21.000Z",
     "file": "Conda 配置虚拟环境.md",
-    "slug": "bcde8727",
+    "slug": "conda-virtual-environment-setup",
+    "legacySlug": "bcde8727",
+    "aliases": [
+      "bcde8727"
+    ],
     "excerpt": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change ke",
     "tags": [
       "技能分享"
@@ -20,7 +24,11 @@
     "date": "2021-08-29T21:19:42.000Z",
     "updatedAt": "2021-08-29T21:19:42.000Z",
     "file": "jupyter-paddle使用docker安装.md",
-    "slug": "30e1e85f",
+    "slug": "jupyter-paddle-docker-install",
+    "legacySlug": "30e1e85f",
+    "aliases": [
+      "30e1e85f"
+    ],
     "excerpt": "安装 参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux docker.html 先安装docker，参考官网 拉取镜像： docker pull registry.bai",
     "tags": [
       "技能分享"
@@ -35,7 +43,11 @@
     "date": "2021-08-27T22:47:10.000Z",
     "updatedAt": "2021-08-27T22:47:10.000Z",
     "file": "再认识我的家乡——蚌埠.md",
-    "slug": "10580a2d",
+    "slug": "rediscovering-my-hometown-bengbu",
+    "legacySlug": "10580a2d",
+    "aliases": [
+      "10580a2d"
+    ],
     "excerpt": "现在距离开学没几天了，暑假在一起玩的朋友、同学都纷纷开学了，就剩我一个人呆在家越来越无聊。在家里呆腻了，我就在晚上出去走走。一路向西，或一路向北，不到穷尽不回头。这是我第一次用自己的脚步丈量我的家乡城市——蚌埠。 我是一个路痴，我觉得我之所以会成为路痴，不是因为我天生缺少方向感，也不是因为我不出门，",
     "tags": [
       "随笔杂记"
@@ -50,7 +62,11 @@
     "date": "2021-08-22T15:21:03.000Z",
     "updatedAt": "2021-08-22T15:21:03.000Z",
     "file": "python时间遇到的坑.md",
-    "slug": "cf4fd6e1",
+    "slug": "python-time-datetime-pitfalls",
+    "legacySlug": "cf4fd6e1",
+    "aliases": [
+      "cf4fd6e1"
+    ],
     "excerpt": "python中与时间相关的标准库有三个： time datetime calendar 吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会 时区坑 查看时间的方式有很多 法一： 在windows上输出2021 08 22 15:04:09.958720，没问题 法二： 本地时间为 : time.s",
     "tags": [
       "笔记"
@@ -65,7 +81,11 @@
     "date": "2021-08-16T09:03:38.000Z",
     "updatedAt": "2021-08-16T09:03:38.000Z",
     "file": "《人类简史》读后有感.md",
-    "slug": "05810db8",
+    "slug": "sapiens-a-brief-history-of-humankind-book-review",
+    "legacySlug": "05810db8",
+    "aliases": [
+      "05810db8"
+    ],
     "excerpt": "一句话概述 《人类简史》在2012年以希伯来文出版。本书从人类的起源开始谈，谈到人类的认知革命、农业革命、再谈到人类的融合统一、科学革命，最后谈一谈人类的未来。构造了一个横跨人类历史的巨大历史框架。 作者简介 作者是以色列年轻人 尤瓦尔·赫拉利 （出书时不到40岁），现在是牛津大学历史学博士。简史三",
     "tags": [
       "书影记录"
@@ -80,7 +100,11 @@
     "date": "2021-08-11T20:57:33.000Z",
     "updatedAt": "2021-08-11T20:57:33.000Z",
     "file": "网吧＋炸鸡 yyds!.md",
-    "slug": "b1b9e00f",
+    "slug": "internet-cafe-fried-chicken-gaming-diary",
+    "legacySlug": "b1b9e00f",
+    "aliases": [
+      "b1b9e00f"
+    ],
     "excerpt": "这个星期我去了六次网吧，吃了三次炸鸡。 网吧 虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。 现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。 打LOL终极魔典，一开始我两被敌人玩弄于股掌之间",
     "tags": [
       "随笔杂记"
@@ -95,7 +119,11 @@
     "date": "2021-08-08T11:09:47.000Z",
     "updatedAt": "2021-08-08T11:09:47.000Z",
     "file": "linux学习笔记.md",
-    "slug": "4fa6d037",
+    "slug": "linux-study-notes",
+    "legacySlug": "4fa6d037",
+    "aliases": [
+      "4fa6d037"
+    ],
     "excerpt": "安装python 1）安装依赖包 安装 “Development tools” 软件组： 因为 Python 3.7 源文件使用 zlib 格式打包，所以需要安装 zlib 软件包；Python 3.7 编译安装时需要使用 zlib 的头文件和链接库，所以需要安装 zlib 的头文件和链接库 zli",
     "tags": [
       "笔记"
@@ -110,7 +138,11 @@
     "date": "2021-08-08T11:08:25.000Z",
     "updatedAt": "2021-08-08T11:08:25.000Z",
     "file": "django笔记进阶.md",
-    "slug": "5b0b5af3",
+    "slug": "django-advanced-notes",
+    "legacySlug": "5b0b5af3",
+    "aliases": [
+      "5b0b5af3"
+    ],
     "excerpt": "models 写入新数据，返回此条新数据 ` new data = Queue.objects.create( queue dic) 访问新写入数据的id字段 new data.id 查询数据 查询一条数据 student = Student.objects.get(name='django') 查",
     "tags": [
       "笔记"
@@ -125,7 +157,11 @@
     "date": "2021-08-08T08:20:29.000Z",
     "updatedAt": "2021-08-08T08:20:29.000Z",
     "file": "python发邮件.md",
-    "slug": "31ffe735",
+    "slug": "python-send-email",
+    "legacySlug": "31ffe735",
+    "aliases": [
+      "31ffe735"
+    ],
     "excerpt": "QQ邮箱设置 python代码 时间判断",
     "tags": [
       "技能分享"
@@ -140,7 +176,11 @@
     "date": "2021-08-02T17:35:49.000Z",
     "updatedAt": "2021-08-02T17:35:49.000Z",
     "file": "NGINX学习笔记.md",
-    "slug": "ec606feb",
+    "slug": "nginx-learning-notes",
+    "legacySlug": "ec606feb",
+    "aliases": [
+      "ec606feb"
+    ],
     "excerpt": "NGINX nginx常用命令 配置文件 配置文件解释参考： https://blog.csdn.net/tjcyjd/article/details/50695922",
     "tags": [
       "笔记"

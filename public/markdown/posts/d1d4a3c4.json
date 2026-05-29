@@ -3,7 +3,11 @@
   "date": "2022-03-30T11:19:10.000Z",
   "updatedAt": "2022-03-30T11:19:10.000Z",
   "file": "Leetcode113_路径总和II——dfs、回溯.md",
-  "slug": "d1d4a3c4",
+  "slug": "leetcode-113-path-sum-ii-dfs-backtracking",
+  "legacySlug": "d1d4a3c4",
+  "aliases": [
+    "d1d4a3c4"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/path sum ii/ 题解 dfs无回溯 我们用深度优先搜索，在搜索时把当前路径记录下来为nums。如果满足 1. sum(nums)==targetSum； 2. 该节点是叶节点； 就记录下这个路径。搜索完成后，我们就能把",
   "categories": [
     "刷题"
@@ -73,5 +77,6 @@
       "id": "记录父节点bfs"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "d1d4a3c4"
 }

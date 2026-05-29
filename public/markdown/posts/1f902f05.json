@@ -3,7 +3,11 @@
   "date": "2021-11-24T18:58:03.000Z",
   "updatedAt": "2021-11-24T18:58:03.000Z",
   "file": "Mac上自动连接校园网的脚本.md",
-  "slug": "1f902f05",
+  "slug": "mac-auto-connect-campus-network-script",
+  "legacySlug": "1f902f05",
+  "aliases": [
+    "1f902f05"
+  ],
   "excerpt": "起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。 第一步 从GitHub上下载一段自动连接校园网的python代码，地址：https://g",
   "categories": [
     "技能分享"
@@ -33,5 +37,6 @@
       "id": "第二步"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "1f902f05"
 }

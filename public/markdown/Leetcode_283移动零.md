@@ -1,6 +1,7 @@
 ---
 title: "Leetcode283:移动零——双指针"
 date: 2024-09-23T20:01:16+08:00
+slug: leetcode-283-move-zeroes-two-pointers
 draft: false
 categories: 
 - 刷题

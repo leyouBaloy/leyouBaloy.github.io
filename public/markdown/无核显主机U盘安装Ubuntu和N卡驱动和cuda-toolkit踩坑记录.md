@@ -3,6 +3,7 @@ categories:
 - 笔记
 - 技能分享
 date: 2024-11-27 06:47:24
+slug: install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu
 title: 无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录
 img: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png
 ---

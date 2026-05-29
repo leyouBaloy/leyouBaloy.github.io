@@ -2,6 +2,7 @@
 categories:
 - 技能分享
 date: 2025-01-24 01:37:25
+slug: vue3-waterfall-layout-dynamic-update-component
 title: Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践
 img: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png
 ---

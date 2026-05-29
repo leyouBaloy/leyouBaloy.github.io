@@ -3,7 +3,11 @@
   "date": "2021-03-28T20:46:35.000Z",
   "updatedAt": "2021-03-28T20:46:35.000Z",
   "file": "“专利申请”撰写有感.md",
-  "slug": "3c91c67f",
+  "slug": "thoughts-on-writing-patent-application",
+  "legacySlug": "3c91c67f",
+  "aliases": [
+    "3c91c67f"
+  ],
   "excerpt": "从开学开始，我就接到了李昕老师的任务——为我们寒假的成果“一种基于docker和jupyter notebook的复合类型题目在线检测方法”撰写一份“专利申请”，并完成申请。第一作者当然是李昕老师，因为我们的核心代码全是李昕老师写的，第二作者包括我和另外一位贡献较大的成员。申请专利并署名我们既是一种",
   "categories": [
     "随笔杂记"
@@ -33,5 +37,6 @@
       "id": "收获"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "3c91c67f"
 }

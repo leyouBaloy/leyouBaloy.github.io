@@ -3,7 +3,11 @@
   "date": "2023-12-10T12:51:01.000Z",
   "updatedAt": "2023-12-10T12:51:01.000Z",
   "file": "如何在Windows上编译Python39源代码.md",
-  "slug": "9fd37d43",
+  "slug": "compile-python39-source-code-on-windows",
+  "legacySlug": "9fd37d43",
+  "aliases": [
+    "9fd37d43"
+  ],
   "excerpt": "安装Visual Studio 2017 先下载Visual Studio Installer https://learn.microsoft.com/en us/visualstudio/python/installing python support in visual studio?view=",
   "categories": [
     "技能分享"
@@ -43,5 +47,6 @@
       "id": "参考"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "9fd37d43"
 }

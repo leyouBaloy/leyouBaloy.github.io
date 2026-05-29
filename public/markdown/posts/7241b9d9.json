@@ -3,7 +3,11 @@
   "date": "2022-04-16T07:42:08.000Z",
   "updatedAt": "2022-04-16T07:42:08.000Z",
   "file": "Pandas使用技巧.md",
-  "slug": "7241b9d9",
+  "slug": "pandas-tips",
+  "legacySlug": "7241b9d9",
+  "aliases": [
+    "7241b9d9"
+  ],
   "excerpt": "read csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行",
   "categories": [
     "笔记"
@@ -33,5 +37,6 @@
       "id": "drop"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "7241b9d9"
 }

@@ -2,6 +2,7 @@
 title: "Leetcode39:组合总和——回溯"
 author: 孙百乐
 date: 2022-05-06T17:09:58+08:00
+slug: leetcode-39-combination-sum-backtracking
 draft: false
 categories: 
 - 刷题

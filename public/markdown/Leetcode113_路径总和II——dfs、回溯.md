@@ -2,6 +2,7 @@
 title: "Leetcode113:路径总和——dfs、回溯"
 author: 孙百乐
 date: 2022-03-30T19:19:10+08:00
+slug: leetcode-113-path-sum-ii-dfs-backtracking
 draft: false
 categories: 
 - 刷题

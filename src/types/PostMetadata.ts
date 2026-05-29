@@ -4,6 +4,8 @@ export interface PostMetadata {
     updatedAt?: string;
     file: string;
     slug: string;
+    legacySlug?: string;
+    aliases?: string[];
     excerpt: string;
     tags?: string[] | undefined;
     categories?: string[] | undefined;

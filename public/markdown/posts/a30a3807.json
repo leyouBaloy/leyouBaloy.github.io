@@ -3,7 +3,11 @@
   "date": "2021-07-30T12:46:02.000Z",
   "updatedAt": "2021-07-30T12:46:02.000Z",
   "file": "带鱼屏真是太太太爽爽爽啦.md",
-  "slug": "a30a3807",
+  "slug": "lg-29wk500-ultrawide-monitor-experience",
+  "legacySlug": "a30a3807",
+  "aliases": [
+    "a30a3807"
+  ],
   "excerpt": "型号LG 29wk500，入门级带鱼屏 真沉浸感！",
   "categories": [
     "随笔杂记"
@@ -28,5 +32,6 @@
       "id": "真沉浸感"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "a30a3807"
 }

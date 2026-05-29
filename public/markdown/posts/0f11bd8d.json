@@ -3,7 +3,11 @@
   "date": "2022-04-27T07:36:14.000Z",
   "updatedAt": "2022-04-27T07:36:14.000Z",
   "file": "Leetcode17_电话号码的字母组合——回溯.md",
-  "slug": "0f11bd8d",
+  "slug": "leetcode-17-letter-combinations-of-a-phone-number-backtracking",
+  "legacySlug": "0f11bd8d",
+  "aliases": [
+    "0f11bd8d"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/letter combinations of a phone number/ 终于能自己做出一道题了😭，之前的回溯题没白刷 题解 回溯 思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径。 画个图帮助理解： {{ }",
   "categories": [
     "刷题"
@@ -33,5 +37,6 @@
       "id": "回溯"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "0f11bd8d"
 }

@@ -3,7 +3,11 @@
   "date": "2022-04-01T08:03:13.000Z",
   "updatedAt": "2022-04-01T08:03:13.000Z",
   "file": "Leetcode55_跳跃游戏——贪心.md",
-  "slug": "69e846ef",
+  "slug": "leetcode-55-jump-game-greedy",
+  "legacySlug": "69e846ef",
+  "aliases": [
+    "69e846ef"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/jump game/ 题解 所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。 那么这道题可以有这样的思路：从前往后遍历nums的元素，实时维护 最远可以到达的位置 far。 对于当前遍历的位置i，先判断",
   "categories": [
     "刷题"
@@ -28,5 +32,6 @@
       "id": "题解"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "69e846ef"
 }

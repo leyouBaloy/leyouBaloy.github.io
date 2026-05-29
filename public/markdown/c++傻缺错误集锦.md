@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-12-02 20:09:14
+slug: cpp-stupid-errors-collection
 draft: false
 title: c++傻缺错误集锦
 ---

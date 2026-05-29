@@ -3,7 +3,11 @@
   "date": "2022-05-24T15:41:05.000Z",
   "updatedAt": "2022-05-24T15:41:05.000Z",
   "file": "解锁新技术栈vue+flask前后端分离.md",
-  "slug": "190a7f91",
+  "slug": "vue-flask-frontend-backend-separation",
+  "legacySlug": "190a7f91",
+  "aliases": [
+    "190a7f91"
+  ],
   "excerpt": "Vue 之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档边写了。前端框架逻辑都差不多，一通百通，很开心能掌握这项技术。 我的学习路线： 先了解web基础知识，比如http，get，post请求等等 了解html",
   "categories": [
     "技能分享"
@@ -53,5 +57,6 @@
       "id": "部署"
     }
   ],
-  "hasMath": true
+  "hasMath": true,
+  "routeSlug": "190a7f91"
 }

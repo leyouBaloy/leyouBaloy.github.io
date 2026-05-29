@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-08-08 08:20:29
+slug: python-send-email
 draft: false
 title: python发邮件
 ---

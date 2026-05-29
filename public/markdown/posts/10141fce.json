@@ -3,7 +3,11 @@
   "date": "2021-02-26T12:06:38.000Z",
   "updatedAt": "2021-02-26T12:06:38.000Z",
   "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
-  "slug": "10141fce",
+  "slug": "matplotlib-tutorial-3-image-3d-data-subplot",
+  "legacySlug": "10141fce",
+  "aliases": [
+    "10141fce"
+  ],
   "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 image图片 interpolation参数有这些 3D数据 Subplot 多合一显示 figure1 fig",
   "categories": [
     "笔记"
@@ -118,5 +122,6 @@
       "id": "方法三method-3-easy-to-define-structure"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "10141fce"
 }

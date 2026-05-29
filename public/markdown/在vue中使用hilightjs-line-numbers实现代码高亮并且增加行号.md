@@ -2,6 +2,7 @@
 title: "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号"
 author: 孙百乐
 date: 2023-03-16T23:51:26+08:00
+slug: vue-highlightjs-line-numbers-code-highlight
 draft: false
 categories: 
 - 技能分享

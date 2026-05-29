@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-11-01 17:13:53
+slug: cpp-cout-output-two-decimal-places-precision
 draft: false
 title: cout输出精确到小数点后两位
 ---

@@ -3,7 +3,11 @@
   "date": "2022-04-08T12:23:24.000Z",
   "updatedAt": "2022-04-08T12:23:24.000Z",
   "file": "c++和python常用函数.md",
-  "slug": "09ec2d90",
+  "slug": "cpp-python-common-functions",
+  "legacySlug": "09ec2d90",
+  "aliases": [
+    "09ec2d90"
+  ],
   "excerpt": "c++常用函数 sort(v.begin(),v.end()) 默认升序 如果要逆序就麻烦了 max element(v.begin(),v.end()) 返回指针，指向最大元素 pair 1. pair p1(1, 2); 定义和初始化 2. 可以用已有对象初始化pair p2(p1); 3. 没",
   "categories": [
     "刷题",
@@ -80,5 +84,6 @@
       "id": "set"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "09ec2d90"
 }

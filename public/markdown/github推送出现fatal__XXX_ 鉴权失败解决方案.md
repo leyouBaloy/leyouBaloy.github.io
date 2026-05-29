@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-11-21 09:04:54
+slug: github-push-fatal-authentication-failed-solution
 draft: false
 title: github推送出现fatal:"XXX" 鉴权失败解决方案
 ---

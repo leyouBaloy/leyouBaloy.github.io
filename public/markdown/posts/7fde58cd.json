@@ -3,7 +3,11 @@
   "date": "2026-03-11T14:13:43.000Z",
   "updatedAt": "2026-03-11T14:13:43.000Z",
   "file": "测试仪.md",
-  "slug": "7fde58cd",
+  "slug": "tester",
+  "legacySlug": "7fde58cd",
+  "aliases": [
+    "7fde58cd"
+  ],
   "excerpt": "测试仪 这里是内容的起始点。",
   "categories": [
     "随笔杂记"
@@ -23,5 +27,6 @@
       "id": "测试仪"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "7fde58cd"
 }

@@ -3,7 +3,11 @@
   "date": "2022-03-07T08:33:28.000Z",
   "updatedAt": "2022-03-07T08:33:28.000Z",
   "file": "二叉树的前中后序遍历.md",
-  "slug": "1cf25f8c",
+  "slug": "binary-tree-preorder-inorder-postorder-traversal",
+  "legacySlug": "1cf25f8c",
+  "aliases": [
+    "1cf25f8c"
+  ],
   "excerpt": "题目 前序遍历：https://leetcode cn.com/problems/binary tree preorder traversal/ 中序遍历：https://leetcode cn.com/problems/binary tree inorder traversal/ 后序遍历：htt",
   "categories": [
     "刷题"
@@ -43,5 +47,6 @@
       "id": "后序遍历"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "1cf25f8c"
 }

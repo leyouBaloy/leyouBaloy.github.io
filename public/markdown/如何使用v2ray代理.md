@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-01-22 10:42:05
+slug: how-to-use-v2ray-proxy
 draft: false
 title: 如何使用v2ray代理
 ---

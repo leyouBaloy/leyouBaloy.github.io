@@ -3,7 +3,11 @@
   "date": "2021-11-14T10:32:04.000Z",
   "updatedAt": "2021-11-14T10:32:04.000Z",
   "file": "精准而优雅——MacBook Air.md",
-  "slug": "591056ff",
+  "slug": "macbook-air-m1-review",
+  "legacySlug": "591056ff",
+  "aliases": [
+    "591056ff"
+  ],
   "excerpt": "我的第一台macbook 犹豫了一年，终于在2021年11月份买了这台m1版本的macbook air。非常感谢我哥借给我不敢想象的8k块。 精准 在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求： 不打游戏 轻薄的机身、超长的续航，",
   "categories": [
     "随笔杂记"
@@ -33,5 +37,6 @@
       "id": "优雅"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "591056ff"
 }

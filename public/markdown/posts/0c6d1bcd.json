@@ -3,7 +3,11 @@
   "date": "2021-12-16T22:57:46.000Z",
   "updatedAt": "2021-12-16T22:57:46.000Z",
   "file": "《史蒂夫·乔布斯传》读书笔记.md",
-  "slug": "0c6d1bcd",
+  "slug": "steve-jobs-biography-reading-notes",
+  "legacySlug": "0c6d1bcd",
+  "aliases": [
+    "0c6d1bcd"
+  ],
   "excerpt": "图书简介 《史蒂夫·乔布斯传》是美国作家沃尔特·艾萨克森为苹果公司创始人史蒂夫·乔布斯所作的传记，记录了乔布斯从童年开始，到卸任苹果公司CEO所发生的故事。该书是乔布斯唯一授权的传记，但乔布斯从未干涉艾萨克森的写作，甚至乔布斯从来没有阅读过本书，因此相比于其他名人的传记，本书更加客观真实。它为我们提",
   "categories": [
     "书影记录"
@@ -33,5 +37,6 @@
       "id": "苹果的产品"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "0c6d1bcd"
 }

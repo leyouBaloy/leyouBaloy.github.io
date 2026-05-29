@@ -2,6 +2,7 @@
 title: "如何在Windows上编译Python39源代码"
 author: 孙百乐
 date: 2023-12-10T20:51:01+08:00
+slug: compile-python39-source-code-on-windows
 draft: false
 categories: 
 - 技能分享

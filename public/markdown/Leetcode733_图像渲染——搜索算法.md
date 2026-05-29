@@ -2,6 +2,7 @@
 title: "Leetcode733:图像渲染——搜索算法"
 author: 孙百乐
 date: 2022-03-21T18:27:50+08:00
+slug: leetcode-733-flood-fill-search-algorithm
 draft: false
 categories: 
 - 刷题

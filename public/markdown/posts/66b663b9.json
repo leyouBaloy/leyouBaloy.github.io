@@ -3,7 +3,11 @@
   "date": "2022-03-31T08:20:49.000Z",
   "updatedAt": "2022-03-31T08:20:49.000Z",
   "file": "Leetcode198_打家劫舍——动态规划.md",
-  "slug": "66b663b9",
+  "slug": "leetcode-198-house-robber-dynamic-programming",
+  "legacySlug": "66b663b9",
+  "aliases": [
+    "66b663b9"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/house robber/ 题解 看官方题解吧，官方题解写的真好。 感想 我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动态规划是很灵活的算法，很多题",
   "categories": [
     "刷题"
@@ -33,5 +37,6 @@
       "id": "感想"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "66b663b9"
 }

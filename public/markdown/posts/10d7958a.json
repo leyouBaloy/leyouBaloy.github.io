@@ -3,7 +3,11 @@
   "date": "2022-05-07T12:12:51.000Z",
   "updatedAt": "2022-05-07T12:12:51.000Z",
   "file": "《学术研究，你的成功之道》.md",
-  "slug": "10d7958a",
+  "slug": "academic-research-your-way-to-success",
+  "legacySlug": "10d7958a",
+  "aliases": [
+    "10d7958a"
+  ],
   "excerpt": "《学术研究，你的成功之道》 格雷准则 如何判断一个好问题？ 格雷准则是由图灵奖得主Jim Gary, 在1999年图灵奖颁奖典礼上提出的一个好的问题应该具备的几个条件。 1. 有明显的益处； 测试描述简单可以用“电梯描述法”看能否在1分钟之内将问题意义清楚明白的讲出来。 2. 描述简单； 3. 尚且",
   "categories": [
     "笔记"
@@ -33,5 +37,6 @@
       "id": "棋盘法"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "10d7958a"
 }

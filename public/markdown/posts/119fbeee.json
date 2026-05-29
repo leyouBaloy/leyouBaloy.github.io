@@ -3,7 +3,11 @@
   "date": "2026-05-22T02:05:57.000Z",
   "updatedAt": "2026-05-22T02:05:57.000Z",
   "file": "硕士毕业答辩总结.md",
-  "slug": "119fbeee",
+  "slug": "masters-graduation-defense-summary",
+  "legacySlug": "119fbeee",
+  "aliases": [
+    "119fbeee"
+  ],
   "excerpt": "硕士毕业答辩总结 硕士毕业答辩结束之后，心里一下子空下来很多。回头看这一路，从开题、中期、写小论文、改大论文，到送盲审、做PPT、上台答辩，每一个节点在经历的时候都像是一座山，真正翻过去之后，又觉得很多事情其实都有章可循。 这篇文章算是给自己做一个阶段性复盘，也给后面要毕业的师弟师妹留一点经验。总结",
   "categories": [
     "随笔杂记"
@@ -38,5 +42,6 @@
       "id": "致谢"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "119fbeee"
 }

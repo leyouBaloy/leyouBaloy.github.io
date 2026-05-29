@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-08-08 11:09:47
+slug: linux-study-notes
 draft: false
 title: linux学习笔记
 ---

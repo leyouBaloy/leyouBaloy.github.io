@@ -3,7 +3,11 @@
   "date": "2022-03-16T12:06:00.000Z",
   "updatedAt": "2022-03-16T12:06:00.000Z",
   "file": "Leetcode160_相交链表——哈希、双指针.md",
-  "slug": "4aad0dc0",
+  "slug": "leetcode-160-intersection-of-two-linked-lists",
+  "legacySlug": "4aad0dc0",
+  "aliases": [
+    "4aad0dc0"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/intersection of two linked lists/ 题解 法一：哈希表 先把一个链表放到哈希表里，再遍历另一个链表。 时间复杂度O(m+n) 空间复杂度O(m) 法二：双指针 这个方法还是很巧妙的！ 两个指针分别",
   "categories": [
     "刷题"
@@ -28,5 +32,6 @@
       "id": "题解"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "4aad0dc0"
 }

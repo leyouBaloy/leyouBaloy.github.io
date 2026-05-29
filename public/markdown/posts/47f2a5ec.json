@@ -3,7 +3,11 @@
   "date": "2025-05-09T14:03:42.000Z",
   "updatedAt": "2025-05-09T14:03:42.000Z",
   "file": "DeepResearch深度搜索实现方法调研.md",
-  "slug": "47f2a5ec",
+  "slug": "deep-research-implementation-methods",
+  "legacySlug": "47f2a5ec",
+  "aliases": [
+    "47f2a5ec"
+  ],
   "excerpt": "DeepResearch深度搜索实现方法调研 Deep Research 有三个核心能力 + 能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索） + 能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？） + 能力三：对多源的信息进行验",
   "categories": [
     "技能分享"
@@ -78,5 +82,6 @@
       "id": "总结"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "47f2a5ec"
 }

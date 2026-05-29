@@ -3,7 +3,11 @@
   "date": "2022-12-29T04:37:38.000Z",
   "updatedAt": "2022-12-29T04:37:38.000Z",
   "file": "Kaggle图像分类竞赛实战总结详细代码解读.md",
-  "slug": "92077544",
+  "slug": "kaggle-image-classification-competition-code",
+  "legacySlug": "92077544",
+  "aliases": [
+    "92077544"
+  ],
   "excerpt": "前言 我是跟着李沐的动手学深度学习v2视频学习深度学习的，光看不做假把式，所以在学习完第七章 现代卷积神经网络之后，参加了一次李沐发布的Kaggle竞赛。自己动手，从组织数据集开始，到训练，再到推理，把整个流程走了一遍，收获颇丰，感觉学到了很多东西，（完整代码：https://www.kaggle.",
   "categories": [
     "笔记",
@@ -60,5 +64,6 @@
       "id": "总结"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "92077544"
 }

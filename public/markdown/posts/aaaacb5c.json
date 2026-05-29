@@ -3,7 +3,11 @@
   "date": "2020-11-16T15:20:41.000Z",
   "updatedAt": "2020-11-16T15:20:41.000Z",
   "file": "Python爬虫-selenium-request.md",
-  "slug": "aaaacb5c",
+  "slug": "python-crawler-selenium-request",
+  "legacySlug": "aaaacb5c",
+  "aliases": [
+    "aaaacb5c"
+  ],
   "excerpt": "seleniumrequest下载",
   "categories": [
     "刷题"
@@ -17,5 +21,6 @@
   "body": "[seleniumrequest](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/11/seleniumrequest.zip)[下载](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/11/seleniumrequest.zip)",
   "html": "<p><a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/11/seleniumrequest.zip\">seleniumrequest</a><a href=\"https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2020/11/seleniumrequest.zip\">下载</a></p>\n",
   "headings": [],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "aaaacb5c"
 }

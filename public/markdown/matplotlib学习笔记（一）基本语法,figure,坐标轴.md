@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-02-23 10:48:54
+slug: matplotlib-tutorial-1-basic-syntax-figure-axis
 draft: false
 title: matplotlib学习笔记（一）基本语法,figure,坐标轴
 ---

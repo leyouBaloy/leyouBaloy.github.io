@@ -3,7 +3,11 @@
   "date": "2021-08-02T17:35:49.000Z",
   "updatedAt": "2021-08-02T17:35:49.000Z",
   "file": "NGINX学习笔记.md",
-  "slug": "ec606feb",
+  "slug": "nginx-learning-notes",
+  "legacySlug": "ec606feb",
+  "aliases": [
+    "ec606feb"
+  ],
   "excerpt": "NGINX nginx常用命令 配置文件 配置文件解释参考： https://blog.csdn.net/tjcyjd/article/details/50695922",
   "categories": [
     "笔记"
@@ -38,5 +42,6 @@
       "id": "usrsbinnginx-t"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "ec606feb"
 }

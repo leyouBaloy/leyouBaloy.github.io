@@ -3,7 +3,11 @@
   "date": "2020-10-11T16:11:03.000Z",
   "updatedAt": "2020-10-11T16:11:03.000Z",
   "file": "Python-洗牌算法.md",
-  "slug": "6c7a9fd6",
+  "slug": "python-shuffle-algorithm",
+  "legacySlug": "6c7a9fd6",
+  "aliases": [
+    "6c7a9fd6"
+  ],
   "excerpt": "原理在这https://www.bilibili.com/video/BV1k7411q7jo 倒序写法 这里在random库下定义了一个函数shuffle 之所以是i+1是因为random.randrange()是左闭右开的，不包括i+1 每次运行这段代码结果应该都是不一样的 正序写法 实际上在r",
   "categories": [
     "刷题"
@@ -33,5 +37,6 @@
       "id": "实际上在random库中本事提供了这样的函数"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "6c7a9fd6"
 }

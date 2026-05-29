@@ -3,7 +3,11 @@
   "date": "2020-10-04T15:05:52.000Z",
   "updatedAt": "2020-10-04T15:05:52.000Z",
   "file": "Python第二周学习报告（草稿）.md",
-  "slug": "bb55d973",
+  "slug": "python-week-2-study-report",
+  "legacySlug": "bb55d973",
+  "aliases": [
+    "bb55d973"
+  ],
   "excerpt": "总体感受 这是我跟着b站昕哥的视频学习\"Python数据分析“的第二周，总体上感觉Python确实是比c++要简单不少，学c++就像是开手动挡汽车，虽然难学，但是学会之后可以享受操纵的乐趣。而学Python就像是开手动挡汽车，简单上手，也功能强大。 和以前在网上自学其它东西不一样的是，这次学习Pyt",
   "categories": [
     "笔记"
@@ -33,5 +37,6 @@
       "id": "未来的目标"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "bb55d973"
 }

@@ -3,7 +3,11 @@
   "date": "2025-06-22T08:49:55.000Z",
   "updatedAt": "2025-06-22T08:49:55.000Z",
   "file": "手撕Attention.md",
-  "slug": "d764f796",
+  "slug": "implement-attention-from-scratch",
+  "legacySlug": "d764f796",
+  "aliases": [
+    "d764f796"
+  ],
   "excerpt": "第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K",
   "categories": [
     "笔记",
@@ -60,5 +64,6 @@
       "id": "测试第四重境界multi-head-attention"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "d764f796"
 }

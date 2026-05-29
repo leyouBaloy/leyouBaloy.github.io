@@ -3,7 +3,11 @@
   "date": "2020-10-17T16:26:51.000Z",
   "updatedAt": "2020-10-17T16:26:51.000Z",
   "file": "识别字符.md",
-  "slug": "b35ce183",
+  "slug": "identify-characters-repeating-decimals-algorithm",
+  "legacySlug": "b35ce183",
+  "aliases": [
+    "b35ce183"
+  ],
   "excerpt": "【题目描述】 数学课上，楠楠学习了一个新的知识。 两数相除，如果得不到整数商，会有两种情况：一种是得到有限小数，另一种是得到无限小数。从小数点后某一位开始依次不断地重复出现前一个或一节数字的十进制无限小数，叫做循环小数，如2.9666..., (在数学中它读作“二点九六，六循环” ）， 定义循环小数",
   "categories": [
     "刷题"
@@ -23,5 +27,6 @@
       "id": "答案"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "b35ce183"
 }

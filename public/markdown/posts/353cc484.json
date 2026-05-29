@@ -3,7 +3,11 @@
   "date": "2021-01-30T11:24:49.000Z",
   "updatedAt": "2021-01-30T11:24:49.000Z",
   "file": "叮~我们的MC服务器终于到货啦！.md",
-  "slug": "353cc484",
+  "slug": "new-minecraft-server-setup",
+  "legacySlug": "353cc484",
+  "aliases": [
+    "353cc484"
+  ],
   "excerpt": "1月30日更新 增加了竹子mod 参考资料http://www.minecraftxz.com/bamboo/ 豆腐工坊mod 参考资料https://www.mcmod.cn/class/386.html 增加了小地图，进客户端就能看到 魔法金属 是一个大量级的Mod 可以观看籽岷的视频学习htt",
   "categories": [
     "随笔杂记"
@@ -33,5 +37,6 @@
       "id": "开服信息公示"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "353cc484"
 }

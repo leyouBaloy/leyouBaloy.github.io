@@ -3,7 +3,11 @@
   "date": "2022-04-16T12:23:57.000Z",
   "updatedAt": "2022-04-16T12:23:57.000Z",
   "file": "git撤销版本.md",
-  "slug": "5753ed33",
+  "slug": "git-undo-commit",
+  "legacySlug": "5753ed33",
+  "aliases": [
+    "5753ed33"
+  ],
   "excerpt": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行gi",
   "categories": [
     "技能分享",
@@ -25,5 +29,6 @@
       "id": "git如何撤回远程仓库已经提交的版本"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "5753ed33"
 }

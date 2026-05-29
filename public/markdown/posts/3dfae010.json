@@ -3,7 +3,11 @@
   "date": "2021-06-13T23:16:09.000Z",
   "updatedAt": "2021-06-13T23:16:09.000Z",
   "file": "本学期“人工智能”学习结束总结.md",
-  "slug": "3dfae010",
+  "slug": "artificial-intelligence-learning-summary",
+  "legacySlug": "3dfae010",
+  "aliases": [
+    "3dfae010"
+  ],
   "excerpt": "现在人工智能真是火到了极点，各个专业都想转行搞人工智能。作为本来就是人工智能专业的学生，更是要趁早开始。所以，大一下学期，在老师的指导，以及同学和合作下，我开始接触人工智能的学习。 学习资料 从机器学习开始： 《统计学习方法》 作者：李航 教科书/课本，理论性强，也很权威。分为监督学习和非监督学习两",
   "categories": [
     "笔记"
@@ -23,5 +27,6 @@
       "id": "学习资料"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "3dfae010"
 }

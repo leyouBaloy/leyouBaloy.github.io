@@ -3,7 +3,11 @@
   "date": "2021-03-02T20:31:39.000Z",
   "updatedAt": "2021-03-02T20:31:39.000Z",
   "file": "开学第二天明确学习方向.md",
-  "slug": "068dcf5e",
+  "slug": "new-semester-study-plan-python-frontend",
+  "legacySlug": "068dcf5e",
+  "aliases": [
+    "068dcf5e"
+  ],
   "excerpt": "可以进行的学习 matplotlib kaggle刷题pandas等 web前端（css,javascript） Python爬虫实战 继续看课本（这个可能是最无聊的） 现在就好迷，在寝室里不知道学啥。 这样吧，学学云顶之弈把",
   "categories": [
     "随笔杂记"
@@ -23,5 +27,6 @@
       "id": "可以进行的学习"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "068dcf5e"
 }

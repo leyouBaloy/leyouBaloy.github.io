@@ -3,6 +3,7 @@ categories:
 - 笔记
 - 技能分享
 date: 2025-06-22 08:49:55
+slug: implement-attention-from-scratch
 title: 手撕Attention
 img: 
 ---

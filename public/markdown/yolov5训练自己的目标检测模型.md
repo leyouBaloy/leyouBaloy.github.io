@@ -2,6 +2,7 @@
 title: "Yolov5训练自己的目标检测模型"
 author: 孙百乐
 date: 2022-02-28T22:34:57+08:00
+slug: yolov5-train-custom-object-detection-model
 draft: false
 categories: 
 - 技能分享

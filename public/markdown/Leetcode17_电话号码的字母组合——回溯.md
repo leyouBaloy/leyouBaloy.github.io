@@ -2,6 +2,7 @@
 title: "Leetcode17:电话号码的字母组合——回溯"
 author: 孙百乐
 date: 2022-04-27T15:36:14+08:00
+slug: leetcode-17-letter-combinations-of-a-phone-number-backtracking
 draft: false
 categories: 
 - 刷题

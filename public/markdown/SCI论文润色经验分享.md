@@ -2,6 +2,7 @@
 title: "SCI论文润色经验分享"
 author: 孙百乐
 date: 2023-12-23T21:39:08+08:00
+slug: sci-paper-editing-experience-sharing
 draft: false
 categories: 
 - 笔记

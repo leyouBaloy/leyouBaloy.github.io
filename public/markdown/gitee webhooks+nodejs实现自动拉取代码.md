@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2022-01-25 20:50:41
+slug: github-gitee-webhooks-nodejs-auto-pull
 draft: false
 title: gitee/github webhooks+nodejs实现自动拉取代码
 ---

@@ -3,7 +3,11 @@
   "date": "2021-07-14T21:56:23.000Z",
   "updatedAt": "2021-07-14T21:56:23.000Z",
   "file": "87《红楼梦》观之有感.md",
-  "slug": "bb9c1edf",
+  "slug": "87-dream-of-the-red-chamber-review",
+  "legacySlug": "bb9c1edf",
+  "aliases": [
+    "bb9c1edf"
+  ],
   "excerpt": "87版《红楼梦》 87红楼梦拍得是相当好的。小时候看不懂，不以为然。后来看了新版红楼梦（10版），才知道87版红楼梦是多么经典。导演王扶林拿捏了每一处细节，用高超的手法尽可能地还原了红楼梦原著。为拍摄此剧付出的代价也远高于现代拍摄的古装剧。演员也各个都是颜值天花板，看得好不过瘾！ 看看拍这部剧的投资",
   "categories": [
     "书影记录"
@@ -68,5 +72,6 @@
       "id": "贾家被抄"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "bb9c1edf"
 }

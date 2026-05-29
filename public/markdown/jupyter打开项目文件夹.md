@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-01-19 17:52:50
+slug: jupyter-open-project-folder
 draft: false
 title: jupyter打开项目文件夹
 ---

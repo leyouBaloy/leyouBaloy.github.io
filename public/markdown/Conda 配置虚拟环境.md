@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-08-29 21:20:21
+slug: conda-virtual-environment-setup
 draft: false
 title: Conda 配置虚拟环境
 ---

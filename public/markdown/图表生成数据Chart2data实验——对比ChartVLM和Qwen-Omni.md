@@ -2,6 +2,7 @@
 categories:
 - 技能分享
 date: 2025-06-10 10:14:29
+slug: chart2data-experiment-compare-chartvlm-qwen-omni
 title: 图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni
 img: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/images/d969c3b0_1749549251583-7654c91e-ef01-4bf7-9656-11efa4778806.png
 ---

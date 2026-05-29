@@ -3,7 +3,11 @@
   "date": "2021-03-23T09:10:48.000Z",
   "updatedAt": "2021-03-23T09:10:48.000Z",
   "file": "长期任务：做一个在线oj的评测.md",
-  "slug": "b3da82e1",
+  "slug": "build-online-judge-system",
+  "legacySlug": "b3da82e1",
+  "aliases": [
+    "b3da82e1"
+  ],
   "excerpt": "任务拆分 一个html页面，左边是题目，右边是文本框，可以编写代码。右下角有一个“提交”按钮，点击之后将代码发送到后台进行评测。 现在已有基于jupyter notebook的评测多个题目的评测代码，需要把它拆分后放在django后台运行。 可能需要用到数据库，统一使用的是mysql 3月23日 正",
   "categories": [
     "笔记"
@@ -53,5 +57,6 @@
       "id": "4月22日"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "b3da82e1"
 }

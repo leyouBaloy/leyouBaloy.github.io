@@ -3,7 +3,11 @@
   "date": "2024-08-20T16:11:00.000Z",
   "updatedAt": "2024-08-20T16:11:00.000Z",
   "file": "调研遥感数据压缩.md",
-  "slug": "a37163dc",
+  "slug": "remote-sensing-data-compression-research",
+  "legacySlug": "a37163dc",
+  "aliases": [
+    "a37163dc"
+  ],
   "excerpt": "什么是遥感数据压缩？ 遥感图像压缩是指利用特定的算法和技术减少遥感图像数据量的过程，以便更有效地存储和传输数据。这个过程涉及到数据的编码，以减少数据的比特数，同时尽量保持原始图像的重要视觉和分析信息。遥感图像压缩通常分为两类： 1. 无损压缩（Lossless Compression） ：在无损压缩",
   "categories": [
     "人工智能",
@@ -60,5 +64,6 @@
       "id": "参考文献"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "a37163dc"
 }

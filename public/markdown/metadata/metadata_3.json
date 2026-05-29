@@ -4,7 +4,11 @@
     "date": "2024-11-04T15:18:54.000Z",
     "updatedAt": "2024-11-04T15:18:54.000Z",
     "file": "品酒尊美醇Jameson.md",
-    "slug": "b9f36e78",
+    "slug": "jameson-irish-whiskey-tasting",
+    "legacySlug": "b9f36e78",
+    "aliases": [
+      "b9f36e78"
+    ],
     "excerpt": "尊美醇Jameson 产地 ：爱尔兰。其最初在都柏林的弓街酿酒厂生产，1975 年 7 月开始转移到爱尔兰科克郡的米德尔顿酿酒厂。 度数 ：40% vol。 酿造工艺 ：采用三重蒸馏工艺。把已发芽与未发芽的大麦放到一起发酵，成品要经过三次蒸馏并在橡木桶中经历 5 7 年以上的熟成，然后还需要加入一定",
     "tags": [
       "随笔杂记"
@@ -20,7 +24,11 @@
     "date": "2024-11-04T12:10:30.000Z",
     "updatedAt": "2024-11-04T12:10:30.000Z",
     "file": "数之和问题归纳哈希双指针.md",
-    "slug": "c3608157",
+    "slug": "n-sum-problem-hash-two-pointers",
+    "legacySlug": "c3608157",
+    "aliases": [
+      "c3608157"
+    ],
     "excerpt": "Leetcode 1: 两数之和 题目 https://leetcode.cn/problems/two sum/ 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素",
     "tags": [
       "刷题"
@@ -35,7 +43,11 @@
     "date": "2024-10-29T13:04:06.000Z",
     "updatedAt": "2024-10-29T13:04:06.000Z",
     "file": "Leetcode_142环形链表II.md",
-    "slug": "f870a3e8",
+    "slug": "leetcode-142-linked-list-cycle-ii-fast-slow-pointers",
+    "legacySlug": "f870a3e8",
+    "aliases": [
+      "f870a3e8"
+    ],
     "excerpt": "Leetcode 142环形链表II https://leetcode.cn/problems/linked list cycle ii/description/ 给定一个链表的头节点 head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 如果链表中有某个节点，可以通过连续跟",
     "tags": [
       "刷题"
@@ -50,7 +62,11 @@
     "date": "2024-09-23T12:01:16.000Z",
     "updatedAt": "2024-09-23T12:01:16.000Z",
     "file": "Leetcode_283移动零.md",
-    "slug": "0b17329c",
+    "slug": "leetcode-283-move-zeroes-two-pointers",
+    "legacySlug": "0b17329c",
+    "aliases": [
+      "0b17329c"
+    ],
     "excerpt": "题目 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。 请注意 ，必须在不复制数组的情况下原地对数组进行操作。 示例 1: 示例 2: 官方题解 使用双指针，左指针指向当前已经处理好的序列的尾部，右指针指向待处理序列的头部。 右指针不断向右移动，每次右指",
     "tags": [
       "刷题"
@@ -65,7 +81,11 @@
     "date": "2024-09-19T15:38:28.000Z",
     "updatedAt": "2024-09-19T15:38:28.000Z",
     "file": "品酒（古井贡酒-古8）.md",
-    "slug": "5086af34",
+    "slug": "wine-tasting-gujing-gongjiu-gu-8",
+    "legacySlug": "5086af34",
+    "aliases": [
+      "5086af34"
+    ],
     "excerpt": "古 8 香型：浓香型 原料：水、高粱、大米、小麦、糯米、玉米 酒精度：42 度 产地：安徽亳州 价格：220 元/ 425ml 品尝感受：入口柔，后劲小，感觉像是稀释了的古 16，毕竟是低度酒，喝起来没有那么浓郁，但是古井的窖泥味儿还是很明显的。相比于 42 度的红盖汾酒来说，好喝多了。（虽然它两价",
     "tags": [
       "随笔杂记"
@@ -80,7 +100,11 @@
     "date": "2024-09-14T00:00:00.000Z",
     "updatedAt": "2024-09-14T00:00:00.000Z",
     "file": "代码块测试.md",
-    "slug": "4692489c",
+    "slug": "code-block-feature-test",
+    "legacySlug": "4692489c",
+    "aliases": [
+      "4692489c"
+    ],
     "excerpt": "代码块 Copy 按钮和高亮功能测试 这个页面用于测试新添加的代码块功能，包括语法高亮和复制按钮。 JavaScript 代码块 Python 代码块 CSS 样式代码 SQL 查询 JSON 数据 Shell 脚本 行内代码测试 这是一个行内代码的例子：const message = \"Hello",
     "tags": [
       "技术测试"
@@ -95,7 +119,11 @@
     "date": "2024-08-28T10:24:07.000Z",
     "updatedAt": "2024-08-28T10:24:07.000Z",
     "file": "绿植盆栽攻略.md",
-    "slug": "5953ed50",
+    "slug": "indoor-green-potted-plant-care-guide",
+    "legacySlug": "5953ed50",
+    "aliases": [
+      "5953ed50"
+    ],
     "excerpt": "分类 以下是常见的绿植盆栽分类： 一、观叶类绿植盆栽 植物类型 ：绿萝、吊兰、龟背竹、发财树、文竹、虎皮兰等。 养护难度 ：总体来说养护难度相对较低。绿萝和吊兰适应能力强，能在不同环境下生长，只要保证适量的水分和散射光即可。龟背竹喜欢温暖湿润的环境，但也比较耐阴。发财树需注意浇水不能过多，否则容易烂",
     "tags": [
       "随笔杂记",
@@ -111,7 +139,11 @@
     "date": "2024-08-24T14:52:24.000Z",
     "updatedAt": "2024-08-24T14:52:24.000Z",
     "file": "品酒(古井贡酒-古16) .md",
-    "slug": "a2aab3af",
+    "slug": "gujing-gongjiu-gu-16-tasting",
+    "legacySlug": "a2aab3af",
+    "aliases": [
+      "a2aab3af"
+    ],
     "excerpt": "外观 古 16 这个酒属于古井贡酒系列的中端，品质还是不错的，包装非常精美，酒瓶是大红色，喜庆，很适合婚宴使用。 购买经历 家里有几瓶古 16，我一直想拿一瓶尝尝，但我妈死活不让。于是我就想了办法套路我妈，结果她还真收了我的钱，这是我没想到的O.o。 品鉴 原料 ：高粱、大米、小麦、糯米、玉米（还挺",
     "tags": [
       "随笔杂记"
@@ -126,7 +158,11 @@
     "date": "2024-08-21T23:09:53.000Z",
     "updatedAt": "2024-08-21T23:09:53.000Z",
     "file": "品酒（高脖绿瓶西凤酒陕西版）.md",
-    "slug": "a6894469",
+    "slug": "wine-tasting-green-bottle-xifengjiu-shaanxi",
+    "legacySlug": "a6894469",
+    "aliases": [
+      "a6894469"
+    ],
     "excerpt": "今天品一下高脖绿瓶西凤酒，这是凤香型的代表酒。这个酒也是出了名的乱，有陕西版比省外版的好喝，批次早的比批次晚的好喝。我买的版本是 2023 年的陕西版。 原料 ：高粱、大麦、小麦、豌豆。 酒精度 ：55 度。 价格 ：约 50 元/500ml。 闻香 ：闻着像黄盖汾（清香型），有水果香，仔细闻还能闻",
     "tags": [
       "随笔杂记"
@@ -141,7 +177,11 @@
     "date": "2024-08-20T16:11:00.000Z",
     "updatedAt": "2024-08-20T16:11:00.000Z",
     "file": "调研遥感数据压缩.md",
-    "slug": "a37163dc",
+    "slug": "remote-sensing-data-compression-research",
+    "legacySlug": "a37163dc",
+    "aliases": [
+      "a37163dc"
+    ],
     "excerpt": "什么是遥感数据压缩？ 遥感图像压缩是指利用特定的算法和技术减少遥感图像数据量的过程，以便更有效地存储和传输数据。这个过程涉及到数据的编码，以减少数据的比特数，同时尽量保持原始图像的重要视觉和分析信息。遥感图像压缩通常分为两类： 1. 无损压缩（Lossless Compression） ：在无损压缩",
     "tags": [
       "人工智能",

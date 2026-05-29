@@ -2,6 +2,7 @@
 categories:
 - 技能分享
 date: 2025-05-09 14:03:42
+slug: deep-research-implementation-methods
 title: DeepResearch深度搜索实现方法调研
 img: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png
 ---

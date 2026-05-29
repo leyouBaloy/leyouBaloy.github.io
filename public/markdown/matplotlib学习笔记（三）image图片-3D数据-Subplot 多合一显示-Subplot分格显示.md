@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-02-26 12:06:38
+slug: matplotlib-tutorial-3-image-3d-data-subplot
 draft: false
 title: matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示
 ---

@@ -4,7 +4,11 @@
     "date": "2021-11-14T10:32:04.000Z",
     "updatedAt": "2021-11-14T10:32:04.000Z",
     "file": "精准而优雅——MacBook Air.md",
-    "slug": "591056ff",
+    "slug": "macbook-air-m1-review",
+    "legacySlug": "591056ff",
+    "aliases": [
+      "591056ff"
+    ],
     "excerpt": "我的第一台macbook 犹豫了一年，终于在2021年11月份买了这台m1版本的macbook air。非常感谢我哥借给我不敢想象的8k块。 精准 在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求： 不打游戏 轻薄的机身、超长的续航，",
     "tags": [
       "随笔杂记"
@@ -20,7 +24,11 @@
     "date": "2021-11-12T16:57:43.000Z",
     "updatedAt": "2021-11-12T16:57:43.000Z",
     "file": "macOS下matplotlib无法显示中文字体问题解决.md",
-    "slug": "2031667d",
+    "slug": "macos-matplotlib-chinese-font-display-fix",
+    "legacySlug": "2031667d",
+    "aliases": [
+      "2031667d"
+    ],
     "excerpt": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。 后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html 解决方法",
     "tags": [
       "技能分享"
@@ -35,7 +43,11 @@
     "date": "2021-11-04T17:15:40.000Z",
     "updatedAt": "2021-11-04T17:15:40.000Z",
     "file": "如何在英语朗读视频中添加文稿.md",
-    "slug": "0e0d4826",
+    "slug": "add-transcript-to-english-reading-video",
+    "legacySlug": "0e0d4826",
+    "aliases": [
+      "0e0d4826"
+    ],
     "excerpt": "如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读视频中添加文稿呢？ 你所需要用到的工具是剪辑软件，下面推荐几个很好用的剪辑软件： 1.剪映（电脑和手机） 你可以把你的视频直接拖拽到导轨上，然后再把文稿以图片也",
     "tags": [
       "技能分享"
@@ -50,7 +62,11 @@
     "date": "2021-10-30T22:43:09.000Z",
     "updatedAt": "2021-10-30T22:43:09.000Z",
     "file": "Linux自由软件协会迎新结束有感.md",
-    "slug": "c99a798a",
+    "slug": "linux-free-software-association-orientation-thoughts",
+    "legacySlug": "c99a798a",
+    "aliases": [
+      "c99a798a"
+    ],
     "excerpt": "大一的时候，看到这个社团感觉就很对胃口，想加入。但是Linux自由软件协会太低调了，那年的百团大战我都没找到摊位。 大二阴差阳错，我直接从局外人成了会长。 起因是我当了飞桨领航团团长，要借一个社团办线下活动，没人愿意跟我合作。 陈荣灿学长跟我都是李昕老师的学生，我问他可不可以合作办一个活动，他说正好",
     "tags": [
       "随笔杂记"
@@ -65,7 +81,11 @@
     "date": "2021-10-30T13:58:01.000Z",
     "updatedAt": "2021-10-30T13:58:01.000Z",
     "file": "ubuntu安装Python3的曲折之路.md",
-    "slug": "6434a878",
+    "slug": "ubuntu-install-python3-pyenv",
+    "legacySlug": "6434a878",
+    "aliases": [
+      "6434a878"
+    ],
     "excerpt": "思路 先安装Python版本管理器pyenv 再用Pyenv安装Python 安装pyenv 标准安装：找到项目地址pyenv/pyenv: Simple Python version management (github.com) 先git clone，再配环境变量。 作者还提供了一个自动安装的脚",
     "tags": [
       "技能分享"
@@ -80,7 +100,11 @@
     "date": "2021-10-06T08:28:08.000Z",
     "updatedAt": "2021-10-06T08:28:08.000Z",
     "file": "黄山归来不看岳——黄山之旅.md",
-    "slug": "2812cd66",
+    "slug": "huangshan-mountain-trip",
+    "legacySlug": "2812cd66",
+    "aliases": [
+      "2812cd66"
+    ],
     "excerpt": "时间 2021年国庆期间，10月3日至5日。 第一站：翡翠谷 翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。 翡翠谷是一条长长的峡谷，一路走进去有很多大大小小的水潭，",
     "tags": [
       "书影记录"
@@ -95,7 +119,11 @@
     "date": "2021-09-29T23:37:12.000Z",
     "updatedAt": "2021-09-29T23:37:12.000Z",
     "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
-    "slug": "1829cd62",
+    "slug": "ai-knowledge-competition-upc-award-notice",
+    "legacySlug": "1829cd62",
+    "aliases": [
+      "1829cd62"
+    ],
     "excerpt": "获奖名单： 排名不分先后，恭喜以上获奖同学。 领奖须知： 第一步： 扫描二维码，注册飞桨人工智能训练平台aistudio（需要手机号） 第二步： 在gitee开源社区上为首家开源国产深度学习框架paddle paddle点个star（如果没有账号，请注册一个） 第三步： 将您的aistudio注册手",
     "tags": [
       "刷题"
@@ -110,7 +138,11 @@
     "date": "2021-09-23T15:58:12.000Z",
     "updatedAt": "2021-09-23T15:58:12.000Z",
     "file": "浏览器不支持getUserMedia.md",
-    "slug": "2aef21c9",
+    "slug": "fix-browser-getusermedia-not-supported",
+    "legacySlug": "2aef21c9",
+    "aliases": [
+      "2aef21c9"
+    ],
     "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,http://localhost， 解决方法 chrome 地址栏输入：",
     "tags": [
       "技能分享"
@@ -125,7 +157,11 @@
     "date": "2021-09-08T22:42:40.000Z",
     "updatedAt": "2021-09-08T22:42:40.000Z",
     "file": "certbot自动配置nginx给wordpress站点加https.md",
-    "slug": "8644ae3a",
+    "slug": "certbot-auto-config-nginx-wordpress-https",
+    "legacySlug": "8644ae3a",
+    "aliases": [
+      "8644ae3a"
+    ],
     "excerpt": "思路 1. 安装snap 2. 安装certbot 3. 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置nginx的时候报错如图 报错的意思就是说，在nginx的配置文件中server",
     "tags": [
       "技能分享"
@@ -140,7 +176,11 @@
     "date": "2021-08-29T21:21:29.000Z",
     "updatedAt": "2021-08-29T21:21:29.000Z",
     "file": "对图像操作.md",
-    "slug": "3bdd31d7",
+    "slug": "image-operations-processing",
+    "legacySlug": "3bdd31d7",
+    "aliases": [
+      "3bdd31d7"
+    ],
     "excerpt": "图像 位图（raster graphics)和矢量图（vector graphics) 位图是有像素的，色彩丰富。矢量图放大不会失真。 通道 单通道 灰度图，每个像素点只有一个值表示，如果图像的深度是4 (256 = 2 2 2\\ 2)，那么他的像素值0(黑) 255(白)； 三通道 也就是通过见到",
     "tags": [
       "技能分享"

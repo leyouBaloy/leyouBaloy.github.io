@@ -3,7 +3,11 @@
   "date": "2021-06-21T22:49:05.000Z",
   "updatedAt": "2021-06-21T22:49:05.000Z",
   "file": "大物大作业-microbit编程小车.md",
-  "slug": "86bb081c",
+  "slug": "microbit-programming-car-physics-project",
+  "legacySlug": "86bb081c",
+  "aliases": [
+    "86bb081c"
+  ],
   "excerpt": "起因 做大学物理大作业。张丽红老师给的课题很宽泛，做实物、写小论文都可以。我和何为就寻思着做一辆小车。本来想买树莓派，自己找配件，做一辆智能车，但是时间成本太高，于是就从淘宝上240块钱买了辆青少年编程学习玩具车。 microbit单片机 微软搞的东西，面向青少年学习编程使用。上手十分简单，就真的是",
   "categories": [
     "随笔杂记"
@@ -43,5 +47,6 @@
       "id": "后续"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "86bb081c"
 }

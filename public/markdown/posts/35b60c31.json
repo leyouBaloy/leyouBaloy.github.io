@@ -3,7 +3,11 @@
   "date": "2022-04-02T02:20:05.000Z",
   "updatedAt": "2022-04-02T02:20:05.000Z",
   "file": "Leetcode450_删除二叉搜索树中的节点.md",
-  "slug": "35b60c31",
+  "slug": "leetcode-450-delete-node-in-a-bst",
+  "legacySlug": "35b60c31",
+  "aliases": [
+    "35b60c31"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/delete node in a bst/ 这道题完全可以当作一个知识点来对待。 题解 思路 众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。 某个节点node的后继节点successor，就是",
   "categories": [
     "刷题"
@@ -68,5 +72,6 @@
       "id": "selfright-right"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "35b60c31"
 }

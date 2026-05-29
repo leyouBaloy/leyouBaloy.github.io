@@ -3,7 +3,11 @@
   "date": "2022-03-16T10:14:14.000Z",
   "updatedAt": "2022-03-16T10:14:14.000Z",
   "file": "macm1安装sqlserver踩坑经历.md",
-  "slug": "918eb92e",
+  "slug": "mac-m1-install-sql-server",
+  "legacySlug": "918eb92e",
+  "aliases": [
+    "918eb92e"
+  ],
   "excerpt": "为什么安装sqlserver 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。 法一：云数据库（❌ 在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所周知，像阿里云、腾讯云等服务商",
   "categories": [
     "技能分享"
@@ -43,5 +47,6 @@
       "id": "总结"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "918eb92e"
 }

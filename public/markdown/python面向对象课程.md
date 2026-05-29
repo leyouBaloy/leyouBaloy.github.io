@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2021-02-02 10:33:46
+slug: python-oop-course
 draft: false
 title: python面向对象课程
 ---

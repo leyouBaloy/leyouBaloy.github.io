@@ -2,6 +2,7 @@
 title: "Vue+flask实现播放任何视频源（包括rtsp摄像头）"
 author: 孙百乐
 date: 2023-04-22T10:40:50+08:00
+slug: vue-flask-play-rtsp-video-stream-camera
 draft: false
 categories: 
 - 技能分享

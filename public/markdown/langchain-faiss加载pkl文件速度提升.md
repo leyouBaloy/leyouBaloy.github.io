@@ -2,6 +2,7 @@
 categories:
 - 技能分享
 date: 2025-12-14 06:19:28
+slug: langchain-faiss-load-pkl-speed-up
 title: langchain-faiss加载pkl文件速度提升
 img: 
 ---

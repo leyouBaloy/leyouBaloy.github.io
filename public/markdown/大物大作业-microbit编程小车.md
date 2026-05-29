@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 随笔杂记
 date: 2021-06-21 22:49:05
+slug: microbit-programming-car-physics-project
 draft: false
 title: 大物大作业-microbit编程小车
 ---

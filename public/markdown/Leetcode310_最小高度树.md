@@ -2,6 +2,7 @@
 title: "Leetcode310:最小高度树"
 author: 孙百乐
 date: 2022-04-06T15:07:06+08:00
+slug: leetcode-310-minimum-height-trees
 draft: false
 categories: 
 - 刷题

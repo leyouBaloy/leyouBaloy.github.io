@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-12-28 16:21:28
+slug: using-reverse-algorithm
 draft: false
 title: 使用reverse反向排列算法
 ---

@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-10-11 16:11:03
+slug: python-shuffle-algorithm
 draft: false
 title: Python-洗牌算法
 ---

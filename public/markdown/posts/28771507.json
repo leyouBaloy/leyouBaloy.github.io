@@ -3,7 +3,11 @@
   "date": "2022-05-04T08:24:22.000Z",
   "updatedAt": "2022-05-04T08:24:22.000Z",
   "file": "Leetcode1823_找出游戏的获胜者——约瑟夫环.md",
-  "slug": "28771507",
+  "slug": "leetcode-1823-find-the-winner-of-the-circular-game-josephus",
+  "legacySlug": "28771507",
+  "aliases": [
+    "28771507"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/find the winner of the circular game/ 约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。 题解 朴素的模拟法 即真正按照题目的描述，维护一",
   "categories": [
     "刷题"
@@ -48,5 +52,6 @@
       "id": "数学递归数学迭代"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "28771507"
 }

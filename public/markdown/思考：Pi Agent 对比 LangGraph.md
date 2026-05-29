@@ -2,6 +2,7 @@
 categories:
 - 技术思考
 date: 2026-05-27 15:45:25
+slug: pi-agent-vs-langgraph-comparison
 title: 思考：Pi Agent 对比 LangGraph
 img: /images/pi-agent-vs-langgraph-header.png
 tags: [AI, Agent, Pi Agent, LangGraph]

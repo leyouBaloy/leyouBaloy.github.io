@@ -2,6 +2,7 @@
 title: "Leetcode206:反转链表"
 author: 孙百乐
 date: 2022-03-14T19:15:57+08:00
+slug: leetcode-206-reverse-linked-list
 draft: false
 categories: 
 - 刷题

@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-02-09 23:45:43
+slug: upgrade-http-to-https-wordpress-apache
 draft: false
 title: 搞了一晚上http升级为https
 ---

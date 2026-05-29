@@ -3,7 +3,11 @@
   "date": "2022-03-07T09:15:10.000Z",
   "updatedAt": "2022-03-07T09:15:10.000Z",
   "file": "C语言中值传递、指针传递和引用传递.md",
-  "slug": "65f5e948",
+  "slug": "c-language-pass-by-value-pointer-reference",
+  "legacySlug": "65f5e948",
+  "aliases": [
+    "65f5e948"
+  ],
   "excerpt": "2022年我才搞懂这个！ 比较 传递方式 函数定义 函数调用 函数内对a修改的影响 : : : : 值传递 fun(int a) fun(x) 外部x不变 指针传递 fun(int a) fun(&x) 外部x同步更改 引用传递 fun(int &a) fun(x) 外部x同步更改 值传递 值传递是",
   "categories": [
     "刷题",
@@ -50,5 +54,6 @@
       "id": "参考资料"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "65f5e948"
 }

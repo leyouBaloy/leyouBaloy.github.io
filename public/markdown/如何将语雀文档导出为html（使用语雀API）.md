@@ -2,6 +2,7 @@
 title: "如何将语雀文档导出为html（使用语雀API）"
 author: 孙百乐
 date: 2023-03-09T16:12:56+08:00
+slug: export-yuque-document-to-html-api
 draft: false
 categories: 
 - 技能分享

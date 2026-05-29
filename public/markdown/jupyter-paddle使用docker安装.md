@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-08-29 21:19:42
+slug: jupyter-paddle-docker-install
 draft: false
 title: jupyter-paddle使用docker安装
 ---

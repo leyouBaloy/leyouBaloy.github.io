@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-12-01 23:11:02
+slug: selenium-crawl-gdp-data
 draft: false
 title: selenium爬GDP
 ---

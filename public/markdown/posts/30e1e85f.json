@@ -3,7 +3,11 @@
   "date": "2021-08-29T21:19:42.000Z",
   "updatedAt": "2021-08-29T21:19:42.000Z",
   "file": "jupyter-paddle使用docker安装.md",
-  "slug": "30e1e85f",
+  "slug": "jupyter-paddle-docker-install",
+  "legacySlug": "30e1e85f",
+  "aliases": [
+    "30e1e85f"
+  ],
   "excerpt": "安装 参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux docker.html 先安装docker，参考官网 拉取镜像： docker pull registry.bai",
   "categories": [
     "技能分享"
@@ -53,5 +57,6 @@
       "id": "容器内安装dlib"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "30e1e85f"
 }

@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-11-05 16:31:07
+slug: count-char-frequency-string-int-char-conversion
 draft: false
 title: 统计字符串中字符出现的个数-int与char类型的转换
 ---

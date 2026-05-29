@@ -4,7 +4,11 @@
     "date": "2021-01-01T21:15:27.000Z",
     "updatedAt": "2021-01-01T21:15:27.000Z",
     "file": "字符串与数字之间的转换.md",
-    "slug": "eea33013",
+    "slug": "string-number-conversion",
+    "legacySlug": "eea33013",
+    "aliases": [
+      "eea33013"
+    ],
     "excerpt": "方法一（利用 的stringstream， 可以是浮点数 ） 数字to字符串 字符串to数字",
     "tags": [
       "刷题"
@@ -20,7 +24,11 @@
     "date": "2020-12-28T16:52:10.000Z",
     "updatedAt": "2020-12-28T16:52:10.000Z",
     "file": "给string对象插入字符.md",
-    "slug": "3244e6d6",
+    "slug": "insert-character-string-object",
+    "legacySlug": "3244e6d6",
+    "aliases": [
+      "3244e6d6"
+    ],
     "excerpt": "运行结果 1p23456 Process returned 0 (0x0) execution time : 0.011 s Press any key to continue. 看了课本后面的内容，发现新大陆了。string其实也是容器，而且功能很强大。",
     "tags": [
       "刷题"
@@ -35,7 +43,11 @@
     "date": "2020-12-28T16:26:38.000Z",
     "updatedAt": "2020-12-28T16:26:38.000Z",
     "file": "使用sort算法对向量元素排列.md",
-    "slug": "8b4ed166",
+    "slug": "sort-algorithm-vector-elements",
+    "legacySlug": "8b4ed166",
+    "aliases": [
+      "8b4ed166"
+    ],
     "excerpt": "结果： 13 32 13 85 48 99 36 53 18 16 13 13 16 18 32 36 48 53 85 99 Process returned 0 (0x0) execution time : 0.013 s Press any key to continue. 自定义函数： 实测",
     "tags": [
       "刷题"
@@ -50,7 +62,11 @@
     "date": "2020-12-28T16:21:28.000Z",
     "updatedAt": "2020-12-28T16:21:28.000Z",
     "file": "使用reverse反向排列算法.md",
-    "slug": "8924b63c",
+    "slug": "using-reverse-algorithm",
+    "legacySlug": "8924b63c",
+    "aliases": [
+      "8924b63c"
+    ],
     "excerpt": "运行结果 94 66 52 71 33 43 91 59 78 69 69 78 59 91 43 33 71 52 66 94 Process returned 0 (0x0) execution time : 0.013 s Press any key to continue. string容器",
     "tags": [
       "刷题"
@@ -65,7 +81,11 @@
     "date": "2020-12-21T21:58:43.000Z",
     "updatedAt": "2020-12-21T21:58:43.000Z",
     "file": "《十二公民》观后感.md",
-    "slug": "64c15f9f",
+    "slug": "12-citizens-movie-review",
+    "legacySlug": "64c15f9f",
+    "aliases": [
+      "64c15f9f"
+    ],
     "excerpt": "今天和同学们看了电影《十二公民》，有感而发。 十二公民讲的主要是十二位职业，性格各不相同的成年人，受到老师的邀请在政法大学的教室里进行模拟陪审，讨论一起凶杀案的嫌疑人是有罪还是无罪的故事。影片的场景非常简单，绝大部分剧情都发生在那间教室里，但是剧情却一波三折，从最初的十一人投票认为有罪，一人认为无罪",
     "tags": [
       "书影记录"
@@ -80,7 +100,11 @@
     "date": "2020-12-17T21:10:39.000Z",
     "updatedAt": "2020-12-17T21:10:39.000Z",
     "file": "字符处理软件-substr-insert-find.md",
-    "slug": "81d1a575",
+    "slug": "string-processing-substr-insert-find",
+    "legacySlug": "81d1a575",
+    "aliases": [
+      "81d1a575"
+    ],
     "excerpt": "题目描述 你需要开发一款文字处理软件。最开始时输入一个字符串（不超过 100 个字符）作为初始文档。可以认为文档开头是第 0 个字符。需要支持以下操作： 1 str：后接插入，在文档后面插入字符串 str，并输出文档的字符串。 2 a b：截取文档部分，只保留文档中从第 a 个字符起 b 个字符，并",
     "tags": [
       "刷题"
@@ -95,7 +119,11 @@
     "date": "2020-12-13T17:23:02.000Z",
     "updatedAt": "2020-12-13T17:23:02.000Z",
     "file": "requests爬表情包.md",
-    "slug": "0b44e590",
+    "slug": "requests-crawl-memes",
+    "legacySlug": "0b44e590",
+    "aliases": [
+      "0b44e590"
+    ],
     "excerpt": "需要的库： !pip install lxml !pip install request !pip install pathlib 代码：",
     "tags": [
       "刷题"
@@ -110,7 +138,11 @@
     "date": "2020-12-12T12:19:03.000Z",
     "updatedAt": "2020-12-12T12:19:03.000Z",
     "file": "中国是如何富起来的？.md",
-    "slug": "c2d24b0b",
+    "slug": "how-china-got-rich",
+    "legacySlug": "c2d24b0b",
+    "aliases": [
+      "c2d24b0b"
+    ],
     "excerpt": "我把解放后中国的崛起分为两个阶段，一是1949年至改革开放前（1978年）发展重工业，二是1978年改革开放之后到现在的中国特色社会主义经济。 第一阶段，主要领导人是毛泽东主席，他的伟大之处就在于让中国人民团结起来，组建了强有力的政府，政府的动员能力十分了得，当时人民也非常热血积极，在政府的指挥下完",
     "tags": [
       "书影记录"
@@ -125,7 +157,11 @@
     "date": "2020-12-04T09:05:15.000Z",
     "updatedAt": "2020-12-04T09:05:15.000Z",
     "file": "判断回文数.md",
-    "slug": "fac162a6",
+    "slug": "check-palindrome-number",
+    "legacySlug": "fac162a6",
+    "aliases": [
+      "fac162a6"
+    ],
     "excerpt": "一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++里把int类型转换成string类型真的好麻烦！在百度上查了很久，方法要么不对，要么就是太复杂。果然c++是不适合处理字符串的。 所以放弃那种做法，用这种： 思",
     "tags": [
       "刷题"
@@ -140,7 +176,11 @@
     "date": "2020-12-04T08:04:09.000Z",
     "updatedAt": "2020-12-04T08:04:09.000Z",
     "file": "c++比较字典序的三种方法.md",
-    "slug": "8c9dbe5e",
+    "slug": "cpp-compare-lexicographical-order-methods",
+    "legacySlug": "8c9dbe5e",
+    "aliases": [
+      "8c9dbe5e"
+    ],
     "excerpt": "比较字符串字典序的三种方法【C++】 知乎 (zhihu.com)",
     "tags": [
       "刷题"

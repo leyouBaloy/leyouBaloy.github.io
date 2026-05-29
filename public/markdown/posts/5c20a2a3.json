@@ -3,7 +3,11 @@
   "date": "2022-03-18T08:01:16.000Z",
   "updatedAt": "2022-03-18T08:01:16.000Z",
   "file": "Leetcode455_分发饼干——排序、贪心.md",
-  "slug": "5c20a2a3",
+  "slug": "leetcode-455-assign-cookies-sort-greedy",
+  "legacySlug": "5c20a2a3",
+  "aliases": [
+    "5c20a2a3"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/assign cookies/ 题解 为了满足更多的孩子，应该把孩子的胃口从小到大排序，尽量先满足胃口小的孩子。（因为如果胃口小的孩子都满足不了，肯定也满足不了胃口大的孩子） 然后对于每个胃口小的孩子，找到一个能刚好满足他的饼干",
   "categories": [
     "刷题"
@@ -28,5 +32,6 @@
       "id": "题解"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "5c20a2a3"
 }

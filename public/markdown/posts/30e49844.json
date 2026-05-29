@@ -3,7 +3,11 @@
   "date": "2024-07-21T17:28:35.000Z",
   "updatedAt": "2024-07-21T17:28:35.000Z",
   "file": "压缩域图像深度学习分类_分割论文调研.md",
-  "slug": "30e49844",
+  "slug": "compressed-domain-image-deep-learning-classification-segmentation",
+  "legacySlug": "30e49844",
+  "aliases": [
+    "30e49844"
+  ],
   "excerpt": "为什么要做压缩域图像深度学习分类/分割？ 互联网上充斥着大量图像，它们基本都是以压缩的形式存在。在传统的训练过程中，需要将图像数据从压缩域（Compressed Domain）解压到像素域（Pixel Domain），再输入到网络中进行训练。然而，解压这一步真的有意义吗？解压只是将数据形式进行转换，",
   "categories": [
     "人工智能",
@@ -40,5 +44,6 @@
       "id": "深度学习压缩域cnn"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "30e49844"
 }

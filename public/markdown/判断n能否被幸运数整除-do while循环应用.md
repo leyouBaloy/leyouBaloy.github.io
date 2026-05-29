@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-10-27 15:18:53
+slug: divisible-by-lucky-number-do-while-loop
 draft: false
 title: 判断n能否被幸运数整除-do while循环应用
 ---

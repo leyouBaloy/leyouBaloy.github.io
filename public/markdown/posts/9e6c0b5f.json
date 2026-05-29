@@ -3,7 +3,11 @@
   "date": "2021-02-25T18:40:44.000Z",
   "updatedAt": "2021-02-25T18:40:44.000Z",
   "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
-  "slug": "9e6c0b5f",
+  "slug": "matplotlib-tutorial-2-legend-annotation-scatter-bar-contour",
+  "legacySlug": "9e6c0b5f",
+  "aliases": [
+    "9e6c0b5f"
+  ],
   "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\ id\\ from=pageDriver 仅供学习使用 Legend图例 简单省事儿的写法 Annotation标注 坐标轴刻度（tick能见度） Scatter散点图 Bar柱状图",
   "categories": [
     "笔记"
@@ -108,5 +112,6 @@
       "id": "adding-label-加入label"
     }
   ],
-  "hasMath": true
+  "hasMath": true,
+  "routeSlug": "9e6c0b5f"
 }

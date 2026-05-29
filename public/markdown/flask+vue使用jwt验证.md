@@ -2,6 +2,7 @@
 title: "Flask+vue使用jwt验证"
 author: 孙百乐
 date: 2022-05-22T13:00:39+08:00
+slug: flask-vue-jwt-authentication
 draft: false
 categories: 
 - 技能分享

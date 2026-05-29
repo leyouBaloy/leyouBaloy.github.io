@@ -3,7 +3,11 @@
   "date": "2022-06-30T03:18:09.000Z",
   "updatedAt": "2022-06-30T03:18:09.000Z",
   "file": "正则表达式提取《飞鸟集》.md",
-  "slug": "f9ab321a",
+  "slug": "regex-extract-stray-birds",
+  "legacySlug": "f9ab321a",
+  "aliases": [
+    "f9ab321a"
+  ],
   "excerpt": "需求 从网上down了一个《飞鸟集》的txt文件，其内容是这样的 总共325段（上面只截取了9段），每天要给女朋友发一段，用邮件的形式。因为是重复性操作，所以诉诸于代码实现。 所以做一个数据处理，用正则表达式把每一段提取出来，写成json文件，格式如下： 实现 regex101.com，这个网站真是",
   "categories": [
     "技能分享",
@@ -30,5 +34,6 @@
       "id": "实现"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "f9ab321a"
 }

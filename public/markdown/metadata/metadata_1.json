@@ -4,7 +4,11 @@
     "date": "2026-05-27T15:45:25.000Z",
     "updatedAt": "2026-05-27T15:45:25.000Z",
     "file": "思考：Pi Agent 对比 LangGraph.md",
-    "slug": "d98f4875",
+    "slug": "pi-agent-vs-langgraph-comparison",
+    "legacySlug": "d98f4875",
+    "aliases": [
+      "d98f4875"
+    ],
     "excerpt": "思考：Pi Agent 对比 LangGraph 最近在思考两类 Agent 的差异：一种是 Pi Agent 这种模型主导的模式，另一种是 LangGraph 这种流程主导的模式。 它们都可以调用 LLM、工具、检索和代码，但核心差别不在“用了什么能力”，而在“下一步由谁决定”。 Pi Agent",
     "tags": [
       "技术思考"
@@ -20,7 +24,11 @@
     "date": "2026-05-22T02:05:57.000Z",
     "updatedAt": "2026-05-22T02:05:57.000Z",
     "file": "硕士毕业答辩总结.md",
-    "slug": "119fbeee",
+    "slug": "masters-graduation-defense-summary",
+    "legacySlug": "119fbeee",
+    "aliases": [
+      "119fbeee"
+    ],
     "excerpt": "硕士毕业答辩总结 硕士毕业答辩结束之后，心里一下子空下来很多。回头看这一路，从开题、中期、写小论文、改大论文，到送盲审、做PPT、上台答辩，每一个节点在经历的时候都像是一座山，真正翻过去之后，又觉得很多事情其实都有章可循。 这篇文章算是给自己做一个阶段性复盘，也给后面要毕业的师弟师妹留一点经验。总结",
     "tags": [
       "随笔杂记"
@@ -35,7 +43,11 @@
     "date": "2026-03-25T12:53:00.000Z",
     "updatedAt": "2026-03-25T12:53:00.000Z",
     "file": "opencode-seven-core-tools.md",
-    "slug": "512e708e",
+    "slug": "opencode-7-basic-tools-read-write-edit-multiedit-glob-grep-bash",
+    "legacySlug": "512e708e",
+    "aliases": [
+      "512e708e"
+    ],
     "excerpt": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash 做 AI 编程助手（或类似工具）的核心，就是怎么让 AI 正确地读写文件、执行命令。本质上，LLM 是个\"脑子里有很多知识但手很短\"的存在——它能推理，但没法直接摸到你的代码。于是需要",
     "tags": [
       "技术教程"
@@ -50,7 +62,11 @@
     "date": "2026-03-25T03:44:00.000Z",
     "updatedAt": "2026-03-25T03:44:00.000Z",
     "file": "single-agent-vs-multi-agent.md",
-    "slug": "7dbff82d",
+    "slug": "single-agent-better-than-multi-agent",
+    "legacySlug": "7dbff82d",
+    "aliases": [
+      "7dbff82d"
+    ],
     "excerpt": "single agent现阶段明显强于multi agent multi agent 系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。 反观那些真正跑出来的产品——OpenClaw、",
     "tags": [
       "技术思考"
@@ -65,7 +81,11 @@
     "date": "2026-03-11T14:22:25.000Z",
     "updatedAt": "2026-03-11T14:22:25.000Z",
     "file": "自动发布博客.md",
-    "slug": "2f15163c",
+    "slug": "auto-publish-blog-ai-agent-openclaw",
+    "legacySlug": "2f15163c",
+    "aliases": [
+      "2f15163c"
+    ],
     "excerpt": "用 AI Skills 实现博客自动发布 🚀 🤖 本文由 AI 自动生成并自动发布 前言 今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。 什么是 Skills？ Sk",
     "tags": [
       "技术教程"
@@ -80,7 +100,11 @@
     "date": "2026-03-11T14:13:43.000Z",
     "updatedAt": "2026-03-11T14:13:43.000Z",
     "file": "测试仪.md",
-    "slug": "7fde58cd",
+    "slug": "tester",
+    "legacySlug": "7fde58cd",
+    "aliases": [
+      "7fde58cd"
+    ],
     "excerpt": "测试仪 这里是内容的起始点。",
     "tags": [
       "随笔杂记"
@@ -95,7 +119,11 @@
     "date": "2025-12-14T06:19:28.000Z",
     "updatedAt": "2025-12-14T06:19:28.000Z",
     "file": "langchain-faiss加载pkl文件速度提升.md",
-    "slug": "506f20a8",
+    "slug": "langchain-faiss-load-pkl-speed-up",
+    "legacySlug": "506f20a8",
+    "aliases": [
+      "506f20a8"
+    ],
     "excerpt": "langchain faiss加载pkl文件速度提升 背景 Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。 langchain community.vectorstores中的Faiss写入一个向量库中包含两个文件：index.faiss",
     "tags": [
       "技能分享"
@@ -110,7 +138,11 @@
     "date": "2025-07-13T09:25:50.000Z",
     "updatedAt": "2025-07-13T09:25:50.000Z",
     "file": "RAG图谱实体和边智能合并.md",
-    "slug": "46bbd497",
+    "slug": "rag-graph-entity-edge-intelligent-merge",
+    "legacySlug": "46bbd497",
+    "aliases": [
+      "46bbd497"
+    ],
     "excerpt": "RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple In",
     "tags": [
       "随笔杂记",
@@ -126,7 +158,11 @@
     "date": "2025-07-13T07:24:20.000Z",
     "updatedAt": "2025-07-13T07:24:20.000Z",
     "file": "手撕卷积神经网络反向传播梯度更新.md",
-    "slug": "8912df88",
+    "slug": "cnn-backpropagation-gradient-update-from-scratch",
+    "legacySlug": "8912df88",
+    "aliases": [
+      "8912df88"
+    ],
     "excerpt": "手撕卷积神经网络 一个简单的卷积神经网络，就4层，分别是InputLayer, conv layer, hidden layer(全连接层 + ReLU激活), output layer 反向传播梯度更新推导 以下是四层网络中每层的反向传播公式（以损失函数 \\( L \\) 为起点，使用偏导数符号）：",
     "tags": [
       "笔记",
@@ -142,7 +178,11 @@
     "date": "2025-06-22T08:49:55.000Z",
     "updatedAt": "2025-06-22T08:49:55.000Z",
     "file": "手撕Attention.md",
-    "slug": "d764f796",
+    "slug": "implement-attention-from-scratch",
+    "legacySlug": "d764f796",
+    "aliases": [
+      "d764f796"
+    ],
     "excerpt": "第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K",
     "tags": [
       "笔记",

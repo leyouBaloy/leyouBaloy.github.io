@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-11-24 18:58:03
+slug: mac-auto-connect-campus-network-script
 draft: false
 title: Mac上自动连接校园网的脚本
 ---

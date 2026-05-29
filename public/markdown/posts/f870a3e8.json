@@ -3,7 +3,11 @@
   "date": "2024-10-29T13:04:06.000Z",
   "updatedAt": "2024-10-29T13:04:06.000Z",
   "file": "Leetcode_142环形链表II.md",
-  "slug": "f870a3e8",
+  "slug": "leetcode-142-linked-list-cycle-ii-fast-slow-pointers",
+  "legacySlug": "f870a3e8",
+  "aliases": [
+    "f870a3e8"
+  ],
   "excerpt": "Leetcode 142环形链表II https://leetcode.cn/problems/linked list cycle ii/description/ 给定一个链表的头节点 head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 如果链表中有某个节点，可以通过连续跟",
   "categories": [
     "刷题"
@@ -28,5 +32,6 @@
       "id": "题解"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "f870a3e8"
 }

@@ -2,6 +2,7 @@
 title: "Leetcode105:从前序与中序遍历序列构造二叉树"
 author: 孙百乐
 date: 2022-03-26T17:02:51+08:00
+slug: leetcode-105-construct-binary-tree-preorder-inorder
 draft: false
 categories: 
 - 刷题

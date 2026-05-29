@@ -3,7 +3,11 @@
   "date": "2021-10-30T13:58:01.000Z",
   "updatedAt": "2021-10-30T13:58:01.000Z",
   "file": "ubuntu安装Python3的曲折之路.md",
-  "slug": "6434a878",
+  "slug": "ubuntu-install-python3-pyenv",
+  "legacySlug": "6434a878",
+  "aliases": [
+    "6434a878"
+  ],
   "excerpt": "思路 先安装Python版本管理器pyenv 再用Pyenv安装Python 安装pyenv 标准安装：找到项目地址pyenv/pyenv: Simple Python version management (github.com) 先git clone，再配环境变量。 作者还提供了一个自动安装的脚",
   "categories": [
     "技能分享"
@@ -38,5 +42,6 @@
       "id": "懒人方案"
     }
   ],
-  "hasMath": true
+  "hasMath": true,
+  "routeSlug": "6434a878"
 }

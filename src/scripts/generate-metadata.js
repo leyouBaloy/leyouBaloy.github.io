@@ -222,8 +222,13 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
     const tags = normalizeList(metadata.attributes.categories || metadata.attributes.tags);
     const img = metadata.attributes.featuredImagePreview || metadata.attributes.img || '';
 
-    // 获取 slug：优先使用 frontmatter 中的 slug，否则用文件名 hash
-    const slug = metadata.attributes.slug || hashFilename(file);
+    // 获取 slug：优先使用 frontmatter 中的 slug，否则用文件名 hash。
+    // 如果存在自定义 slug，则保留旧 hash 作为兼容入口，避免老链接 404。
+    const legacySlug = hashFilename(file);
+    const slug = metadata.attributes.slug || legacySlug;
+    const aliases = metadata.attributes.slug && metadata.attributes.slug !== legacySlug
+      ? [legacySlug]
+      : [];
 
     metadataList.push({
       title: metadata.attributes.title,
@@ -231,6 +236,8 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
       updatedAt: metadata.attributes.updatedAt || metadata.attributes.updated || metadata.attributes.date,
       file: file,
       slug: slug,
+      legacySlug,
+      aliases,
       excerpt: plainText.slice(0, 150),
       tags: tags, // 优先 categories，其次 tags，否则为空数组
       img: img, // 优先 featuredImagePreview，其次 img，否则为空字符串
@@ -245,6 +252,8 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
       updatedAt: metadata.attributes.updatedAt || metadata.attributes.updated || metadata.attributes.date,
       file,
       slug,
+      legacySlug,
+      aliases,
       excerpt: plainText.slice(0, 150),
       categories: normalizeList(metadata.attributes.categories),
       tags,
@@ -257,11 +266,13 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
       hasMath
     });
 
-    // 建立 slug -> filename 映射
-    if (slugMapping[slug]) {
-      console.warn(`Duplicate slug "${slug}" for file ${file} (already used by ${slugMapping[slug]})`);
-    }
-    slugMapping[slug] = file;
+    // 建立 route slug -> filename 映射，包含 canonical slug 和旧 hash alias。
+    [slug, ...aliases].forEach(routeSlug => {
+      if (slugMapping[routeSlug]) {
+        console.warn(`Duplicate slug "${routeSlug}" for file ${file} (already used by ${slugMapping[routeSlug]})`);
+      }
+      slugMapping[routeSlug] = file;
+    });
   }
 });
 
@@ -270,6 +281,13 @@ metadataList.sort((a, b) => new Date(b.date) - new Date(a.date));
 postPayloads.forEach(post => {
   const outputFile = path.join(normalizedPostsOutputDir, `${post.slug}.json`);
   fs.writeFileSync(outputFile, JSON.stringify(post, null, 2));
+  (post.aliases || []).forEach(alias => {
+    const aliasOutputFile = path.join(normalizedPostsOutputDir, `${alias}.json`);
+    fs.writeFileSync(aliasOutputFile, JSON.stringify({
+      ...post,
+      routeSlug: alias
+    }, null, 2));
+  });
 });
 console.log('Post payload JSON files generated successfully!');
 
@@ -305,6 +323,8 @@ const simplifiedMetadataList = metadataList.map(post => ({
   updatedAt: post.updatedAt,
   file: post.file,
   slug: post.slug,
+  legacySlug: post.legacySlug,
+  aliases: post.aliases,
   excerpt: post.excerpt,
   tags: post.tags,
   img: post.img,
@@ -339,6 +359,9 @@ const relatedBySlug = simplifiedMetadataList.reduce((acc, post) => {
   const related = getRelatedPosts(post);
   if (related.length > 0) {
     acc[post.slug] = related;
+    (post.aliases || []).forEach(alias => {
+      acc[alias] = related;
+    });
   }
   return acc;
 }, {});
@@ -365,6 +388,8 @@ const postsByTag = metadataList.reduce((acc, post) => {
       updatedAt: post.updatedAt,
       file: post.file,
       slug: post.slug,
+      legacySlug: post.legacySlug,
+      aliases: post.aliases,
       excerpt: post.excerpt,
       tags: post.tags,
       img: post.img,
@@ -381,6 +406,8 @@ const searchIndex = metadataList.map(post => ({
   updatedAt: post.updatedAt,
   file: post.file,
   slug: post.slug,
+  legacySlug: post.legacySlug,
+  aliases: post.aliases,
   excerpt: post.excerpt,
   tags: post.tags,
   img: post.img,

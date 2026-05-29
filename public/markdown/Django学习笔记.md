@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-03-15 23:02:45
+slug: django-learning-notes
 draft: false
 title: Django学习笔记
 ---

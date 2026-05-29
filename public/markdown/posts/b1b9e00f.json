@@ -3,7 +3,11 @@
   "date": "2021-08-11T20:57:33.000Z",
   "updatedAt": "2021-08-11T20:57:33.000Z",
   "file": "网吧＋炸鸡 yyds!.md",
-  "slug": "b1b9e00f",
+  "slug": "internet-cafe-fried-chicken-gaming-diary",
+  "legacySlug": "b1b9e00f",
+  "aliases": [
+    "b1b9e00f"
+  ],
   "excerpt": "这个星期我去了六次网吧，吃了三次炸鸡。 网吧 虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。 现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。 打LOL终极魔典，一开始我两被敌人玩弄于股掌之间",
   "categories": [
     "随笔杂记"
@@ -33,5 +37,6 @@
       "id": "华莱士"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "b1b9e00f"
 }

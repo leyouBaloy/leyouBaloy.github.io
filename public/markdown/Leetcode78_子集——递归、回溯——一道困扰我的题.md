@@ -2,6 +2,7 @@
 title: "Leetcode78:子集——递归、回溯——一道困扰我的题"
 author: 孙百乐
 date: 2022-03-29T16:46:07+08:00
+slug: leetcode-78-subsets-recursion-backtracking
 draft: false
 categories: 
 - 刷题

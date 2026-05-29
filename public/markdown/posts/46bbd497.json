@@ -3,7 +3,11 @@
   "date": "2025-07-13T09:25:50.000Z",
   "updatedAt": "2025-07-13T09:25:50.000Z",
   "file": "RAG图谱实体和边智能合并.md",
-  "slug": "46bbd497",
+  "slug": "rag-graph-entity-edge-intelligent-merge",
+  "legacySlug": "46bbd497",
+  "aliases": [
+    "46bbd497"
+  ],
   "excerpt": "RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple In",
   "categories": [
     "随笔杂记",
@@ -40,5 +44,6 @@
       "id": "实验"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "46bbd497"
 }

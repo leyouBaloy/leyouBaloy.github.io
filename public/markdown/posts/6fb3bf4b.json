@@ -3,7 +3,11 @@
   "date": "2022-03-26T09:02:51.000Z",
   "updatedAt": "2022-03-26T09:02:51.000Z",
   "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
-  "slug": "6fb3bf4b",
+  "slug": "leetcode-105-construct-binary-tree-preorder-inorder",
+  "legacySlug": "6fb3bf4b",
+  "aliases": [
+    "6fb3bf4b"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/construct binary tree from preorder and inorder traversal/ 上数据结构这门课时研究过这个问题，思路很快就有，难在debug 题解 递归法 众所周知，只有前序遍历或中序遍历",
   "categories": [
     "刷题"
@@ -73,5 +77,6 @@
       "id": "感想"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "6fb3bf4b"
 }

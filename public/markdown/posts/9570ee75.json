@@ -3,7 +3,11 @@
   "date": "2021-03-15T23:02:45.000Z",
   "updatedAt": "2021-03-15T23:02:45.000Z",
   "file": "Django学习笔记.md",
-  "slug": "9570ee75",
+  "slug": "django-learning-notes",
+  "legacySlug": "9570ee75",
+  "aliases": [
+    "9570ee75"
+  ],
   "excerpt": "安装虚拟环境 在Powershell中执行 安装django 创建django项目 解决报错信息 配置路由urls 在虚拟环境中，且在mysite目录下 在mysite的settings.py里的INSTALLED\\ APPS里添加'misterwu'进行关联 在mysite的urls.py里添加i",
   "categories": [
     "笔记"
@@ -78,5 +82,6 @@
       "id": "获取搜索数据"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "9570ee75"
 }

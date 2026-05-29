@@ -2,6 +2,7 @@
 title: "Flask的一些关于线程的特性"
 author: 孙百乐
 date: 2023-07-01T10:15:46+08:00
+slug: flask-thread-features
 draft: false
 categories: 
 - 笔记

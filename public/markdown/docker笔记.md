@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-07-19 20:57:21
+slug: docker-notes
 draft: false
 title: docker笔记
 ---

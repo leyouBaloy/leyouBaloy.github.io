@@ -3,7 +3,11 @@
   "date": "2021-02-25T11:02:16.000Z",
   "updatedAt": "2021-02-25T11:02:16.000Z",
   "file": "json数据存储.md",
-  "slug": "f16cfec5",
+  "slug": "json-data-storage",
+  "legacySlug": "f16cfec5",
+  "aliases": [
+    "f16cfec5"
+  ],
   "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2 在上一篇文章里我们讲了 xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。 实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件的形",
   "categories": [
     "笔记"
@@ -33,5 +37,6 @@
       "id": "json的dump和dumps的区别httpswwwcnblogscomzhoajiahaop11133430html"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "f16cfec5"
 }

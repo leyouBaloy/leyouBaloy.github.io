@@ -3,7 +3,11 @@
   "date": "2022-02-02T15:11:15.000Z",
   "updatedAt": "2022-02-02T15:11:15.000Z",
   "file": "记录寒假学做饭.md",
-  "slug": "dd3d589e",
+  "slug": "learning-to-cook-winter-vacation",
+  "legacySlug": "dd3d589e",
+  "aliases": [
+    "dd3d589e"
+  ],
   "excerpt": "记录寒假学做饭 故事起因 放假前刷到b站一个热门视频，惊呼：“做饭竟然这么简单？” 再想到假期在家要天天忍受我妈做的“没有技巧，全是感情”的饭，嘴里的口水从眼睛里流了出来😭。反正我在家也很闲，那就立个学做饭的flag吧！💪 1.家庭烤肉 其实这个不是自己做的是我姐做的，我只是想把它放在第一位撑撑",
   "categories": [
     "随笔杂记"
@@ -88,5 +92,6 @@
       "id": "10烤鸡翅"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "dd3d589e"
 }

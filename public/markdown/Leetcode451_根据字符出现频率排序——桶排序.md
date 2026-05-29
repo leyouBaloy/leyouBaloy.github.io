@@ -2,6 +2,7 @@
 title: "Leetcode451:根据字符出现频率排序——桶排序"
 author: 孙百乐
 date: 2022-04-15T18:00:29+08:00
+slug: leetcode-451-sort-characters-by-frequency-bucket-sort
 draft: false
 categories: 
 - 刷题

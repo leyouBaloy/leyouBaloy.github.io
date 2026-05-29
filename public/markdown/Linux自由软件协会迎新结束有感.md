@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 随笔杂记
 date: 2021-10-30 22:43:09
+slug: linux-free-software-association-orientation-thoughts
 draft: false
 title: Linux自由软件协会迎新结束有感
 ---

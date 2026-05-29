@@ -3,7 +3,11 @@
   "date": "2021-09-08T22:42:40.000Z",
   "updatedAt": "2021-09-08T22:42:40.000Z",
   "file": "certbot自动配置nginx给wordpress站点加https.md",
-  "slug": "8644ae3a",
+  "slug": "certbot-auto-config-nginx-wordpress-https",
+  "legacySlug": "8644ae3a",
+  "aliases": [
+    "8644ae3a"
+  ],
   "excerpt": "思路 1. 安装snap 2. 安装certbot 3. 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置nginx的时候报错如图 报错的意思就是说，在nginx的配置文件中server",
   "categories": [
     "技能分享"
@@ -38,5 +42,6 @@
       "id": "server_name不能随意"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "8644ae3a"
 }

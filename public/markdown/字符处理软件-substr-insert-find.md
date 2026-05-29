@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-12-17 21:10:39
+slug: string-processing-substr-insert-find
 draft: false
 title: 字符处理软件-substr-insert-find
 ---

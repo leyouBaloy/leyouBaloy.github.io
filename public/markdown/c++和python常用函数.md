@@ -2,6 +2,7 @@
 title: "C++和python常用函数"
 author: 孙百乐
 date: 2022-04-08T20:23:24+08:00
+slug: cpp-python-common-functions
 draft: false
 categories: 
 - 刷题

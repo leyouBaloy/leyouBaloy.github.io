@@ -3,7 +3,11 @@
   "date": "2022-03-27T11:36:29.000Z",
   "updatedAt": "2022-03-27T11:36:29.000Z",
   "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
-  "slug": "beb000fb",
+  "slug": "leetcode-103-binary-tree-zigzag-level-order-traversal",
+  "legacySlug": "beb000fb",
+  "aliases": [
+    "beb000fb"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/binary tree zigzag level order traversal/ 做过102题后这题可以轻松做出来 题解 复习一下[102. 二叉树的层序遍历]： 首先根节点入队 当队列不为空： 求队列长度s 依次从队列中取s",
   "categories": [
     "刷题"
@@ -58,5 +62,6 @@
       "id": "selfright-right"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "beb000fb"
 }

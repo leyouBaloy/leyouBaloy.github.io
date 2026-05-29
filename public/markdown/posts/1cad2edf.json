@@ -3,7 +3,11 @@
   "date": "2022-10-23T15:52:09.000Z",
   "updatedAt": "2022-10-23T15:52:09.000Z",
   "file": "Linux在指定时间区间内的随机时间点执行任务.md",
-  "slug": "1cad2edf",
+  "slug": "linux-execute-cron-job-at-random-time-in-interval",
+  "legacySlug": "1cad2edf",
+  "aliases": [
+    "1cad2edf"
+  ],
   "excerpt": "在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。 现在升级需求，比如说我想在6:00到9:00之间，随机找一个时间执行这个任务，怎么做呢？ 思路：我们不能在crontab里指定一个随机的时间（只能指定一个具体的时间），但是我们可以指定一个具体的时间运行sh",
   "categories": [
     "技能分享",
@@ -40,5 +44,6 @@
       "id": "运行程序"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "1cad2edf"
 }

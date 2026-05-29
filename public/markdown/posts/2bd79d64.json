@@ -3,7 +3,11 @@
   "date": "2022-06-16T09:03:05.000Z",
   "updatedAt": "2022-06-16T09:03:05.000Z",
   "file": "在word中使用通配符进行高级的查找和替换.md",
-  "slug": "2bd79d64",
+  "slug": "word-wildcard-advanced-find-and-replace",
+  "legacySlug": "2bd79d64",
+  "aliases": [
+    "2bd79d64"
+  ],
   "excerpt": "需求 一个212页的word文档，包含如下反复出现的单元： 现将其中的 保留，中间省略号部分删除。使用正则表达式可以轻松解决这个问题： 使用上面的正则表达式就能匹配到需要删除的内容，替换成空格就好了。 However, 用编程语言操作word是比较麻烦的，不如使用word自带的查找替换功能。word",
   "categories": [
     "技能分享"
@@ -28,5 +32,6 @@
       "id": "解决方案"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "2bd79d64"
 }

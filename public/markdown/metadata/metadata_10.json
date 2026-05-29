@@ -4,7 +4,11 @@
     "date": "2022-05-04T08:24:22.000Z",
     "updatedAt": "2022-05-04T08:24:22.000Z",
     "file": "Leetcode1823_找出游戏的获胜者——约瑟夫环.md",
-    "slug": "28771507",
+    "slug": "leetcode-1823-find-the-winner-of-the-circular-game-josephus",
+    "legacySlug": "28771507",
+    "aliases": [
+      "28771507"
+    ],
     "excerpt": "题目 https://leetcode cn.com/problems/find the winner of the circular game/ 约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。 题解 朴素的模拟法 即真正按照题目的描述，维护一",
     "tags": [
       "刷题"
@@ -20,7 +24,11 @@
     "date": "2022-05-03T09:44:40.000Z",
     "updatedAt": "2022-05-03T09:44:40.000Z",
     "file": "期中梳理以及规划.md",
-    "slug": "12008a6f",
+    "slug": "midterm-review-and-planning",
+    "legacySlug": "12008a6f",
+    "aliases": [
+      "12008a6f"
+    ],
     "excerpt": "前言 今年影响我们最大的事情就是疫情的反弹，导致学期初无法正常上课。等到课程恢复时又到了期中，体测、考试等都被推迟，本来就漫长煎熬的期中阶段变得更加漫长煎熬了。学期初的时候我写了篇blog，当时立的flag完成的不错，所以今天再立一次。 梳理上半学期 学习、工作以及生活 这学期的学习我更加注重培养自",
     "tags": [
       "随笔杂记"
@@ -35,7 +43,11 @@
     "date": "2022-04-30T09:58:36.000Z",
     "updatedAt": "2022-04-30T09:58:36.000Z",
     "file": "《无人生还》读后有感.md",
-    "slug": "7d1d0e91",
+    "slug": "and-then-there-were-none-book-review",
+    "legacySlug": "7d1d0e91",
+    "aliases": [
+      "7d1d0e91"
+    ],
     "excerpt": "作者 《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写于1939年。 {{ }} 情节 小说是以上帝视角叙述的，开头首先介绍了十位被“欧文”邀请到岛上的客人，他们的背景都截然不同，有法官、医生、警督等等，但他们有",
     "tags": [
       "书影记录"
@@ -50,7 +62,11 @@
     "date": "2022-04-29T09:22:24.000Z",
     "updatedAt": "2022-04-29T09:22:24.000Z",
     "file": "Leetcode46_全排列——回溯.md",
-    "slug": "7d0a074c",
+    "slug": "leetcode-46-permutations-backtracking",
+    "legacySlug": "7d0a074c",
+    "aliases": [
+      "7d0a074c"
+    ],
     "excerpt": "题目 https://leetcode cn.com/problems/permutations/ 2025.03.09 又重新做了一次 题解 纯dfs 首先想到的办法，cur path 记录当前路径，left path 记录剩下可选择的元素。不用回溯，每次递归传参都是数组的复制，空间复杂度很大，但",
     "tags": [
       "刷题"
@@ -65,7 +81,11 @@
     "date": "2022-04-27T07:36:14.000Z",
     "updatedAt": "2022-04-27T07:36:14.000Z",
     "file": "Leetcode17_电话号码的字母组合——回溯.md",
-    "slug": "0f11bd8d",
+    "slug": "leetcode-17-letter-combinations-of-a-phone-number-backtracking",
+    "legacySlug": "0f11bd8d",
+    "aliases": [
+      "0f11bd8d"
+    ],
     "excerpt": "题目 https://leetcode cn.com/problems/letter combinations of a phone number/ 终于能自己做出一道题了😭，之前的回溯题没白刷 题解 回溯 思路：先用哈希表储存数字对应的字母，然后用回溯法记录搜索路径。 画个图帮助理解： {{ }",
     "tags": [
       "刷题"
@@ -80,7 +100,11 @@
     "date": "2022-04-26T10:58:23.000Z",
     "updatedAt": "2022-04-26T10:58:23.000Z",
     "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
-    "slug": "48d8627d",
+    "slug": "leetcode-16-3sum-closest-sort-two-pointers",
+    "legacySlug": "48d8627d",
+    "aliases": [
+      "48d8627d"
+    ],
     "excerpt": "题目 https://leetcode cn.com/problems/3sum closest/ 题解 排序+双指针 这道题的官方题解写的太好了：https://leetcode cn.com/problems/3sum closest/solution/zui jie jin de san sh",
     "tags": [
       "刷题"
@@ -95,7 +119,11 @@
     "date": "2022-04-25T09:26:41.000Z",
     "updatedAt": "2022-04-25T09:26:41.000Z",
     "file": "Leetcode11_盛水最多的容器——双指针.md",
-    "slug": "b3c1d3e5",
+    "slug": "leetcode-11-container-with-most-water-two-pointers",
+    "legacySlug": "b3c1d3e5",
+    "aliases": [
+      "b3c1d3e5"
+    ],
     "excerpt": "题目 https://leetcode cn.com/problems/container with most water/ 每次看题解：“我又会了！” 下一题：“我是废物。” 题解 双指针 定义两个指针left和right分别在最左边和最右边，指向两个柱子，那么面积肯定等于两柱子中最小的柱子乘上宽",
     "tags": [
       "刷题"
@@ -110,7 +138,11 @@
     "date": "2022-04-21T09:35:07.000Z",
     "updatedAt": "2022-04-21T09:35:07.000Z",
     "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
-    "slug": "e55a834f",
+    "slug": "leetcode-743-network-delay-time-dijkstra",
+    "legacySlug": "e55a834f",
+    "aliases": [
+      "e55a834f"
+    ],
     "excerpt": "题目 https://leetcode cn.com/problems/network delay time/ 关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。 题解 关于dijkstra算法具体内容就不在这里细说了，网上一大堆，这里主",
     "tags": [
       "刷题"
@@ -125,7 +157,11 @@
     "date": "2022-04-20T11:01:29.000Z",
     "updatedAt": "2022-04-20T11:01:29.000Z",
     "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
-    "slug": "519b05f8",
+    "slug": "line-segments-intersect-rapid-rejection-straddle-test",
+    "legacySlug": "519b05f8",
+    "aliases": [
+      "519b05f8"
+    ],
     "excerpt": "题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法： 第",
     "tags": [
       "刷题",
@@ -141,7 +177,11 @@
     "date": "2022-04-19T08:45:09.000Z",
     "updatedAt": "2022-04-19T08:45:09.000Z",
     "file": "Leetcode821_字符的最短距离——两次遍历.md",
-    "slug": "0690f1e1",
+    "slug": "leetcode-821-shortest-distance-to-a-character",
+    "legacySlug": "0690f1e1",
+    "aliases": [
+      "0690f1e1"
+    ],
     "excerpt": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次",
     "tags": [
       "刷题"

@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 刷题
 date: 2020-11-01 20:27:22
+slug: cpp-sort-function-array-sorting
 draft: false
 title: 用sort函数给数组排序
 ---

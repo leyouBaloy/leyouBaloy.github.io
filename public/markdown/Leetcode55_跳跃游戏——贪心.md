@@ -2,6 +2,7 @@
 title: "Leetcode55:跳跃游戏——贪心"
 author: 孙百乐
 date: 2022-04-01T16:03:13+08:00
+slug: leetcode-55-jump-game-greedy
 draft: false
 categories: 
 - 刷题

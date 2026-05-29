@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-08-02 17:35:49
+slug: nginx-learning-notes
 draft: false
 title: NGINX学习笔记
 ---

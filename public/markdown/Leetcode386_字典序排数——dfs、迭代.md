@@ -2,6 +2,7 @@
 title: "Leetcode386:字典序排数——dfs、迭代"
 author: 孙百乐
 date: 2022-04-18T17:26:02+08:00
+slug: leetcode-386-lexicographical-numbers-dfs-iteration
 draft: false
 categories: 
 - 刷题

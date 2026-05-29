@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 随笔杂记
 date: 2021-11-14 10:32:04
+slug: macbook-air-m1-review
 draft: false
 title: 精准而优雅——MacBook Air
 ---

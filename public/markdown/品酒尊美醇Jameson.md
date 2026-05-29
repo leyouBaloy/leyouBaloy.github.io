@@ -2,6 +2,7 @@
 categories:
 - 随笔杂记
 date: 2024-11-04 15:18:54
+slug: jameson-irish-whiskey-tasting
 title: 品酒（尊美醇Jameson）
 img: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png
 ---

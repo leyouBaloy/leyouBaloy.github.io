@@ -3,7 +3,11 @@
   "date": "2026-03-25T03:44:00.000Z",
   "updatedAt": "2026-03-25T03:44:00.000Z",
   "file": "single-agent-vs-multi-agent.md",
-  "slug": "7dbff82d",
+  "slug": "single-agent-better-than-multi-agent",
+  "legacySlug": "7dbff82d",
+  "aliases": [
+    "7dbff82d"
+  ],
   "excerpt": "single agent现阶段明显强于multi agent multi agent 系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。 反观那些真正跑出来的产品——OpenClaw、",
   "categories": [
     "技术思考"
@@ -38,5 +42,6 @@
       "id": "结论"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "7dbff82d"
 }

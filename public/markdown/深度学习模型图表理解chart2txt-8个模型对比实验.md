@@ -2,6 +2,7 @@
 categories:
 - 随笔杂记
 date: 2025-06-10 08:48:23
+slug: deep-learning-chart-understanding-chart2txt-8-models-comparison
 title: 深度学习模型图表理解chart2txt-8个模型对比实验
 img: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1749543589300-bf8e1d05-b85e-4da7-b535-e77ac6cdc244.png
 ---

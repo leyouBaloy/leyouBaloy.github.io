@@ -2,6 +2,7 @@
 title: "解锁新技术栈vue+flask前后端分离"
 author: 孙百乐
 date: 2022-05-24T23:41:05+08:00
+slug: vue-flask-frontend-backend-separation
 draft: false
 categories: 
 - 技能分享

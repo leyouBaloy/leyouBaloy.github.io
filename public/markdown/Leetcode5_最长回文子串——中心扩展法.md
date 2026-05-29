@@ -2,6 +2,7 @@
 title: "Leetcode5:最长回文子串——中心扩展法"
 author: 孙百乐
 date: 2022-04-17T10:36:32+08:00
+slug: leetcode-5-longest-palindromic-substring
 draft: false
 categories: 
 - 刷题

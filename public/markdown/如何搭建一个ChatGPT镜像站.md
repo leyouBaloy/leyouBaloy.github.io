@@ -2,6 +2,7 @@
 title: "如何搭建一个ChatGPT镜像站"
 author: 孙百乐
 date: 2023-04-12T14:11:41+08:00
+slug: how-to-build-chatgpt-mirror-site
 draft: false
 categories: 
 - 技能分享

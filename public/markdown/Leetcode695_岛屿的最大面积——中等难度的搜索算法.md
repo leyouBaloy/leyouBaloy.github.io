@@ -2,6 +2,7 @@
 title: "Leetcode695:岛屿的最大面积——中等难度的搜索算法"
 author: 孙百乐
 date: 2022-03-24T15:47:10+08:00
+slug: leetcode-695-max-area-of-island
 draft: false
 categories: 
 - 刷题

@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-11-12 16:57:43
+slug: macos-matplotlib-chinese-font-display-fix
 draft: false
 title: macOS下matplotlib无法显示中文字体问题解决
 ---

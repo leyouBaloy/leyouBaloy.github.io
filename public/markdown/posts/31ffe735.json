@@ -3,7 +3,11 @@
   "date": "2021-08-08T08:20:29.000Z",
   "updatedAt": "2021-08-08T08:20:29.000Z",
   "file": "python发邮件.md",
-  "slug": "31ffe735",
+  "slug": "python-send-email",
+  "legacySlug": "31ffe735",
+  "aliases": [
+    "31ffe735"
+  ],
   "excerpt": "QQ邮箱设置 python代码 时间判断",
   "categories": [
     "技能分享"
@@ -48,5 +52,6 @@
       "id": "判断当前时间是否在范围时间内"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "31ffe735"
 }

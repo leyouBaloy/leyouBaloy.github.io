@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-02-25 18:40:44
+slug: matplotlib-tutorial-2-legend-annotation-scatter-bar-contour
 draft: false
 title: matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图
 ---

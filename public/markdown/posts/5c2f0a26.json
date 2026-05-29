@@ -3,7 +3,11 @@
   "date": "2021-02-23T10:48:54.000Z",
   "updatedAt": "2021-02-23T10:48:54.000Z",
   "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
-  "slug": "5c2f0a26",
+  "slug": "matplotlib-tutorial-1-basic-syntax-figure-axis",
+  "legacySlug": "5c2f0a26",
+  "aliases": [
+    "5c2f0a26"
+  ],
   "excerpt": "学习视频地址：https://www.bilibili.com/video/BV1Jx411L7LU? github地址：https://github.com/MorvanZhou/tutorials/tree/master/matplotlibTUT 基本语法 一个figure就是一张图片 这里有",
   "categories": [
     "笔记"
@@ -108,5 +112,6 @@
       "id": "accepts-left-right-both-default-none"
     }
   ],
-  "hasMath": true
+  "hasMath": true,
+  "routeSlug": "5c2f0a26"
 }

@@ -19,6 +19,8 @@ interface PostSeo {
   date: string;
   updatedAt?: string;
   slug: string;
+  aliases?: string[];
+  routeSlug?: string;
   excerpt?: string;
   tags?: string[];
   img?: string;
@@ -100,8 +102,13 @@ const loadPostsForSeo = (): Record<string, PostSeo> => {
       const post = JSON.parse(
         fs.readFileSync(path.join(postsDir, file), "utf8")
       ) as PostSeo;
+      const routeSlug = path.basename(file, ".json");
       if (post.slug && post.title) {
         postsBySlug[post.slug] = post;
+        postsBySlug[routeSlug] = post;
+        (post.aliases || []).forEach((alias) => {
+          postsBySlug[alias] = post;
+        });
       }
       return postsBySlug;
     }, {});
@@ -118,13 +125,14 @@ const getSeoMeta = (route: string): SeoMeta => {
     const post = posts[slug];
 
     if (post) {
+      const canonicalRoute = `/post/${post.slug}`;
       return {
         title: `${post.title} | ${siteName}`,
         description: stripControlWhitespace(post.excerpt || siteDescription).slice(
           0,
           160
         ),
-        url: absoluteUrl(normalizedRoute),
+        url: absoluteUrl(canonicalRoute),
         type: "article",
         image: absoluteAssetUrl(post.img),
         publishedTime: post.date,

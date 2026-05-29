@@ -3,7 +3,11 @@
   "date": "2022-03-13T08:48:06.000Z",
   "updatedAt": "2022-03-13T08:48:06.000Z",
   "file": "三数之和——双指针——好难.md",
-  "slug": "abd41b7c",
+  "slug": "leetcode-15-3sum-two-pointers",
+  "legacySlug": "abd41b7c",
+  "aliases": [
+    "abd41b7c"
+  ],
   "excerpt": "题目 [15. 三数之和] 难度中等4464收藏分享切换为英文接收动态反馈 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ， 使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。 注意： 答案中不可以包含重复的三元组。 示例 1： ",
   "categories": [
     "刷题"
@@ -33,5 +37,6 @@
       "id": "题解"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "abd41b7c"
 }

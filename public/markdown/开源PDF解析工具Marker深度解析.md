@@ -2,6 +2,7 @@
 categories:
 - 技能分享
 date: 2025-05-05 14:36:59
+slug: open-source-pdf-parser-marker-deep-dive
 title: 开源PDF解析工具Marker深度解析
 img: 
 ---

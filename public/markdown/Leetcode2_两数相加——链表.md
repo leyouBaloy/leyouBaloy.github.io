@@ -2,6 +2,7 @@
 title: "Leetcode2:两数相加——链表"
 author: 孙百乐
 date: 2022-04-05T16:50:12+08:00
+slug: leetcode-2-add-two-numbers-linked-list
 draft: false
 categories: 
 - 刷题

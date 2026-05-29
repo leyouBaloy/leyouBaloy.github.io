@@ -3,7 +3,11 @@
   "date": "2024-11-15T08:36:41.000Z",
   "updatedAt": "2024-11-15T08:36:41.000Z",
   "file": "高光谱遥感深度学习调研.md",
-  "slug": "40c266ad",
+  "slug": "hyperspectral-remote-sensing-deep-learning-survey",
+  "legacySlug": "40c266ad",
+  "aliases": [
+    "40c266ad"
+  ],
   "excerpt": "高光谱遥感深度学习调研 综述 高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。 Wang C, Liu B, Liu L, et al. A review of deep learning used in the hyperspectral image analysi",
   "categories": [
     "笔记"
@@ -68,5 +72,6 @@
       "id": "总结"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "40c266ad"
 }

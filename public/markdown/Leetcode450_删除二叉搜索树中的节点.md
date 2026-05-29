@@ -2,6 +2,7 @@
 title: "Leetcode450:删除二叉搜索树中的节点"
 author: 孙百乐
 date: 2022-04-02T10:20:05+08:00
+slug: leetcode-450-delete-node-in-a-bst
 draft: false
 categories: 
 - 刷题

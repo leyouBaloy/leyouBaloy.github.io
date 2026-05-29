@@ -71,7 +71,45 @@ yarn blog new "Vue 学习笔记" --slug vue-notes --category 前端 --tag Vue --
 yarn blog new "草稿标题" --draft
 ```
 
-生成文件位置：`public/markdown/<slug 或标题>.md`。
+新建文章会写入 frontmatter `slug` 字段。配置 AI slug 后，未显式传入 `--slug` 时会优先生成英文 SEO slug；没有配置密钥或生成失败时会退回本地规则。
+
+生成文件位置：`public/markdown/<slug>.md`。
+
+#### AI slug 配置
+
+默认使用 Gemini slug 服务；脚本会优先尝试 OpenAI Chat Completions 兼容接口，并在可用时回退到 Gemini `generateContent` 接口：
+
+```sh
+export BLOG_AI_SLUG_API_BASE_URL="https://gcli.ggchan.dev/"
+export BLOG_AI_SLUG_MODEL="Gemini 3.1 Pro Preview"
+export BLOG_AI_SLUG_API_KEY="你的密钥"
+```
+
+也可以把这些变量放在本地 `.env.local` 中，博客 CLI 会自动读取；`.env.local` 不会提交到仓库。
+
+单独测试 slug 生成：
+
+```sh
+yarn blog slug "Vue3 实现小红书瀑布流布局"
+```
+
+给所有还没有 `slug` 的文章批量补齐英文 slug：
+
+```sh
+yarn blog slug:missing
+```
+
+可以先预览，不写入文件：
+
+```sh
+yarn blog slug:missing --dry-run --limit 20
+```
+
+如果某篇文章不想使用 AI，可显式关闭：
+
+```sh
+yarn blog new "我的新文章" --no-ai-slug
+```
 
 兼容旧命令：
 
@@ -154,6 +192,8 @@ img:
 - `slug`：可选，自定义文章 URL；未设置时会根据文件名生成稳定 hash。
 - `img` 或 `featuredImagePreview`：可选，首页卡片封面图。
 - `draft: true`：可选，生成元数据时跳过该文章。
+
+当文章从 hash URL 迁移到自定义 `slug` 后，构建脚本会继续生成旧 hash 路由作为兼容入口，避免老链接 404；Sitemap 和 canonical 会指向新的自定义 slug。
 
 ## 构建与部署
 

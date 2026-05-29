@@ -3,7 +3,11 @@
   "date": "2022-03-20T09:41:58.000Z",
   "updatedAt": "2022-03-20T09:41:58.000Z",
   "file": "Leetcode435_重叠区间——动态规划、贪心.md",
-  "slug": "7f0b86db",
+  "slug": "leetcode-435-non-overlapping-intervals-dp-greedy",
+  "legacySlug": "7f0b86db",
+  "aliases": [
+    "7f0b86db"
+  ],
   "excerpt": "题目 https://leetcode cn.com/problems/non overlapping intervals/ 这题我竟然一年前做过，第二遍再做的时候一点印象都没有。 看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算法水平还不如一年前？？？",
   "categories": [
     "刷题"
@@ -28,5 +32,6 @@
       "id": "题解"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "7f0b86db"
 }

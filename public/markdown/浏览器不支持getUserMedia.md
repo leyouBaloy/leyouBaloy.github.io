@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 技能分享
 date: 2021-09-23 15:58:12
+slug: fix-browser-getusermedia-not-supported
 draft: false
 title: 浏览器不支持getUserMedia
 ---

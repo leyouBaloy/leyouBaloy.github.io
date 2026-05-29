@@ -2,6 +2,7 @@
 categories:
 - 技术教程
 date: 2026-03-25 12:53:00
+slug: opencode-7-basic-tools-read-write-edit-multiedit-glob-grep-bash
 title: opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash
 img: 
 tags: [AI, Coding工具, OpenCode, LLM]

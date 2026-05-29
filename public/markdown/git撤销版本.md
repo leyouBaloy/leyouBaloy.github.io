@@ -2,6 +2,7 @@
 title: "Git撤销版本"
 author: 孙百乐
 date: 2022-04-16T20:23:57+08:00
+slug: git-undo-commit
 draft: false
 categories: 
 - 技能分享

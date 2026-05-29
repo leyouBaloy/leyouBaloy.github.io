@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-03-09 11:04:10
+slug: pandas-learning-notes
 draft: false
 title: Pandas学习笔记
 ---

@@ -3,7 +3,11 @@
   "date": "2021-02-09T23:45:43.000Z",
   "updatedAt": "2021-02-09T23:45:43.000Z",
   "file": "搞了一晚上http升级为https.md",
-  "slug": "86e548f8",
+  "slug": "upgrade-http-to-https-wordpress-apache",
+  "legacySlug": "86e548f8",
+  "aliases": [
+    "86e548f8"
+  ],
   "excerpt": "感慨 网上的教程好多好乱，我照着其中的一个做，差点把我网站给干没了。以后搞东西之前，一定要备份！！！！ 思路 大致就是，先在腾讯云申请了一个免费的证书，然后下载是一个压缩文件，有用的是里面的Apache的配置文件（因为我的wordpress是跑在Apache上的） 然后在宝塔面板里安装，手动安装太麻",
   "categories": [
     "笔记"
@@ -38,5 +42,6 @@
       "id": "感想"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "86e548f8"
 }

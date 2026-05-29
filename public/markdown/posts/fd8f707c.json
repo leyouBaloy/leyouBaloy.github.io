@@ -3,7 +3,11 @@
   "date": "2021-07-28T14:58:29.000Z",
   "updatedAt": "2021-07-28T14:58:29.000Z",
   "file": "暑期实习项目-onlinejudge在线测试平台.md",
-  "slug": "fd8f707c",
+  "slug": "summer-internship-online-judge-platform",
+  "legacySlug": "fd8f707c",
+  "aliases": [
+    "fd8f707c"
+  ],
   "excerpt": "展示 概括来说，就是用django开发的web项目。相当于一个学生管理系统＋评测系统，开发完成后部署。这个项目，在一起参与暑期实习的很多同学看来，应该是很牛很牛的项目了。牛在哪里呢？牛在我们真正把东西做出来，部署好，让每个人打开浏览器就能访问，让大家都能体验到我们做的这个项目是实实在在的，不是只会做",
   "categories": [
     "笔记"
@@ -33,5 +37,6 @@
       "id": "未来"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "fd8f707c"
 }

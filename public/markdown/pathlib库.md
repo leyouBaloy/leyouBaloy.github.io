@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 笔记
 date: 2021-03-16 10:03:57
+slug: pathlib-library
 draft: false
 title: pathlib库
 ---

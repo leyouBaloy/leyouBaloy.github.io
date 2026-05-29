@@ -2,6 +2,7 @@
 title: "Leetcode560:和为K的子数组——前缀和、哈希表"
 author: 孙百乐
 date: 2022-04-09T12:08:07+08:00
+slug: leetcode-560-subarray-sum-equals-k
 draft: false
 categories: 
 - 刷题

@@ -3,7 +3,11 @@
   "date": "2021-08-29T21:21:29.000Z",
   "updatedAt": "2021-08-29T21:21:29.000Z",
   "file": "对图像操作.md",
-  "slug": "3bdd31d7",
+  "slug": "image-operations-processing",
+  "legacySlug": "3bdd31d7",
+  "aliases": [
+    "3bdd31d7"
+  ],
   "excerpt": "图像 位图（raster graphics)和矢量图（vector graphics) 位图是有像素的，色彩丰富。矢量图放大不会失真。 通道 单通道 灰度图，每个像素点只有一个值表示，如果图像的深度是4 (256 = 2 2 2\\ 2)，那么他的像素值0(黑) 255(白)； 三通道 也就是通过见到",
   "categories": [
     "技能分享"
@@ -93,5 +97,6 @@
       "id": "二维"
     }
   ],
-  "hasMath": true
+  "hasMath": true,
+  "routeSlug": "3bdd31d7"
 }

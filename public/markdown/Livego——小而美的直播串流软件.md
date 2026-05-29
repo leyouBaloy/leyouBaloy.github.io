@@ -2,6 +2,7 @@
 title: "LiveGo——小而美的直播串流软件"
 author: 孙百乐
 date: 2023-01-01T16:11:53+08:00
+slug: livego-lightweight-live-streaming-software
 draft: false
 categories: 
 - 技能分享

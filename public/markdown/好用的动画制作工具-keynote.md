@@ -2,6 +2,7 @@
 title: "好用的动画制作工具-Keynote"
 author: 孙百乐
 date: 2023-07-01T10:41:41+08:00
+slug: keynote-animation-maker-tool
 draft: false
 categories: 
 - 技能分享

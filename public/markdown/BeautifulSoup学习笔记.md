@@ -5,6 +5,7 @@ tags: [Python,学习,笔记,编程]
 categories:
 - 笔记
 date: 2021-02-14 19:08:15
+slug: beautifulsoup-python-study-notes
 draft: false
 title: BeautifulSoup学习笔记
 ---

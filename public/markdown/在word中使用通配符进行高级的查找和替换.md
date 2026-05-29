@@ -2,6 +2,7 @@
 title: "在word中使用通配符进行高级的查找和替换"
 author: 孙百乐
 date: 2022-06-16T17:03:05+08:00
+slug: word-wildcard-advanced-find-and-replace
 draft: false
 categories: 
 - 技能分享

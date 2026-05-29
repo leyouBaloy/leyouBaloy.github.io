@@ -4,7 +4,11 @@
     "date": "2020-10-10T09:22:16.000Z",
     "updatedAt": "2020-10-10T09:22:16.000Z",
     "file": "每日一题--有进位的加法运算.md",
-    "slug": "b103ca10",
+    "slug": "daily-large-number-addition-with-carry",
+    "legacySlug": "b103ca10",
+    "aliases": [
+      "b103ca10"
+    ],
     "excerpt": "【题目描述】 营业额我叫王大锤，昨天还是一名C++老师。万万没想到，我又失业了。昨天上课前我写的程序让整个学校的电脑中了病毒。为了生计，无可奈何，在学校旁边的唐师傅理发店找了一份兼职。 唐师傅理发店已经开张十年有余，生意红火。唐币是一种专门用来唐师傅营业额的，用int以至于long long int",
     "tags": [
       "刷题"
@@ -20,7 +24,11 @@
     "date": "2020-10-08T21:09:10.000Z",
     "updatedAt": "2020-10-08T21:09:10.000Z",
     "file": "每日一题(2)--很多个数排序问题.md",
-    "slug": "680534d6",
+    "slug": "number-sorting-problem",
+    "legacySlug": "680534d6",
+    "aliases": [
+      "680534d6"
+    ],
     "excerpt": "【题目描述】 给出n个同学的身高，请根据他们的身高升序排列并输出排序结果。 【输入格式】 第一行包含1个正整数 n（2<n≤100），表示有 n 个同学的身高。 第二行包含 n 个正整数，之间用一个空格隔开，表示 n 个同学的身高。每个同学的身高都在 150 200 厘米之间。 【输出格式】 一行 ",
     "tags": [
       "刷题"
@@ -35,7 +43,11 @@
     "date": "2020-10-08T20:04:22.000Z",
     "updatedAt": "2020-10-08T20:04:22.000Z",
     "file": "每日一题--二分法找数组中的数.md",
-    "slug": "22820229",
+    "slug": "daily-binary-search-find-number-in-array",
+    "legacySlug": "22820229",
+    "aliases": [
+      "22820229"
+    ],
     "excerpt": "【题目描述】 公司举办年会，为了活跃气氛，设置了摇奖环节。参加聚会的每位员工都有一张带有号码的抽奖券。现在，主持人从小到大依次公布 n 个不同的获奖号码，小唐看着自己抽奖券上的号码 win，无比紧张。 【输入格式】 第一行一个正整数n（2<n≤100），表示有n个获奖号码。 第二行包含n个正整数，之",
     "tags": [
       "笔记"
@@ -50,7 +62,11 @@
     "date": "2020-10-07T19:04:32.000Z",
     "updatedAt": "2020-10-07T19:04:32.000Z",
     "file": "每日一题--求超大数的各位数字和.md",
-    "slug": "7bc52da3",
+    "slug": "daily-sum-of-digits-super-large-number",
+    "legacySlug": "7bc52da3",
+    "aliases": [
+      "7bc52da3"
+    ],
     "excerpt": "【题目描述】 输入一个正整数 n，求各位上的数字和。 【输入格式】 一行，包含一个正整数 n，n 最多 200 位。 【输出格式】 一行，一个整数，表示正整数 n 的各位数字之和。 利用字符数组储存这个超大数 如果a\\[\\]是一个字符数组的话，a\\[i\\] '0'就是a\\[i\\]这个字符和‘0’这个",
     "tags": [
       "笔记"
@@ -65,7 +81,11 @@
     "date": "2020-10-06T21:24:10.000Z",
     "updatedAt": "2020-10-06T21:24:10.000Z",
     "file": "每日一题--给小朋友的自动出题自动批改.md",
-    "slug": "955dbd01",
+    "slug": "auto-generate-grade-math-questions-for-kids",
+    "legacySlug": "955dbd01",
+    "aliases": [
+      "955dbd01"
+    ],
     "excerpt": "利用随机数实现非数字变量的随机 0表示+ 1表示 2表示\\ 3表示/ 用switch语句实现 这段代码比较巧妙，稍微琢磨一下",
     "tags": [
       "刷题"
@@ -80,7 +100,11 @@
     "date": "2020-10-06T14:25:18.000Z",
     "updatedAt": "2020-10-06T14:25:18.000Z",
     "file": "每日一题--二维数组.md",
-    "slug": "c6411564",
+    "slug": "daily-2d-array-concentric-matrix",
+    "legacySlug": "c6411564",
+    "aliases": [
+      "c6411564"
+    ],
     "excerpt": "【题目描述】 输入一个正整数 n，输出 n×n 的回型方阵。例如，n=5 时，输出： 1 1 1 1 1 1 2 2 2 1 1 2 3 2 1 1 2 2 2 1 1 1 1 1 1 【输入格式】 一行，包含一个正整数 n，2≤n≤9。 【输出格式】 共 n 行，每行包含 n 个正整数，之间用一个",
     "tags": [
       "刷题"
@@ -95,7 +119,11 @@
     "date": "2020-10-04T15:05:52.000Z",
     "updatedAt": "2020-10-04T15:05:52.000Z",
     "file": "Python第二周学习报告（草稿）.md",
-    "slug": "bb55d973",
+    "slug": "python-week-2-study-report",
+    "legacySlug": "bb55d973",
+    "aliases": [
+      "bb55d973"
+    ],
     "excerpt": "总体感受 这是我跟着b站昕哥的视频学习\"Python数据分析“的第二周，总体上感觉Python确实是比c++要简单不少，学c++就像是开手动挡汽车，虽然难学，但是学会之后可以享受操纵的乐趣。而学Python就像是开手动挡汽车，简单上手，也功能强大。 和以前在网上自学其它东西不一样的是，这次学习Pyt",
     "tags": [
       "笔记"
@@ -110,7 +138,11 @@
     "date": "2020-09-30T23:09:21.000Z",
     "updatedAt": "2020-09-30T23:09:21.000Z",
     "file": "第一章练习题.md",
-    "slug": "043f53a9",
+    "slug": "chapter-1-exercises-pip-jupyter",
+    "legacySlug": "043f53a9",
+    "aliases": [
+      "043f53a9"
+    ],
     "excerpt": "修改pip源： [](https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html)https://jingyan.baidu.com/article/b24f6c8296b507c6bee5da4f.html 修改jupyter默认",
     "tags": [
       "刷题"

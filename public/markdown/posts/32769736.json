@@ -3,7 +3,11 @@
   "date": "2023-09-19T08:59:13.000Z",
   "updatedAt": "2023-09-19T08:59:13.000Z",
   "file": "艺术品般的游戏—荒野大镖客2救赎.md",
-  "slug": "32769736",
+  "slug": "red-dead-redemption-2-game-review",
+  "legacySlug": "32769736",
+  "aliases": [
+    "32769736"
+  ],
   "excerpt": "“地表最强游戏公司” 大名鼎鼎的侠盗猎车手系列(GTA, Grand Theft Auto)在游戏界应该无人不知，无人不晓，而由原班人马（R星，Rockstar Games）打造的荒野大镖客系列（RD, Red Dead）的知名度稍差一些。这可能是因为荒野大镖客系列目前仅有3 部作品（GTA系列有 ",
   "categories": [
     "随笔杂记"
@@ -58,5 +62,6 @@
       "id": "游玩过程"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "32769736"
 }

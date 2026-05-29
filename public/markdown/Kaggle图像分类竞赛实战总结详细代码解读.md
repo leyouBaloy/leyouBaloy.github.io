@@ -2,6 +2,7 @@
 title: "Kaggle图像分类竞赛实战总结详细代码解读"
 author: 孙百乐
 date: 2022-12-29T12:37:38+08:00
+slug: kaggle-image-classification-competition-code
 draft: false
 categories: 
 - 笔记

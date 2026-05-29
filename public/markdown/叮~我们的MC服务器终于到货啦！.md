@@ -3,6 +3,7 @@ author: 孙百乐
 categories:
 - 随笔杂记
 date: 2021-01-30 11:24:49
+slug: new-minecraft-server-setup
 draft: false
 title: 叮~我们的MC服务器终于到货啦！
 ---

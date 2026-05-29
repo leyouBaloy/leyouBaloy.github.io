@@ -2,6 +2,7 @@
 title: "HUSTOJ前端源代码解析（PHP）"
 author: 孙百乐
 date: 2023-03-09T17:12:10+08:00
+slug: hustoj-frontend-source-code-analysis-php
 draft: false
 categories: 
 - 技能分享

@@ -3,7 +3,11 @@
   "date": "2020-10-28T22:41:29.000Z",
   "updatedAt": "2020-10-28T22:41:29.000Z",
   "file": "工欲善其事，必先利其器.md",
-  "slug": "704d93a5",
+  "slug": "sharpen-your-tools-study-resources",
+  "legacySlug": "704d93a5",
+  "aliases": [
+    "704d93a5"
+  ],
   "excerpt": "工欲善其事，必先利其器。 看学校官网，关注讲座www.upc.edu.cn 看学院官网，看学术报告，黄岛讲堂，写记录册 computer.upc.edu.cn 关注微信公众号 “石光计E” EI，从图书馆进http://library.upc.edu.cn/html/ziyuan/wwsjk/201",
   "categories": [
     "笔记"
@@ -23,5 +27,6 @@
       "id": "之前的文件"
     }
   ],
-  "hasMath": false
+  "hasMath": false,
+  "routeSlug": "704d93a5"
 }

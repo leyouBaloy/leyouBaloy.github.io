@@ -2,6 +2,7 @@
 title: "Leetcode1823:找出游戏的获胜者——约瑟夫环"
 author: 孙百乐
 date: 2022-05-04T16:24:22+08:00
+slug: leetcode-1823-find-the-winner-of-the-circular-game-josephus
 draft: false
 categories: 
 - 刷题
