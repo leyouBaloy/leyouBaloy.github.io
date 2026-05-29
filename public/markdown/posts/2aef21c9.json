@@ -4,6 +4,7 @@
   "updatedAt": "2021-09-23T15:58:12.000Z",
   "file": "浏览器不支持getUserMedia.md",
   "slug": "2aef21c9",
+  "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,http://localhost， 解决方法 chrome 地址栏输入：",
   "categories": [
     "技能分享"
   ],

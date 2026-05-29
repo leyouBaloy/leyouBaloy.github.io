@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-09T04:08:07.000Z",
   "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
   "slug": "16f00348",
+  "excerpt": "题目 https://leetcode cn.com/problems/subarray sum equals k/ 不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。 题解 枚举法 枚举法会超时，但可以为我们提供思路。 考虑以j结尾和为 k 的连续子数组个数，我们需要统计符合条件的下标",
   "categories": [
     "刷题"
   ],

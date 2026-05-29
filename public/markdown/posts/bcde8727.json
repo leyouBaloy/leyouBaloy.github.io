@@ -4,6 +4,7 @@
   "updatedAt": "2021-08-29T21:20:21.000Z",
   "file": "Conda 配置虚拟环境.md",
   "slug": "bcde8727",
+  "excerpt": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change ke",
   "categories": [
     "技能分享"
   ],

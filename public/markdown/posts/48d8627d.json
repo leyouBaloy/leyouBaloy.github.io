@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-26T10:58:23.000Z",
   "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
   "slug": "48d8627d",
+  "excerpt": "题目 https://leetcode cn.com/problems/3sum closest/ 题解 排序+双指针 这道题的官方题解写的太好了：https://leetcode cn.com/problems/3sum closest/solution/zui jie jin de san sh",
   "categories": [
     "刷题"
   ],

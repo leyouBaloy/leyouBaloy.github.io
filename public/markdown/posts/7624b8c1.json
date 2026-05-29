@@ -4,6 +4,7 @@
   "updatedAt": "2025-01-24T01:37:25.000Z",
   "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
   "slug": "7624b8c1",
+  "excerpt": "思路 1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）。把需要布局的组件（这里叫做waterfall item）放在瀑布流容器里面渲染出来。使用绝对定位（position: absolute），把它移到屏幕外面，不要占用页面高度，并且设置不可见（visibility:hidden）。 2.渲染",
   "categories": [
     "技能分享"
   ],

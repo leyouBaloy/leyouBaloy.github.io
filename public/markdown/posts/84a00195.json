@@ -4,6 +4,7 @@
   "updatedAt": "2021-03-09T11:04:10.000Z",
   "file": "Pandas学习笔记.md",
   "slug": "84a00195",
+  "excerpt": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函",
   "categories": [
     "笔记"
   ],

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leyoubaloy.github.io/sitemap.xml

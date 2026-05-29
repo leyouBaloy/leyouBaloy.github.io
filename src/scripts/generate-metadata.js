@@ -79,6 +79,32 @@ const escapeXml = (value = '') => {
     .replace(/'/g, '&apos;');
 };
 
+const decodeHtmlEntities = (value = '') => {
+  return String(value)
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
+};
+
+const normalizeHeadingText = (value = '') => {
+  return decodeHtmlEntities(value.replace(/<[^>]+>/g, ' '))
+    .replace(/\s+/g, ' ')
+    .trim();
+};
+
+const stripDuplicateTitleHeading = (html, title) => {
+  const match = html.match(/^\s*<h1\b[^>]*>([\s\S]*?)<\/h1>\s*/i);
+  if (!match) return html;
+
+  const headingText = normalizeHeadingText(match[1]);
+  const titleText = normalizeHeadingText(title);
+  return headingText === titleText ? html.slice(match[0].length) : html;
+};
+
 const countWords = (content) => {
   const chineseChars = content.match(/[\u4e00-\u9fa5]/g) || [];
   const latinWords = content
@@ -187,7 +213,10 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
     const readingTime = Math.max(1, Math.ceil(wordCount / 400));
     const headings = extractHeadings(bodyContent);
     const hasMath = hasMathContent(bodyContent);
-    const html = createMarkdownRenderer(bodyContent).render(bodyContent);
+    const html = stripDuplicateTitleHeading(
+      createMarkdownRenderer(bodyContent).render(bodyContent),
+      metadata.attributes.title
+    );
 
     // 获取 tags 和 img 字段，优先级依次为 categories/tags 和 featuredImagePreview/img
     const tags = normalizeList(metadata.attributes.categories || metadata.attributes.tags);
@@ -216,6 +245,7 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
       updatedAt: metadata.attributes.updatedAt || metadata.attributes.updated || metadata.attributes.date,
       file,
       slug,
+      excerpt: plainText.slice(0, 150),
       categories: normalizeList(metadata.attributes.categories),
       tags,
       img,

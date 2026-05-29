@@ -4,6 +4,7 @@
   "updatedAt": "2021-08-08T11:08:25.000Z",
   "file": "django笔记进阶.md",
   "slug": "5b0b5af3",
+  "excerpt": "models 写入新数据，返回此条新数据 ` new data = Queue.objects.create( queue dic) 访问新写入数据的id字段 new data.id 查询数据 查询一条数据 student = Student.objects.get(name='django') 查",
   "categories": [
     "笔记"
   ],

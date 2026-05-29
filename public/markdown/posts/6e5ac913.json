@@ -4,6 +4,7 @@
   "updatedAt": "2022-03-22T09:50:53.000Z",
   "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
   "slug": "6e5ac913",
+  "excerpt": "题目 https://leetcode cn.com/problems/rotting oranges/ 这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。 题解 解题思路 这道题很明显要使用广度优先搜索，搜索的目标是每个腐烂橘子周围的新鲜橘子。相较于73",
   "categories": [
     "刷题"
   ],

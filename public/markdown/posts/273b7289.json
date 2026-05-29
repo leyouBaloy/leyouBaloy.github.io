@@ -4,6 +4,7 @@
   "updatedAt": "2022-03-23T12:35:46.000Z",
   "file": "Leetcode977_有序数组的平方——双指针.md",
   "slug": "273b7289",
+  "excerpt": "题目 https://leetcode cn.com/problems/squares of a sorted array/ 题解 先平方再排序 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后面是正数，nums数组平方后的最大值一是第一个元素或最后一个元素。所",
   "categories": [
     "刷题"
   ],

@@ -125,6 +125,32 @@ const hasMathContent = (content) => {
     || /\\\[[\s\S]+?\\\]/.test(content);
 };
 
+const decodeHtmlEntities = (value = '') => {
+  return String(value)
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'");
+};
+
+const normalizeHeadingText = (value = '') => {
+  return decodeHtmlEntities(value.replace(/<[^>]+>/g, ' '))
+    .replace(/\s+/g, ' ')
+    .trim();
+};
+
+const stripDuplicateTitleHeading = (html, title) => {
+  const match = html.match(/^\s*<h1\b[^>]*>([\s\S]*?)<\/h1>\s*/i);
+  if (!match) return html;
+
+  const headingText = normalizeHeadingText(match[1]);
+  const titleText = normalizeHeadingText(title);
+  return headingText === titleText ? html.slice(match[0].length) : html;
+};
+
 const createMarkdownRenderer = async (content) => {
   const { default: MarkdownIt } = await import('markdown-it');
   const md = new MarkdownIt({
@@ -176,15 +202,16 @@ const createMarkdownRenderer = async (content) => {
 };
 
 const renderPostHtml = async (post, body) => {
+  const title = post.title || '';
   if (post.html) {
     if (post.hasMath) {
       await import('katex/dist/katex.min.css');
     }
-    return post.html;
+    return stripDuplicateTitleHeading(post.html, title);
   }
 
   const md = await createMarkdownRenderer(body);
-  return md.render(body);
+  return stripDuplicateTitleHeading(md.render(body), title);
 };
 
 const getArticleUrl = () => {

@@ -4,6 +4,7 @@
   "updatedAt": "2021-08-22T15:21:03.000Z",
   "file": "python时间遇到的坑.md",
   "slug": "cf4fd6e1",
+  "excerpt": "python中与时间相关的标准库有三个： time datetime calendar 吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会 时区坑 查看时间的方式有很多 法一： 在windows上输出2021 08 22 15:04:09.958720，没问题 法二： 本地时间为 : time.s",
   "categories": [
     "笔记"
   ],

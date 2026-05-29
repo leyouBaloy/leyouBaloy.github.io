@@ -4,6 +4,7 @@
   "updatedAt": "2020-12-28T16:52:10.000Z",
   "file": "给string对象插入字符.md",
   "slug": "3244e6d6",
+  "excerpt": "运行结果 1p23456 Process returned 0 (0x0) execution time : 0.011 s Press any key to continue. 看了课本后面的内容，发现新大陆了。string其实也是容器，而且功能很强大。",
   "categories": [
     "刷题"
   ],

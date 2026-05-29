@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-29T09:22:24.000Z",
   "file": "Leetcode46_全排列——回溯.md",
   "slug": "7d0a074c",
+  "excerpt": "题目 https://leetcode cn.com/problems/permutations/ 2025.03.09 又重新做了一次 题解 纯dfs 首先想到的办法，cur path 记录当前路径，left path 记录剩下可选择的元素。不用回溯，每次递归传参都是数组的复制，空间复杂度很大，但",
   "categories": [
     "刷题"
   ],

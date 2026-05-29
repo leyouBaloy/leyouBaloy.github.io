@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-25T09:26:41.000Z",
   "file": "Leetcode11_盛水最多的容器——双指针.md",
   "slug": "b3c1d3e5",
+  "excerpt": "题目 https://leetcode cn.com/problems/container with most water/ 每次看题解：“我又会了！” 下一题：“我是废物。” 题解 双指针 定义两个指针left和right分别在最左边和最右边，指向两个柱子，那么面积肯定等于两柱子中最小的柱子乘上宽",
   "categories": [
     "刷题"
   ],

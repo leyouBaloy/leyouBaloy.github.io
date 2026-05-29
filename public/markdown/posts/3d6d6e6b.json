@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-18T09:26:02.000Z",
   "file": "Leetcode386_字典序排数——dfs、迭代.md",
   "slug": "3d6d6e6b",
+  "excerpt": "题目 https://leetcode cn.com/problems/lexicographical numbers/ 日常做不出来😭 题解 什么是字典序？（原谅我到了大二才搞明白什么是字典序😂） 对于字符串，先按首字符排序，如果首字符相同，再按第二个字符排序，以此类推。 如aa,ab,ba,",
   "categories": [
     "刷题"
   ],

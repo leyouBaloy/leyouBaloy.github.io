@@ -4,6 +4,7 @@
   "updatedAt": "2025-06-10T10:14:29.000Z",
   "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
   "slug": "ff7483e1",
+  "excerpt": "ChartVLM ChartVLM由两部分组成：图表结构解码器+大语言模型 截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct 显存占用基本保持在2506 MiB 普通图表 原图 识别结果 评价 CSV数据： Category,Percentage Visual A",
   "categories": [
     "技能分享"
   ],

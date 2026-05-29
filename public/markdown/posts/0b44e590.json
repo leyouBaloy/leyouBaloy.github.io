@@ -4,6 +4,7 @@
   "updatedAt": "2020-12-13T17:23:02.000Z",
   "file": "requests爬表情包.md",
   "slug": "0b44e590",
+  "excerpt": "需要的库： !pip install lxml !pip install request !pip install pathlib 代码：",
   "categories": [
     "刷题"
   ],

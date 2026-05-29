@@ -4,6 +4,7 @@
   "updatedAt": "2022-03-19T05:37:49.000Z",
   "file": "roboflow+colab优雅地训练yolov5模型.md",
   "slug": "dbb064f5",
+  "excerpt": "roboflow roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。 网址：https://roboflow.com/ 提示： 可以免费使用 需要挂代理 套餐一定要选public，选择private后导出数",
   "categories": [
     "技能分享"
   ],

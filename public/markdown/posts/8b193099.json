@@ -4,6 +4,7 @@
   "updatedAt": "2022-02-28T14:34:57.000Z",
   "file": "yolov5训练自己的目标检测模型.md",
   "slug": "8b193099",
+  "excerpt": "yolov5训练自己的目标检测模型 yolov5 yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代模型。 项目地址：https://github.com/ultralytics/yolov5 克隆下来之后，用pycharm打开，选择3.8版本的",
   "categories": [
     "技能分享"
   ],

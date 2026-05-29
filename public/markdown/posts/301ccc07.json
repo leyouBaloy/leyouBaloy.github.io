@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-04T07:26:44.000Z",
   "file": "Leetcode230_二叉搜索树中第K小的元素.md",
   "slug": "301ccc07",
+  "excerpt": "题目 https://leetcode cn.com/problems/kth smallest element in a bst/ 这是一道可拓展性很高的题目 题解 中序遍历递归法 最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第k 1个元素。 可是我们只需要第k个元素，不用把所有元素都遍",
   "categories": [
     "刷题"
   ],

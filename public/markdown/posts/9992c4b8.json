@@ -4,6 +4,7 @@
   "updatedAt": "2022-01-25T20:50:41.000Z",
   "file": "gitee webhooks+nodejs实现自动拉取代码.md",
   "slug": "9992c4b8",
+  "excerpt": "需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都好办，关键是如何让服务器监听webhook发来的请求。 在网上一搜，各路大神各显神通，有用jenkins的，有用php的，还有travis CI…各位大佬，",
   "categories": [
     "技能分享"
   ],

@@ -4,6 +4,7 @@
   "updatedAt": "2021-08-08T11:09:47.000Z",
   "file": "linux学习笔记.md",
   "slug": "4fa6d037",
+  "excerpt": "安装python 1）安装依赖包 安装 “Development tools” 软件组： 因为 Python 3.7 源文件使用 zlib 格式打包，所以需要安装 zlib 软件包；Python 3.7 编译安装时需要使用 zlib 的头文件和链接库，所以需要安装 zlib 的头文件和链接库 zli",
   "categories": [
     "笔记"
   ],

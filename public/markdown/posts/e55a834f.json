@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-21T09:35:07.000Z",
   "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
   "slug": "e55a834f",
+  "excerpt": "题目 https://leetcode cn.com/problems/network delay time/ 关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。 题解 关于dijkstra算法具体内容就不在这里细说了，网上一大堆，这里主",
   "categories": [
     "刷题"
   ],

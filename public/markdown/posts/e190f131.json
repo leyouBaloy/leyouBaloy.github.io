@@ -4,6 +4,7 @@
   "updatedAt": "2022-03-19T09:55:44.000Z",
   "file": "Leetcode240_搜索二维矩阵——二分、矩阵.md",
   "slug": "e190f131",
+  "excerpt": "题目 https://leetcode cn.com/problems/search a 2d matrix ii/ 题解 法一：逐行二分 没啥好说的，代码可以参考一下 对一行使用二分查找时间复杂度O(logm)，对n行使用二分查找时间复杂度O(nlogm)。 法二：巧妙的利用性质 观察矩阵最右上角",
   "categories": [
     "刷题"
   ],

@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-07T08:55:15.000Z",
   "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
   "slug": "5cddf427",
+  "excerpt": "题目 https://leetcode cn.com/problems/top k frequent elements/ 从这题开始学会使用堆 题解 堆（heap） 大顶堆：父节点的值大于子节点的值。 小顶堆：父节点的值小于子节点的值。 性质：根节点一定是最大（最小）值 这是一个小顶堆的例子： {{",
   "categories": [
     "刷题"
   ],

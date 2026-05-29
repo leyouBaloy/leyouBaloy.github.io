@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-06T07:07:06.000Z",
   "file": "Leetcode310_最小高度树.md",
   "slug": "5ed1d85c",
+  "excerpt": "题目 https://leetcode cn.com/problems/minimum height trees/ 这是一道理论性很强，代码也很有技巧性的“中等”难度题目。 题解 暴力法 献上我的超时代码： 广度优先搜索 有如下结论： 用反证法证明，证明过程挺复杂的。 所以我们就把这题从寻找最短距离",
   "categories": [
     "刷题"
   ],

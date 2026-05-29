@@ -4,6 +4,7 @@
   "updatedAt": "2022-03-21T10:27:50.000Z",
   "file": "Leetcode733_图像渲染——搜索算法.md",
   "slug": "2f23b348",
+  "excerpt": "题目 https://leetcode cn.com/problems/flood fill/ 美好的一天从一道简单题开始～ 题解 理解题意后，发现这不就是windows自带画图工具里的油漆桶吗？ 深度优先搜索 众所周知，深度优先搜索可以用栈实现，而递归本质上就是栈。所以直接上递归代码： 五分钟敲完",
   "categories": [
     "刷题"
   ],

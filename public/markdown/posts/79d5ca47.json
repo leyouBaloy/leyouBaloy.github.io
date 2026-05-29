@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-08T11:59:03.000Z",
   "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
   "slug": "79d5ca47",
+  "excerpt": "题目 https://leetcode cn.com/problems/longest substring without repeating characters/ 乍一看好像做过，再一看好像不会😂 题解 暴力法 设字符串为s，假如我们要找的这段没有重复字符的序列是从i起始，到rk结束（即s[i",
   "categories": [
     "刷题"
   ],

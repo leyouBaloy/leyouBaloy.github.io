@@ -4,6 +4,7 @@
   "updatedAt": "2022-04-19T08:45:09.000Z",
   "file": "Leetcode821_字符的最短距离——两次遍历.md",
   "slug": "0690f1e1",
+  "excerpt": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次",
   "categories": [
     "刷题"
   ],

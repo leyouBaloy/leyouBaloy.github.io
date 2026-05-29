@@ -4,6 +4,7 @@
   "updatedAt": "2021-07-19T20:57:21.000Z",
   "file": "docker笔记.md",
   "slug": "86d472e0",
+  "excerpt": "打开docker服务 docker一直在后台运行 ` docker run dit judge:0.2 /bin/bash 复制 docker cp 容器id:容器内路径 目的主机路径 docker cp /root/testPython/test01/ $(docker ps q):/usr/sr",
   "categories": [
     "笔记"
   ],
