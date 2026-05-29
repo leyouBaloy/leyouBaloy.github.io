@@ -4,6 +4,9 @@ import fs from 'fs';
 import path from 'path';
 import { spawn } from 'child_process';
 import { fileURLToPath } from 'url';
+import { generateText } from 'ai';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
+import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,6 +42,7 @@ loadLocalEnv();
 const aiSlugApiBaseUrl = process.env.BLOG_AI_SLUG_API_BASE_URL || 'https://gcli.ggchan.dev/';
 const aiSlugModel = process.env.BLOG_AI_SLUG_MODEL || 'Gemini 3.1 Pro Preview';
 const aiSlugApiKey = process.env.BLOG_AI_SLUG_API_KEY || process.env.GEMINI_API_KEY || process.env.GCLI_API_KEY;
+const aiSlugProvider = (process.env.BLOG_AI_SLUG_PROVIDER || 'google').trim().toLowerCase();
 
 const command = process.argv[2];
 const args = process.argv.slice(3);
@@ -81,6 +85,12 @@ Slug migration options:
   --batch-size <count>    Number of titles per AI request, defaults to 20
   --delay-ms <ms>         Delay between AI batches, defaults to 1500
   --allow-local           Fall back to local slugify if AI is unavailable
+
+AI slug env:
+  BLOG_AI_SLUG_PROVIDER   google (default) or openai-compatible
+  BLOG_AI_SLUG_API_BASE_URL
+  BLOG_AI_SLUG_MODEL
+  BLOG_AI_SLUG_API_KEY
 
 Server options:
   --host <host>           Forward host to Vite
@@ -326,21 +336,6 @@ function ensureUniqueSlug(slug, usedSlugs) {
   return candidate;
 }
 
-function buildAiSlugEndpoints(baseUrl) {
-  const normalizedBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
-  if (/\/chat\/completions$/.test(normalizedBase)) {
-    return [normalizedBase];
-  }
-  if (normalizedBase.endsWith('/v1') || normalizedBase.endsWith('/v1beta/openai')) {
-    return [`${normalizedBase}/chat/completions`];
-  }
-  return [
-    `${normalizedBase}/v1/chat/completions`,
-    `${normalizedBase}/chat/completions`,
-    `${normalizedBase}/v1beta/openai/chat/completions`
-  ];
-}
-
 function getGeminiModelId(model) {
   const value = String(model || '').trim();
   if (!value) return 'gemini-3.1-pro-preview';
@@ -353,105 +348,104 @@ function getGeminiModelId(model) {
     .replace(/^-+|-+$/g, '');
 }
 
-function buildGeminiGenerateContentEndpoint(baseUrl) {
-  const normalizedBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
-  const modelId = getGeminiModelId(aiSlugModel);
-  return `${normalizedBase}/v1beta/models/${modelId}:generateContent`;
+function normalizeGeminiBaseUrl(baseUrl) {
+  const normalizedBase = String(baseUrl || '')
+    .trim()
+    .replace(/\/+$/, '')
+    .replace(/:generateContent$/, '');
+  const modelPathIndex = normalizedBase.indexOf('/models/');
+
+  if (modelPathIndex >= 0) {
+    return normalizedBase.slice(0, modelPathIndex);
+  }
+
+  if (normalizedBase.endsWith('/v1') || normalizedBase.endsWith('/v1beta')) {
+    return normalizedBase;
+  }
+
+  return `${normalizedBase}/v1beta`;
 }
 
-async function requestGeminiGenerateContent(body) {
-  const systemText = (body.messages || [])
-    .filter((message) => message.role === 'system')
-    .map((message) => message.content)
-    .join('\n\n');
-  const contents = (body.messages || [])
-    .filter((message) => message.role !== 'system')
-    .map((message) => ({
-      role: message.role === 'assistant' ? 'model' : 'user',
-      parts: [{ text: message.content }]
-    }));
+function normalizeOpenAiCompatibleBaseUrl(baseUrl) {
+  const normalizedBase = String(baseUrl || '').trim().replace(/\/+$/, '');
 
-  let response;
-  for (let attempt = 0; attempt < 4; attempt += 1) {
-    response = await fetch(buildGeminiGenerateContentEndpoint(aiSlugApiBaseUrl), {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${aiSlugApiKey}`,
-        'Content-Type': 'application/json'
+  if (/\/chat\/completions$/.test(normalizedBase)) {
+    return normalizedBase.replace(/\/chat\/completions$/, '');
+  }
+
+  if (normalizedBase.endsWith('/v1') || normalizedBase.endsWith('/v1beta/openai')) {
+    return normalizedBase;
+  }
+
+  return `${normalizedBase}/v1`;
+}
+
+function getAiSlugLanguageModel() {
+  if (!aiSlugApiKey) {
+    throw new Error('BLOG_AI_SLUG_API_KEY is not configured');
+  }
+
+  if (['google', 'gemini', 'google-gemini'].includes(aiSlugProvider)) {
+    const baseURL = normalizeGeminiBaseUrl(aiSlugApiBaseUrl);
+    const isOfficialGoogle = /(^|\.)googleapis\.com/i.test(new URL(baseURL).hostname);
+    const google = createGoogleGenerativeAI({
+      apiKey: aiSlugApiKey,
+      baseURL,
+      headers: isOfficialGoogle ? undefined : {
+        Authorization: `Bearer ${aiSlugApiKey}`
       },
-      body: JSON.stringify({
-        systemInstruction: systemText ? { parts: [{ text: systemText }] } : undefined,
-        contents,
-        generationConfig: {
-          temperature: body.temperature ?? 0.2,
-          maxOutputTokens: Math.max(1024, body.max_tokens || 1024)
-        }
-      })
+      name: isOfficialGoogle ? 'google.generative-ai' : 'google.generative-ai-compatible'
     });
 
-    if (![429, 503].includes(response.status)) {
-      break;
-    }
-
-    await sleep(20000 * (attempt + 1));
+    return google(getGeminiModelId(aiSlugModel));
   }
 
-  if (!response.ok) {
-    throw new Error(`AI slug request failed at ${buildGeminiGenerateContentEndpoint(aiSlugApiBaseUrl)}: ${response.status} ${response.statusText}`);
+  if (['openai-compatible', 'openai', 'custom'].includes(aiSlugProvider)) {
+    const provider = createOpenAICompatible({
+      name: process.env.BLOG_AI_SLUG_PROVIDER_NAME || 'blog-ai-slug',
+      apiKey: aiSlugApiKey,
+      baseURL: normalizeOpenAiCompatibleBaseUrl(aiSlugApiBaseUrl)
+    });
+
+    return provider(aiSlugModel);
   }
 
-  return response.json();
+  throw new Error(`Unsupported BLOG_AI_SLUG_PROVIDER "${aiSlugProvider}". Use "google" or "openai-compatible".`);
 }
 
-async function requestAiChatCompletion(body) {
-  const endpoints = buildAiSlugEndpoints(aiSlugApiBaseUrl);
+function isRetryableAiError(error) {
+  const statusCode = error?.statusCode || error?.status || error?.response?.status;
+  const message = String(error?.message || '');
+  return [429, 500, 502, 503, 504].includes(statusCode)
+    || /\b(429|500|502|503|504)\b/.test(message)
+    || /rate limit|temporarily unavailable|timeout/i.test(message);
+}
+
+async function generateAiText({ system, prompt, temperature = 0.2, maxOutputTokens = 1024 }) {
   let lastError;
 
-  for (const endpoint of endpoints) {
-    let response;
-    for (let attempt = 0; attempt < 3; attempt += 1) {
-      response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${aiSlugApiKey}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    try {
+      const { text } = await generateText({
+        model: getAiSlugLanguageModel(),
+        system,
+        prompt,
+        temperature,
+        maxOutputTokens
       });
 
-      if (![429, 503].includes(response.status)) {
+      return text;
+    } catch (error) {
+      lastError = error;
+      if (!isRetryableAiError(error) || attempt === 3) {
         break;
       }
 
       await sleep(15000 * (attempt + 1));
     }
-
-    if (response.ok) {
-      return response.json();
-    }
-
-    lastError = new Error(`AI slug request failed at ${endpoint}: ${response.status} ${response.statusText}`);
-    if (![404, 405].includes(response.status)) {
-      throw lastError;
-    }
   }
 
-  try {
-    return await requestGeminiGenerateContent(body);
-  } catch (error) {
-    if (lastError) {
-      throw error;
-    }
-  }
-
-  throw lastError || new Error('AI slug request failed');
-}
-
-function extractChatContent(data) {
-  return data.choices?.[0]?.message?.content
-    || data.choices?.[0]?.text
-    || data.candidates?.[0]?.content?.parts?.map((part) => part.text).join('')
-    || '';
+  throw lastError;
 }
 
 async function generateAiSlug(title, options = {}) {
@@ -470,22 +464,13 @@ async function generateAiSlug(title, options = {}) {
     '要求：只输出 slug 本身；使用小写英文字母、数字和连字符；不要中文；不要引号；不要解释；长度不超过 72 个字符；尽量保留核心搜索词。'
   ].join('\n');
 
-  const data = await requestAiChatCompletion({
-    model: aiSlugModel,
-    messages: [
-      {
-        role: 'system',
-        content: 'You generate concise, search-friendly URL slugs for Chinese and English blog posts.'
-      },
-      {
-        role: 'user',
-        content: prompt
-      }
-    ],
+  const text = await generateAiText({
+    system: 'You generate concise, search-friendly URL slugs for Chinese and English blog posts.',
+    prompt,
     temperature: 0.2,
-    max_tokens: 40
+    maxOutputTokens: 40
   });
-  return sanitizeGeneratedSlug(extractChatContent(data));
+  return sanitizeGeneratedSlug(text);
 }
 
 function parseJsonFromModelText(text) {
@@ -527,27 +512,17 @@ async function generateAiSlugBatch(items) {
     excerpt: item.excerpt
   }));
 
-  const data = await requestAiChatCompletion({
-    model: aiSlugModel,
-    messages: [
-      {
-        role: 'system',
-        content: 'You generate concise, search-friendly English URL slugs for Chinese and English blog posts. Return valid JSON only.'
-      },
-      {
-        role: 'user',
-        content: [
-          '为下面的博客文章生成英文 SEO slug。',
-          '要求：返回 JSON object，key 是 id，value 是 slug；slug 只能包含小写英文字母、数字和连字符；不要中文；不要解释；每个 slug 不超过 72 字符；尽量保留核心搜索词。',
-          JSON.stringify(payload, null, 2)
-        ].join('\n\n')
-      }
-    ],
+  const text = await generateAiText({
+    system: 'You generate concise, search-friendly English URL slugs for Chinese and English blog posts. Return valid JSON only.',
+    prompt: [
+      '为下面的博客文章生成英文 SEO slug。',
+      '要求：返回 JSON object，key 是 id，value 是 slug；slug 只能包含小写英文字母、数字和连字符；不要中文；不要解释；每个 slug 不超过 72 字符；尽量保留核心搜索词。',
+      JSON.stringify(payload, null, 2)
+    ].join('\n\n'),
     temperature: 0.2,
-    max_tokens: Math.max(2048, items.length * 80)
+    maxOutputTokens: Math.max(2048, items.length * 80)
   });
-  const content = extractChatContent(data);
-  const parsed = parseJsonFromModelText(content);
+  const parsed = parseJsonFromModelText(text);
   const result = {};
 
   if (Array.isArray(parsed)) {

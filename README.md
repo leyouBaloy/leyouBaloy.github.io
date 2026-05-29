@@ -77,11 +77,21 @@ yarn blog new "草稿标题" --draft
 
 #### AI slug 配置
 
-默认使用 Gemini slug 服务；脚本会优先尝试 OpenAI Chat Completions 兼容接口，并在可用时回退到 Gemini `generateContent` 接口：
+默认通过 Vercel AI SDK 的 provider 层调用模型。`BLOG_AI_SLUG_PROVIDER=google` 会使用 Gemini `v1beta/models/[model]:generateContent` 形态；自建 Gemini 兼容服务可以把 base URL 配到域名、`/v1beta`，或完整的 `/v1beta/models/<model>` 前缀：
 
 ```sh
+export BLOG_AI_SLUG_PROVIDER="google"
 export BLOG_AI_SLUG_API_BASE_URL="https://gcli.ggchan.dev/"
 export BLOG_AI_SLUG_MODEL="Gemini 3.1 Pro Preview"
+export BLOG_AI_SLUG_API_KEY="你的密钥"
+```
+
+也可以切到 OpenAI-compatible provider，方便接入 OpenAI、DeepSeek、通义、硅基流动等兼容 Chat Completions 的模型服务：
+
+```sh
+export BLOG_AI_SLUG_PROVIDER="openai-compatible"
+export BLOG_AI_SLUG_API_BASE_URL="https://api.openai.com/v1"
+export BLOG_AI_SLUG_MODEL="gpt-4.1-mini"
 export BLOG_AI_SLUG_API_KEY="你的密钥"
 ```
 
