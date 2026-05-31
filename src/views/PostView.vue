@@ -1,5 +1,15 @@
 <template>
   <Nav :expandNav="true"></Nav>
+  <button
+    type="button"
+    class="back-button"
+    title="返回上一页"
+    aria-label="返回上一页"
+    @click="goBack"
+  >
+    <n-icon :size="18" :component="ArrowBackOutline" />
+    <span>返回</span>
+  </button>
   <!-- 阅读进度条 -->
   <div class="reading-progress-container">
     <div class="reading-progress-bar" :style="{ width: readingProgress + '%' }"></div>
@@ -66,9 +76,11 @@ import { computed, nextTick, onMounted, onServerPrefetch, onUnmounted, ref, watc
 import MarkdownRenderer from '../components/MarkdownRenderer.vue';
 import TableOfContents from '../components/TableOfContents.vue';
 import Nav from "@/components/Nav.vue";
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import Foot from "@/components/Foot.vue";
 import { getRelatedBySlug } from '@/utils/postData';
+import { NIcon } from 'naive-ui';
+import { ArrowBackOutline } from '@vicons/ionicons5';
 
 const props = defineProps({
   slug: {
@@ -77,6 +89,7 @@ const props = defineProps({
 });
 
 const $route = useRoute();
+const router = useRouter();
 const postSlug = computed(() => String(props.slug || $route.params.slug || ''));
 
 const scriptContainer = ref(null);
@@ -175,6 +188,15 @@ const loadGiscus = () => {
 const loadGiscusNow = () => {
   cleanupGiscusLazyLoad();
   loadGiscus();
+};
+
+const goBack = () => {
+  if (window.history.state?.back) {
+    router.back();
+    return;
+  }
+
+  router.push('/');
 };
 
 const cleanupGiscusLazyLoad = () => {
@@ -484,5 +506,61 @@ main {
 /* 暗色模式进度条 */
 [data-theme="dark"] .reading-progress-bar {
   background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+}
+
+.back-button {
+  position: fixed;
+  top: 64px;
+  left: max(14px, calc((100vw - 900px) / 2 + 14px));
+  z-index: 1001;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(45, 150, 189, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #1f6f8b;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-1px);
+  background: #fff;
+  border-color: rgba(45, 150, 189, 0.48);
+  color: #0f5f7a;
+}
+
+:global([data-theme="dark"] .back-button) {
+  background: rgba(15, 23, 42, 0.86);
+  border-color: rgba(56, 189, 248, 0.30);
+  color: #bae6fd;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.35);
+}
+
+:global([data-theme="dark"] .back-button:hover) {
+  background: #1e293b;
+  border-color: rgba(56, 189, 248, 0.56);
+  color: #e0f2fe;
+}
+
+@media (max-width: 600px) {
+  .back-button {
+    top: 58px;
+    left: 12px;
+    width: 36px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .back-button span {
+    display: none;
+  }
 }
 </style>

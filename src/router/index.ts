@@ -23,11 +23,9 @@ export const routes = [
     name: "archive",
     meta: {
       showPageHead: true,
+      keepAlive: true,
     },
     component: pageComponent(() => import("../views/ArchiveView.vue")),
-    // meta: {
-    //   keepAlive: true,
-    // }
   },
   {
     path: "/media",
