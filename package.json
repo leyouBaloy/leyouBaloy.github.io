@@ -15,7 +15,8 @@
     "generate": "node src/scripts/blog-cli.js generate",
     "server": "node src/scripts/blog-cli.js server",
     "new": "node src/scripts/blog-cli.js new",
-    "newp": "node src/scripts/blog-cli.js new"
+    "newp": "node src/scripts/blog-cli.js new",
+    "upload-images": "scripts/.venv/bin/python scripts/upload_markdown_images_to_cos.py"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.80",

@@ -4,7 +4,7 @@ categories:
 date: 2026-05-31 22:16:51
 slug: vane-agent-search-flow-speed-balanced
 title: Vane Agent 搜索流程分析：Speed 与 Balanced 模式
-img: /images/vane-agent-search-flow-speed.png
+img: https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/329e7b332515-vane-agent-search-flow-speed.png
 tags: [AI, Agent, 搜索, Vane]
 ---
 
@@ -48,11 +48,11 @@ Vane 的搜索能力不是“把用户问题直接丢给搜索引擎，再把结
 - `Speed`：少轮次、少解释、尽快拿到够用信息。
 - `Balanced`：更多轮次、带简短 reasoning、允许根据已有结果继续搜索。
 
-![Speed 模式搜索流程](/images/vane-agent-search-flow-speed.png)
+![Speed 模式搜索流程](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/329e7b332515-vane-agent-search-flow-speed.png)
 
 
 
-![Balanced 模式搜索流程](/images/vane-agent-search-flow-balanced.png)
+![Balanced 模式搜索流程](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/d05d0265a4d2-vane-agent-search-flow-balanced.png)
 
 
 
