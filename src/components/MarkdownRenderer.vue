@@ -60,6 +60,7 @@ import { NIcon } from 'naive-ui';
 import { CalendarOutline, ArchiveOutline } from '@vicons/ionicons5';
 import { markRaw } from 'vue';
 import { getPostPayload } from '@/utils/postData';
+import { normalizeLegacyFigureShortcodes, normalizeRenderedLegacyFigureShortcodes } from '@/utils/legacyShortcodes';
 
 const CodeBlock = defineAsyncComponent(() => import('./CodeBlock.vue'));
 
@@ -207,11 +208,12 @@ const renderPostHtml = async (post, body) => {
     if (post.hasMath) {
       await import('katex/dist/katex.min.css');
     }
-    return stripDuplicateTitleHeading(post.html, title);
+    return stripDuplicateTitleHeading(normalizeRenderedLegacyFigureShortcodes(post.html), title);
   }
 
-  const md = await createMarkdownRenderer(body);
-  return stripDuplicateTitleHeading(md.render(body), title);
+  const normalizedBody = normalizeLegacyFigureShortcodes(body);
+  const md = await createMarkdownRenderer(normalizedBody);
+  return stripDuplicateTitleHeading(md.render(normalizedBody), title);
 };
 
 const getArticleUrl = () => {

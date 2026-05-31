@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import MarkdownIt from 'markdown-it';
 import texmath from 'markdown-it-texmath';
 import katex from 'katex';
+import { normalizeLegacyFigureShortcodes } from '../utils/legacyShortcodes.js';
 
 // 获取当前文件的目录名
 const __filename = fileURLToPath(import.meta.url);
@@ -208,13 +209,14 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
     }
 
     const bodyContent = metadata.body;
-    const plainText = stripMarkdown(bodyContent);
+    const renderContent = normalizeLegacyFigureShortcodes(bodyContent);
+    const plainText = stripMarkdown(renderContent);
     const wordCount = countWords(plainText);
     const readingTime = Math.max(1, Math.ceil(wordCount / 400));
     const headings = extractHeadings(bodyContent);
     const hasMath = hasMathContent(bodyContent);
     const html = stripDuplicateTitleHeading(
-      createMarkdownRenderer(bodyContent).render(bodyContent),
+      createMarkdownRenderer(renderContent).render(renderContent),
       metadata.attributes.title
     );
 
