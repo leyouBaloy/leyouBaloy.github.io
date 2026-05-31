@@ -1,5 +1,25 @@
 [
   {
+    "title": "Leetcode821:字符的最短距离——两次遍历",
+    "date": "2022-04-19T08:45:09.000Z",
+    "updatedAt": "2022-04-19T08:45:09.000Z",
+    "file": "Leetcode821_字符的最短距离——两次遍历.md",
+    "slug": "leetcode-821-shortest-distance-to-a-character",
+    "legacySlug": "0690f1e1",
+    "aliases": [
+      "0690f1e1"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 162,
+    "readingTime": 1,
+    "searchContent": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次s，如果abs(ci 当前位置) 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/shortest distance to a character/solution/zi fu de zui duan ju chi by leetcode sol 2t49/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 虽然是道简单题，但我还是被秀了一脸。",
+    "totalPages": 28
+  },
+  {
     "title": "Leetcode386:字典序排数——dfs、迭代",
     "date": "2022-04-18T09:26:02.000Z",
     "updatedAt": "2022-04-18T09:26:02.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 293,
     "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/lexicographical numbers/ 日常做不出来😭 题解 什么是字典序？（原谅我到了大二才搞明白什么是字典序😂） 对于字符串，先按首字符排序，如果首字符相同，再按第二个字符排序，以此类推。 如aa,ab,ba,bb,bc就是一个字典序。 dfs 我们可以画一棵树。 第一层设置为0。 第二层是1,2,3...,9 第三层是0,1,2,3,...,9 第四层及往后层都同第三层 深度优先遍历这棵树，记录路径就是答案啦。 当然了，把树具体化为代码其实是一件很难得事情： 细节： 先枚举1,2,3...,9，因为第一个数不能为0。 在后面枚举时要把0加上。 时间复杂度O(n)，空间复杂度O(logn)，主要为栈的开销 迭代法 很有思维的一种方法！ 代码： 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/lexicographical numbers/solution/zi dian xu pai shu by leetcode solution 98mz/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。",
-    "totalPages": 28
+    "searchContent": "题目 https://leetcode cn.com/problems/lexicographical numbers/ 日常做不出来😭 题解 什么是字典序？（原谅我到了大二才搞明白什么是字典序😂） 对于字符串，先按首字符排序，如果首字符相同，再按第二个字符排序，以此类推。 如aa,ab,ba,bb,bc就是一个字典序。 dfs 我们可以画一棵树。 第一层设置为0。 第二层是1,2,3...,9 第三层是0,1,2,3,...,9 第四层及往后层都同第三层 深度优先遍历这棵树，记录路径就是答案啦。 当然了，把树具体化为代码其实是一件很难得事情： 细节： 先枚举1,2,3...,9，因为第一个数不能为0。 在后面枚举时要把0加上。 时间复杂度O(n)，空间复杂度O(logn)，主要为栈的开销 迭代法 很有思维的一种方法！ 代码： 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/lexicographical numbers/solution/zi dian xu pai shu by leetcode solution 98mz/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
   },
   {
     "title": "Leetcode5:最长回文子串——中心扩展法",
@@ -172,24 +191,5 @@
     "wordCount": 549,
     "readingTime": 2,
     "searchContent": "c++常用函数 sort(v.begin(),v.end()) 默认升序 如果要逆序就麻烦了 max element(v.begin(),v.end()) 返回指针，指向最大元素 pair 1. pair p1(1, 2); 定义和初始化 2. 可以用已有对象初始化pair p2(p1); 3. 没有初始化，默认为(0,0) 赋值：p2 = pair (1, 4); 强制类型转换 访问：p2.first,p2.second make pair(1,2) queue() queue que 构造 que.emplace(1,2) emplace自带调用构造函数，而push需要先自己搞出对象再传入 que.front()返回队首元素的引用 que.back()返回队尾元素的引用 que.pop()删除第一个元素 queue.size()元素数量 find() find(v.begin(), v.end(), 3) 查找v中==3的元素的位置，返回指针 priority queue 头文件： include 定义：priority queue p; 默认为大顶堆 或priority queue Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。 如priority queue , vector , decltype(&cmp) q(cmp); 其中比较函数为： 这里定义的是一个储存pair 的小顶堆。 操作（和队列基本操作相同： top 访问队头元素 empty 队列是否为空 size 返回队列内元素个数 push 插入元素到队尾 (并排序) emplace 原地构造一个元素并插入队列 pop 弹出队头元素 swap 交换内容 参考：https://blog.csdn.net/weixin 36888577/article/details/79937886 unordered set() 创建：unordered set occ; 删除：occ.erase('a') 插入：occ.insert('a') 判断是否在set中：occ.count('a') vector< 创建一个n n的二维数组：vector dp(n, vector (n)); 创建变量并赋初始值：vector v(10,1) 长度为10，初值1 dp.push back()，添加一个元素 python常用函数 sorted() 参数说明： iterable 可迭代对象。 key 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。 reverse 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。 返回重新排序的列表。 set() 创建：occ = set() occ = set(iterable比如列表、字符串) 删除：occ.remove('a') 插入：occ.add('a') 判断是否在set中：'a' in occ"
-  },
-  {
-    "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
-    "date": "2022-04-08T11:59:03.000Z",
-    "updatedAt": "2022-04-08T11:59:03.000Z",
-    "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
-    "slug": "leetcode-3-longest-substring-without-repeating-characters",
-    "legacySlug": "79d5ca47",
-    "aliases": [
-      "79d5ca47"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/longest substring without repeating characters/ 乍一看好像做过，再一看好像不会😂 题解 暴力法 设字符串为s，假如我们要找的这段没有重复字符的序列是从i起始，到rk结束（即s[i",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 614,
-    "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/longest substring without repeating characters/ 乍一看好像做过，再一看好像不会😂 题解 暴力法 设字符串为s，假如我们要找的这段没有重复字符的序列是从i起始，到rk结束（即s[i:rk]）。 那么用两个循环暴力枚举i和rk，看s[i:rk]是不是无重复元素的序列，记录下最大的序列。 贴个超时代码： 暴力法是无脑的，不懂得使用先前循环的经验。那么如何优化呢？ 滑动窗口 首先就是建议看官方题解....我这里再稍微总结一下： 这道题目有这样的性质：当i递增时，rk也一定是递增的，因此我们不用像暴力法那样一次又一次把rk回溯。 为什么呢？因为如果s[i:rk]没有重复元素，那么s[i+1:rk]也一定没有重复元素。因此rk只需要向后移动，不需要回到前面。 所以滑动窗口的思路就是这样： 我们使用两个指针表示字符串中的某个子串（或窗口）的左右边界，其中左指针代表着上文中「枚举子串的起始位置」，而右指针即为上文中的 rk。 在每一步的操作中，我们会将左指针向右移动一格，表示 我们开始枚举下一个字符作为起始位置，然后我们可以不断地向右移动右指针，但需要保证这两个指针对应的子串中没有重复的字符。在移动结束后，这个子串就对应着 以左指针开始的，不包含重复字符的最长子串。我们记录下这个子串的长度； 在枚举结束后，我们找到的最长的子串的长度即为答案。 判断一个序列是否有重复的字符用到的数据结构是 哈希集合 。c++和python都有这种数据结构。 看代码： 细节： 左指针移动，从哈希set中删除一个元素 右指针移动，从哈希set中添加一个元素 左指针从 1开始，如果从0开始，会导致第一个元素不能被删除 ...这段代码细节蛮多的，涉及到双指针的问题，一定要在草稿纸上演算好，不然写代码一时爽，debug火葬场。"
   }
 ]

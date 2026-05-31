@@ -1,5 +1,25 @@
 [
   {
+    "title": "对图像操作",
+    "date": "2021-08-29T21:21:29.000Z",
+    "updatedAt": "2021-08-29T21:21:29.000Z",
+    "file": "对图像操作.md",
+    "slug": "image-operations-processing",
+    "legacySlug": "3bdd31d7",
+    "aliases": [
+      "3bdd31d7"
+    ],
+    "excerpt": "图像 位图（raster graphics)和矢量图（vector graphics) 位图是有像素的，色彩丰富。矢量图放大不会失真。 通道 单通道 灰度图，每个像素点只有一个值表示，如果图像的深度是4 (256 = 2 2 2\\ 2)，那么他的像素值0(黑) 255(白)； 三通道 也就是通过见到",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "wordCount": 772,
+    "readingTime": 2,
+    "searchContent": "图像 位图（raster graphics)和矢量图（vector graphics) 位图是有像素的，色彩丰富。矢量图放大不会失真。 通道 单通道 灰度图，每个像素点只有一个值表示，如果图像的深度是4 (256 = 2 2 2\\ 2)，那么他的像素值0(黑) 255(白)； 三通道 也就是通过见到的彩色图，每个像素点有三个值表示，如果图像深度是4 (256 = 2 2 2\\ 2),那么他的像素值有红(0 255)、绿(0 255)、蓝(0 255)叠加表示，色彩更加艳丽; 四通道 四通道：也就是在三通道图像基础上加上透明程度，Alpha色彩空间，如果图像深度是4 (256 = 2 2 2\\ 2),那么0是完全透明，255是完全不透明； png图像是四通道。 读取图片（numpy的array) 读取一张200\\ 200的png图像 im.shape() (200, 200, 4) 表示像素是200\\ 200，有四个通道 数组是这个样子： im\\[0\\]矩阵，长为200, 宽为4，自己体会一下。 显示图片 numpy.array 的shape属性理解 二维情况 可以看到y是一个两行三列的二维数组，y.shape\\[0\\]代表行数，y.shape\\[1\\]代表列数。 三维情况 可以看到x是一个包含了3个两行三列的二维数组的三维数组，x.shape\\[0\\]代表包含二维数组的个数，x.shape\\[1\\]表示二维数组的行数，x.shape\\[2\\]表示二维数组的列数。 总结 可以看到，shape\\[0\\]表示最外围的数组的维数，shape\\[1\\]表示次外围的数组的维数，数字不断增大，维数由外到内。 ———————————————— 版权声明：本文为CSDN博主「Lavi\\ qq\\ 2910138025」的原创文章，遵循CC 4.0 BY SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/liuweiyuxiang/article/details/79384435 numpy的梯度函数np.gradient(f) np.gradient(f):用于计算数组f中元素的梯度，当f为多维时，返回每个维度的梯度。 一维 由梯度计算公式得到梯度计算结果: \\ 10=（0 10）/1 \\ 1.5=（7 10）/2 二维 对于二维数组，任意一个元素的梯度存在两个方向，所以求得的梯度为两个数组对象，第一个数组表示最外层维度的梯度值，第二个数组表示第二层维度的梯度值。 对于n维数组，gradient函数会生成n个数组，每个数组代表元素在第n个维度的梯度变化值，梯度反应了元素的变化率，尤其是我们在进行图像，声音等数据处理，梯度有助于帮助我们发现图像和声音的边缘，在那些变化不是很平缓的地方，可以很容易的发现。 ———————————————— 版权声明：本文为CSDN博主「June �」的原创文章，遵循CC 4.0 BY SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/MachineLearner/article/details/104403097",
+    "totalPages": 28
+  },
+  {
     "title": "Conda 配置虚拟环境",
     "date": "2021-08-29T21:20:21.000Z",
     "updatedAt": "2021-08-29T21:20:21.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 91,
     "readingTime": 1,
-    "searchContent": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change kernel = 环境名",
-    "totalPages": 28
+    "searchContent": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change kernel = 环境名"
   },
   {
     "title": "jupyter-paddle使用docker安装",
@@ -170,24 +189,5 @@
     "wordCount": 12,
     "readingTime": 1,
     "searchContent": "QQ邮箱设置 python代码 时间判断"
-  },
-  {
-    "title": "NGINX学习笔记",
-    "date": "2021-08-02T17:35:49.000Z",
-    "updatedAt": "2021-08-02T17:35:49.000Z",
-    "file": "NGINX学习笔记.md",
-    "slug": "nginx-learning-notes",
-    "legacySlug": "ec606feb",
-    "aliases": [
-      "ec606feb"
-    ],
-    "excerpt": "NGINX nginx常用命令 配置文件 配置文件解释参考： https://blog.csdn.net/tjcyjd/article/details/50695922",
-    "tags": [
-      "笔记"
-    ],
-    "img": "",
-    "wordCount": 26,
-    "readingTime": 1,
-    "searchContent": "NGINX nginx常用命令 配置文件 配置文件解释参考： https://blog.csdn.net/tjcyjd/article/details/50695922"
   }
 ]

@@ -4938,6 +4938,24 @@
   ],
   "2026": [
     {
+      "title": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式",
+      "date": "2026-05-31T22:16:51.000Z",
+      "updatedAt": "2026-05-31T22:16:51.000Z",
+      "file": "vane-agent-search-flow-speed-balanced.md",
+      "slug": "vane-agent-search-flow-speed-balanced",
+      "legacySlug": "f7a46744",
+      "aliases": [
+        "f7a46744"
+      ],
+      "excerpt": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式 这篇文档不按代码文件逐项罗列，而是从算法与 Agent 工程设计角度解释 Vane 的搜索问答系统。目标读者可以完全不阅读代码，只通过本文理解系统如何从一个用户问题演进到一个带来源、带中间过程、可流式输出的回答，并能够复刻一",
+      "tags": [
+        "技术教程"
+      ],
+      "img": "/images/vane-agent-search-flow-speed.png",
+      "wordCount": 6444,
+      "readingTime": 17
+    },
+    {
       "title": "思考：Pi Agent 对比 LangGraph",
       "date": "2026-05-27T15:45:25.000Z",
       "updatedAt": "2026-05-27T15:45:25.000Z",

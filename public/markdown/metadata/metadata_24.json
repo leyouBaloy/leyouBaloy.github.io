@@ -1,5 +1,25 @@
 [
   {
+    "title": "jupyter打开项目文件夹",
+    "date": "2021-01-19T17:52:50.000Z",
+    "updatedAt": "2021-01-19T17:52:50.000Z",
+    "file": "jupyter打开项目文件夹.md",
+    "slug": "jupyter-open-project-folder",
+    "legacySlug": "3e721cb0",
+    "aliases": [
+      "3e721cb0"
+    ],
+    "excerpt": "一.添加环境变量 直接在windows里面搜索“查看高级系统设置”，选择 , ，点开 ，以下三行填入其中： 然后点确定。 在我的电脑里 和 里面都有path，我也不知道该填哪个，索性把两个都填上了，这三个变量我觉得应该也有多余的，反正这个东西我是搞不太清楚的，只是照着网上说的做。 二.打开终端，进入",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "wordCount": 255,
+    "readingTime": 1,
+    "searchContent": "一.添加环境变量 直接在windows里面搜索“查看高级系统设置”，选择 , ，点开 ，以下三行填入其中： 然后点确定。 在我的电脑里 和 里面都有path，我也不知道该填哪个，索性把两个都填上了，这三个变量我觉得应该也有多余的，反正这个东西我是搞不太清楚的，只是照着网上说的做。 二.打开终端，进入目标文件夹，运行jupyter notebook这条指令 1.打开cmd之后cd进目标文件夹。 2.在目标文件夹里用git终端（需要安装git） 3.在目标文件夹按shift+右键，点 以上三种方法打开终端都可以。 然后jupyter的黑窗口就跳出来了，或者是直接在终端里显示，进入notebook页面里就能看见打开了目标文件夹，还挺方便。 2月17日更新 新方法 打开anaconda prompt(按win搜索) 键入jupyter notebook + 目标文件地址",
+    "totalPages": 28
+  },
+  {
     "title": "字符串与数字之间的转换",
     "date": "2021-01-01T21:15:27.000Z",
     "updatedAt": "2021-01-01T21:15:27.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 25,
     "readingTime": 1,
-    "searchContent": "方法一（利用 的stringstream， 可以是浮点数 ） 数字to字符串 字符串to数字",
-    "totalPages": 28
+    "searchContent": "方法一（利用 的stringstream， 可以是浮点数 ） 数字to字符串 字符串to数字"
   },
   {
     "title": "给string对象插入字符",
@@ -170,24 +189,5 @@
     "wordCount": 139,
     "readingTime": 1,
     "searchContent": "一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++里把int类型转换成string类型真的好麻烦！在百度上查了很久，方法要么不对，要么就是太复杂。果然c++是不适合处理字符串的。 所以放弃那种做法，用这种： 思路，比如判断121，把121倒过来还是121，判断与原数相等，所以是回文数。"
-  },
-  {
-    "title": "c++比较字典序的三种方法",
-    "date": "2020-12-04T08:04:09.000Z",
-    "updatedAt": "2020-12-04T08:04:09.000Z",
-    "file": "c++比较字典序的三种方法.md",
-    "slug": "cpp-compare-lexicographical-order-methods",
-    "legacySlug": "8c9dbe5e",
-    "aliases": [
-      "8c9dbe5e"
-    ],
-    "excerpt": "比较字符串字典序的三种方法【C++】 知乎 (zhihu.com)",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 18,
-    "readingTime": 1,
-    "searchContent": "比较字符串字典序的三种方法【C++】 知乎 (zhihu.com)"
   }
 ]

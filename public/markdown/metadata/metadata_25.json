@@ -1,5 +1,25 @@
 [
   {
+    "title": "c++比较字典序的三种方法",
+    "date": "2020-12-04T08:04:09.000Z",
+    "updatedAt": "2020-12-04T08:04:09.000Z",
+    "file": "c++比较字典序的三种方法.md",
+    "slug": "cpp-compare-lexicographical-order-methods",
+    "legacySlug": "8c9dbe5e",
+    "aliases": [
+      "8c9dbe5e"
+    ],
+    "excerpt": "比较字符串字典序的三种方法【C++】 知乎 (zhihu.com)",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 18,
+    "readingTime": 1,
+    "searchContent": "比较字符串字典序的三种方法【C++】 知乎 (zhihu.com)",
+    "totalPages": 28
+  },
+  {
     "title": "质数判断",
     "date": "2020-12-03T10:13:20.000Z",
     "updatedAt": "2020-12-03T10:13:20.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 66,
     "readingTime": 1,
-    "searchContent": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来 如果是质数，函数sb()返回1，不是就返回0；",
-    "totalPages": 28
+    "searchContent": "质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来 如果是质数，函数sb()返回1，不是就返回0；"
   },
   {
     "title": "c++傻缺错误集锦",
@@ -170,24 +189,5 @@
     "wordCount": 10,
     "readingTime": 1,
     "searchContent": "求m和n的最大公约数"
-  },
-  {
-    "title": "selenium爬教务处课表",
-    "date": "2020-11-16T20:45:35.000Z",
-    "updatedAt": "2020-11-16T20:45:35.000Z",
-    "file": "selenium爬教务处课表.md",
-    "slug": "selenium-crawl-class-schedule",
-    "legacySlug": "9e2ef618",
-    "aliases": [
-      "9e2ef618"
-    ],
-    "excerpt": "依次执行以上cell，1.打开chrome自动输入账号密码。2.有五秒钟的时间人工输入验证码。3.自动进入课表页面，自动截图，保存在桌面（保存文件夹在目录可能需要更改）",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 66,
-    "readingTime": 1,
-    "searchContent": "依次执行以上cell，1.打开chrome自动输入账号密码。2.有五秒钟的时间人工输入验证码。3.自动进入课表页面，自动截图，保存在桌面（保存文件夹在目录可能需要更改）"
   }
 ]

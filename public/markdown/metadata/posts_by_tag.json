@@ -1,4 +1,60 @@
 {
+  "技术教程": [
+    {
+      "title": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式",
+      "date": "2026-05-31T22:16:51.000Z",
+      "updatedAt": "2026-05-31T22:16:51.000Z",
+      "file": "vane-agent-search-flow-speed-balanced.md",
+      "slug": "vane-agent-search-flow-speed-balanced",
+      "legacySlug": "f7a46744",
+      "aliases": [
+        "f7a46744"
+      ],
+      "excerpt": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式 这篇文档不按代码文件逐项罗列，而是从算法与 Agent 工程设计角度解释 Vane 的搜索问答系统。目标读者可以完全不阅读代码，只通过本文理解系统如何从一个用户问题演进到一个带来源、带中间过程、可流式输出的回答，并能够复刻一",
+      "tags": [
+        "技术教程"
+      ],
+      "img": "/images/vane-agent-search-flow-speed.png",
+      "wordCount": 6444,
+      "readingTime": 17
+    },
+    {
+      "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
+      "date": "2026-03-25T12:53:00.000Z",
+      "updatedAt": "2026-03-25T12:53:00.000Z",
+      "file": "opencode-seven-core-tools.md",
+      "slug": "opencode-7-basic-tools-read-write-edit-multiedit-glob-grep-bash",
+      "legacySlug": "512e708e",
+      "aliases": [
+        "512e708e"
+      ],
+      "excerpt": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash 做 AI 编程助手（或类似工具）的核心，就是怎么让 AI 正确地读写文件、执行命令。本质上，LLM 是个\"脑子里有很多知识但手很短\"的存在——它能推理，但没法直接摸到你的代码。于是需要",
+      "tags": [
+        "技术教程"
+      ],
+      "img": "",
+      "wordCount": 1908,
+      "readingTime": 5
+    },
+    {
+      "title": "自动发布博客",
+      "date": "2026-03-11T14:22:25.000Z",
+      "updatedAt": "2026-03-11T14:22:25.000Z",
+      "file": "自动发布博客.md",
+      "slug": "auto-publish-blog-ai-agent-openclaw",
+      "legacySlug": "2f15163c",
+      "aliases": [
+        "2f15163c"
+      ],
+      "excerpt": "用 AI Skills 实现博客自动发布 🚀 🤖 本文由 AI 自动生成并自动发布 前言 今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。 什么是 Skills？ Sk",
+      "tags": [
+        "技术教程"
+      ],
+      "img": "",
+      "wordCount": 330,
+      "readingTime": 1
+    }
+  ],
   "技术思考": [
     {
       "title": "思考：Pi Agent 对比 LangGraph",
@@ -1088,44 +1144,6 @@
       "img": "",
       "wordCount": 1120,
       "readingTime": 3
-    }
-  ],
-  "技术教程": [
-    {
-      "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
-      "date": "2026-03-25T12:53:00.000Z",
-      "updatedAt": "2026-03-25T12:53:00.000Z",
-      "file": "opencode-seven-core-tools.md",
-      "slug": "opencode-7-basic-tools-read-write-edit-multiedit-glob-grep-bash",
-      "legacySlug": "512e708e",
-      "aliases": [
-        "512e708e"
-      ],
-      "excerpt": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash 做 AI 编程助手（或类似工具）的核心，就是怎么让 AI 正确地读写文件、执行命令。本质上，LLM 是个\"脑子里有很多知识但手很短\"的存在——它能推理，但没法直接摸到你的代码。于是需要",
-      "tags": [
-        "技术教程"
-      ],
-      "img": "",
-      "wordCount": 1908,
-      "readingTime": 5
-    },
-    {
-      "title": "自动发布博客",
-      "date": "2026-03-11T14:22:25.000Z",
-      "updatedAt": "2026-03-11T14:22:25.000Z",
-      "file": "自动发布博客.md",
-      "slug": "auto-publish-blog-ai-agent-openclaw",
-      "legacySlug": "2f15163c",
-      "aliases": [
-        "2f15163c"
-      ],
-      "excerpt": "用 AI Skills 实现博客自动发布 🚀 🤖 本文由 AI 自动生成并自动发布 前言 今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。 什么是 Skills？ Sk",
-      "tags": [
-        "技术教程"
-      ],
-      "img": "",
-      "wordCount": 330,
-      "readingTime": 1
     }
   ],
   "技能分享": [

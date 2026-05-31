@@ -1,5 +1,25 @@
 [
   {
+    "title": "Leetcode39:组合总和——回溯",
+    "date": "2022-05-06T09:09:58.000Z",
+    "updatedAt": "2022-05-06T09:09:58.000Z",
+    "file": "Leetcode39_组合总和——回溯.md",
+    "slug": "leetcode-39-combination-sum-backtracking",
+    "legacySlug": "7883cd5e",
+    "aliases": [
+      "7883cd5e"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/combination sum/ 做回溯题就像见老同学，你觉得它还像以前一样简单，但是你错了😭 题解 搜索回溯 思路：对于candidates中的每一个数你有两个选项，要么选，要么不选。所以回溯的过程是一颗二叉树，用idx表示",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 214,
+    "readingTime": 1,
+    "searchContent": "题目 https://leetcode cn.com/problems/combination sum/ 做回溯题就像见老同学，你觉得它还像以前一样简单，但是你错了😭 题解 搜索回溯 思路：对于candidates中的每一个数你有两个选项，要么选，要么不选。所以回溯的过程是一颗二叉树，用idx表示下标，左子树表示选择第idx个数放入路径，右子树不选择。如果不选择，下一次是idx+1，如果选择，下一次仍然是idx，这样可以做到重复选择一个数，但最终结果不会有数字相同但顺序不同的情况。 先看代码： 标准的回溯模板，但又充满了细节： return要放在合适的位置 不选择的时候idx+1，选择的时候idx不+1 再看这张图就能理解了： {{ }}",
+    "totalPages": 28
+  },
+  {
     "title": "Leetcode1823:找出游戏的获胜者——约瑟夫环",
     "date": "2022-05-04T08:24:22.000Z",
     "updatedAt": "2022-05-04T08:24:22.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 482,
     "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/find the winner of the circular game/ 约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。 题解 朴素的模拟法 即真正按照题目的描述，维护一个初始长度为n的数组和计数变量cnt，迭代找到最终解。最朴素的方法，一般都会超时。 模拟+队列 使用队列来模拟这个过程，首先创建一个双端队列（python中有此数据结构），包括n个数。然后在接下来的n 1次迭代中每次从队首pop出k 1个数到队尾。最终剩下的数就是答案。 因为要执行n 1轮，每轮把k 1个数从队首拿到队尾，所以时间复杂度为O(nk)。和第一种方法差不多，但代码更简洁。 直接pop 对上面的方法进行优化，也是我采用的方法。就是在每轮迭代中省去计数这个过程，直接找到要pop的数。 细节： 记录上一次杀掉的人的位置为kick（从1开始计数），那么下一次从第kick人开始计k个数，它的位置是kick+k 1。 但考虑到是一个环，所以要把位置mod当前数组的长度。 mod时有一个问题，如果位置恰好是最后一个元素，mod结果为0，所以加一个判断条件，如果结果为0，就令它等于len(people)。 因为我们分析的位置是从1开始计数，所以pop的时候要 1 由于pop的时间复杂度比较高，所以这也不是一种十分优雅的方法。 数学+递归/数学+迭代 递归公式 这个推理没搞懂...题解：https://leetcode cn.com/circle/article/BOoxAL/ 时间复杂度O(n)",
-    "totalPages": 28
+    "searchContent": "题目 https://leetcode cn.com/problems/find the winner of the circular game/ 约瑟夫环问题非常经典，记得大一学c++程序设计的时候遇到过这题，当时貌似没有做出来，现在就游刃有余了。 题解 朴素的模拟法 即真正按照题目的描述，维护一个初始长度为n的数组和计数变量cnt，迭代找到最终解。最朴素的方法，一般都会超时。 模拟+队列 使用队列来模拟这个过程，首先创建一个双端队列（python中有此数据结构），包括n个数。然后在接下来的n 1次迭代中每次从队首pop出k 1个数到队尾。最终剩下的数就是答案。 因为要执行n 1轮，每轮把k 1个数从队首拿到队尾，所以时间复杂度为O(nk)。和第一种方法差不多，但代码更简洁。 直接pop 对上面的方法进行优化，也是我采用的方法。就是在每轮迭代中省去计数这个过程，直接找到要pop的数。 细节： 记录上一次杀掉的人的位置为kick（从1开始计数），那么下一次从第kick人开始计k个数，它的位置是kick+k 1。 但考虑到是一个环，所以要把位置mod当前数组的长度。 mod时有一个问题，如果位置恰好是最后一个元素，mod结果为0，所以加一个判断条件，如果结果为0，就令它等于len(people)。 因为我们分析的位置是从1开始计数，所以pop的时候要 1 由于pop的时间复杂度比较高，所以这也不是一种十分优雅的方法。 数学+递归/数学+迭代 递归公式 这个推理没搞懂...题解：https://leetcode cn.com/circle/article/BOoxAL/ 时间复杂度O(n)"
   },
   {
     "title": "期中梳理以及规划",
@@ -171,24 +190,5 @@
     "wordCount": 437,
     "readingTime": 2,
     "searchContent": "题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法： 第一步：快速排斥实验 如果两线段在x，y的投影都不重合，是不可能会相交的。 换一种说法，就是以两条线段为对角线画矩形，两矩形如果没有重合的地方，那么两线段也一定不相交。 假设给出的四个点为Ax1, Ay1,Ax2,Ay2,Bx1,By1,Bx2,By2，代码如下： {{ }} 除此之外，这一步还能排除一个特殊情况：共线不相交 {{ }} 第二步：跨立实验 先了解一个线性代数知识：叉积 向量A和向量B叉积，如果AxB 0，那么B在A的逆时针方向，如果AxB }} 然后对于两直线相交的情况，我们发现它有一个性质，就是向量A1B1叉乘向量A1A2的符号一定与向量A1B2叉乘向量A1A2的符号相反。为了方便写代码，我们把其中一个端点移到零点。 {{ }} 代码： 还有一种特殊的情况，一条线段的端点在另一条线段上，这样的话A1B1与A1A2的叉积为0，我们只要把判断条件加一个等于号就行了。 {{ }} 完整代码 参考资料：https://blog.csdn.net/NEFU kadia/article/details/104462906"
-  },
-  {
-    "title": "Leetcode821:字符的最短距离——两次遍历",
-    "date": "2022-04-19T08:45:09.000Z",
-    "updatedAt": "2022-04-19T08:45:09.000Z",
-    "file": "Leetcode821_字符的最短距离——两次遍历.md",
-    "slug": "leetcode-821-shortest-distance-to-a-character",
-    "legacySlug": "0690f1e1",
-    "aliases": [
-      "0690f1e1"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 162,
-    "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次s，如果abs(ci 当前位置) 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/shortest distance to a character/solution/zi fu de zui duan ju chi by leetcode sol 2t49/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 虽然是道简单题，但我还是被秀了一脸。"
   }
 ]
