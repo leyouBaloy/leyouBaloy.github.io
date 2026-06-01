@@ -1,0 +1,5 @@
+# pathlib库
+
+> 发布于：2021-03-16 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/pathlib-library
+
+[老婆不在家，看点刺激的](https://blog.csdn.net/itanders/article/details/88754606)

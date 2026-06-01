@@ -1,0 +1,45 @@
+# 字符串与数字之间的转换
+
+> 发布于：2021-01-01 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/string-number-conversion
+
+方法一（利用<sstream>的stringstream，_**可以是浮点数**_）
+
+数字to字符串
+
+```
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+int main()
+{
+    double x;
+    string str;
+    stringstream ss;
+    cin >> x;
+    ss << x;
+    ss >> str;
+    cout << str;
+    return 0;
+}
+```
+
+字符串to数字
+
+```
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+int main()
+{
+    double x;
+    string str;
+    stringstream ss;
+    cin >> str;
+    ss << str;
+    ss >> x;
+    cout << x;
+    return 0;
+}
+```

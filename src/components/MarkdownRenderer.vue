@@ -36,6 +36,52 @@
       这篇文章发布已经超过两年，部分工具、版本或观点可能已经变化，请结合最新信息判断。
     </div>
     <div class="share-bar">
+      <div class="llm-copy" ref="llmActionsRef">
+        <button
+          type="button"
+          class="llm-copy-primary"
+          :title="copyMarkdownText"
+          aria-label="复制页面为 Markdown"
+          @click.stop="copyMarkdownPage"
+        >
+          <n-icon :size="17" :component="markdownCopied ? CheckmarkCircleOutline : CopyOutline" />
+          <span>{{ copyMarkdownText }}</span>
+        </button>
+        <button
+          type="button"
+          class="llm-copy-toggle"
+          :class="{ 'is-open': llmMenuOpen }"
+          title="更多 Markdown 选项"
+          aria-label="更多 Markdown 选项"
+          :aria-expanded="llmMenuOpen ? 'true' : 'false'"
+          @click.stop="toggleLlmMenu"
+        >
+          <n-icon :size="16" :component="ChevronUpOutline" />
+        </button>
+        <div v-show="llmMenuOpen" class="llm-menu">
+          <button type="button" class="llm-menu-item" @click.stop="copyMarkdownPage">
+            <n-icon class="llm-menu-leading-icon" :size="19" :component="CopyOutline" />
+            <span>
+              <strong>复制页面</strong>
+              <span>将页面以 Markdown 格式复制给 LLMs</span>
+            </span>
+          </button>
+          <a
+            class="llm-menu-item"
+            :href="markdownUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            @click="llmMenuOpen = false"
+          >
+            <n-icon class="llm-menu-leading-icon" :size="19" :component="LogoMarkdown" />
+            <span>
+              <strong>以 Markdown 格式查看</strong>
+              <span>以纯文本查看此页面</span>
+            </span>
+            <n-icon class="llm-menu-open-icon" :size="15" :component="OpenOutline" />
+          </a>
+        </div>
+      </div>
       <button class="share-btn" @click="copyArticleLink">{{ copyText }}</button>
       <button class="share-btn" @click="shareTo('weibo')">微博</button>
       <button class="share-btn" @click="shareTo('x')">X</button>
@@ -55,11 +101,20 @@
 </template>
 
 <script setup>
-import { computed, defineAsyncComponent, ref, onMounted, onServerPrefetch, h, Fragment, nextTick } from 'vue';
+import { computed, defineAsyncComponent, ref, onMounted, onServerPrefetch, onUnmounted, h, Fragment, nextTick } from 'vue';
 import { NIcon } from 'naive-ui';
-import { CalendarOutline, ArchiveOutline } from '@vicons/ionicons5';
+import {
+  ArchiveOutline,
+  CalendarOutline,
+  CheckmarkCircleOutline,
+  ChevronUpOutline,
+  CopyOutline,
+  LogoMarkdown,
+  OpenOutline
+} from '@vicons/ionicons5';
 import { markRaw } from 'vue';
 import { getPostPayload } from '@/utils/postData';
+import { buildPostMarkdown, getMarkdownPagePath } from '@/utils/markdownExport';
 import { normalizeLegacyFigureShortcodes, normalizeRenderedLegacyFigureShortcodes } from '@/utils/legacyShortcodes';
 
 const CodeBlock = defineAsyncComponent(() => import('./CodeBlock.vue'));
@@ -77,11 +132,22 @@ const renderedContent = ref();
 const renderedHtml = ref('');
 const articleRef = ref(null);
 const mdRef = ref(null);
+const llmActionsRef = ref(null);
 const copyText = ref('复制链接');
+const markdownCopied = ref(false);
+const llmMenuOpen = ref(false);
 const isLoading = ref(false);
 const loadError = ref(null);
+const rawPost = ref(null);
 
 const hasArticleContent = computed(() => Boolean(renderedContent.value || renderedHtml.value));
+const copyMarkdownText = computed(() => markdownCopied.value ? '已复制' : '复制页面');
+const markdownUrl = computed(() => {
+  const path = getMarkdownPagePath(rawPost.value || props.slug);
+  if (!path) return '#';
+  if (typeof window === 'undefined') return path;
+  return new URL(path, window.location.origin).href;
+});
 
 const formatDate = (date) => {
   if (!date) return '';
@@ -221,14 +287,12 @@ const getArticleUrl = () => {
   return window.location.href;
 };
 
-const copyArticleLink = async () => {
-  const url = getArticleUrl();
-  if (!url) return;
+const writeClipboard = async (value) => {
   try {
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(value);
   } catch (error) {
     const textArea = document.createElement('textarea');
-    textArea.value = url;
+    textArea.value = value;
     textArea.style.position = 'fixed';
     textArea.style.left = '-9999px';
     document.body.appendChild(textArea);
@@ -236,10 +300,36 @@ const copyArticleLink = async () => {
     document.execCommand('copy');
     document.body.removeChild(textArea);
   }
+};
+
+const copyArticleLink = async () => {
+  const url = getArticleUrl();
+  if (!url) return;
+  await writeClipboard(url);
   copyText.value = '已复制';
   window.setTimeout(() => {
     copyText.value = '复制链接';
   }, 1800);
+};
+
+const copyMarkdownPage = async () => {
+  if (!rawPost.value) return;
+  await writeClipboard(buildPostMarkdown(rawPost.value, { sourceUrl: getArticleUrl() }));
+  markdownCopied.value = true;
+  llmMenuOpen.value = false;
+  window.setTimeout(() => {
+    markdownCopied.value = false;
+  }, 1800);
+};
+
+const toggleLlmMenu = () => {
+  llmMenuOpen.value = !llmMenuOpen.value;
+};
+
+const closeLlmMenu = (event) => {
+  if (!llmMenuOpen.value) return;
+  if (llmActionsRef.value?.contains(event.target)) return;
+  llmMenuOpen.value = false;
 };
 
 const nativeShare = async () => {
@@ -447,6 +537,7 @@ const loadMarkdown = async (options = {}) => {
   loadError.value = null;
   try {
     const post = await getPostPayload(props.slug);
+    rawPost.value = post;
     const body = post.body || '';
     const categories = Array.isArray(post.categories)
       ? post.categories
@@ -496,6 +587,7 @@ const loadMarkdown = async (options = {}) => {
     }
   } catch (error) {
     loadError.value = error;
+    rawPost.value = null;
     metaData.value = {};
     renderedContent.value = null;
     renderedHtml.value = '';
@@ -506,7 +598,14 @@ const loadMarkdown = async (options = {}) => {
 };
 
 onServerPrefetch(() => loadMarkdown({ showPending: false }));
-onMounted(loadMarkdown);
+onMounted(() => {
+  loadMarkdown();
+  document.addEventListener('click', closeLlmMenu);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', closeLlmMenu);
+});
 </script>
 
 <style scoped>
@@ -549,21 +648,176 @@ onMounted(loadMarkdown);
   box-sizing: border-box;
 }
 
+.llm-copy {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+  background: #f0f9ff;
+  color: #0369a1;
+  z-index: 25;
+}
+
+.llm-copy-primary,
+.llm-copy-toggle {
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.llm-copy-primary {
+  gap: 6px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.llm-copy-toggle {
+  width: 31px;
+  border-left: 1px solid #bae6fd;
+}
+
+.llm-copy-primary:hover,
+.llm-copy-toggle:hover {
+  background: #e0f2fe;
+  color: #0c4a6e;
+}
+
+.llm-copy-primary:focus-visible,
+.llm-copy-toggle:focus-visible,
+.llm-menu-item:focus-visible {
+  outline: 2px solid rgba(14, 165, 233, 0.45);
+  outline-offset: 2px;
+}
+
+.llm-copy-toggle :deep(svg) {
+  transition: transform 0.18s ease;
+}
+
+.llm-copy-toggle.is-open :deep(svg) {
+  transform: rotate(180deg);
+}
+
+.llm-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: min(300px, calc(100vw - 32px));
+  padding: 6px;
+  border: 1px solid rgba(186, 230, 253, 0.9);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+.llm-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 22px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid rgba(186, 230, 253, 0.9);
+  border-left: 1px solid rgba(186, 230, 253, 0.9);
+  background: rgba(255, 255, 255, 0.98);
+  transform: rotate(45deg);
+}
+
+.llm-menu-item {
+  width: 100%;
+  min-height: 54px;
+  padding: 8px 9px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #111827;
+  display: grid;
+  grid-template-columns: 30px 1fr 16px;
+  align-items: center;
+  gap: 9px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+.llm-menu-item:hover {
+  background: #f0f9ff;
+}
+
+.llm-menu-leading-icon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #0f5f7a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.llm-menu-item > span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.llm-menu-item strong {
+  color: #111827;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.llm-menu-item span span {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.llm-menu-open-icon {
+  color: #64748b;
+}
+
 .share-bar {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 18px;
+  position: relative;
+  z-index: 20;
 }
 
 .share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  box-sizing: border-box;
   border: 1px solid #bae6fd;
   background: #f0f9ff;
   color: #0369a1;
   border-radius: 6px;
   padding: 6px 12px;
   font-size: 13px;
+  line-height: 1;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -578,6 +832,56 @@ onMounted(loadMarkdown);
   background: #422006;
   color: #fde68a;
   border-left-color: #f59e0b;
+}
+
+:global([data-theme="dark"] .llm-copy) {
+  background: #1f2937;
+  border-color: #374151;
+  color: #bae6fd;
+}
+
+:global([data-theme="dark"] .llm-menu) {
+  background: rgba(15, 23, 42, 0.94);
+  border-color: rgba(71, 85, 105, 0.86);
+  box-shadow: 0 18px 42px rgba(2, 6, 23, 0.38);
+}
+
+:global([data-theme="dark"] .llm-menu::before) {
+  background: rgba(15, 23, 42, 0.94);
+  border-color: rgba(71, 85, 105, 0.86);
+}
+
+:global([data-theme="dark"] .llm-copy-primary),
+:global([data-theme="dark"] .llm-copy-toggle),
+:global([data-theme="dark"] .llm-menu-item),
+:global([data-theme="dark"] .llm-menu-item strong) {
+  color: #e5e7eb;
+}
+
+:global([data-theme="dark"] .llm-menu-leading-icon) {
+  background: #111827;
+  border-color: #374151;
+  color: #bae6fd;
+}
+
+:global([data-theme="dark"] .llm-copy-toggle) {
+  border-left-color: #374151;
+}
+
+:global([data-theme="dark"] .llm-copy-primary:hover),
+:global([data-theme="dark"] .llm-copy-toggle:hover) {
+  background: #111827;
+  color: #e0f2fe;
+}
+
+:global([data-theme="dark"] .llm-menu-item:hover) {
+  background: #1f2937;
+  color: #bae6fd;
+}
+
+:global([data-theme="dark"] .llm-menu-item span span),
+:global([data-theme="dark"] .llm-menu-open-icon) {
+  color: #9ca3af;
 }
 
 :global([data-theme="dark"] .share-btn) {

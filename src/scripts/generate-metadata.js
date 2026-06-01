@@ -7,6 +7,7 @@ import MarkdownIt from 'markdown-it';
 import texmath from 'markdown-it-texmath';
 import katex from 'katex';
 import { normalizeLegacyFigureShortcodes } from '../utils/legacyShortcodes.js';
+import { buildPostMarkdown } from '../utils/markdownExport.js';
 
 // 获取当前文件的目录名
 const __filename = fileURLToPath(import.meta.url);
@@ -15,11 +16,13 @@ const __dirname = path.dirname(__filename);
 const markdownDir = path.join(__dirname, '../../public/markdown');
 const outputDir = path.join(__dirname, '../../public/markdown/metadata');
 const postsOutputDir = path.join(__dirname, '../../public/markdown/posts');
+const markdownPagesOutputDir = path.join(__dirname, '../../public/markdown/pages');
 
 // 确保路径格式正确
 const normalizedMarkdownDir = path.normalize(markdownDir);
 const normalizedOutputDir = path.normalize(outputDir);
 const normalizedPostsOutputDir = path.normalize(postsOutputDir);
+const normalizedMarkdownPagesOutputDir = path.normalize(markdownPagesOutputDir);
 
 if (!fs.existsSync(normalizedMarkdownDir)) {
   fs.mkdirSync(normalizedMarkdownDir, { recursive: true });
@@ -32,6 +35,7 @@ const prepareOutputDir = (dir) => {
 
 prepareOutputDir(normalizedOutputDir);
 prepareOutputDir(normalizedPostsOutputDir);
+prepareOutputDir(normalizedMarkdownPagesOutputDir);
 
 // 对文件名做 md5 hash，取前 8 位
 const hashFilename = (filename) => {
@@ -283,15 +287,25 @@ metadataList.sort((a, b) => new Date(b.date) - new Date(a.date));
 postPayloads.forEach(post => {
   const outputFile = path.join(normalizedPostsOutputDir, `${post.slug}.json`);
   fs.writeFileSync(outputFile, JSON.stringify(post, null, 2));
+  fs.writeFileSync(
+    path.join(normalizedMarkdownPagesOutputDir, `${post.slug}.md`),
+    buildPostMarkdown(post, { sourceUrl: `${siteUrl}/post/${post.slug}` }),
+    'utf8'
+  );
   (post.aliases || []).forEach(alias => {
     const aliasOutputFile = path.join(normalizedPostsOutputDir, `${alias}.json`);
     fs.writeFileSync(aliasOutputFile, JSON.stringify({
       ...post,
       routeSlug: alias
     }, null, 2));
+    fs.writeFileSync(
+      path.join(normalizedMarkdownPagesOutputDir, `${alias}.md`),
+      buildPostMarkdown({ ...post, routeSlug: alias }, { sourceUrl: `${siteUrl}/post/${alias}` }),
+      'utf8'
+    );
   });
 });
-console.log('Post payload JSON files generated successfully!');
+console.log('Post payload JSON and Markdown page files generated successfully!');
 
 const latestPostDate = metadataList.reduce((latest, post) => {
   const updatedAt = new Date(post.updatedAt || post.date).getTime();
@@ -450,6 +464,10 @@ const sitemapUrls = [
   })),
   ...metadataList.map(post => ({
     loc: `${siteUrl}/post/${post.slug}`,
+    lastmod: new Date(post.updatedAt || post.date).toISOString()
+  })),
+  ...metadataList.map(post => ({
+    loc: `${siteUrl}/markdown/pages/${post.slug}.md`,
     lastmod: new Date(post.updatedAt || post.date).toISOString()
   }))
 ].map(item => `  <url>
