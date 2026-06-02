@@ -1,5 +1,25 @@
 [
   {
+    "title": "certbot自动配置nginx给wordpress站点加https",
+    "date": "2021-09-08T22:42:40.000Z",
+    "updatedAt": "2021-09-08T22:42:40.000Z",
+    "file": "certbot自动配置nginx给wordpress站点加https.md",
+    "slug": "certbot-auto-config-nginx-wordpress-https",
+    "legacySlug": "8644ae3a",
+    "aliases": [
+      "8644ae3a"
+    ],
+    "excerpt": "思路 1. 安装snap 2. 安装certbot 3. 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置nginx的时候报错如图 报错的意思就是说，在nginx的配置文件中server",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "wordCount": 288,
+    "readingTime": 1,
+    "searchContent": "思路 1. 安装snap 2. 安装certbot 3. 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置nginx的时候报错如图 报错的意思就是说，在nginx的配置文件中server\\ name字段不正确。我把它修改成了aiupc.xyz，仍然报错。 后来问了我哥，才知道nginx配置文件最底下有一行： wordpress真正的配置文件其实是在/usr/local/nginx/conf/vhost文件夹里。把这个里面的server\\ name改一下就OK了。 server\\ name不能随意 server name = aiupc.xyz 和 server name = www.aiupc.xyz 是不一样的，弄混的话会导致站点一些图片链接浏览器不予显示。 我的解决方案：nginx配置server name = www.aiupc.xyz，server name = aiupc.xyz, 域名解析aiupc.xyz和www.aiupc.xyz， certbot给aiupc.xyz和www.aiupc.xyz都申请证书， wordpress后台设置里url写https://www.aiupc.xyz， 这样，在浏览器中打aiupc.xyz也会跳转到www.aiupc.xyz 的，这个问题应该已经彻底解决了。",
+    "totalPages": 28
+  },
+  {
     "title": "对图像操作",
     "date": "2021-08-29T21:21:29.000Z",
     "updatedAt": "2021-08-29T21:21:29.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 772,
     "readingTime": 2,
-    "searchContent": "图像 位图（raster graphics)和矢量图（vector graphics) 位图是有像素的，色彩丰富。矢量图放大不会失真。 通道 单通道 灰度图，每个像素点只有一个值表示，如果图像的深度是4 (256 = 2 2 2\\ 2)，那么他的像素值0(黑) 255(白)； 三通道 也就是通过见到的彩色图，每个像素点有三个值表示，如果图像深度是4 (256 = 2 2 2\\ 2),那么他的像素值有红(0 255)、绿(0 255)、蓝(0 255)叠加表示，色彩更加艳丽; 四通道 四通道：也就是在三通道图像基础上加上透明程度，Alpha色彩空间，如果图像深度是4 (256 = 2 2 2\\ 2),那么0是完全透明，255是完全不透明； png图像是四通道。 读取图片（numpy的array) 读取一张200\\ 200的png图像 im.shape() (200, 200, 4) 表示像素是200\\ 200，有四个通道 数组是这个样子： im\\[0\\]矩阵，长为200, 宽为4，自己体会一下。 显示图片 numpy.array 的shape属性理解 二维情况 可以看到y是一个两行三列的二维数组，y.shape\\[0\\]代表行数，y.shape\\[1\\]代表列数。 三维情况 可以看到x是一个包含了3个两行三列的二维数组的三维数组，x.shape\\[0\\]代表包含二维数组的个数，x.shape\\[1\\]表示二维数组的行数，x.shape\\[2\\]表示二维数组的列数。 总结 可以看到，shape\\[0\\]表示最外围的数组的维数，shape\\[1\\]表示次外围的数组的维数，数字不断增大，维数由外到内。 ———————————————— 版权声明：本文为CSDN博主「Lavi\\ qq\\ 2910138025」的原创文章，遵循CC 4.0 BY SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/liuweiyuxiang/article/details/79384435 numpy的梯度函数np.gradient(f) np.gradient(f):用于计算数组f中元素的梯度，当f为多维时，返回每个维度的梯度。 一维 由梯度计算公式得到梯度计算结果: \\ 10=（0 10）/1 \\ 1.5=（7 10）/2 二维 对于二维数组，任意一个元素的梯度存在两个方向，所以求得的梯度为两个数组对象，第一个数组表示最外层维度的梯度值，第二个数组表示第二层维度的梯度值。 对于n维数组，gradient函数会生成n个数组，每个数组代表元素在第n个维度的梯度变化值，梯度反应了元素的变化率，尤其是我们在进行图像，声音等数据处理，梯度有助于帮助我们发现图像和声音的边缘，在那些变化不是很平缓的地方，可以很容易的发现。 ———————————————— 版权声明：本文为CSDN博主「June �」的原创文章，遵循CC 4.0 BY SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/MachineLearner/article/details/104403097",
-    "totalPages": 28
+    "searchContent": "图像 位图（raster graphics)和矢量图（vector graphics) 位图是有像素的，色彩丰富。矢量图放大不会失真。 通道 单通道 灰度图，每个像素点只有一个值表示，如果图像的深度是4 (256 = 2 2 2\\ 2)，那么他的像素值0(黑) 255(白)； 三通道 也就是通过见到的彩色图，每个像素点有三个值表示，如果图像深度是4 (256 = 2 2 2\\ 2),那么他的像素值有红(0 255)、绿(0 255)、蓝(0 255)叠加表示，色彩更加艳丽; 四通道 四通道：也就是在三通道图像基础上加上透明程度，Alpha色彩空间，如果图像深度是4 (256 = 2 2 2\\ 2),那么0是完全透明，255是完全不透明； png图像是四通道。 读取图片（numpy的array) 读取一张200\\ 200的png图像 im.shape() (200, 200, 4) 表示像素是200\\ 200，有四个通道 数组是这个样子： im\\[0\\]矩阵，长为200, 宽为4，自己体会一下。 显示图片 numpy.array 的shape属性理解 二维情况 可以看到y是一个两行三列的二维数组，y.shape\\[0\\]代表行数，y.shape\\[1\\]代表列数。 三维情况 可以看到x是一个包含了3个两行三列的二维数组的三维数组，x.shape\\[0\\]代表包含二维数组的个数，x.shape\\[1\\]表示二维数组的行数，x.shape\\[2\\]表示二维数组的列数。 总结 可以看到，shape\\[0\\]表示最外围的数组的维数，shape\\[1\\]表示次外围的数组的维数，数字不断增大，维数由外到内。 ———————————————— 版权声明：本文为CSDN博主「Lavi\\ qq\\ 2910138025」的原创文章，遵循CC 4.0 BY SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/liuweiyuxiang/article/details/79384435 numpy的梯度函数np.gradient(f) np.gradient(f):用于计算数组f中元素的梯度，当f为多维时，返回每个维度的梯度。 一维 由梯度计算公式得到梯度计算结果: \\ 10=（0 10）/1 \\ 1.5=（7 10）/2 二维 对于二维数组，任意一个元素的梯度存在两个方向，所以求得的梯度为两个数组对象，第一个数组表示最外层维度的梯度值，第二个数组表示第二层维度的梯度值。 对于n维数组，gradient函数会生成n个数组，每个数组代表元素在第n个维度的梯度变化值，梯度反应了元素的变化率，尤其是我们在进行图像，声音等数据处理，梯度有助于帮助我们发现图像和声音的边缘，在那些变化不是很平缓的地方，可以很容易的发现。 ———————————————— 版权声明：本文为CSDN博主「June �」的原创文章，遵循CC 4.0 BY SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/MachineLearner/article/details/104403097"
   },
   {
     "title": "Conda 配置虚拟环境",
@@ -170,24 +189,5 @@
     "wordCount": 423,
     "readingTime": 2,
     "searchContent": "models 写入新数据，返回此条新数据 ` new data = Queue.objects.create( queue dic) 访问新写入数据的id字段 new data.id 查询数据 查询一条数据 student = Student.objects.get(name='django') 查看字典类型 student. dict (前后两个下划线) 筛选多条数据 student = Student.objects.filter(name='python') 它返回的student是一个对象的列表，可以看的出来student\\[0\\]和上面的get方式返回的student的结果是一样的。 修改数据库 对单一数据修改 批量修改 screen 新建窗口 screen S 名称 连接到窗口 screen r 名称 强制连接 screen D r 名称 查看列表 screen ls ` python导包 导入上级目录的包 sys.path的作用： 当使用import语句导入模块时，解释器会搜索当前模块所在目录以及sys.path指定的路径去找需要import的模块，所以这里是直接把上级目录加到了sys.path里。 “..”的含义： 等同于linux里的‘..’，表示当前工作目录的上级目录。实际上python中的‘.’也和linux中一致，表示当前目录。 django crontab定时任务 django crontab还挺方便的，但是不好使:https://www.jianshu.com/p/b1ac0d7ae20c django crontab官网：django crontab · PyPI cron表达式：https://cloud.tencent.com/developer/article/1343175 菜鸟教程linux：https://www.runoob.com/w3cnote/linux crontab tasks.html linux中cron表达式有五位数 （秒）\\[分 时 日 月 星期\\] （年） 秒和年都不是unix系统自带的 “\\ ” 表示每一 其它，在这里https://www.bilibili.com/video/BV19t411G7KU?from=search&seid=1398478951454031547 在外部使用django的orm 部署 gunicron 安装 配置文件，和settings.py放在同一目录 启动服务器 关闭 nginx 用宝塔"
-  },
-  {
-    "title": "python发邮件",
-    "date": "2021-08-08T08:20:29.000Z",
-    "updatedAt": "2021-08-08T08:20:29.000Z",
-    "file": "python发邮件.md",
-    "slug": "python-send-email",
-    "legacySlug": "31ffe735",
-    "aliases": [
-      "31ffe735"
-    ],
-    "excerpt": "QQ邮箱设置 python代码 时间判断",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "",
-    "wordCount": 12,
-    "readingTime": 1,
-    "searchContent": "QQ邮箱设置 python代码 时间判断"
   }
 ]

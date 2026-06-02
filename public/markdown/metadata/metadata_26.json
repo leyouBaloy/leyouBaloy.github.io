@@ -1,5 +1,25 @@
 [
   {
+    "title": "递归法求最大公约数",
+    "date": "2020-11-17T12:58:03.000Z",
+    "updatedAt": "2020-11-17T12:58:03.000Z",
+    "file": "递归法求最大公约数.md",
+    "slug": "recursive-greatest-common-divisor",
+    "legacySlug": "0b1af30e",
+    "aliases": [
+      "0b1af30e"
+    ],
+    "excerpt": "求m和n的最大公约数",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 10,
+    "readingTime": 1,
+    "searchContent": "求m和n的最大公约数",
+    "totalPages": 28
+  },
+  {
     "title": "selenium爬教务处课表",
     "date": "2020-11-16T20:45:35.000Z",
     "updatedAt": "2020-11-16T20:45:35.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 66,
     "readingTime": 1,
-    "searchContent": "依次执行以上cell，1.打开chrome自动输入账号密码。2.有五秒钟的时间人工输入验证码。3.自动进入课表页面，自动截图，保存在桌面（保存文件夹在目录可能需要更改）",
-    "totalPages": 28
+    "searchContent": "依次执行以上cell，1.打开chrome自动输入账号密码。2.有五秒钟的时间人工输入验证码。3.自动进入课表页面，自动截图，保存在桌面（保存文件夹在目录可能需要更改）"
   },
   {
     "title": "Python爬虫-selenium-request",
@@ -170,24 +189,5 @@
     "wordCount": 246,
     "readingTime": 1,
     "searchContent": "【题目描述】 小明在录入一篇英文文献时由于键盘误操作，事先按下了CapsLock（大写锁定）键，然后又按照平时的录入习惯进行操作。结果录入的内容里面，原本应该是英文大写的地方都变成了小写，而原来应该是英文小写的地方都变成了大写。如果重新录入的话实在太可怕了！ 【输入格式】 任意一个字符串（长度小于等于80），以换行结束。 【输出格式】 转换后的字符串。 For example: Input Result i AM A STUDENT.i AM 19. I am a student.I am 19. 答案 这题算法很简单，难的是输入与输出，试了很久，最终用这种输入方法可以实现。 发现了几个问题1.网上查的ascii码跟实际程序里的对不上，查ascii码可以用下面这个代码 2.字符数组可以直接cin a;和cout<<a;"
-  },
-  {
-    "title": "字符数组的输入输出",
-    "date": "2020-11-02T10:56:17.000Z",
-    "updatedAt": "2020-11-02T10:56:17.000Z",
-    "file": "字符数组的输入输出.md",
-    "slug": "char-array-input-output",
-    "legacySlug": "bb8c6a25",
-    "aliases": [
-      "bb8c6a25"
-    ],
-    "excerpt": "https://blog.csdn.net/lost\\ in\\ jungle\\ /article/details/82716778 写得针不戳 cin a; 可以直接输入字符串，但是这个输入貌似很操蛋。 puts这个还蛮好用的； gets在codeblocks里可以用，但是在网页编程上确实用不了；可",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 75,
-    "readingTime": 1,
-    "searchContent": "https://blog.csdn.net/lost\\ in\\ jungle\\ /article/details/82716778 写得针不戳 cin a; 可以直接输入字符串，但是这个输入貌似很操蛋。 puts这个还蛮好用的； gets在codeblocks里可以用，但是在网页编程上确实用不了；可以用cin.getline(数组名)代替。"
   }
 ]

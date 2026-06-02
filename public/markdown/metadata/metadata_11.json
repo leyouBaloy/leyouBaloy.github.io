@@ -1,5 +1,26 @@
 [
   {
+    "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
+    "date": "2022-04-20T11:01:29.000Z",
+    "updatedAt": "2022-04-20T11:01:29.000Z",
+    "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
+    "slug": "line-segments-intersect-rapid-rejection-straddle-test",
+    "legacySlug": "519b05f8",
+    "aliases": [
+      "519b05f8"
+    ],
+    "excerpt": "题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法： 第",
+    "tags": [
+      "刷题",
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 437,
+    "readingTime": 2,
+    "searchContent": "题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法： 第一步：快速排斥实验 如果两线段在x，y的投影都不重合，是不可能会相交的。 换一种说法，就是以两条线段为对角线画矩形，两矩形如果没有重合的地方，那么两线段也一定不相交。 假设给出的四个点为Ax1, Ay1,Ax2,Ay2,Bx1,By1,Bx2,By2，代码如下： 除此之外，这一步还能排除一个特殊情况：共线不相交 第二步：跨立实验 先了解一个线性代数知识：叉积 向量A和向量B叉积，如果AxB 0，那么B在A的逆时针方向，如果AxB 然后对于两直线相交的情况，我们发现它有一个性质，就是向量A1B1叉乘向量A1A2的符号一定与向量A1B2叉乘向量A1A2的符号相反。为了方便写代码，我们把其中一个端点移到零点。 代码： 还有一种特殊的情况，一条线段的端点在另一条线段上，这样的话A1B1与A1A2的叉积为0，我们只要把判断条件加一个等于号就行了。 完整代码 参考资料：https://blog.csdn.net/NEFU kadia/article/details/104462906",
+    "totalPages": 28
+  },
+  {
     "title": "Leetcode821:字符的最短距离——两次遍历",
     "date": "2022-04-19T08:45:09.000Z",
     "updatedAt": "2022-04-19T08:45:09.000Z",
@@ -16,8 +37,7 @@
     "img": "",
     "wordCount": 162,
     "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次s，如果abs(ci 当前位置) 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/shortest distance to a character/solution/zi fu de zui duan ju chi by leetcode sol 2t49/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 虽然是道简单题，但我还是被秀了一脸。",
-    "totalPages": 28
+    "searchContent": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次s，如果abs(ci 当前位置) 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/shortest distance to a character/solution/zi fu de zui duan ju chi by leetcode sol 2t49/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 虽然是道简单题，但我还是被秀了一脸。"
   },
   {
     "title": "Leetcode386:字典序排数——dfs、迭代",
@@ -171,25 +191,5 @@
     "wordCount": 603,
     "readingTime": 2,
     "searchContent": "题目 https://leetcode cn.com/problems/subarray sum equals k/ 不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。 题解 枚举法 枚举法会超时，但可以为我们提供思路。 考虑以j结尾和为 k 的连续子数组个数，我们需要统计符合条件的下标 i的个数。在确定了i和j之后，如果我们再遍历求和，时间复杂度就达到了O(n的3次方)。实际上我们发现sum([i:j]) = sum([i 1:j]) nums[i 1]，这样递推地可以直接求和。时间复杂度降到了O(n的2次方)。 代码： 前缀和+哈希表 我们可以基于方法一利用数据结构进行进一步的优化，我们知道方法一的瓶颈在于对每个 i，我们需要枚举所有的 j 来判断是否符合条件，这一步是否可以优化呢？答案是可以的。 我们定义 pre[i] 为 0..i 里所有数的和，则 pre[i] 可以由 pre[i−1] 递推而来，即： pre[i]=pre[i−1]+nums[i] 那么 j..i 这个子数组和为 k 这个条件我们可以转化为 pre[i]−pre[j−1]==k 简单移项可得符合条件的下标 j 需要满足 pre[j−1]==pre[i]−k 所以我们考虑以 i 结尾的和为 k 的连续子数组个数时只要统计有多少个前缀和为 pre[i]−k 的 pre[j] 即可。我们建立哈希表 mp，以和为键，出现次数为对应的值，记录 pre[i] 出现的次数，从左往右边更新 mp 边计算答案，那么以 i 结尾的答案 mp[pre[i]−k] 即可在 O(1) 时间内得到。最后的答案即为所有下标结尾的和为 k 的子数组个数之和。 需要注意的是，从左往右边更新边计算的时候已经保证了mp[pre[i]−k] 里记录的 pre[j] 的下标范围是 0≤j≤i 。同时，由于 pre[i] 的计算只与前一项的答案有关，因此我们可以不用建立 pre 数组，直接用 pre 变量来记录 pre[i−1] 的答案即可。 AC代码： 实际上这道题的细节我花了很多时间去想，但到现在也没弄懂，先放在这里留个问号吧。"
-  },
-  {
-    "title": "C++和python常用函数",
-    "date": "2022-04-08T12:23:24.000Z",
-    "updatedAt": "2022-04-08T12:23:24.000Z",
-    "file": "c++和python常用函数.md",
-    "slug": "cpp-python-common-functions",
-    "legacySlug": "09ec2d90",
-    "aliases": [
-      "09ec2d90"
-    ],
-    "excerpt": "c++常用函数 sort(v.begin(),v.end()) 默认升序 如果要逆序就麻烦了 max element(v.begin(),v.end()) 返回指针，指向最大元素 pair 1. pair p1(1, 2); 定义和初始化 2. 可以用已有对象初始化pair p2(p1); 3. 没",
-    "tags": [
-      "刷题",
-      "笔记"
-    ],
-    "img": "",
-    "wordCount": 549,
-    "readingTime": 2,
-    "searchContent": "c++常用函数 sort(v.begin(),v.end()) 默认升序 如果要逆序就麻烦了 max element(v.begin(),v.end()) 返回指针，指向最大元素 pair 1. pair p1(1, 2); 定义和初始化 2. 可以用已有对象初始化pair p2(p1); 3. 没有初始化，默认为(0,0) 赋值：p2 = pair (1, 4); 强制类型转换 访问：p2.first,p2.second make pair(1,2) queue() queue que 构造 que.emplace(1,2) emplace自带调用构造函数，而push需要先自己搞出对象再传入 que.front()返回队首元素的引用 que.back()返回队尾元素的引用 que.pop()删除第一个元素 queue.size()元素数量 find() find(v.begin(), v.end(), 3) 查找v中==3的元素的位置，返回指针 priority queue 头文件： include 定义：priority queue p; 默认为大顶堆 或priority queue Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。 如priority queue , vector , decltype(&cmp) q(cmp); 其中比较函数为： 这里定义的是一个储存pair 的小顶堆。 操作（和队列基本操作相同： top 访问队头元素 empty 队列是否为空 size 返回队列内元素个数 push 插入元素到队尾 (并排序) emplace 原地构造一个元素并插入队列 pop 弹出队头元素 swap 交换内容 参考：https://blog.csdn.net/weixin 36888577/article/details/79937886 unordered set() 创建：unordered set occ; 删除：occ.erase('a') 插入：occ.insert('a') 判断是否在set中：occ.count('a') vector< 创建一个n n的二维数组：vector dp(n, vector (n)); 创建变量并赋初始值：vector v(10,1) 长度为10，初值1 dp.push back()，添加一个元素 python常用函数 sorted() 参数说明： iterable 可迭代对象。 key 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。 reverse 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。 返回重新排序的列表。 set() 创建：occ = set() occ = set(iterable比如列表、字符串) 删除：occ.remove('a') 插入：occ.add('a') 判断是否在set中：'a' in occ"
   }
 ]

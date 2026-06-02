@@ -1,5 +1,26 @@
 [
   {
+    "title": "手撕卷积神经网络+反向传播梯度更新",
+    "date": "2025-07-13T07:24:20.000Z",
+    "updatedAt": "2025-07-13T07:24:20.000Z",
+    "file": "手撕卷积神经网络反向传播梯度更新.md",
+    "slug": "cnn-backpropagation-gradient-update-from-scratch",
+    "legacySlug": "8912df88",
+    "aliases": [
+      "8912df88"
+    ],
+    "excerpt": "手撕卷积神经网络 一个简单的卷积神经网络，就4层，分别是InputLayer, conv layer, hidden layer(全连接层 + ReLU激活), output layer 反向传播梯度更新推导 以下是四层网络中每层的反向传播公式（以损失函数 \\( L \\) 为起点，使用偏导数符号）：",
+    "tags": [
+      "笔记",
+      "技能分享"
+    ],
+    "img": "",
+    "wordCount": 602,
+    "readingTime": 2,
+    "searchContent": "手撕卷积神经网络 一个简单的卷积神经网络，就4层，分别是InputLayer, conv layer, hidden layer(全连接层 + ReLU激活), output layer 反向传播梯度更新推导 以下是四层网络中每层的反向传播公式（以损失函数 \\( L \\) 为起点，使用偏导数符号）： OutputLayer 正向传播公式 ： 1. \\( Z = XW + b \\) 2. \\( A = \\text{Softmax}(Z) \\) 3. \\( L = \\text{CrossEntropy}(A, Y) \\) 反向传播公式 （链式法则展开）： 1. \\( \\frac{\\partial L}{\\partial Z} = \\frac{\\partial L}{\\partial A} \\cdot \\frac{\\partial A}{\\partial Z} = A Y \\)（Softmax+交叉熵的梯度简化） 2. \\( \\frac{\\partial L}{\\partial W} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial W} = X^T \\cdot \\frac{\\partial L}{\\partial Z} \\) 3. \\( \\frac{\\partial L}{\\partial b} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial b} = \\sum \\frac{\\partial L}{\\partial Z} \\) 4. \\( \\frac{\\partial L}{\\partial X} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial X} = \\frac{\\partial L}{\\partial Z} \\cdot W^T \\) HiddenLayer 正向传播公式 ： 1. \\( Z = XW + b \\) 2. \\( A = \\text{ReLU}(Z) \\) 反向传播公式 （链式法则展开）： 1. \\( \\frac{\\partial L}{\\partial Z} = \\frac{\\partial L}{\\partial A} \\cdot \\frac{\\partial A}{\\partial Z} = \\frac{\\partial L}{\\partial A} \\cdot \\text{ReLU}'(Z) \\) 2. \\( \\frac{\\partial L}{\\partial W} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial W} = X^T \\cdot \\frac{\\partial L}{\\partial Z} \\) 3. \\( \\frac{\\partial L}{\\partial b} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial b} = \\sum \\frac{\\partial L}{\\partial Z} \\) 4. \\( \\frac{\\partial L}{\\partial X} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial X} = \\frac{\\partial L}{\\partial Z} \\cdot W^T \\) Conv2D 正向传播公式 ： 1. \\( Z = X \\star W + b \\)（\\( \\star \\) 表示卷积操作） 反向传播公式 （链式法则展开）： 1. \\( \\frac{\\partial L}{\\partial W} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial W} = X \\star {\\text{rot}} \\frac{\\partial L}{\\partial Z} \\)（旋转卷积，等价于 \\( X \\) 与 \\( \\frac{\\partial L}{\\partial Z} \\) 的卷积） 2. \\( \\frac{\\partial L}{\\partial b} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial b} = \\sum \\frac{\\partial L}{\\partial Z} \\) 3. \\( \\frac{\\partial L}{\\partial X} = \\frac{\\partial L}{\\partial Z} \\cdot \\frac{\\partial Z}{\\partial X} = \\frac{\\partial L}{\\partial Z} \\star W {\\text{rot}} \\)（旋转权重卷积，等价于 \\( \\frac{\\partial L}{\\partial Z} \\) 与旋转后的 \\( W \\) 的卷积） InputLayer 正向传播公式 ： 1. \\( A = X \\) 反向传播公式 （链式法则展开）： 1. \\( \\frac{\\partial L}{\\partial X} = \\frac{\\partial L}{\\partial A} \\cdot \\frac{\\partial A}{\\partial X} = \\frac{\\partial L}{\\partial A} \\)（恒等传递梯度） 说明 卷积层的特殊处理 ： \\( \\star {\\text{rot}} \\) 表示旋转180度后的卷积（等价于数学上的相关操作），用于计算权重梯度； \\( W {\\text{rot}} \\) 表示旋转后的权重，用于计算输入梯度。",
+    "totalPages": 28
+  },
+  {
     "title": "手撕Attention",
     "date": "2025-06-22T08:49:55.000Z",
     "updatedAt": "2025-06-22T08:49:55.000Z",
@@ -17,8 +38,7 @@
     "img": "",
     "wordCount": 134,
     "readingTime": 1,
-    "searchContent": "第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K.T/sqrt(hidden dim)之后 dropout作用于softmax(Q K.T/sqrt(hidden dim))之后，因为dropout是对概率进行操作的 输出： 第四重境界 Multi Head Attention Multi Head Attention：将hidden dim分成多个头，每个头独立计算attention，最后合并结果",
-    "totalPages": 28
+    "searchContent": "第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K.T/sqrt(hidden dim)之后 dropout作用于softmax(Q K.T/sqrt(hidden dim))之后，因为dropout是对概率进行操作的 输出： 第四重境界 Multi Head Attention Multi Head Attention：将hidden dim分成多个头，每个头独立计算attention，最后合并结果"
   },
   {
     "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
@@ -173,24 +193,5 @@
     "wordCount": 521,
     "readingTime": 2,
     "searchContent": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouveau是一个通过逆向工程开发的开源驱动，被Ubuntu 默认使用，但是Nouveau 一直未获得英伟达官方的认可，所以在使用的时候bug层出不穷。 解决方案是禁用这个驱动，禁用的方法是在开启进入GRUB界面编辑命令，加一小段代码就可以在本次启动禁用nouveau。进入系统之后在Ubuntu的blacklist里添加nouveau，这样以后启动都默认禁用了。然后再安装英伟达官方的驱动。具体教程网上很多。 为什么禁用了显卡驱动，依然可以进系统，并且正常显示图形界面呢？这是因为Ubuntu还内置了通用显卡驱动，只不过这个通用驱动性能非常低，表现为进系统之后只能以很低的分辨率显示。不过没关系，我们只要装好了nvidia官方驱动就能正常显示了。 安装nvidia官方驱动 到官网选择显卡型号，就能下载驱动。下载完是一个.run文件，用sudo运行就可以了。 坑点是安装gcc版本可能要改变，我用的Ubuntu22，默认gcc版本11，但是需要切换成12才行。 安装cuda toolkit 这个也是官网选择合适显卡版本，下载最新的就可以。 坑点是gcc版本和内核版本要对应，有的时候即使对应了也还是会报错，我就是这样。可以点进下方的Installation Guide for Linux链接，我按照这个教程执行了下面这个命令就可以安装了。"
-  },
-  {
-    "title": "Leetcode_209长度最小的子数组——滑动窗口",
-    "date": "2024-11-21T13:28:00.000Z",
-    "updatedAt": "2024-11-21T13:28:00.000Z",
-    "file": "Leetcode_209长度最小的子数组.md",
-    "slug": "leetcode-209-minimum-size-subarray-sum-sliding-window",
-    "legacySlug": "35124327",
-    "aliases": [
-      "35124327"
-    ],
-    "excerpt": "Leetcode 209长度最小的子数组 给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其总和大于等于 target 的长度最小的 子数组 [numsl, numsl+1, ..., numsr 1, numsr] ，并返回其长度 。 如果不存在符合条件的子数组，返",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 201,
-    "readingTime": 1,
-    "searchContent": "Leetcode 209长度最小的子数组 给定一个含有 n 个正整数的数组和一个正整数 target 。 找出该数组中满足其总和大于等于 target 的长度最小的 子数组 [numsl, numsl+1, ..., numsr 1, numsr] ，并返回其长度 。 如果不存在符合条件的子数组，返回 0 。 示例 1： 示例 2： 示例 3： 题解 这题的核心思想是滑动窗口，窗口右端把所有可能都遍历一遍（for循环），左端则需要不断地缩小以找到最优解（while循环）。 我自己的代码是适合我自己理解的。官方题解虽然简洁，我是真理解不了细节。 最讨厌这种需要处理很多细节的问题，我是大老粗，整不来这些。"
   }
 ]

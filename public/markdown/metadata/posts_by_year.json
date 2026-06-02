@@ -4938,6 +4938,24 @@
   ],
   "2026": [
     {
+      "title": "一年前遇到的难题，被AI解决了",
+      "date": "2026-06-02T00:00:00.000Z",
+      "updatedAt": "2026-06-02T00:00:00.000Z",
+      "file": "一年前遇到的难题，被AI解决了.md",
+      "slug": "ai-solved-one-year-old-sse-problem",
+      "legacySlug": "5fdee606",
+      "aliases": [
+        "5fdee606"
+      ],
+      "excerpt": "一年前遇到的难题，被AI解决了 一年前实习的时候，mentor 让我做一个 Agent 问答前端。 这个前端本身并不复杂：用户输入一个问题，后端通过 SSE 流式返回 Agent 的执行过程，前端把这些过程一步步渲染出来。比如先展示“开始分析问题”，然后展示“拆分问题”，再展示“搜索资料”，最后展示",
+      "tags": [
+        "技术思考"
+      ],
+      "img": "",
+      "wordCount": 2085,
+      "readingTime": 6
+    },
+    {
       "title": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式",
       "date": "2026-05-31T22:16:51.000Z",
       "updatedAt": "2026-05-31T22:16:51.000Z",

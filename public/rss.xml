@@ -5,7 +5,14 @@
   <link>https://leyoubaloy.github.io</link>
   <description>读万卷书，行万里路</description>
   <language>zh-CN</language>
-  <lastBuildDate>Sun, 31 May 2026 22:16:51 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 02 Jun 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>一年前遇到的难题，被AI解决了</title>
+    <link>https://leyoubaloy.github.io/post/ai-solved-one-year-old-sse-problem</link>
+    <guid>https://leyoubaloy.github.io/post/ai-solved-one-year-old-sse-problem</guid>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+    <description>一年前遇到的难题，被AI解决了 一年前实习的时候，mentor 让我做一个 Agent 问答前端。 这个前端本身并不复杂：用户输入一个问题，后端通过 SSE 流式返回 Agent 的执行过程，前端把这些过程一步步渲染出来。比如先展示“开始分析问题”，然后展示“拆分问题”，再展示“搜索资料”，最后展示</description>
+  </item>
   <item>
     <title>Vane Agent 搜索流程分析：Speed 与 Balanced 模式</title>
     <link>https://leyoubaloy.github.io/post/vane-agent-search-flow-speed-balanced</link>
@@ -348,13 +355,6 @@
     <guid>https://leyoubaloy.github.io/post/1984-reading-notes</guid>
     <pubDate>Mon, 01 May 2023 16:35:22 GMT</pubDate>
     <description>1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较深入，16世纪文艺复兴时期，英国的莫尔就提出了空想社会主义（马克思的科学社会主义的前身）；后来19世纪英国人率先搞起了资产阶级革命，号称“自由、平等”；到了20</description>
-  </item>
-  <item>
-    <title>Vue+flask实现播放任何视频源（包括rtsp摄像头）</title>
-    <link>https://leyoubaloy.github.io/post/vue-flask-play-rtsp-video-stream-camera</link>
-    <guid>https://leyoubaloy.github.io/post/vue-flask-play-rtsp-video-stream-camera</guid>
-    <pubDate>Sat, 22 Apr 2023 02:40:50 GMT</pubDate>
-    <description>背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。 由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才</description>
   </item>
 </channel>
 </rss>

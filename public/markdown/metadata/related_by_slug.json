@@ -406,6 +406,66 @@
       ]
     }
   ],
+  "ai-solved-one-year-old-sse-problem": [
+    {
+      "title": "思考：Pi Agent 对比 LangGraph",
+      "date": "2026-05-27T15:45:25.000Z",
+      "updatedAt": "2026-05-27T15:45:25.000Z",
+      "slug": "pi-agent-vs-langgraph-comparison",
+      "legacySlug": "d98f4875",
+      "aliases": [
+        "d98f4875"
+      ],
+      "readingTime": 3,
+      "tags": [
+        "技术思考"
+      ]
+    },
+    {
+      "title": "single-agent现阶段明显强于multi-agent",
+      "date": "2026-03-25T03:44:00.000Z",
+      "updatedAt": "2026-03-25T03:44:00.000Z",
+      "slug": "single-agent-better-than-multi-agent",
+      "legacySlug": "7dbff82d",
+      "aliases": [
+        "7dbff82d"
+      ],
+      "readingTime": 3,
+      "tags": [
+        "技术思考"
+      ]
+    }
+  ],
+  "5fdee606": [
+    {
+      "title": "思考：Pi Agent 对比 LangGraph",
+      "date": "2026-05-27T15:45:25.000Z",
+      "updatedAt": "2026-05-27T15:45:25.000Z",
+      "slug": "pi-agent-vs-langgraph-comparison",
+      "legacySlug": "d98f4875",
+      "aliases": [
+        "d98f4875"
+      ],
+      "readingTime": 3,
+      "tags": [
+        "技术思考"
+      ]
+    },
+    {
+      "title": "single-agent现阶段明显强于multi-agent",
+      "date": "2026-03-25T03:44:00.000Z",
+      "updatedAt": "2026-03-25T03:44:00.000Z",
+      "slug": "single-agent-better-than-multi-agent",
+      "legacySlug": "7dbff82d",
+      "aliases": [
+        "7dbff82d"
+      ],
+      "readingTime": 3,
+      "tags": [
+        "技术思考"
+      ]
+    }
+  ],
   "vane-agent-search-flow-speed-balanced": [
     {
       "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
@@ -468,6 +528,20 @@
   ],
   "pi-agent-vs-langgraph-comparison": [
     {
+      "title": "一年前遇到的难题，被AI解决了",
+      "date": "2026-06-02T00:00:00.000Z",
+      "updatedAt": "2026-06-02T00:00:00.000Z",
+      "slug": "ai-solved-one-year-old-sse-problem",
+      "legacySlug": "5fdee606",
+      "aliases": [
+        "5fdee606"
+      ],
+      "readingTime": 6,
+      "tags": [
+        "技术思考"
+      ]
+    },
+    {
       "title": "single-agent现阶段明显强于multi-agent",
       "date": "2026-03-25T03:44:00.000Z",
       "updatedAt": "2026-03-25T03:44:00.000Z",
@@ -483,6 +557,20 @@
     }
   ],
   "d98f4875": [
+    {
+      "title": "一年前遇到的难题，被AI解决了",
+      "date": "2026-06-02T00:00:00.000Z",
+      "updatedAt": "2026-06-02T00:00:00.000Z",
+      "slug": "ai-solved-one-year-old-sse-problem",
+      "legacySlug": "5fdee606",
+      "aliases": [
+        "5fdee606"
+      ],
+      "readingTime": 6,
+      "tags": [
+        "技术思考"
+      ]
+    },
     {
       "title": "single-agent现阶段明显强于multi-agent",
       "date": "2026-03-25T03:44:00.000Z",
@@ -650,6 +738,20 @@
   ],
   "single-agent-better-than-multi-agent": [
     {
+      "title": "一年前遇到的难题，被AI解决了",
+      "date": "2026-06-02T00:00:00.000Z",
+      "updatedAt": "2026-06-02T00:00:00.000Z",
+      "slug": "ai-solved-one-year-old-sse-problem",
+      "legacySlug": "5fdee606",
+      "aliases": [
+        "5fdee606"
+      ],
+      "readingTime": 6,
+      "tags": [
+        "技术思考"
+      ]
+    },
+    {
       "title": "思考：Pi Agent 对比 LangGraph",
       "date": "2026-05-27T15:45:25.000Z",
       "updatedAt": "2026-05-27T15:45:25.000Z",
@@ -665,6 +767,20 @@
     }
   ],
   "7dbff82d": [
+    {
+      "title": "一年前遇到的难题，被AI解决了",
+      "date": "2026-06-02T00:00:00.000Z",
+      "updatedAt": "2026-06-02T00:00:00.000Z",
+      "slug": "ai-solved-one-year-old-sse-problem",
+      "legacySlug": "5fdee606",
+      "aliases": [
+        "5fdee606"
+      ],
+      "readingTime": 6,
+      "tags": [
+        "技术思考"
+      ]
+    },
     {
       "title": "思考：Pi Agent 对比 LangGraph",
       "date": "2026-05-27T15:45:25.000Z",

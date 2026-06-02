@@ -1,5 +1,25 @@
 [
   {
+    "title": "字符数组的输入输出",
+    "date": "2020-11-02T10:56:17.000Z",
+    "updatedAt": "2020-11-02T10:56:17.000Z",
+    "file": "字符数组的输入输出.md",
+    "slug": "char-array-input-output",
+    "legacySlug": "bb8c6a25",
+    "aliases": [
+      "bb8c6a25"
+    ],
+    "excerpt": "https://blog.csdn.net/lost\\ in\\ jungle\\ /article/details/82716778 写得针不戳 cin a; 可以直接输入字符串，但是这个输入貌似很操蛋。 puts这个还蛮好用的； gets在codeblocks里可以用，但是在网页编程上确实用不了；可",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 75,
+    "readingTime": 1,
+    "searchContent": "https://blog.csdn.net/lost\\ in\\ jungle\\ /article/details/82716778 写得针不戳 cin a; 可以直接输入字符串，但是这个输入貌似很操蛋。 puts这个还蛮好用的； gets在codeblocks里可以用，但是在网页编程上确实用不了；可以用cin.getline(数组名)代替。",
+    "totalPages": 28
+  },
+  {
     "title": "用sort函数给数组排序",
     "date": "2020-11-01T20:27:22.000Z",
     "updatedAt": "2020-11-01T20:27:22.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 136,
     "readingTime": 1,
-    "searchContent": "sort函数的调用需要头文件 include 从小到大排： 例如：a\\[50\\]={2,3,5,1, 1},想让它按照从小到大的顺序排列，那么就可以这么写，sort(a,a+5),然后数组就会变成{ 1,1,2,3,5}。 具体代码如下： 从大到小排： 例如：a\\[50\\]={2,3,5,1, 1},想让它按照从大到小的顺序排列，那么就可以这么写，sort(a,a+5,cmp),调用cmp函数,然后数组就会变成{5,3,2,1, 1}。 具体代码如下：",
-    "totalPages": 28
+    "searchContent": "sort函数的调用需要头文件 include 从小到大排： 例如：a\\[50\\]={2,3,5,1, 1},想让它按照从小到大的顺序排列，那么就可以这么写，sort(a,a+5),然后数组就会变成{ 1,1,2,3,5}。 具体代码如下： 从大到小排： 例如：a\\[50\\]={2,3,5,1, 1},想让它按照从大到小的顺序排列，那么就可以这么写，sort(a,a+5,cmp),调用cmp函数,然后数组就会变成{5,3,2,1, 1}。 具体代码如下："
   },
   {
     "title": "cout输出精确到小数点后两位",
@@ -170,24 +189,5 @@
     "wordCount": 299,
     "readingTime": 1,
     "searchContent": "【题目描述】 数学课上，楠楠学习了一个新的知识。 两数相除，如果得不到整数商，会有两种情况：一种是得到有限小数，另一种是得到无限小数。从小数点后某一位开始依次不断地重复出现前一个或一节数字的十进制无限小数，叫做循环小数，如2.9666..., (在数学中它读作“二点九六，六循环” ）， 定义循环小数的缩写法是将第一个循环节以后的数字全部略去，并将第一个循环节首末用括号括起来。 例如： 2.966666... 缩写为 2.9(6) 35.232323…缩写为 35.(23) 楠楠发现，根据循环小数的特征，很快能算出这个循环小数中小数点后第n位的数字，你能吗？ 【输入】 共2行。第一行，包含一个整数n(n≤100000)，表示求小数点后的第n位。第二行，一个字符串，用缩写法表示的一个循环小数。 【输出】 一行，包含一个整数，表示循环小数中小数点后第n位的数字。 For example: Input Result 10 352.19(7) 7 答案"
-  },
-  {
-    "title": "Python-洗牌算法",
-    "date": "2020-10-11T16:11:03.000Z",
-    "updatedAt": "2020-10-11T16:11:03.000Z",
-    "file": "Python-洗牌算法.md",
-    "slug": "python-shuffle-algorithm",
-    "legacySlug": "6c7a9fd6",
-    "aliases": [
-      "6c7a9fd6"
-    ],
-    "excerpt": "原理在这https://www.bilibili.com/video/BV1k7411q7jo 倒序写法 这里在random库下定义了一个函数shuffle 之所以是i+1是因为random.randrange()是左闭右开的，不包括i+1 每次运行这段代码结果应该都是不一样的 正序写法 实际上在r",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 99,
-    "readingTime": 1,
-    "searchContent": "原理在这https://www.bilibili.com/video/BV1k7411q7jo 倒序写法 这里在random库下定义了一个函数shuffle 之所以是i+1是因为random.randrange()是左闭右开的，不包括i+1 每次运行这段代码结果应该都是不一样的 正序写法 实际上在random库中本事提供了这样的函数 这样直接写也是可以的"
   }
 ]

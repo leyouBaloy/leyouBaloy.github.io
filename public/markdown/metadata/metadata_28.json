@@ -1,5 +1,25 @@
 [
   {
+    "title": "Python-洗牌算法",
+    "date": "2020-10-11T16:11:03.000Z",
+    "updatedAt": "2020-10-11T16:11:03.000Z",
+    "file": "Python-洗牌算法.md",
+    "slug": "python-shuffle-algorithm",
+    "legacySlug": "6c7a9fd6",
+    "aliases": [
+      "6c7a9fd6"
+    ],
+    "excerpt": "原理在这https://www.bilibili.com/video/BV1k7411q7jo 倒序写法 这里在random库下定义了一个函数shuffle 之所以是i+1是因为random.randrange()是左闭右开的，不包括i+1 每次运行这段代码结果应该都是不一样的 正序写法 实际上在r",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 99,
+    "readingTime": 1,
+    "searchContent": "原理在这https://www.bilibili.com/video/BV1k7411q7jo 倒序写法 这里在random库下定义了一个函数shuffle 之所以是i+1是因为random.randrange()是左闭右开的，不包括i+1 每次运行这段代码结果应该都是不一样的 正序写法 实际上在random库中本事提供了这样的函数 这样直接写也是可以的",
+    "totalPages": 28
+  },
+  {
     "title": "每日一题--a到z26个字母循环输出",
     "date": "2020-10-10T23:07:49.000Z",
     "updatedAt": "2020-10-10T23:07:49.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 85,
     "readingTime": 1,
-    "searchContent": "题目描述】 根据样例在屏幕上输出一个平行四边形，如果每行字母超过了z，则从a重新开始。 【输入】 一行，包含一个整数n（2<n≤26）。 【输出】 见样例。 For example: 答案 ch = 'a'+ (j + i)%26; 这段代码很有味道，控制了首个字母，以及循环。",
-    "totalPages": 28
+    "searchContent": "题目描述】 根据样例在屏幕上输出一个平行四边形，如果每行字母超过了z，则从a重新开始。 【输入】 一行，包含一个整数n（2<n≤26）。 【输出】 见样例。 For example: 答案 ch = 'a'+ (j + i)%26; 这段代码很有味道，控制了首个字母，以及循环。"
   },
   {
     "title": "每日一题--有进位的加法运算",

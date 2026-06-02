@@ -1,5 +1,25 @@
 [
   {
+    "title": "Mac上自动连接校园网的脚本",
+    "date": "2021-11-24T18:58:03.000Z",
+    "updatedAt": "2021-11-24T18:58:03.000Z",
+    "file": "Mac上自动连接校园网的脚本.md",
+    "slug": "mac-auto-connect-campus-network-script",
+    "legacySlug": "1f902f05",
+    "aliases": [
+      "1f902f05"
+    ],
+    "excerpt": "起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。 第一步 从GitHub上下载一段自动连接校园网的python代码，地址：https://g",
+    "tags": [
+      "技能分享"
+    ],
+    "img": "",
+    "wordCount": 299,
+    "readingTime": 1,
+    "searchContent": "起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。 第一步 从GitHub上下载一段自动连接校园网的python代码，地址：https://github.com/UPCUnofficial/UPCNet 然后解压，修改其中config.py文件。 在config.py文件下输入学号、密码和运营商编号，然后运行 运营商对应编号： 再用终端cd进入该文件夹，pip install 所依赖的库。 运行代码。(以上所述在readme里都有） 成功啦！ 第二步 用文本编辑器创建一个文件，里面打上这行代码： 将文件重命名为XXXX.sh 然后右键— 打开方式— 其它— 所有应用程序— 终端 然后把它放在桌面，每次等连上wifi后点一下就能连接校园网啦。[](https://github.com/UPCUnofficial/UPCNet %E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B)",
+    "totalPages": 28
+  },
+  {
     "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
     "date": "2021-11-21T09:04:54.000Z",
     "updatedAt": "2021-11-21T09:04:54.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 292,
     "readingTime": 1,
-    "searchContent": "问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案 看它给的提示，Please see https://github.blog/2020 12 15 token authentication requirements for git operations/ for more information. 2020年7月，我们宣布打算要求对所有经过身份验证的Git操作使用基于令牌的身份验证（例如，个人访问、OAuth或GitHub应用程序安装令牌）。从2021年8月13日开始，在GitHub.com上验证Git操作时，我们将不再接受帐户密码。 也就是说输入的Password不是登录密码，而是这个Access Token！另外，Username也不是用户名，而是登录邮箱。 获取个人Access Token的方法：https://docs.github.com/en/authentication/keeping your account and data secure/creating a personal access token 记得一定要把repo的权限勾选上 在命令行上使用令牌 一旦您拥有了令牌，在通过HTTPS执行Git操作时，您可以输入令牌而不是密码。 例如，在命令行中，您将输入以下内容： 后续 怎么把Access Token添加到环境变量里呢？",
-    "totalPages": 28
+    "searchContent": "问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案 看它给的提示，Please see https://github.blog/2020 12 15 token authentication requirements for git operations/ for more information. 2020年7月，我们宣布打算要求对所有经过身份验证的Git操作使用基于令牌的身份验证（例如，个人访问、OAuth或GitHub应用程序安装令牌）。从2021年8月13日开始，在GitHub.com上验证Git操作时，我们将不再接受帐户密码。 也就是说输入的Password不是登录密码，而是这个Access Token！另外，Username也不是用户名，而是登录邮箱。 获取个人Access Token的方法：https://docs.github.com/en/authentication/keeping your account and data secure/creating a personal access token 记得一定要把repo的权限勾选上 在命令行上使用令牌 一旦您拥有了令牌，在通过HTTPS执行Git操作时，您可以输入令牌而不是密码。 例如，在命令行中，您将输入以下内容： 后续 怎么把Access Token添加到环境变量里呢？"
   },
   {
     "title": "精准而优雅——MacBook Air",
@@ -170,24 +189,5 @@
     "wordCount": 105,
     "readingTime": 1,
     "searchContent": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,http://localhost， 解决方法 chrome 地址栏输入：chrome://flags/ unsafely treat insecure origin as secure 然后就ok了"
-  },
-  {
-    "title": "certbot自动配置nginx给wordpress站点加https",
-    "date": "2021-09-08T22:42:40.000Z",
-    "updatedAt": "2021-09-08T22:42:40.000Z",
-    "file": "certbot自动配置nginx给wordpress站点加https.md",
-    "slug": "certbot-auto-config-nginx-wordpress-https",
-    "legacySlug": "8644ae3a",
-    "aliases": [
-      "8644ae3a"
-    ],
-    "excerpt": "思路 1. 安装snap 2. 安装certbot 3. 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置nginx的时候报错如图 报错的意思就是说，在nginx的配置文件中server",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "",
-    "wordCount": 288,
-    "readingTime": 1,
-    "searchContent": "思路 1. 安装snap 2. 安装certbot 3. 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置nginx的时候报错如图 报错的意思就是说，在nginx的配置文件中server\\ name字段不正确。我把它修改成了aiupc.xyz，仍然报错。 后来问了我哥，才知道nginx配置文件最底下有一行： wordpress真正的配置文件其实是在/usr/local/nginx/conf/vhost文件夹里。把这个里面的server\\ name改一下就OK了。 server\\ name不能随意 server name = aiupc.xyz 和 server name = www.aiupc.xyz 是不一样的，弄混的话会导致站点一些图片链接浏览器不予显示。 我的解决方案：nginx配置server name = www.aiupc.xyz，server name = aiupc.xyz, 域名解析aiupc.xyz和www.aiupc.xyz， certbot给aiupc.xyz和www.aiupc.xyz都申请证书， wordpress后台设置里url写https://www.aiupc.xyz， 这样，在浏览器中打aiupc.xyz也会跳转到www.aiupc.xyz 的，这个问题应该已经彻底解决了。"
   }
 ]
