@@ -5,7 +5,14 @@
   <link>https://leyoubaloy.github.io</link>
   <description>读万卷书，行万里路</description>
   <language>zh-CN</language>
-  <lastBuildDate>Tue, 02 Jun 2026 00:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 03 Jun 2026 23:30:00 GMT</lastBuildDate>
+  <item>
+    <title>我让 Agent 跑完西二旗租房：网易大楼周边 147 个小区公寓口碑表</title>
+    <link>https://leyoubaloy.github.io/post/agent-xierqi-netease-renting-research</link>
+    <guid>https://leyoubaloy.github.io/post/agent-xierqi-netease-renting-research</guid>
+    <pubDate>Wed, 03 Jun 2026 23:30:00 GMT</pubDate>
+    <description>我让 Agent 跑完西二旗租房：网易大楼周边 147 个小区公寓口碑表 最近在看西二旗网易大楼附近的租房选择，最麻烦的不是“有没有房”，而是信息太碎：地图上是一批 POI，租房平台上是一批价格，论坛和问答里又散落着隔音、物业、通勤、周边配套这些真正影响居住体验的细节。 于是我让 Agent 做了一</description>
+  </item>
   <item>
     <title>一年前遇到的难题，被AI解决了</title>
     <link>https://leyoubaloy.github.io/post/ai-solved-one-year-old-sse-problem</link>
@@ -348,13 +355,6 @@
     <guid>https://leyoubaloy.github.io/post/flask-thread-features</guid>
     <pubDate>Sat, 01 Jul 2023 02:15:46 GMT</pubDate>
     <description>前言 Flask是我最喜欢用的后端，以为它实在是太简单了，拿来做小型项目速度嗖嗖的。最近做比赛需要将后端通过socket连接到硬件设备，socket是有状态的，有连接数量的限制，所以要格外注意它的状态，Flask的一些特性会改变状态，如果不注意的话会导致很多bug，我踩了很多坑，在这里总结一下。 F</description>
-  </item>
-  <item>
-    <title>《1984》读书笔记</title>
-    <link>https://leyoubaloy.github.io/post/1984-reading-notes</link>
-    <guid>https://leyoubaloy.github.io/post/1984-reading-notes</guid>
-    <pubDate>Mon, 01 May 2023 16:35:22 GMT</pubDate>
-    <description>1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较深入，16世纪文艺复兴时期，英国的莫尔就提出了空想社会主义（马克思的科学社会主义的前身）；后来19世纪英国人率先搞起了资产阶级革命，号称“自由、平等”；到了20</description>
   </item>
 </channel>
 </rss>

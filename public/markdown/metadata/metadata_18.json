@@ -1,5 +1,25 @@
 [
   {
+    "title": "讲一个能满足和感动自己的故事！",
+    "date": "2021-11-24T21:25:56.000Z",
+    "updatedAt": "2021-11-24T21:25:56.000Z",
+    "file": "讲一个能满足和感动自己的故事！.md",
+    "slug": "how-to-write-a-good-paper-tell-a-story",
+    "legacySlug": "7dbb12f1",
+    "aliases": [
+      "7dbb12f1"
+    ],
+    "excerpt": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。 如何写好论文 细节，careful 仔细画每一幅图 不要有typo（词句小错误） 不要用长句 避免过度修饰，冗长 至少修改30遍 逻辑通顺 写提纲 理论、实验点支撑 支撑什么观点？从哪些角度？ 讲一个合理的故事，前呼后应，自圆其",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 371,
+    "readingTime": 1,
+    "searchContent": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。 如何写好论文 细节，careful 仔细画每一幅图 不要有typo（词句小错误） 不要用长句 避免过度修饰，冗长 至少修改30遍 逻辑通顺 写提纲 理论、实验点支撑 支撑什么观点？从哪些角度？ 讲一个合理的故事，前呼后应，自圆其说 拍电影 宁浩《疯狂的石头》、《疯狂的赛车》、《我不是药神》 张艺谋《影》（不讲逻辑） 拒绝言过其实、过度包装、前言不搭后语 花时间认真挑选研究方向，科研问题 拒绝incremental（灌水，小改动） Large margin策略，从0到1，从粗糙到细致 理解，深刻，洞察（insight） 不必随大流，make difference 《Embedded vision summit 2018》 深入思考，长远打算 小问题 本质性，创新性，冷门性，可用性 考虑好未来系统框架 一个好的论文一定是小的，朴素的 四个建议 多做报告、精心准备报告slides 参与社交活动 三句话概括自己的研究方向 让外行人理解 大智若愚、大道至简 拒绝诱惑、不要以功利的目标做科研、不要丢失情怀 举重若轻、游刃有余 当成一种体验而去好好感受 无为而无不为 讲一个能够满足和感动自己的故事！",
+    "totalPages": 29
+  },
+  {
     "title": "Mac上自动连接校园网的脚本",
     "date": "2021-11-24T18:58:03.000Z",
     "updatedAt": "2021-11-24T18:58:03.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 299,
     "readingTime": 1,
-    "searchContent": "起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。 第一步 从GitHub上下载一段自动连接校园网的python代码，地址：https://github.com/UPCUnofficial/UPCNet 然后解压，修改其中config.py文件。 在config.py文件下输入学号、密码和运营商编号，然后运行 运营商对应编号： 再用终端cd进入该文件夹，pip install 所依赖的库。 运行代码。(以上所述在readme里都有） 成功啦！ 第二步 用文本编辑器创建一个文件，里面打上这行代码： 将文件重命名为XXXX.sh 然后右键— 打开方式— 其它— 所有应用程序— 终端 然后把它放在桌面，每次等连上wifi后点一下就能连接校园网啦。[](https://github.com/UPCUnofficial/UPCNet %E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B)",
-    "totalPages": 28
+    "searchContent": "起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。 第一步 从GitHub上下载一段自动连接校园网的python代码，地址：https://github.com/UPCUnofficial/UPCNet 然后解压，修改其中config.py文件。 在config.py文件下输入学号、密码和运营商编号，然后运行 运营商对应编号： 再用终端cd进入该文件夹，pip install 所依赖的库。 运行代码。(以上所述在readme里都有） 成功啦！ 第二步 用文本编辑器创建一个文件，里面打上这行代码： 将文件重命名为XXXX.sh 然后右键— 打开方式— 其它— 所有应用程序— 终端 然后把它放在桌面，每次等连上wifi后点一下就能连接校园网啦。[](https://github.com/UPCUnofficial/UPCNet %E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B)"
   },
   {
     "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
@@ -170,24 +189,5 @@
     "wordCount": 212,
     "readingTime": 1,
     "searchContent": "获奖名单： 排名不分先后，恭喜以上获奖同学。 领奖须知： 第一步： 扫描二维码，注册飞桨人工智能训练平台aistudio（需要手机号） 第二步： 在gitee开源社区上为首家开源国产深度学习框架paddle paddle点个star（如果没有账号，请注册一个） 第三步： 将您的aistudio注册手机号和gitee注册手机号（或邮箱）填入在线表格：【腾讯文档】百度飞桨ai知识竞赛获奖名单https://docs.qq.com/sheet/DY1JBVkR3dmtaR2d1 第四步： 加qq群：931294105 与群主孙百乐联系领取奖品 其它说明 1. 若想更换奖品，请自行联系其他获奖者，并在备注中写清楚“与XXX更换” 2. 小度雨伞暂时没有到货，请获奖同学等待一段时间"
-  },
-  {
-    "title": "浏览器不支持getUserMedia",
-    "date": "2021-09-23T15:58:12.000Z",
-    "updatedAt": "2021-09-23T15:58:12.000Z",
-    "file": "浏览器不支持getUserMedia.md",
-    "slug": "fix-browser-getusermedia-not-supported",
-    "legacySlug": "2aef21c9",
-    "aliases": [
-      "2aef21c9"
-    ],
-    "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,http://localhost， 解决方法 chrome 地址栏输入：",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "",
-    "wordCount": 105,
-    "readingTime": 1,
-    "searchContent": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,http://localhost， 解决方法 chrome 地址栏输入：chrome://flags/ unsafely treat insecure origin as secure 然后就ok了"
   }
 ]

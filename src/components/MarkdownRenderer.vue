@@ -118,6 +118,7 @@ import { buildPostMarkdown, getMarkdownPagePath } from '@/utils/markdownExport';
 import { normalizeLegacyFigureShortcodes, normalizeRenderedLegacyFigureShortcodes } from '@/utils/legacyShortcodes';
 
 const CodeBlock = defineAsyncComponent(() => import('./CodeBlock.vue'));
+const RentingDataTable = defineAsyncComponent(() => import('./RentingDataTable.vue'));
 
 const props = defineProps({
   slug: {
@@ -418,6 +419,13 @@ const renderVNode = (nodes) => {
           alt: node.getAttribute('alt'),
           loading: 'lazy',
           decoding: 'async'
+        });
+      }
+
+      if (tagName === 'renting-data-table') {
+        return h(RentingDataTable, {
+          src: node.getAttribute('src'),
+          title: node.getAttribute('title') || ''
         });
       }
 

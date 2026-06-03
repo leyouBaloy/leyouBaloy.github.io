@@ -1,5 +1,25 @@
 [
   {
+    "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
+    "date": "2022-04-09T04:08:07.000Z",
+    "updatedAt": "2022-04-09T04:08:07.000Z",
+    "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
+    "slug": "leetcode-560-subarray-sum-equals-k",
+    "legacySlug": "16f00348",
+    "aliases": [
+      "16f00348"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/subarray sum equals k/ 不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。 题解 枚举法 枚举法会超时，但可以为我们提供思路。 考虑以j结尾和为 k 的连续子数组个数，我们需要统计符合条件的下标",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 603,
+    "readingTime": 2,
+    "searchContent": "题目 https://leetcode cn.com/problems/subarray sum equals k/ 不能用滑动窗口，因为右指针不一定递增。不能用dp，会超时溢出。 题解 枚举法 枚举法会超时，但可以为我们提供思路。 考虑以j结尾和为 k 的连续子数组个数，我们需要统计符合条件的下标 i的个数。在确定了i和j之后，如果我们再遍历求和，时间复杂度就达到了O(n的3次方)。实际上我们发现sum([i:j]) = sum([i 1:j]) nums[i 1]，这样递推地可以直接求和。时间复杂度降到了O(n的2次方)。 代码： 前缀和+哈希表 我们可以基于方法一利用数据结构进行进一步的优化，我们知道方法一的瓶颈在于对每个 i，我们需要枚举所有的 j 来判断是否符合条件，这一步是否可以优化呢？答案是可以的。 我们定义 pre[i] 为 0..i 里所有数的和，则 pre[i] 可以由 pre[i−1] 递推而来，即： pre[i]=pre[i−1]+nums[i] 那么 j..i 这个子数组和为 k 这个条件我们可以转化为 pre[i]−pre[j−1]==k 简单移项可得符合条件的下标 j 需要满足 pre[j−1]==pre[i]−k 所以我们考虑以 i 结尾的和为 k 的连续子数组个数时只要统计有多少个前缀和为 pre[i]−k 的 pre[j] 即可。我们建立哈希表 mp，以和为键，出现次数为对应的值，记录 pre[i] 出现的次数，从左往右边更新 mp 边计算答案，那么以 i 结尾的答案 mp[pre[i]−k] 即可在 O(1) 时间内得到。最后的答案即为所有下标结尾的和为 k 的子数组个数之和。 需要注意的是，从左往右边更新边计算的时候已经保证了mp[pre[i]−k] 里记录的 pre[j] 的下标范围是 0≤j≤i 。同时，由于 pre[i] 的计算只与前一项的答案有关，因此我们可以不用建立 pre 数组，直接用 pre 变量来记录 pre[i−1] 的答案即可。 AC代码： 实际上这道题的细节我花了很多时间去想，但到现在也没弄懂，先放在这里留个问号吧。",
+    "totalPages": 29
+  },
+  {
     "title": "C++和python常用函数",
     "date": "2022-04-08T12:23:24.000Z",
     "updatedAt": "2022-04-08T12:23:24.000Z",
@@ -17,8 +37,7 @@
     "img": "",
     "wordCount": 549,
     "readingTime": 2,
-    "searchContent": "c++常用函数 sort(v.begin(),v.end()) 默认升序 如果要逆序就麻烦了 max element(v.begin(),v.end()) 返回指针，指向最大元素 pair 1. pair p1(1, 2); 定义和初始化 2. 可以用已有对象初始化pair p2(p1); 3. 没有初始化，默认为(0,0) 赋值：p2 = pair (1, 4); 强制类型转换 访问：p2.first,p2.second make pair(1,2) queue() queue que 构造 que.emplace(1,2) emplace自带调用构造函数，而push需要先自己搞出对象再传入 que.front()返回队首元素的引用 que.back()返回队尾元素的引用 que.pop()删除第一个元素 queue.size()元素数量 find() find(v.begin(), v.end(), 3) 查找v中==3的元素的位置，返回指针 priority queue 头文件： include 定义：priority queue p; 默认为大顶堆 或priority queue Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。 如priority queue , vector , decltype(&cmp) q(cmp); 其中比较函数为： 这里定义的是一个储存pair 的小顶堆。 操作（和队列基本操作相同： top 访问队头元素 empty 队列是否为空 size 返回队列内元素个数 push 插入元素到队尾 (并排序) emplace 原地构造一个元素并插入队列 pop 弹出队头元素 swap 交换内容 参考：https://blog.csdn.net/weixin 36888577/article/details/79937886 unordered set() 创建：unordered set occ; 删除：occ.erase('a') 插入：occ.insert('a') 判断是否在set中：occ.count('a') vector< 创建一个n n的二维数组：vector dp(n, vector (n)); 创建变量并赋初始值：vector v(10,1) 长度为10，初值1 dp.push back()，添加一个元素 python常用函数 sorted() 参数说明： iterable 可迭代对象。 key 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。 reverse 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。 返回重新排序的列表。 set() 创建：occ = set() occ = set(iterable比如列表、字符串) 删除：occ.remove('a') 插入：occ.add('a') 判断是否在set中：'a' in occ",
-    "totalPages": 28
+    "searchContent": "c++常用函数 sort(v.begin(),v.end()) 默认升序 如果要逆序就麻烦了 max element(v.begin(),v.end()) 返回指针，指向最大元素 pair 1. pair p1(1, 2); 定义和初始化 2. 可以用已有对象初始化pair p2(p1); 3. 没有初始化，默认为(0,0) 赋值：p2 = pair (1, 4); 强制类型转换 访问：p2.first,p2.second make pair(1,2) queue() queue que 构造 que.emplace(1,2) emplace自带调用构造函数，而push需要先自己搞出对象再传入 que.front()返回队首元素的引用 que.back()返回队尾元素的引用 que.pop()删除第一个元素 queue.size()元素数量 find() find(v.begin(), v.end(), 3) 查找v中==3的元素的位置，返回指针 priority queue 头文件： include 定义：priority queue p; 默认为大顶堆 或priority queue Type为数据类型， Container为保存数据的容器，Functional为元素比较方式。 如priority queue , vector , decltype(&cmp) q(cmp); 其中比较函数为： 这里定义的是一个储存pair 的小顶堆。 操作（和队列基本操作相同： top 访问队头元素 empty 队列是否为空 size 返回队列内元素个数 push 插入元素到队尾 (并排序) emplace 原地构造一个元素并插入队列 pop 弹出队头元素 swap 交换内容 参考：https://blog.csdn.net/weixin 36888577/article/details/79937886 unordered set() 创建：unordered set occ; 删除：occ.erase('a') 插入：occ.insert('a') 判断是否在set中：occ.count('a') vector< 创建一个n n的二维数组：vector dp(n, vector (n)); 创建变量并赋初始值：vector v(10,1) 长度为10，初值1 dp.push back()，添加一个元素 python常用函数 sorted() 参数说明： iterable 可迭代对象。 key 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。 reverse 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。 返回重新排序的列表。 set() 创建：occ = set() occ = set(iterable比如列表、字符串) 删除：occ.remove('a') 插入：occ.add('a') 判断是否在set中：'a' in occ"
   },
   {
     "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
@@ -171,24 +190,5 @@
     "wordCount": 119,
     "readingTime": 1,
     "searchContent": "题目 https://leetcode cn.com/problems/house robber/ 题解 看官方题解吧，官方题解写的真好。 感想 我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动态规划是很灵活的算法，很多题目想不到可以用动态规划来解决。要多练习才能融会贯通。"
-  },
-  {
-    "title": "Leetcode113:路径总和——dfs、回溯",
-    "date": "2022-03-30T11:19:10.000Z",
-    "updatedAt": "2022-03-30T11:19:10.000Z",
-    "file": "Leetcode113_路径总和II——dfs、回溯.md",
-    "slug": "leetcode-113-path-sum-ii-dfs-backtracking",
-    "legacySlug": "d1d4a3c4",
-    "aliases": [
-      "d1d4a3c4"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/path sum ii/ 题解 dfs无回溯 我们用深度优先搜索，在搜索时把当前路径记录下来为nums。如果满足 1. sum(nums)==targetSum； 2. 该节点是叶节点； 就记录下这个路径。搜索完成后，我们就能把",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 434,
-    "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/path sum ii/ 题解 dfs无回溯 我们用深度优先搜索，在搜索时把当前路径记录下来为nums。如果满足 1. sum(nums)==targetSum； 2. 该节点是叶节点； 就记录下这个路径。搜索完成后，我们就能把所有满足条件的路径找出来了。 代码的总体框架就是一个深度优先搜索，在这个框架的基础上修改使其符合题意。这是写代码的思路。下面是自己写的代码： 细节： 在往下递归是我传的参数不是nums的引用，而是复制了一个nums传给下一个函数。因此在做每一步递归时都有专属于它的一个nums，所以这段代码没有用到回溯。占用空间也比较大。 上面一点很重要！ dfs、回溯 如果把nums.copy()改成nums，然后在backtracking()的末尾加上nums.pop()，就是回溯了。 这样的话，传递的就是nums的引用，所有的递归过程用的都是同一个nums。在每次递归结束，往上回溯的时候通过pop()删去nums中最后一个元素。 把这段代码跟Leetcode78题放在一起看，发现都是在合适的位置加一个pop()，这其实是回溯的重要特点。 时间和空间复杂度：不会算... 记录父节点、bfs 还有个很聪明的做法，就是用一个哈希表来每一个节点的父节点。这样，不用记录路径，只记录累加和。每找到一个满足条件的叶节点，就从该节点出发向父节点迭代，还原路径。 代码在官方题解～"
   }
 ]

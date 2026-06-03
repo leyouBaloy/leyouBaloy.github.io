@@ -1,5 +1,25 @@
 [
   {
+    "title": "Leetcode435:重叠区间——动态规划、贪心",
+    "date": "2022-03-20T09:41:58.000Z",
+    "updatedAt": "2022-03-20T09:41:58.000Z",
+    "file": "Leetcode435_重叠区间——动态规划、贪心.md",
+    "slug": "leetcode-435-non-overlapping-intervals-dp-greedy",
+    "legacySlug": "7f0b86db",
+    "aliases": [
+      "7f0b86db"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/non overlapping intervals/ 这题我竟然一年前做过，第二遍再做的时候一点印象都没有。 看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算法水平还不如一年前？？？",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 501,
+    "readingTime": 2,
+    "searchContent": "题目 https://leetcode cn.com/problems/non overlapping intervals/ 这题我竟然一年前做过，第二遍再做的时候一点印象都没有。 看了下提交记录，发现一年前做的时候代码还是自己敲上去的，一年之后咋就什么都不会了呢？难道我的算法水平还不如一年前？？？ 题解 做的时候思路跑偏了，总想着把有重叠的区间找出来剔除掉。换一个思路，可以去寻找不重叠的最大区间数n，然后拿all n就是最小重叠区间的数量。 贪心的解法其实不难理解，只是不太容易想到（因为我是菜鸡qwq）： 思路：可以把这题的情境想象成一个预定会议问题，区间的左右两端就是会议的开始时间和结束时间，要求会议时间不能重叠，寻找一个能安排最多会议次数的序列。那么我们先找到最先结束的那个会议，放在最开头。然后从剩下的会议里找到最先结束的，同时开始时间不早于第一个会议结束时间的那个会议，放在第二个。以此类推...就完成啦。 实际做题的时候有个技巧，就是可以先按照会议结束的时间（即区间右端点）进行排序。这样代码会好写很多。 上不是自己写的代码： 复杂度分析：排序nlogn+遍历n，因为nlogn的幂次高，所以O(nlogn+n)=O(nlogn)，故时间复杂度O(nlogn) 空间复杂度：O(logn)，排序所需要的栈空间 还有一种 动态规划 的方法，是按照左端点进行排序，然后用f[i]表示「以区间 i 为最后一个区间，可以选出的区间数量的最大值」来进行状态转移。 代码比贪心复杂，时间复杂度也大一点，懒得去研究了。",
+    "totalPages": 29
+  },
+  {
     "title": "Leetcode240:搜索二维矩阵——二分、矩阵",
     "date": "2022-03-19T09:55:44.000Z",
     "updatedAt": "2022-03-19T09:55:44.000Z",
@@ -16,8 +36,7 @@
     "img": "",
     "wordCount": 247,
     "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/search a 2d matrix ii/ 题解 法一：逐行二分 没啥好说的，代码可以参考一下 对一行使用二分查找时间复杂度O(logm)，对n行使用二分查找时间复杂度O(nlogm)。 法二：巧妙的利用性质 观察矩阵最右上角的元素： 它是所在行最大的元素 它是所在列最小的元素 这就有点像二分法了。对于一个目标数target，如果target matrix[row][col]，则它一定不在第row行。 所以我们只要判断target和matrix[row][col]的大小，就能排除某一行或某一列的所有元素。 上代码： 最多把所有的行和列都排除一遍，时间复杂度只有O(m+n)。这个方法很巧妙！ 其实关注左下角的元素也是一样的： 它是所在行最小的元素 它是所在列最大的元素 明白了就不觉得难了。",
-    "totalPages": 28
+    "searchContent": "题目 https://leetcode cn.com/problems/search a 2d matrix ii/ 题解 法一：逐行二分 没啥好说的，代码可以参考一下 对一行使用二分查找时间复杂度O(logm)，对n行使用二分查找时间复杂度O(nlogm)。 法二：巧妙的利用性质 观察矩阵最右上角的元素： 它是所在行最大的元素 它是所在列最小的元素 这就有点像二分法了。对于一个目标数target，如果target matrix[row][col]，则它一定不在第row行。 所以我们只要判断target和matrix[row][col]的大小，就能排除某一行或某一列的所有元素。 上代码： 最多把所有的行和列都排除一遍，时间复杂度只有O(m+n)。这个方法很巧妙！ 其实关注左下角的元素也是一样的： 它是所在行最小的元素 它是所在列最大的元素 明白了就不觉得难了。"
   },
   {
     "title": "Roboflow+colab优雅地训练yolov5模型",
@@ -170,24 +189,5 @@
     "wordCount": 436,
     "readingTime": 2,
     "searchContent": "题目 本题来自：https://leetcode cn.com/problems/binary tree level order traversal/ [102. 二叉树的层序遍历] 难度中等1216收藏分享切换为英文接收动态反馈 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。 示例 1： 示例 2： 示例 3： 提示： 树中节点数目在范围 [0, 2000] 内 1000 v里储存一棵完全二叉树，然后用函数get n(int index)确定下标为index的节点所在的层数。最后组织成提交所用的格式。 然鹅，我调了两个小时代码只过了11/34 qwq。 代码不能白写，先贴上： 官方题解的骚操作 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/binary tree level order traversal/solution/er cha shu de ceng xu bian li by leetcode solution/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 先看一种朴素的方法（虽然是“朴素”的方法，但也比我的方法要巧妙，它在进行广度优先搜索时就解决了层数的问题） ： 然后针对这题，可以进行如下优化，概括来说就是每次拓展一层的节点（“拓展”这个词用的真好） ： 数学证明，其实这个也很容易想通 ： 代码 ： 复杂度分析 记树上所有节点的个数为 n。 时间复杂度：每个点进队出队各一次，故渐进时间复杂度为 O(n)。 空间复杂度：队列中元素的个数不超过 n 个，故渐进空间复杂度为 O(n)。 这代码写的也很beautiful啊，真是太tm妙啦！"
-  },
-  {
-    "title": "杨辉三角——数组、动态规划",
-    "date": "2022-03-10T09:04:50.000Z",
-    "updatedAt": "2022-03-10T09:04:50.000Z",
-    "file": "杨辉三角——数组、动态规划.md",
-    "slug": "pascals-triangle-array-dynamic-programming",
-    "legacySlug": "0aac7f3e",
-    "aliases": [
-      "0aac7f3e"
-    ],
-    "excerpt": "题目 本题来自：https://leetcode cn.com/problems/pascals triangle/ [118. 杨辉三角] 难度简单708收藏分享切换为英文接收动态反馈 给定一个非负整数 numRows， 生成「杨辉三角」的前 numRows 行。 在「杨辉三角」中，每个数是它左上",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 202,
-    "readingTime": 1,
-    "searchContent": "题目 本题来自：https://leetcode cn.com/problems/pascals triangle/ [118. 杨辉三角] 难度简单708收藏分享切换为英文接收动态反馈 给定一个非负整数 numRows， 生成「杨辉三角」的前 numRows 行。 在「杨辉三角」中，每个数是它左上方和右上方的数的和。 示例 1: 示例 2: 提示: 1 <= numRows <= 30 题解 找规律，第i行第j个数等于第i 1行第j 1个数加第i 1行第j个数，即res[i][j]=res[i 1][j 1]+res[i][j]。 一开始我弄错一个变量，导致数组越界，找了半天都没找出来，我还以为是c++的问题，就换了python写，python的报错比较友好，终于让我发现了错误的地方。 所以python代码： c艹代码："
   }
 ]
