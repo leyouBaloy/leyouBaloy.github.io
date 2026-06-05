@@ -7,7 +7,6 @@ slug: selenium-crawl-class-schedule
 draft: false
 title: selenium爬教务处课表
 ---
-
 ```
 from selenium import webdriver
 from bs4 import BeautifulSoup

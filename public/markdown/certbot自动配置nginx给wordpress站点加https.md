@@ -9,7 +9,6 @@ slug: certbot-auto-config-nginx-wordpress-https
 draft: false
 title: certbot自动配置nginx给wordpress站点加https
 ---
-
 # 思路
 
 1.  安装snap

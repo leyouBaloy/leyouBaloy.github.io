@@ -7,7 +7,6 @@ slug: matplotlib-plot-heat-engine-efficiency-curve
 draft: false
 title: matplotlib作热机效率随负载大小变化曲线图
 ---
-
 大物实验得到的数据，用python的matplotlib很方便处理
 
 数据准备：

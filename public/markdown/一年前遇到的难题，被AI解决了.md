@@ -6,8 +6,8 @@ slug: ai-solved-one-year-old-sse-problem
 title: 一年前遇到的难题，被AI解决了
 img: 
 tags: [AI, Codex, SSE, 前端]
+draft: false
 ---
-
 # 一年前遇到的难题，被AI解决了
 
 一年前实习的时候，mentor 让我做一个 Agent 问答前端。

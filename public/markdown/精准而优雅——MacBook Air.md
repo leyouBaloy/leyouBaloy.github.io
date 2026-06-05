@@ -4,31 +4,11 @@ categories:
 - 随笔杂记
 date: 2021-11-14 10:32:04
 slug: macbook-air-m1-review
-draft: false
+draft: true
 title: 精准而优雅——MacBook Air
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:47:08.771Z
 ---
-
-# 我的第一台macbook
-
-犹豫了一年，终于在2021年11月份买了这台m1版本的macbook air。非常感谢我哥借给我不敢想象的8k块。
-
-# 精准
-
-在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求：
-
-*   不打游戏
-*   轻薄的机身、超长的续航，我可以带出去一整天（这个很重要！
-*   堪比pro的性能
-*   类unix系统，舒服使用终端
-*   没有风扇，安静写代码
-*   非常出色的屏幕，长时间看都不累
-*   基本适配软件开发所需的软件
-*   恰到好处的装逼
-
-实际上，这台m1的MacBook Air可能是苹果最具性价比的电脑之一，学生党完全可以考虑入手！
-
-# 优雅
-
-对于计算机专业的学生来说，电脑就是老婆。而这台macbook就如一个俄罗斯美人，不仅干活猛，还好看。希望使用这台优雅的电脑能帮助我改掉以前在windows上养成的坏习惯，比如资料胡乱放。
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/macbook-1024x768.jpg)
+<!-- encrypted:draft-body:xor-base64 -->
+bWfR0fiD/NGElPim3dO99cElAhs7ODwYXUeh6e6n/eTX6uGR4rGfysPWhMKgjNGN3uiw/5BmcldivcPFeVKexd+3yOqp/9Oz9cqnjMmC+upcS5T+sd7S69DD7QkHNgFXOylFMjEIksjhkcTJtsvvq8L8v//uqbvBgub/1PrskIKhqM+mvdHpgMDB3tfxjeL5nevMWxO8ysSQ189MaXRvq/2NteDzUDuf79/chsaik8ON3tyy/4S9xek+ORkTJwwTvNj5lc/iotv9p8b+1MPRmua9nsv60bvzob7Kj9zes+u3u/7pt+D3mcvekPrSt8vEqf75v/Ljq4jmiMnW1cHEkZmEpvivv8TfjuHW29TAge7enOnnhuTxsdvisNH6itDDo/O/tcn2vYPElvC/39TD0eLIjNDmh4LSpO3Cv+D1of/4v+bRnOvXTGl9b2xv1+jqk9OinMvP37DBTR15SUSO6NjQwsaCydyc7fKLwvK00/K/+8OKwvCr1be33NiyudCcy7XextbS1saA3fCGgPKn4um99Mqs2/i/wueW8+Sp39+n89bX6M2Q5LmT9PrRns+oi9hjTkZ1Q9306IP8zAoDJ4Ti3bHT1L/O+2l9b2xv1OHcADRYApTEgt/12Njl5Yzux4Wk2abY7L/u2a/Y8L78/Hl9bWZDsf3tqa/ZjtbU1/P0mIW0q+m+sPT9g9P63O/hgvPZcFtoQ1iwys2W7/Wj5O2nxf3UyuOQ676fyuLWhMKuouaP89C89Iyz3u6628eV8O6f7fhZWXdtZobI9arTn7nn97O095vKltz18dLl6YHpxIWx1Kv507/g9aDe173s5Xl9bWZDsc78qrvggtDn1N73kKO8puSysOnYbF+Glsqr/Na8wvun3/Sx6MqW2P0rUrDVyAJSMyUaNVpaMh5L3cHo39rUgv76i7PtpPvPvubxrebPv9f0l+z6oMzDqNbL1MTSnd6gnsr83YDOqIvVjMnAsvenscf/tvb2lM3Lndb4t8jypcbgv9bdqrb1gfzR3sbyfTMbbqOLwYD/419p3fv7genWkt/phNbOsc/Js/XVh+/Vq9W3tcrTvaXlleqc0OHz2OXlg/Lgi7zFp9XivuLeoOP5vP7VkNfPruPbp/PW1t/XGDtSGBwYUt3+9tL/64De1YeA/qba17/H5q71177p3Zft96nf26v0wtfr4pDjg5zHzN601aiL1YHb/rDGhbPe7rDY+JTw757FzLfO6KrSy7/w1aq84IPJwtjh9pCjvKnTgrHt9Y7W3t3s7IDZ8Zz52YXs4LHd+rP244bewqnTmycOGz5eDQCTgbKrwoy/4fSBz+fdyc2B6vic8ueMxNWx/Oey68SL4suq2aq45NS+iMuV44fbzsU9U0g/O30LTCAyFml3VRwxARQ2MH5CZXhxUW53eXgBfgQaKR8bA1pKUC8pUDEIDUg4Gkk3LgomPFQSJw5XNC4jGjRiMRN6LCMhRzUJAXVECh8YWFw9aAVpW1VJZFIXOSMGMTcVGmVSSGtjK0RhdWgJJyhl

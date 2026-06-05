@@ -17,7 +17,7 @@
     "wordCount": 1261,
     "readingTime": 4,
     "searchContent": "我让 Agent 跑完西二旗租房：网易大楼周边 147 个小区公寓口碑表 最近在看西二旗网易大楼附近的租房选择，最麻烦的不是“有没有房”，而是信息太碎：地图上是一批 POI，租房平台上是一批价格，论坛和问答里又散落着隔音、物业、通勤、周边配套这些真正影响居住体验的细节。 于是我让 Agent 做了一次批量调研：围绕网易大楼周边，把住宅区和公寓式酒店都抓出来，再结合公开网页信息做口碑归纳。这版把搜索服务切到火山引擎重新跑了一遍，最后得到了一张 147 条记录的表，其中住宅区 111 个、公寓式酒店 36 个；总共整理出 1107 个有效来源，平均证据强度 7.86，平均 AI 综合评分 7.12。 下面这张表可以直接搜索、筛选、按列排序。默认按 AI 评分降序排列，点击任意一行可以展开看地址、长线索和来源链接。 这张表适合怎么看 我没有把 gemini评分 当成唯一结论。租房这种事情很个人：有人更看重通勤，有人更看重隔音，有人宁愿贵一点也要省心。因此我更建议把它当成一个“候选池排序工具”。 几个字段可以组合起来看： gemini评分：Agent 根据通勤、租金线索、房屋质量、生活便利和风险信息给出的综合判断。 证据强度(0 10)：公开资料是否足够丰富，不等于推荐度。证据强但评分低，往往意味着缺点也被搜得很清楚。 有效来源数：被用于归纳的网页来源数量，方便判断结论是不是只来自单一页面。 租房价格线索：从公开网页中抽取的月租、均价、户型价格等信息。 风险/差评线索：噪音、老旧、停车、物业、疑似误命中等风险提醒。 我的使用方式通常是：先按评分和证据强度排序，排除明显不合适的；再搜索关键词，比如“隔音”“地铁”“老旧”“公寓”；最后点开来源做人肉复核。Agent 负责把信息压缩成第一轮筛选，人还是要为最终选择负责。 这个 Agent 做了什么 这次流程被我整理成了一个可复用的租房信息归纳 skill：renting research skill.md。 它的核心思路是三段式： 1. 先用地图 API 找到公司和周边候选地点，解决“有哪些地方、离公司多远”的问题。 2. 再用公开网页搜索收集租金、户型、物业、隔音、配套、差评等线索，解决“住起来怎么样”的问题。 3. 最后让大模型把零散证据压缩成结构化字段，导出可以排序、筛选、追溯来源的 Excel。 这个 skill 的输入很少：公司名称、百度地图 AK、检索半径、目标 POI 类型、通勤方式、搜索服务和模型服务。输出则是一张适合直接决策的 Excel 表，字段包括名字、类型、地址、距离、通勤时间、证据强度、有效来源数、租房价格线索、房子质量线索、生活便利线索、风险线索、来源、AI 评分和 AI 总结。 为什么要做成 skill 租房调研有一个很强的复用性：换一家公司、换一个城市、换一个半径，本质工作流几乎不变。真正耗时间的是把这套流程稳定下来，比如： 同名小区要消歧，不能把别的城市或别的区域混进来。 地图 POI 要保留 uid、地址和坐标，否则后续路线和搜索都容易漂。 搜索结果要保留来源，AI 总结不能变成不可追溯的“玄学推荐”。 证据强度和推荐评分要分开，资料多不代表一定好住。 把这些规则写进 skill 后，Agent 下一次就不需要重新理解任务边界，可以直接按流程跑。它不是替我做决定，而是把原本几天的资料搜集压缩成一个可复核的数据底座。 一点反思 这张表并不等同于实时房源，也不能替代实地看房。网页信息会滞后，平台内容也会有噪声，部分价格线索可能来自二手房均价而不是租金。它更像一个“方向盘”：帮我快速知道哪些地方值得继续看，哪些地方要谨慎，哪些地方只是地图上离得近但公开口碑很弱。 我越来越觉得，Agent 最适合做这种“低创造性、高耐心、高交叉验证”的工作。它不需要一锤定音，只要能把混乱的信息变成一个能排序、能筛选、能追溯的表，人就已经轻松很多了。",
-    "totalPages": 29
+    "totalPages": 23
   },
   {
     "title": "一年前遇到的难题，被AI解决了",
@@ -153,25 +153,6 @@
     "searchContent": "用 AI Skills 实现博客自动发布 🚀 🤖 本文由 AI 自动生成并自动发布 前言 今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。 什么是 Skills？ Skills (技能) 是 OpenClaw 的扩展机制，让 AI 能够执行特定领域的任务。比如这个 imbailey blog skill，就是专门为博客发布而设计的。 核心功能 📝 自动创建文章 只需提供标题，AI 自动生成 Markdown 文件 🔄 自动提交发布 写完文章后自动 git add → commit → push 🤖 全程无需人工干预 从写作到发布一条龙服务 工作流程 1. 用户向 AI 发送写作需求 2. AI 根据 skill 指引克隆仓库、安装依赖 3. 执行 npm run newp 创建新文章 4. AI 撰写文章内容 5. 自动提交并推送到 GitHub 适用场景 快速记录技术笔记 自动同步 AI 生成的内容到博客 定时批量发布文章 总结 有了 AI + Skills 的组合，博客写作变得前所未有的简单！你需要做的，只是告诉 AI 想写什么主题 🎉 本文由 OpenClaw AI Agent 自动生成并发布"
   },
   {
-    "title": "测试仪",
-    "date": "2026-03-11T14:13:43.000Z",
-    "updatedAt": "2026-03-11T14:13:43.000Z",
-    "file": "测试仪.md",
-    "slug": "tester",
-    "legacySlug": "7fde58cd",
-    "aliases": [
-      "7fde58cd"
-    ],
-    "excerpt": "测试仪 这里是内容的起始点。",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "",
-    "wordCount": 12,
-    "readingTime": 1,
-    "searchContent": "测试仪 这里是内容的起始点。"
-  },
-  {
     "title": "langchain-faiss加载pkl文件速度提升",
     "date": "2025-12-14T06:19:28.000Z",
     "updatedAt": "2025-12-14T06:19:28.000Z",
@@ -189,5 +170,25 @@
     "wordCount": 388,
     "readingTime": 1,
     "searchContent": "langchain faiss加载pkl文件速度提升 背景 Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。 langchain community.vectorstores中的Faiss写入一个向量库中包含两个文件：index.faiss和index.pkl。前者用来存储索引（或者说向量本身），后者用来存储元数据。Faiss在执行检索操作时，会先把这两个文件加载到内存里，问题出在pkl文件上，当数据量小时，加载时间不显著，而当数据量很大时，pkl加载时间会很长，严重影响使用体验。 举个我实际测试的例子，一个有437,673个向量的向量库，读取时间长达24.26秒。这个向量库是用来做RAG问答的，里面存了2934个文档的切片，每次检索都得等好久，客户想检索速度尽可能快一些，这个需求是真实存在的。 把pkl替换为pyarrow能解决这个问题。PyArrow 比 pickle 快核心原因有三点：一是基于 列式存储 ，同类型数据连续存放，适配 CPU 缓存和 SIMD 批量处理，而 pickle 行式序列化无此优化；二是 零拷贝 机制和 C++ 原生实现，避免 Python 解释器开销与多次数据拷贝；三是强类型系统省去动态类型解析，列式压缩也比 pickle 的整流压缩更高效。 代码 重写langchain community.vectorstores中的FAISS类的save local和load local方法"
+  },
+  {
+    "title": "RAG图谱实体和边智能合并",
+    "date": "2025-07-13T09:25:50.000Z",
+    "updatedAt": "2025-07-13T09:25:50.000Z",
+    "file": "RAG图谱实体和边智能合并.md",
+    "slug": "rag-graph-entity-edge-intelligent-merge",
+    "legacySlug": "46bbd497",
+    "aliases": [
+      "46bbd497"
+    ],
+    "excerpt": "RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple In",
+    "tags": [
+      "随笔杂记",
+      "技能分享"
+    ],
+    "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png",
+    "wordCount": 1642,
+    "readingTime": 5,
+    "searchContent": "RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple Inc”无法合并 graphrag/index/operations/extract graph/extract graph.py = merge entities, merge relationships Graphusion 每个候选实体都传给LLM，让 LLM判断跟现有图谱判断是否需要合并。 Prompt 优点：精度高 缺点：速度慢 Yang R, Yang B, Zhao X, et al. Graphusion: A RAG Framework for Scientific Knowledge Graph Construction with a Global Perspective[C]//Companion Proceedings of the ACM on Web Conference 2025. 2025: 2579 2588. RagFlow 实体合并是知识图谱构建的重要环节，重复实体会降低检索准确性。RagFlow 在 graphrag/entity resolution.py 中实现实体合并，采用两步策略： 初步相似度判断：使用编辑距离等工程手段筛选相似实体，基于 编辑距离（ editdistance ） 实现；阈值： 要求距离小于等于名称长度的一半； 大模型相似度判断：确定最终的实体合并结果； 初步相似度判断主要用于减少候选实体对的数量。虽然基于大模型的相似度判断准确性更高，但会带来较大的计算开销，这也是 RagFlow 提供手动关闭选项的主要原因。 编辑距离：一个字符串转换为另一个字符串所需的最少编辑次数（编辑包括增加删除和替换） 优点：速度快，精度比精确匹配好一点 缺点：匹配只停留在字符串层面，还是处理不了苹果公司和Apple Inc https://zhuanlan.zhihu.com/p/1891156928022939096 方案 方案一 把若干个待插入实体/边和已插入实体/边一次性发给简单大模型，让它直接判断有哪些可以合并。 分析：相比于一次只处理一个待插入节点提升了速度，但速度仍然不快，精度也不一定高。更关键的是很难控制上下文长度，长文档很难处理。 方案二 对实体/边做embedding存到向量数据库，新插入实体/边先找最相似的若干个候选（初筛），再对这些候选做rerank(中筛)，最后给简单大模型判断（详筛）。 分析：跟文档检索的逻辑差不多，可行性比较高。 实验 思路 v1：直接名字匹配，相同名字的合并。节点和边都执行此逻辑。 v2：合并节点：对于名字相同的，直接合并。对于名字不相同的，根据语义合并： 初筛：先通过embedding搜索相关文档，top k=10，相似度阈值0.6； 中筛：再对初筛结果做rerank，相关性阈值设为0.6； 判定：最后用LLM做判断，看是否能合并，怎么合并。 合并边：跟v1一样，直接名字匹配。因为边的名字是(source node, target node)。当(source node, target node)不同时，语义肯定不重复。在(source node, target node)相同的情况下，v1即可处理。 合并细节：合并在已有节点上进行。假设已有节点A，待合并节点A1，合并结果在A上更新，更新A的description和doc ids，不更新weight和name。然后要对节点A的节点文档更新，由于存储节点文档索引的faiss不支持更新，需要先删除再添加节点。还需要对A1涉及到的边进行更新。 实验数据 准备了两段描述，有中文版和英文版： 中文版 英文版 文案 苹果公司作为全球顶尖的科技企业，在产品生态构建上独树一帜。其核心产品 iPhone、Mac 等，在市场中占据着重要地位。英特尔，长期以来是全球半导体行业的重要力量，尤其在 PC 和服务器 CPU 领域，以 x86 架构统治市场多年。曾经，英特尔为苹果的 Mac 系列产品供应 CPU 芯片 ，二者构建起供应关系的连接。但随着苹果自研 M 系列芯片的推出，逐渐降低了对英特尔芯片的依赖，从合作走向一定程度的竞争。 高通，在通信芯片领域实力强劲，特别是在手机基带芯片方面占据领先地位。苹果与高通的关系可谓跌宕起伏。早期，高通是苹果 iPhone 基带芯片的重要供应商 ，二者通过供应协议建立联系。然而，由于高通专利授权费用等问题，双方产生纠纷，在全球多地展开诉讼，诉讼纠纷的边将二者对立起来。后来，苹果为解决基带芯片问题，与高通达成和解，恢复供应合作。同时，苹果收购英特尔手机基带业务，利用其技术专利尝试自研基带芯片，又与高通在基带芯片研发上形成潜在竞争关系。 As a global leading technology company, Apple stands out in building its product ecosystem. Its core products, such as the iPhone and Mac, hold significant positions in the market. Intel has long been a major force in the global semiconductor industry, especially in the PC and server CPU sectors, dominating the market for years with its x86 architecture. Intel once supplied CPU chips for Apple's Mac series, establishing a supply relationship between the two companies. However, with the introduction of Apple's self developed M series chips, its dependence on Intel chips gradually decreased, shifting from cooperation to a certain degree of competition. Qualcomm is highly competitive in the communication chip field, particularly leading in mobile baseband chips. The relationship between Apple and Qualcomm has been full of ups and downs. In the early days, Qualcomm was an important supplier of baseband chips for Apple's iPhones, connecting the two through supply agreements. However, due to issues such as Qualcomm's patent licensing fees, disputes arose between the two parties, leading to lawsuits in many parts of the world and creating an adversarial relationship. Later, to resolve the baseband chip issue, Apple reached a settlement with Qualcomm and resumed supply cooperation. Meanwhile, Apple acquired Intel's mobile baseband business, leveraging its technical patents to attempt self development of baseband chips, thus forming a potential competitive relationship with Qualcomm in baseband chip R&D. 图谱 实验结果 llm: deepseek v3 qwen 4b一样 case1 待合并节点 = 搜索nodes，top k=10，阈值0.6 = rerank，阈值为0.6 LLM判断 case2 待处理节点node data: = 搜索nodes，阈值0.6，最多10个： rerank，阈值设定为0.6 llm判定: 最终结果 合并前 合并后 性能 总记录数: 731 需要Merge的记录数: 32 不需要Merge的记录数: 699 总Merge时间(f): 319.18s 平均Merge时间: 0.44s 实际Merge平均时间（只统计需要merge的）: 7.73s"
   }
 ]

@@ -1,193 +1,193 @@
 [
   {
-    "title": "讲一个能满足和感动自己的故事！",
-    "date": "2021-11-24T21:25:56.000Z",
-    "updatedAt": "2021-11-24T21:25:56.000Z",
-    "file": "讲一个能满足和感动自己的故事！.md",
-    "slug": "how-to-write-a-good-paper-tell-a-story",
-    "legacySlug": "7dbb12f1",
+    "title": "“专利申请”撰写有感",
+    "date": "2021-03-28T20:46:35.000Z",
+    "updatedAt": "2021-03-28T20:46:35.000Z",
+    "file": "“专利申请”撰写有感.md",
+    "slug": "thoughts-on-writing-patent-application",
+    "legacySlug": "3c91c67f",
     "aliases": [
-      "7dbb12f1"
+      "3c91c67f"
     ],
-    "excerpt": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。 如何写好论文 细节，careful 仔细画每一幅图 不要有typo（词句小错误） 不要用长句 避免过度修饰，冗长 至少修改30遍 逻辑通顺 写提纲 理论、实验点支撑 支撑什么观点？从哪些角度？ 讲一个合理的故事，前呼后应，自圆其",
+    "excerpt": "从开学开始，我就接到了李昕老师的任务——为我们寒假的成果“一种基于docker和jupyter notebook的复合类型题目在线检测方法”撰写一份“专利申请”，并完成申请。第一作者当然是李昕老师，因为我们的核心代码全是李昕老师写的，第二作者包括我和另外一位贡献较大的成员。申请专利并署名我们既是一种",
+    "tags": [
+      "随笔杂记"
+    ],
+    "img": "",
+    "wordCount": 943,
+    "readingTime": 3,
+    "searchContent": "从开学开始，我就接到了李昕老师的任务——为我们寒假的成果“一种基于docker和jupyter notebook的复合类型题目在线检测方法”撰写一份“专利申请”，并完成申请。第一作者当然是李昕老师，因为我们的核心代码全是李昕老师写的，第二作者包括我和另外一位贡献较大的成员。申请专利并署名我们既是一种奖励，又是一种考验。 申请文件包括四个小文件，分别是“说明书”、“权利要求书”、“说明书摘要”、“说明书附图”。整个撰写过程还是比较困难的，毕竟是从零开始做这种工作，期间除了询问李昕外，还得到了王志宽学长的极大帮助，学长真的很不错！点赞！ 在这个过程中，有如下体会： 撰写说申请书也是一门学问 撰写申请书也是一种学问，甚至有一种职业，就叫专利代理师。他们的工作大致就是帮发明人撰写专利申请。不要小看这项工作的技术难度，它要求专利代理师有非常广阔的知识面（能懂得很多技术），极强的语言表达能力（特别是写说明文的能力）。 “说明书”和“权利要求书”是整个申请文件的两个核心文件。其中说明书写得越详细越好，要把这项技术描述得“前无古人”，这样才能通过专利局的审核。 而权利要求书则要写得简练概括，因为如果把一项发明的特征写得太详细，日后通过权利要求书维权的时候就不容易成功。 语文真的太重要了 语文真的太重要了，我现在深刻体会到语文真的太重要了。我现在也深刻体会到我的中学语文tm都学了啥几把玩意儿，就是为了考试去背东西，没读过几本书，也没写过什么好文章。 之前一直把语文学偏了，就觉得语文是文人墨客抒发情感，写文章越是让人看不懂越牛逼，净整些没用的玩意儿。其实并不是，学习语文，关键是提升阅读理解能力，语言表达能力。这两种能力，对一个人来说，前者是输入能力，后者是输出能力。马克思说过：“人是一切社会关系的总合”、“一个人只有在社会中才能实现其价值”。而在社会中生活，必定会和外界进行交流，产生输入输出。所以说，语文能力是相当重要的。 写专利说明书的过程中，每一句话都有其意义，每一个标点符号都有要求。比如，如果在下文中提到一个新概念，上文必须有对应的铺垫内容，否则会让人看不懂；权利要求书中每一点权利要求中间不能出现句号，因为一个句号的差别就可能使特征的表述产生歧义，给侵权人反驳的机会。这也是为什么会有人专门从事这样的职业，他们写专利申请考虑到未来可能出现的各种情况，虽然一次收费5k元，但是帮发明人维护了重要的权利。 收获 收获还是蛮大的，了解了一个新的领域，提升了表达能力以及表达的严谨性。另外，使用word的技巧更熟练了。 又点亮一项技能，进一步降低了以后吃不上饭的可能性。",
+    "totalPages": 23
+  },
+  {
+    "title": "pathlib库",
+    "date": "2021-03-16T10:03:57.000Z",
+    "updatedAt": "2021-03-16T10:03:57.000Z",
+    "file": "pathlib库.md",
+    "slug": "pathlib-library",
+    "legacySlug": "43720991",
+    "aliases": [
+      "43720991"
+    ],
+    "excerpt": "老婆不在家，看点刺激的",
     "tags": [
       "笔记"
     ],
     "img": "",
-    "wordCount": 371,
+    "wordCount": 10,
     "readingTime": 1,
-    "searchContent": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。 如何写好论文 细节，careful 仔细画每一幅图 不要有typo（词句小错误） 不要用长句 避免过度修饰，冗长 至少修改30遍 逻辑通顺 写提纲 理论、实验点支撑 支撑什么观点？从哪些角度？ 讲一个合理的故事，前呼后应，自圆其说 拍电影 宁浩《疯狂的石头》、《疯狂的赛车》、《我不是药神》 张艺谋《影》（不讲逻辑） 拒绝言过其实、过度包装、前言不搭后语 花时间认真挑选研究方向，科研问题 拒绝incremental（灌水，小改动） Large margin策略，从0到1，从粗糙到细致 理解，深刻，洞察（insight） 不必随大流，make difference 《Embedded vision summit 2018》 深入思考，长远打算 小问题 本质性，创新性，冷门性，可用性 考虑好未来系统框架 一个好的论文一定是小的，朴素的 四个建议 多做报告、精心准备报告slides 参与社交活动 三句话概括自己的研究方向 让外行人理解 大智若愚、大道至简 拒绝诱惑、不要以功利的目标做科研、不要丢失情怀 举重若轻、游刃有余 当成一种体验而去好好感受 无为而无不为 讲一个能够满足和感动自己的故事！",
-    "totalPages": 29
+    "searchContent": "老婆不在家，看点刺激的"
   },
   {
-    "title": "Mac上自动连接校园网的脚本",
-    "date": "2021-11-24T18:58:03.000Z",
-    "updatedAt": "2021-11-24T18:58:03.000Z",
-    "file": "Mac上自动连接校园网的脚本.md",
-    "slug": "mac-auto-connect-campus-network-script",
-    "legacySlug": "1f902f05",
+    "title": "Django学习笔记",
+    "date": "2021-03-15T23:02:45.000Z",
+    "updatedAt": "2021-03-15T23:02:45.000Z",
+    "file": "Django学习笔记.md",
+    "slug": "django-learning-notes",
+    "legacySlug": "9570ee75",
     "aliases": [
-      "1f902f05"
+      "9570ee75"
     ],
-    "excerpt": "起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。 第一步 从GitHub上下载一段自动连接校园网的python代码，地址：https://g",
+    "excerpt": "安装虚拟环境 在Powershell中执行 安装django 创建django项目 解决报错信息 配置路由urls 在虚拟环境中，且在mysite目录下 在mysite的settings.py里的INSTALLED\\ APPS里添加'misterwu'进行关联 在mysite的urls.py里添加i",
     "tags": [
-      "技能分享"
+      "笔记"
     ],
     "img": "",
-    "wordCount": 299,
-    "readingTime": 1,
-    "searchContent": "起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。 第一步 从GitHub上下载一段自动连接校园网的python代码，地址：https://github.com/UPCUnofficial/UPCNet 然后解压，修改其中config.py文件。 在config.py文件下输入学号、密码和运营商编号，然后运行 运营商对应编号： 再用终端cd进入该文件夹，pip install 所依赖的库。 运行代码。(以上所述在readme里都有） 成功啦！ 第二步 用文本编辑器创建一个文件，里面打上这行代码： 将文件重命名为XXXX.sh 然后右键— 打开方式— 其它— 所有应用程序— 终端 然后把它放在桌面，每次等连上wifi后点一下就能连接校园网啦。[](https://github.com/UPCUnofficial/UPCNet %E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B)"
-  },
-  {
-    "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
-    "date": "2021-11-21T09:04:54.000Z",
-    "updatedAt": "2021-11-21T09:04:54.000Z",
-    "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
-    "slug": "github-push-fatal-authentication-failed-solution",
-    "legacySlug": "400b9839",
-    "aliases": [
-      "400b9839"
-    ],
-    "excerpt": "问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案 看它给的提示，Please see https://github.blog/2020 12 15 token authentication require",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "",
-    "wordCount": 292,
-    "readingTime": 1,
-    "searchContent": "问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案 看它给的提示，Please see https://github.blog/2020 12 15 token authentication requirements for git operations/ for more information. 2020年7月，我们宣布打算要求对所有经过身份验证的Git操作使用基于令牌的身份验证（例如，个人访问、OAuth或GitHub应用程序安装令牌）。从2021年8月13日开始，在GitHub.com上验证Git操作时，我们将不再接受帐户密码。 也就是说输入的Password不是登录密码，而是这个Access Token！另外，Username也不是用户名，而是登录邮箱。 获取个人Access Token的方法：https://docs.github.com/en/authentication/keeping your account and data secure/creating a personal access token 记得一定要把repo的权限勾选上 在命令行上使用令牌 一旦您拥有了令牌，在通过HTTPS执行Git操作时，您可以输入令牌而不是密码。 例如，在命令行中，您将输入以下内容： 后续 怎么把Access Token添加到环境变量里呢？"
-  },
-  {
-    "title": "精准而优雅——MacBook Air",
-    "date": "2021-11-14T10:32:04.000Z",
-    "updatedAt": "2021-11-14T10:32:04.000Z",
-    "file": "精准而优雅——MacBook Air.md",
-    "slug": "macbook-air-m1-review",
-    "legacySlug": "591056ff",
-    "aliases": [
-      "591056ff"
-    ],
-    "excerpt": "我的第一台macbook 犹豫了一年，终于在2021年11月份买了这台m1版本的macbook air。非常感谢我哥借给我不敢想象的8k块。 精准 在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求： 不打游戏 轻薄的机身、超长的续航，",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "",
-    "wordCount": 291,
-    "readingTime": 1,
-    "searchContent": "我的第一台macbook 犹豫了一年，终于在2021年11月份买了这台m1版本的macbook air。非常感谢我哥借给我不敢想象的8k块。 精准 在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求： 不打游戏 轻薄的机身、超长的续航，我可以带出去一整天（这个很重要！ 堪比pro的性能 类unix系统，舒服使用终端 没有风扇，安静写代码 非常出色的屏幕，长时间看都不累 基本适配软件开发所需的软件 恰到好处的装逼 实际上，这台m1的MacBook Air可能是苹果最具性价比的电脑之一，学生党完全可以考虑入手！ 优雅 对于计算机专业的学生来说，电脑就是老婆。而这台macbook就如一个俄罗斯美人，不仅干活猛，还好看。希望使用这台优雅的电脑能帮助我改掉以前在windows上养成的坏习惯，比如资料胡乱放。"
-  },
-  {
-    "title": "macOS下matplotlib无法显示中文字体问题解决",
-    "date": "2021-11-12T16:57:43.000Z",
-    "updatedAt": "2021-11-12T16:57:43.000Z",
-    "file": "macOS下matplotlib无法显示中文字体问题解决.md",
-    "slug": "macos-matplotlib-chinese-font-display-fix",
-    "legacySlug": "2031667d",
-    "aliases": [
-      "2031667d"
-    ],
-    "excerpt": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。 后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html 解决方法",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "",
-    "wordCount": 177,
-    "readingTime": 1,
-    "searchContent": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。 后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html 解决方法 找到字体路径 进入该路径然后编辑文件matplotlibrc可以直接在最下面加上三行： 然后把 /.matplotlib目录下的两个文件删除掉（缓存文件可以放心删）： rm rf /.matplotlib/\\ 重启python，并引入字体 plt.rcParams\\['font.sans serif'\\] = \\['Arial Unicode MS'\\] 即可解决中文及负号无法正常解决的问题。"
-  },
-  {
-    "title": "如何在英语朗读视频中添加文稿",
-    "date": "2021-11-04T17:15:40.000Z",
-    "updatedAt": "2021-11-04T17:15:40.000Z",
-    "file": "如何在英语朗读视频中添加文稿.md",
-    "slug": "add-transcript-to-english-reading-video",
-    "legacySlug": "0e0d4826",
-    "aliases": [
-      "0e0d4826"
-    ],
-    "excerpt": "如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读视频中添加文稿呢？ 你所需要用到的工具是剪辑软件，下面推荐几个很好用的剪辑软件： 1.剪映（电脑和手机） 你可以把你的视频直接拖拽到导轨上，然后再把文稿以图片也",
-    "tags": [
-      "技能分享"
-    ],
-    "img": "",
-    "wordCount": 349,
-    "readingTime": 1,
-    "searchContent": "如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读视频中添加文稿呢？ 你所需要用到的工具是剪辑软件，下面推荐几个很好用的剪辑软件： 1.剪映（电脑和手机） 你可以把你的视频直接拖拽到导轨上，然后再把文稿以图片也拖拽进来。控制好每张图片时间区间，使其与你的视频对应。不到五分钟，你就可以处理完你的视频。 剪完后，点右上角导出视频，你可以像我一样使用下图的参数，这样你能得到一个清晰度够用但是占用内存特别小的视频。 剪映的下载地址（官方）：https://lv.ulikecam.com/?\\ s=4 在剪辑时，运用分割、分离、变速、快捷键等技巧会让视频更完美，你可以在b站学习这些知识。 2.花瓣剪辑（手机） 用手机也可以剪辑。花瓣剪辑是华为手机自带的剪辑软件。操作逻辑和剪映一样。 3.Premiere（电脑） 4.final cut pro（苹果电脑） 5.iMovie(ipad) ...... 工具其实都一样，选择一个称手的就好。"
-  },
-  {
-    "title": "Linux自由软件协会迎新结束有感",
-    "date": "2021-10-30T22:43:09.000Z",
-    "updatedAt": "2021-10-30T22:43:09.000Z",
-    "file": "Linux自由软件协会迎新结束有感.md",
-    "slug": "linux-free-software-association-orientation-thoughts",
-    "legacySlug": "c99a798a",
-    "aliases": [
-      "c99a798a"
-    ],
-    "excerpt": "大一的时候，看到这个社团感觉就很对胃口，想加入。但是Linux自由软件协会太低调了，那年的百团大战我都没找到摊位。 大二阴差阳错，我直接从局外人成了会长。 起因是我当了飞桨领航团团长，要借一个社团办线下活动，没人愿意跟我合作。 陈荣灿学长跟我都是李昕老师的学生，我问他可不可以合作办一个活动，他说正好",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "",
-    "wordCount": 532,
+    "wordCount": 607,
     "readingTime": 2,
-    "searchContent": "大一的时候，看到这个社团感觉就很对胃口，想加入。但是Linux自由软件协会太低调了，那年的百团大战我都没找到摊位。 大二阴差阳错，我直接从局外人成了会长。 起因是我当了飞桨领航团团长，要借一个社团办线下活动，没人愿意跟我合作。 陈荣灿学长跟我都是李昕老师的学生，我问他可不可以合作办一个活动，他说正好现在社团换届，直接把会长给我了。 现实真的比小说还魔幻，小说是讲逻辑的，现实不讲逻辑。 换届现场 我还把王文婕、廖集秀拉来了。很多事情有女生来做的话是很合适的。还拉了一个刘原歌，他对学校的部门事务比较了解。 然后就顺理成章的搞了百团大战活动，搞活动之前我还被社团管理部的老师约谈，因为学校不允许和外部企业合作，让我避讳“百度”。我照做了，不过从此之后我也下定决心不想再给百度干活了。 然后紧接着下周就要准备新生见面会。由我来主持，顺便讲一节课。 我对待这次见面会＋课程，是非常认真的。因为我真的把这次当成很好的锻炼机会。为了准备这个，确实花费了一些心血，开始前可以说是寝食难安。 现场的效果很不错。我真的没想到能来这么多人（94个），教室快坐满了，室友和同学很给面子，都来了。 我表现的也很不错，讲了一节课，全称吹牛逼吹得都很流畅。 为一件事准备的越多，收获的也越多。不能做“佛系青年”，不愿意挑战自己。也不要给自己增加焦虑，什么都想做好，搞太大压力。要践行一种中庸之道，有的放矢，分清主次。 这两周我太累了，同时收获也太多了。"
+    "searchContent": "安装虚拟环境 在Powershell中执行 安装django 创建django项目 解决报错信息 配置路由urls 在虚拟环境中，且在mysite目录下 在mysite的settings.py里的INSTALLED\\ APPS里添加'misterwu'进行关联 在mysite的urls.py里添加import path,include，再添加一个urlpatterns 在misterwu里新建一个urls.py，把mysite里的urls拷贝到这里 删掉import admin和第二行末尾的path 删掉urlpatterns里的内容 展示html页面 在misterwu的urls.py的urlpatterns里添加 还要在前面添加 在misterwu的views.py里定义一个\"home\"方法 在misterwu下创建一个新文件夹templates，在下面创建home.html，在里面写 创建公共html模板 打开www.bootcss.com，进入bootstrap4中文文档，初学者模板，拷贝一份 在misterwu下的templates里新建一个base.html，把初学者模板拷贝到这里 然后在home.html里添加代码，最终样子如下: 然后在base.html的body里调用这个代码块(这种写法貌似是php里的) 展示导航信息 在base.html的导航那一部分替换成如下代码： 从bootstap上找到导航条源码 上述代码也粘贴到 下面 效果图 把home所在的 标签都删掉 dropdown，disabled标签也删掉 把Navbar改掉，如（米斯特务） search也可以改掉 接口介绍 pass 接口请求和解析 在misterwu的views.py的 def home(request)函数中加入以下代码： 注意，在虚拟环境里先装requests 然后在return render(request,'home.html',{})后面的空字典里添加： 来到home.html，在{%block content%}...{%endblock%}内添加 成功！ 展示数据信息 在misterwu的home.html的block里写入 上面代码中div里的内容是bootstrap4复制来的，原文如下 搜索页面跳转 在misterwu的urls.py的urlpatterns里加入一行： 在views.py里加入一个函数: 在templates里创建user.html，写入： 成功 在base.html的 里，再加两个属性 并在下面加入 之后点搜索，就可以正常跳转了 在base.html的 下的 里面加一个属性name=\"user\" 再到views.py里面的函数user里增加语句: return render最后的字典里面写 在user.html中改成 获取搜索数据 在base.html的 米斯特务 里添加属性 在 Link 里添加属性 “link”改成\"查询\" 在views.py的user函数中修改如下："
   },
   {
-    "title": "ubuntu安装Python3的曲折之路",
-    "date": "2021-10-30T13:58:01.000Z",
-    "updatedAt": "2021-10-30T13:58:01.000Z",
-    "file": "ubuntu安装Python3的曲折之路.md",
-    "slug": "ubuntu-install-python3-pyenv",
-    "legacySlug": "6434a878",
+    "title": "Pandas学习笔记",
+    "date": "2021-03-09T11:04:10.000Z",
+    "updatedAt": "2021-03-09T11:04:10.000Z",
+    "file": "Pandas学习笔记.md",
+    "slug": "pandas-learning-notes",
+    "legacySlug": "84a00195",
     "aliases": [
-      "6434a878"
+      "84a00195"
     ],
-    "excerpt": "思路 先安装Python版本管理器pyenv 再用Pyenv安装Python 安装pyenv 标准安装：找到项目地址pyenv/pyenv: Simple Python version management (github.com) 先git clone，再配环境变量。 作者还提供了一个自动安装的脚",
+    "excerpt": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函",
     "tags": [
-      "技能分享"
+      "笔记"
     ],
     "img": "",
-    "wordCount": 429,
+    "wordCount": 685,
     "readingTime": 2,
-    "searchContent": "思路 先安装Python版本管理器pyenv 再用Pyenv安装Python 安装pyenv 标准安装：找到项目地址pyenv/pyenv: Simple Python version management (github.com) 先git clone，再配环境变量。 作者还提供了一个自动安装的脚本，只需一行命令。 失败！因为国内云主机墙了github（真是emo了 我的方法： 参考https://blog.csdn.net/m0\\ 37616927/article/details/108770185 1. 从gitee上下载pyenv: git clone https://gitee.com/ibuki\\ fuuko/pyenv.git /.pyenv 会把pyenv下载到当前用户的～/.pyenv目录下 2. 再把以下内容加到 /.bashrc 里，没有就新建 export PATH= /.pyenv/bin:$PATH export PYENV\\ ROOT= /.pyenv eval \"$(pyenv init )\" 3. 激活 source .bashrc 4. 安装成功，可以看到pyenv提供可安装的python版本 pyenv install list 安装python 标准思路：直接pyenv install 3.7.5 就能一键安装Python了 失败！因为Python镜像默认是从官网下的，国内网络上不去（再次emo 这之后我就开始瞎捣鼓了，参考： https://blog.csdn.net/yxiaom/article/details/103468954 找了一个国内的镜像地址： http://npm.taobao.org/mirrors/python/ 安装Python之前需要安装很多依赖，多用apt装一装 最后查看一下已安装的Python版本 pyenv versions 然后设置默认版本，这样你打python的时候默认使用这个版本 pyenv global 版本号 最离谱的是，我尝试这个命令没有成功，什么都没做，到第二天居然可以了（第三次emo 没想到在linux上装Python比在Windows上难的多，win上装一个anaconda就能解决所有问题 懒人方案 装一个宝塔面板，安装Python就比较方便了，但是也失去了学习的价值"
+    "searchContent": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函数的功能是将自定义函数作用于DataFrame的所有元素 案例可以看这个：https://www.cnblogs.com/jason /p/11427145.html 讲的非常清晰 能看出map,apply,apply还是蛮有用的，但是上手不太容易 sort\\ values()和sort\\ index()区别 1、sort\\ index() sort\\ index()通俗点讲，就是根据index的值进行排序，如果是按行排序，可以认为是根据index的值排序，如果是按列排序，可以认为是根据columns的值进行排序。用法如下： sort\\ values()对dataframe按某一列的值进行排序，或者按某一行的值进行排序。具体的参数设置如下： 摘自https://blog.csdn.net/u011412768/article/details/107251808 pd.read\\ csv()参数 filepath\\ or\\ buffer : 数据输入的路径：可以是文件路径、可以是URL，也可以是实现read方法的任意对象。这个参数，就是我们输入的第一个参数。 还可以是一个URL，如果访问该URL会返回一个文件的话，那么pandas的read\\ csv函数会自动将该文件进行读取。比如：我们用fastapi写一个服务，将刚才的文件返回。 sep : 读取csv文件时指定的分隔符，默认为逗号。注意：\"csv文件的分隔符\" 和 \"我们读取csv文件时指定的分隔符\" 一定要一致。 比如：上面的girl.csv，我们将其分隔符从逗号改成\"\\\\t\"，如果这个时候还是用默认的逗号分隔符，那么数据读取之后便混为一体。 delimiter : 分隔符的另一个名字，与 sep 功能相似。 header / names : 当names没被赋值时，header会变成0，即选取数据文件的第一行作为列名。 当 names 被赋值，header 没被赋值时，那么header会变成None。如果都赋值，就会实现两个参数的组合功能。 index\\ col : 我们在读取文件之后，生成的DataFrame的索引默认是0 1 2 3...，我们当然可以set\\ index，但是也可以在读取的时候就指定某个列为索引。 usecols : 如果列有很多，而我们不想要全部的列、而是只要指定的列就可以使用这个参数。 详细看这篇博文，写得非常好！！https://www.cnblogs.com/traditional/p/12514914.html 样式问题 困扰了我很久是pandas样式问题，在这篇博客里写的很详细！ https://www.gairuo.com/p/pandas style function"
   },
   {
-    "title": "黄山归来不看岳——黄山之旅",
-    "date": "2021-10-06T08:28:08.000Z",
-    "updatedAt": "2021-10-06T08:28:08.000Z",
-    "file": "黄山归来不看岳——黄山之旅.md",
-    "slug": "huangshan-mountain-trip",
-    "legacySlug": "2812cd66",
+    "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
+    "date": "2021-03-03T20:46:14.000Z",
+    "updatedAt": "2021-03-03T20:46:14.000Z",
+    "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
+    "slug": "matplotlib-tutorial-4-pip-secondary-axis-animation",
+    "legacySlug": "13bf1535",
     "aliases": [
-      "2812cd66"
+      "13bf1535"
     ],
-    "excerpt": "时间 2021年国庆期间，10月3日至5日。 第一站：翡翠谷 翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。 翡翠谷是一条长长的峡谷，一路走进去有很多大大小小的水潭，",
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 图中图 次坐标轴 Animation动画 我试过了，jupyter notebook根本动不了 又试了pychar",
     "tags": [
-      "书影记录"
+      "笔记"
     ],
     "img": "",
-    "wordCount": 1256,
-    "readingTime": 4,
-    "searchContent": "时间 2021年国庆期间，10月3日至5日。 第一站：翡翠谷 翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。 翡翠谷是一条长长的峡谷，一路走进去有很多大大小小的水潭，潭水清澈见底，都是碧绿颜色。但是碧绿程度不一样，有的颜色深，有的颜色浅，像是不同品种的翡翠，因此得名翡翠谷。 此景点对体力的消耗很小，如果你像我一样第二天准备爬黄山，第一天很适合来翡翠谷转一转。最大的缺点就是只有一条路，走进去之后还得原路返回。 第二站：黄山 首先，对于黄山我是怀着一颗敬畏之心的。记得小学时学过一篇课文，专门讲黄山的奇石，如今亲眼看见，说实话，还真是没那个想象力。但我仍然抱着一颗欣赏的态度去品味黄山的风景。 我们的路线是：汤口镇住宿= 景交车上山= 慈光阁= 坐玉屏索道上山= 莲花亭，迎客松= 一线天= 白云宾馆= 光明顶= 白云宾馆= 坐网红小火车（缆车）= 西海大峡谷（没有游玩）= 网红小火车= 白云宾馆= 第二次上光明顶= 观石亭（观87红楼梦飞来石）= 白鹅岭= 一路走下山去 我们没有按旅行团规划的路线走，中间想去一次西海大峡谷，但是坐了网红小火车去了之后感觉没有体力游玩了，于是原路返回。没有爬黄山最高峰莲花峰，但是爬了两次光明顶。 下山后，大多数人走路都不太正常，一瘸一拐的。我和我妈看到人们踉踉跄跄的样子都觉得很好笑。 可能是一天时间比较短参观景点少，也可能是国庆节人太多心烦意乱，下山回来后，很多旅客都觉得黄山的风景没有想象中那么震撼，有点失望。但我觉得，这次开了一个好头，赶上了大晴天，我的体力也完全够用。黄山是举世闻名的大景点，以后可以再来。 迎客松 第三站：宏村 宏村真是太美了（至少从外面看很美）。整个村子被大山包围起来，有碧水萦回，徽派建筑粉墙黛瓦，就像是一幅水墨画。人在地上走，就像是人在画中游。 参观宏村让我了解了徽州文化。徽州到处是山，不能耕作，所以人们行商，后来发展壮大，成为古代的商业中心。徽商的足迹遍布全国，他们赚的盆满钵满，回到家乡建起了独具特色的徽派建筑。士、农、工、商，商是社会的最底层，徽商结交名人，捐钱买官，但还是会受到歧视。徽商重视教育、讲究商业道德、有爱国精神，真是非常值得现在的企业学习。 宏村里面是商业化的，很多麦糕点的店铺，路过门口的时候还有店员往你手里塞糕点，让你试吃。走一圈下来能吃个半饱。 其它 还去了一趟谢裕大茶叶博物馆，本质上来说，这个博物馆其实就是搞营销卖茶叶的。但是在里面可以听到很不错的讲解，还会被邀请到房间里白嫖喝茶，一分钱不花也没关系。 回来的路上发生一件胆战心惊的事情。国庆节路上比较堵，连服务区都进不去，大家都很焦躁。因为一些小事，乘客、送行导游和司机吵了起来。最可怕的是这司机也是个暴脾气，直接在高速路上停车要把这个乘客赶下去。好在其它人劝架，把风波平了下去。 总结 同样一辆车，同样的旅游路线，心态不同，收获也不同。在回来的路上，我听到身边有乘客在抱怨说这三天一点也不好玩，坐了好长时间车玩的还不开心。我想说的是，我很开心，我开心的原因有两个，一是我很清楚我出行的目的，就是为了脱离舒适区，去感受不一样的风景，接触不一样的人，学习不一样的文化。这个目的已经达到了。二是我善于发现美丽，所以我能拍出很好看的照骗，发到朋友圈里让大家给我点赞。所以我很开心。 最后还是建议大家不要在国庆节来黄山，人真的很多。"
-  },
-  {
-    "title": "全国高校AI知识竞赛UPC赛区获奖通知",
-    "date": "2021-09-29T23:37:12.000Z",
-    "updatedAt": "2021-09-29T23:37:12.000Z",
-    "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
-    "slug": "ai-knowledge-competition-upc-award-notice",
-    "legacySlug": "1829cd62",
-    "aliases": [
-      "1829cd62"
-    ],
-    "excerpt": "获奖名单： 排名不分先后，恭喜以上获奖同学。 领奖须知： 第一步： 扫描二维码，注册飞桨人工智能训练平台aistudio（需要手机号） 第二步： 在gitee开源社区上为首家开源国产深度学习框架paddle paddle点个star（如果没有账号，请注册一个） 第三步： 将您的aistudio注册手",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 212,
+    "wordCount": 68,
     "readingTime": 1,
-    "searchContent": "获奖名单： 排名不分先后，恭喜以上获奖同学。 领奖须知： 第一步： 扫描二维码，注册飞桨人工智能训练平台aistudio（需要手机号） 第二步： 在gitee开源社区上为首家开源国产深度学习框架paddle paddle点个star（如果没有账号，请注册一个） 第三步： 将您的aistudio注册手机号和gitee注册手机号（或邮箱）填入在线表格：【腾讯文档】百度飞桨ai知识竞赛获奖名单https://docs.qq.com/sheet/DY1JBVkR3dmtaR2d1 第四步： 加qq群：931294105 与群主孙百乐联系领取奖品 其它说明 1. 若想更换奖品，请自行联系其他获奖者，并在备注中写清楚“与XXX更换” 2. 小度雨伞暂时没有到货，请获奖同学等待一段时间"
+    "searchContent": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 图中图 次坐标轴 Animation动画 我试过了，jupyter notebook根本动不了 又试了pycharm，也动不了 完结撒花，再次感谢莫烦老师"
+  },
+  {
+    "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
+    "date": "2021-02-26T12:06:38.000Z",
+    "updatedAt": "2021-02-26T12:06:38.000Z",
+    "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
+    "slug": "matplotlib-tutorial-3-image-3d-data-subplot",
+    "legacySlug": "10141fce",
+    "aliases": [
+      "10141fce"
+    ],
+    "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 image图片 interpolation参数有这些 3D数据 Subplot 多合一显示 figure1 fig",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 59,
+    "readingTime": 1,
+    "searchContent": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 image图片 interpolation参数有这些 3D数据 Subplot 多合一显示 figure1 figure2 Subplot分格显示 method1和method2效果图 method2"
+  },
+  {
+    "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
+    "date": "2021-02-25T18:40:44.000Z",
+    "updatedAt": "2021-02-25T18:40:44.000Z",
+    "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
+    "slug": "matplotlib-tutorial-2-legend-annotation-scatter-bar-contour",
+    "legacySlug": "9e6c0b5f",
+    "aliases": [
+      "9e6c0b5f"
+    ],
+    "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\ id\\ from=pageDriver 仅供学习使用 Legend图例 简单省事儿的写法 Annotation标注 坐标轴刻度（tick能见度） Scatter散点图 Bar柱状图",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 83,
+    "readingTime": 1,
+    "searchContent": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\ id\\ from=pageDriver 仅供学习使用 Legend图例 简单省事儿的写法 Annotation标注 坐标轴刻度（tick能见度） Scatter散点图 Bar柱状图 演示中的柱状图有两条，实际中一般用的用一条就够了 Contours等高线图"
+  },
+  {
+    "title": "csv库的使用方法",
+    "date": "2021-02-25T11:10:35.000Z",
+    "updatedAt": "2021-02-25T11:10:35.000Z",
+    "file": "csv库的使用方法.md",
+    "slug": "csv-library-usage",
+    "legacySlug": "c9920664",
+    "aliases": [
+      "c9920664"
+    ],
+    "excerpt": "上一篇我们讲了怎么用 json格式保存数据，这一篇我们来看看如何用 csv模块进行数据读写。 一、csv简介 CSV (Comma Separated Values)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。 csv的使用很广",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 958,
+    "readingTime": 3,
+    "searchContent": "上一篇我们讲了怎么用 json格式保存数据，这一篇我们来看看如何用 csv模块进行数据读写。 一、csv简介 CSV (Comma Separated Values)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。 csv的使用很广泛，很多程序都会涉及到 csv的使用，但是 csv却没有通用的标准，所以在处理csv格式时常常会碰到麻烦。 因此在使用 csv时一定要遵循某一个标准，这不是固定的，但每个人都应该有一套自己的标准，这样在使用 csv时才不会犯低级错误。 二、csv库的使用 关于 csv库的使用，我们从写和读两个方面来讲。 csv库有四个主要的类 writer，DictWriter，reader，DictReader reader和 DictReader都接受一个可以逐行迭代的对象作为参数，一般是一个包含 csv格式数据的文件对象。 writer和 DictWriter则接受一个 csv文件对象，csv格式的数据将会写入到这个文件中。 他们都会返回一个对应的对象，我们通过这个对象来进行数据的读和写。 这四者中 reader和 writer对应，DictReader和 DictWriter对应，也就是说通过 writer类写的 csv文件只能通过 reader类来读取，DictReader同理。 1、csv将数据写入文件 前面讲到，csv没有统一的标准，通过上面的例子我们可以发现，csv对写入的数据不做任何检查，也就是说几乎没有任何标准可言。 我们发现 writerow方法不会对数据进行检查，即使前后两句 writerow语句写入的数据的格式不同也不会报错。 所以在用 csv写入数据时要特别注意数据的格式问题！！！ 也可以用 writerows(list) 一次写入多行，例如： 2、csv从文件读取数据 打印结果： 观察打印出的结果我们发现，reader读取的内容打印出来后还是列表格式，而 DictReader读取的内容却变为了列表加元组的格式，显然和我们刚开时传入的字典格式很不同。 而我们总是希望输入和输出能够一致，但是 csv模块并没有提供这样的方法，所以我们需要自己将 csv模块再进行一次封装，封装后的包应该满足下面的标准： 1. 统一的分隔符 delimiter 2. 统一的编码 3. 统一的打开文件的方式 4. 能够自己判断文件是否存在并且选择合适的方式打开文件 5. 输入格式和输出格式保持一致 6. 强制检查格式，格式错误禁止插入并报错 封装后的包的源码会在完成后贴出(￣▽￣)\" 最后让我们来总结一下使用 csv库的注意事项： 1. 打开文件时要 注意模式 读用 r，写用 w 2. 打开文件时要设置 newline=''（空字符） 3. 打开文件时要指定编码打开，写入时也一样 4. 如果设置过分隔符就要一直保持，读写时的分隔符必须一致 5. csv不会检查格式（虽然有个 strict模式，但 strict模式下也不会对格式进行检查），写入文件时一定要注意格式 以上就是 csv库的使用方法和注意事项，觉得不错就点个赞吧(●ˇ∀ˇ●) 作者：渔父歌 链接：https://www.jianshu.com/p/51211fcdf4b8%20 来源：简书 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。"
+  },
+  {
+    "title": "json数据存储",
+    "date": "2021-02-25T11:02:16.000Z",
+    "updatedAt": "2021-02-25T11:02:16.000Z",
+    "file": "json数据存储.md",
+    "slug": "json-data-storage",
+    "legacySlug": "f16cfec5",
+    "aliases": [
+      "f16cfec5"
+    ],
+    "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2 在上一篇文章里我们讲了 xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。 实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件的形",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 808,
+    "readingTime": 3,
+    "searchContent": "转载自https://www.jianshu.com/p/0ba2b643c0f2 在上一篇文章里我们讲了 xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。 实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件的形式，数据库我们后面再讲，现在让我们先看看怎么把信息保存到文件里。 这里我们主要讲讲 将数据保存为 json格式和 csv格式，这就要用到两个库 json库和 csv库，这两个库都是 python自带的库。 关于数据存储我们分两篇来讲，这一篇先讲 json，下一篇再讲 csv。 一、关于 json json的简介直接引用百度百科的定义： JSON(JavaScript Object Notation, JS 对象简谱) 是一种轻量级的数据交换格式。它基于 ECMAScript (欧洲计算机协会制定的js规范)的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。 实际上 json的格式和 python中的字典很像，也是由键值对组成，但是 python中的值可以为任何对象（列表、字典、字符串、数字等等），而 json中的值只能是数组（列表）、字典、字符串、数组、布尔值中的一中或几种。 其格式就像下面这样： 注意：json中的引号必须是双引号，否则会报错 二、json库的使用 json库一共有三个方法，分别是 dump、dumps、load、loads。 其中 dump和 dumps是用来把把字典和数组转换为 json格式的，dump把转换结果直接写入文件，dumps返回字符串。 load和 loads是把 json格式的数据转换为字典格式，load直接从 json文件中读取数据并返回字典对象，loads把字符串形式的 json数据转换成字典格式。 下面讲讲这些方法的具体用法。 1、dump和 dumps dump的函数原型是 dump(obj, fp) 第一个参数 obj是要转换的对象，第二个参数 fp是要写入数据的文件对象。 dumps的函数原型是 dumps(obj) 参数是要转换的对象 注意：如果要转换的对象里有中文字符的话，要把 ensure\\ ascii设置为 False否则中文会被编码为 ascii格式 打印结果： 2、load和 loads load的函数原型是 load(fp) 参数 fp是要读取的文件对象 loads的函数原型是 loads(string) 参数 string是要转换成 python对象的 json字符串，通常用来将网页中的 json数据转换为 python对象 打印结果 json的dump和dumps的区别 dumps是将dict转化成str格式，loads是将str转化成dict格式。 dump和load也是类似的功能，只是与文件操作结合起来了。"
+  },
+  {
+    "title": "matplotlib学习笔记（一）基本语法,figure,坐标轴",
+    "date": "2021-02-23T10:48:54.000Z",
+    "updatedAt": "2021-02-23T10:48:54.000Z",
+    "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
+    "slug": "matplotlib-tutorial-1-basic-syntax-figure-axis",
+    "legacySlug": "5c2f0a26",
+    "aliases": [
+      "5c2f0a26"
+    ],
+    "excerpt": "学习视频地址：https://www.bilibili.com/video/BV1Jx411L7LU? github地址：https://github.com/MorvanZhou/tutorials/tree/master/matplotlibTUT 基本语法 一个figure就是一张图片 这里有",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 68,
+    "readingTime": 1,
+    "searchContent": "学习视频地址：https://www.bilibili.com/video/BV1Jx411L7LU? github地址：https://github.com/MorvanZhou/tutorials/tree/master/matplotlibTUT 基本语法 一个figure就是一张图片 这里有两个figure(两张图)，其中第二个figure有两个plot(两条线) 设置坐标轴 移动坐标轴"
   }
 ]

@@ -7,7 +7,6 @@ draft: false
 categories: 
 - 技能分享
 ---
-
 Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。
 
 ![image-20230701105100566](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230701105100566.png)

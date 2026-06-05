@@ -4,70 +4,11 @@ categories:
 - 笔记
 date: 2021-03-23 09:10:48
 slug: build-online-judge-system
-draft: false
+draft: true
 title: 长期任务：做一个在线oj的评测
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:47:08.773Z
 ---
-
-### 任务拆分
-
-*   一个html页面，左边是题目，右边是文本框，可以编写代码。右下角有一个“提交”按钮，点击之后将代码发送到后台进行评测。
-*   现在已有基于jupyter notebook的评测多个题目的评测代码，需要把它拆分后放在django后台运行。
-*   可能需要用到数据库，统一使用的是mysql
-
-### 3月23日
-
-正在看白月黑羽的django教程，从http协议开始讲的，讲的很全，边看边做任务。  
-[http://www.python3.vip/tut/webdev/django/http/](http://www.python3.vip/tut/webdev/django/http/)
-
-### 3月27日
-
-学习内容：
-
-*   HTTP协议  
-    明白了浏览器打开网页的大致过程，明白了请求的几种类型get，post等，请求的内容由哪些部分组成，还了解了服务器返回的状态码等
-*   django安装与运行  
-    django在整个web中的角色是application(应用)，如何创建django项目，django项目中包含哪些东西
-*   url路由  
-    路由是干什么的，如何在django项目中配置路由，当路由过多时，该如何配置
-*   ORM的概念  
-    django的数据库为什么可以方便更换，这与orm有关。因为orm，不懂数据库的语句也可以对数据库增删改查
-
-### 4月5日
-
-说实话，有些动力不足。学习之路漫长又曲折，但是无论走得有多慢，都要走下去。这几天学的东西如下：
-
-*   定义数据库表  
-    在models里像定义“类”一样定义数据库字段，这种设计挺巧妙的。
-*   创建数据库表  
-    修改settings，告诉django去创建数据库表
-*   Django Admin管理数据  
-    使用django内置的管理界面
-*   读取数据库数据  
-    编写函数，使得浏览器可以使用get请求获取数据库信息
-*   过滤条件  
-    在上一步的基础上实现了更高级的功能
-*   前后端分离的架构  
-    不使用模板的时候写函数要把数据混在html代码里，使用的“模板”就可以实现前后端分离。明白了“前端”、“后端”、“架构师”之间的关系。还明白了“API接口”到底是什么。
-
-至此，我对web开发的原理越来越明了。但是不具备实操技能，现在让我写代码还是一行也写不出来。继续学习。
-
-### 4月11日
-
-看到了“数据的增删改查5”的3'58''，“和前端集成”前面。
-
-*   json是前端和后端沟通的桥梁  
-    后端把从数据库里查到的东西重构成json格式，前端再将json解析成内容填充到网页里，确实很巧妙啊。
-
-### 4月17日
-
-这周已经把基础知识学完了，开始着手写代码。但是这周有数学分析期中考试，还有很多杂七杂八的事情，时间都被冲散了，拿不出整体的时间，让我很头疼。
-
-### 4月22日
-
-有头绪啦，有头绪啦！昨天我写出了第一个评测的代码（虽然非常非常简单）
-
-今天遇到的第一个问题：
-
-> 如何将在页面上写出来后的code，保留原格式传给后台运行？
-
-李昕老师提示我用富文本框，我打算去看一个bootstrap教程学习。地址如下：[https://www.bilibili.com/video/BV1TU4y1p7zU](https://www.bilibili.com/video/BV1TU4y1p7zU) 小姐姐声音很好听。
+<!-- encrypted:draft-body:xor-base64 -->
+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

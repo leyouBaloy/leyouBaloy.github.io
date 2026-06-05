@@ -1,195 +1,193 @@
 [
   {
-    "title": "Leetcode743:网络延迟时间——dijkstra算法",
-    "date": "2022-04-21T09:35:07.000Z",
-    "updatedAt": "2022-04-21T09:35:07.000Z",
-    "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
-    "slug": "leetcode-743-network-delay-time-dijkstra",
-    "legacySlug": "e55a834f",
+    "title": "Leetcode55:跳跃游戏——贪心",
+    "date": "2022-04-01T08:03:13.000Z",
+    "updatedAt": "2022-04-01T08:03:13.000Z",
+    "file": "Leetcode55_跳跃游戏——贪心.md",
+    "slug": "leetcode-55-jump-game-greedy",
+    "legacySlug": "69e846ef",
     "aliases": [
-      "e55a834f"
+      "69e846ef"
     ],
-    "excerpt": "题目 https://leetcode cn.com/problems/network delay time/ 关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。 题解 关于dijkstra算法具体内容就不在这里细说了，网上一大堆，这里主",
+    "excerpt": "题目 https://leetcode cn.com/problems/jump game/ 题解 所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。 那么这道题可以有这样的思路：从前往后遍历nums的元素，实时维护 最远可以到达的位置 far。 对于当前遍历的位置i，先判断",
     "tags": [
       "刷题"
     ],
     "img": "",
-    "wordCount": 544,
+    "wordCount": 169,
+    "readingTime": 1,
+    "searchContent": "题目 https://leetcode cn.com/problems/jump game/ 题解 所谓贪心算法，我个人浅薄的理解就是每一步找局部最优解，最终找到整体最优解。 那么这道题可以有这样的思路：从前往后遍历nums的元素，实时维护 最远可以到达的位置 far。 对于当前遍历的位置i，先判断i =len(nums)，则返回True，否则返回False。 代码： ps:因为前面做了几题递归，所以本来想用递归做，尝试一下代码不太会写，但我觉得思路上应该是行得通的。看来我的技术还有很大的提升空间呀！",
+    "totalPages": 23
+  },
+  {
+    "title": "Leetcode198:打家劫舍——动态规划",
+    "date": "2022-03-31T08:20:49.000Z",
+    "updatedAt": "2022-03-31T08:20:49.000Z",
+    "file": "Leetcode198_打家劫舍——动态规划.md",
+    "slug": "leetcode-198-house-robber-dynamic-programming",
+    "legacySlug": "66b663b9",
+    "aliases": [
+      "66b663b9"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/house robber/ 题解 看官方题解吧，官方题解写的真好。 感想 我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动态规划是很灵活的算法，很多题",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 119,
+    "readingTime": 1,
+    "searchContent": "题目 https://leetcode cn.com/problems/house robber/ 题解 看官方题解吧，官方题解写的真好。 感想 我是从去年CSP考试中知道动态规划这个概念的，当时考前自以为弄懂了（其实根本没弄懂），现在做了两三道题了，反而觉得又不懂了。动态规划是很灵活的算法，很多题目想不到可以用动态规划来解决。要多练习才能融会贯通。"
+  },
+  {
+    "title": "Leetcode113:路径总和——dfs、回溯",
+    "date": "2022-03-30T11:19:10.000Z",
+    "updatedAt": "2022-03-30T11:19:10.000Z",
+    "file": "Leetcode113_路径总和II——dfs、回溯.md",
+    "slug": "leetcode-113-path-sum-ii-dfs-backtracking",
+    "legacySlug": "d1d4a3c4",
+    "aliases": [
+      "d1d4a3c4"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/path sum ii/ 题解 dfs无回溯 我们用深度优先搜索，在搜索时把当前路径记录下来为nums。如果满足 1. sum(nums)==targetSum； 2. 该节点是叶节点； 就记录下这个路径。搜索完成后，我们就能把",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 434,
     "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/network delay time/ 关于最短路径dijkstra算法，学了很多遍，每次学的都不深，所以学完就忘，代码肯定更是写不出来。今天再学一次。 题解 关于dijkstra算法具体内容就不在这里细说了，网上一大堆，这里主要关注代码。 代码 代码详解 g[][]：用邻接矩阵来储存这个图。g[x][y]表示从节点x到节点y的距离。如果不能到达，储存距离为无穷大。注意这段代码中把所有的节点都 1，这只是表示方式的问题，不重要。 这段代码就是在构建g： dist[]：dist[i]表示从起点k到节点i的最短距离（当前已知）。赋初值为无穷大。 used[]：记录算法运行时使用过的节点。初值是把起始节点赋值为True，其余False。 上面这段代码，每次从「未确定节点」中取一个与起点距离最短的点，将它归类为「已确定节点」，并用它「更新」从起点到其他所有「未确定节点」的距离。直到所有点都被归类为「已确定节点」。x就是要找的那个已确定节点，第一次x=k。 用节点 A「更新」节点 B 的意思是，用起点到节点 A 的最短路长度加上从节点 A 到节点 B 的边的长度，去比较起点到节点 B 的最短路长度，如果前者小于后者，就用前者更新后者。这种操作也被叫做「松弛」。这里节点A就是x，节点B就是y。 最后根据这题的要求，找dist[]里最大的返回就行了。 时间复杂度：O(n^2+m)，其中 m 是数组times 的长度。 空间复杂度：O(n^2)。邻接矩阵需占用 O(n^2)的空间。 dijkstra算法的时间复杂度为O(n^2) 用小根堆优化 可以使用一个小根堆来寻找「未确定节点」中与起点距离最近的点。 这个具体就不研究了，能把基本算法搞明白就不错了😂。",
-    "totalPages": 29
+    "searchContent": "题目 https://leetcode cn.com/problems/path sum ii/ 题解 dfs无回溯 我们用深度优先搜索，在搜索时把当前路径记录下来为nums。如果满足 1. sum(nums)==targetSum； 2. 该节点是叶节点； 就记录下这个路径。搜索完成后，我们就能把所有满足条件的路径找出来了。 代码的总体框架就是一个深度优先搜索，在这个框架的基础上修改使其符合题意。这是写代码的思路。下面是自己写的代码： 细节： 在往下递归是我传的参数不是nums的引用，而是复制了一个nums传给下一个函数。因此在做每一步递归时都有专属于它的一个nums，所以这段代码没有用到回溯。占用空间也比较大。 上面一点很重要！ dfs、回溯 如果把nums.copy()改成nums，然后在backtracking()的末尾加上nums.pop()，就是回溯了。 这样的话，传递的就是nums的引用，所有的递归过程用的都是同一个nums。在每次递归结束，往上回溯的时候通过pop()删去nums中最后一个元素。 把这段代码跟Leetcode78题放在一起看，发现都是在合适的位置加一个pop()，这其实是回溯的重要特点。 时间和空间复杂度：不会算... 记录父节点、bfs 还有个很聪明的做法，就是用一个哈希表来每一个节点的父节点。这样，不用记录路径，只记录累加和。每找到一个满足条件的叶节点，就从该节点出发向父节点迭代，还原路径。 代码在官方题解～"
   },
   {
-    "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
-    "date": "2022-04-20T11:01:29.000Z",
-    "updatedAt": "2022-04-20T11:01:29.000Z",
-    "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
-    "slug": "line-segments-intersect-rapid-rejection-straddle-test",
-    "legacySlug": "519b05f8",
+    "title": "Leetcode78:子集——递归、回溯——一道困扰我的题",
+    "date": "2022-03-29T08:46:07.000Z",
+    "updatedAt": "2022-03-29T08:46:07.000Z",
+    "file": "Leetcode78_子集——递归、回溯——一道困扰我的题.md",
+    "slug": "leetcode-78-subsets-recursion-backtracking",
+    "legacySlug": "bc3938df",
     "aliases": [
-      "519b05f8"
+      "bc3938df"
     ],
-    "excerpt": "题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法： 第",
+    "excerpt": "题目 https://leetcode cn.com/problems/subsets/ 一道初中数学题，但是是很难的编程题。 题解 二进制枚举 ​ 集合a={5,2,9}中任何一个数有两种状态，在子集中或者不在子集中，分别用1和0来表示。所以我们可以进行如下编码： 二进制序列 子集 十进制数 00",
     "tags": [
-      "刷题",
-      "笔记"
+      "刷题"
     ],
     "img": "",
-    "wordCount": 437,
+    "wordCount": 307,
+    "readingTime": 1,
+    "searchContent": "题目 https://leetcode cn.com/problems/subsets/ 一道初中数学题，但是是很难的编程题。 题解 二进制枚举 ​ 集合a={5,2,9}中任何一个数有两种状态，在子集中或者不在子集中，分别用1和0来表示。所以我们可以进行如下编码： 二进制序列 子集 十进制数 000 {} 0 001 {9} 1 010 {2} 2 011 {2,9} 3 100 {5} 4 101 {5,9} 5 110 {5,2} 6 111 {5,2,9} 7 众所周知，如果一个集合的基数为n，那么它有2 n个子集。照上述列举就可以啦。 ps:这个方法真的很巧妙 代码也很值得学习： 代码讲解： 1 最后叶节点就是所需答案。 代码： 结合上面到图，深度优先搜索，先搜索最左侧的分支，最后到最右边。这个代码其实也是要看一会才能看懂...可能我就是菜。 时间复杂度和空间复杂度和二进制枚举一样。 回溯剪枝 上述递归过程可以看到很多节点是不必要的，剪枝就是通过增加一些条件，略过不必要的节点。有点难，不想研究了..."
+  },
+  {
+    "title": "Leetcode103:二叉树的锯齿形层序遍历",
+    "date": "2022-03-27T11:36:29.000Z",
+    "updatedAt": "2022-03-27T11:36:29.000Z",
+    "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
+    "slug": "leetcode-103-binary-tree-zigzag-level-order-traversal",
+    "legacySlug": "beb000fb",
+    "aliases": [
+      "beb000fb"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/binary tree zigzag level order traversal/ 做过102题后这题可以轻松做出来 题解 复习一下[102. 二叉树的层序遍历]： 首先根节点入队 当队列不为空： 求队列长度s 依次从队列中取s",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 187,
+    "readingTime": 1,
+    "searchContent": "题目 https://leetcode cn.com/problems/binary tree zigzag level order traversal/ 做过102题后这题可以轻松做出来 题解 复习一下[102. 二叉树的层序遍历]： 首先根节点入队 当队列不为空： 求队列长度s 依次从队列中取s个元素拓展，然后进入下一次迭代 得到层序遍历结果后，把奇数层reverse一下，就能ac了 代码： 其实这题想让我们用一种数据结构deque双端队列。对于偶数层的节点，从后端插入元素；对于奇数层的节点，从前端插入元素。 我个人觉得并不比朴素的方法优秀很多，所以就不深入研究了哈哈。（其实是懒"
+  },
+  {
+    "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
+    "date": "2022-03-26T09:02:51.000Z",
+    "updatedAt": "2022-03-26T09:02:51.000Z",
+    "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
+    "slug": "leetcode-105-construct-binary-tree-preorder-inorder",
+    "legacySlug": "6fb3bf4b",
+    "aliases": [
+      "6fb3bf4b"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/construct binary tree from preorder and inorder traversal/ 上数据结构这门课时研究过这个问题，思路很快就有，难在debug 题解 递归法 众所周知，只有前序遍历或中序遍历",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 645,
     "readingTime": 2,
-    "searchContent": "题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法： 第一步：快速排斥实验 如果两线段在x，y的投影都不重合，是不可能会相交的。 换一种说法，就是以两条线段为对角线画矩形，两矩形如果没有重合的地方，那么两线段也一定不相交。 假设给出的四个点为Ax1, Ay1,Ax2,Ay2,Bx1,By1,Bx2,By2，代码如下： 除此之外，这一步还能排除一个特殊情况：共线不相交 第二步：跨立实验 先了解一个线性代数知识：叉积 向量A和向量B叉积，如果AxB 0，那么B在A的逆时针方向，如果AxB 然后对于两直线相交的情况，我们发现它有一个性质，就是向量A1B1叉乘向量A1A2的符号一定与向量A1B2叉乘向量A1A2的符号相反。为了方便写代码，我们把其中一个端点移到零点。 代码： 还有一种特殊的情况，一条线段的端点在另一条线段上，这样的话A1B1与A1A2的叉积为0，我们只要把判断条件加一个等于号就行了。 完整代码 参考资料：https://blog.csdn.net/NEFU kadia/article/details/104462906"
+    "searchContent": "题目 https://leetcode cn.com/problems/construct binary tree from preorder and inorder traversal/ 上数据结构这门课时研究过这个问题，思路很快就有，难在debug 题解 递归法 众所周知，只有前序遍历或中序遍历的结果是推演不出原树的。但是前序遍历+中序遍历可以推演出来。因为它们包含的信息特征不同，可以互补。 前序遍历得到的结果形式可以表示为这样：[ 根节点, [左子树的前序遍历结果], [右子树的前序遍历结果] ] 中序遍历得到的结果形式可以表示为这样：[ [左子树的中序遍历结果], 根节点, [右子树的中序遍历结果] ] 所以说，由前序遍历数组的第一个元素可以确定根节点，然后在中序遍历中找到根节点的位置，这个位置左边是左子树，右边是右子树。递归的这么推演下去，就能把整颗树构造出来啦。 举个例子吧：比如preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]。那么首先确定的根节点是preorder[0]，即为3。然后把inorder劈成两半，一半是3左边的left inorder=[9]，另一半是3右边的right inorder=[15,20,7]。再把preorder劈成两半，left preorder=[9]和right preorder=[20,15,7]。 分别把left preorder和left inorder作为参数向左构造子树，把right preorder和right inorder作为参数向右构造子树。递归下去。 因为python的数组切片比较好用，所以这题就用了python： 细节 先确定left inorder，因为left inorder和left preorder的长度应该相同，所以由它的长度可以确定left preorder。right inorder和right preorder同理。 如果order数组为的长度为1，说明下一个节点是叶节点，后面就不用继续构造下去了。 如果order数组为的长度为0，即为[]，说明当前节点是叶节点，直接令下一个节点为None。 改进 这两段代码在preorder中搜索根节点要花费很多时间，我们在一开始就创建一个哈希表储存每个数的索引，这样搜索时间就是O(1)了。 另外官方题解并没有把数组切片，而是传了指针的位置。 官方题解做法python： 官方题解的c++代码，学习一下： 感想 解决树的问题，代码复杂度明显要高一点。以后我会更多使用较为熟悉方便的python而不是c++。"
   },
   {
-    "title": "Leetcode821:字符的最短距离——两次遍历",
-    "date": "2022-04-19T08:45:09.000Z",
-    "updatedAt": "2022-04-19T08:45:09.000Z",
-    "file": "Leetcode821_字符的最短距离——两次遍历.md",
-    "slug": "leetcode-821-shortest-distance-to-a-character",
-    "legacySlug": "0690f1e1",
+    "title": "Leetcode108:将有序数组转换为二叉搜索树",
+    "date": "2022-03-25T07:36:05.000Z",
+    "updatedAt": "2022-03-25T07:36:05.000Z",
+    "file": "Leetcode108_将有序数组转换为二叉搜索树.md",
+    "slug": "leetcode-108-convert-sorted-array-to-binary-search-tree",
+    "legacySlug": "da6d8242",
     "aliases": [
-      "0690f1e1"
+      "da6d8242"
     ],
-    "excerpt": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次",
+    "excerpt": "题目 从今天开始多做一点关于数据结构“树”的题目。 https://leetcode cn.com/problems/convert sorted array to binary search tree/ 题解 知识点：二叉搜索树 定义很简单： 若其左子树存在，则其左子树中每个节点的值都不大于该节点",
     "tags": [
       "刷题"
     ],
     "img": "",
-    "wordCount": 162,
-    "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/shortest distance to a character/ 题解 遍历k次，取最小 思路：创建结果数组v，赋一个很大的初始值（s.size()+1就够了）。首先遍历一遍s，记录下每个c的位置ci。然后对于每个ci遍历一次s，如果abs(ci 当前位置) 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/shortest distance to a character/solution/zi fu de zui duan ju chi by leetcode sol 2t49/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 虽然是道简单题，但我还是被秀了一脸。"
-  },
-  {
-    "title": "Leetcode386:字典序排数——dfs、迭代",
-    "date": "2022-04-18T09:26:02.000Z",
-    "updatedAt": "2022-04-18T09:26:02.000Z",
-    "file": "Leetcode386_字典序排数——dfs、迭代.md",
-    "slug": "leetcode-386-lexicographical-numbers-dfs-iteration",
-    "legacySlug": "3d6d6e6b",
-    "aliases": [
-      "3d6d6e6b"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/lexicographical numbers/ 日常做不出来😭 题解 什么是字典序？（原谅我到了大二才搞明白什么是字典序😂） 对于字符串，先按首字符排序，如果首字符相同，再按第二个字符排序，以此类推。 如aa,ab,ba,",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 293,
-    "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/lexicographical numbers/ 日常做不出来😭 题解 什么是字典序？（原谅我到了大二才搞明白什么是字典序😂） 对于字符串，先按首字符排序，如果首字符相同，再按第二个字符排序，以此类推。 如aa,ab,ba,bb,bc就是一个字典序。 dfs 我们可以画一棵树。 第一层设置为0。 第二层是1,2,3...,9 第三层是0,1,2,3,...,9 第四层及往后层都同第三层 深度优先遍历这棵树，记录路径就是答案啦。 当然了，把树具体化为代码其实是一件很难得事情： 细节： 先枚举1,2,3...,9，因为第一个数不能为0。 在后面枚举时要把0加上。 时间复杂度O(n)，空间复杂度O(logn)，主要为栈的开销 迭代法 很有思维的一种方法！ 代码： 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/lexicographical numbers/solution/zi dian xu pai shu by leetcode solution 98mz/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
-  },
-  {
-    "title": "Leetcode5:最长回文子串——中心扩展法",
-    "date": "2022-04-17T02:36:32.000Z",
-    "updatedAt": "2022-04-17T02:36:32.000Z",
-    "file": "Leetcode5_最长回文子串——中心扩展法.md",
-    "slug": "leetcode-5-longest-palindromic-substring",
-    "legacySlug": "e5b047df",
-    "aliases": [
-      "e5b047df"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/longest palindromic substring/ 题解 中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题... 这道题需要注意的细节： 回文子串长度既可以是奇数也可以是偶数，如",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 170,
-    "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/longest palindromic substring/ 题解 中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题... 这道题需要注意的细节： 回文子串长度既可以是奇数也可以是偶数，如果是奇数，那么它有一个中心，如果是偶数，则是两个中心。 那么代码思路就是先枚举中心，然后由中心向外扩展，直到不能扩展为止，记录下最大的扩展长度。 优雅的官方题解代码如下： 太优雅了，我感觉这代码水平领先我至少刷一年题。"
-  },
-  {
-    "title": "Git撤销版本",
-    "date": "2022-04-16T12:23:57.000Z",
-    "updatedAt": "2022-04-16T12:23:57.000Z",
-    "file": "git撤销版本.md",
-    "slug": "git-undo-commit",
-    "legacySlug": "5753ed33",
-    "aliases": [
-      "5753ed33"
-    ],
-    "excerpt": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行gi",
-    "tags": [
-      "技能分享",
-      "笔记"
-    ],
-    "img": "",
-    "wordCount": 167,
-    "readingTime": 1,
-    "searchContent": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行git reset hard ，重置到这个版本。(此时相当于撤回了commit) soft 表示只是改变了HEAD的指向，本地代码不会变化 hard 表示本地代码也重置到此版本 4. 执行 git push origin 分支名 – force 强制提交。 如git push origin master –f 然后看远程仓库，你会惊喜的发现5f6935bcc46d480113f0c49d4b54052d10c5aec0之后的版本都消失啦！"
-  },
-  {
-    "title": "Pandas使用技巧",
-    "date": "2022-04-16T07:42:08.000Z",
-    "updatedAt": "2022-04-16T07:42:08.000Z",
-    "file": "Pandas使用技巧.md",
-    "slug": "pandas-tips",
-    "legacySlug": "7241b9d9",
-    "aliases": [
-      "7241b9d9"
-    ],
-    "excerpt": "read csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行",
-    "tags": [
-      "笔记"
-    ],
-    "img": "",
-    "wordCount": 24,
-    "readingTime": 1,
-    "searchContent": "read csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行"
-  },
-  {
-    "title": "Leetcode451:根据字符出现频率排序——桶排序",
-    "date": "2022-04-15T10:00:29.000Z",
-    "updatedAt": "2022-04-15T10:00:29.000Z",
-    "file": "Leetcode451_根据字符出现频率排序——桶排序.md",
-    "slug": "leetcode-451-sort-characters-by-frequency-bucket-sort",
-    "legacySlug": "e596e4cf",
-    "aliases": [
-      "e596e4cf"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/sort characters by frequency/ 题解 思路 用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个大写，0 9数字），所以使用桶",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 453,
+    "wordCount": 443,
     "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/sort characters by frequency/ 题解 思路 用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个大写，0 9数字），所以使用桶排序是最好的选择。 桶排序 假设你对2，5，3三个数字排序，最大的数字是5，所以你拿来五个桶，从头到尾遍历这三个数字。然后把数字放在相同标号的桶里，比如第一个数字是2，就把它放在标号为2的桶里，5就放在标号为5的桶，3就放在标号为3的桶里。最后再把1号到5号桶遍历，空的跳过，就完成了排序。典型的空间换时间，当已知不会消耗很大的空间时，桶排序无非是效率最高的。 具体做法如下： 遍历字符串，统计每个字符出现的频率，同时记录最高频率maxFreq； 创建桶，存储从 11 到 maxFreq 的每个出现频率的字符； 按照出现频率从大到小的顺序遍历桶，对于每个出现频率，获得对应的字符，然后将每个字符按照出现频率拼接到排序后的字符串。 代码： 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/sort characters by frequency/solution/gen ju zi fu chu xian pin lu pai xu by l zmvy/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 时间复杂度：O ( n + k)，其中 n 是字符串 s 的长度， k 是字符串 s 包含的不同字符的个数。 空间复杂度：O ( n + k)"
+    "searchContent": "题目 从今天开始多做一点关于数据结构“树”的题目。 https://leetcode cn.com/problems/convert sorted array to binary search tree/ 题解 知识点：二叉搜索树 定义很简单： 若其左子树存在，则其左子树中每个节点的值都不大于该节点值； 若其右子树存在，则其右子树中每个节点的值都不小于该节点值。 性质： 二叉搜索树中序遍历的结果是一个递增序列 递归法构造二叉搜索树 本题要求构造一棵平衡的二叉搜索树，所以我们要尽可能把数值大小处于中间的元素放在根节点。假设有一段从i到j的序列，如果序列的长度是奇数，根节点就是中间那个数，也就是第(i+j)/2个数；如果数组的长度是偶数，那也无妨，我们把中间偏左的元素作为根节点，仍然是第(i+j)/2个数（整除） 。然后把中间数左边的序列按照同样的方法构造成左子树，右边的序列构造成右子树，递归的这么构造下去即可。 比如nums = [ 10, 3,0,5,9]，先选择0作为根节点，然后0左边的序列[ 10, 3]构成左子树，0右边的序列[5,9]构成右子树。 递归这种东西，不会的时候觉得很难，会了之后就不觉得难了。请看代码： 细节： 递归终止的条件是left right，此时已经没有序列可以构成子树了，所以子节点为nullptr。 另外，不一定非要把中间偏左的元素作为根节点，选择中间偏右的元素也是可以的。"
   },
   {
-    "title": "《失乐园》读后有感",
-    "date": "2022-04-15T08:38:22.000Z",
-    "updatedAt": "2022-04-15T08:38:22.000Z",
-    "file": "《失乐园》读后有感.md",
-    "slug": "a-lost-paradise-book-review",
-    "legacySlug": "23ee6bf0",
+    "title": "Leetcode695:岛屿的最大面积——中等难度的搜索算法",
+    "date": "2022-03-24T07:47:10.000Z",
+    "updatedAt": "2022-03-24T07:47:10.000Z",
+    "file": "Leetcode695_岛屿的最大面积——中等难度的搜索算法.md",
+    "slug": "leetcode-695-max-area-of-island",
+    "legacySlug": "099043ba",
     "aliases": [
-      "23ee6bf0"
+      "099043ba"
     ],
-    "excerpt": "故事简叙 久木是一家出版社的编辑，人到中年，事业不会有进一步发展了，对家人的感情也是平平淡淡的，生活只是一日复一日，清闲无聊得很。 一次偶然的工作聚会上，久木认识了凛子，对她产生了兴趣。凛子30岁，正是端庄美丽之时，但她的婚姻生活并不美好，丈夫忙于工作，无论是在感情上还是在性上都不能满足凛子。但凛子",
+    "excerpt": "题目 https://leetcode cn.com/problems/max area of island/ leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。 题解 这道题相较于Leetcode994:腐烂",
     "tags": [
-      "书影记录"
+      "刷题"
     ],
     "img": "",
-    "wordCount": 1237,
-    "readingTime": 4,
-    "searchContent": "故事简叙 久木是一家出版社的编辑，人到中年，事业不会有进一步发展了，对家人的感情也是平平淡淡的，生活只是一日复一日，清闲无聊得很。 一次偶然的工作聚会上，久木认识了凛子，对她产生了兴趣。凛子30岁，正是端庄美丽之时，但她的婚姻生活并不美好，丈夫忙于工作，无论是在感情上还是在性上都不能满足凛子。但凛子并不是淫荡的女人，在认识久木之前，她也秉持着传统东方女人的内敛，羞涩与神秘，还有坚韧和倔强，直到认识久木之后，是久木带着她闯入了性爱的乐园唤醒了她对性与爱的渴望，坠入深渊之后，便一去不复返了。 两人最初是在镰仓旅馆里做云雨之事，这个时候久木是进攻者，凛子是防守者。看着凛子破防是久木的享受： “和女性同时达到高潮固然不错，但眼看着女性一步步走向顶点也另有其美妙的感觉。前者沉浸在自己的快乐中，后者则享有把所爱的女人送入极乐的境地，令她充分满足的握有主动权的喜悦。” 凛子的父亲去世了，呆在娘家守丧。久木按耐不住自己的欲望，死乞白赖地请求凛子抽空跟他见一面，凛子穿着丧服赴约后，久木命令她撩开裙摆插入…如此背德的事情，让性爱的快感更强烈了。二人就像同谋罪犯一样，命运更紧密地联合在一起了。 “男人和女人都清楚，眼前这无与伦比的美，发源于稀世罕见的粗俗和淫靡，而他们却甘愿堕人到那淫荡的世界中去。” 本来二人都以为这次偷情只是昙花一现，很快就能恢复原本的生活，结果却越陷越深，难以割舍。频繁的幽会，自然引起了家人的怀疑，久木的妻子提出离婚，而久木犹豫不决。凛子的丈夫则不同意离婚，他想把凛子限制在婚姻的枷锁内惩罚她，悲剧的发生似乎是不可阻挡了。同时久木的同事水口去世，还有两人反复聊到阿部定情杀的故事，在性爱时掐住脖子体验濒死的感觉，暗示着最终走向死亡的结局。 “刚才凛子说“我好难受”时掐住了他脖子，久木以为她是闹着玩儿，没想到凛子会来真格的。被她扼住喉咙时，久木真切地感受到了被带往遥远的世界去的不安，也品味到了某种甘美的感觉。” 凛子打算彻底与丈夫断绝关系，更多的时间是跟久木厮混在一起。她的身体更加丰满，更有韵味，在性爱中变得更加主动，或者说更加淫荡。 “这回没忍住吧?” 望着笑眯眯的凛子，久木再次品尝了失败的滋味。” 二人在欲乐园里贪恋不可自拔，为了追求更高的刺激，她们变换不同的姿势，用不同的体位，还购买了工具。而来自家庭，工作的恶意让他们难以在现实生活中立足，只能彼此依靠。所以活着有什么意思呢？还不如就在欢娱达到顶点之时死去算了。 “女人是在晕眩般极度快乐中梦见死，相比之下，男人则是在坠落下去的虚脱感中被死的阴影所缚，两者真是天壤之别啊！” “在人生态度上，久木渐渐开始倾向于要全力以赴地把握现在的刹那主义，这也是凛子的影响。” 最终的结局，是二人在别墅中自杀。被发现时身体还紧紧的结合在一起。 日本人对死的看法 日本文学中出现了很多关于死的想法，很多日本知名作家都选择自杀，比如有岛武郎（小说中有提到），芥川龙之介，太宰治，三岛由纪夫，川端康成（小说中也提到了），樱花精神和武士精神也都是一种崇尚“高贵的死”的精神，这一点和中国古代的文人把精神看作比生命更重要是类似的，可能也是因为日本的文化来源于中国文化，但是日本人把这种精神发展到极致了。 很明显我们现在的价值观是不认同这种的，中国有句话叫“好死不如赖活着”，中国的自杀率也远低于日本。我们大家都要好好活着。"
-  },
-  {
-    "title": "成功主持150人参会的讲座！",
-    "date": "2022-04-10T15:05:16.000Z",
-    "updatedAt": "2022-04-10T15:05:16.000Z",
-    "file": "成功主持150人参会的讲座！.md",
-    "slug": "hosting-150-attendee-lecture-public-speaking",
-    "legacySlug": "19cbd8a1",
-    "aliases": [
-      "19cbd8a1"
-    ],
-    "excerpt": "每一次在公开场合的讲话对我都是一次极大的锻炼提高！担任活动策划、组织者非常不容易，要考虑每一个细节，尽力满足每一个参与者。事前进行了很多准备，真是台上十分钟台下十年功啊！经过几次锻炼，我现在可以越来越从容稳重地做这种工作了。",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "",
-    "wordCount": 103,
+    "wordCount": 394,
     "readingTime": 1,
-    "searchContent": "每一次在公开场合的讲话对我都是一次极大的锻炼提高！担任活动策划、组织者非常不容易，要考虑每一个细节，尽力满足每一个参与者。事前进行了很多准备，真是台上十分钟台下十年功啊！经过几次锻炼，我现在可以越来越从容稳重地做这种工作了。"
+    "searchContent": "题目 https://leetcode cn.com/problems/max area of island/ leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。 题解 这道题相较于Leetcode994:腐烂的橘子，有哪些不一样呢？ 994题给了你几个源点，而这题你需要从每个连通图里自己选择一个源点，才能进行搜索。 994题要统计的是轮数，而这题在搜索时你需要统计节点总共的数量。 解决方案： 初始时遍历整个图，一旦遇到岛屿就开始做搜索。为了避免重复搜索，可以把已搜索节点标为0。 带有返回值的递归。把整个递归过程看成一颗树，那么叶节点返回应该为1，其他节点返回应该是1+所有子节点。 上面这个图是我随手画的，只是便于理解，跟这个测试案例没啥关系😂。 上代码： 细节： 搜索一个节点的时候先判断传入的坐标是否越界，如果越界了，或者所搜索的节点是0，直接return 0;因为只有1才有必要进行下一步操作。 ans这个变量就很关键了，先赋初值为0，再累加。结合上面的图思考。 di和dj这两个数组的定义就是节省了代码，上一道搜索算法的题目我也是这样写的。"
+  },
+  {
+    "title": "Leetcode977:有序数组的平方——双指针",
+    "date": "2022-03-23T12:35:46.000Z",
+    "updatedAt": "2022-03-23T12:35:46.000Z",
+    "file": "Leetcode977_有序数组的平方——双指针.md",
+    "slug": "leetcode-977-squares-of-a-sorted-array-two-pointers",
+    "legacySlug": "273b7289",
+    "aliases": [
+      "273b7289"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/squares of a sorted array/ 题解 先平方再排序 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后面是正数，nums数组平方后的最大值一是第一个元素或最后一个元素。所",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 210,
+    "readingTime": 1,
+    "searchContent": "题目 https://leetcode cn.com/problems/squares of a sorted array/ 题解 先平方再排序 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后面是正数，nums数组平方后的最大值一是第一个元素或最后一个元素。所以在第一位和最后一位分别放两个指针i和j。 判断if nums[i] nums[i] nums[j] nums[j]，则把nums[i] nums[i]放到res数组最后一位，否则把nums[j] nums[j]放到最后一位。然后往前移动i，或者往后移动j。 这里有个动画：977.有序数组的平方.gif 代码： 细节： 因为可能i和j所指的元素相等，所以判断里要加个等于 while循环停止的条件，可以是i =0 ?"
+  },
+  {
+    "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
+    "date": "2022-03-22T09:50:53.000Z",
+    "updatedAt": "2022-03-22T09:50:53.000Z",
+    "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
+    "slug": "leetcode-994-rotting-oranges-bfs",
+    "legacySlug": "6e5ac913",
+    "aliases": [
+      "6e5ac913"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/rotting oranges/ 这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。 题解 解题思路 这道题很明显要使用广度优先搜索，搜索的目标是每个腐烂橘子周围的新鲜橘子。相较于73",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 486,
+    "readingTime": 2,
+    "searchContent": "题目 https://leetcode cn.com/problems/rotting oranges/ 这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。 题解 解题思路 这道题很明显要使用广度优先搜索，搜索的目标是每个腐烂橘子周围的新鲜橘子。相较于733题图像渲染来说，这道题由一个搜索源点变成了可能有多个源点。而且你得一轮一轮去搜索，并统计出搜索的轮数。 如果只用一个队列的话，难以区分队列中的烂橘子是在哪一轮烂掉的。所以本菜鸡突发奇想，用两个队列交替push。例如：第一轮把烂橘子push给que队列，第二轮push给newque队列，清空que队列，第三轮再push给que队列...以此类推。 官方题解只用了一个队列，它并不是在搜索时区分第几轮的。而是使用了一个dis[][]数组，记录了每一个橘子相较于上一个橘子腐烂时间+1。也非常巧妙。 代码 细节： 最开始把坏橘子找出来的同时顺便可以把新鲜橘子的总数找出来。在搜索时顺便统计一下坏掉橘子的数量，相减后就能知道几轮下来还有没有新鲜的橘子了。 我这样写代码把最初坏的橘子也算上消耗了一分钟时间，等于多算了一分钟，最后要把minute 1。但由于minute初值设置为0，所以可能会有 1的情况，此时取0就可。（我现在写题解的时候突然发现这个 1貌似没影响qwq） 看了下其他人的题解没有用我这种双队列方法的，哈哈，还特意发了个题解显摆一下，作者竟我自己😂"
   }
 ]

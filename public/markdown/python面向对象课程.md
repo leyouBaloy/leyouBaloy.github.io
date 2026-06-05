@@ -7,7 +7,6 @@ slug: python-oop-course
 draft: false
 title: python面向对象课程
 ---
-
 [https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm\_id\_from=pageDriver](https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm_id_from=pageDriver)
 
 这个课讲得真是太好了，很少能有把复杂抽象的知识讲得这么清楚的老师  

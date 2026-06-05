@@ -4,70 +4,11 @@ categories:
 - 技能分享
 date: 2021-11-24 18:58:03
 slug: mac-auto-connect-campus-network-script
-draft: false
+draft: true
 title: Mac上自动连接校园网的脚本
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:21:58.385Z
 ---
-
-## 起因
-
-傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-5.png)
-
-mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。
-
-## 第一步
-
-从GitHub上下载一段自动连接校园网的python代码，地址：[https://github.com/UPCUnofficial/UPCNet](https://github.com/UPCUnofficial/UPCNet)
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-6.png)
-
-然后解压，修改其中config.py文件。
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-7.png)
-
-在config.py文件下输入学号、密码和运营商编号，然后运行
-
-```
-python3 NetworkAuth.py
-```
-
-运营商对应编号：
-
-```
-default -> 校园网
-unicom -> 联通
-cmcc -> 移动
-ctcc -> 电信
-local -> 校园内网
-```
-
-再用终端cd进入该文件夹，pip install 所依赖的库。
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-8-1024x823.png)
-
-运行代码。(以上所述在readme里都有）
-
-```
-python3 NetworkAuth.py
-```
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-9-1024x666.png)
-
-成功啦！
-
-## 第二步
-
-用文本编辑器创建一个文件，里面打上这行代码：
-
-```
-python 你的路径/NetworkAuth.py
-```
-
-将文件重命名为XXXX.sh
-
-然后右键—>打开方式—>其它—>所有应用程序—>终端
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/11/image-10-1024x573.png)
-
-然后把它放在桌面，每次等连上wifi后点一下就能连接校园网啦。[](https://github.com/UPCUnofficial/UPCNet#%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B)
+<!-- encrypted:draft-body:xor-base64 -->
+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

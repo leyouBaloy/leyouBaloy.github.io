@@ -1,49 +1,4 @@
 {
-  "13207411": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "22820229": [
     {
       "title": "手撕卷积神经网络+反向传播梯度更新",
@@ -151,20 +106,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -177,6 +118,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -588,20 +543,6 @@
   ],
   "masters-graduation-defense-summary": [
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -626,6 +567,20 @@
         "e9dd83c6"
       ],
       "readingTime": 22,
+      "tags": [
+        "随笔杂记"
+      ]
+    },
+    {
+      "title": "品酒🍶——古井贡酒第六代55度",
+      "date": "2024-12-09T14:49:43.000Z",
+      "updatedAt": "2024-12-09T14:49:43.000Z",
+      "slug": "gujing-gongjiu-6th-gen-55-degree-tasting",
+      "legacySlug": "11baea90",
+      "aliases": [
+        "11baea90"
+      ],
+      "readingTime": 1,
       "tags": [
         "随笔杂记"
       ]
@@ -633,20 +588,6 @@
   ],
   "119fbeee": [
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -671,6 +612,20 @@
         "e9dd83c6"
       ],
       "readingTime": 22,
+      "tags": [
+        "随笔杂记"
+      ]
+    },
+    {
+      "title": "品酒🍶——古井贡酒第六代55度",
+      "date": "2024-12-09T14:49:43.000Z",
+      "updatedAt": "2024-12-09T14:49:43.000Z",
+      "slug": "gujing-gongjiu-6th-gen-55-degree-tasting",
+      "legacySlug": "11baea90",
+      "aliases": [
+        "11baea90"
+      ],
+      "readingTime": 1,
       "tags": [
         "随笔杂记"
       ]
@@ -853,96 +808,6 @@
       "readingTime": 5,
       "tags": [
         "技术教程"
-      ]
-    }
-  ],
-  "tester": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
-      "date": "2025-06-10T08:48:23.000Z",
-      "updatedAt": "2025-06-10T08:48:23.000Z",
-      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
-      "legacySlug": "e9dd83c6",
-      "aliases": [
-        "e9dd83c6"
-      ],
-      "readingTime": 22,
-      "tags": [
-        "随笔杂记"
-      ]
-    }
-  ],
-  "7fde58cd": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
-      "date": "2025-06-10T08:48:23.000Z",
-      "updatedAt": "2025-06-10T08:48:23.000Z",
-      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
-      "legacySlug": "e9dd83c6",
-      "aliases": [
-        "e9dd83c6"
-      ],
-      "readingTime": 22,
-      "tags": [
-        "随笔杂记"
       ]
     }
   ],
@@ -1430,20 +1295,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -1456,6 +1307,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "品酒🍶——古井贡酒第六代55度",
+      "date": "2024-12-09T14:49:43.000Z",
+      "updatedAt": "2024-12-09T14:49:43.000Z",
+      "slug": "gujing-gongjiu-6th-gen-55-degree-tasting",
+      "legacySlug": "11baea90",
+      "aliases": [
+        "11baea90"
+      ],
+      "readingTime": 1,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -1475,20 +1340,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -1501,6 +1352,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "品酒🍶——古井贡酒第六代55度",
+      "date": "2024-12-09T14:49:43.000Z",
+      "updatedAt": "2024-12-09T14:49:43.000Z",
+      "slug": "gujing-gongjiu-6th-gen-55-degree-tasting",
+      "legacySlug": "11baea90",
+      "aliases": [
+        "11baea90"
+      ],
+      "readingTime": 1,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -1796,20 +1661,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -1822,6 +1673,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -1841,20 +1706,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -1867,6 +1718,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -2212,20 +2077,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -2238,6 +2089,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -2257,20 +2122,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -2283,6 +2134,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -2566,20 +2431,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -2592,6 +2443,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -2611,20 +2476,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -2637,6 +2488,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -2748,20 +2613,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -2774,6 +2625,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -2793,20 +2658,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -2819,6 +2670,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -2838,20 +2703,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -2864,6 +2715,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -2883,20 +2748,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -2909,6 +2760,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -3022,20 +2887,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -3048,6 +2899,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -3067,20 +2932,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -3093,6 +2944,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -3112,20 +2977,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -3138,6 +2989,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -3157,20 +3022,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -3183,6 +3034,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -3202,20 +3067,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -3228,6 +3079,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -3247,20 +3112,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -3273,6 +3124,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -3292,20 +3157,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -3318,6 +3169,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -3337,20 +3202,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -3363,6 +3214,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -4004,96 +3869,6 @@
       ]
     }
   ],
-  "bengbu-food-tour": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "f6639fe4": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "red-dead-redemption-2-game-review": [
     {
       "title": "硕士毕业答辩总结",
@@ -4110,20 +3885,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -4136,6 +3897,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -4689,100 +4464,6 @@
       ]
     }
   ],
-  "how-to-build-chatgpt-mirror-site": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "28b5db09": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
   "css-layout-basics": [
     {
       "title": "langchain-faiss加载pkl文件速度提升",
@@ -4963,96 +4644,6 @@
       "readingTime": 2,
       "tags": [
         "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "mom-birthday-gift-happy-story": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "81f99cf2": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
         "技能分享"
       ]
     }
@@ -5332,96 +4923,6 @@
       "tags": [
         "技能分享",
         "随笔杂记"
-      ]
-    }
-  ],
-  "2023-winter-vacation-summary": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "4416947d": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
       ]
     }
   ],
@@ -5840,366 +5341,6 @@
       ]
     }
   ],
-  "goodbye-ranked-matches-lol": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "04464ee3": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "winter-vacation-begins": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "47a554c5": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "acute-gastroenteritis-overeating-hospital-visit": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "5959d237": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "how-i-survived-past-few-weeks": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "2cc40118": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "siddhartha-book-review-life-experience": [
     {
       "title": "《德米安》读后有感",
@@ -6570,366 +5711,6 @@
       ]
     }
   ],
-  "time-management-major-mistake-failure": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "f543c019": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "math-modeling-competition-failure": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "f643338a": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "mathematical-modeling-competition-experience": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "40f7467f": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "junior-year-first-semester-plan": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "3f190b1f": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "why-stardew-valley-is-so-fun": [
     {
       "title": "硕士毕业答辩总结",
@@ -6946,20 +5727,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -6972,6 +5739,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -6991,20 +5772,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -7017,6 +5784,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -7208,100 +5989,6 @@
       ]
     }
   ],
-  "data-structures-algorithms-internship-phase-2": [
-    {
-      "title": "数据结构与算法实习第一阶段",
-      "date": "2022-06-30T08:34:10.000Z",
-      "updatedAt": "2022-06-30T08:34:10.000Z",
-      "slug": "data-structures-algorithms-practice-phase-1",
-      "legacySlug": "85eb2c70",
-      "aliases": [
-        "85eb2c70"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
-      "date": "2022-04-20T11:01:29.000Z",
-      "updatedAt": "2022-04-20T11:01:29.000Z",
-      "slug": "line-segments-intersect-rapid-rejection-straddle-test",
-      "legacySlug": "519b05f8",
-      "aliases": [
-        "519b05f8"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "C++和python常用函数",
-      "date": "2022-04-08T12:23:24.000Z",
-      "updatedAt": "2022-04-08T12:23:24.000Z",
-      "slug": "cpp-python-common-functions",
-      "legacySlug": "09ec2d90",
-      "aliases": [
-        "09ec2d90"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    }
-  ],
-  "dfbba3ac": [
-    {
-      "title": "数据结构与算法实习第一阶段",
-      "date": "2022-06-30T08:34:10.000Z",
-      "updatedAt": "2022-06-30T08:34:10.000Z",
-      "slug": "data-structures-algorithms-practice-phase-1",
-      "legacySlug": "85eb2c70",
-      "aliases": [
-        "85eb2c70"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
-      "date": "2022-04-20T11:01:29.000Z",
-      "updatedAt": "2022-04-20T11:01:29.000Z",
-      "slug": "line-segments-intersect-rapid-rejection-straddle-test",
-      "legacySlug": "519b05f8",
-      "aliases": [
-        "519b05f8"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "C++和python常用函数",
-      "date": "2022-04-08T12:23:24.000Z",
-      "updatedAt": "2022-04-08T12:23:24.000Z",
-      "slug": "cpp-python-common-functions",
-      "legacySlug": "09ec2d90",
-      "aliases": [
-        "09ec2d90"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    }
-  ],
   "from-the-soil-reading-notes": [
     {
       "title": "《德米安》读后有感",
@@ -7387,194 +6074,6 @@
       "readingTime": 2,
       "tags": [
         "书影记录"
-      ]
-    }
-  ],
-  "data-structures-algorithms-practice-phase-1": [
-    {
-      "title": "数据结构与算法实习第二阶段",
-      "date": "2022-07-02T07:38:13.000Z",
-      "updatedAt": "2022-07-02T07:38:13.000Z",
-      "slug": "data-structures-algorithms-internship-phase-2",
-      "legacySlug": "dfbba3ac",
-      "aliases": [
-        "dfbba3ac"
-      ],
-      "readingTime": 7,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
-      "date": "2022-04-20T11:01:29.000Z",
-      "updatedAt": "2022-04-20T11:01:29.000Z",
-      "slug": "line-segments-intersect-rapid-rejection-straddle-test",
-      "legacySlug": "519b05f8",
-      "aliases": [
-        "519b05f8"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "C++和python常用函数",
-      "date": "2022-04-08T12:23:24.000Z",
-      "updatedAt": "2022-04-08T12:23:24.000Z",
-      "slug": "cpp-python-common-functions",
-      "legacySlug": "09ec2d90",
-      "aliases": [
-        "09ec2d90"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    }
-  ],
-  "85eb2c70": [
-    {
-      "title": "数据结构与算法实习第二阶段",
-      "date": "2022-07-02T07:38:13.000Z",
-      "updatedAt": "2022-07-02T07:38:13.000Z",
-      "slug": "data-structures-algorithms-internship-phase-2",
-      "legacySlug": "dfbba3ac",
-      "aliases": [
-        "dfbba3ac"
-      ],
-      "readingTime": 7,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
-      "date": "2022-04-20T11:01:29.000Z",
-      "updatedAt": "2022-04-20T11:01:29.000Z",
-      "slug": "line-segments-intersect-rapid-rejection-straddle-test",
-      "legacySlug": "519b05f8",
-      "aliases": [
-        "519b05f8"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "C++和python常用函数",
-      "date": "2022-04-08T12:23:24.000Z",
-      "updatedAt": "2022-04-08T12:23:24.000Z",
-      "slug": "cpp-python-common-functions",
-      "legacySlug": "09ec2d90",
-      "aliases": [
-        "09ec2d90"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    }
-  ],
-  "regex-extract-stray-birds": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "f9ab321a": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
       ]
     }
   ],
@@ -8446,96 +6945,6 @@
       ]
     }
   ],
-  "midterm-review-and-planning": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "12008a6f": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "and-then-there-were-none-book-review": [
     {
       "title": "《德米安》读后有感",
@@ -9066,36 +7475,6 @@
   ],
   "line-segments-intersect-rapid-rejection-straddle-test": [
     {
-      "title": "数据结构与算法实习第二阶段",
-      "date": "2022-07-02T07:38:13.000Z",
-      "updatedAt": "2022-07-02T07:38:13.000Z",
-      "slug": "data-structures-algorithms-internship-phase-2",
-      "legacySlug": "dfbba3ac",
-      "aliases": [
-        "dfbba3ac"
-      ],
-      "readingTime": 7,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "数据结构与算法实习第一阶段",
-      "date": "2022-06-30T08:34:10.000Z",
-      "updatedAt": "2022-06-30T08:34:10.000Z",
-      "slug": "data-structures-algorithms-practice-phase-1",
-      "legacySlug": "85eb2c70",
-      "aliases": [
-        "85eb2c70"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
       "title": "C++和python常用函数",
       "date": "2022-04-08T12:23:24.000Z",
       "updatedAt": "2022-04-08T12:23:24.000Z",
@@ -9108,41 +7487,41 @@
       "tags": [
         "刷题",
         "笔记"
+      ]
+    },
+    {
+      "title": "手撕卷积神经网络+反向传播梯度更新",
+      "date": "2025-07-13T07:24:20.000Z",
+      "updatedAt": "2025-07-13T07:24:20.000Z",
+      "slug": "cnn-backpropagation-gradient-update-from-scratch",
+      "legacySlug": "8912df88",
+      "aliases": [
+        "8912df88"
+      ],
+      "readingTime": 2,
+      "tags": [
+        "笔记",
+        "技能分享"
+      ]
+    },
+    {
+      "title": "手撕Attention",
+      "date": "2025-06-22T08:49:55.000Z",
+      "updatedAt": "2025-06-22T08:49:55.000Z",
+      "slug": "implement-attention-from-scratch",
+      "legacySlug": "d764f796",
+      "aliases": [
+        "d764f796"
+      ],
+      "readingTime": 1,
+      "tags": [
+        "笔记",
+        "技能分享"
       ]
     }
   ],
   "519b05f8": [
     {
-      "title": "数据结构与算法实习第二阶段",
-      "date": "2022-07-02T07:38:13.000Z",
-      "updatedAt": "2022-07-02T07:38:13.000Z",
-      "slug": "data-structures-algorithms-internship-phase-2",
-      "legacySlug": "dfbba3ac",
-      "aliases": [
-        "dfbba3ac"
-      ],
-      "readingTime": 7,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "数据结构与算法实习第一阶段",
-      "date": "2022-06-30T08:34:10.000Z",
-      "updatedAt": "2022-06-30T08:34:10.000Z",
-      "slug": "data-structures-algorithms-practice-phase-1",
-      "legacySlug": "85eb2c70",
-      "aliases": [
-        "85eb2c70"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
       "title": "C++和python常用函数",
       "date": "2022-04-08T12:23:24.000Z",
       "updatedAt": "2022-04-08T12:23:24.000Z",
@@ -9155,6 +7534,36 @@
       "tags": [
         "刷题",
         "笔记"
+      ]
+    },
+    {
+      "title": "手撕卷积神经网络+反向传播梯度更新",
+      "date": "2025-07-13T07:24:20.000Z",
+      "updatedAt": "2025-07-13T07:24:20.000Z",
+      "slug": "cnn-backpropagation-gradient-update-from-scratch",
+      "legacySlug": "8912df88",
+      "aliases": [
+        "8912df88"
+      ],
+      "readingTime": 2,
+      "tags": [
+        "笔记",
+        "技能分享"
+      ]
+    },
+    {
+      "title": "手撕Attention",
+      "date": "2025-06-22T08:49:55.000Z",
+      "updatedAt": "2025-06-22T08:49:55.000Z",
+      "slug": "implement-attention-from-scratch",
+      "legacySlug": "d764f796",
+      "aliases": [
+        "d764f796"
+      ],
+      "readingTime": 1,
+      "tags": [
+        "笔记",
+        "技能分享"
       ]
     }
   ],
@@ -9786,96 +8195,6 @@
       ]
     }
   ],
-  "hosting-150-attendee-lecture-public-speaking": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "19cbd8a1": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "leetcode-560-subarray-sum-equals-k": [
     {
       "title": "Leetcode_209长度最小的子数组——滑动窗口",
@@ -9966,36 +8285,6 @@
   ],
   "cpp-python-common-functions": [
     {
-      "title": "数据结构与算法实习第二阶段",
-      "date": "2022-07-02T07:38:13.000Z",
-      "updatedAt": "2022-07-02T07:38:13.000Z",
-      "slug": "data-structures-algorithms-internship-phase-2",
-      "legacySlug": "dfbba3ac",
-      "aliases": [
-        "dfbba3ac"
-      ],
-      "readingTime": 7,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "数据结构与算法实习第一阶段",
-      "date": "2022-06-30T08:34:10.000Z",
-      "updatedAt": "2022-06-30T08:34:10.000Z",
-      "slug": "data-structures-algorithms-practice-phase-1",
-      "legacySlug": "85eb2c70",
-      "aliases": [
-        "85eb2c70"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
       "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
       "date": "2022-04-20T11:01:29.000Z",
       "updatedAt": "2022-04-20T11:01:29.000Z",
@@ -10008,41 +8297,41 @@
       "tags": [
         "刷题",
         "笔记"
+      ]
+    },
+    {
+      "title": "手撕卷积神经网络+反向传播梯度更新",
+      "date": "2025-07-13T07:24:20.000Z",
+      "updatedAt": "2025-07-13T07:24:20.000Z",
+      "slug": "cnn-backpropagation-gradient-update-from-scratch",
+      "legacySlug": "8912df88",
+      "aliases": [
+        "8912df88"
+      ],
+      "readingTime": 2,
+      "tags": [
+        "笔记",
+        "技能分享"
+      ]
+    },
+    {
+      "title": "手撕Attention",
+      "date": "2025-06-22T08:49:55.000Z",
+      "updatedAt": "2025-06-22T08:49:55.000Z",
+      "slug": "implement-attention-from-scratch",
+      "legacySlug": "d764f796",
+      "aliases": [
+        "d764f796"
+      ],
+      "readingTime": 1,
+      "tags": [
+        "笔记",
+        "技能分享"
       ]
     }
   ],
   "09ec2d90": [
     {
-      "title": "数据结构与算法实习第二阶段",
-      "date": "2022-07-02T07:38:13.000Z",
-      "updatedAt": "2022-07-02T07:38:13.000Z",
-      "slug": "data-structures-algorithms-internship-phase-2",
-      "legacySlug": "dfbba3ac",
-      "aliases": [
-        "dfbba3ac"
-      ],
-      "readingTime": 7,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
-      "title": "数据结构与算法实习第一阶段",
-      "date": "2022-06-30T08:34:10.000Z",
-      "updatedAt": "2022-06-30T08:34:10.000Z",
-      "slug": "data-structures-algorithms-practice-phase-1",
-      "legacySlug": "85eb2c70",
-      "aliases": [
-        "85eb2c70"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题",
-        "笔记"
-      ]
-    },
-    {
       "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
       "date": "2022-04-20T11:01:29.000Z",
       "updatedAt": "2022-04-20T11:01:29.000Z",
@@ -10055,6 +8344,36 @@
       "tags": [
         "刷题",
         "笔记"
+      ]
+    },
+    {
+      "title": "手撕卷积神经网络+反向传播梯度更新",
+      "date": "2025-07-13T07:24:20.000Z",
+      "updatedAt": "2025-07-13T07:24:20.000Z",
+      "slug": "cnn-backpropagation-gradient-update-from-scratch",
+      "legacySlug": "8912df88",
+      "aliases": [
+        "8912df88"
+      ],
+      "readingTime": 2,
+      "tags": [
+        "笔记",
+        "技能分享"
+      ]
+    },
+    {
+      "title": "手撕Attention",
+      "date": "2025-06-22T08:49:55.000Z",
+      "updatedAt": "2025-06-22T08:49:55.000Z",
+      "slug": "implement-attention-from-scratch",
+      "legacySlug": "d764f796",
+      "aliases": [
+        "d764f796"
+      ],
+      "readingTime": 1,
+      "tags": [
+        "笔记",
+        "技能分享"
       ]
     }
   ],
@@ -10935,96 +9254,6 @@
       "readingTime": 1,
       "tags": [
         "刷题"
-      ]
-    }
-  ],
-  "skipped-class-got-called-out": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "39d92005": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
       ]
     }
   ],
@@ -14036,96 +12265,6 @@
       ]
     }
   ],
-  "learning-to-cook-winter-vacation": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "dd3d589e": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "hanzawa-naoki-review": [
     {
       "title": "《德米安》读后有感",
@@ -14398,51 +12537,6 @@
       ]
     }
   ],
-  "annual-year-in-review": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "ashita-mo-koharu-biyori-book-review": [
     {
       "title": "《德米安》读后有感",
@@ -14528,366 +12622,6 @@
       "readingTime": 2,
       "tags": [
         "书影记录"
-      ]
-    }
-  ],
-  "playing-it-takes-two-co-op-game-experience": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "b0cf01f1": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "consistent-study-habits-reflections": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "b44deaa7": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "baidu-gift-certificate-surprise": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "144271c0": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "miserable-final-exam-review-week": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "9a871566": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
       ]
     }
   ],
@@ -14979,100 +12713,6 @@
       ]
     }
   ],
-  "ccf-csp-certification-exam-experience": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "94d9e3ca": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
   "numerical-calculation-methods": [
     {
       "title": "langchain-faiss加载pkl文件速度提升",
@@ -15120,192 +12760,6 @@
     }
   ],
   "3b6e3bc4": [
-    {
-      "title": "langchain-faiss加载pkl文件速度提升",
-      "date": "2025-12-14T06:19:28.000Z",
-      "updatedAt": "2025-12-14T06:19:28.000Z",
-      "slug": "langchain-faiss-load-pkl-speed-up",
-      "legacySlug": "506f20a8",
-      "aliases": [
-        "506f20a8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "技能分享"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "how-to-write-a-good-paper-tell-a-story": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "7dbb12f1": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "mac-auto-connect-campus-network-script": [
-    {
-      "title": "langchain-faiss加载pkl文件速度提升",
-      "date": "2025-12-14T06:19:28.000Z",
-      "updatedAt": "2025-12-14T06:19:28.000Z",
-      "slug": "langchain-faiss-load-pkl-speed-up",
-      "legacySlug": "506f20a8",
-      "aliases": [
-        "506f20a8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "技能分享"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "1f902f05": [
     {
       "title": "langchain-faiss加载pkl文件速度提升",
       "date": "2025-12-14T06:19:28.000Z",
@@ -15443,96 +12897,6 @@
       ]
     }
   ],
-  "macbook-air-m1-review": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "591056ff": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "macos-matplotlib-chinese-font-display-fix": [
     {
       "title": "langchain-faiss加载pkl文件速度提升",
@@ -15621,188 +12985,6 @@
       "readingTime": 2,
       "tags": [
         "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "add-transcript-to-english-reading-video": [
-    {
-      "title": "langchain-faiss加载pkl文件速度提升",
-      "date": "2025-12-14T06:19:28.000Z",
-      "updatedAt": "2025-12-14T06:19:28.000Z",
-      "slug": "langchain-faiss-load-pkl-speed-up",
-      "legacySlug": "506f20a8",
-      "aliases": [
-        "506f20a8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "技能分享"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "0e0d4826": [
-    {
-      "title": "langchain-faiss加载pkl文件速度提升",
-      "date": "2025-12-14T06:19:28.000Z",
-      "updatedAt": "2025-12-14T06:19:28.000Z",
-      "slug": "langchain-faiss-load-pkl-speed-up",
-      "legacySlug": "506f20a8",
-      "aliases": [
-        "506f20a8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "技能分享"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "linux-free-software-association-orientation-thoughts": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "c99a798a": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
         "技能分享"
       ]
     }
@@ -15984,94 +13166,6 @@
       "readingTime": 2,
       "tags": [
         "书影记录"
-      ]
-    }
-  ],
-  "ai-knowledge-competition-upc-award-notice": [
-    {
-      "title": "Leetcode_209长度最小的子数组——滑动窗口",
-      "date": "2024-11-21T13:28:00.000Z",
-      "updatedAt": "2024-11-21T13:28:00.000Z",
-      "slug": "leetcode-209-minimum-size-subarray-sum-sliding-window",
-      "legacySlug": "35124327",
-      "aliases": [
-        "35124327"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "刷题"
-      ]
-    },
-    {
-      "title": "数之和问题归纳——哈希、双指针",
-      "date": "2024-11-04T12:10:30.000Z",
-      "updatedAt": "2024-11-04T12:10:30.000Z",
-      "slug": "n-sum-problem-hash-two-pointers",
-      "legacySlug": "c3608157",
-      "aliases": [
-        "c3608157"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题"
-      ]
-    },
-    {
-      "title": "Leetcode142:环形链表II——快慢指针",
-      "date": "2024-10-29T13:04:06.000Z",
-      "updatedAt": "2024-10-29T13:04:06.000Z",
-      "slug": "leetcode-142-linked-list-cycle-ii-fast-slow-pointers",
-      "legacySlug": "f870a3e8",
-      "aliases": [
-        "f870a3e8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "刷题"
-      ]
-    }
-  ],
-  "1829cd62": [
-    {
-      "title": "Leetcode_209长度最小的子数组——滑动窗口",
-      "date": "2024-11-21T13:28:00.000Z",
-      "updatedAt": "2024-11-21T13:28:00.000Z",
-      "slug": "leetcode-209-minimum-size-subarray-sum-sliding-window",
-      "legacySlug": "35124327",
-      "aliases": [
-        "35124327"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "刷题"
-      ]
-    },
-    {
-      "title": "数之和问题归纳——哈希、双指针",
-      "date": "2024-11-04T12:10:30.000Z",
-      "updatedAt": "2024-11-04T12:10:30.000Z",
-      "slug": "n-sum-problem-hash-two-pointers",
-      "legacySlug": "c3608157",
-      "aliases": [
-        "c3608157"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题"
-      ]
-    },
-    {
-      "title": "Leetcode142:环形链表II——快慢指针",
-      "date": "2024-10-29T13:04:06.000Z",
-      "updatedAt": "2024-10-29T13:04:06.000Z",
-      "slug": "leetcode-142-linked-list-cycle-ii-fast-slow-pointers",
-      "legacySlug": "f870a3e8",
-      "aliases": [
-        "f870a3e8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "刷题"
       ]
     }
   ],
@@ -16535,96 +13629,6 @@
       ]
     }
   ],
-  "rediscovering-my-hometown-bengbu": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "10580a2d": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "python-time-datetime-pitfalls": [
     {
       "title": "手撕卷积神经网络+反向传播梯度更新",
@@ -16804,96 +13808,6 @@
       "readingTime": 2,
       "tags": [
         "书影记录"
-      ]
-    }
-  ],
-  "internet-cafe-fried-chicken-gaming-diary": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "b1b9e00f": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
       ]
     }
   ],
@@ -17271,96 +14185,6 @@
       ]
     }
   ],
-  "old-classmates-reunion": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "cf49f235": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "lg-29wk500-ultrawide-monitor-experience": [
     {
       "title": "硕士毕业答辩总结",
@@ -17377,20 +14201,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -17403,6 +14213,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -17422,20 +14246,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -17448,6 +14258,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -17635,96 +14459,6 @@
       "readingTime": 4,
       "tags": [
         "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "body-first-health-second": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "90b23d4d": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
         "技能分享"
       ]
     }
@@ -17921,20 +14655,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -17947,6 +14667,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -17966,20 +14700,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -17993,283 +14713,19 @@
         "随笔杂记",
         "技能分享"
       ]
-    }
-  ],
-  "savage-your-physique-exercise-thoughts": [
+    },
     {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
       "aliases": [
-        "119fbeee"
+        "e9dd83c6"
       ],
-      "readingTime": 6,
+      "readingTime": 22,
       "tags": [
         "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "740381a6": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "probability-and-mathematical-statistics-course-summary": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "94554f7a": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "artificial-intelligence-learning-summary": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "3dfae010": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
       ]
     }
   ],
@@ -18451,96 +14907,6 @@
       "readingTime": 4,
       "tags": [
         "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "focus-on-primary-goals-personal-growth": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "b278b761": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
         "技能分享"
       ]
     }
@@ -18829,20 +15195,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -18855,6 +15207,20 @@
       "tags": [
         "随笔杂记",
         "技能分享"
+      ]
+    },
+    {
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
+      "aliases": [
+        "e9dd83c6"
+      ],
+      "readingTime": 22,
+      "tags": [
+        "随笔杂记"
       ]
     }
   ],
@@ -18874,20 +15240,6 @@
       ]
     },
     {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
       "title": "RAG图谱实体和边智能合并",
       "date": "2025-07-13T09:25:50.000Z",
       "updatedAt": "2025-07-13T09:25:50.000Z",
@@ -18901,99 +15253,19 @@
         "随笔杂记",
         "技能分享"
       ]
-    }
-  ],
-  "build-online-judge-system": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
     },
     {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
       "aliases": [
-        "d764f796"
+        "e9dd83c6"
       ],
-      "readingTime": 1,
+      "readingTime": 22,
       "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "b3da82e1": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
+        "随笔杂记"
       ]
     }
   ],
@@ -19322,96 +15594,6 @@
       "readingTime": 4,
       "tags": [
         "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "new-semester-study-plan-python-frontend": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "068dcf5e": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
         "技能分享"
       ]
     }
@@ -20156,190 +16338,6 @@
       ]
     }
   ],
-  "upgrade-http-to-https-wordpress-apache": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "86e548f8": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "learning-guitar-summary": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "58d49ca7": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
   "python-oop-course": [
     {
       "title": "Leetcode_209长度最小的子数组——滑动窗口",
@@ -20425,368 +16423,6 @@
       "readingTime": 1,
       "tags": [
         "刷题"
-      ]
-    }
-  ],
-  "new-minecraft-server-setup": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "353cc484": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "winter-vacation-20-days-summary": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "6a934166": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "test-script-writing-experience": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "7629dfe9": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "how-to-use-v2ray-proxy": [
-    {
-      "title": "langchain-faiss加载pkl文件速度提升",
-      "date": "2025-12-14T06:19:28.000Z",
-      "updatedAt": "2025-12-14T06:19:28.000Z",
-      "slug": "langchain-faiss-load-pkl-speed-up",
-      "legacySlug": "506f20a8",
-      "aliases": [
-        "506f20a8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "技能分享"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "44c7bda9": [
-    {
-      "title": "langchain-faiss加载pkl文件速度提升",
-      "date": "2025-12-14T06:19:28.000Z",
-      "updatedAt": "2025-12-14T06:19:28.000Z",
-      "slug": "langchain-faiss-load-pkl-speed-up",
-      "legacySlug": "506f20a8",
-      "aliases": [
-        "506f20a8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "技能分享"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
       ]
     }
   ],
@@ -21850,94 +17486,6 @@
       ]
     }
   ],
-  "cpp-stupid-errors-collection": [
-    {
-      "title": "Leetcode_209长度最小的子数组——滑动窗口",
-      "date": "2024-11-21T13:28:00.000Z",
-      "updatedAt": "2024-11-21T13:28:00.000Z",
-      "slug": "leetcode-209-minimum-size-subarray-sum-sliding-window",
-      "legacySlug": "35124327",
-      "aliases": [
-        "35124327"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "刷题"
-      ]
-    },
-    {
-      "title": "数之和问题归纳——哈希、双指针",
-      "date": "2024-11-04T12:10:30.000Z",
-      "updatedAt": "2024-11-04T12:10:30.000Z",
-      "slug": "n-sum-problem-hash-two-pointers",
-      "legacySlug": "c3608157",
-      "aliases": [
-        "c3608157"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题"
-      ]
-    },
-    {
-      "title": "Leetcode142:环形链表II——快慢指针",
-      "date": "2024-10-29T13:04:06.000Z",
-      "updatedAt": "2024-10-29T13:04:06.000Z",
-      "slug": "leetcode-142-linked-list-cycle-ii-fast-slow-pointers",
-      "legacySlug": "f870a3e8",
-      "aliases": [
-        "f870a3e8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "刷题"
-      ]
-    }
-  ],
-  "9f35c36a": [
-    {
-      "title": "Leetcode_209长度最小的子数组——滑动窗口",
-      "date": "2024-11-21T13:28:00.000Z",
-      "updatedAt": "2024-11-21T13:28:00.000Z",
-      "slug": "leetcode-209-minimum-size-subarray-sum-sliding-window",
-      "legacySlug": "35124327",
-      "aliases": [
-        "35124327"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "刷题"
-      ]
-    },
-    {
-      "title": "数之和问题归纳——哈希、双指针",
-      "date": "2024-11-04T12:10:30.000Z",
-      "updatedAt": "2024-11-04T12:10:30.000Z",
-      "slug": "n-sum-problem-hash-two-pointers",
-      "legacySlug": "c3608157",
-      "aliases": [
-        "c3608157"
-      ],
-      "readingTime": 3,
-      "tags": [
-        "刷题"
-      ]
-    },
-    {
-      "title": "Leetcode142:环形链表II——快慢指针",
-      "date": "2024-10-29T13:04:06.000Z",
-      "updatedAt": "2024-10-29T13:04:06.000Z",
-      "slug": "leetcode-142-linked-list-cycle-ii-fast-slow-pointers",
-      "legacySlug": "f870a3e8",
-      "aliases": [
-        "f870a3e8"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "刷题"
-      ]
-    }
-  ],
   "selenium-crawl-gdp-data": [
     {
       "title": "Leetcode_209长度最小的子数组——滑动窗口",
@@ -22683,96 +18231,6 @@
       "readingTime": 1,
       "tags": [
         "刷题"
-      ]
-    }
-  ],
-  "striving-youth-university-freshman-experience-essay": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ]
-    }
-  ],
-  "a149f284": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "readingTime": 6,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "随笔杂记"
-      ]
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "readingTime": 5,
-      "tags": [
-        "随笔杂记",
-        "技能分享"
       ]
     }
   ],
@@ -23565,100 +19023,6 @@
       "readingTime": 1,
       "tags": [
         "刷题"
-      ]
-    }
-  ],
-  "sharpen-your-tools-study-resources": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "704d93a5": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
       ]
     }
   ],
@@ -24812,100 +20176,6 @@
       "readingTime": 1,
       "tags": [
         "刷题"
-      ]
-    }
-  ],
-  "python-week-2-study-report": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    }
-  ],
-  "bb55d973": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "readingTime": 2,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "readingTime": 1,
-      "tags": [
-        "笔记",
-        "技能分享"
-      ]
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "readingTime": 4,
-      "tags": [
-        "笔记",
-        "技能分享"
       ]
     }
   ],

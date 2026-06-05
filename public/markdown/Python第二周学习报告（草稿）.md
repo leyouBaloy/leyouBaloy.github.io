@@ -4,32 +4,11 @@ categories:
 - 笔记
 date: 2020-10-04 15:05:52
 slug: python-week-2-study-report
-draft: false
+draft: true
 title: Python第二周学习报告（草稿）
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:47:08.756Z
 ---
-
-### **总体感受**
-
-这是我跟着b站昕哥的视频学习"Python数据分析“的第二周，总体上感觉Python确实是比c++要简单不少，学c++就像是开手动挡汽车，虽然难学，但是学会之后可以享受操纵的乐趣。而学Python就像是开手动挡汽车，简单上手，也功能强大。
-
-和以前在网上自学其它东西不一样的是，这次学习Python，我有一个团队陪我一起，虽然团队的成员不太听我的话，但是我乐在其中，有什么麻烦的问题被解决了，我会发自内心地想要分享出来，不管是否对别人有所帮助，我都要满足我装逼的心理。
-
-### 已经学到的东西
-
-在第一章里，大致了解了Python这门语言，知道了它是解释型语言，是一门高级语言(虽然这些我之前就知道)。解释型语言我之前也接触过类似的，比如超文本标记语言html5，虽然只是浅尝辄止，但是接触过和没接触过的区别就是1和0之间的区别。毕 竟 0 的 无 数 倍 都 比 不 上 1 。
-
-第二章，就比较枯燥乏味了，学的是基本数据类型。要记忆的东西很多，我也开始做笔记了。我的学习方法是，先看一遍视频，把知识点都截图在笔记里，然后照着笔记把所有代码都打一遍，如果遇到看不懂的地方，就打开视频把那一块再看一遍。这样，我大部分知识点仍然是记不住，但是在我脑海里会有个印象，当我在做练习时，我想实现某个功能时，我就能想到那条语句，然后把笔记调出来，再看一遍笔记，把知识点用在实战中，一次两次就能记清楚了。
-
-还学到了其它东西:
-
-我还捯饬了半天搞了个博客，又弄了个域名
-
-我还发信息有道云笔记贼好用
-
-我还在想办法搞定Latex
-
-### 未来的目标
-
-总感觉没做什么时间就不够了，时间够了精力又不够了，时间精力够时我又感觉很懒，想打game，想看动漫，想出去喝酒，不想敲代码，不想学习，不想动脑子，反正在这里也没人管我。
-
-但是不行啊，放弃是最简单的事情，还是坚持下去吧。
+<!-- encrypted:draft-body:xor-base64 -->
+bWQUeUNOgNXY3OnRg9fHn/7fSVJTXbvMzqvezLHH3aeEz4Do2lOd2O7foNuipPyO/uK9xL694PS29dyV8cNaCS4nGzgjoPbnqcHh1tjhk8ShmPPr3qLKoJv1jd7qsPKQu/7ptdjBlfXwnOHdtffIpeHqBzY4J1w+gNT01NTtkaGXqOijOkJPjvPi3/rCgN7NnsnFhsjIuO//suDgAHxkqf+CteT6vKnVlsu53sfM0tPBgur0hYnpqtj1t8b9oPrFvtPlms3zo87xoPDD1+3hk8Ken97R3YTUo47SjPTosOyXsPnAt+LRlMf0nsratMniqtzns/bcp4XzhPXY2fr/kpSeHj5DMQYKg+XS3dfNg8v3n83IhfHSstnbscHnhebypPKVv9v5vZ/6lvqs3PbN0dDii9rZh4HLp+/MsPnMrd/CvPP0kNfPTGmy3cCriPWC/NfU5tuQhKmq/72x7s6D+MXd0fSA/dueydSL3eaz6/6z9caF9/ir1be2/9q1jfabyKDe4ubS9M+A3/UzQSAqCj23xv2u6+m/y9qX782i2/2q1+3ayPicw5uc++bdgM6vgu6G2Oq9+oWzxtO2w9iY0Pyfw9O1+8eo1/uz98Gql/qC5fbX8uKQo7ym6Kq21eiC6OXezO2D28meyNiG5PGy1sWz9euM68Oq07q03PW+iPKazYLfzeHQw+2N8fuKmsyqx/iw3dKt5cu97dWc68Gg68ar8NXW3/ad3Zuf9fLch82iq+mP59W9xbmxyuO34tGUz9mexPK8z9up/u6w4e2pq/+C5fzU1cqSsZOq/Y2/9e2A3OPd7OyA2fGVzcSF8Mi+0M6/68eF7O6k+YC27+Sykv+a94Xf1MPS5uqD9tOAuNZIb3B7WVGt1Mq+7NyW+uuj6+eo1svX6Pud/45weZKlkKnrm73R5IH+w9HTzorv1J/V74v/7bPp9b/q5YftyRw2RzgIG7KO45rgkdDh6t/x6Yva2YSn8avkwLzA963N+7/P/Jvw7q/k3arSxNv/yp3ysZXP+9+g4aOP2YDzzrzIoLP4wrv315ng41Cxzu6U0/uu3M6r9tTV2PaR47qf+vrciP+gqPyA5fV8gLjWqsLwsf37rf3zsfj+m//NoOvGq/XE1tnqkeOunP3S0Z/or4jejtXdsd+Es9jhvOT2l+f3nf/Vu8XSq9DksdPgqZPXj9vq2dXen5G4JjNaNVyL2tmLoeml4eW99duu+9e/4taW59Cu3dOp4e3c7OuR57ec69jftuuvkP+B2+Gw8bSy8MS11t+Z78WQ5tC06dOoytmyx+eqg+GB7fUAn+H7Cdz3zN7O3YP80Ya07qft+Lv6867M7Xmw+Ox3fWaEzctsqaTwR5PPgVqW97QYp8SKeY/L8nWHgNligevSWkBogPjbXVmU++Gi2duo5+/c7OuQ6oCc3OPRhs2hqfaO48Ox2rex09a34vye9O+d9PG06dOr3syy0Papr/yB4OrX992QiIOr2by66eaO8+LQ+vKA7N6d68yHwMW/9syy886G89Wj87+27+S+iOWWy7nd6czS2PODysGLluSm39W7+vOu6+m+zdeW+uui2vep2vbV4/KTwp6Vz/vcvcagq9KN3Oa84rW85eO6+uue9O+e09207PKl6eWwzfWmsO2B/fDU4c2SpZCp66Oxx9SP0u/X6M6C1+6f4caE/f6wzvOw4dKL+f+qxbm27vW8rfOXzJrf7sbe2tSC78aHgNSr5N63xv2txfq/yc+a1sqj6+eo0MTX6OqT3bOd6fPcpP6hoeCG2Oqw04myy/a25PqZ7+WR+8a1+d2kxMCz98yqrseC89fW5viTgbinxrq66eaO6vre9PWK79Sc+dmG3P6+0NuyxcCEyOqk4LW35cy+iveU84/e1ujf99mA3tiHhdut2d+8x/eu+9e8y/uV39yu58ap+fja1+uR5quc7/7dgOSiuumB1ce637Sx//a10OuU1Mud2M20yNSp/8Ox2Pqgj9yB/cvX+cCSl6apyYe/9vSC7cnd3t2N0OWc5v6MxNWx2+Ky/feL1PKqzIC178Wzs9mV6pjQ4erS1syL2tmEvOKn9d2+8Puvz+yx+eOb586j5O2p0erc7OuQ3Lyd7/zdgM6uttSOyPK9zYi7/um10vCW18aQ9tG08e6q0suy0+Sqnc6B/cLVwt6YhbSq/7e/xcWC7cfe+OOA4+mS8vWL1umx6/ax6NyH7cmvz7FabZ3lqZ/e0dyw/qON34zh0LDNu7D6+bv9xUtCaZ7RxrvMz6vLzL7q4KuJ1oL40NTe2pGppqr9sb3RzoPY+d364Irv1J/+wIbE3bPp9bP17IbI0Knfvlptk9Kgkszv3Lffo4j4j+XJs/+xvcP2t+LrluT3kPfnu8frqOPesNvkRTm27+SyjuKW65HezfTS0/eC1cCFqMqny8kUGwUtG3JTdHBQd6vaybHS6aip1IDu9Nfa9H0z3s780d32jMHchYr1p+TJvMHxrNrwv8DlmsD5o9Pmq/TC1vT4keC3lc/736/4rqDtjMD5sdm+s/DbttLhlMfrnOHattfIqfzluPPAqaTmjuLu1sjNkrOjq+Oov/7SgN3y3dvKg9fHktbBhsbRsdThuPHKhdT8qsagNwYYP97G/5G6i6nbvLzjzIDpyNfozoPQ65/28ob24rLF7r7I1Izrw6j3vrbkxrykyJfMmt/uxtjl5YDe2IW756fI9bzD0aff9L3v3pXU/qPp/6fI3tb995rmvZ/8+t+V7aKr8YHb/7zktLD7+rXq25Xy2Z/39rX7xq7G4V1FqPK1tv/avon3m9a13dvN2OXlgvLrhoTXpP38vubxr834vNrGlM3Jotncqc/K3OzrneWpnOvY3KXUobvYjdztsO2DsdLCsNj4

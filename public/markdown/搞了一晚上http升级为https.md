@@ -4,31 +4,11 @@ categories:
 - 笔记
 date: 2021-02-09 23:45:43
 slug: upgrade-http-to-https-wordpress-apache
-draft: false
+draft: true
 title: 搞了一晚上http升级为https
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:47:08.769Z
 ---
-
-### 感慨
-
-网上的教程好多好乱，我照着其中的一个做，差点把我网站给干没了。以后搞东西之前，一定要备份！！！！
-
-### 思路
-
-*   大致就是，先在腾讯云申请了一个免费的证书，然后下载是一个压缩文件，有用的是里面的Apache的配置文件（因为我的wordpress是跑在Apache上的）
-*   然后在宝塔面板里安装，手动安装太麻烦，宝塔面板安装还是挺方便的，点赞。
-*   最后进到wordpress里设置里，改下链接的形式，把http改成https，安装一个插件really simple ssl，把其它还没改过来的都自动改掉。
-*   另外，细节还是蛮多的，比如说要设置各种安全组，各种尝试之后这就是不懂原理就进行操作的坏处，最后目的虽然实现了，但是现在被我搞得有点乱。反正我是不想再尝试第二遍了。
-
-### 走过的弯路
-
-*   一定要提前备份！！！幸好宝塔，wordpress这两个软件 用的人挺多，网上教程也多，我参考了好多教程，才没有陷入僵局。
-*   宝塔自己也提供一种免费的ssl证书，但是这个证书现在chrome,edge浏览器都是不认账的，网页根本进不去！这一步卡了我好久，我不知道问题出在哪了，还以为是自己配置过程出了差错，为此我还反复修改数据库，被迫学会了进入phpmyadmin，服了。
-*   在安装了不安全的证书情况下，chrome，edge浏览器都进不去，但是手机上的via可以进，是否意味着via不够安全？
-
-### 感想
-
-其实我经常像这样去折腾一些东西，往往“折腾”的过程都非常不顺利。但是基本上我最后都能成功，而且每次折腾完都有不少收获。
-
-一开始，我就想折腾一个博客，能写点东西就行。后来，我觉得博客太丑了，就折腾博客的主题。再后来，觉得我应该折腾个域名。再再后来，我又折腾了https。。。
-
-探索无止境，每次折腾都是勇敢迈向未知，路漫漫其修远兮，吾将上下而求索！
+<!-- encrypted:draft-body:xor-base64 -->
+bWQUeY/g+bPmkF5Igu7JnsnChOLdscbqsOXNhvLyqeuptcLIvojLnMu13sbW0NzOg/vVhr3ipt3+v+D1rNv4ve/5ltbXqd/bqvvh1NLek9C7nPvm3oXfoJzAjt//sNqKsvDEt+L8ksjhnOLytuPZq9b9s/fQp5bvg8zR1PP+mIW0qv+3vMf+jvPi3fDFgejllc3JjMTYuO/yuPHHaV1sb2wTtufosobVeX0TGG5n0v3OjOHhhojlpP38t8b9rebwvMv7m9Lzrs34q/be1MTUnfWGnsnx3YDOo4/zjOHrvdeBs9jhu/f7lfHFl+XbtPfhqNbts/fHp47tge311cLzk4GSq8m8vtXNgMPk3O/0iu/UnO3BhOzxsMn3sdXpitDDpdKRt/3xG0EbEB9c39TD3tzkg9v7ha7Tpt7lt8b5rfjYve/pld/cofnTOCM9VyAVEClCnOvY0Y/foqvxKBQHNgtdsPrvtML+nvTqcnN3c1OwyfCGx8Gp05u1yei/kO6a6pve0/je3uWByNyLm9Gt2d++8/qt6dC8+dqb9Mijx/2m9vTU08Ga5r2f3ercmdquqvuP+dmwzbG84eC75+KX0Mye1e215e6p+Nyw1cigj9yA9+PZz+2UubpEbRd5SYL61Yao2qrayL3ywT8MCj0nIRYkPq/k26fi8dTtyZzdvZXP+9+s96OP0oD32LPtnbPY4bbl2JT07Jfl27X53SUyFyep2PbV2PcdLkUKAJiFtKvpvrHK4YLt49zs6IPcyp7K/hEdODs/Cnc+Lw4nIylvQCMLmua9nPn93L34opnagdv+s9GZstbcu+f9l9XGn8PTuvDqpcHJssXkqafpgfvT0vrxfRMYbmfS1s+BwsOMhNil3tWw8POg3OC/z/ybzOOjx82o1svc7OuT9aWf1fXRl/qvkdiBytiy3pax0uG0//eU5uqd3P+0yNOi+u+y38iolN2CxcfZ1eaTgLOr17mx1v2D5dLezO2B69Wc9sqG9saww/Wy/feL6NSk7r+29Pi+jOaU7b3d08jS/e2L2tmFpNSn9d2/4d+v+fyxzu6U0/ujzcmowv/X6uGa5r2ezvHfoOGguemM+M69wZOyyvS1yOSU9vSexd608e6p/9K0z86qvN2B2PnX8uKRoZeq/7q/6teD0+7d5N+N/M2d3eSHwtW+0v6z98CA181GRRBzRFWyhMqbyL7f1MPS5caM0fppMn5iRXO8wvGtzeKx8dKV2N2j6tqq6MjX69qa5rCVz/bWhM+ijuGMwduwzaWx4/G85PYGJxEcKSU2ACSl+fqz9+iri/qPyPXVwcVX3qzmoK3djd7cs++Cseb/vOT2lvXynOHdtebOqu7os/bTqpfKiMnW1/Likra6pse0vdPig/De3fDYg8bBndnDjMTVsdr+sf/nhcvGpdaEteLQv7LPlsa5287FPXNJREawzaWx4/G739CU/9Kc4Mi1/Mep+Piz98yolN2C8NfZzsqQo7w9NFuxxuWC7MXX6M6B7t6c6eeLx8Cz69m/4seH7umrwYO1+905WQgcGlwUKyNQPI/R6b3EsLHbzbrbx5fQzJzh2rvd86XyxbDVyKCP3IDIy9jbxpGZgajbm7HW/4Lt7t3a+Yrv2ZLO0YfA2bH+1rLA54ftyarHorXCyL6I/5zLtd7G1tPh5IP58Iq5x6vy/bHY6a3kwrzL+5bE56LZ0aDww9vv/5HhlJ7Lzd+g4a+w84zT17zmtbP/y7vn/Zbg6J3e7bfJ0ajxzb7b1aCP3IPN4NfX15Gxqab4r7zm6YPx7tzr7IPH4Zzk+IX197Lp4Ljxyov15KTwmLXK076N4JfNv9Dx3NLczBQOJQ5BNSYIOjaVzcSF5NSz6fW0zcRpfW9sb9bMz5D0uJLQ8t2CyKOP1IzK77DmkLPY4bv3+5XxxZ7a0rb14qn+6LjzwCxbIggYP97G/xJdXyuhgtaBw+6w+pC9wdi75+GV8O6d1+y8z9up++Wx1+OputuB6eDVwvmQo7w4Lla85suC7sbQ69mK79Sc6eeG6P+x1/yy3PWEys86JlK03/i/leWW2bDdy+/Y5fZubHZAG3Sk4cy++cJCaZ3c4bbdyavO8rD0w6qL6IL21dnF6pGZj6vJjL/j/I7Q3dzswoHpw57J1Ivd5rjv/7Lzxobpz67Pr7bt7bK0xJH3pN/Uw9/m7oPO3oq76av4zb3Cyazb9bD26Zbf5KXj1avxydXIyJDFi5zv292AxKG/yI/45rDztr3B2Lvbx5fA853TyLzP26XG77P32Kmc34HZ+9fw65+8hqvpu7Dq2YDJ6tzsz4DjyZzl/ov27rTT8V1HotvXqvDP1vfsmua9nPvm3Ij/obTqj+7+veaGsPrlt+DQlMX5nff1vM/bpcXessnVqLHpg83G2d/MkomJpua7uunmg8Xt3snniu/UnPnZi9/Qsu3kssDchvntqeuZtN/kvov8nMu13f720dPxjOPrhrXOp8vxv+D1rNvDsPXLkNfPo+XaqtzB1c3Cmua9ktT+3IbZob/IjN7yvcydssj9u93ElfDJncbItuParsbhssnBqrXdguXU1+fWmIW0qM+mvObsgN/70NH8geneEgU8Ewu619GQ18+l49VFRqm98oDB+Nft05GUmqvltLbV6ID67N7444PZwJL09or75LHL3LLGwYXC7aTwu7X35Lyt0JTonNfyy9/uxoLa/oWE/6fg5bzF36Dc5LzS/ZzrwaPz6ar8ydfo7ZHiupLz+9+JzKCD+4bY5w==

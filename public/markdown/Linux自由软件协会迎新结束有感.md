@@ -4,44 +4,11 @@ categories:
 - 随笔杂记
 date: 2021-10-30 22:43:09
 slug: linux-free-software-association-orientation-thoughts
-draft: false
+draft: true
 title: Linux自由软件协会迎新结束有感
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:21:58.385Z
 ---
-
-大一的时候，看到这个社团感觉就很对胃口，想加入。但是Linux自由软件协会太低调了，那年的百团大战我都没找到摊位。
-
-大二阴差阳错，我直接从局外人成了会长。
-
-起因是我当了飞桨领航团团长，要借一个社团办线下活动，没人愿意跟我合作。
-
-陈荣灿学长跟我都是李昕老师的学生，我问他可不可以合作办一个活动，他说正好现在社团换届，直接把会长给我了。
-
-现实真的比小说还魔幻，小说是讲逻辑的，现实不讲逻辑。
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/1634568930141-1-1024x768.jpeg)
-
-换届现场
-
-我还把王文婕、廖集秀拉来了。很多事情有女生来做的话是很合适的。还拉了一个刘原歌，他对学校的部门事务比较了解。
-
-然后就顺理成章的搞了百团大战活动，搞活动之前我还被社团管理部的老师约谈，因为学校不允许和外部企业合作，让我避讳“百度”。我照做了，不过从此之后我也下定决心不想再给百度干活了。
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/IMG_20211023_122634-1024x768.jpg)
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/2933d0f5f0353c10-1024x768.jpg)
-
-然后紧接着下周就要准备新生见面会。由我来主持，顺便讲一节课。
-
-我对待这次见面会＋课程，是非常认真的。因为我真的把这次当成很好的锻炼机会。为了准备这个，确实花费了一些心血，开始前可以说是寝食难安。
-
-现场的效果很不错。我真的没想到能来这么多人（94个），教室快坐满了，室友和同学很给面子，都来了。
-
-我表现的也很不错，讲了一节课，全称吹牛逼吹得都很流畅。
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/DA38396616F297717D1378B129227152.jpg)
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/EF6521E6B51F7E58F9364B58F38D0048.jpg)
-
-为一件事准备的越多，收获的也越多。不能做“佛系青年”，不愿意挑战自己。也不要给自己增加焦虑，什么都想做好，搞太大压力。要践行一种中庸之道，有的放矢，分清主次。
-
-这两周我太累了，同时收获也太多了。
+<!-- encrypted:draft-body:xor-base64 -->
+q+OQvdHkgc/n3sP0gNPBlc3EhOTSstvDv/Lfh+/lq+uNtfzXvLXlm9Cw3f720ufhgcnsi7vXp+rwt8b9ruDLvN3zltLopePVq/HJ1cjIOTNfDwufvpKp04ax1MuC7tXd2c2B78Kf1eKHxde/4/Cz98CM68OlzZC13sG9q/6U7ofd1eXS/c6C7s2FsMWr5u6+yNCu6sa83+OVxsei3tqszM05WoLR/dXA/56hjKvwmbDx14/B+tfozoPbyZ3q/IX2/LPo/bL8xobz2aj1ibbv5b6L/JfLo9Hb+NTZ625svdaPsdnFtcDVl8DyneTEt8nRpOX9se7kppHWj/3w1OHRkqKap9KIttXojvPi3dTdgevYnsnihNznssjRssfYhO3wqPe4ttPOv7vSnMu13vzm0+PTguLqhbzbqtLMvvLgrfPwverPkNfPTGm+1sSnvvOA9OXU19WerIem8Ki/4fWP1t7ezO2Dztac6d2L+Niy6/uw18KG+umr26y/2/m8ueua4Jfc9dHS1saA3tiGt/um3va96vms3uS83c2X782i2/2p+PTW2s+a5r2eyOHRl/qhmvqMwduy7Yix3s20/MSU08Ge1PW2wt2i+u+w1PipvfWB/9DVxumerIep/K6/4fWC7+Xb1MBvWb/0wa3N5r7LzJTNyaDMw6r8wNv/053lqZPe49yB9aiL1YzU6b3MjLLayrv2yJjI2JDnxrTp06L677DB/KqdzoPN19nUwZ65g6b5prrp5mxfQmMJag0nLAoCckxXNC4xHzgqa1Jlent9CmhSQmgfGRwEF1k+akQxCAoBPQJRei8cIjsWHj0HVjo4Plw6NDYKNGA7Px4zCBsuVBQHWExIIihWPRpLVGVRCXtzVXxpTEJ8Vk5hbmBDZnl3TmZifX8BZB9CbAlUGQdcX2dNPb/kxoPk6d/a8oDP4nB7ruvpsejLld3Hoe3cqdrI1vnyltqwn8jh0KPIoJDZj+/vs/6dsPjjsNj4lPbrnf3Nt8ncq8XmsdPFqpbjgOHF1+fWkriiqd2zscb5gM3M3erKgMPQk/HKhOLdtNPxv/LehdzGqPW1tN/1vonQlv+h3cDY0fTli9rZh4PCp8rqvdfXrsPZvs3XmtTlr/T/q/bE1trGk/Wlks303YLIr5D6iuTkX2nf0PSAw9afwfmK2eOww/WxxdaE/O+r1be29+u+i/yU7ofd1eXS/c6C7s2FjO+n7/u3xv2u8+a/4+iW3eWi2tyqxcLV2Pad5amS0dzenPCirPuOysey8769wc20wv6ZyOKd4d+0yfGl9uu488CqqPCDzeDU19WRmZmq/7q87OWO+9vdxs6A986T8uCHxNiz6+my3c6H6tOj87+4ydy8ueua9obQ4PTV2fWD/+uGgvKg5c67+vOu6+m+0vSW1tei2dGg8MPX6Oqd5baeyPnfleqjjtKM9Oiz66mw+/q34PGU5vmd3+S2zNSp/u6xzP+qtd2AzsPW482Sg56r/oW/3d+C7+Xb1MBvWXkhLGALDC0nIEl4YisaNSMjKB5hVUBtA0NLQg4KYCRYKkcFFngQUDUsAjs5E18lGgk6OzwGM2MlDDpgITZDOQRaLUFXEBhXTCspQ3YcFAo6AlwnbVdjakteeVNXEBoULGV9dFJmf358bGFVR2wCTl5GCQp6PwBvUUoMJQQRXkhECAVSGTwXCCptfFw6NCQPOChhfgFlUEdjCU9ERRdbITQZOBlJFT0CVjMqBDp2Fwg5ABQ2IjddNCIrTDo2PCZQfxAFd1IVHQNcVjpoQikFCwcxEBdmcldid0tBZ1FBamQ3QzF4IFNken8sAmBKRGoDTgtADwBgLUc+QG5ssueOsdLrtOzdl8bGn8TXt8vcqNfLsv/9p5XRgvLc1N70ka+IqdOosc7lj8jB3OjYhtPaneX5hfDIsc7Ws/X9hdvOo/O/ucbPvo/Fm9mL3PbH39PrjMnrgLjWSG+10OuU59qd59K7zM6r6sK/6M2mrvKDycDexvifloap77y21eiAzczRydyA6+CS3+yE5Mawyfe0zcSGzO+o94m27+S9reWU7b3exM3f5vCCyvSGhcek7cO9xPmtxsW+zdeaw/ah4eup0PXX7P2W2rOey83dgsiisN+MwOG93KGw+s+85PaW6c2d98m7+eal8tqz9cqri9CDz8HUxfCfmLih+7u81eSD8ujd3c+A3Peeyu2L1+2xy9yy4tuK9NCl1Y21yfy5sfh5fd62/qKr447+4rP2sLLc+bbm8pXw7pHNzrDz1avO8rDT06ip1IHH+9f5wJKxiKbEir/0wY7q+tztyoD3wp7L8ozE0W5nl+/nqd/eoPDD1cX+kPSVn8zc3KXeoYz4jd7gut+0sezBttfxlNrvncnbtt7xqPjrsPTVpq7ygtjK3sb/nrqFqNqSvdPihdXhMl6k7cKw29mv7ci+zdeX7tKj3d+r9MLaxP6a5r2S3cXdgsijj9mB7uS9zIa7/um23dKW79Odye60+sykxt+y3/WqjceO9ufUxPuRjLmp0rK66eZsX0JjCWoNJywKAnJMVzQuMR84KmtSZXp7fQpoUkJoHxkcBBdZPmpEMQgKAT0CUXovHCI7Fh49B1Y6OD5cOjQ2CjRgOz8eMwgbLlQUB1hMSCIoVj0aS1RlUQl7c1V8HDtCcFBBb2FiRRF/f1RgfnsLAmNQTRgASEpFCw9/cgV3AxQBfGkydRk4ezAOBTgQQnZ4Pgo1ISkEen5+egRiXk1vBkhdFFZLYCZHdBoMBzsEUDUrSz4hCxIkDA09eTAcOmIrGicmL2BEIEoWNV8OFhlNFzs3WzYIABV6UQhmc0piaFU0DlVNa2YWRRV4dyVgCnl3dWlUQ25zT0sxCgAKdwdtUUoMJQQRXkiB6+KeyciHw++z6fiyysCG88ir1be40f+/leCcy7Xe2vHf196D/NGHgcuq09m93uur4/q9796b1PCj4s2tzNPX7fyS6YqT7uXcgfqlt8SG2Oqx27Wyxtq13PWXxPKe0c+79P2o8dK0z86ris+DzdfZ3PKQgqGmwJ283tWD9/3d3uKC1/6S6NmMxNWz6POz9M6K1PKqzIC15u+/lMecy7Xe3tnS/cOBwvKGtt+n78i7+vOgxfmx4Oab9sGi29eo68LX6MqQ4ImeyvzQud2oi9WP+O+y+byy1tu0x9ie9O+d0dG1y9Kp/tix4+2ss9Jtf7KO45fPnd3f79HR+IHC/4SM+6bf1bfG/a3z9L/A5ZXD+67t4Kv10Nb0zZD+q57J8dq4zA==

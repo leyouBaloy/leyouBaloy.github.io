@@ -3,37 +3,13 @@ title: "如何搭建一个ChatGPT镜像站"
 author: 孙百乐
 date: 2023-04-12T14:11:41+08:00
 slug: how-to-build-chatgpt-mirror-site
-draft: false
+draft: true
 categories: 
 - 技能分享
 - 笔记
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:47:08.767Z
 ---
-
-### 为什么要搭建一个ChatGPT镜像站？
-
-用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内IP，封梯子IP，封国内账号，搞得没法再国内使用，但是已经形成了依赖，不用不行呀。天下苦ChatGPT久矣～
-
-自从api接口开放之后，操作空间就大了。我们可以搭建一个国内的镜像站给身边的人使用，搭建得好的话，可以加快访问速度，让国内的用户不挂梯子就能访问，非常便捷。
-
-搭建的难点之一是如何提供一个稳定的海外网络环境，这里我表哥提供了一个非常nice的解决方法：使用cloudflare提供的免费云函数做代理，一天10w请求量完全够用。
-
-搭建的过程并不难，但需要懂一点运维的知识（域名、Linux）。以下是我总结的搭建流程：
-
-### 1. 搭建前后端
-
-用这个开源项目：https://github.com/Chanzhaoyu/chatgpt-web
-
-### 2. 使用cloudflare作为代理
-
-cloudflare有一个workers，就是海外版的腾讯云函数，亲测访问速度是不错的，可以绑定自己的域名整一个
-
-### 3. 提速
-
-近期openai对免费接口又做了限速，绑定信用卡之后能提速（像极了资本家的丑恶嘴脸）。国内的信用卡是不行的，必须得是国外的，而且梯子的IP还得和信用卡所在地的IP对应，自己弄很麻烦，建议找人帮忙弄。
-
-说下我的经历，我花80块钱申请了一张depay的虚拟信用卡，然后花10块钱找人帮忙绑的卡。depay这家小公司的可信度是存疑的，更何况我还把卡的信息给了别人，所以这套流程是非常不安全的。这张卡我只敢存点小钱用于openai消费。这套流程可以走通，但是不建议。
-
-
-
-
-
+<!-- encrypted:draft-body:xor-base64 -->
+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

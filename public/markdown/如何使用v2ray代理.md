@@ -4,62 +4,11 @@ categories:
 - 技能分享
 date: 2021-01-22 10:42:05
 slug: how-to-use-v2ray-proxy
-draft: false
+draft: true
 title: 如何使用v2ray代理
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:47:08.767Z
 ---
-
-v2ray是一个代理工具，你不仅需要在电脑上下载这个软件，还要购买或者直接搭建v2ray服务器用于科学上网。
-
-### 1.下载v2ray
-
-打开以下链接，即可自动跳入下载
-
-[点击直接下载](https://download.fastlink.digital/v2rayN.zip)
-
-（如果上面链接不可用，请使用备用下载地址：链接：[https://pan.baidu.com/s/1G1xoYTRB5I0hGYcUWAkVHg](https://pan.baidu.com/s/1G1xoYTRB5I0hGYcUWAkVHg) 提取码：6sy0 ）  
-
-下载完无需安装，解压即可。
-
-### 2.添加一个订阅
-
-{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-4.png" >}}
-
-双击点开后，软件会自动跳到后台运行
-
-{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-5.png" >}}
-
-在右下角你可以找到它，双击点开
-
-{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-6.png" >}}
-
-点击这里的 订阅-->订阅设置
-
-{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-7.png" >}}
-
-点击添加
-
-{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-8.png" >}}
-
-输入订阅地址后点确定，可以使用我已经购买的订阅地址，请私聊我
-
-{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-10.png" >}}
-
-之后再回到界面，点击 订阅-->更新订阅
-
-### 3.切换服务器，开启代理
-
-{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-11.png" >}}
-
-然后右下角这里，右键点击-->选择服务器（先随便选一个），和游戏加速器一样，因为每个人的网络环境不同，你需要更换不同的节点以达到更快的网速
-
-选择完服务器之后，再右键该图标-->点击http代理，选择全局模式，或者pac模式
-
-全局模式下，图标会变成红色，pac模式会变紫，检测一下操作是否正确
-
-### 最后
-
-做个测试吧！看是否能打开谷歌[http://www.google.com](http://www.google.com)
-
-再搜索ip，可以查看你的网络环境已经发生改变
-
-{{<image src="https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-12.png" >}}
+<!-- encrypted:draft-body:xor-base64 -->
+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

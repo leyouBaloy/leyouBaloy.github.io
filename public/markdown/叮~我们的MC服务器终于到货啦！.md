@@ -4,73 +4,11 @@ categories:
 - 随笔杂记
 date: 2021-01-30 11:24:49
 slug: new-minecraft-server-setup
-draft: false
+draft: true
 title: 叮~我们的MC服务器终于到货啦！
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:21:58.392Z
 ---
-
-### 1月30日更新
-
-增加了竹子mod 参考资料http://www.minecraftxz.com/bamboo/
-
-豆腐工坊mod 参考资料https://www.mcmod.cn/class/386.html
-
-增加了小地图，进客户端就能看到
-
-魔法金属 是一个大量级的Mod 可以观看籽岷的视频学习https://www.bilibili.com/video/BV1Qf4y1k73t
-
-还增加了光影，在设置里可以调哦~
-
-另外请注意：服务器有死亡掉落哦，小心死了之后物品都没啦，最好组队一起玩，队友可以互救。
-
-## 进服教程
-
-首先点开这个链接，下载由我整合的客户端~为了使下载速度更快，我没有使用垃圾百度网盘，而是用了阿里云，打开就能下载。
-
-[https://githubdownload.oss-cn-qingdao.aliyuncs.com/%E9%AD%94%E6%B3%95%E9%87%91%E5%B1%9E%E8%B1%86%E8%85%90%E5%B7%A5%E5%9D%8A1.7.10.zip](https://githubdownload.oss-cn-qingdao.aliyuncs.com/%E9%AD%94%E6%B3%95%E9%87%91%E5%B1%9E%E8%B1%86%E8%85%90%E5%B7%A5%E5%9D%8A1.7.10.zip)
-
-下载完成后，是一个压缩包，需要解压。电脑里没有解压软件的同学，可以下载好压软件，或者360zip
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-14.png)
-
-解压后的样子
-
-解压完成后，打开文件夹里的这个启动器：
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-15.png)
-
-进去之后把用户名填了
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-16.png)
-
-（你他娘的可别填leyou1，那是我的账号。）
-
-点击确定之后，就可以启动游戏啦
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-17.png)
-
-之后点多人游戏
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-18.png)
-
-就可以进服玩啦
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-19.png)
-
-服务器现有的Mod是魔法金属，可以在网上搜一搜教程，或者在b站看看视频。
-
-无论你是建筑党，生存党，红石党，都欢迎你来建设服务器。
-
-另外 服务器里没有装登陆插件，所以不需要密码，请勿泄露服务器的ip地址！
-
-## 开服信息公示
-
-1.一开始是打算使用逸飞购买的阿里云轻量化应用服务器，29元三个月，平均每月9元，但是那个内存太小，没法开mod服，所以放弃。  
-后来图个方便，直接购买了淘宝的面板服，30元一个月。问淘宝客服要了mod文件，客服果然还是牛逼，照着他的方法弄就弄成了。
-
-2.服务器的性质就是基友联机生存，非商业，不接受赞助。
-
-3.如果你想增加mod，可以找我，现在加mod很方便。
-
-4.QQ群：
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads//2021/01/image-20.png)
+<!-- encrypted:draft-body:xor-base64 -->
+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

@@ -1,0 +1,2681 @@
+{
+  "generatedAt": "2026-06-05T13:47:08.773Z",
+  "model": "gemini-3-flash-preview",
+  "provider": "google",
+  "aiError": "",
+  "applied": true,
+  "deleted": [],
+  "encrypted": [
+    {
+      "slug": "python-week-2-study-report",
+      "file": "Python第二周学习报告（草稿）.md",
+      "title": "Python第二周学习报告（草稿）",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "包含详细的个人学习心路历程、情绪表达（如“装逼心理”、“想喝酒”、“想打游戏”）、社交圈描述（团队成员不听话）以及具体的学习工具使用习惯，属于典型的个人日记性质内容。"
+    },
+    {
+      "slug": "cpp-stupid-errors-collection",
+      "file": "c++傻缺错误集锦.md",
+      "title": "c++傻缺错误集锦",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "文中提到了作者的学校身份（程序设计课代表）、考试安排以及个人的情绪化表达，属于学业细节和个人身份信息。"
+    },
+    {
+      "slug": "probability-and-mathematical-statistics-course-summary",
+      "file": "《概率论与数理统计》结课总结.md",
+      "title": "《概率论与数理统计》结课总结",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "提到了具体的任课教师姓氏（王老师）、所学专业（人工智能专业）以及具体的课程总结和考试担忧，属于详细的学校和学业信息。"
+    },
+    {
+      "slug": "how-to-use-v2ray-proxy",
+      "file": "如何使用v2ray代理.md",
+      "title": "如何使用v2ray代理",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "high",
+      "reason": "涉及翻墙/科学上网工具的使用教程，包含百度网盘链接及引导私聊获取订阅地址，存在法律合规风险及社交账号暴露风险。"
+    },
+    {
+      "slug": "add-transcript-to-english-reading-video",
+      "file": "如何在英语朗读视频中添加文稿.md",
+      "title": "如何在英语朗读视频中添加文稿",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "文中提到了“刘老师”，可能涉及具体的学校或课外辅导关系，且描述了作者的朗读视频，属于个人学习生活细节。"
+    },
+    {
+      "slug": "how-to-build-chatgpt-mirror-site",
+      "file": "如何搭建一个ChatGPT镜像站.md",
+      "title": "如何搭建一个ChatGPT镜像站",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "文中提到了“表哥”这一社会关系，并详细描述了作者申请虚拟信用卡、找人代办等涉及财务安全和个人经历的敏感信息。"
+    },
+    {
+      "slug": "sharpen-your-tools-study-resources",
+      "file": "工欲善其事，必先利其器.md",
+      "title": "工欲善其事，必先利其器。",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "泄露了具体的就读学校（中国石油大学 UPC）、学院、校内图书馆链接、具体的组会日期以及个人学习资料路径。"
+    },
+    {
+      "slug": "hosting-150-attendee-lecture-public-speaking",
+      "file": "成功主持150人参会的讲座！.md",
+      "title": "成功主持150人参会的讲座！",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "涉及具体的个人活动经历、参与人数及情感表达，属于个人生活细节。"
+    },
+    {
+      "slug": "consistent-study-habits-reflections",
+      "file": "把功夫用在平时.md",
+      "title": "把功夫用在平时",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "涉及具体的学业表现（线代和数电课程）、学习习惯以及期末复习时的焦虑情绪，属于个人学业细节。"
+    },
+    {
+      "slug": "upgrade-http-to-https-wordpress-apache",
+      "file": "搞了一晚上http升级为https.md",
+      "title": "搞了一晚上http升级为https",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "暴露了技术栈细节（腾讯云、宝塔面板、WordPress）以及个人折腾博客的心路历程和操作失误，可能增加针对性攻击风险或暴露个人维护习惯。"
+    },
+    {
+      "slug": "mathematical-modeling-competition-experience",
+      "file": "数学建模参赛有感.md",
+      "title": "数学建模参赛有感",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "包含具体的行程安排（组会、回寝时间）、天气描述、团队成员性别构成及个人情感波动，属于较私密的个人生活记录。"
+    },
+    {
+      "slug": "math-modeling-competition-failure",
+      "file": "数模比赛失利.md",
+      "title": "数模比赛失利",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "记录了具体的负面情绪（听不下课、失眠）以及特定事件的挫败感，属于日记性质的个人情感暴露。"
+    },
+    {
+      "slug": "regex-extract-stray-birds",
+      "file": "正则表达式提取《飞鸟集》.md",
+      "title": "正则表达式提取《飞鸟集》",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "提及每天给女朋友发邮件的私人生活细节及情感互动，属于个人生活记录。"
+    },
+    {
+      "slug": "focus-on-primary-goals-personal-growth",
+      "file": "理清主次，集中精力解决“主要矛盾”。.md",
+      "title": "理清主次，集中精力解决“主要矛盾”。",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "high",
+      "reason": "文章包含大量个人生活细节，如与表哥的私人对话、对导师孙运雷的直接引用、个人的恋爱与人际关系状态，以及对未来规划的感悟，属于典型的个人日记，具有较高的隐私暴露风险。"
+    },
+    {
+      "slug": "baidu-gift-certificate-surprise",
+      "file": "百度寄的证书和礼品，惊喜！.md",
+      "title": "百度寄的证书和礼品，惊喜！",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "涉及特定公司的奖励、个人成就以及情感表达，可能暴露作者的职业背景、获奖经历或与特定企业的关联。"
+    },
+    {
+      "slug": "macbook-air-m1-review",
+      "file": "精准而优雅——MacBook Air.md",
+      "title": "精准而优雅——MacBook Air",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "包含了具体的财务往来（向哥哥借款8000元）、购买时间、专业背景（计算机专业）以及个人消费心理，具有较强的日记属性。"
+    },
+    {
+      "slug": "internet-cafe-fried-chicken-gaming-diary",
+      "file": "网吧＋炸鸡 yyds!.md",
+      "title": "网吧＋炸鸡 yyds!",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "包含具体的社交圈信息（朋友姓名）、个人生活习惯（去网吧频率）以及较为随意的口语化表达，属于典型的个人生活日记。"
+    },
+    {
+      "slug": "how-to-write-a-good-paper-tell-a-story",
+      "file": "讲一个能满足和感动自己的故事！.md",
+      "title": "讲一个能满足和感动自己的故事！",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "记录了参加特定讲座（西交孟德宇教授）的笔记，结合日期可能推断出作者的学习轨迹或所在学术圈。"
+    },
+    {
+      "slug": "build-online-judge-system",
+      "file": "长期任务：做一个在线oj的评测.md",
+      "title": "长期任务：做一个在线oj的评测",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "文中包含带有具体日期的学习日志，并表达了“动力不足”等个人情感波动，属于典型的个人成长日记，建议作为草稿处理以保护个人心路历程隐私。"
+    }
+  ],
+  "decisions": [
+    {
+      "slug": "01-knapsack-problem-dynamic-programming",
+      "file": "01背包问题——动态规划.md",
+      "title": "01背包问题——动态规划",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "87-dream-of-the-red-chamber-review",
+      "file": "87《红楼梦》观之有感.md",
+      "title": "87《红楼梦》观之有感",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "beautifulsoup-python-study-notes",
+      "file": "BeautifulSoup学习笔记.md",
+      "title": "BeautifulSoup学习笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "Python编程学习笔记，无个人敏感信息。"
+    },
+    {
+      "slug": "css-layout-basics",
+      "file": "CSS布局基础知识.md",
+      "title": "CSS布局基础知识",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "关于CSS布局的技术分享，虽然提及了开发需求，但不涉及具体工作单位或隐私细节。"
+    },
+    {
+      "slug": "conda-virtual-environment-setup",
+      "file": "Conda 配置虚拟环境.md",
+      "title": "Conda 配置虚拟环境",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术教程，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "c-language-pass-by-value-pointer-reference",
+      "file": "C语言中值传递、指针传递和引用传递.md",
+      "title": "C语言中值传递、指针传递和引用传递",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "deep-research-implementation-methods",
+      "file": "DeepResearch深度搜索实现方法调研.md",
+      "title": "DeepResearch深度搜索实现方法调研",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "django-learning-notes",
+      "file": "Django学习笔记.md",
+      "title": "Django学习笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "Django 框架学习笔记，属于通用的技术操作指南。"
+    },
+    {
+      "slug": "flask-thread-features",
+      "file": "Flask的一些关于线程的特性.md",
+      "title": "Flask的一些关于线程的特性",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "hustoj-frontend-source-code-analysis-php",
+      "file": "HUSTOJ前端源代码解析（PHP）.md",
+      "title": "HUSTOJ前端源代码解析（PHP）",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "kaggle-image-classification-competition-code",
+      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md",
+      "title": "Kaggle图像分类竞赛实战总结详细代码解读",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "leetcode-103-binary-tree-zigzag-level-order-traversal",
+      "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
+      "title": "Leetcode103:二叉树的锯齿形层序遍历",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "标准的LeetCode刷题笔记，无个人隐私泄露风险。"
+    },
+    {
+      "slug": "leetcode-105-construct-binary-tree-preorder-inorder",
+      "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
+      "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "leetcode-108-convert-sorted-array-to-binary-search-tree",
+      "file": "Leetcode108_将有序数组转换为二叉搜索树.md",
+      "title": "Leetcode108:将有序数组转换为二叉搜索树",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "leetcode-113-path-sum-ii-dfs-backtracking",
+      "file": "Leetcode113_路径总和II——dfs、回溯.md",
+      "title": "Leetcode113:路径总和——dfs、回溯",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "leetcode-11-container-with-most-water-two-pointers",
+      "file": "Leetcode11_盛水最多的容器——双指针.md",
+      "title": "Leetcode11:盛水最多的容器——双指针",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，虽然包含少量自嘲情绪（“我是废物”），但属于常见的学习感悟，不涉及隐私泄露。"
+    },
+    {
+      "slug": "leetcode-160-intersection-of-two-linked-lists",
+      "file": "Leetcode160_相交链表——哈希、双指针.md",
+      "title": "Leetcode160:相交链表——哈希、双指针",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，虽然包含少量情绪化表达（emo），但不涉及具体私人生活细节或敏感信息。"
+    },
+    {
+      "slug": "leetcode-16-3sum-closest-sort-two-pointers",
+      "file": "Leetcode16_最接近的三数之和——排序、双指针.md",
+      "title": "Leetcode16:最接近的三数之和——排序、双指针",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "leetcode-17-letter-combinations-of-a-phone-number-backtracking",
+      "file": "Leetcode17_电话号码的字母组合——回溯.md",
+      "title": "Leetcode17:电话号码的字母组合——回溯",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "leetcode-1823-find-the-winner-of-the-circular-game-josephus",
+      "file": "Leetcode1823_找出游戏的获胜者——约瑟夫环.md",
+      "title": "Leetcode1823:找出游戏的获胜者——约瑟夫环",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "技术笔记，提及大一学习经历属于一般性背景描述，不涉及具体学校名称或敏感个人轨迹。"
+    },
+    {
+      "slug": "leetcode-198-house-robber-dynamic-programming",
+      "file": "Leetcode198_打家劫舍——动态规划.md",
+      "title": "Leetcode198:打家劫舍——动态规划",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "leetcode-230-kth-smallest-element-in-a-bst",
+      "file": "Leetcode230_二叉搜索树中第K小的元素.md",
+      "title": "Leetcode230:二叉搜索树中第K小的元素",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术性刷题笔记，不包含个人隐私信息。"
+    },
+    {
+      "slug": "leetcode-240-search-a-2d-matrix-ii-binary-search",
+      "file": "Leetcode240_搜索二维矩阵——二分、矩阵.md",
+      "title": "Leetcode240:搜索二维矩阵——二分、矩阵",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术性刷题笔记，不包含个人隐私信息。"
+    },
+    {
+      "slug": "leetcode-2-add-two-numbers-linked-list",
+      "file": "Leetcode2_两数相加——链表.md",
+      "title": "Leetcode2:两数相加——链表",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "leetcode-310-minimum-height-trees",
+      "file": "Leetcode310_最小高度树.md",
+      "title": "Leetcode310:最小高度树",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，不包含个人隐私信息。"
+    },
+    {
+      "slug": "leetcode-347-top-k-frequent-elements-priority-queue-heap",
+      "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
+      "title": "Leetcode347:前K个高频元素——优先队列、堆",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "leetcode-386-lexicographical-numbers-dfs-iteration",
+      "file": "Leetcode386_字典序排数——dfs、迭代.md",
+      "title": "Leetcode386:字典序排数——dfs、迭代",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "leetcode-39-combination-sum-backtracking",
+      "file": "Leetcode39_组合总和——回溯.md",
+      "title": "Leetcode39:组合总和——回溯",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "leetcode-3-longest-substring-without-repeating-characters",
+      "file": "Leetcode3_无重复字符的最长子串——滑动窗口.md",
+      "title": "Leetcode3:无重复字符的最长子串——滑动窗口",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "leetcode-435-non-overlapping-intervals-dp-greedy",
+      "file": "Leetcode435_重叠区间——动态规划、贪心.md",
+      "title": "Leetcode435:重叠区间——动态规划、贪心",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "leetcode-450-delete-node-in-a-bst",
+      "file": "Leetcode450_删除二叉搜索树中的节点.md",
+      "title": "Leetcode450:删除二叉搜索树中的节点",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术算法题解，不包含个人隐私信息。"
+    },
+    {
+      "slug": "leetcode-451-sort-characters-by-frequency-bucket-sort",
+      "file": "Leetcode451_根据字符出现频率排序——桶排序.md",
+      "title": "Leetcode451:根据字符出现频率排序——桶排序",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术算法题解，不包含个人隐私信息。"
+    },
+    {
+      "slug": "leetcode-455-assign-cookies-sort-greedy",
+      "file": "Leetcode455_分发饼干——排序、贪心.md",
+      "title": "Leetcode455:分发饼干——排序、贪心",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该内容仅包含LeetCode算法题解和学习心得，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "leetcode-46-permutations-backtracking",
+      "file": "Leetcode46_全排列——回溯.md",
+      "title": "Leetcode46:全排列——交换、回溯",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "leetcode-55-jump-game-greedy",
+      "file": "Leetcode55_跳跃游戏——贪心.md",
+      "title": "Leetcode55:跳跃游戏——贪心",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "内容专注于贪心算法的逻辑解释，虽然包含简单的自我评价，但不属于敏感的个人情感或隐私。"
+    },
+    {
+      "slug": "leetcode-560-subarray-sum-equals-k",
+      "file": "Leetcode560_和为K的子数组——前缀和、哈希表.md",
+      "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该内容是关于前缀和与哈希表的技术教程，不包含任何个人身份标识或私密信息。"
+    },
+    {
+      "slug": "leetcode-5-longest-palindromic-substring",
+      "file": "Leetcode5_最长回文子串——中心扩展法.md",
+      "title": "Leetcode5:最长回文子串——中心扩展法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该内容仅包含LeetCode算法题解和技术心得，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "leetcode-695-max-area-of-island",
+      "file": "Leetcode695_岛屿的最大面积——中等难度的搜索算法.md",
+      "title": "Leetcode695:岛屿的最大面积——中等难度的搜索算法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该内容为纯技术博客，讨论搜索算法和代码实现细节，无个人生活细节泄露。"
+    },
+    {
+      "slug": "leetcode-733-flood-fill-search-algorithm",
+      "file": "Leetcode733_图像渲染——搜索算法.md",
+      "title": "Leetcode733:图像渲染——搜索算法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "内容涉及图像渲染算法的DFS和BFS实现，属于公开的技术学习笔记。"
+    },
+    {
+      "slug": "leetcode-743-network-delay-time-dijkstra",
+      "file": "Leetcode743_网络延迟时间——dijkstra算法.md",
+      "title": "Leetcode743:网络延迟时间——dijkstra算法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "内容专注于Dijkstra最短路径算法的讲解与实现，不包含任何个人身份标识或私密信息。"
+    },
+    {
+      "slug": "leetcode-78-subsets-recursion-backtracking",
+      "file": "Leetcode78_子集——递归、回溯——一道困扰我的题.md",
+      "title": "Leetcode78:子集——递归、回溯——一道困扰我的题",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "leetcode-821-shortest-distance-to-a-character",
+      "file": "Leetcode821_字符的最短距离——两次遍历.md",
+      "title": "Leetcode821:字符的最短距离——两次遍历",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，内容为算法逻辑和代码实现。"
+    },
+    {
+      "slug": "leetcode-977-squares-of-a-sorted-array-two-pointers",
+      "file": "Leetcode977_有序数组的平方——双指针.md",
+      "title": "Leetcode977:有序数组的平方——双指针",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，无个人生活细节泄露。"
+    },
+    {
+      "slug": "leetcode-994-rotting-oranges-bfs",
+      "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
+      "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "虽然包含作者的自我调侃（如“菜鸡”、“显摆”），但属于学习心得，不涉及隐私或敏感生活细节。"
+    },
+    {
+      "slug": "leetcode-142-linked-list-cycle-ii-fast-slow-pointers",
+      "file": "Leetcode_142环形链表II.md",
+      "title": "Leetcode142:环形链表II——快慢指针",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，不包含个人隐私信息。"
+    },
+    {
+      "slug": "leetcode-209-minimum-size-subarray-sum-sliding-window",
+      "file": "Leetcode_209长度最小的子数组.md",
+      "title": "Leetcode_209长度最小的子数组——滑动窗口",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，虽然包含少量个人情绪化表达（如“大老粗”），但不涉及隐私泄露。"
+    },
+    {
+      "slug": "leetcode-283-move-zeroes-two-pointers",
+      "file": "Leetcode_283移动零.md",
+      "title": "Leetcode283:移动零——双指针",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术算法解析，无个人隐私风险。"
+    },
+    {
+      "slug": "linux-execute-cron-job-at-random-time-in-interval",
+      "file": "Linux在指定时间区间内的随机时间点执行任务.md",
+      "title": "Linux在指定时间区间内的随机时间点执行任务",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "通用的Linux脚本技能分享，不涉及具体业务逻辑或敏感服务器信息。"
+    },
+    {
+      "slug": "linux-output-redirection-crontab-pitfalls",
+      "file": "Linux输出重定向以及crontab的坑.md",
+      "title": "Linux输出重定向以及crontab的坑",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "livego-lightweight-live-streaming-software",
+      "file": "Livego——小而美的直播串流软件.md",
+      "title": "LiveGo——小而美的直播串流软件",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "high",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "nginx-learning-notes",
+      "file": "NGINX学习笔记.md",
+      "title": "NGINX学习笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术学习笔记，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "pandas-tips",
+      "file": "Pandas使用技巧.md",
+      "title": "Pandas使用技巧",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术工具使用技巧，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "pandas-learning-notes",
+      "file": "Pandas学习笔记.md",
+      "title": "Pandas学习笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术学习笔记，包含Pandas函数用法说明，不涉及个人隐私。"
+    },
+    {
+      "slug": "python-quadratic-equation-decimals",
+      "file": "Python-一元二次方程，保留两位小数.md",
+      "title": "Python-一元二次方程，保留两位小数",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "基础算法编程练习题，无个人或敏感信息。"
+    },
+    {
+      "slug": "python-shuffle-algorithm",
+      "file": "Python-洗牌算法.md",
+      "title": "Python-洗牌算法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "洗牌算法的代码实现说明，属于公开的技术分享。"
+    },
+    {
+      "slug": "python-crawler-selenium-request",
+      "file": "Python爬虫-selenium-request.md",
+      "title": "Python爬虫-selenium-request",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "关于爬虫库安装或使用的简短记录，不包含敏感数据或个人信息。"
+    },
+    {
+      "slug": "python-week-2-study-report",
+      "file": "Python第二周学习报告（草稿）.md",
+      "title": "Python第二周学习报告（草稿）",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "包含详细的个人学习心路历程、情绪表达（如“装逼心理”、“想喝酒”、“想打游戏”）、社交圈描述（团队成员不听话）以及具体的学习工具使用习惯，属于典型的个人日记性质内容。"
+    },
+    {
+      "slug": "rag-graph-entity-edge-intelligent-merge",
+      "file": "RAG图谱实体和边智能合并.md",
+      "title": "RAG图谱实体和边智能合并",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术调研笔记，讨论算法逻辑与学术论文，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "sci-paper-editing-experience-sharing",
+      "file": "SCI论文润色经验分享.md",
+      "title": "SCI论文润色经验分享",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "vue3-waterfall-layout-dynamic-update-component",
+      "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
+      "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术实现方案分享，涵盖代码逻辑与开发思路，无个人隐私泄露风险。"
+    },
+    {
+      "slug": "cpp-stupid-errors-collection",
+      "file": "c++傻缺错误集锦.md",
+      "title": "c++傻缺错误集锦",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "文中提到了作者的学校身份（程序设计课代表）、考试安排以及个人的情绪化表达，属于学业细节和个人身份信息。"
+    },
+    {
+      "slug": "cpp-python-common-functions",
+      "file": "c++和python常用函数.md",
+      "title": "C++和python常用函数",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术笔记，包含C++和Python的常用函数用法，不涉及个人隐私。"
+    },
+    {
+      "slug": "cpp-compare-lexicographical-order-methods",
+      "file": "c++比较字典序的三种方法.md",
+      "title": "c++比较字典序的三种方法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术性内容，仅包含关于字典序比较的外部链接参考。"
+    },
+    {
+      "slug": "certbot-auto-config-nginx-wordpress-https",
+      "file": "certbot自动配置nginx给wordpress站点加https.md",
+      "title": "certbot自动配置nginx给wordpress站点加https",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "cpp-cout-output-two-decimal-places-precision",
+      "file": "cout输出精确到小数点后两位.md",
+      "title": "cout输出精确到小数点后两位",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术编程题目练习，不包含个人隐私信息。"
+    },
+    {
+      "slug": "csv-library-usage",
+      "file": "csv库的使用方法.md",
+      "title": "csv库的使用方法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "django-advanced-notes",
+      "file": "django笔记进阶.md",
+      "title": "django笔记进阶",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "Django框架及Linux Screen命令的技术笔记，属于公开知识分享。"
+    },
+    {
+      "slug": "docker-notes",
+      "file": "docker笔记.md",
+      "title": "docker笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "flask-vue-jwt-authentication",
+      "file": "flask+vue使用jwt验证.md",
+      "title": "Flask+vue使用jwt验证",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "github-gitee-webhooks-nodejs-auto-pull",
+      "file": "gitee webhooks+nodejs实现自动拉取代码.md",
+      "title": "gitee/github webhooks+nodejs实现自动拉取代码",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "ccb977c3",
+      "file": "github_trending.md",
+      "title": "github_trending",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "内容为空，仅包含标题和占位符，无风险。"
+    },
+    {
+      "slug": "github-push-fatal-authentication-failed-solution",
+      "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
+      "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "git-undo-commit",
+      "file": "git撤销版本.md",
+      "title": "Git撤销版本",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术操作指南，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "json-data-storage",
+      "file": "json数据存储.md",
+      "title": "json数据存储",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "关于Python数据存储的技术笔记，内容为公开知识的整理。"
+    },
+    {
+      "slug": "jupyter-paddle-docker-install",
+      "file": "jupyter-paddle使用docker安装.md",
+      "title": "jupyter-paddle使用docker安装",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "jupyter-open-project-folder",
+      "file": "jupyter打开项目文件夹.md",
+      "title": "jupyter打开项目文件夹",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "langchain-faiss-load-pkl-speed-up",
+      "file": "langchain-faiss加载pkl文件速度提升.md",
+      "title": "langchain-faiss加载pkl文件速度提升",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术分享，涉及Faiss和PyArrow的性能优化，不包含个人隐私或敏感工作细节。"
+    },
+    {
+      "slug": "leetcode-206-reverse-linked-list",
+      "file": "leetcode206_反转链表.md",
+      "title": "Leetcode206:反转链表",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "linux-study-notes",
+      "file": "linux学习笔记.md",
+      "title": "linux学习笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "标准的Linux环境配置和Python安装笔记，无个人身份或敏感信息。"
+    },
+    {
+      "slug": "macos-matplotlib-chinese-font-display-fix",
+      "file": "macOS下matplotlib无法显示中文字体问题解决.md",
+      "title": "macOS下matplotlib无法显示中文字体问题解决",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "解决macOS下Matplotlib字体问题的技术教程，不涉及私生活或特定组织信息。"
+    },
+    {
+      "slug": "mac-m1-install-sql-server",
+      "file": "macm1安装sqlserver踩坑经历.md",
+      "title": "mac m1 安装sqlserver踩坑经历",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "matplotlib-plot-heat-engine-efficiency-curve",
+      "file": "matplotlib作热机效率随负载大小变化曲线图.md",
+      "title": "matplotlib作热机效率随负载大小变化曲线图",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "matplotlib-tutorial-1-basic-syntax-figure-axis",
+      "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
+      "title": "matplotlib学习笔记（一）基本语法,figure,坐标轴",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "matplotlib-tutorial-3-image-3d-data-subplot",
+      "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
+      "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "matplotlib-tutorial-2-legend-annotation-scatter-bar-contour",
+      "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
+      "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术学习笔记，内容为 Matplotlib 基础操作，不涉及个人隐私。"
+    },
+    {
+      "slug": "matplotlib-tutorial-4-pip-secondary-axis-animation",
+      "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
+      "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "opencode-7-basic-tools-read-write-edit-multiedit-glob-grep-bash",
+      "file": "opencode-seven-core-tools.md",
+      "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "pathlib-library",
+      "file": "pathlib库.md",
+      "title": "pathlib库",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "python-send-email",
+      "file": "python发邮件.md",
+      "title": "python发邮件",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "python-time-datetime-pitfalls",
+      "file": "python时间遇到的坑.md",
+      "title": "python时间遇到的坑",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "虽然包含情绪化表达（吐槽），但属于对编程语言的技术性抱怨，不涉及现实生活中的隐私泄露。"
+    },
+    {
+      "slug": "python-oop-course",
+      "file": "python面向对象课程.md",
+      "title": "python面向对象课程",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "qt-dynamic-add-remove-layout-jupyter",
+      "file": "qt动态添加和删除布局（仿jupyter）.md",
+      "title": "Qt动态添加和删除布局（仿jupyter）",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "requests-crawl-memes",
+      "file": "requests爬表情包.md",
+      "title": "requests爬表情包",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术代码分享，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "train-yolov5-model-roboflow-colab",
+      "file": "roboflow+colab优雅地训练yolov5模型.md",
+      "title": "Roboflow+colab优雅地训练yolov5模型",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "公开的深度学习工具使用教程，属于通用技能分享。"
+    },
+    {
+      "slug": "selenium-crawl-gdp-data",
+      "file": "selenium爬GDP.md",
+      "title": "selenium爬GDP",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "爬取公开的宏观经济数据，无隐私风险。"
+    },
+    {
+      "slug": "selenium-crawl-class-schedule",
+      "file": "selenium爬教务处课表.md",
+      "title": "selenium爬教务处课表",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "high",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "single-agent-better-than-multi-agent",
+      "file": "single-agent-vs-multi-agent.md",
+      "title": "single-agent现阶段明显强于multi-agent",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术观点分析，讨论AI架构优劣，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "ubuntu-install-python3-pyenv",
+      "file": "ubuntu安装Python3的曲折之路.md",
+      "title": "ubuntu安装Python3的曲折之路",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "vane-agent-search-flow-speed-balanced",
+      "file": "vane-agent-search-flow-speed-balanced.md",
+      "title": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "针对特定开源项目或产品的技术流程分析，不包含个人生活或工作秘密。"
+    },
+    {
+      "slug": "vue-flask-play-rtsp-video-stream-camera",
+      "file": "vueflask实现播放任何视频源包括rtsp摄像头.md",
+      "title": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "yolov5-train-custom-object-detection-model",
+      "file": "yolov5训练自己的目标检测模型.md",
+      "title": "Yolov5训练自己的目标检测模型",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "1984-reading-notes",
+      "file": "《1984》读书笔记.md",
+      "title": "《1984》读书笔记",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "chinas-state-owned-economy-book-review",
+      "file": "《中国的官办经济》读后感.md",
+      "title": "《中国的官办经济》读后感",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "high",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "from-the-soil-reading-notes",
+      "file": "《乡土中国》读书笔记.md",
+      "title": "《乡土中国》读书笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "学术著作的读书笔记，内容属于社会学理论分析，不涉及个人隐私或敏感政治言论。"
+    },
+    {
+      "slug": "moment-in-peking-book-review",
+      "file": "《京华烟云》读后有感.md",
+      "title": "《京华烟云》读后有感",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "sapiens-a-brief-history-of-humankind-book-review",
+      "file": "《人类简史》读后有感.md",
+      "title": "《人类简史》读后有感",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "feminism-from-zero-reading-notes",
+      "file": "《从零开始的女性主义》读后有感.md",
+      "title": "《从零开始的女性主义》读后有感",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "non-designers-design-book-reading-notes",
+      "file": "《写给大家看的设计书》读书笔记.md",
+      "title": "《写给大家看的设计书》读书笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "内容为专业设计书籍的知识总结和笔记，不包含任何个人身份信息或私生活细节。"
+    },
+    {
+      "slug": "12-citizens-movie-review",
+      "file": "《十二公民》观后感.md",
+      "title": "《十二公民》观后感",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "hanzawa-naoki-review",
+      "file": "《半泽直树》观后有感.md",
+      "title": "《半泽直树》观后有感",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "wolf-of-wall-street-movie-review",
+      "file": "《华尔街之狼》观后感.md",
+      "title": "《华尔街之狼》观后感",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "内容为电影观后感，虽然包含对电影大尺度情节的描述，但属于对艺术作品的客观转述，不涉及作者个人隐私。"
+    },
+    {
+      "slug": "steve-jobs-biography-reading-notes",
+      "file": "《史蒂夫·乔布斯传》读书笔记.md",
+      "title": "《史蒂夫·乔布斯传》读书笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "a-lost-paradise-book-review",
+      "file": "《失乐园》读后有感.md",
+      "title": "《失乐园》读后有感",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "how-to-read-a-book-review",
+      "file": "《如何阅读一本书》读后感.md",
+      "title": "《如何阅读一本书》读后感",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "academic-research-your-way-to-success",
+      "file": "《学术研究，你的成功之道》.md",
+      "title": "《学术研究，你的成功之道》",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "学术研究方法论笔记，内容涵盖图灵奖得主的准则及科研技巧，属于专业知识分享，无隐私风险。"
+    },
+    {
+      "slug": "siddhartha-book-review-life-experience",
+      "file": "《悉达多》-人生就是在不断的体验与感悟.md",
+      "title": "《悉达多》——人生就是在不断的体验与感悟",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "the-new-king-of-comedy-review",
+      "file": "《新喜剧之王》观后感.md",
+      "title": "《新喜剧之王》观后感",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "and-then-there-were-none-book-review",
+      "file": "《无人生还》读后有感.md",
+      "title": "《无人生还》读后有感",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "ashita-mo-koharu-biyori-book-review",
+      "file": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴.md",
+      "title": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "probability-and-mathematical-statistics-course-summary",
+      "file": "《概率论与数理统计》结课总结.md",
+      "title": "《概率论与数理统计》结课总结",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "提到了具体的任课教师姓氏（王老师）、所学专业（人工智能专业）以及具体的课程总结和考试担忧，属于详细的学校和学业信息。"
+    },
+    {
+      "slug": "thirteen-steps-kazuaki-takano-book-review",
+      "file": "《消失的13级台阶》读后感.md",
+      "title": "《消失的13级台阶》读后感",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯粹的书评内容，主要讨论小说情节、作者背景及死刑社会议题，不涉及作者个人隐私。"
+    },
+    {
+      "slug": "gut-book-review",
+      "file": "《肠子的小心思》——读书笔记.md",
+      "title": "《肠子的小心思》——读书笔记",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "kikujiros-summer-movie-review",
+      "file": "《菊次郎的夏天》观后感.md",
+      "title": "《菊次郎的夏天》观后感",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "deng-xiaoping-era-book-review",
+      "file": "《邓小平时代》——改革开放的总设计师.md",
+      "title": "《邓小平时代》——改革开放的总设计师",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "snow-country-reading-notes",
+      "file": "《雪国》读书笔记.md",
+      "title": "《雪国》读书笔记",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯粹的文学作品读书笔记，不涉及个人隐私或现实生活细节。"
+    },
+    {
+      "slug": "ai-solved-one-year-old-sse-problem",
+      "file": "一年前遇到的难题，被AI解决了.md",
+      "title": "一年前遇到的难题，被AI解决了",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "article-20-movie-review",
+      "file": "一部接地气的国产法律神剧-第二十条.md",
+      "title": "一部接地气的国产法律神剧——第二十条",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "leetcode-15-3sum-two-pointers",
+      "file": "三数之和——双指针——好难.md",
+      "title": "三数之和——双指针——好难",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "典型的技术刷题笔记，虽然包含少量自我评价（如“菜”），但不涉及敏感个人身份信息。"
+    },
+    {
+      "slug": "leetcode-350-intersection-of-two-arrays-ii",
+      "file": "两个数组的交集——数组、哈希、双指针.md",
+      "title": "两个数组的交集——数组、哈希、双指针",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "how-china-got-rich",
+      "file": "中国是如何富起来的？.md",
+      "title": "中国是如何富起来的？",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "内容为读书笔记和对宏观经济历史的个人见解，不涉及个人隐私或敏感生活细节。"
+    },
+    {
+      "slug": "leetcode-121-best-time-to-buy-and-sell-stock",
+      "file": "买卖股票的最佳时机——数组、动态规划.md",
+      "title": "买卖股票的最佳时机——数组、动态规划",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "binary-tree-preorder-inorder-postorder-traversal",
+      "file": "二叉树的前中后序遍历.md",
+      "title": "二叉树的前中后序遍历",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "binary-tree-level-order-traversal",
+      "file": "二叉树的层序遍历——太tm妙啦.md",
+      "title": "二叉树的层序遍历——太tm妙啦",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术刷题笔记，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "migrate-wordpress-to-hugo",
+      "file": "从wordpress迁移到hugo过程分享.md",
+      "title": "从wordpress迁移到hugo过程分享",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "技术博客迁移经验分享，虽然提及了个人博客维护细节，但不涉及隐私泄露。"
+    },
+    {
+      "slug": "code-block-feature-test",
+      "file": "代码块测试.md",
+      "title": "代码块功能测试",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "using-reverse-algorithm",
+      "file": "使用reverse反向排列算法.md",
+      "title": "使用reverse反向排列算法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "简单的算法运行结果展示，无敏感内容。"
+    },
+    {
+      "slug": "sort-algorithm-vector-elements",
+      "file": "使用sort算法对向量元素排列.md",
+      "title": "使用sort算法对向量元素排列",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术笔记，讨论C++排序算法和const关键字，不包含个人隐私。"
+    },
+    {
+      "slug": "advanced-regex-replacement",
+      "file": "使用正则表达式进行高级替换.md",
+      "title": "使用正则表达式进行高级替换",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "关于正则表达式替换的技术分享，涉及博客维护工具，无个人敏感信息。"
+    },
+    {
+      "slug": "remove-duplicate-characters-string",
+      "file": "删除重复的字符并重新排列-这个题太jb烦人了.md",
+      "title": "删除重复的字符并重新排列-这个题太jb烦人了",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "编程练习题解，虽然标题包含情绪化词汇，但内容仅限于算法逻辑，不涉及现实生活隐私。"
+    },
+    {
+      "slug": "divisible-by-lucky-number-do-while-loop",
+      "file": "判断n能否被幸运数整除-do while循环应用.md",
+      "title": "判断n能否被幸运数整除-do while循环应用",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "基础编程题目描述与解答，无任何个人身份或隐私泄露风险。"
+    },
+    {
+      "slug": "line-segments-intersect-rapid-rejection-straddle-test",
+      "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
+      "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术算法笔记，不包含任何个人隐私信息。"
+    },
+    {
+      "slug": "check-palindrome-number",
+      "file": "判断回文数.md",
+      "title": "判断回文数",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "关于C++编程的学习心得，属于公开的技术讨论范畴。"
+    },
+    {
+      "slug": "compressed-domain-image-deep-learning-classification-segmentation",
+      "file": "压缩域图像深度学习分类_分割论文调研.md",
+      "title": "压缩域图像深度学习分类/分割论文调研",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "leetcode-88-merge-sorted-array-two-pointers",
+      "file": "合并两个有序数组——数组、双指针、排序——这题的题解绝了.md",
+      "title": "合并两个有序数组——数组、双指针、排序——这题的题解绝了",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "LeetCode刷题笔记，仅包含题目描述、解题思路和代码实现。"
+    },
+    {
+      "slug": "gujing-gongjiu-gu-16-tasting",
+      "file": "品酒(古井贡酒-古16) .md",
+      "title": "品酒🍶(古井贡酒-古16)",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "gujing-gongjiu-6th-gen-55-degree-tasting",
+      "file": "品酒-古井贡酒第六代55度.md",
+      "title": "品酒🍶——古井贡酒第六代55度",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯粹的酒水品鉴笔记，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "jameson-irish-whiskey-tasting",
+      "file": "品酒尊美醇Jameson.md",
+      "title": "品酒（尊美醇Jameson）",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "主要为产品百科知识与个人口感评价，无隐私泄露风险。"
+    },
+    {
+      "slug": "gujing-gongjiu-gu-20-tasting",
+      "file": "品酒（古井贡酒-古20）.md",
+      "title": "品酒🍶（古井贡酒-古20）以及小插曲",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "high",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "wine-tasting-gujing-gongjiu-gu-8",
+      "file": "品酒（古井贡酒-古8）.md",
+      "title": "品酒🍶（古井贡酒-古8）",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯粹的品酒笔记，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "wine-tasting-guojiao-1573",
+      "file": "品酒（国窖 1573）.md",
+      "title": "品酒🍶（国窖 1573）",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "内容仅为对白酒的感官评价，无个人生活细节泄露。"
+    },
+    {
+      "slug": "wine-tasting-fenjiu-huanggai-luzhou-laojiao-tequ",
+      "file": "品酒（汾酒黄盖&泸州老窖特曲经典）.md",
+      "title": "品酒🍶（汾酒黄盖&泸州老窖特曲经典）",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "wine-tasting-green-bottle-xifengjiu-shaanxi",
+      "file": "品酒（高脖绿瓶西凤酒陕西版）.md",
+      "title": "品酒🍶（高脖绿瓶西凤酒陕西版）",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "关于白酒口感和版本的客观描述，不包含个人身份或隐私信息。"
+    },
+    {
+      "slug": "round-off-decimals",
+      "file": "四舍五入小数.md",
+      "title": "四舍五入小数",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术算法题目描述，不包含任何个人隐私信息。"
+    },
+    {
+      "slug": "chart2data-experiment-compare-chartvlm-qwen-omni",
+      "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
+      "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "vue-highlightjs-line-numbers-code-highlight",
+      "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md",
+      "title": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "word-wildcard-advanced-find-and-replace",
+      "file": "在word中使用通配符进行高级的查找和替换.md",
+      "title": "在word中使用通配符进行高级的查找和替换",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "关于Word办公软件技巧的分享，未提及具体的文档内容或敏感背景。"
+    },
+    {
+      "slug": "swap-uppercase-lowercase-string",
+      "file": "大小写字母互换-输入与输出字符串.md",
+      "title": "大小写字母互换-输入与输出字符串",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术算法题目分享，不包含个人隐私信息。"
+    },
+    {
+      "slug": "keynote-animation-maker-tool",
+      "file": "好用的动画制作工具-keynote.md",
+      "title": "好用的动画制作工具-Keynote",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "how-to-use-v2ray-proxy",
+      "file": "如何使用v2ray代理.md",
+      "title": "如何使用v2ray代理",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "high",
+      "reason": "涉及翻墙/科学上网工具的使用教程，包含百度网盘链接及引导私聊获取订阅地址，存在法律合规风险及社交账号暴露风险。"
+    },
+    {
+      "slug": "compile-python39-source-code-on-windows",
+      "file": "如何在Windows上编译Python39源代码.md",
+      "title": "如何在Windows上编译Python39源代码",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术开发环境搭建教程，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "add-transcript-to-english-reading-video",
+      "file": "如何在英语朗读视频中添加文稿.md",
+      "title": "如何在英语朗读视频中添加文稿",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "文中提到了“刘老师”，可能涉及具体的学校或课外辅导关系，且描述了作者的朗读视频，属于个人学习生活细节。"
+    },
+    {
+      "slug": "export-yuque-document-to-html-api",
+      "file": "如何将语雀文档导出为html（使用语雀API）.md",
+      "title": "如何将语雀文档导出为html（使用语雀API）",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "how-to-build-chatgpt-mirror-site",
+      "file": "如何搭建一个ChatGPT镜像站.md",
+      "title": "如何搭建一个ChatGPT镜像站",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "文中提到了“表哥”这一社会关系，并详细描述了作者申请虚拟信用卡、找人代办等涉及财务安全和个人经历的敏感信息。"
+    },
+    {
+      "slug": "difference-between-word-byte-word-length-bit",
+      "file": "字、字节、字长、位等概念区分.md",
+      "title": "字、字节、字长、位等概念区分",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "string-number-conversion",
+      "file": "字符串与数字之间的转换.md",
+      "title": "字符串与数字之间的转换",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术笔记，讨论C++ stringstream转换，不涉及个人隐私。"
+    },
+    {
+      "slug": "string-processing-substr-insert-find",
+      "file": "字符处理软件-substr-insert-find.md",
+      "title": "字符处理软件-substr-insert-find",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "标准的算法题目描述与解题思路，无个人信息泄露风险。"
+    },
+    {
+      "slug": "char-array-concat-sort-strcat-strlen",
+      "file": "字符数组的拼接和排序-strcat()-sort()-strlen().md",
+      "title": "字符数组的拼接和排序-strcat()-sort()-strlen()",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "char-array-input-output",
+      "file": "字符数组的输入输出.md",
+      "title": "字符数组的输入输出",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "contains-duplicate-sorting-hash",
+      "file": "存在重复元素——排序、哈希.md",
+      "title": "存在重复元素——排序、哈希",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "complete-knapsack-problem-dynamic-programming",
+      "file": "完全背包问题——动态规划.md",
+      "title": "完全背包问题——动态规划——这道题解是认真写的qwq",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "image-operations-processing",
+      "file": "对图像操作.md",
+      "title": "对图像操作",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "symmetric-string-processing",
+      "file": "对称字符串处理.md",
+      "title": "对称字符串处理",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "算法题目解析，虽然包含口语化表达（如“妈的”），但属于学习笔记，不涉及现实生活中的个人隐私或敏感信息。"
+    },
+    {
+      "slug": "sharpen-your-tools-study-resources",
+      "file": "工欲善其事，必先利其器.md",
+      "title": "工欲善其事，必先利其器。",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "泄露了具体的就读学校（中国石油大学 UPC）、学院、校内图书馆链接、具体的组会日期以及个人学习资料路径。"
+    },
+    {
+      "slug": "lg-29wk500-ultrawide-monitor-experience",
+      "file": "带鱼屏真是太太太爽爽爽啦.md",
+      "title": "带鱼屏真是太太太爽爽爽啦",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "仅为普通电子产品使用心得，不涉及敏感个人信息。"
+    },
+    {
+      "slug": "open-source-pdf-parser-marker-deep-dive",
+      "file": "开源PDF解析工具Marker深度解析.md",
+      "title": "开源PDF解析工具Marker深度解析",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "demian-hermann-hesse-book-review",
+      "file": "德米安读后有感.md",
+      "title": "《德米安》读后有感",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "high",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "pi-agent-vs-langgraph-comparison",
+      "file": "思考：Pi Agent 对比 LangGraph.md",
+      "title": "思考：Pi Agent 对比 LangGraph",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "hosting-150-attendee-lecture-public-speaking",
+      "file": "成功主持150人参会的讲座！.md",
+      "title": "成功主持150人参会的讲座！",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "涉及具体的个人活动经历、参与人数及情感表达，属于个人生活细节。"
+    },
+    {
+      "slug": "my-first-custom-mechanical-keyboard",
+      "file": "我的第一把客制化键盘.md",
+      "title": "我的第一把客制化键盘",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "implement-attention-from-scratch",
+      "file": "手撕Attention.md",
+      "title": "手撕Attention",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术学习笔记，内容为数学公式和算法逻辑，无个人隐私。"
+    },
+    {
+      "slug": "cnn-backpropagation-gradient-update-from-scratch",
+      "file": "手撕卷积神经网络反向传播梯度更新.md",
+      "title": "手撕卷积神经网络+反向传播梯度更新",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术笔记，包含数学公式和算法推导，不涉及个人隐私。"
+    },
+    {
+      "slug": "leetcode-find-the-town-judge-graph-theory",
+      "file": "找到小镇的法官——图论入门.md",
+      "title": "找到小镇的法官——图论入门",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "consistent-study-habits-reflections",
+      "file": "把功夫用在平时.md",
+      "title": "把功夫用在平时",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "涉及具体的学业表现（线代和数电课程）、学习习惯以及期末复习时的焦虑情绪，属于个人学业细节。"
+    },
+    {
+      "slug": "upgrade-http-to-https-wordpress-apache",
+      "file": "搞了一晚上http升级为https.md",
+      "title": "搞了一晚上http升级为https",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "暴露了技术栈细节（腾讯云、宝塔面板、WordPress）以及个人折腾博客的心路历程和操作失误，可能增加针对性攻击风险或暴露个人维护习惯。"
+    },
+    {
+      "slug": "n-sum-problem-hash-two-pointers",
+      "file": "数之和问题归纳哈希双指针.md",
+      "title": "数之和问题归纳——哈希、双指针",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术性刷题笔记，不包含个人隐私信息。"
+    },
+    {
+      "slug": "numerical-calculation-methods",
+      "file": "数值计算方法.md",
+      "title": "数值计算方法",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "课程学习笔记摘要，无敏感个人信息。"
+    },
+    {
+      "slug": "mathematical-modeling-competition-experience",
+      "file": "数学建模参赛有感.md",
+      "title": "数学建模参赛有感",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "包含具体的行程安排（组会、回寝时间）、天气描述、团队成员性别构成及个人情感波动，属于较私密的个人生活记录。"
+    },
+    {
+      "slug": "math-modeling-competition-failure",
+      "file": "数模比赛失利.md",
+      "title": "数模比赛失利",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "记录了具体的负面情绪（听不下课、失眠）以及特定事件的挫败感，属于日记性质的个人情感暴露。"
+    },
+    {
+      "slug": "install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu",
+      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
+      "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术笔记，记录Ubuntu系统安装与驱动配置过程，不包含个人隐私信息。"
+    },
+    {
+      "slug": "why-stardew-valley-is-so-fun",
+      "file": "星露谷物语为什么这么好玩？.md",
+      "title": "星露谷物语为什么这么好玩？",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "游戏评论与心得分享，内容为公开的游戏机制分析，无个人生活细节。"
+    },
+    {
+      "slug": "maximum-subarray-sum-dp-divide-conquer",
+      "file": "最大子数组和——动态规划、分治.md",
+      "title": "最大子数组和——动态规划、分治",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "valid-sudoku-array-hash-table-matrix",
+      "file": "有效的数独——数组、哈希表、矩阵.md",
+      "title": "有效的数独——数组、哈希表、矩阵",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "LeetCode算法题解，虽然包含少量自嘲情绪词，但不涉及现实身份或隐私泄露。"
+    },
+    {
+      "slug": "pascals-triangle-array-dynamic-programming",
+      "file": "杨辉三角——数组、动态规划.md",
+      "title": "杨辉三角——数组、动态规划",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "regex-extract-stray-birds",
+      "file": "正则表达式提取《飞鸟集》.md",
+      "title": "正则表达式提取《飞鸟集》",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "提及每天给女朋友发邮件的私人生活细节及情感互动，属于个人生活记录。"
+    },
+    {
+      "slug": "letter-to-number-string-sum",
+      "file": "每个字母代表一个数字，输出字符串代表的数字之和.md",
+      "title": "每个字母代表一个数字，输出字符串代表的数字之和",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "number-sorting-problem",
+      "file": "每日一题(2)--很多个数排序问题.md",
+      "title": "每日一题(2)--很多个数排序问题",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "daily-a-to-z-alphabet-circular-output",
+      "file": "每日一题--a到z26个字母循环输出.md",
+      "title": "每日一题--a到z26个字母循环输出",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术算法题目描述与代码逻辑，不包含个人隐私信息。"
+    },
+    {
+      "slug": "daily-binary-search-find-number-in-array",
+      "file": "每日一题--二分法找数组中的数.md",
+      "title": "每日一题--二分法找数组中的数",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "虽然题目背景提到了“小唐”，但属于虚构的算法题目场景，不涉及真实身份或隐私。"
+    },
+    {
+      "slug": "daily-2d-array-concentric-matrix",
+      "file": "每日一题--二维数组.md",
+      "title": "每日一题--二维数组",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "标准的二维数组算法练习，无个人敏感信息。"
+    },
+    {
+      "slug": "daily-large-number-addition-with-carry",
+      "file": "每日一题--有进位的加法运算.md",
+      "title": "每日一题--有进位的加法运算",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "daily-sum-of-digits-super-large-number",
+      "file": "每日一题--求超大数的各位数字和.md",
+      "title": "每日一题--求超大数的各位数字和",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术算法笔记，不包含个人隐私信息。"
+    },
+    {
+      "slug": "auto-generate-grade-math-questions-for-kids",
+      "file": "每日一题--给小朋友的自动出题自动批改.md",
+      "title": "每日一题--给小朋友的自动出题自动批改",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "通用的编程练习逻辑，未提及具体的家庭成员或个人生活细节。"
+    },
+    {
+      "slug": "array-deduplication-and-sorting",
+      "file": "每日一题-数组去重和排序.md",
+      "title": "每日一题-数组去重和排序",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "fix-browser-getusermedia-not-supported",
+      "file": "浏览器不支持getUserMedia.md",
+      "title": "浏览器不支持getUserMedia",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该文章属于技术笔记，内容为深度学习模型对比实验，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "monkey-king-struct-josephus-problem",
+      "file": "猴子选大王-结构体.md",
+      "title": "猴子选大王-结构体",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "leetcode-141-linked-list-cycle-hash-two-pointers",
+      "file": "环形链表——哈希、链表、双指针.md",
+      "title": "环形链表——哈希、链表、双指针",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该文章为LeetCode刷题笔记，内容纯属技术讨论，无隐私风险。"
+    },
+    {
+      "slug": "focus-on-primary-goals-personal-growth",
+      "file": "理清主次，集中精力解决“主要矛盾”。.md",
+      "title": "理清主次，集中精力解决“主要矛盾”。",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "high",
+      "reason": "文章包含大量个人生活细节，如与表哥的私人对话、对导师孙运雷的直接引用、个人的恋爱与人际关系状态，以及对未来规划的感悟，属于典型的个人日记，具有较高的隐私暴露风险。"
+    },
+    {
+      "slug": "cpp-sort-function-array-sorting",
+      "file": "用sort函数给数组排序.md",
+      "title": "用sort函数给数组排序",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术教程，不包含个人隐私信息。"
+    },
+    {
+      "slug": "leetcode-1-two-sum-array-hash-table",
+      "file": "由和找到两数——数组、哈希表.md",
+      "title": "由和找到两数——数组、哈希表",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "LeetCode解题笔记，属于公开知识分享。"
+    },
+    {
+      "slug": "computer-boot-process",
+      "file": "电脑启动需要经历哪些过程？.md",
+      "title": "电脑启动需要经历哪些过程？",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "计算机基础知识笔记，无个人敏感信息。"
+    },
+    {
+      "slug": "baidu-gift-certificate-surprise",
+      "file": "百度寄的证书和礼品，惊喜！.md",
+      "title": "百度寄的证书和礼品，惊喜！",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "涉及特定公司的奖励、个人成就以及情感表达，可能暴露作者的职业背景、获奖经历或与特定企业的关联。"
+    },
+    {
+      "slug": "discrete-mathematics-course-summary-notes",
+      "file": "离散数学结课总结+笔记.md",
+      "title": "离散数学结课总结+笔记",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "luogu-p1359-yacht-rental-dynamic-programming",
+      "file": "租用游艇——动态规划.md",
+      "title": "租用游艇——动态规划",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "chapter-1-exercises-pip-jupyter",
+      "file": "第一章练习题.md",
+      "title": "第一章练习题",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "macbook-air-m1-review",
+      "file": "精准而优雅——MacBook Air.md",
+      "title": "精准而优雅——MacBook Air",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "包含了具体的财务往来（向哥哥借款8000元）、购买时间、专业背景（计算机专业）以及个人消费心理，具有较强的日记属性。"
+    },
+    {
+      "slug": "struct-sorting-sort-typedef-cpp",
+      "file": "结构体排序-sort()-typedef.md",
+      "title": "结构体排序-sort()-typedef",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该内容为标准的编程练习题（中超联赛积分计算），不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "insert-character-string-object",
+      "file": "给string对象插入字符.md",
+      "title": "给string对象插入字符",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该内容仅包含C++编程学习心得和代码运行结果，无个人身份信息。"
+    },
+    {
+      "slug": "sort-student-grades-algorithm",
+      "file": "给学生成绩排序，总分相同看语文，语文相同看序号.md",
+      "title": "给学生成绩排序，总分相同看语文，语文相同看序号",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "count-char-frequency-string-int-char-conversion",
+      "file": "统计字符串中字符出现的个数-int与char类型的转换.md",
+      "title": "统计字符串中字符出现的个数-int与char类型的转换",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该内容为基础的字符串处理编程题，不包含任何个人生活细节。"
+    },
+    {
+      "slug": "indoor-green-potted-plant-care-guide",
+      "file": "绿植盆栽攻略.md",
+      "title": "绿植盆栽攻略",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "internet-cafe-fried-chicken-gaming-diary",
+      "file": "网吧＋炸鸡 yyds!.md",
+      "title": "网吧＋炸鸡 yyds!",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "包含具体的社交圈信息（朋友姓名）、个人生活习惯（去网吧频率）以及较为随意的口语化表达，属于典型的个人生活日记。"
+    },
+    {
+      "slug": "zhi-shen-shi-nei-reading-notes",
+      "file": "置身事内读书笔记.md",
+      "title": "《置身事内》读书笔记",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "low",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "array-deduplication-and-sorting-2",
+      "file": "自动去重和排序.md",
+      "title": "自动去重和排序",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "high",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "auto-publish-blog-ai-agent-openclaw",
+      "file": "自动发布博客.md",
+      "title": "自动发布博客",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "zhidong-o-vs-xbox-controller-review",
+      "file": "致动o手柄对比xbox原装手柄使用体验分享.md",
+      "title": "致动o手柄对比xbox原装手柄使用体验分享",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "数码产品使用心得分享，虽提及购买渠道，但属于公开的消费体验。"
+    },
+    {
+      "slug": "red-dead-redemption-2-game-review",
+      "file": "艺术品般的游戏—荒野大镖客2救赎.md",
+      "title": "艺术品般的游戏—《荒野大镖客救赎2》",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "suzhou-impressions",
+      "file": "苏州印象.md",
+      "title": "苏州印象",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "vue-flask-frontend-backend-separation",
+      "file": "解锁新技术栈vue+flask前后端分离.md",
+      "title": "解锁新技术栈vue+flask前后端分离",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    },
+    {
+      "slug": "computer-organization-lab-alu-design",
+      "file": "计组线上实验-运算器设计.md",
+      "title": "计组线上实验-运算器设计",
+      "draft": false,
+      "source": "user-override",
+      "riskLevel": "medium",
+      "reason": "User marked this as technical/non-private; restored from draft."
+    },
+    {
+      "slug": "how-to-write-a-good-paper-tell-a-story",
+      "file": "讲一个能满足和感动自己的故事！.md",
+      "title": "讲一个能满足和感动自己的故事！",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "记录了参加特定讲座（西交孟德宇教授）的笔记，结合日期可能推断出作者的学习轨迹或所在学术圈。"
+    },
+    {
+      "slug": "identify-characters-repeating-decimals-algorithm",
+      "file": "识别字符.md",
+      "title": "识别字符",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "标准的算法题目描述，无个人信息泄露风险。"
+    },
+    {
+      "slug": "remote-sensing-data-compression-research",
+      "file": "调研遥感数据压缩.md",
+      "title": "调研遥感数据压缩",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "纯技术调研笔记，不涉及个人隐私或敏感信息。"
+    },
+    {
+      "slug": "prime-number-check-algorithm",
+      "file": "质数判断.md",
+      "title": "质数判断",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "基础算法代码片段，无个人生活细节。"
+    },
+    {
+      "slug": "convert-binary-to-decimal",
+      "file": "输入二进制转化为十进制.md",
+      "title": "输入二进制转化为十进制",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "通用的编程练习题目，不包含敏感内容。"
+    },
+    {
+      "slug": "recursive-greatest-common-divisor",
+      "file": "递归法求最大公约数.md",
+      "title": "递归法求最大公约数",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "数学算法实现，属于公开的学术/编程知识。"
+    },
+    {
+      "slug": "remote-sensing-image-retrieval-survey",
+      "file": "遥感图像检索调研.md",
+      "title": "遥感图像检索调研",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": "该内容为纯学术调研笔记，涉及遥感图像检索的技术定义与参考文献，不包含个人隐私或敏感信息。"
+    },
+    {
+      "slug": "build-online-judge-system",
+      "file": "长期任务：做一个在线oj的评测.md",
+      "title": "长期任务：做一个在线oj的评测",
+      "draft": true,
+      "source": "ai",
+      "riskLevel": "medium",
+      "reason": "文中包含带有具体日期的学习日志，并表达了“动力不足”等个人情感波动，属于典型的个人成长日记，建议作为草稿处理以保护个人心路历程隐私。"
+    },
+    {
+      "slug": "hyperspectral-remote-sensing-deep-learning-survey",
+      "file": "高光谱遥感深度学习调研.md",
+      "title": "高光谱遥感深度学习调研",
+      "draft": false,
+      "source": "none",
+      "riskLevel": "low",
+      "reason": ""
+    }
+  ],
+  "restoredHeuristicAfterAiAt": "2026-06-05T13:48:44.481Z",
+  "restoredHeuristicAfterAiCount": 59,
+  "userRestoredNonDraftAt": "2026-06-05T13:59:21.357Z",
+  "userRestoredNonDraft": [
+    {
+      "index": 5,
+      "file": "ChinaVis重庆之旅.md",
+      "title": "ChinaVis重庆之旅",
+      "wasEncrypted": true
+    },
+    {
+      "index": 6,
+      "file": "HUSTOJ前端源代码解析（PHP）.md",
+      "title": "HUSTOJ前端源代码解析（PHP）",
+      "wasEncrypted": true
+    },
+    {
+      "index": 7,
+      "file": "Leetcode198_打家劫舍——动态规划.md",
+      "title": "Leetcode198:打家劫舍——动态规划",
+      "wasEncrypted": true
+    },
+    {
+      "index": 8,
+      "file": "Leetcode2_两数相加——链表.md",
+      "title": "Leetcode2:两数相加——链表",
+      "wasEncrypted": true
+    },
+    {
+      "index": 9,
+      "file": "Leetcode347_前K个高频元素——优先队列、堆.md",
+      "title": "Leetcode347:前K个高频元素——优先队列、堆",
+      "wasEncrypted": true
+    },
+    {
+      "index": 10,
+      "file": "Leetcode386_字典序排数——dfs、迭代.md",
+      "title": "Leetcode386:字典序排数——dfs、迭代",
+      "wasEncrypted": true
+    },
+    {
+      "index": 12,
+      "file": "Linux输出重定向以及crontab的坑.md",
+      "title": "Linux输出重定向以及crontab的坑",
+      "wasEncrypted": true
+    },
+    {
+      "index": 13,
+      "file": "Livego——小而美的直播串流软件.md",
+      "title": "LiveGo——小而美的直播串流软件",
+      "wasEncrypted": true
+    },
+    {
+      "index": 16,
+      "file": "SCI论文润色经验分享.md",
+      "title": "SCI论文润色经验分享",
+      "wasEncrypted": true
+    },
+    {
+      "index": 17,
+      "file": "agent-xierqi-netease-renting-research.md",
+      "title": "我让 Agent 跑完西二旗租房：网易大楼周边 147 个小区公寓口碑表",
+      "wasEncrypted": true
+    },
+    {
+      "index": 19,
+      "file": "certbot自动配置nginx给wordpress站点加https.md",
+      "title": "certbot自动配置nginx给wordpress站点加https",
+      "wasEncrypted": true
+    },
+    {
+      "index": 20,
+      "file": "leetcode206_反转链表.md",
+      "title": "Leetcode206:反转链表",
+      "wasEncrypted": true
+    },
+    {
+      "index": 21,
+      "file": "macm1安装sqlserver踩坑经历.md",
+      "title": "mac m1 安装sqlserver踩坑经历",
+      "wasEncrypted": true
+    },
+    {
+      "index": 22,
+      "file": "matplotlib作热机效率随负载大小变化曲线图.md",
+      "title": "matplotlib作热机效率随负载大小变化曲线图",
+      "wasEncrypted": true
+    },
+    {
+      "index": 23,
+      "file": "pathlib库.md",
+      "title": "pathlib库",
+      "wasEncrypted": true
+    },
+    {
+      "index": 24,
+      "file": "python面向对象课程.md",
+      "title": "python面向对象课程",
+      "wasEncrypted": true
+    },
+    {
+      "index": 25,
+      "file": "qt动态添加和删除布局（仿jupyter）.md",
+      "title": "Qt动态添加和删除布局（仿jupyter）",
+      "wasEncrypted": true
+    },
+    {
+      "index": 26,
+      "file": "selenium爬教务处课表.md",
+      "title": "selenium爬教务处课表",
+      "wasEncrypted": true
+    },
+    {
+      "index": 27,
+      "file": "vueflask实现播放任何视频源包括rtsp摄像头.md",
+      "title": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
+      "wasEncrypted": true
+    },
+    {
+      "index": 28,
+      "file": "“专利申请”撰写有感.md",
+      "title": "“专利申请”撰写有感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 30,
+      "file": "《1984》读书笔记.md",
+      "title": "《1984》读书笔记",
+      "wasEncrypted": true
+    },
+    {
+      "index": 31,
+      "file": "《中国的官办经济》读后感.md",
+      "title": "《中国的官办经济》读后感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 32,
+      "file": "《京华烟云》读后有感.md",
+      "title": "《京华烟云》读后有感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 33,
+      "file": "《从零开始的女性主义》读后有感.md",
+      "title": "《从零开始的女性主义》读后有感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 34,
+      "file": "《十二公民》观后感.md",
+      "title": "《十二公民》观后感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 35,
+      "file": "《失乐园》读后有感.md",
+      "title": "《失乐园》读后有感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 36,
+      "file": "《新喜剧之王》观后感.md",
+      "title": "《新喜剧之王》观后感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 37,
+      "file": "《无人生还》读后有感.md",
+      "title": "《无人生还》读后有感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 39,
+      "file": "《肠子的小心思》——读书笔记.md",
+      "title": "《肠子的小心思》——读书笔记",
+      "wasEncrypted": true
+    },
+    {
+      "index": 40,
+      "file": "《邓小平时代》——改革开放的总设计师.md",
+      "title": "《邓小平时代》——改革开放的总设计师",
+      "wasEncrypted": true
+    },
+    {
+      "index": 41,
+      "file": "一年前遇到的难题，被AI解决了.md",
+      "title": "一年前遇到的难题，被AI解决了",
+      "wasEncrypted": true
+    },
+    {
+      "index": 42,
+      "file": "一部接地气的国产法律神剧-第二十条.md",
+      "title": "一部接地气的国产法律神剧——第二十条",
+      "wasEncrypted": true
+    },
+    {
+      "index": 43,
+      "file": "两个数组的交集——数组、哈希、双指针.md",
+      "title": "两个数组的交集——数组、哈希、双指针",
+      "wasEncrypted": true
+    },
+    {
+      "index": 44,
+      "file": "二叉树的前中后序遍历.md",
+      "title": "二叉树的前中后序遍历",
+      "wasEncrypted": true
+    },
+    {
+      "index": 55,
+      "file": "品酒(古井贡酒-古16) .md",
+      "title": "品酒🍶(古井贡酒-古16)",
+      "wasEncrypted": true
+    },
+    {
+      "index": 56,
+      "file": "品酒（古井贡酒-古20）.md",
+      "title": "品酒🍶（古井贡酒-古20）以及小插曲",
+      "wasEncrypted": true
+    },
+    {
+      "index": 57,
+      "file": "品酒（汾酒黄盖&泸州老窖特曲经典）.md",
+      "title": "品酒🍶（汾酒黄盖&泸州老窖特曲经典）",
+      "wasEncrypted": true
+    },
+    {
+      "index": 60,
+      "file": "大物大作业-microbit编程小车.md",
+      "title": "大物大作业-microbit编程小车",
+      "wasEncrypted": true
+    },
+    {
+      "index": 61,
+      "file": "好用的动画制作工具-keynote.md",
+      "title": "好用的动画制作工具-Keynote",
+      "wasEncrypted": true
+    },
+    {
+      "index": 66,
+      "file": "字符数组的拼接和排序-strcat()-sort()-strlen().md",
+      "title": "字符数组的拼接和排序-strcat()-sort()-strlen()",
+      "wasEncrypted": true
+    },
+    {
+      "index": 67,
+      "file": "字符数组的输入输出.md",
+      "title": "字符数组的输入输出",
+      "wasEncrypted": true
+    },
+    {
+      "index": 72,
+      "file": "德米安读后有感.md",
+      "title": "《德米安》读后有感",
+      "wasEncrypted": true
+    },
+    {
+      "index": 75,
+      "file": "我的第一把客制化键盘.md",
+      "title": "我的第一把客制化键盘",
+      "wasEncrypted": true
+    },
+    {
+      "index": 77,
+      "file": "找到小镇的法官——图论入门.md",
+      "title": "找到小镇的法官——图论入门",
+      "wasEncrypted": true
+    },
+    {
+      "index": 85,
+      "file": "新加坡访学旅行.md",
+      "title": "新加坡访学旅行",
+      "wasEncrypted": true
+    },
+    {
+      "index": 87,
+      "file": "暑期实习项目-onlinejudge在线测试平台.md",
+      "title": "暑期实习项目-onlinejudge在线测试平台",
+      "wasEncrypted": true
+    },
+    {
+      "index": 91,
+      "file": "每日一题--有进位的加法运算.md",
+      "title": "每日一题--有进位的加法运算",
+      "wasEncrypted": true
+    },
+    {
+      "index": 92,
+      "file": "猴子选大王-结构体.md",
+      "title": "猴子选大王-结构体",
+      "wasEncrypted": true
+    },
+    {
+      "index": 95,
+      "file": "硕士毕业答辩总结.md",
+      "title": "硕士毕业答辩总结",
+      "wasEncrypted": true
+    },
+    {
+      "index": 96,
+      "file": "离散数学结课总结+笔记.md",
+      "title": "离散数学结课总结+笔记",
+      "wasEncrypted": true
+    },
+    {
+      "index": 98,
+      "file": "组织一次成功的班级烧烤经验分享.md",
+      "title": "组织一次成功的班级烧烤经验分享",
+      "wasEncrypted": true
+    },
+    {
+      "index": 99,
+      "file": "组装一台新的电脑.md",
+      "title": "组装一台新的电脑",
+      "wasEncrypted": true
+    },
+    {
+      "index": 101,
+      "file": "置身事内读书笔记.md",
+      "title": "《置身事内》读书笔记",
+      "wasEncrypted": true
+    },
+    {
+      "index": 102,
+      "file": "自动去重和排序.md",
+      "title": "自动去重和排序",
+      "wasEncrypted": true
+    },
+    {
+      "index": 103,
+      "file": "苏州印象.md",
+      "title": "苏州印象",
+      "wasEncrypted": true
+    },
+    {
+      "index": 105,
+      "file": "计组线上实验-运算器设计.md",
+      "title": "计组线上实验-运算器设计",
+      "wasEncrypted": true
+    },
+    {
+      "index": 112,
+      "file": "黄山归来不看岳——黄山之旅.md",
+      "title": "黄山归来不看岳——黄山之旅",
+      "wasEncrypted": true
+    }
+  ]
+}

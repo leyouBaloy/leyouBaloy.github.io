@@ -63,13 +63,6 @@
     <description>用 AI Skills 实现博客自动发布 🚀 🤖 本文由 AI 自动生成并自动发布 前言 今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。 什么是 Skills？ Sk</description>
   </item>
   <item>
-    <title>测试仪</title>
-    <link>https://leyoubaloy.github.io/post/tester</link>
-    <guid>https://leyoubaloy.github.io/post/tester</guid>
-    <pubDate>Wed, 11 Mar 2026 14:13:43 GMT</pubDate>
-    <description>测试仪 这里是内容的起始点。</description>
-  </item>
-  <item>
     <title>langchain-faiss加载pkl文件速度提升</title>
     <link>https://leyoubaloy.github.io/post/langchain-faiss-load-pkl-speed-up</link>
     <guid>https://leyoubaloy.github.io/post/langchain-faiss-load-pkl-speed-up</guid>
@@ -315,13 +308,6 @@
     <description>安装Visual Studio 2017 先下载Visual Studio Installer https://learn.microsoft.com/en us/visualstudio/python/installing python support in visual studio?view=</description>
   </item>
   <item>
-    <title>蚌埠美食之旅</title>
-    <link>https://leyoubaloy.github.io/post/bengbu-food-tour</link>
-    <guid>https://leyoubaloy.github.io/post/bengbu-food-tour</guid>
-    <pubDate>Sun, 08 Oct 2023 12:11:39 GMT</pubDate>
-    <description>蚌埠简介 蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给蚌埠带来了繁荣的机会。除此之外，蚌埠还有千里淮河第一大港——蚌埠港，水路交通也十分发达。铁路和水路奠定了蚌埠重要的交通地位。交通有了，人也渐渐多起来，商业也逐</description>
-  </item>
-  <item>
     <title>艺术品般的游戏—《荒野大镖客救赎2》</title>
     <link>https://leyoubaloy.github.io/post/red-dead-redemption-2-game-review</link>
     <guid>https://leyoubaloy.github.io/post/red-dead-redemption-2-game-review</guid>
@@ -355,6 +341,20 @@
     <guid>https://leyoubaloy.github.io/post/flask-thread-features</guid>
     <pubDate>Sat, 01 Jul 2023 02:15:46 GMT</pubDate>
     <description>前言 Flask是我最喜欢用的后端，以为它实在是太简单了，拿来做小型项目速度嗖嗖的。最近做比赛需要将后端通过socket连接到硬件设备，socket是有状态的，有连接数量的限制，所以要格外注意它的状态，Flask的一些特性会改变状态，如果不注意的话会导致很多bug，我踩了很多坑，在这里总结一下。 F</description>
+  </item>
+  <item>
+    <title>《1984》读书笔记</title>
+    <link>https://leyoubaloy.github.io/post/1984-reading-notes</link>
+    <guid>https://leyoubaloy.github.io/post/1984-reading-notes</guid>
+    <pubDate>Mon, 01 May 2023 16:35:22 GMT</pubDate>
+    <description>1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较深入，16世纪文艺复兴时期，英国的莫尔就提出了空想社会主义（马克思的科学社会主义的前身）；后来19世纪英国人率先搞起了资产阶级革命，号称“自由、平等”；到了20</description>
+  </item>
+  <item>
+    <title>Vue+flask实现播放任何视频源（包括rtsp摄像头）</title>
+    <link>https://leyoubaloy.github.io/post/vue-flask-play-rtsp-video-stream-camera</link>
+    <guid>https://leyoubaloy.github.io/post/vue-flask-play-rtsp-video-stream-camera</guid>
+    <pubDate>Sat, 22 Apr 2023 02:40:50 GMT</pubDate>
+    <description>背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。 由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才</description>
   </item>
 </channel>
 </rss>

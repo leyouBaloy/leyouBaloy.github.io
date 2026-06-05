@@ -7,7 +7,6 @@ draft: false
 categories: 
 - 技能分享
 ---
-
 ## 为什么安装sqlserver
 
 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。

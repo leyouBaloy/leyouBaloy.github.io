@@ -7,42 +7,9 @@ tags: [学习,笔记]
 
 categories: 
 - 笔记
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T14:28:36.147Z
 ---
-
-## 前言
-
-现在的我，没有考研的压力，不需为了应付考试学习八股；没有保研的压力，不需要参加各种竞赛内卷；没有工作的压力，不需要学乱七八糟的技术。所以，现在的我应该做点什么呢？总不能虚度光阴，让时间都偷偷溜走吧！一番思考之后，我认为我应该把我的知识大厦的地基“扎得更深一点”，所谓“扎得更深一点”，即深入学习一些更底层的专业知识，不求速度，但求深度。我还有三年毕业，如果从现在开始，我就注重积累，那么三年之后，我必然厚积薄发，深厚的基础将会是我的竞争优势，这是很有竞争力的。
-
-那么就从计算机操作系统开始吧！师兄推荐了CMU（卡内基梅隆大学）的课程，这是一块很难啃的骨头，我怕我啃不下来，特开此文记录笔记。
-
-## Lecture 01 Course Overview
-
-瞎几把记点东西
-
-* 一个有趣的例子
-
-```
-(lldb) print 40000*40000
-(int) $0 = 1600000000
-(lldb) print 50000*50000
-(int) $1 = -1794967296
-```
-
-* No cheating!CMU对作业的要求好严格，甚至连搜索引擎都不能用，否则算作弊。
-
-## Lecture 02、03 Bits, Bytes, and Integers
-
-看不下去
-
-## Lecture 04 Floating Point
-
-## Machine-Level Programing I: Basics
-
-终于知道x86的来历了，英特尔处理器最早叫8086，后来诞生了80286，80386，这些命名的特点就是80x86，简称x86。后来即使因特尔不以数字来命名了，仍然有人叫英特尔的处理器为x86处理器。值得注意的是，早期这些处理器都是32位的，后来英特尔也推出了64为处理器，所以x86既有32位又有64位。但一般认为是32位。
-
-AMD比因特尔先搞出了64位处理器，指令集就叫amd64，英特尔被迫无奈兼容了amd搞出的指令集，叫x86_64。但是英特尔的底子还是很厚实的，后来居上，x86_64的市场做的更大。
-
-所以，简单来说，x86 是指 32 位系统，而 x64、x86_64 和 amd64 是指 64 位系统。虽然名字不同，但 x64、x86_64 和 amd64 其实是同一种架构。
-
-
-
+<!-- encrypted:draft-body:xor-base64 -->
+bWQXvODpjv3jMl6l6+O95tmv+fy/38Kc68Gg0fap0Mbb0OSS+qWd6fPctsWivcKG2Oqx27W93uW34MCV8uWd48O3yM+lxuC/4NmqnvaDzPrU/9ifu5mh+6y/28WAyerc69+C88yd68yG9tKy2ei48cqH78Kl07O4wfS/vviW/Znd3sPQ/uSDzcuLjc+n49a998an3+O/5fKVy8Sj1PKr8dPUyuOQ1Lqf+ezWhMKjj9SA+Oa9xbmx78O34cuV8OCd3Py0wMiq3Oexxcypr/+E9djX8/OTgp2h+7u+59SDycvfzsaD28mfy9yL1/yy0umwz/+H7M+o9ru19te1jeWV94Lc9srf2tSM/8+GgvKn4Nqx4sWn3/Sx+fqVwPuv9OOmz/LW0dCQ24acyevRjf6ip/6G2Oex27iz18+12OeZyOCc4Ny249mi+u+xx92nnfSDzeDX8uKSg6ym6JK/4+6A3fLfzsaCzP2S3s6G3P6y3dWw18KGy/+p0Imy5+m8uPSWya7e1fPR7tiA3tWEuu2g5c63xv2u6vix58CR19Gg6tmq8tjVy9OT7YCey/feuvelt8SG2Oqw7ouy9dS23d+U5cWc4Pe3y9ep/Pix1PiqicWCxNjW4PeTgauq/62+9sGO+uXX6M6B69WcwMqK+May6dW48cqH6smq/rG20MS/i9yQ97vextbf5vGC+tyHgN2n3Oe+1eSs2+K269+W8c+g/cur98HU3teQxpmfz/fcn8Woi9WP7Pew04my8c263/eW78yf7fi8z9ukxMCz9sSri9mCzO7Vw/iSqbah+7u/4fWD6ubf0PSA3cKd1ueL7t2y3OK48cqF4P6pwam3/fG/rsCU1rnd/sHT5fOC/vqFsMWl/9e/0e+s2fG968uW3fKp39un89bVyMiQ5Lmc7/7ek9CjjdCM7v2y+by3wudZUpPz64fB0bLjwrP2yIv57qvhpLb7z7yi95fKpd/9/NDi9oHa1Yaf36f19LfG8K3b8LzS15XZ5a7ux6v2yXAdMprmuZ/+1ty+y6Ko44/G47z5vrHmwrb13J706p/D07vc6aru6LjzwKeMyYHt9dXC85Kkr6v5v7Dz2oPA4N/Oxoz58J/V/IzE1bHb4rHN04Xf3qnasLTf+L6J8ZXqnNfyy9DQ0IHa1YWV8KTz1LDUwa3e7b77x5v5/aXj1UVGbBBwKxA5RQ8BEhkIf2d0NhwWFTBDdyInFyUxHwZCaZ/H2bb096vM6b/h/Kix6YPNxtnfzH0zEm6jj9mN3Myz/7G89Ma0wv6V9uid9MdZeTctJml/IyArUXlHBShYFAdXDQh+dwdzXVRWZVMyfCsLJ3FaVXhDRXlmZUNnfXZTZ398RRs8CxE4GFoDBVBWOmcCaVlUVn9WCGRyVVlwEx88Slh9ZnNOd2B3VG57dXkEYl5DUFEaE30zEm4JWHkKDAM0F1E6JUQQFS+U59qc5Mu3y82q3Oe/6c2pgtKC0OfVwtaRmYSh+7u+/f6O0tDQ69yDw8SdxeqGxMyxwP2+zvuH78KkzI638921jfaW55/dxt7Q9/6A28mGhN6h5dFScFJrQzQ8NCcGJShmU2WszM4DY0c3M0UJX1d7QToiRHVJBQgxQ3E6NgA0PQgCQmmfxdy3y9qp/uiywfdFOXNEVRZUGQcCS11udwN5LwgJNBdROiVFAzcTHzxpcnp0cz42Li4KOSphA1YmAhl6YQgcEEtZIy5ZPkktXHUhWScrBiBScJbz65zj2bTs8qTH8C93eqip1IHo/9T09ZODvqH7u7Hi1YHc2t3k1oD33J3hzobh8bHP87Ha74bY5HR/C2aIydbU6v2RpJ2m6Km+/fuC7+UAZHBdZbfG/XBTS2FhvM/bpfn6s/XXqqLtguXX1uD3kLCBqcWOvNnVgM3MAGQ6XWW3xv2vzfi+8OMLb3ul49Wq3MHVzcKQ14Kezsjco+6gvuCM1PKx27Ww+cC1zcqU5fSexPK24uqo1u6z9cqgj9yDztfW/sWRpbGq/Y285s+O3tLf3fuA48yd68yG3N2ww/Wy1O6H7/U0dwW1w/G9ofyW7pHbzsXS2dWB2MKFi/yk4dy/4PWu+9e269+VwOSg/8in89bX6vyQ/rWd4/HcoeautOSP/MlmUdzpz4LJ3JXNxIbo17HO1r/G94Te9qn/p7Te6ry/0pbwg9z0wQFtjdzcsMe8s9LjtsHSnvTvntDXt8jyNX5Vsdjuqa/ZVEe+jPeW+LHe0s4BbY3Z67bjurD/47fg+pnAz5D387fL7avezGR9qPK+s+f3UDs7PjPfl9qirPmO7d+w06yxx+21yOSUz9mc49FlR7Pwy4bzy6vftbX+3bWN9pX7vtz1497C74HW5Ia3/yMIN25OnvTvkNLmtPruqPb3v+3np4z7geL61N/7kryEq+mOvdPiBzgH3sTcgNTinevMhfTes+jXvtbAjOvDqcCYKF9DBQdOkPe73PPB0cHGjO3khLHtp9XHv+D1rdntvPrDm+jVoPv4qvLH1t79kPSvnenz1oTCoqfXj/nDsNK9sPrvvOT2CXBVJ29jtOnTqP7hstP2qrLKgO/e1+HHkp2frce1U2OC79WHg/Gt2d+/1PGt7u2/yvab+Pmp39s3dHkTtv/avL39U0QLGKr6ur7a34Hu/Nfozo3T1FoJfleb2dYrS2EScFd3qt7DEzEKEWwFWpXvlt7CwBdvXUSC6O7f5/mC6MeZ8cqL4eSw18Wy3cuG+tio97619/m1jfaXyr8YNnEDuunlHm1VZ2J2RbbK9lEpDhxvY3OW0vujzcmp1ODWwOuR4rGd1Prfpvihqd2K5ORfaTJe

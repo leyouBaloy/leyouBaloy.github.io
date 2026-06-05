@@ -1,193 +1,194 @@
 [
   {
-    "title": "Leetcode113:路径总和——dfs、回溯",
-    "date": "2022-03-30T11:19:10.000Z",
-    "updatedAt": "2022-03-30T11:19:10.000Z",
-    "file": "Leetcode113_路径总和II——dfs、回溯.md",
-    "slug": "leetcode-113-path-sum-ii-dfs-backtracking",
-    "legacySlug": "d1d4a3c4",
+    "title": "二叉树的层序遍历——太tm妙啦",
+    "date": "2022-03-11T09:57:18.000Z",
+    "updatedAt": "2022-03-11T09:57:18.000Z",
+    "file": "二叉树的层序遍历——太tm妙啦.md",
+    "slug": "binary-tree-level-order-traversal",
+    "legacySlug": "6076106e",
     "aliases": [
-      "d1d4a3c4"
+      "6076106e"
     ],
-    "excerpt": "题目 https://leetcode cn.com/problems/path sum ii/ 题解 dfs无回溯 我们用深度优先搜索，在搜索时把当前路径记录下来为nums。如果满足 1. sum(nums)==targetSum； 2. 该节点是叶节点； 就记录下这个路径。搜索完成后，我们就能把",
+    "excerpt": "题目 本题来自：https://leetcode cn.com/problems/binary tree level order traversal/ [102. 二叉树的层序遍历] 难度中等1216收藏分享切换为英文接收动态反馈 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐",
     "tags": [
       "刷题"
     ],
     "img": "",
-    "wordCount": 434,
+    "wordCount": 436,
     "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/path sum ii/ 题解 dfs无回溯 我们用深度优先搜索，在搜索时把当前路径记录下来为nums。如果满足 1. sum(nums)==targetSum； 2. 该节点是叶节点； 就记录下这个路径。搜索完成后，我们就能把所有满足条件的路径找出来了。 代码的总体框架就是一个深度优先搜索，在这个框架的基础上修改使其符合题意。这是写代码的思路。下面是自己写的代码： 细节： 在往下递归是我传的参数不是nums的引用，而是复制了一个nums传给下一个函数。因此在做每一步递归时都有专属于它的一个nums，所以这段代码没有用到回溯。占用空间也比较大。 上面一点很重要！ dfs、回溯 如果把nums.copy()改成nums，然后在backtracking()的末尾加上nums.pop()，就是回溯了。 这样的话，传递的就是nums的引用，所有的递归过程用的都是同一个nums。在每次递归结束，往上回溯的时候通过pop()删去nums中最后一个元素。 把这段代码跟Leetcode78题放在一起看，发现都是在合适的位置加一个pop()，这其实是回溯的重要特点。 时间和空间复杂度：不会算... 记录父节点、bfs 还有个很聪明的做法，就是用一个哈希表来每一个节点的父节点。这样，不用记录路径，只记录累加和。每找到一个满足条件的叶节点，就从该节点出发向父节点迭代，还原路径。 代码在官方题解～",
-    "totalPages": 29
+    "searchContent": "题目 本题来自：https://leetcode cn.com/problems/binary tree level order traversal/ [102. 二叉树的层序遍历] 难度中等1216收藏分享切换为英文接收动态反馈 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。 示例 1： 示例 2： 示例 3： 提示： 树中节点数目在范围 [0, 2000] 内 1000 v里储存一棵完全二叉树，然后用函数get n(int index)确定下标为index的节点所在的层数。最后组织成提交所用的格式。 然鹅，我调了两个小时代码只过了11/34 qwq。 代码不能白写，先贴上： 官方题解的骚操作 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/binary tree level order traversal/solution/er cha shu de ceng xu bian li by leetcode solution/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 先看一种朴素的方法（虽然是“朴素”的方法，但也比我的方法要巧妙，它在进行广度优先搜索时就解决了层数的问题） ： 然后针对这题，可以进行如下优化，概括来说就是每次拓展一层的节点（“拓展”这个词用的真好） ： 数学证明，其实这个也很容易想通 ： 代码 ： 复杂度分析 记树上所有节点的个数为 n。 时间复杂度：每个点进队出队各一次，故渐进时间复杂度为 O(n)。 空间复杂度：队列中元素的个数不超过 n 个，故渐进空间复杂度为 O(n)。 这代码写的也很beautiful啊，真是太tm妙啦！",
+    "totalPages": 23
   },
   {
-    "title": "Leetcode78:子集——递归、回溯——一道困扰我的题",
-    "date": "2022-03-29T08:46:07.000Z",
-    "updatedAt": "2022-03-29T08:46:07.000Z",
-    "file": "Leetcode78_子集——递归、回溯——一道困扰我的题.md",
-    "slug": "leetcode-78-subsets-recursion-backtracking",
-    "legacySlug": "bc3938df",
+    "title": "杨辉三角——数组、动态规划",
+    "date": "2022-03-10T09:04:50.000Z",
+    "updatedAt": "2022-03-10T09:04:50.000Z",
+    "file": "杨辉三角——数组、动态规划.md",
+    "slug": "pascals-triangle-array-dynamic-programming",
+    "legacySlug": "0aac7f3e",
     "aliases": [
-      "bc3938df"
+      "0aac7f3e"
     ],
-    "excerpt": "题目 https://leetcode cn.com/problems/subsets/ 一道初中数学题，但是是很难的编程题。 题解 二进制枚举 ​ 集合a={5,2,9}中任何一个数有两种状态，在子集中或者不在子集中，分别用1和0来表示。所以我们可以进行如下编码： 二进制序列 子集 十进制数 00",
+    "excerpt": "题目 本题来自：https://leetcode cn.com/problems/pascals triangle/ [118. 杨辉三角] 难度简单708收藏分享切换为英文接收动态反馈 给定一个非负整数 numRows， 生成「杨辉三角」的前 numRows 行。 在「杨辉三角」中，每个数是它左上",
     "tags": [
       "刷题"
     ],
     "img": "",
-    "wordCount": 307,
+    "wordCount": 202,
     "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/subsets/ 一道初中数学题，但是是很难的编程题。 题解 二进制枚举 ​ 集合a={5,2,9}中任何一个数有两种状态，在子集中或者不在子集中，分别用1和0来表示。所以我们可以进行如下编码： 二进制序列 子集 十进制数 000 {} 0 001 {9} 1 010 {2} 2 011 {2,9} 3 100 {5} 4 101 {5,9} 5 110 {5,2} 6 111 {5,2,9} 7 众所周知，如果一个集合的基数为n，那么它有2 n个子集。照上述列举就可以啦。 ps:这个方法真的很巧妙 代码也很值得学习： 代码讲解： 1 最后叶节点就是所需答案。 代码： 结合上面到图，深度优先搜索，先搜索最左侧的分支，最后到最右边。这个代码其实也是要看一会才能看懂...可能我就是菜。 时间复杂度和空间复杂度和二进制枚举一样。 回溯剪枝 上述递归过程可以看到很多节点是不必要的，剪枝就是通过增加一些条件，略过不必要的节点。有点难，不想研究了..."
+    "searchContent": "题目 本题来自：https://leetcode cn.com/problems/pascals triangle/ [118. 杨辉三角] 难度简单708收藏分享切换为英文接收动态反馈 给定一个非负整数 numRows， 生成「杨辉三角」的前 numRows 行。 在「杨辉三角」中，每个数是它左上方和右上方的数的和。 示例 1: 示例 2: 提示: 1 <= numRows <= 30 题解 找规律，第i行第j个数等于第i 1行第j 1个数加第i 1行第j个数，即res[i][j]=res[i 1][j 1]+res[i][j]。 一开始我弄错一个变量，导致数组越界，找了半天都没找出来，我还以为是c++的问题，就换了python写，python的报错比较友好，终于让我发现了错误的地方。 所以python代码： c艹代码："
   },
   {
-    "title": "今天逃课还被点名了qwq",
-    "date": "2022-03-29T01:36:46.000Z",
-    "updatedAt": "2022-03-29T01:36:46.000Z",
-    "file": "今天逃课还被点名了qwq.md",
-    "slug": "skipped-class-got-called-out",
-    "legacySlug": "39d92005",
+    "title": "买卖股票的最佳时机——数组、动态规划",
+    "date": "2022-03-09T12:16:07.000Z",
+    "updatedAt": "2022-03-09T12:16:07.000Z",
+    "file": "买卖股票的最佳时机——数组、动态规划.md",
+    "slug": "leetcode-121-best-time-to-buy-and-sell-stock",
+    "legacySlug": "bc3a067b",
     "aliases": [
-      "39d92005"
+      "bc3a067b"
     ],
-    "excerpt": "疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最多的就是刷视频打游戏和睡觉。 今天早上没定闹钟，8:00上课，7:45我才起床。迷迷糊糊的还把时间看错了，以为是8:45，索性直接摆烂不去了。其实这个时候仍然有",
-    "tags": [
-      "随笔杂记"
-    ],
-    "img": "",
-    "wordCount": 490,
-    "readingTime": 2,
-    "searchContent": "疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最多的就是刷视频打游戏和睡觉。 今天早上没定闹钟，8:00上课，7:45我才起床。迷迷糊糊的还把时间看错了，以为是8:45，索性直接摆烂不去了。其实这个时候仍然有补救的机会，但是我上课的心已经死了。后来就有3个同学跟我说老师点我回答问题发现我不在，我心想你tm跟我说有什么用？看我笑话是不是？你就不能说我去做核酸了吗？一群靠不住的家伙，一大早就让我生气。 我的生活确实需要好好整理了：衣服堆了很多不洗，数据库实验还没做，竞赛的代码和文档也没写...疫情期间我拥有比往常更多的时间，但也浪费了这些时间。 今天算是给我敲响了警钟。我打开课表算一算，距离数据库原理、人工智能导论、民法概论结课只有三周时间了。复习工作（不如说是预习工作）现在开始刚好，我也该支棱起来了。 昨晚看了四叔的视频拥有的时间越多，人越苦恼，人如果能从低级的趣味中获得源源不断的快乐那是一种很潇洒的活法，但是我做不到，每次欢娱之后都会让我感到堕落、迷惘，那不是我真正的快乐。我只有鞭策自己然后看到自己胜利，才能获得短暂的属于我的真正的快乐，然后一次又一次重复这个过程。我在痛苦与快乐两边无限徘徊。 {{ }}"
-  },
-  {
-    "title": "Leetcode103:二叉树的锯齿形层序遍历",
-    "date": "2022-03-27T11:36:29.000Z",
-    "updatedAt": "2022-03-27T11:36:29.000Z",
-    "file": "Leetcode103_二叉树的锯齿形层序遍历.md",
-    "slug": "leetcode-103-binary-tree-zigzag-level-order-traversal",
-    "legacySlug": "beb000fb",
-    "aliases": [
-      "beb000fb"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/binary tree zigzag level order traversal/ 做过102题后这题可以轻松做出来 题解 复习一下[102. 二叉树的层序遍历]： 首先根节点入队 当队列不为空： 求队列长度s 依次从队列中取s",
+    "excerpt": "题目 本题目来自：https://leetcode cn.com/problems/best time to buy and sell stock/ 121. 买卖股票的最佳时机 难度简单2177收藏分享切换为英文接收动态反馈 给定一个数组 prices ，它的第 i 个元素 prices[i] 表",
     "tags": [
       "刷题"
     ],
     "img": "",
-    "wordCount": 187,
+    "wordCount": 447,
+    "readingTime": 2,
+    "searchContent": "题目 本题目来自：https://leetcode cn.com/problems/best time to buy and sell stock/ 121. 买卖股票的最佳时机 难度简单2177收藏分享切换为英文接收动态反馈 给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。 你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。设计一个算法来计算你所能获取的最大利润。 返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。 示例 1： 示例 2： 提示： 1 <= prices.length <= 105 0 <= prices[i] <= 104 题解 暴力法 超时，不必多说。 时间复杂度O(n^2)，空间复杂度O(1) 动态规划 假设我们有穿越时空的能力，再假设我们决定在第i天卖出，那么只要知道在0 i天的最低价，再穿越回去购买股票，就能获得最大收益了。 创建一个dp[i]数组，表示在第i天卖出时的最低价。 然后再根据dp[i]数组，找到收益最大的那一天，即确定prices[i] dp[i]的最大值。 这个代码还可以进一步优化，因为我们只关注最大值，所以可以不用把所有数据都存到数组里。维护一个minprice和maxprofit变量即可。 这样只要遍历一遍数组，时间复杂度O(n)，空间复杂度O(1)。 其他小问题 1e9表示1 10^9。在算法题中常用来赋一个非常大的值。为什么不用1e10呢？因为int类型中1e10会溢出。 详情可以参考：http://t.csdn.cn/rItZr"
+  },
+  {
+    "title": "C语言中值传递、指针传递和引用传递",
+    "date": "2022-03-07T09:15:10.000Z",
+    "updatedAt": "2022-03-07T09:15:10.000Z",
+    "file": "C语言中值传递、指针传递和引用传递.md",
+    "slug": "c-language-pass-by-value-pointer-reference",
+    "legacySlug": "65f5e948",
+    "aliases": [
+      "65f5e948"
+    ],
+    "excerpt": "2022年我才搞懂这个！ 比较 传递方式 函数定义 函数调用 函数内对a修改的影响 : : : : 值传递 fun(int a) fun(x) 外部x不变 指针传递 fun(int a) fun(&x) 外部x同步更改 引用传递 fun(int &a) fun(x) 外部x同步更改 值传递 值传递是",
+    "tags": [
+      "刷题",
+      "技能分享"
+    ],
+    "img": "",
+    "wordCount": 418,
+    "readingTime": 2,
+    "searchContent": "2022年我才搞懂这个！ 比较 传递方式 函数定义 函数调用 函数内对a修改的影响 : : : : 值传递 fun(int a) fun(x) 外部x不变 指针传递 fun(int a) fun(&x) 外部x同步更改 引用传递 fun(int &a) fun(x) 外部x同步更改 值传递 值传递是最常用的一种方式。它就是从函数外拷贝到函数内。 指针传递 指针传递跟值传递其实差不多，只是传递的内容从一个值换成了指针。定义函数的时候要写成fun(int a)，函数内的a就是一个int类型指针要使用a对象的话就得写成 a。 在函数外如果定义一个int b=1，想把它传到函数里的话需要用到取地址符&，像这样写fun(&b)。 示例： 结果： 引用传递 在定义的时候形参前要加一个&，这个不是取地址符，而是一个记号。（这就是c语言贼tm绕人的地方qwq）比如int fun(int &a)。 调用函数时参数前不需要加任何记号，比如int a=10，fun(a)。 在函数内使用的时候不用加任何东西，直接用即可，比如a=20。 函数内和函数外a的值会同步改变。 示例： 参考资料 以上我自己的总结是非常简单的，仅能保证我在做题时看懂题解，但其实这里面还有很多细节没提到。学到现在终于能体会到当年为什么老师说c语言的指针很难了。 参考csdn文章：http://t.csdn.cn/suCK6"
+  },
+  {
+    "title": "二叉树的前中后序遍历",
+    "date": "2022-03-07T08:33:28.000Z",
+    "updatedAt": "2022-03-07T08:33:28.000Z",
+    "file": "二叉树的前中后序遍历.md",
+    "slug": "binary-tree-preorder-inorder-postorder-traversal",
+    "legacySlug": "1cf25f8c",
+    "aliases": [
+      "1cf25f8c"
+    ],
+    "excerpt": "题目 前序遍历：https://leetcode cn.com/problems/binary tree preorder traversal/ 中序遍历：https://leetcode cn.com/problems/binary tree inorder traversal/ 后序遍历：htt",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 180,
     "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/binary tree zigzag level order traversal/ 做过102题后这题可以轻松做出来 题解 复习一下[102. 二叉树的层序遍历]： 首先根节点入队 当队列不为空： 求队列长度s 依次从队列中取s个元素拓展，然后进入下一次迭代 得到层序遍历结果后，把奇数层reverse一下，就能ac了 代码： 其实这题想让我们用一种数据结构deque双端队列。对于偶数层的节点，从后端插入元素；对于奇数层的节点，从前端插入元素。 我个人觉得并不比朴素的方法优秀很多，所以就不深入研究了哈哈。（其实是懒"
+    "searchContent": "题目 前序遍历：https://leetcode cn.com/problems/binary tree preorder traversal/ 中序遍历：https://leetcode cn.com/problems/binary tree inorder traversal/ 后序遍历：https://leetcode cn.com/problems/binary tree postorder traversal/ 树的定义： 题解 前序遍历 前序遍历的顺序是：根 左 右。（这个顺序一开始还被我记错了qwq） 用递归的方式很简单： 递归的本质是使用了栈。如果不想用递归，也可以显式地使用栈来做。但是看懂了递归后再看这种方法会觉得脑子疼。 中序遍历 改一下输出顺序就可以啦。 后序遍历 话说今天是思美节诶，图书馆的女生打扮的都好漂亮呀～祝节日快乐！"
   },
   {
-    "title": "Leetcode105:从前序与中序遍历序列构造二叉树",
-    "date": "2022-03-26T09:02:51.000Z",
-    "updatedAt": "2022-03-26T09:02:51.000Z",
-    "file": "Leetcode105_从前序与中序遍历序列构造二叉树.md",
-    "slug": "leetcode-105-construct-binary-tree-preorder-inorder",
-    "legacySlug": "6fb3bf4b",
+    "title": "两个数组的交集——数组、哈希、双指针",
+    "date": "2022-03-06T08:00:46.000Z",
+    "updatedAt": "2022-03-06T08:00:46.000Z",
+    "file": "两个数组的交集——数组、哈希、双指针.md",
+    "slug": "leetcode-350-intersection-of-two-arrays-ii",
+    "legacySlug": "658ce35f",
     "aliases": [
-      "6fb3bf4b"
+      "658ce35f"
     ],
-    "excerpt": "题目 https://leetcode cn.com/problems/construct binary tree from preorder and inorder traversal/ 上数据结构这门课时研究过这个问题，思路很快就有，难在debug 题解 递归法 众所周知，只有前序遍历或中序遍历",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 645,
-    "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/construct binary tree from preorder and inorder traversal/ 上数据结构这门课时研究过这个问题，思路很快就有，难在debug 题解 递归法 众所周知，只有前序遍历或中序遍历的结果是推演不出原树的。但是前序遍历+中序遍历可以推演出来。因为它们包含的信息特征不同，可以互补。 前序遍历得到的结果形式可以表示为这样：[ 根节点, [左子树的前序遍历结果], [右子树的前序遍历结果] ] 中序遍历得到的结果形式可以表示为这样：[ [左子树的中序遍历结果], 根节点, [右子树的中序遍历结果] ] 所以说，由前序遍历数组的第一个元素可以确定根节点，然后在中序遍历中找到根节点的位置，这个位置左边是左子树，右边是右子树。递归的这么推演下去，就能把整颗树构造出来啦。 举个例子吧：比如preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]。那么首先确定的根节点是preorder[0]，即为3。然后把inorder劈成两半，一半是3左边的left inorder=[9]，另一半是3右边的right inorder=[15,20,7]。再把preorder劈成两半，left preorder=[9]和right preorder=[20,15,7]。 分别把left preorder和left inorder作为参数向左构造子树，把right preorder和right inorder作为参数向右构造子树。递归下去。 因为python的数组切片比较好用，所以这题就用了python： 细节 先确定left inorder，因为left inorder和left preorder的长度应该相同，所以由它的长度可以确定left preorder。right inorder和right preorder同理。 如果order数组为的长度为1，说明下一个节点是叶节点，后面就不用继续构造下去了。 如果order数组为的长度为0，即为[]，说明当前节点是叶节点，直接令下一个节点为None。 改进 这两段代码在preorder中搜索根节点要花费很多时间，我们在一开始就创建一个哈希表储存每个数的索引，这样搜索时间就是O(1)了。 另外官方题解并没有把数组切片，而是传了指针的位置。 官方题解做法python： 官方题解的c++代码，学习一下： 感想 解决树的问题，代码复杂度明显要高一点。以后我会更多使用较为熟悉方便的python而不是c++。"
-  },
-  {
-    "title": "Leetcode108:将有序数组转换为二叉搜索树",
-    "date": "2022-03-25T07:36:05.000Z",
-    "updatedAt": "2022-03-25T07:36:05.000Z",
-    "file": "Leetcode108_将有序数组转换为二叉搜索树.md",
-    "slug": "leetcode-108-convert-sorted-array-to-binary-search-tree",
-    "legacySlug": "da6d8242",
-    "aliases": [
-      "da6d8242"
-    ],
-    "excerpt": "题目 从今天开始多做一点关于数据结构“树”的题目。 https://leetcode cn.com/problems/convert sorted array to binary search tree/ 题解 知识点：二叉搜索树 定义很简单： 若其左子树存在，则其左子树中每个节点的值都不大于该节点",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 443,
-    "readingTime": 2,
-    "searchContent": "题目 从今天开始多做一点关于数据结构“树”的题目。 https://leetcode cn.com/problems/convert sorted array to binary search tree/ 题解 知识点：二叉搜索树 定义很简单： 若其左子树存在，则其左子树中每个节点的值都不大于该节点值； 若其右子树存在，则其右子树中每个节点的值都不小于该节点值。 性质： 二叉搜索树中序遍历的结果是一个递增序列 递归法构造二叉搜索树 本题要求构造一棵平衡的二叉搜索树，所以我们要尽可能把数值大小处于中间的元素放在根节点。假设有一段从i到j的序列，如果序列的长度是奇数，根节点就是中间那个数，也就是第(i+j)/2个数；如果数组的长度是偶数，那也无妨，我们把中间偏左的元素作为根节点，仍然是第(i+j)/2个数（整除） 。然后把中间数左边的序列按照同样的方法构造成左子树，右边的序列构造成右子树，递归的这么构造下去即可。 比如nums = [ 10, 3,0,5,9]，先选择0作为根节点，然后0左边的序列[ 10, 3]构成左子树，0右边的序列[5,9]构成右子树。 递归这种东西，不会的时候觉得很难，会了之后就不觉得难了。请看代码： 细节： 递归终止的条件是left right，此时已经没有序列可以构成子树了，所以子节点为nullptr。 另外，不一定非要把中间偏左的元素作为根节点，选择中间偏右的元素也是可以的。"
-  },
-  {
-    "title": "Leetcode695:岛屿的最大面积——中等难度的搜索算法",
-    "date": "2022-03-24T07:47:10.000Z",
-    "updatedAt": "2022-03-24T07:47:10.000Z",
-    "file": "Leetcode695_岛屿的最大面积——中等难度的搜索算法.md",
-    "slug": "leetcode-695-max-area-of-island",
-    "legacySlug": "099043ba",
-    "aliases": [
-      "099043ba"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/max area of island/ leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。 题解 这道题相较于Leetcode994:腐烂",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 394,
-    "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/max area of island/ leetcode的中等难度题对于我这种弱鸡来说确实花一点时间才能做出来。（即使是看了答案）和简单难度题相比，它的难点在于代码要注意很多细节。 题解 这道题相较于Leetcode994:腐烂的橘子，有哪些不一样呢？ 994题给了你几个源点，而这题你需要从每个连通图里自己选择一个源点，才能进行搜索。 994题要统计的是轮数，而这题在搜索时你需要统计节点总共的数量。 解决方案： 初始时遍历整个图，一旦遇到岛屿就开始做搜索。为了避免重复搜索，可以把已搜索节点标为0。 带有返回值的递归。把整个递归过程看成一颗树，那么叶节点返回应该为1，其他节点返回应该是1+所有子节点。 上面这个图是我随手画的，只是便于理解，跟这个测试案例没啥关系😂。 上代码： 细节： 搜索一个节点的时候先判断传入的坐标是否越界，如果越界了，或者所搜索的节点是0，直接return 0;因为只有1才有必要进行下一步操作。 ans这个变量就很关键了，先赋初值为0，再累加。结合上面的图思考。 di和dj这两个数组的定义就是节省了代码，上一道搜索算法的题目我也是这样写的。"
-  },
-  {
-    "title": "Leetcode977:有序数组的平方——双指针",
-    "date": "2022-03-23T12:35:46.000Z",
-    "updatedAt": "2022-03-23T12:35:46.000Z",
-    "file": "Leetcode977_有序数组的平方——双指针.md",
-    "slug": "leetcode-977-squares-of-a-sorted-array-two-pointers",
-    "legacySlug": "273b7289",
-    "aliases": [
-      "273b7289"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/squares of a sorted array/ 题解 先平方再排序 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后面是正数，nums数组平方后的最大值一是第一个元素或最后一个元素。所",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 210,
-    "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/squares of a sorted array/ 题解 先平方再排序 没啥好说的，打败40%的用户😂 双指针 不难发现，一个一般的nums数组前面是负数后面是正数，nums数组平方后的最大值一是第一个元素或最后一个元素。所以在第一位和最后一位分别放两个指针i和j。 判断if nums[i] nums[i] nums[j] nums[j]，则把nums[i] nums[i]放到res数组最后一位，否则把nums[j] nums[j]放到最后一位。然后往前移动i，或者往后移动j。 这里有个动画：977.有序数组的平方.gif 代码： 细节： 因为可能i和j所指的元素相等，所以判断里要加个等于 while循环停止的条件，可以是i =0 ?"
-  },
-  {
-    "title": "Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目",
-    "date": "2022-03-22T09:50:53.000Z",
-    "updatedAt": "2022-03-22T09:50:53.000Z",
-    "file": "Leetcode994_腐烂的橘子——多源广度优先搜索-好题.md",
-    "slug": "leetcode-994-rotting-oranges-bfs",
-    "legacySlug": "6e5ac913",
-    "aliases": [
-      "6e5ac913"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/rotting oranges/ 这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。 题解 解题思路 这道题很明显要使用广度优先搜索，搜索的目标是每个腐烂橘子周围的新鲜橘子。相较于73",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 486,
-    "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/rotting oranges/ 这道题就接着733题做刚刚好。正好介于有点思路但又写不出来中间，属于够一够脚尖才能实现的目标。 题解 解题思路 这道题很明显要使用广度优先搜索，搜索的目标是每个腐烂橘子周围的新鲜橘子。相较于733题图像渲染来说，这道题由一个搜索源点变成了可能有多个源点。而且你得一轮一轮去搜索，并统计出搜索的轮数。 如果只用一个队列的话，难以区分队列中的烂橘子是在哪一轮烂掉的。所以本菜鸡突发奇想，用两个队列交替push。例如：第一轮把烂橘子push给que队列，第二轮push给newque队列，清空que队列，第三轮再push给que队列...以此类推。 官方题解只用了一个队列，它并不是在搜索时区分第几轮的。而是使用了一个dis[][]数组，记录了每一个橘子相较于上一个橘子腐烂时间+1。也非常巧妙。 代码 细节： 最开始把坏橘子找出来的同时顺便可以把新鲜橘子的总数找出来。在搜索时顺便统计一下坏掉橘子的数量，相减后就能知道几轮下来还有没有新鲜的橘子了。 我这样写代码把最初坏的橘子也算上消耗了一分钟时间，等于多算了一分钟，最后要把minute 1。但由于minute初值设置为0，所以可能会有 1的情况，此时取0就可。（我现在写题解的时候突然发现这个 1貌似没影响qwq） 看了下其他人的题解没有用我这种双队列方法的，哈哈，还特意发了个题解显摆一下，作者竟我自己😂"
-  },
-  {
-    "title": "Leetcode733:图像渲染——搜索算法",
-    "date": "2022-03-21T10:27:50.000Z",
-    "updatedAt": "2022-03-21T10:27:50.000Z",
-    "file": "Leetcode733_图像渲染——搜索算法.md",
-    "slug": "leetcode-733-flood-fill-search-algorithm",
-    "legacySlug": "2f23b348",
-    "aliases": [
-      "2f23b348"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/flood fill/ 美好的一天从一道简单题开始～ 题解 理解题意后，发现这不就是windows自带画图工具里的油漆桶吗？ 深度优先搜索 众所周知，深度优先搜索可以用栈实现，而递归本质上就是栈。所以直接上递归代码： 五分钟敲完",
+    "excerpt": "题目 本题来自：https://leetcode cn.com/problems/intersection of two arrays ii/ [350. 两个数组的交集 II] 难度简单670收藏分享切换为英文接收动态反馈 给你两个整数数组 nums1 和 nums2 ，请你以数组形式返回两数组的",
     "tags": [
       "刷题"
     ],
     "img": "",
     "wordCount": 317,
     "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/flood fill/ 美好的一天从一道简单题开始～ 题解 理解题意后，发现这不就是windows自带画图工具里的油漆桶吗？ 深度优先搜索 众所周知，深度优先搜索可以用栈实现，而递归本质上就是栈。所以直接上递归代码： 五分钟敲完，提交，嘿嘿，有趣的题目～ 等等，咋提示栈溢出了呢？ 看了下测试用例。嗷嗷，原来有一个情况没考虑到： 当所要修改的颜色和它本身的颜色一样时，这个代码会无穷无尽的拓展下去。好家伙，原来栈溢出就是这么回事呀！ 所以我加了一个判断： 官方题解的代码跟我的代码思路一样，但它的要更简洁一点。值得学习！： 时间复杂度O(m n)，最坏需要遍历所有方格。 空间复杂度O(m n)，栈的空间开销蛮大。 广度优先搜索 众所周知，实现广度优先搜索需要用到队列。 懒得写了，看一看官方题解： 复杂度分析同深度优先搜索。 别搞混了： 广度优先搜索 深度优先搜索 队列 栈"
+    "searchContent": "题目 本题来自：https://leetcode cn.com/problems/intersection of two arrays ii/ [350. 两个数组的交集 II] 难度简单670收藏分享切换为英文接收动态反馈 给你两个整数数组 nums1 和 nums2 ，请你以数组形式返回两数组的交集。返回结果中每个元素出现的次数，应与元素在两个数组中都出现的次数一致（如果出现次数不一致，则考虑取较小值）。可以不考虑输出结果的顺序。 示例 1： 示例 2: 提示： 1 <= nums1.length, nums2.length <= 1000 0 <= nums1[i], nums2[i] <= 1000 \\ 进阶\\ ： 如果给定的数组已经排好序呢？你将如何优化你的算法？ 如果 nums1 的大小比 nums2 小，哪种方法更优？ 如果 nums2 的元素存储在磁盘上，内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？ 题解 用hashmap解决。今天忙着训练模型，懒得写题解了。 回答一下进阶的那几个问题吧： 已经排好序的话，用双指针做比较好。 用小的数组产生hashmap比较好。 存在磁盘上，每次只能读一部分数据，就不能排序了，得用方法1."
+  },
+  {
+    "title": "环形链表——哈希、链表、双指针",
+    "date": "2022-03-05T08:08:03.000Z",
+    "updatedAt": "2022-03-05T08:08:03.000Z",
+    "file": "环形链表——哈希、链表、双指针.md",
+    "slug": "leetcode-141-linked-list-cycle-hash-two-pointers",
+    "legacySlug": "e30e2370",
+    "aliases": [
+      "e30e2370"
+    ],
+    "excerpt": "题目 题目来自：https://leetcode cn.com/problems/linked list cycle/ 141. 环形链表 难度简单1376收藏分享切换为英文接收动态反馈 给你一个链表的头节点 head ，判断链表中是否有环。 如果链表中有某个节点，可以通过连续跟踪 next 指针再",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 1406,
+    "readingTime": 4,
+    "searchContent": "题目 题目来自：https://leetcode cn.com/problems/linked list cycle/ 141. 环形链表 难度简单1376收藏分享切换为英文接收动态反馈 给你一个链表的头节点 head ，判断链表中是否有环。 如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 注意：pos 不作为参数进行传递 。仅仅是为了标识链表的实际情况。 如果链表中存在环 ，则返回 true 。 否则，返回 false 。 示例 1： 示例 2： 示例 3： 提示： 链表中节点的数目范围是 [0, 104] 105 参考作者：LeetCode Solution 链接：https://leetcode cn.com/problems/linked list cycle/solution/huan xing lian biao by leetcode solution/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 方法一：哈希表 最容易想到的方法，就是遍历这个链表，如果发现某个节点曾经被遍历过了，那么这就是环形链表。判断某个节点是否被遍历过可以用hashset。 代码： 这个代码我是写不出来的，只能先抄题解。有一点不明白的是，unordered set seen;这一行为什么 后要加个 ？ 加在前面表示定义指针，加在后面表示什么呢？知道的可以在评论区给我留言。 因为只遍历一次，时间复杂度：O(N) 。要开辟哈希表，空间复杂度O(N)。 方法二：快慢指针 这个方法很巧妙，leetcode给的解释非常易懂，还有演示视频。 本方法需要读者对「Floyd 判圈算法」（又称龟兔赛跑算法）有所了解。 假想「乌龟」和「兔子」在链表上移动，「兔子」跑得快，「乌龟」跑得慢。当「乌龟」和「兔子」从链表上的同一个节点开始移动时，如果该链表中没有环，那么「兔子」将一直处于「乌龟」的前方；如果该链表中有环，那么「兔子」会先于「乌龟」进入环，并且一直在环内移动。等到「乌龟」进入环时，由于「兔子」的速度快，它一定会在某个时刻与乌龟相遇，即套了「乌龟」若干圈。 我们可以根据上述思路来解决本题。具体地，我们定义两个指针，一快一满。慢指针每次只移动一步，而快指针每次移动两步。初始时，慢指针在位置 head，而快指针在位置 head.next。这样一来，如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表。否则快指针将到达链表尾部，该链表不为环形链表。 细节:为什么我们要规定初始时慢指针在位置 head，快指针在位置 head.next，而不是两个指针都在位置 head（即与「乌龟」和「兔子」中的叙述相同）？ 观察下面的代码，我们使用的是 while 循环，循环条件先于循环体。由于循环条件一定是判断快慢指针是否重合，如果我们将两个指针初始都置于 head，那么 while 循环就不会执行。因此，我们可以假想一个在 head 之前的虚拟节点，慢指针从虚拟节点移动一步到达 head，快指针从虚拟节点移动两步到达 head.next，这样我们就可以使用 while 循环了。 当然，我们也可以使用 do while 循环。此时，我们就可以把快慢指针的初始值都置为 head。 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/linked list cycle/solution/huan xing lian biao by leetcode solution/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 代码： 其实这个代码有点啰嗦。 时间复杂度：O(N)O(N)，其中 NN 是链表中的节点数。 当链表中不存在环时，快指针将先于慢指针到达链表尾部，链表中每个节点至多被访问两次。 当链表中存在环时，每一轮移动后，快慢指针的距离将减小一。而初始距离为环的长度，因此至多移动 NN 轮。 空间复杂度：O(1)。因为只使用了两个指针的额外空间。 [lostBookBoy]问了一个问题：“为什么慢指针每次只移动一步，而快指针每次移动两步而不是其他步？” [洛阳令]的回答：“这里的慢1快2还是有些讲究的，要是慢一快三未必可以解。快减慢等于1是一定有解的。可以将环理解为一个整数加法群，只有差为一才一定有解。” 其它方法： 看了评论区，各路大神各显神通。有的在遍历的时候把链表节点的值改成'bjfuvth'，再遇到就说明有环，这样就不用哈希了。还有跑了很多遍代码发现这题的链表最多有8029个节点，跑完8029个后如果还没结束就说明有环。哈哈哈，为了能过一道题真是无所不用其极。 这是一道很简单的题，做出来可能只需要5分钟，但是在整理这道题时我花了1个小时，学习就是这个样子，不怕折腾。"
+  },
+  {
+    "title": "合并两个有序数组——数组、双指针、排序——这题的题解绝了",
+    "date": "2022-03-04T07:32:13.000Z",
+    "updatedAt": "2022-03-04T07:32:13.000Z",
+    "file": "合并两个有序数组——数组、双指针、排序——这题的题解绝了.md",
+    "slug": "leetcode-88-merge-sorted-array-two-pointers",
+    "legacySlug": "aee57094",
+    "aliases": [
+      "aee57094"
+    ],
+    "excerpt": "题目 该题来自：https://leetcode cn.com/problems/merge sorted array/ 88. 合并两个有序数组 难度简单1308收藏分享切换为英文接收动态反馈 给你两个按 非递减顺序 排列的整数数组 nums1 和 nums2，另有两个整数 m 和 n ，分别表示",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 267,
+    "readingTime": 1,
+    "searchContent": "题目 该题来自：https://leetcode cn.com/problems/merge sorted array/ 88. 合并两个有序数组 难度简单1308收藏分享切换为英文接收动态反馈 给你两个按 非递减顺序 排列的整数数组 nums1 和 nums2，另有两个整数 m 和 n ，分别表示 nums1 和 nums2 中的元素数目。 请你 合并 nums2 到 nums1 中，使合并后的数组同样按 非递减顺序 排列。 注意： 最终，合并后数组不应由函数返回，而是存储在数组 nums1 中。为了应对这种情况，nums1 的初始长度为 m + n，其中前 m 个元素表示应合并的元素，后 n 个元素为 0 ，应忽略。nums2 的长度为 n 。 示例 1： 示例 2： 示例 3： 提示： nums1.length == m + n nums2.length == n 0 = m p1 1+n p2 1 $$ 等价于 $$ p2 1 $$ 永远成立。所以不会被覆盖。 代码： 看完这个题解我真是觉得太牛逼了。 时间复杂度O(m+n)，因为不需要额外数组，所以空间复杂度O(1)。"
+  },
+  {
+    "title": "有效的数独——数组、哈希表、矩阵",
+    "date": "2022-03-03T08:46:16.000Z",
+    "updatedAt": "2022-03-03T08:46:16.000Z",
+    "file": "有效的数独——数组、哈希表、矩阵.md",
+    "slug": "valid-sudoku-array-hash-table-matrix",
+    "legacySlug": "c36750b2",
+    "aliases": [
+      "c36750b2"
+    ],
+    "excerpt": "该题目来自：https://leetcode cn.com/problems/valid sudoku/ 题目 36. 有效的数独 难度中等786收藏分享切换为英文接收动态反馈 请你判断一个 9 x 9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。 1. 数字 1 9 在",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 399,
+    "readingTime": 1,
+    "searchContent": "该题目来自：https://leetcode cn.com/problems/valid sudoku/ 题目 36. 有效的数独 难度中等786收藏分享切换为英文接收动态反馈 请你判断一个 9 x 9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。 1. 数字 1 9 在每一行只能出现一次。 2. 数字 1 9 在每一列只能出现一次。 3. 数字 1 9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。（请参考示例图） 注意： 一个有效的数独（部分已被填充）不一定是可解的。 只需要根据以上规则，验证已经填入的数字是否有效即可。 空白格用 '.' 表示。 示例 1： 示例 2： 提示： board.length == 9 board[i].length == 9 board[i][j] 是一位数字（1 9）或者 '.' 题解 呜呜呜，像我这种臭鱼烂虾也配做出leetcode中等难度的题了吗？ 我的方法，分别扫描行、扫描列、扫描九宫格，三次遍历得出结果 ： 大佬的方法，一次遍历就行了 ： 节省遍历次数的关键是创建了三个数组， rows[i][index]记录当前数字index在第i行出现的次数。 columns[j][index]记录当前数字index在第j列出现的次数。 subboxes[i/3][j/3][index]记录当前数字index在第[i/3][j/3]个九宫格中出现的次数。 因为有确定的遍历次数和确定的数组大小，所以时间和空间复杂度都是O(1)"
+  },
+  {
+    "title": "由和找到两数——数组、哈希表",
+    "date": "2022-03-02T11:25:55.000Z",
+    "updatedAt": "2022-03-02T11:25:55.000Z",
+    "file": "由和找到两数——数组、哈希表.md",
+    "slug": "leetcode-1-two-sum-array-hash-table",
+    "legacySlug": "2473ac1b",
+    "aliases": [
+      "2473ac1b"
+    ],
+    "excerpt": "题目 该题目来自：https://leetcode cn.com/problems/two sum/ 1. 两数之和 难度简单13591收藏分享切换为英文接收动态反馈 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 357,
+    "readingTime": 1,
+    "searchContent": "题目 该题目来自：https://leetcode cn.com/problems/two sum/ 1. 两数之和 难度简单13591收藏分享切换为英文接收动态反馈 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。 你可以按任意顺序返回答案。 示例 1 ： 示例 2 ： 示例 3 ： 提示 ： 2 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/two sum/solution/liang shu zhi he by leetcode solution/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 可以优化的地方就是对于每个元素x，寻找target x可以改用哈希表寻找，速度可以从O(N)降到O(1)。 只遍历一遍nums数组，对于每个x，寻找target x是否在哈希表中，如果不在就把x插入到哈希表中。 时间复杂度：O(N) 空间复杂度：O(N) 代码解释 ： hashtable: 由键 值组成（都是int类型）在这道题里键是nums[i]，值是索引i。 it second: it是迭代器，it second表示访问值，同理it first访问键，也可以写成( it).second，( it).first。"
   }
 ]

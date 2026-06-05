@@ -8,7 +8,6 @@ categories:
 - 技能分享
 - 笔记
 ---
-
 ## 前言
 
 老师给了一个任务，仿照jupyter notebook中可以动态添加、删除的cell，用c++的qt做一个类似的界面。具体来说，一个cell中有一个输入框，一个输出框，还有四个按钮，分别是`运行`、`添加`、`删除`、`清空`。此外，为了突出正在编辑的cell，要实现点击到cell的空白部分时，将背景颜色高亮。实现的效果如下：![ezgif.com-gif-maker](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/ezgif.com-gif-maker.gif)

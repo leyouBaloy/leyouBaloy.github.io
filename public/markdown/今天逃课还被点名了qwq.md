@@ -3,19 +3,12 @@ title: "今天逃课还被点名了qwq"
 author: 孙百乐
 date: 2022-03-29T09:36:46+08:00
 slug: skipped-class-got-called-out
-draft: false
+draft: true
 categories: 
 - 随笔杂记
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:21:58.391Z
 ---
-
-疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最多的就是刷视频打游戏和睡觉。
-
-今天早上没定闹钟，8:00上课，7:45我才起床。迷迷糊糊的还把时间看错了，以为是8:45，索性直接摆烂不去了。其实这个时候仍然有补救的机会，但是我上课的心已经死了。后来就有3个同学跟我说老师点我回答问题发现我不在，我心想你tm跟我说有什么用？看我笑话是不是？你就不能说我去做核酸了吗？一群靠不住的家伙，一大早就让我生气。
-
-我的生活确实需要好好整理了：衣服堆了很多不洗，数据库实验还没做，竞赛的代码和文档也没写...疫情期间我拥有比往常更多的时间，但也浪费了这些时间。
-
-今天算是给我敲响了警钟。我打开课表算一算，距离`数据库原理`、`人工智能导论`、`民法概论`结课只有三周时间了。复习工作（不如说是预习工作）现在开始刚好，我也该支棱起来了。
-
-昨晚看了四叔的视频`拥有的时间越多，人越苦恼`，人如果能从低级的趣味中获得源源不断的快乐那是一种很潇洒的活法，但是我做不到，每次欢娱之后都会让我感到堕落、迷惘，那不是我真正的快乐。我只有鞭策自己然后看到自己胜利，才能获得短暂的属于我的真正的快乐，然后一次又一次重复这个过程。我在痛苦与快乐两边无限徘徊。
-
-{{< bilibili BV1QL411w7jb >}}
+<!-- encrypted:draft-body:xor-base64 -->
+qdGcv+rhgMn80cP2gsncneXXhczisuLtsuPYi9Lfq8yxs+f3srH7ls+x3PbK39rUgvvwha3Np8v3v+Hgr/7bv9/Cl+zhotvdp+Px3OzrnPmun9P13YDDr7TkjMTkvMCnu/7ptdH6lfPGntHGttf+qOLKst7Kqq/4gtrH1NTXmIW0qNCBsP7Qj8Dc3O7Eg8bsnsnih8LjvtDOssLehunYqfG7tNr7so7NnMu13ePh0+DJg/zRha3cpevUvcT5rN72tuvflfjCo8f+qvX91Mrjk8axn9ft3qLKoofoj/zJsOuPvOXjuvrrl8HwnuHvtfvYqNTvsNLtp5TZhPXYO3CXzLPd6u7RzsCA3t+FivWny8mx7cih8ee2699LbX12h+/FpOCNv9v5bQtORpGxqajOurHc04Pv6dvUwI3s75LO/4TL07Dg+bDXwovo16rFubbww7OmzpTrstHa3tPj74va2YeD8abd6b7i3nBZTGy47/+w+eSF1+ir1Ie26dC8oPyU9Lvc9srS19KA3NOAuNan4OW91O+g3OG97/mVwPuj486r98LU1NGTxriS0tLfrd+grd2P+Nyx36K7/um35fyX0Mye0ca3y92l6d2w1ciqjNOCwujWwfyRlIOq/bG66eaDxe3eyeeA4+mc7cFQnOH9tuPbqOvFv/jTqbvBj9ru2frykoGwqcWOv+H1g8793/nWjMT2k9PQhvfIsN3DscXXh+/CqdObv9v5vLnrlsi63s300+TJEAu91KeyyvS7986X1Oqc4te3yt+q0su489Oor9uB/cvW1uKflqWo35i90emAzczX6N2B7vifwfmHwNS/0M6/4vKF396pwYi15u+8kcKa8oHc9MHSyf6L2sqHgNSl2/ex59Gs2/W96tyUzcmjzeGr8Nbc7OuR4rGf19Dfr+eih+iBys+z66mz1vq16O6SyOFyU7Hb4rDXwoTD0Kr7iLfG27+f5JrrudDoxtL81IHD6IWt4KX11bzA96ff4rH28JXLwKPD0av2ydbu75D+q57L+t+M2aiL1Y/x1rPulrH49rb25Jji75Dmz7XB9qjH+bjzwKiYzo/Awdbg95OCm6nntrz76IDD5N714YHqx5zD6Yb+wHl9XbDb7YXUyqrTrLnwwby565X8nN7SztH2/YHY1YaA7KT+573e66/5/L/A5ZrA+anf26vxydfp+JPvm5LHzt2CyK+IwI3e/bP0jr3V0bDY+HtCh8PTsvfasOPRhc/gq/Sqtu/kvKTIluS03PTB3/TPjfTKgLjWpO3CvvPird/4sfjtm/bloc3Aq/TP1P7wmua9ksTq3p71J9HM2YLr+4aCx6frzL/q9yiA+Ng3t8ntqPHGsdb2p7Dtgtrm2dTJF9q4zyfR6fiC1cCFntaqy+k4ncrbi9fnstzZsdHPh+/Gqd6btvDDs6bOl82/287F0v3kgN/1ho/xptjPt8b5rNv1vPHRm/j5oPv4pu7L1+nHkO2Uns7r1oTHoLnpjPjOsN+4seXuttDglO3el+XbtfvGqf/8v+Dpqaf/gdbr2c/EkaSdqv2xuunmbF+FoPyk/Mm/5vqs2f68zMiW2Nmh+dOn68na8vYVvLrfleuw39TD0c7fjfHhi47ep8HJt8b9rNnCseHZm9zroOLrL6Pzv7Tdz7+X+JXppdDN+tPi54Db24SC86X/17DM0q3yy73v/pvZ+qPdwKn239Xq95HivJzl2t6iyqKI8o3d9rzhm7Layrfg+pbv7p3n37XO0Kvy8bDVyKmH64HGz97G/5OEvqjfmL/h9YPU+dzsz4Db6JXNxIXX1rH/0rHh5Ib//qj2uLX3+7Oyx5fLo9Dg7tHR+ILiyoaw5KfFxrDqzKvj+bHo5JXU1anf26bO7Nfo6pPCnpz75t6k0aGa+o7+4rDck7D79bDY+JfA8p3W/bXv3qTYzrDi2qe0+oLC69b+xZKptqnbvLzh1I7Syd3j843QxJ/54YzE1bHa/r/O+4vZ+KnxpLf42Lyr+JTtvd3/2dPj54LuxISi0KX5zL7X0q/5/Lzo+Jfu3anf26jI+dbA6ZHisZzf1ty3xqOP2Y/Ix7zktbHm6Lvn45XwyZDm0LTb3K7G4bHH3aqv+IDiwdnx1ZOBtqv4nL3Q9ILtx9Dq+4PE+JPo2IbGwbLt+bTNxGldNDdzEzIOGTNTEx8eGXoYdmYVXVVXIlRSNmJbLiVw

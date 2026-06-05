@@ -181,24 +181,6 @@
       "readingTime": 1
     },
     {
-      "title": "c++傻缺错误集锦",
-      "date": "2020-12-02T20:09:14.000Z",
-      "updatedAt": "2020-12-02T20:09:14.000Z",
-      "file": "c++傻缺错误集锦.md",
-      "slug": "cpp-stupid-errors-collection",
-      "legacySlug": "9f35c36a",
-      "aliases": [
-        "9f35c36a"
-      ],
-      "excerpt": "nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！ 千万不要把“==”写成“=” 输出小数时函数用成了int Fun() 应该用double Fun() 习惯了使用int Fun() 也是看了半天，没有看出问题来 输入M和N 我只写了cin N; 导致后面全错，查了半天也没查出来； ",
-      "tags": [
-        "刷题"
-      ],
-      "img": "",
-      "wordCount": 191,
-      "readingTime": 1
-    },
-    {
       "title": "selenium爬GDP",
       "date": "2020-12-01T23:11:02.000Z",
       "updatedAt": "2020-12-01T23:11:02.000Z",
@@ -361,24 +343,6 @@
       "readingTime": 1
     },
     {
-      "title": "我的青春不迷茫，奋斗青春成就未来-征文活动",
-      "date": "2020-11-15T10:23:57.000Z",
-      "updatedAt": "2020-11-15T10:23:57.000Z",
-      "file": "我的青春不迷茫，奋斗青春成就未来-征文活动.md",
-      "slug": "striving-youth-university-freshman-experience-essay",
-      "legacySlug": "a149f284",
-      "aliases": [
-        "a149f284"
-      ],
-      "excerpt": "九月，我成为了石油大学计算机学院的一名学生。秋高气爽，海风习习，我第一次远离家乡，独自留在一个陌生的城市，妈妈望着我远去的背影，掉下了眼泪，我的心里也很不是滋味。 但是，我很快就熟悉了校园，与身边的同学打成了一片，我们一起去食堂吃饭，一起寻找上课的教室，一起讨论不会的程序设计题目，一起参加各种活动。",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 1120,
-      "readingTime": 3
-    },
-    {
       "title": "输入二进制转化为十进制",
       "date": "2020-11-10T14:49:20.000Z",
       "updatedAt": "2020-11-10T14:49:20.000Z",
@@ -538,24 +502,6 @@
       ],
       "img": "",
       "wordCount": 300,
-      "readingTime": 1
-    },
-    {
-      "title": "工欲善其事，必先利其器。",
-      "date": "2020-10-28T22:41:29.000Z",
-      "updatedAt": "2020-10-28T22:41:29.000Z",
-      "file": "工欲善其事，必先利其器.md",
-      "slug": "sharpen-your-tools-study-resources",
-      "legacySlug": "704d93a5",
-      "aliases": [
-        "704d93a5"
-      ],
-      "excerpt": "工欲善其事，必先利其器。 看学校官网，关注讲座www.upc.edu.cn 看学院官网，看学术报告，黄岛讲堂，写记录册 computer.upc.edu.cn 关注微信公众号 “石光计E” EI，从图书馆进http://library.upc.edu.cn/html/ziyuan/wwsjk/201",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 308,
       "readingTime": 1
     },
     {
@@ -811,24 +757,6 @@
       "readingTime": 1
     },
     {
-      "title": "Python第二周学习报告（草稿）",
-      "date": "2020-10-04T15:05:52.000Z",
-      "updatedAt": "2020-10-04T15:05:52.000Z",
-      "file": "Python第二周学习报告（草稿）.md",
-      "slug": "python-week-2-study-report",
-      "legacySlug": "bb55d973",
-      "aliases": [
-        "bb55d973"
-      ],
-      "excerpt": "总体感受 这是我跟着b站昕哥的视频学习\"Python数据分析“的第二周，总体上感觉Python确实是比c++要简单不少，学c++就像是开手动挡汽车，虽然难学，但是学会之后可以享受操纵的乐趣。而学Python就像是开手动挡汽车，简单上手，也功能强大。 和以前在网上自学其它东西不一样的是，这次学习Pyt",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 638,
-      "readingTime": 2
-    },
-    {
       "title": "第一章练习题",
       "date": "2020-09-30T23:09:21.000Z",
       "updatedAt": "2020-09-30T23:09:21.000Z",
@@ -867,24 +795,6 @@
       "readingTime": 7
     },
     {
-      "title": "参加ccf csp认证考试有感",
-      "date": "2021-12-05T23:28:56.000Z",
-      "updatedAt": "2021-12-05T23:28:56.000Z",
-      "file": "参加ccf csp认证考试有感.md",
-      "slug": "ccf-csp-certification-exam-experience",
-      "legacySlug": "94d9e3ca",
-      "aliases": [
-        "94d9e3ca"
-      ],
-      "excerpt": "起因 从大一我刚做昕哥的学生开始，他就建议刚学完c程序设计的我趁热打铁，去考一个ccf csp认证。我当时对算法不感兴趣，也没参加acm，就没有关注这个认证。 结果没想到昕哥主持了今年的csp认证，考点就在我们学校。昕哥当然首先拉我们参加，还说给我们报销费用，让我们先垫着。（估计是不会给报销了qwq",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 689,
-      "readingTime": 2
-    },
-    {
       "title": "数值计算方法",
       "date": "2021-12-01T18:31:18.000Z",
       "updatedAt": "2021-12-01T18:31:18.000Z",
@@ -900,42 +810,6 @@
       ],
       "img": "",
       "wordCount": 13,
-      "readingTime": 1
-    },
-    {
-      "title": "讲一个能满足和感动自己的故事！",
-      "date": "2021-11-24T21:25:56.000Z",
-      "updatedAt": "2021-11-24T21:25:56.000Z",
-      "file": "讲一个能满足和感动自己的故事！.md",
-      "slug": "how-to-write-a-good-paper-tell-a-story",
-      "legacySlug": "7dbb12f1",
-      "aliases": [
-        "7dbb12f1"
-      ],
-      "excerpt": "今天在线上听了西交的孟德宇教授的小讲座，非常亲切朴实，真正的打动了我。 如何写好论文 细节，careful 仔细画每一幅图 不要有typo（词句小错误） 不要用长句 避免过度修饰，冗长 至少修改30遍 逻辑通顺 写提纲 理论、实验点支撑 支撑什么观点？从哪些角度？ 讲一个合理的故事，前呼后应，自圆其",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 371,
-      "readingTime": 1
-    },
-    {
-      "title": "Mac上自动连接校园网的脚本",
-      "date": "2021-11-24T18:58:03.000Z",
-      "updatedAt": "2021-11-24T18:58:03.000Z",
-      "file": "Mac上自动连接校园网的脚本.md",
-      "slug": "mac-auto-connect-campus-network-script",
-      "legacySlug": "1f902f05",
-      "aliases": [
-        "1f902f05"
-      ],
-      "excerpt": "起因 傻逼Mac，每次开屏幕都要重新输入账号密码运营商连接校园网，所以我想办法用脚本去实现连接校园网的操作。 mac可以直接运行shell脚本，写一个超级简单的脚本放在桌面，每次点一下就可以自动连接校园网了。 第一步 从GitHub上下载一段自动连接校园网的python代码，地址：https://g",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 299,
       "readingTime": 1
     },
     {
@@ -957,24 +831,6 @@
       "readingTime": 1
     },
     {
-      "title": "精准而优雅——MacBook Air",
-      "date": "2021-11-14T10:32:04.000Z",
-      "updatedAt": "2021-11-14T10:32:04.000Z",
-      "file": "精准而优雅——MacBook Air.md",
-      "slug": "macbook-air-m1-review",
-      "legacySlug": "591056ff",
-      "aliases": [
-        "591056ff"
-      ],
-      "excerpt": "我的第一台macbook 犹豫了一年，终于在2021年11月份买了这台m1版本的macbook air。非常感谢我哥借给我不敢想象的8k块。 精准 在很多人眼里macbook只是个花瓶，不能打游戏，不能装专业软件，价格还死贵。但是在我眼里，它精准的满足了我的需求： 不打游戏 轻薄的机身、超长的续航，",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 291,
-      "readingTime": 1
-    },
-    {
       "title": "macOS下matplotlib无法显示中文字体问题解决",
       "date": "2021-11-12T16:57:43.000Z",
       "updatedAt": "2021-11-12T16:57:43.000Z",
@@ -991,42 +847,6 @@
       "img": "",
       "wordCount": 177,
       "readingTime": 1
-    },
-    {
-      "title": "如何在英语朗读视频中添加文稿",
-      "date": "2021-11-04T17:15:40.000Z",
-      "updatedAt": "2021-11-04T17:15:40.000Z",
-      "file": "如何在英语朗读视频中添加文稿.md",
-      "slug": "add-transcript-to-english-reading-video",
-      "legacySlug": "0e0d4826",
-      "aliases": [
-        "0e0d4826"
-      ],
-      "excerpt": "如下图，在英语朗读视频中添加文稿可以让刘老师清晰地看到你读的每一个单词，更准确地判断你的朗读水平，从而对你进行更好的指导。那么如何在英语朗读视频中添加文稿呢？ 你所需要用到的工具是剪辑软件，下面推荐几个很好用的剪辑软件： 1.剪映（电脑和手机） 你可以把你的视频直接拖拽到导轨上，然后再把文稿以图片也",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 349,
-      "readingTime": 1
-    },
-    {
-      "title": "Linux自由软件协会迎新结束有感",
-      "date": "2021-10-30T22:43:09.000Z",
-      "updatedAt": "2021-10-30T22:43:09.000Z",
-      "file": "Linux自由软件协会迎新结束有感.md",
-      "slug": "linux-free-software-association-orientation-thoughts",
-      "legacySlug": "c99a798a",
-      "aliases": [
-        "c99a798a"
-      ],
-      "excerpt": "大一的时候，看到这个社团感觉就很对胃口，想加入。但是Linux自由软件协会太低调了，那年的百团大战我都没找到摊位。 大二阴差阳错，我直接从局外人成了会长。 起因是我当了飞桨领航团团长，要借一个社团办线下活动，没人愿意跟我合作。 陈荣灿学长跟我都是李昕老师的学生，我问他可不可以合作办一个活动，他说正好",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 532,
-      "readingTime": 2
     },
     {
       "title": "ubuntu安装Python3的曲折之路",
@@ -1063,24 +883,6 @@
       "img": "",
       "wordCount": 1256,
       "readingTime": 4
-    },
-    {
-      "title": "全国高校AI知识竞赛UPC赛区获奖通知",
-      "date": "2021-09-29T23:37:12.000Z",
-      "updatedAt": "2021-09-29T23:37:12.000Z",
-      "file": "全国高校AI知识竞赛UPC赛区获奖通知.md",
-      "slug": "ai-knowledge-competition-upc-award-notice",
-      "legacySlug": "1829cd62",
-      "aliases": [
-        "1829cd62"
-      ],
-      "excerpt": "获奖名单： 排名不分先后，恭喜以上获奖同学。 领奖须知： 第一步： 扫描二维码，注册飞桨人工智能训练平台aistudio（需要手机号） 第二步： 在gitee开源社区上为首家开源国产深度学习框架paddle paddle点个star（如果没有账号，请注册一个） 第三步： 将您的aistudio注册手",
-      "tags": [
-        "刷题"
-      ],
-      "img": "",
-      "wordCount": 212,
-      "readingTime": 1
     },
     {
       "title": "浏览器不支持getUserMedia",
@@ -1173,24 +975,6 @@
       "readingTime": 1
     },
     {
-      "title": "再认识我的家乡——蚌埠",
-      "date": "2021-08-27T22:47:10.000Z",
-      "updatedAt": "2021-08-27T22:47:10.000Z",
-      "file": "再认识我的家乡——蚌埠.md",
-      "slug": "rediscovering-my-hometown-bengbu",
-      "legacySlug": "10580a2d",
-      "aliases": [
-        "10580a2d"
-      ],
-      "excerpt": "现在距离开学没几天了，暑假在一起玩的朋友、同学都纷纷开学了，就剩我一个人呆在家越来越无聊。在家里呆腻了，我就在晚上出去走走。一路向西，或一路向北，不到穷尽不回头。这是我第一次用自己的脚步丈量我的家乡城市——蚌埠。 我是一个路痴，我觉得我之所以会成为路痴，不是因为我天生缺少方向感，也不是因为我不出门，",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 704,
-      "readingTime": 2
-    },
-    {
       "title": "python时间遇到的坑",
       "date": "2021-08-22T15:21:03.000Z",
       "updatedAt": "2021-08-22T15:21:03.000Z",
@@ -1225,24 +1009,6 @@
       "img": "",
       "wordCount": 1480,
       "readingTime": 4
-    },
-    {
-      "title": "网吧＋炸鸡 yyds!",
-      "date": "2021-08-11T20:57:33.000Z",
-      "updatedAt": "2021-08-11T20:57:33.000Z",
-      "file": "网吧＋炸鸡 yyds!.md",
-      "slug": "internet-cafe-fried-chicken-gaming-diary",
-      "legacySlug": "b1b9e00f",
-      "aliases": [
-        "b1b9e00f"
-      ],
-      "excerpt": "这个星期我去了六次网吧，吃了三次炸鸡。 网吧 虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。 现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。 打LOL终极魔典，一开始我两被敌人玩弄于股掌之间",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 277,
-      "readingTime": 1
     },
     {
       "title": "linux学习笔记",
@@ -1317,24 +1083,6 @@
       "readingTime": 1
     },
     {
-      "title": "和老同学的难得一见",
-      "date": "2021-08-01T11:07:38.000Z",
-      "updatedAt": "2021-08-01T11:07:38.000Z",
-      "file": "和老同学的难得一见.md",
-      "slug": "old-classmates-reunion",
-      "legacySlug": "cf49f235",
-      "aliases": [
-        "cf49f235"
-      ],
-      "excerpt": "老同学没有忘记 高中同学感情很深，分别一年，互相想念。我才刚到家两天，泽枫，国荣，宇龙都发消息给我找我出去玩。我对高三博雅班的同学没有任何好感，但是对以前二班的同学我很愿意继续相处。 张宇龙的升学宴 一个五河的小伙子，我高中的好兄弟。今年复读一年考上北京的对外经贸大学，大喜，十分热情的邀请我去五河县",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 467,
-      "readingTime": 2
-    },
-    {
       "title": "带鱼屏真是太太太爽爽爽啦",
       "date": "2021-07-30T12:46:02.000Z",
       "updatedAt": "2021-07-30T12:46:02.000Z",
@@ -1387,24 +1135,6 @@
       "img": "",
       "wordCount": 247,
       "readingTime": 1
-    },
-    {
-      "title": "身体第一、健康第二",
-      "date": "2021-07-17T16:00:14.000Z",
-      "updatedAt": "2021-07-17T16:00:14.000Z",
-      "file": "身体第一、健康第二.md",
-      "slug": "body-first-health-second",
-      "legacySlug": "90b23d4d",
-      "aliases": [
-        "90b23d4d"
-      ],
-      "excerpt": "这话我是故意这么说的。今天是7月17日，我“大病”一场，身体彻底垮了，才知道身体和健康是多么重要。 胡吃海喝 昨天是军训结束的第一天，晚上正好是啤酒节开幕式，我和秋豪一起去逛逛。本来我是想在学校吃完再去的，但是秋豪兴致勃勃地对我说，咱们一定要出去再吃一次海鲜，如果你不跟我出去吃我立马回寝室学习。秋豪",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 658,
-      "readingTime": 2
     },
     {
       "title": "87《红楼梦》观之有感",
@@ -1461,60 +1191,6 @@
       "readingTime": 2
     },
     {
-      "title": "“野蛮“其体魄！",
-      "date": "2021-06-21T00:10:27.000Z",
-      "updatedAt": "2021-06-21T00:10:27.000Z",
-      "file": "“野蛮“其体魄！.md",
-      "slug": "savage-your-physique-exercise-thoughts",
-      "legacySlug": "740381a6",
-      "aliases": [
-        "740381a6"
-      ],
-      "excerpt": "​ 毛主席在《恰同学少年》中说： “我最佩服的，是古希腊的斯巴达人，人数那么少，却能称霸希腊。为什么？因为他们不仅重视精神之文明，更崇尚野蛮之体魄。” ​ 说起锻炼，重要性不言而喻。锻炼可以减轻压力、可以增强自信、可以减肥、可以让人少生病...不要觉得锻炼浪费了你的时间，我认为锻炼实际上是一种稳赚不",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 714,
-      "readingTime": 2
-    },
-    {
-      "title": "《概率论与数理统计》结课总结",
-      "date": "2021-06-17T20:33:22.000Z",
-      "updatedAt": "2021-06-17T20:33:22.000Z",
-      "file": "《概率论与数理统计》结课总结.md",
-      "slug": "probability-and-mathematical-statistics-course-summary",
-      "legacySlug": "94554f7a",
-      "aliases": [
-        "94554f7a"
-      ],
-      "excerpt": "课程时长 这门课上的不长，就大半个学期。任课教师王老师，是一位教学经验丰富的老师。也是统计学方面的专家，跟着他学习，感觉在很短的时间内学到了很多知识。 课程感受 “概率论与数理统计”实际上是两门课，“概率论”内容包括：随机事件与概率、随机变量及其分布、随机变量的数字特征、大数定律与中心极限定理。“数",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 650,
-      "readingTime": 2
-    },
-    {
-      "title": "本学期“人工智能”学习结束总结",
-      "date": "2021-06-13T23:16:09.000Z",
-      "updatedAt": "2021-06-13T23:16:09.000Z",
-      "file": "本学期“人工智能”学习结束总结.md",
-      "slug": "artificial-intelligence-learning-summary",
-      "legacySlug": "3dfae010",
-      "aliases": [
-        "3dfae010"
-      ],
-      "excerpt": "现在人工智能真是火到了极点，各个专业都想转行搞人工智能。作为本来就是人工智能专业的学生，更是要趁早开始。所以，大一下学期，在老师的指导，以及同学和合作下，我开始接触人工智能的学习。 学习资料 从机器学习开始： 《统计学习方法》 作者：李航 教科书/课本，理论性强，也很权威。分为监督学习和非监督学习两",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 335,
-      "readingTime": 1
-    },
-    {
       "title": "《消失的13级台阶》读后感",
       "date": "2021-06-06T22:24:13.000Z",
       "updatedAt": "2021-06-06T22:24:13.000Z",
@@ -1549,24 +1225,6 @@
       "img": "",
       "wordCount": 280,
       "readingTime": 1
-    },
-    {
-      "title": "理清主次，集中精力解决“主要矛盾”。",
-      "date": "2021-05-03T21:05:53.000Z",
-      "updatedAt": "2021-05-03T21:05:53.000Z",
-      "file": "理清主次，集中精力解决“主要矛盾”。.md",
-      "slug": "focus-on-primary-goals-personal-growth",
-      "legacySlug": "b278b761",
-      "aliases": [
-        "b278b761"
-      ],
-      "excerpt": "上大学之后，我对好多东西都很感兴趣，都想亲自去尝试，但是我做事情往往只有三分钟热度，坚持不了多久就会放弃。这样，我的精力被严重分散，我所拥有的知识，虽然有广度，但是没有深度。我知道这样对我长期的发展很不好。 昨天和上海回来的表哥交流，他已经有将近10年的工作经验了，跟他聊天我获得的信息非常有价值。我",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 1018,
-      "readingTime": 3
     },
     {
       "title": "《如何阅读一本书》读后感",
@@ -1641,24 +1299,6 @@
       "readingTime": 3
     },
     {
-      "title": "长期任务：做一个在线oj的评测",
-      "date": "2021-03-23T09:10:48.000Z",
-      "updatedAt": "2021-03-23T09:10:48.000Z",
-      "file": "长期任务：做一个在线oj的评测.md",
-      "slug": "build-online-judge-system",
-      "legacySlug": "b3da82e1",
-      "aliases": [
-        "b3da82e1"
-      ],
-      "excerpt": "任务拆分 一个html页面，左边是题目，右边是文本框，可以编写代码。右下角有一个“提交”按钮，点击之后将代码发送到后台进行评测。 现在已有基于jupyter notebook的评测多个题目的评测代码，需要把它拆分后放在django后台运行。 可能需要用到数据库，统一使用的是mysql 3月23日 正",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 852,
-      "readingTime": 3
-    },
-    {
       "title": "pathlib库",
       "date": "2021-03-16T10:03:57.000Z",
       "updatedAt": "2021-03-16T10:03:57.000Z",
@@ -1728,24 +1368,6 @@
       ],
       "img": "",
       "wordCount": 68,
-      "readingTime": 1
-    },
-    {
-      "title": "开学第二天明确学习方向",
-      "date": "2021-03-02T20:31:39.000Z",
-      "updatedAt": "2021-03-02T20:31:39.000Z",
-      "file": "开学第二天明确学习方向.md",
-      "slug": "new-semester-study-plan-python-frontend",
-      "legacySlug": "068dcf5e",
-      "aliases": [
-        "068dcf5e"
-      ],
-      "excerpt": "可以进行的学习 matplotlib kaggle刷题pandas等 web前端（css,javascript） Python爬虫实战 继续看课本（这个可能是最无聊的） 现在就好迷，在寝室里不知道学啥。 这样吧，学学云顶之弈把",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 61,
       "readingTime": 1
     },
     {
@@ -1893,42 +1515,6 @@
       "readingTime": 3
     },
     {
-      "title": "搞了一晚上http升级为https",
-      "date": "2021-02-09T23:45:43.000Z",
-      "updatedAt": "2021-02-09T23:45:43.000Z",
-      "file": "搞了一晚上http升级为https.md",
-      "slug": "upgrade-http-to-https-wordpress-apache",
-      "legacySlug": "86e548f8",
-      "aliases": [
-        "86e548f8"
-      ],
-      "excerpt": "感慨 网上的教程好多好乱，我照着其中的一个做，差点把我网站给干没了。以后搞东西之前，一定要备份！！！！ 思路 大致就是，先在腾讯云申请了一个免费的证书，然后下载是一个压缩文件，有用的是里面的Apache的配置文件（因为我的wordpress是跑在Apache上的） 然后在宝塔面板里安装，手动安装太麻",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 577,
-      "readingTime": 2
-    },
-    {
-      "title": "学吉他总结",
-      "date": "2021-02-09T18:26:18.000Z",
-      "updatedAt": "2021-02-09T18:26:18.000Z",
-      "file": "学吉他总结.md",
-      "slug": "learning-guitar-summary",
-      "legacySlug": "58d49ca7",
-      "aliases": [
-        "58d49ca7"
-      ],
-      "excerpt": "时间？ 我是从去年暑假开始学吉他的，到目前为止也就刚好半年吧。 学的好不好？ 学的还是挺不错的，也就半年的时间，上了不超过20节课（每节一个小时）我现在已经能弹很多很多流行歌曲了。每隔一段时间我都能找到一首我特别想弹唱的歌，“把我喜欢的歌弹出来” 这就是我学吉他的最大动力。 除了会弹吉他，还有哪些收",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 380,
-      "readingTime": 1
-    },
-    {
       "title": "python面向对象课程",
       "date": "2021-02-02T10:33:46.000Z",
       "updatedAt": "2021-02-02T10:33:46.000Z",
@@ -1944,78 +1530,6 @@
       ],
       "img": "",
       "wordCount": 322,
-      "readingTime": 1
-    },
-    {
-      "title": "叮~我们的MC服务器终于到货啦！",
-      "date": "2021-01-30T11:24:49.000Z",
-      "updatedAt": "2021-01-30T11:24:49.000Z",
-      "file": "叮~我们的MC服务器终于到货啦！.md",
-      "slug": "new-minecraft-server-setup",
-      "legacySlug": "353cc484",
-      "aliases": [
-        "353cc484"
-      ],
-      "excerpt": "1月30日更新 增加了竹子mod 参考资料http://www.minecraftxz.com/bamboo/ 豆腐工坊mod 参考资料https://www.mcmod.cn/class/386.html 增加了小地图，进客户端就能看到 魔法金属 是一个大量级的Mod 可以观看籽岷的视频学习htt",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 574,
-      "readingTime": 2
-    },
-    {
-      "title": "放寒假20天总结",
-      "date": "2021-01-30T08:28:10.000Z",
-      "updatedAt": "2021-01-30T08:28:10.000Z",
-      "file": "放寒假20天总结.md",
-      "slug": "winter-vacation-20-days-summary",
-      "legacySlug": "6a934166",
-      "aliases": [
-        "6a934166"
-      ],
-      "excerpt": "寒假过得很快活，人只要一快活，就不想回顾昨天，只想着期待明天。我太快活了，所以我20多天没有写东西。现在是凌晨1:30，我有点感到孤寂，悲凉之情顿生，遂开电脑作文抒情。 1.读书 最近在读《围城》这本书， 里面的人想出来，外面的人想进去 这本书是很有意思的一本书，很真实，真的很真实，主题是两性关系，",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 550,
-      "readingTime": 2
-    },
-    {
-      "title": "参加测试脚本编写小组的感想",
-      "date": "2021-01-30T08:27:14.000Z",
-      "updatedAt": "2021-01-30T08:27:14.000Z",
-      "file": "参加测试脚本编写小组的感想.md",
-      "slug": "test-script-writing-experience",
-      "legacySlug": "7629dfe9",
-      "aliases": [
-        "7629dfe9"
-      ],
-      "excerpt": "几天前李昕老师在群里问有没有想帮他干点活的，我们九个人就都忙着报名参加了。其中四个是外专业的，两个智科，三个本研的。有如下感想： 1.对Python的好感度大大提高 Python的成功再次印证了那句话：“最简单的就是最牛逼的”（我自己说的），C++，java这样的高级语言已经够简单了，但是Pytho",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 1173,
-      "readingTime": 3
-    },
-    {
-      "title": "如何使用v2ray代理",
-      "date": "2021-01-22T10:42:05.000Z",
-      "updatedAt": "2021-01-22T10:42:05.000Z",
-      "file": "如何使用v2ray代理.md",
-      "slug": "how-to-use-v2ray-proxy",
-      "legacySlug": "44c7bda9",
-      "aliases": [
-        "44c7bda9"
-      ],
-      "excerpt": "v2ray是一个代理工具，你不仅需要在电脑上下载这个软件，还要购买或者直接搭建v2ray服务器用于科学上网。 1.下载v2ray 打开以下链接，即可自动跳入下载 点击直接下载 （如果上面链接不可用，请使用备用下载地址：链接：https://pan.baidu.com/s/1G1xoYTRB5I0hG",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 370,
       "readingTime": 1
     },
     {
@@ -2074,78 +1588,6 @@
       "img": "",
       "wordCount": 1254,
       "readingTime": 4
-    },
-    {
-      "title": "再见，恶心的排位赛",
-      "date": "2022-12-26T14:39:29.000Z",
-      "updatedAt": "2022-12-26T14:39:29.000Z",
-      "file": "再见，恶心的排位赛.md",
-      "slug": "goodbye-ranked-matches-lol",
-      "legacySlug": "04464ee3",
-      "aliases": [
-        "04464ee3"
-      ],
-      "excerpt": "最近放假回家，配了台新电脑，开始疯狂玩游戏。作为8年LOL老玩家，虽然玩到现在还是菜得一逼，但是有一颗从青铜打上白银的“野心”。最近出了一个新道具叫“心之钢”，这个道具不仅让肉装英雄变得更肉了，而且还让肉装英雄有了输出，我很喜欢玩。刚开始打排位，我玩石头人辅助，好不夸张的说，我把把carry，线上我",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 820,
-      "readingTime": 3
-    },
-    {
-      "title": "又一个寒假开始啦",
-      "date": "2022-12-17T09:38:43.000Z",
-      "updatedAt": "2022-12-17T09:38:43.000Z",
-      "file": "又一个寒假开始啦.md",
-      "slug": "winter-vacation-begins",
-      "legacySlug": "47a554c5",
-      "aliases": [
-        "47a554c5"
-      ],
-      "excerpt": "又一个寒假开始啦，期盼了一学期，终于回家啦。随着年级的增长，每次回家的感觉都略有不同，环境还是那个环境，但是心态，跟最开始大不相同。 第一次放假回家的时候，是非常期待的。毕竟是第一次在外地呆那么久，感觉自己变化了许多，也遇到很多新鲜事，想和家里人分享，父母也从来没有跟我分别过那么长时间，对我十分想念",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 654,
-      "readingTime": 2
-    },
-    {
-      "title": "我再也不胡吃海喝了😭😭😭",
-      "date": "2022-12-09T06:26:16.000Z",
-      "updatedAt": "2022-12-09T06:26:16.000Z",
-      "file": "我再也不胡吃海喝了.md",
-      "slug": "acute-gastroenteritis-overeating-hospital-visit",
-      "legacySlug": "5959d237",
-      "aliases": [
-        "5959d237"
-      ],
-      "excerpt": "我对我自己真的很栓Q，时隔一年半，我又一次因为急性肠胃炎被送进了校医院！ 历史总是惊人的巧合 历史总是惊人的巧合，这一次我同样是在夜晚乱吃东西（这次吃的是便利店卖的寿司、橙子和其它小零食），当天晚上无事发生，然而第二天早上右疼又吐。苏文把我送到了校医院，先在屁股上来一针止痛针，再挂水。川桑和良王也来",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 212,
-      "readingTime": 1
-    },
-    {
-      "title": "过去的几周我是怎么熬过来的",
-      "date": "2022-11-20T13:15:02.000Z",
-      "updatedAt": "2022-11-20T13:15:02.000Z",
-      "file": "过去的几周我是怎么熬过来的.md",
-      "slug": "how-i-survived-past-few-weeks",
-      "legacySlug": "2cc40118",
-      "aliases": [
-        "2cc40118"
-      ],
-      "excerpt": "这几周，可能是我大学三年最忙碌的时候。 这学期有20个学分，其中18个学分都在前半学期。 第11周之前，每周课程大于等于10节，平均每天3节课，作为本科生，我得天天上课，周末还有计组和计网实验，上课和做实验占据了我大部分的时间和精力。 除此之外还有很多的杂事（杂事仅代表事情比较小，比较琐碎，不代表我",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 718,
-      "readingTime": 2
     },
     {
       "title": "《悉达多》——人生就是在不断的体验与感悟",
@@ -2221,78 +1663,6 @@
       "readingTime": 3
     },
     {
-      "title": "时间管理出现重大失误，输！",
-      "date": "2022-10-21T13:53:47.000Z",
-      "updatedAt": "2022-10-21T13:53:47.000Z",
-      "file": "时间管理出现重大失误，输！.md",
-      "slug": "time-management-major-mistake-failure",
-      "legacySlug": "f543c019",
-      "aliases": [
-        "f543c019"
-      ],
-      "excerpt": "今天三节课，分别是早八、午二、晚七，苦不堪言。下午上机课，我一直坚持的想法还被组员给否了，不太开心。然后紧接着赶去听发展对象的答辩，我本来寻思着，这个答辩三点钟就开始了，我四点钟上完课过去应该很快就结束了，然后出门接彤彤，说不定还能在外面搓一顿好的，美滋滋哇～结果，到了那里，发现答辩竟然才刚刚开始，",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 472,
-      "readingTime": 2
-    },
-    {
-      "title": "数模比赛失利",
-      "date": "2022-10-10T08:01:42.000Z",
-      "updatedAt": "2022-10-10T08:01:42.000Z",
-      "file": "数模比赛失利.md",
-      "slug": "math-modeling-competition-failure",
-      "legacySlug": "f643338a",
-      "aliases": [
-        "f643338a"
-      ],
-      "excerpt": "今天数学建模比赛结果出来了，有国奖和省奖，不幸的是，我们队伍啥奖都没获。 真是屋漏偏逢连夜雨，当时上着课我就听不下去了，中午连午觉都没睡着。",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 62,
-      "readingTime": 1
-    },
-    {
-      "title": "数学建模参赛有感",
-      "date": "2022-09-18T12:46:35.000Z",
-      "updatedAt": "2022-09-18T12:46:35.000Z",
-      "file": "数学建模参赛有感.md",
-      "slug": "mathematical-modeling-competition-experience",
-      "legacySlug": "40f7467f",
-      "aliases": [
-        "40f7467f"
-      ],
-      "excerpt": "9月15日晚拿到题目，那天正好赶上开组会，又正好赶上台风过境，下暴雨，搞到晚上10点回寝室的时候整个人都湿透了。 9月18日下午，终于把题目做完啦～真的很累，回寝室直接躺床上休息 题目 题目是《古代玻璃制品的成分分析与鉴别》，重点在于分析，使用各种手段，如敏感性分析，关联分析等等，除此之外，还用了S",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 491,
-      "readingTime": 2
-    },
-    {
-      "title": "大三上学期规划",
-      "date": "2022-09-07T09:41:32.000Z",
-      "updatedAt": "2022-09-07T09:41:32.000Z",
-      "file": "大三上学期规划.md",
-      "slug": "junior-year-first-semester-plan",
-      "legacySlug": "3f190b1f",
-      "aliases": [
-        "3f190b1f"
-      ],
-      "excerpt": "读书和锻炼是仍然是主要活动，读书是学习知识最快的途径，锻炼是保持高效率的前提。其中读书的范围要收敛，多读专业书籍，少读课外书（也不能不读，毕竟思维狭隘，需要开拓），另外还要多读论文。 专业书籍需要包括以下方向： 1. 数据挖掘、数据可视化； 2. 计算机组成原理、软件工程； 3. 计算机网络； 论文",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 818,
-      "readingTime": 3
-    },
-    {
       "title": "星露谷物语为什么这么好玩？",
       "date": "2022-08-28T14:35:36.000Z",
       "updatedAt": "2022-08-28T14:35:36.000Z",
@@ -2349,25 +1719,6 @@
       "readingTime": 1
     },
     {
-      "title": "数据结构与算法实习第二阶段",
-      "date": "2022-07-02T07:38:13.000Z",
-      "updatedAt": "2022-07-02T07:38:13.000Z",
-      "file": "数据结构与算法实习第二阶段.md",
-      "slug": "data-structures-algorithms-internship-phase-2",
-      "legacySlug": "dfbba3ac",
-      "aliases": [
-        "dfbba3ac"
-      ],
-      "excerpt": "7 1 Table Tennis 知识点 ：模拟，队列 思路 ：把所有玩家按到达顺序排序，逐个处理，分如下情况： 找到所有桌子中最早结束当前服务的桌子。判断：如果这个桌子当前服务的结束时间超过9点，那剩下的玩家都不用处理了，不可能被服务。否则再继续下面的过程。 如果这个桌子是为vip预留的： 这个人",
-      "tags": [
-        "刷题",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 2560,
-      "readingTime": 7
-    },
-    {
       "title": "《乡土中国》读书笔记",
       "date": "2022-07-01T12:32:23.000Z",
       "updatedAt": "2022-07-01T12:32:23.000Z",
@@ -2384,44 +1735,6 @@
       "img": "",
       "wordCount": 1041,
       "readingTime": 3
-    },
-    {
-      "title": "数据结构与算法实习第一阶段",
-      "date": "2022-06-30T08:34:10.000Z",
-      "updatedAt": "2022-06-30T08:34:10.000Z",
-      "file": "数据结构与算法实习第一阶段.md",
-      "slug": "data-structures-algorithms-practice-phase-1",
-      "legacySlug": "85eb2c70",
-      "aliases": [
-        "85eb2c70"
-      ],
-      "excerpt": "7 1 符号配对 知识点 ：栈 思路 ：先输入数据，将所有的符号保存下来，其它的可以丢掉。然后遍历，用tmp保留当前的符号，遇到左符号，压栈，当遇到右括号，把它跟栈顶元素做比较，有如下情况： 如 [ { ] ，右符号]与最近左符号{不匹配，说明{缺少正确右符号。 如 ]{，右符号]左边没有符号，说明",
-      "tags": [
-        "刷题",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 843,
-      "readingTime": 3
-    },
-    {
-      "title": "正则表达式提取《飞鸟集》",
-      "date": "2022-06-30T03:18:09.000Z",
-      "updatedAt": "2022-06-30T03:18:09.000Z",
-      "file": "正则表达式提取《飞鸟集》.md",
-      "slug": "regex-extract-stray-birds",
-      "legacySlug": "f9ab321a",
-      "aliases": [
-        "f9ab321a"
-      ],
-      "excerpt": "需求 从网上down了一个《飞鸟集》的txt文件，其内容是这样的 总共325段（上面只截取了9段），每天要给女朋友发一段，用邮件的形式。因为是重复性操作，所以诉诸于代码实现。 所以做一个数据处理，用正则表达式把每一段提取出来，写成json文件，格式如下： 实现 regex101.com，这个网站真是",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 229,
-      "readingTime": 1
     },
     {
       "title": "组织一次成功的班级烧烤经验分享",
@@ -2604,24 +1917,6 @@
       ],
       "img": "",
       "wordCount": 482,
-      "readingTime": 2
-    },
-    {
-      "title": "期中梳理以及规划",
-      "date": "2022-05-03T09:44:40.000Z",
-      "updatedAt": "2022-05-03T09:44:40.000Z",
-      "file": "期中梳理以及规划.md",
-      "slug": "midterm-review-and-planning",
-      "legacySlug": "12008a6f",
-      "aliases": [
-        "12008a6f"
-      ],
-      "excerpt": "前言 今年影响我们最大的事情就是疫情的反弹，导致学期初无法正常上课。等到课程恢复时又到了期中，体测、考试等都被推迟，本来就漫长煎熬的期中阶段变得更加漫长煎熬了。学期初的时候我写了篇blog，当时立的flag完成的不错，所以今天再立一次。 梳理上半学期 学习、工作以及生活 这学期的学习我更加注重培养自",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 725,
       "readingTime": 2
     },
     {
@@ -2879,24 +2174,6 @@
       "readingTime": 4
     },
     {
-      "title": "成功主持150人参会的讲座！",
-      "date": "2022-04-10T15:05:16.000Z",
-      "updatedAt": "2022-04-10T15:05:16.000Z",
-      "file": "成功主持150人参会的讲座！.md",
-      "slug": "hosting-150-attendee-lecture-public-speaking",
-      "legacySlug": "19cbd8a1",
-      "aliases": [
-        "19cbd8a1"
-      ],
-      "excerpt": "每一次在公开场合的讲话对我都是一次极大的锻炼提高！担任活动策划、组织者非常不容易，要考虑每一个细节，尽力满足每一个参与者。事前进行了很多准备，真是台上十分钟台下十年功啊！经过几次锻炼，我现在可以越来越从容稳重地做这种工作了。",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 103,
-      "readingTime": 1
-    },
-    {
       "title": "Leetcode560:和为K的子数组——前缀和、哈希表",
       "date": "2022-04-09T04:08:07.000Z",
       "updatedAt": "2022-04-09T04:08:07.000Z",
@@ -3112,24 +2389,6 @@
       "img": "",
       "wordCount": 307,
       "readingTime": 1
-    },
-    {
-      "title": "今天逃课还被点名了qwq",
-      "date": "2022-03-29T01:36:46.000Z",
-      "updatedAt": "2022-03-29T01:36:46.000Z",
-      "file": "今天逃课还被点名了qwq.md",
-      "slug": "skipped-class-got-called-out",
-      "legacySlug": "39d92005",
-      "aliases": [
-        "39d92005"
-      ],
-      "excerpt": "疫情期间的生活属实腐烂。老师不能来教室监督我们上课，食堂不能堂食，所以我天天呆在寝室，时间长了整个人都变得很低迷，学习的效率很低，每天干的最多的就是刷视频打游戏和睡觉。 今天早上没定闹钟，8:00上课，7:45我才起床。迷迷糊糊的还把时间看错了，以为是8:45，索性直接摆烂不去了。其实这个时候仍然有",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 490,
-      "readingTime": 2
     },
     {
       "title": "Leetcode103:二叉树的锯齿形层序遍历",
@@ -3745,24 +3004,6 @@
       "readingTime": 5
     },
     {
-      "title": "记录寒假学做饭",
-      "date": "2022-02-02T15:11:15.000Z",
-      "updatedAt": "2022-02-02T15:11:15.000Z",
-      "file": "记录寒假学做饭.md",
-      "slug": "learning-to-cook-winter-vacation",
-      "legacySlug": "dd3d589e",
-      "aliases": [
-        "dd3d589e"
-      ],
-      "excerpt": "记录寒假学做饭 故事起因 放假前刷到b站一个热门视频，惊呼：“做饭竟然这么简单？” 再想到假期在家要天天忍受我妈做的“没有技巧，全是感情”的饭，嘴里的口水从眼睛里流了出来😭。反正我在家也很闲，那就立个学做饭的flag吧！💪 1.家庭烤肉 其实这个不是自己做的是我姐做的，我只是想把它放在第一位撑撑",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 923,
-      "readingTime": 3
-    },
-    {
       "title": "《半泽直树》观后有感",
       "date": "2022-02-01T13:52:23.000Z",
       "updatedAt": "2022-02-01T13:52:23.000Z",
@@ -3817,24 +3058,6 @@
       "readingTime": 2
     },
     {
-      "title": "年度总结",
-      "date": "2022-01-21T11:35:06.000Z",
-      "updatedAt": "2022-01-21T11:35:06.000Z",
-      "file": "年度总结.md",
-      "slug": "annual-year-in-review",
-      "legacySlug": "13207411",
-      "aliases": [
-        "13207411"
-      ],
-      "excerpt": "读书和锻炼 书大概看了15本。书\\\\影评10个。 书看的多没用，写书评才是有用的，明年多写书评。 跑步202公里。明年继续。 明年的计划 没什么计划， 就是继续读书、继续锻炼。 大学 唯读书和锻炼二事不可辜负。",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 80,
-      "readingTime": 1
-    },
-    {
       "title": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴",
       "date": "2022-01-17T00:11:13.000Z",
       "updatedAt": "2022-01-17T00:11:13.000Z",
@@ -3851,78 +3074,6 @@
       "img": "https://cs.aiupc.xyz/img/%E6%98%8E%E5%A4%A9%E4%B9%9F%E6%98%AF%E5%B0%8F%E6%98%A5%E6%97%A5%E5%92%8C1%20(1)%E6%97%8B%E8%BD%AC.jpg",
       "wordCount": 1089,
       "readingTime": 3
-    },
-    {
-      "title": "跟基友玩双人成行这辈子没这么开心过",
-      "date": "2022-01-15T23:11:00.000Z",
-      "updatedAt": "2022-01-15T23:11:00.000Z",
-      "file": "跟基友玩双人成行这辈子没这么开心过.md",
-      "slug": "playing-it-takes-two-co-op-game-experience",
-      "legacySlug": "b0cf01f1",
-      "aliases": [
-        "b0cf01f1"
-      ],
-      "excerpt": "今天跟基友探店，找到一家主机游戏。 我俩对着超大屏幕玩双人成行玩一个小时笑一个小时。 老板说别人玩这个都对骂，就你俩一直笑。 我跟老板说这才是男人的默契。 去你妈的腾讯游戏，什么是游戏？这TM才叫游戏！ 不比女朋友好玩一百倍？",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 97,
-      "readingTime": 1
-    },
-    {
-      "title": "把功夫用在平时",
-      "date": "2022-01-15T23:09:38.000Z",
-      "updatedAt": "2022-01-15T23:09:38.000Z",
-      "file": "把功夫用在平时.md",
-      "slug": "consistent-study-habits-reflections",
-      "legacySlug": "b44deaa7",
-      "aliases": [
-        "b44deaa7"
-      ],
-      "excerpt": "2020期末复习有感： 每门课复习时都要有一个抓手，这个抓手一定要足够可靠可信赖，它是你复习最主要的线索，当你把这条线索都走一遍后你要能自信的说你复习完了。 什么可以成为抓手呢？比如每次布置的作业，最好每次都自己写，写完不要随便一夹，要装订成册。再比如课本，平时就要通读，复习的时候再重新捋一遍。 这",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 244,
-      "readingTime": 1
-    },
-    {
-      "title": "百度寄的证书和礼品，惊喜！",
-      "date": "2022-01-14T10:00:39.000Z",
-      "updatedAt": "2022-01-14T10:00:39.000Z",
-      "file": "百度寄的证书和礼品，惊喜！.md",
-      "slug": "baidu-gift-certificate-surprise",
-      "legacySlug": "144271c0",
-      "aliases": [
-        "144271c0"
-      ],
-      "excerpt": "十分精美的证书+《深度学习》+一双蓝色的袜子+单片机身份卡 最最最帅的就是这个单片机身份卡，太你妈的炸裂帅了 说实话，我真没给百度做过什么事情，以后也很难，有点愧对百度。",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 73,
-      "readingTime": 1
-    },
-    {
-      "title": "复习周苦不堪言",
-      "date": "2022-01-05T10:51:42.000Z",
-      "updatedAt": "2022-01-05T10:51:42.000Z",
-      "file": "复习周苦不堪言.md",
-      "slug": "miserable-final-exam-review-week",
-      "legacySlug": "9a871566",
-      "aliases": [
-        "9a871566"
-      ],
-      "excerpt": "今年过年早，复习周被压缩到了元旦三天，接下来一个星期要考5门试。分别是大物、线代、数电、英语、Java。后两者还好说，比较容易复习。前三者真是让我苦不堪言，尤其是线代，复习到现在已经非常疲惫了，但还是心里没底，还好复习时有秀儿陪着我，不然我真撂挑子不干了。 看来功夫还是得用在平时。50个学时以上的课",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 139,
-      "readingTime": 1
     }
   ],
   "2023": [
@@ -3979,24 +3130,6 @@
       "img": "",
       "wordCount": 280,
       "readingTime": 1
-    },
-    {
-      "title": "蚌埠美食之旅",
-      "date": "2023-10-08T12:11:39.000Z",
-      "updatedAt": "2023-10-08T12:11:39.000Z",
-      "file": "蚌埠美食之旅.md",
-      "slug": "bengbu-food-tour",
-      "legacySlug": "f6639fe4",
-      "aliases": [
-        "f6639fe4"
-      ],
-      "excerpt": "蚌埠简介 蚌埠，车牌皖C，是一个在历史上非常灿烂的城市。很久之前，蚌埠仅仅是一个小渔村，清朝时期津浦铁路修经蚌埠，这是我国南北交通的大动脉，给蚌埠带来了繁荣的机会。除此之外，蚌埠还有千里淮河第一大港——蚌埠港，水路交通也十分发达。铁路和水路奠定了蚌埠重要的交通地位。交通有了，人也渐渐多起来，商业也逐",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 1023,
-      "readingTime": 3
     },
     {
       "title": "艺术品般的游戏—《荒野大镖客救赎2》",
@@ -4127,25 +3260,6 @@
       "readingTime": 2
     },
     {
-      "title": "如何搭建一个ChatGPT镜像站",
-      "date": "2023-04-12T06:11:41.000Z",
-      "updatedAt": "2023-04-12T06:11:41.000Z",
-      "file": "如何搭建一个ChatGPT镜像站.md",
-      "slug": "how-to-build-chatgpt-mirror-site",
-      "legacySlug": "28b5db09",
-      "aliases": [
-        "28b5db09"
-      ],
-      "excerpt": "为什么要搭建一个ChatGPT镜像站？ 用过ChatGPT的都知道，刚开始速度嗖嗖的，甚至不用挂代理就能用。但是后来速度越来越慢，还开始封国内IP，封梯子IP，封国内账号，搞得没法再国内使用，但是已经形成了依赖，不用不行呀。天下苦ChatGPT久矣～ 自从api接口开放之后，操作空间就大了。我们可以",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 515,
-      "readingTime": 2
-    },
-    {
       "title": "CSS布局基础知识",
       "date": "2023-03-20T05:32:55.000Z",
       "updatedAt": "2023-03-20T05:32:55.000Z",
@@ -4180,24 +3294,6 @@
       "img": "",
       "wordCount": 367,
       "readingTime": 1
-    },
-    {
-      "title": "妈妈说：好久都没这么开心了",
-      "date": "2023-03-09T09:14:05.000Z",
-      "updatedAt": "2023-03-09T09:14:05.000Z",
-      "file": "妈妈说：好久都没这么开心了.md",
-      "slug": "mom-birthday-gift-happy-story",
-      "legacySlug": "81f99cf2",
-      "aliases": [
-        "81f99cf2"
-      ],
-      "excerpt": "3月7日是女神节，3月8日是妇女节，3月9日是我妈妈生日，所以这几天对她来说是很重要的日子。 我妈妈记我和我姐的生日记得很清楚，但自己的生日却很少提到，一辈子都没过过几次生日，更没收到过什么礼物。 前段时间我二姨在家族群里发了一束花的图片，说是她儿子送的，我心想：“切，不就是一束花嘛，我也能送”。所",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20230312161200543.png",
-      "wordCount": 495,
-      "readingTime": 2
     },
     {
       "title": "HUSTOJ前端源代码解析（PHP）",
@@ -4253,24 +3349,6 @@
       "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_3956.jpeg",
       "wordCount": 622,
       "readingTime": 2
-    },
-    {
-      "title": "2023年寒假总结",
-      "date": "2023-02-15T13:31:31.000Z",
-      "updatedAt": "2023-02-15T13:31:31.000Z",
-      "file": "2023年寒假总结.md",
-      "slug": "2023-winter-vacation-summary",
-      "legacySlug": "4416947d",
-      "aliases": [
-        "4416947d"
-      ],
-      "excerpt": "明天就要返校啦，下学期课贼少（一周只有4节），而且疫情结束，再也不会被封在学校啦，可以多跟彤彤出去玩了，所以还是蛮期待的！回顾这个寒假，总体上来说是平平淡淡，但是有很多事情还是很值得记录的。整个假期可以分为三个阶段，年前、年中、年后，这三个阶段我所做的事情和心态是截然不同的。 年前 刚从学校回来，我",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 1330,
-      "readingTime": 4
     },
     {
       "title": "Qt动态添加和删除布局（仿jupyter）",
@@ -5079,24 +4157,6 @@
       ],
       "img": "",
       "wordCount": 330,
-      "readingTime": 1
-    },
-    {
-      "title": "测试仪",
-      "date": "2026-03-11T14:13:43.000Z",
-      "updatedAt": "2026-03-11T14:13:43.000Z",
-      "file": "测试仪.md",
-      "slug": "tester",
-      "legacySlug": "7fde58cd",
-      "aliases": [
-        "7fde58cd"
-      ],
-      "excerpt": "测试仪 这里是内容的起始点。",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 12,
       "readingTime": 1
     }
   ]

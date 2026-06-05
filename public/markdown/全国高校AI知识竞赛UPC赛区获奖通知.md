@@ -4,35 +4,11 @@ categories:
 - 刷题
 date: 2021-09-29 23:37:12
 slug: ai-knowledge-competition-upc-award-notice
-draft: false
+draft: true
 title: 全国高校AI知识竞赛UPC赛区获奖通知
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:21:58.392Z
 ---
-
-## 获奖名单：
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-6.png)
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/10/image.png)
-
-排名不分先后，恭喜以上获奖同学。
-
-## 领奖须知：
-
-**第一步：**扫描二维码，注册飞桨人工智能训练平台aistudio（需要手机号）
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/mmexport1632929238459.jpg)
-
-**第二步：**在gitee开源社区上为首家开源国产深度学习框架paddle paddle点个star（如果没有账号，请注册一个）
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/mmexport1632927513308-1.jpg)
-
-![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/09/image-3-590x1024.png)
-
-**第三步：**将您的aistudio注册手机号和gitee注册手机号（或邮箱）填入在线表格：【腾讯文档】百度飞桨ai知识竞赛获奖名单https://docs.qq.com/sheet/DY1JBVkR3dmtaR2d1
-
-**第四步：**加qq群：931294105 与群主孙百乐联系领取奖品
-
-## 其它说明
-
-1.  若想更换奖品，请自行联系其他获奖者，并在备注中写清楚“与XXX更换”
-2.  小度雨伞暂时没有到货，请获奖同学等待一段时间
+<!-- encrypted:draft-body:xor-base64 -->
+bWQXsefTg/D13cTPgN7Nlc3SaXJ4DA5bPzkyEyR1Y2BeKQUZNVZXQkUMD3x+D2xeVkg2DEt6IxV+KxIQJgQQOD59Hi48JQ84OihhUD8KWjdIChoUFk8+alQ2BxADOxcXITIJPDkeAmdRSGtmfENuYi8ONigpYgV+Fxs9GHB5VmJlZi9DLRkXXHpMVS0gCTw/V0B6Vk9rbmtGYH9oADg8Yi5DfRQdO18dGxZQFiM+RjoFCxMxTVs7L0o+IQoYK0wPKXowHDk5Iw0jYDk/Xz8GESkeSENFCBd/dxgwBAUBME1IOiVMWVKc/9qG6NSz6/6yxcCG0sep372/2/m8sNeW4aXc9eLT4eOM6OKGncKn9d+919er4/pTXXBQd6Tk5bLq2qaS64Dq/97G6X0zEmSgm/WN3Oazzp27/v95cpz444X31rPp/7D28oT3zqPzv7bU3b+39prUp97v79Pj04HR8IWh7qrm7rDU3K/Y+7zu4JbY/ScKJDs5K1o/iMnS2Obzn5+5qM68v/Xeg9rU1+jLb1l5ISxgCwwtJyBJeGIrGjUjIygeYVVAbQNDS0IOCmAkWCpHBRZ4EFA1LAI7ORNfJRoJOjs8BjNjJQw6YCE2QzkEWi1BVxAYV0wrKUN2HBQKOgJcJ21XY2pLXnhaVzQ6NgsnIjQXZnl/fQpiXkdpCU5GThdSPiAeU2NOTLLPlLD46bX13570+VJzss/bMCQyBjKq8M/V6veS/o+f/83dgMSjj+OAwvCwzY6x/uW14uqU096c4/C1xOao/MWy4uqrivCB1NzX5MUHWFwqK1J5GQUCMQ9ds8Dct+DQAjwCCrbr25bxz6D9y6n+7tXM7p3ul5/8wNaEwq+Y7o/XzrDltLD65bfg0J706nJTdggufyUyFyc8dmAcPR4XNl4dXkYLDXl1DmFcU1R7AFcnbAQjdQkZKQ0fMTY6XTo0NwA7IDkrHTMIGHVcAwMeWhc5Nxo6BgoSMA1MezcVPzcbFTtMSmllYlxndGkOOio0P1wiE0RsAkhKRQ4Nf3QEaVFJV3sJSDNrb1l5ISxgCwwtJyBJeGIrGjUjIygeYVVAbQNDS0IOCmAkWCpHBRZ4EFA1LAI7ORNfJRoJOjs8BjNjJQw6YCE2QzkEWi1BVxAYV0wrKUN2HBQKOgJcJ21XY2pLXnhaVzA6MhQyYHVOYnZ8NwJgVUF0QRQUXjMyZG3Q9cWA3tyFlfGt2clyUJT45Z7b/7Tp0ywvECM6KCZcttTdv7f2lf6y3tL90tbegfTZBFEgJwC169KUzu+e0Ny17+2oydS488Spu8aO9/TW1MKYhbGr5py87MGDycvf7v2N8vCc0fSMxMO00+O/yPiL+eCq2bS2xta5seuU7ofd9OHe+veCx/0CUbPdwLv3/Jbj/ZDszLv94Kjj9bLfwaq+xQ8BLkEJSVgWXCEkRHcYFUg2DFV7MQ02PQ5eDDpJExUFGAV+Ig4jLh59V2Ftf3Abnd/b3KPVoZr8htj8f0nd3uIUIr/E1aff4mBkYkFueXdTYm+o97232dG+icGW2qDf1/nT4PmM58GEi++rx9W99eetxu68xNJ5XW5lQ7LK+qqd04/a7tfi/X0zCWBnF7HiwYDW0N7P9oPe+p/U3obr2Ljv/7/i8YvQ5aTuv7jm4b2CwZbyj9z10d/X3oHDw4u40a3Z373Dx63/0Lzz1JXk5aLb+qrK1tXo4pP/q5jz692AwB9vAY//0rPumrbC+FlqVFFohsjWsunVvtbuh+vRqtWxtvDDvIPbleuw3cb33+3Oi9rZi5fjquvkvd/nrfP0vPr1lPrEo93Sq/TP1f7Sk82Hk+TD

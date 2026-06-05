@@ -4,29 +4,11 @@ categories:
 - 刷题
 date: 2020-12-02 20:09:14
 slug: cpp-stupid-errors-collection
-draft: false
+draft: true
 title: c++傻缺错误集锦
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:47:08.757Z
 ---
-
-nmd，一道题做了一个小时没看出哪里有问题，居然是“等于”写错了！  
-千万不要把“==”写成“=”
-
-输出小数时函数用成了int Fun()  
-应该用double Fun() 习惯了使用int Fun()  
-也是看了半天，没有看出问题来
-
-输入M和N  
-我只写了cin >> N;  
-导致后面全错，查了半天也没查出来；
-
-定义了数组a\[9999\];  
-后面定义了变量a  
-报错invalid types 'int\[int\]' for array subscript
-
-使用cnt变量进行计数时，没有赋初始值0；
-
-算法是对的，一送进Oj就错  
-搞了半天，数组开小了
-
-明天就程序设计考试了，我作为程序设计课代表（假课代表），不能考的太差呀！  
-加油吧
+<!-- encrypted:draft-body:xor-base64 -->
+ICpTttXogu3j0dXRjPHAn/DSh8Lfs+vzs/XshufAqtiFttXUva3xlvCD3d3t3t7lgvrciq/6q8fLt8b9rdL9vtPllc/ipOPLqOHG1+rpl9qsn/Xu0KzXo43fhtjndUMysc/mt+D9lfDukP/Wtfndr8b/anKuz6614ey8ueqR96UFrMeqU2OM2MaGv+6n1dy+78Gu9M680O6Vwv2h9/+pxN/X6uEcNEVaNQJXEGdnF1OM3vK9zJ2z1s03Nw8TJAZYHyI9W35totr3qc/g1+rhkeeOneffUFY6Z3EsB0xPdUMysPv6tcDVltTonOPRtv7dqOLKuPPAqYHxgenT1ub4kr6Cp9CZsMv8gMjGMl6q28C9/9QFhurVGXNTXavO8rLA5qq1yYPP3FITHVcHBm4JDHlJboP639DT9oDD1pPs6ob98b7H6rjxyoXI6qj1tbXq/7+V05fOpt785tHGzIHh74Wl8a3ZyFJwlOb5nODet8nRq9PTsPTILm8LXkxjCCYuTBkYRKKn14D5xLDNorD77Lfi/JTH+5He2DJTd0eg6fKm2NZaPhEUNlgeUwNASCs0F34AChIJOFE6NjkOf1oXJxFYOCUhEi5tNRY1PC89WiATf1DVx8yQrZAtKUO85vyP0uzQ69mN8tSS3+mF7emxxMW48cqF5e6q07q40v6/ueeW0LLdzvsHttX/bF+ElsOk1sa+4t6tzMG+zdec68Gi29emzM7b7/w6MNTKwp6toW5nPb/5+oLv5d3ZyID38ZXNxIXt6bDo97LxxobnwKj1tVptk8K/n9fe3Ij/oJ/SjN7pvc2GvOzEu9j5mef2nOPRvM/bq87ys/LQq4vqgN3R1MD8n5eGpumWscbagu7A0PXqiu/Qn/DPi9fns+jQv+zujOvGo/O/tN/4srLHm/e639TD0v3DgdH7hqnUrdnSeFp7renYv+Xqlsfq

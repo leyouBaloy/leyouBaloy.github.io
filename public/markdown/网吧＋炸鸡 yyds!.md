@@ -4,30 +4,11 @@ categories:
 - 随笔杂记
 date: 2021-08-11 20:57:33
 slug: internet-cafe-fried-chicken-gaming-diary
-draft: false
+draft: true
 title: 网吧＋炸鸡 yyds!
+encrypted: true
+encryptionAlgorithm: xor-base64
+encryptedAt: 2026-06-05T13:47:08.772Z
 ---
-
-这个星期我去了六次网吧，吃了三次炸鸡。
-
-### 网吧
-
-虽然说我家里也有电脑，也能打lol，但就像是别人的女朋友总是比自己的女朋友好看一点，外面的电脑也比自己家的好玩一点。
-
-现在好多网吧都倒闭了，剩下的经常爆满，我和刘金金金宇在三家网吧都充了钱，随时更换阵地。
-
-打LOL终极魔典，一开始我两被敌人玩弄于股掌之间，然后我两玩弄敌人于股掌之间，再到后来我两被队友玩弄于股掌之间。
-
-l4d2这个游戏，就是LOL的互补品，有的时候玩LOL玩得便秘，就拿这个游戏疏通一下。
-
-### 炸鸡
-
-炸鸡配菠萝啤——金童玉女 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/IMG_20210809_214229-300x225.jpg)  
-
-炸鸡配可乐——两小无猜 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/IMG_20210810_190758-300x225.jpg)  
-
-单点炸鸡——玉体横陈 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/IMG_20210811_184832-225x300.jpg)
-
-### 华莱士
-
-别跟我说吃华莱士成喷射战士，上20块钱网吃20块钱华莱士不香么。它卖的确实是泻药，你看不起泻药？泻药也是药。治便秘，不含糖。 ![](https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/mypic/wp-content/uploads/2021/08/1610250727-210x300.jpeg)
+<!-- encrypted:draft-body:xor-base64 -->
+pviuvdHOgM383sjdg9vJn//zh8LfstbeseHnhOreqd+Uv9v5v6H5l82/3PbO0fXIg+TtioD1oeXRUnBSa0BYvurClsfqTGm/1vGot+aP2u7X8uKSl46nwLu90PuAyerfwPeN18mVzcSHwca/0M6xxNUPOCOj87+02vO/gcuW9Lbe1ujS0cKA3O+EotCnwOC+5vqt7PO/1+iVz+KgzMOny+XW59aSwLWf1sTfpMWiuNKMwduy/7Ow+uW02sOe9O+d/cG67vWq3Oew2/mnt8GDzMXX1eefvpKr8Ia8x9KBz+fd8f+C3fGeyciE+uC00/FdR6Ht56rQ59b12pD+q53O5tyo6a605Izk9Lz0lbD447zk9pTBypzh3LTp06r97LL39Ki71oHO+97G/5GxqavVu7zh/I/S8tHT04zUyZ/fz4bk8bPr+rLj8ITq3qnflLnkyL+0/5fNv9Hc9tjl5Y382oWv4qT+577306H7zbzL45DXz0xpscbfA3wcgM7S1+TynpSsq8KPttXogu3j3ejCgPTTnPnZh8D9v/HYsdjKh+31q8Gatdvxvov0m/WY3sDL0+DijfHhjITYpeHlver/ruvpve/3lNnko9/TqdnD1+rdkeC/kvHW37bCo47SgPPSut+0scTottDKlNjtnsTytfvGqf7Hv+3npqvPgvrR1vTakoW8qv25sevFgNvv3O3JjMTsmfHKaXI1YzdBv/Lfh+/lqveLtu/6tY32lseI3tboexYlg/zRh4LGqsT2venwp9/0v8valM3JoPThqszW1N7OORV9nf3e3IbZo4nmjsP+ut+0sfLUtdPFmff6nOH9tcvvq87ssNnDprPKg83a1cL4lLm6RE0UekpEgdfb0ezjb1m/+Mmh29mw0t6b2O2u88qq2evR0POX2qWT9Obek+ugudCMwdV1QmMJag0nLAoCckxXNC4xHzgqa1Jlent9CmhSQmgfGRwEF1k+akQxCAoBPQJRei8cIjsWHj0HVjo4Plw6NDYKNGA7Px4zCBsuVBQHWExIIihWPRpLVGVRCXtyXXwRNzYXUUhrZmNLZ3QZUWZ7fn0KfVRFaklIQUIXUj4gHnlJbmyy4YC9+sS63feUx8yc4Mex88Ovxvez9+iqg9+B4vrW9u9XGGMTb18tHRQVb0wXOTsHPzcdXHlRTW5laktienRNNCA/YVIgSgYyUBQUH1hRYCpOKAoICSAHFjctCHw1AwEhAFcuJ34QOCMyBjk7YzpDPAgUPkJVQUcLCWF3D3YgKSEKUQhmc1VraUoueVpIbmJrXmR9dhtlfXlhWSAAXHoRcHmStK2pxY6+69yP7cLa1NaH08yd/8GHxcqx+9m+1M5DdhQRZ1skEwUpC1VcGkBaIihQdFhWU2JRAWx3UmF2GR47TRkpeiAbNiMhCzYmYiJKIQQZNUQeXRRWVWEqTikAB0kiExU3LQsnPRQFZxYINTgyFyRidFNlfmN/C38uOB1uSENFCAh2dgYGWFxSbVAKeXBXZiBJQXhNEikwenldbmVAd6rBwdve1pD5mnB5krGTpvCov+H1jvrX3cTBgN7Wkv/5htvysdvjstvxhufLqsertcTetY32l8+zCn6iqs6A9tey3qmx0uZhaJ/s34rq6LLe/b/D94b05Kj3vrnB7L6I8pD3u93gxNLU/4P80YSZ+qfLzb7i3q7Qw7Ha/JzrwaLe96jQxNfo6p3vhpzAzNG14aiLxo/X3b3ul7D7+rXA1ZnFzJvZ1bXB7Kn43LDo1KCP3IPN19Tq2JCKrq3HtXlIPzt9C0wgMhZpd1UcMQEUNjB+QmV4cVFud3l4AX4EGikfGwNaSlAvKVAxCA1IOBpJNy4KJjxUEicOVzQuIxo0YjETeiwjIUc1CQF1RAofGFhcPWgFaVtVSWVbF2V0VGNqT0F/UU90ZWJDL352U3klPCpUeQ==
