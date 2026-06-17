@@ -3,8 +3,31 @@
     <div class="content">
       <PageLoading v-if="initialLoading" label="文章加载中..." />
 
+      <section v-show="!initialLoading" class="section-tabs" aria-label="内容板块切换">
+        <div class="tab-control">
+          <button
+            class="tab-btn"
+            :class="{ active: activeSection === 'posts' }"
+            :aria-pressed="activeSection === 'posts'"
+            @click="switchSection('posts')"
+          >
+            <span>📝 文章</span>
+            <small>{{ posts.length }} 篇</small>
+          </button>
+          <button
+            class="tab-btn"
+            :class="{ active: activeSection === 'gossip' }"
+            :aria-pressed="activeSection === 'gossip'"
+            @click="switchSection('gossip')"
+          >
+            <span>💬 闲言碎语</span>
+            <small>{{ gossips.length }} 条</small>
+          </button>
+        </div>
+      </section>
+
       <!-- 移动端：保留单列 or 直接渲染所有帖子 -->
-      <div v-show="!initialLoading && isMobile">
+      <div v-show="!initialLoading && activeSection === 'posts' && isMobile">
         <div v-for="post in posts" :key="post.title" class="post-wrapper">
           <PostCard
             :title="post.title"
@@ -19,7 +42,7 @@
       </div>
 
       <!-- 桌面端：绝对定位瀑布流 -->
-      <div v-show="!initialLoading && !isMobile" class="waterfall-container" ref="waterfallWrapper" :style="{ height: wrapperHeight + 'px' }">
+      <div v-show="!initialLoading && activeSection === 'posts' && !isMobile" class="waterfall-container" ref="waterfallWrapper" :style="{ height: wrapperHeight + 'px' }">
     <div
       v-for="(post, index) in posts"
       :key="post.title"
@@ -40,9 +63,20 @@
     </div>
   </div>
 
-      <n-divider style="margin-bottom: 10px;"/>
+      <section v-show="!initialLoading && activeSection === 'gossip'" class="gossip-list">
+        <PageLoading v-if="gossipLoading" label="碎语加载中..." />
+        <template v-else>
+          <GossipCard
+            v-for="item in gossips"
+            :key="item.id"
+            :item="item"
+          />
+        </template>
+      </section>
+
+      <n-divider v-if="activeSection === 'posts'" style="margin-bottom: 10px;"/>
       <!-- 加载更多-按钮 + 无限滚动触发器 -->
-      <div v-show="!initialLoading" class="pagination-container" ref="loadMoreTrigger">
+      <div v-show="!initialLoading && activeSection === 'posts'" class="pagination-container" ref="loadMoreTrigger">
         <button
           class="load-more-btn"
           @click="loadNextPage"
@@ -68,8 +102,10 @@ import axios from 'axios';
 import { NDivider, NBackTop} from 'naive-ui';
 import Foot from "@/components/Foot.vue";
 import PostCard from "@/components/PostCard.vue";
+import GossipCard from "@/components/GossipCard.vue";
 import PageLoading from "@/components/PageLoading.vue";
 import type { PostMetadata } from "@/types/PostMetadata";
+import type { GossipItem } from "@/types/Gossip";
 
 /** 响应式判断：移动端 */
 const isMobile = ref(false);
@@ -83,6 +119,9 @@ const pageCount = ref(1);
 const loading = ref(false);
 const posts = ref<PostMetadata[]>([]);
 const initialLoading = ref(true);
+const activeSection = ref<'posts' | 'gossip'>('posts');
+const gossips = ref<GossipItem[]>([]);
+const gossipLoading = ref(false);
 
 // 底部加载元素引用（用于无限滚动）
 const loadMoreTrigger = ref<HTMLElement | null>(null);
@@ -130,6 +169,35 @@ const loadMarkdownMetadata = async () => {
       initialLoading.value = false;
     }
   }
+};
+
+const loadGossip = async () => {
+  if (gossips.value.length || gossipLoading.value) return;
+
+  try {
+    gossipLoading.value = true;
+    const response = await axios.get<GossipItem[]>('/data/gossip.json');
+    gossips.value = response.data.sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+  } catch (error) {
+    console.error('Error loading gossip:', error);
+  } finally {
+    gossipLoading.value = false;
+  }
+};
+
+const switchSection = async (section: 'posts' | 'gossip') => {
+  activeSection.value = section;
+
+  if (section === 'gossip') {
+    await loadGossip();
+    return;
+  }
+
+  await nextTick();
+  updateColWidth();
+  layoutHandle();
 };
 
 /** 布局函数：参考 useLayout.ts 的思路 */
@@ -241,7 +309,7 @@ const loadNextPage = async () => {
 /** 无限滚动触发 */
 const handleIntersect = async (entries: IntersectionObserverEntry[]) => {
   const entry = entries[0];
-  if (entry.isIntersecting && !loading.value && numPage.value < pageCount.value) {
+  if (entry.isIntersecting && activeSection.value === 'posts' && !loading.value && numPage.value < pageCount.value) {
     await loadNextPage();
   }
 };
@@ -276,6 +344,7 @@ onMounted(() => {
   }
 
   loadMarkdownMetadata();
+  loadGossip();
 });
 
 onBeforeUnmount(() => {
@@ -299,6 +368,63 @@ main {
 .content {
   /* padding: 0 10px; */
   padding-top: 10px;
+}
+
+.section-tabs {
+  width: calc(100% - 40px);
+  margin: 0 auto 22px;
+}
+
+.tab-control {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 4px;
+  border-radius: 4px;
+  background: #f5f6fa;
+}
+
+.tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #252a31;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  transition: background 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
+}
+
+.tab-btn small {
+  color: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.72;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.tab-btn.active {
+  background: #fff;
+  color: #2d96bd;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+.gossip-list {
+  display: grid;
+  gap: 12px;
+  max-width: 860px;
+  margin: 0 auto 20px;
+  padding: 0 20px;
 }
 
 /* 瀑布流容器: 相对定位, 手动设置 height */
@@ -382,6 +508,47 @@ main {
   background-color: #fff;
   color: #2d96bd;
   border-color: #2d96bd;
+}
+
+:global([data-theme="dark"] .section-tabs .tab-control) {
+  background: #182235;
+}
+
+:global([data-theme="dark"] .section-tabs .tab-btn) {
+  color: #d8e2ec;
+}
+
+:global([data-theme="dark"] .section-tabs .tab-btn:hover) {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+:global([data-theme="dark"] .section-tabs .tab-btn.active) {
+  background: #233149;
+  color: #7dd3fc;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 500px) {
+  .section-tabs {
+    width: calc(100% - 24px);
+    margin-bottom: 18px;
+  }
+
+  .tab-btn {
+    min-height: 36px;
+    padding: 0 8px;
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .tab-btn small {
+    font-size: 11px;
+  }
+
+  .gossip-list {
+    gap: 10px;
+    padding: 0 12px;
+  }
 }
 
 </style>
