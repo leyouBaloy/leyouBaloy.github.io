@@ -12,7 +12,6 @@
             @click="switchSection('posts')"
           >
             <span>📝 文章</span>
-            <small>{{ posts.length }} 篇</small>
           </button>
           <button
             class="tab-btn"
@@ -21,7 +20,6 @@
             @click="switchSection('gossip')"
           >
             <span>💬 闲言碎语</span>
-            <small>{{ gossips.length }} 条</small>
           </button>
         </div>
       </section>
