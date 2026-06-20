@@ -16,6 +16,7 @@
     "server": "node src/scripts/blog-cli.js server",
     "new": "node src/scripts/blog-cli.js new",
     "newp": "node src/scripts/blog-cli.js new",
+    "checkin": "node src/scripts/blog-cli.js english",
     "upload-images": "scripts/.venv/bin/python scripts/upload_markdown_images_to_cos.py"
   },
   "dependencies": {

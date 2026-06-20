@@ -7,7 +7,26 @@
         <span v-if="item.mood" class="mood">{{ item.mood }}</span>
       </div>
 
-      <p>{{ item.content }}</p>
+      <p v-if="item.content">{{ item.content }}</p>
+
+      <dl v-if="item.video" class="video-details">
+        <div>
+          <dt>视频标题</dt>
+          <dd>{{ item.video.title }}</dd>
+        </div>
+        <div>
+          <dt>时长</dt>
+          <dd>{{ item.video.duration }}</dd>
+        </div>
+        <div>
+          <dt>链接</dt>
+          <dd>
+            <a :href="item.video.url" target="_blank" rel="noopener noreferrer">
+              {{ item.video.platform }} ↗
+            </a>
+          </dd>
+        </div>
+      </dl>
 
       <div v-if="item.tags?.length" class="tag-row">
         <span v-for="tag in item.tags" :key="tag">#{{ tag }}</span>
@@ -87,6 +106,41 @@ p {
   word-break: break-word;
 }
 
+.video-details {
+  display: grid;
+  gap: 7px;
+  margin: 10px 0 0;
+}
+
+.video-details div {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.video-details dt {
+  color: #8a96a0;
+  font-size: 13px;
+}
+
+.video-details dd {
+  min-width: 0;
+  margin: 0;
+  color: #64727d;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.video-details a {
+  color: #2d96bd;
+  text-decoration: none;
+}
+
+.video-details a:hover {
+  text-decoration: underline;
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -113,8 +167,13 @@ p {
   color: #cbd5e1;
 }
 
+:global([data-theme="dark"] .gossip-card .video-details dd) {
+  color: #cbd5e1;
+}
+
 :global([data-theme="dark"] .gossip-date),
-:global([data-theme="dark"] .gossip-card .mood) {
+:global([data-theme="dark"] .gossip-card .mood),
+:global([data-theme="dark"] .gossip-card .video-details dt) {
   color: #94a3b8;
 }
 
@@ -132,6 +191,10 @@ p {
   .gossip-head {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .video-details div {
+    grid-template-columns: 64px minmax(0, 1fr);
   }
 }
 </style>

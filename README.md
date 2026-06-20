@@ -166,6 +166,32 @@ yarn dev
 node src/scripts/generate-metadata.js
 ```
 
+### 添加英语视频打卡
+
+传入 YouTube 链接和视频时长，CLI 会自动提取视频标题并写入
+`public/data/gossip.json`：
+
+```sh
+yarn blog english "https://www.youtube.com/watch?v=tYnyAamblSo" --duration 6:34
+```
+
+也可以使用短入口：
+
+```sh
+yarn checkin "https://www.youtube.com/watch?v=tYnyAamblSo" --duration 6:34
+```
+
+日期默认使用当天。补录、覆盖或手动指定标题时：
+
+```sh
+yarn blog english "https://youtu.be/tYnyAamblSo" \
+  --duration 6:34 \
+  --date 2026-06-20 \
+  --title "China’s investment in renewable energy pays off" \
+  --note "完成听 + 跟读。" \
+  --force
+```
+
 ## 开发流程
 
 1. 安装依赖：`yarn install`

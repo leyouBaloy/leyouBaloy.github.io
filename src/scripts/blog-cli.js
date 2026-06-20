@@ -12,6 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '../..');
 const markdownDir = path.join(rootDir, 'public/markdown');
+const gossipDataPath = path.join(rootDir, 'public/data/gossip.json');
 const metadataScript = path.join(__dirname, 'generate-metadata.js');
 
 function loadLocalEnv() {
@@ -50,7 +51,8 @@ const args = process.argv.slice(3);
 const aliases = {
   n: 'new',
   g: 'generate',
-  s: 'server'
+  s: 'server',
+  checkin: 'english'
 };
 
 const normalizedCommand = aliases[command] || command;
@@ -65,6 +67,7 @@ Commands:
   new <title>             Create a new markdown post
   slug <title>            Generate an SEO-friendly slug for a title
   slug:missing            Add AI slugs to markdown posts that do not have one
+  english <youtube-url>   Add an English video check-in
   generate | g            Generate metadata and static files into dist
   server | s              Generate metadata and start the dev server
   help                    Show this help message
@@ -86,6 +89,13 @@ Slug migration options:
   --delay-ms <ms>         Delay between AI batches, defaults to 1500
   --allow-local           Fall back to local slugify if AI is unavailable
 
+English check-in options:
+  --duration <m:ss>       Video duration, required
+  --date <YYYY-MM-DD>     Check-in date, defaults to today
+  --title <text>          Override the title fetched from YouTube
+  --note <text>           Check-in note, defaults to 完成听 + 跟读。
+  --force                 Replace an existing English check-in for the date
+
 AI slug env:
   BLOG_AI_SLUG_PROVIDER   google (default) or openai-compatible
   BLOG_AI_SLUG_API_BASE_URL
@@ -101,6 +111,7 @@ Examples:
   yarn blog new "Vue 学习笔记" --slug vue-notes --tag Vue --tag 前端
   yarn blog slug "Vue3 实现小红书瀑布流布局"
   yarn blog slug:missing
+  yarn blog english "https://www.youtube.com/watch?v=..." --duration 6:34
   yarn blog generate
   yarn blog server --port 5173
 `;
@@ -164,6 +175,15 @@ function formatDate(date = new Date()) {
     pad(date.getMinutes()),
     pad(date.getSeconds())
   ].join(':');
+}
+
+function formatDay(date = new Date()) {
+  const pad = (value) => String(value).padStart(2, '0');
+  return [
+    date.getFullYear(),
+    pad(date.getMonth() + 1),
+    pad(date.getDate())
+  ].join('-');
 }
 
 function slugify(value) {
@@ -609,6 +629,131 @@ ${draftLine}---
   console.log(`Created ${path.relative(rootDir, filepath)}`);
 }
 
+function normalizeYouTubeUrl(value) {
+  let url;
+
+  try {
+    url = new URL(value);
+  } catch {
+    throw new Error('Please provide a valid YouTube URL.');
+  }
+
+  const hostname = url.hostname.replace(/^www\./, '');
+  let videoId = '';
+
+  if (hostname === 'youtu.be') {
+    videoId = url.pathname.split('/').filter(Boolean)[0] || '';
+  } else if (['youtube.com', 'm.youtube.com'].includes(hostname)) {
+    if (url.pathname === '/watch') {
+      videoId = url.searchParams.get('v') || '';
+    } else if (url.pathname.startsWith('/shorts/') || url.pathname.startsWith('/embed/')) {
+      videoId = url.pathname.split('/').filter(Boolean)[1] || '';
+    }
+  }
+
+  if (!/^[A-Za-z0-9_-]{11}$/.test(videoId)) {
+    throw new Error('Could not find a valid YouTube video ID in the URL.');
+  }
+
+  return `https://www.youtube.com/watch?v=${videoId}`;
+}
+
+function validateCheckinDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    throw new Error('--date must use YYYY-MM-DD format.');
+  }
+
+  const date = new Date(`${value}T00:00:00`);
+  if (Number.isNaN(date.getTime()) || formatDay(date) !== value) {
+    throw new Error(`Invalid date: ${value}`);
+  }
+}
+
+function validateDuration(value) {
+  if (!/^\d+:[0-5]\d$/.test(value)) {
+    throw new Error('--duration must use m:ss format, for example 6:34.');
+  }
+}
+
+async function fetchYouTubeTitle(videoUrl) {
+  const endpoint = new URL('https://www.youtube.com/oembed');
+  endpoint.searchParams.set('url', videoUrl);
+  endpoint.searchParams.set('format', 'json');
+
+  const response = await fetch(endpoint, {
+    headers: {
+      Accept: 'application/json',
+      'User-Agent': 'Bailey-Blog-CLI'
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`Could not fetch YouTube title (HTTP ${response.status}). Use --title to provide it manually.`);
+  }
+
+  const metadata = await response.json();
+  if (!metadata.title) {
+    throw new Error('YouTube did not return a video title. Use --title to provide it manually.');
+  }
+
+  return metadata.title;
+}
+
+async function addEnglishCheckin() {
+  const { positionals, options } = parseOptions(args);
+  const rawUrl = positionals[0];
+
+  if (!rawUrl) {
+    throw new Error('Please provide a YouTube URL.');
+  }
+
+  if (!options.duration) {
+    throw new Error('--duration is required. Example: --duration 6:34');
+  }
+
+  const date = options.date || formatDay();
+  validateCheckinDate(date);
+  validateDuration(options.duration);
+
+  const videoUrl = normalizeYouTubeUrl(rawUrl);
+  const videoTitle = options.title || await fetchYouTubeTitle(videoUrl);
+  const items = fs.existsSync(gossipDataPath)
+    ? JSON.parse(fs.readFileSync(gossipDataPath, 'utf8'))
+    : [];
+  const id = `english-video-${date}`;
+  const existingIndex = items.findIndex((item) => item.id === id);
+
+  if (existingIndex >= 0 && !options.force) {
+    throw new Error(`An English check-in already exists for ${date}. Use --force to replace it.`);
+  }
+
+  const item = {
+    id,
+    date,
+    kind: 'english-checkin',
+    title: '今日英语打卡',
+    content: options.note || '完成听 + 跟读。',
+    video: {
+      title: videoTitle,
+      duration: options.duration,
+      url: videoUrl,
+      platform: 'YouTube'
+    },
+    tags: ['英语', '听力', '跟读']
+  };
+
+  if (existingIndex >= 0) {
+    items.splice(existingIndex, 1, item);
+  } else {
+    items.push(item);
+  }
+
+  items.sort((a, b) => b.date.localeCompare(a.date));
+  fs.mkdirSync(path.dirname(gossipDataPath), { recursive: true });
+  fs.writeFileSync(gossipDataPath, `${JSON.stringify(items, null, 2)}\n`, 'utf8');
+  console.log(`Added English check-in for ${date}: ${videoTitle} (${options.duration})`);
+}
+
 async function printGeneratedSlug() {
   const { positionals, options } = parseOptions(args);
   const title = positionals.join(' ').trim();
@@ -771,6 +916,9 @@ async function main() {
         break;
       case 'slug:missing':
         await addMissingSlugs();
+        break;
+      case 'english':
+        await addEnglishCheckin();
         break;
       case 'generate':
         await generateStaticFiles();
