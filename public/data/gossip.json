@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-06-21",
+    "date": "2026-06-21",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "完成听 + 跟读。",
+    "video": {
+      "title": "Ukraine is now the world's AI war lab | DW News",
+      "duration": "10:01",
+      "url": "https://www.youtube.com/watch?v=Gfqdf4JFErU",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-06-20",
     "date": "2026-06-20",
     "kind": "english-checkin",
