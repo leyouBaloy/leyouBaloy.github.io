@@ -1,5 +1,33 @@
 [
   {
+    "id": "english-video-2026-07-01",
+    "date": "2026-07-01",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "完成听 + 跟读。",
+    "video": {
+      "title": "CNN10",
+      "duration": "待补充",
+      "url": "https://www.youtube.com/watch?v=lNuGZwnBDg4",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "english-video-2026-06-23",
+    "date": "2026-06-23",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "完成听 + 跟读。",
+    "video": {
+      "title": "The World Cup returns to a very different America | June 12, 2026",
+      "duration": "10:05",
+      "url": "https://www.youtube.com/watch?v=cwKZ-eQG1w4",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-06-21",
     "date": "2026-06-21",
     "kind": "english-checkin",
