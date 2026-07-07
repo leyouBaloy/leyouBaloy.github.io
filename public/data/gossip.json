@@ -1,5 +1,33 @@
 [
   {
+    "id": "english-video-2026-07-07",
+    "date": "2026-07-07",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "完成听 + 跟读。",
+    "video": {
+      "title": "From Sea to Shining Sea, America Prepares for 250 | July 3, 2026",
+      "duration": "待补充",
+      "url": "https://www.youtube.com/watch?v=Xq1ZR1JSdMY",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "english-video-2026-07-02",
+    "date": "2026-07-02",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "完成听 + 跟读。",
+    "video": {
+      "title": "A diplomatic breakthrough in the US and Israel's war with Iran?",
+      "duration": "待补充",
+      "url": "https://www.youtube.com/watch?v=xu1QlVWYhUc&t=15s",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-07-01",
     "date": "2026-07-01",
     "kind": "english-checkin",
