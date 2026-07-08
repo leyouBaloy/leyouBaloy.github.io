@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-07-08",
+    "date": "2026-07-08",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "完成听 + 跟读。",
+    "video": {
+      "title": "Why conquering hardships led these two inventors to major success | June 11, 2026",
+      "duration": "10:04",
+      "url": "https://www.youtube.com/watch?v=5J239-zmHgw",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-07-07",
     "date": "2026-07-07",
     "kind": "english-checkin",
