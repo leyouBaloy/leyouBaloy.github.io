@@ -1,13 +1,27 @@
 [
   {
+    "id": "english-video-2026-07-15",
+    "date": "2026-07-15",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "复习听力 + 跟读。",
+    "video": {
+      "title": "Why do we need eight hours of sleep? | July 10, 2026",
+      "duration": "10:27",
+      "url": "https://www.youtube.com/watch?v=-QLEZdlm1MM",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-07-14",
     "date": "2026-07-14",
     "kind": "english-checkin",
     "title": "今日英语打卡",
     "content": "完成听力 + 跟读。",
     "video": {
-      "title": "YouTube 视频（标题待确认）",
-      "duration": "待确认",
+      "title": "Why do we need eight hours of sleep? | July 10, 2026",
+      "duration": "10:27",
       "url": "https://www.youtube.com/watch?v=-QLEZdlm1MM",
       "platform": "YouTube"
     },
