@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-07-17",
+    "date": "2026-07-17",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "完成听 + 跟读。",
+    "video": {
+      "title": "The team of women protecting South Africa's last black rhinos | July 17, 2026",
+      "duration": "10:00",
+      "url": "https://www.youtube.com/watch?v=VH4oY9S0vn4",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-07-15",
     "date": "2026-07-15",
     "kind": "english-checkin",
