@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-07-22",
+    "date": "2026-07-22",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "又听了 1:20。",
+    "video": {
+      "title": "How a storm in Hawaii reawakened a \"living fossil\" | May 21, 2026",
+      "duration": "10:00",
+      "url": "https://www.youtube.com/watch?v=3hgi0PQM98g",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-07-21",
     "date": "2026-07-21",
     "kind": "english-checkin",
