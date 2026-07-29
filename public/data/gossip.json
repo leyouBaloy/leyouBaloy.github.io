@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-07-29",
+    "date": "2026-07-29",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "又看了4分钟。",
+    "video": {
+      "title": "Why an iconic footwear brand is ditching shoes for A.I. | July 24, 2026",
+      "duration": "10:38",
+      "url": "https://www.youtube.com/watch?v=g-mLCrjn65I",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-07-28",
     "date": "2026-07-28",
     "kind": "english-checkin",
