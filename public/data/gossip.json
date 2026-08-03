@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-08-03",
+    "date": "2026-08-03",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "又听了2分半。",
+    "video": {
+      "title": "A Georgia Swamp, a WWII Battlefield and others just earned World Heritage Status | July 31, 2026",
+      "duration": "10:00",
+      "url": "https://www.youtube.com/watch?v=kli6QLBAabQ",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-07-31",
     "date": "2026-07-31",
     "kind": "english-checkin",
