@@ -1,5 +1,13 @@
 [
   {
+    "id": "health-2026-08-11",
+    "date": "2026-08-11",
+    "kind": "note",
+    "title": "感冒了",
+    "content": "感冒，有点难受。",
+    "tags": ["健康", "感冒"]
+  },
+  {
     "id": "english-video-2026-08-11",
     "date": "2026-08-11",
     "kind": "english-checkin",
