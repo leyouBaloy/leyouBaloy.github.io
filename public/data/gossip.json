@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-08-11",
+    "date": "2026-08-11",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "又看了1分多，看到2:07。今天感冒了😷",
+    "video": {
+      "title": "How an insect-eating plant is proving Charles Darwin right 150 years later",
+      "duration": "10:50",
+      "url": "https://www.youtube.com/watch?v=VMyEevDkEdk",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-08-10",
     "date": "2026-08-10",
     "kind": "english-checkin",
