@@ -1,5 +1,41 @@
 [
   {
+    "id": "health-2026-08-14",
+    "date": "2026-08-14",
+    "kind": "note",
+    "title": "感冒快好了",
+    "content": "感冒好差不多了。",
+    "tags": ["健康", "感冒"]
+  },
+  {
+    "id": "english-video-2026-08-14",
+    "date": "2026-08-14",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "又看了1分半，看到4:30。感冒好差不多了😊",
+    "video": {
+      "title": "How an insect-eating plant is proving Charles Darwin right 150 years later",
+      "duration": "10:50",
+      "url": "https://www.youtube.com/watch?v=VMyEevDkEdk",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "english-video-2026-08-12",
+    "date": "2026-08-12",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "又看了1分钟，看到3:00。",
+    "video": {
+      "title": "How an insect-eating plant is proving Charles Darwin right 150 years later",
+      "duration": "10:50",
+      "url": "https://www.youtube.com/watch?v=VMyEevDkEdk",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "health-2026-08-11",
     "date": "2026-08-11",
     "kind": "note",
