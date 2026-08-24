@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-08-24",
+    "date": "2026-08-24",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "继续听到8:10。",
+    "video": {
+      "title": "How an AI chatbot is helping this blind man 'see' for the first time | August 20, 2026",
+      "duration": "10:17",
+      "url": "https://www.youtube.com/watch?v=NfNHImQPHJc",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-08-20",
     "date": "2026-08-20",
     "kind": "english-checkin",
