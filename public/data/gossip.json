@@ -1,5 +1,41 @@
 [
   {
+    "id": "english-video-2026-08-25-monarchy",
+    "date": "2026-08-25",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，看到1:20。",
+    "video": {
+      "title": "Special Edition: The Role of the Monarchy, The Role of the Crown | August 24, 2026",
+      "duration": "10:56",
+      "url": "https://www.youtube.com/watch?v=hKB22DkJXGQ",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "english-video-2026-08-25",
+    "date": "2026-08-25",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "看完最后2分多钟。✅ 视频完结",
+    "video": {
+      "title": "How an AI chatbot is helping this blind man 'see' for the first time | August 20, 2026",
+      "duration": "10:17",
+      "url": "https://www.youtube.com/watch?v=NfNHImQPHJc",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "sport-2026-08-24",
+    "date": "2026-08-24",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "爬坡3公里。",
+    "tags": ["运动", "跑步"]
+  },
+  {
     "id": "english-video-2026-08-24",
     "date": "2026-08-24",
     "kind": "english-checkin",
