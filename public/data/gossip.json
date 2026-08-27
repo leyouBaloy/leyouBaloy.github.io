@@ -1,5 +1,27 @@
 [
   {
+    "id": "english-video-2026-08-27",
+    "date": "2026-08-27",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "继续听到5:30。",
+    "video": {
+      "title": "Special Edition: The Role of the Monarchy, The Role of the Crown | August 24, 2026",
+      "duration": "10:56",
+      "url": "https://www.youtube.com/watch?v=hKB22DkJXGQ",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "sport-2026-08-26",
+    "date": "2026-08-26",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "椭圆机30分钟。",
+    "tags": ["运动", "椭圆机"]
+  },
+  {
     "id": "english-video-2026-08-26",
     "date": "2026-08-26",
     "kind": "english-checkin",
