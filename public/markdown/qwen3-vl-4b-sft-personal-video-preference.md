@@ -11,7 +11,7 @@ tags:
 - 视觉语言模型
 - 本地训练
 - QLoRA
-img:
+img: /images/qwen3-vl-sft-cover.png
 ---
 
 # 用一台 16GB 显卡，把「我喜欢什么样的视频」教给 4B 视觉模型
