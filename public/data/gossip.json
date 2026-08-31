@@ -1,5 +1,32 @@
 [
   {
+    "id": "english-video-2026-08-31-nasa",
+    "date": "2026-08-31",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到2:30。",
+    "video": {
+      "title": "NASA's newest 'discovery machine' could change our understanding of the universe | August 31, 2026",
+      "url": "https://www.youtube.com/watch?v=GOCRs9omW1U",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "english-video-2026-08-31",
+    "date": "2026-08-31",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "简单听完剩下部分。✅ 视频完结",
+    "video": {
+      "title": "Special Edition: The Role of the Monarchy, The Role of the Crown | August 24, 2026",
+      "duration": "10:56",
+      "url": "https://www.youtube.com/watch?v=hKB22DkJXGQ",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-08-28",
     "date": "2026-08-28",
     "kind": "english-checkin",
