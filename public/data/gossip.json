@@ -1,5 +1,26 @@
 [
   {
+    "id": "sport-2026-09-02",
+    "date": "2026-09-02",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "椭圆机有氧训练，体重186（和身高一样）。",
+    "tags": ["运动", "椭圆机"]
+  },
+  {
+    "id": "english-video-2026-09-02",
+    "date": "2026-09-02",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "听完了这个视频。✅ 视频完结",
+    "video": {
+      "title": "NASA's newest 'discovery machine' could change our understanding of the universe | August 31, 2026",
+      "url": "https://www.youtube.com/watch?v=GOCRs9omW1U",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-09-01",
     "date": "2026-09-01",
     "kind": "english-checkin",
