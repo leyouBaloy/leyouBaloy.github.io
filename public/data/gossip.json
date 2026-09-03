@@ -1,5 +1,18 @@
 [
   {
+    "id": "english-video-2026-09-03",
+    "date": "2026-09-03",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到3:00。",
+    "video": {
+      "title": "Scientists task these \"unicorns of the sea\" to gather crucial Arctic data | September 3, 2026",
+      "url": "https://www.youtube.com/watch?v=30sy3CNCQTc",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "sport-2026-09-02",
     "date": "2026-09-02",
     "kind": "note",
