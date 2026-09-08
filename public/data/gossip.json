@@ -1,5 +1,26 @@
 [
   {
+    "id": "english-video-2026-09-08",
+    "date": "2026-09-08",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "继续听到7:00。",
+    "video": {
+      "title": "Small space, big perks: Inside Paris' historic tiny apartments | September 4, 2026",
+      "url": "https://www.youtube.com/watch?v=6gMknBYVO5o",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "sport-2026-09-07",
+    "date": "2026-09-07",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "有氧运动30分钟。",
+    "tags": ["运动", "有氧"]
+  },
+  {
     "id": "english-video-2026-09-07",
     "date": "2026-09-07",
     "kind": "english-checkin",
