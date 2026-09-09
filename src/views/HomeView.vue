@@ -373,32 +373,9 @@ main {
   margin: 0 auto 22px;
 }
 
-.tab-control {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
-  padding: 4px;
-  border-radius: 4px;
-  background: #f5f6fa;
-}
+.tab-control {   display: grid;   grid-template-columns: repeat(2, minmax(0, 1fr));   gap: 4px;   padding: 4px;   border-radius: 14px;   background: rgba(255, 255, 255, 0.42);   border: 1px solid rgba(255, 255, 255, 0.55);   box-shadow:     0 8px 24px rgba(15, 23, 42, 0.08),     inset 0 1px 0 rgba(255, 255, 255, 0.65);   backdrop-filter: saturate(180%) blur(18px);   -webkit-backdrop-filter: saturate(180%) blur(18px); }
 
-.tab-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 38px;
-  padding: 0 12px;
-  border: 0;
-  border-radius: 4px;
-  background: transparent;
-  color: #252a31;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1;
-  transition: background 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
-}
+.tab-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 38px; padding: 0 12px; border: 0; border-radius: 11px; background: transparent; color: rgba(37, 42, 49, 0.72); cursor: pointer; font-size: 14px; font-weight: 700; line-height: 1; transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, transform 0.2s ease; }
 
 .tab-btn small {
   color: inherit;
@@ -407,15 +384,9 @@ main {
   opacity: 0.72;
 }
 
-.tab-btn:hover {
-  background: rgba(255, 255, 255, 0.62);
-}
+.tab-btn:hover { background: rgba(255, 255, 255, 0.28); color: #252a31; }
 
-.tab-btn.active {
-  background: #fff;
-  color: #2d96bd;
-  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
-}
+.tab-btn.active { background: rgba(255, 255, 255, 0.78); color: #2d96bd; box-shadow: 0 2px 10px rgba(15, 23, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9); }
 
 .gossip-list {
   display: grid;
@@ -508,23 +479,13 @@ main {
   border-color: #2d96bd;
 }
 
-:global([data-theme="dark"] .section-tabs .tab-control) {
-  background: #182235;
-}
+:global([data-theme="dark"] .section-tabs .tab-control) { background: rgba(24, 34, 53, 0.55); border-color: rgba(255, 255, 255, 0.12); box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08); }
 
-:global([data-theme="dark"] .section-tabs .tab-btn) {
-  color: #d8e2ec;
-}
+:global([data-theme="dark"] .section-tabs .tab-btn) { color: rgba(216, 226, 236, 0.72); }
 
-:global([data-theme="dark"] .section-tabs .tab-btn:hover) {
-  background: rgba(255, 255, 255, 0.06);
-}
+:global([data-theme="dark"] .section-tabs .tab-btn:hover) { background: rgba(255, 255, 255, 0.06); color: #d8e2ec; }
 
-:global([data-theme="dark"] .section-tabs .tab-btn.active) {
-  background: #233149;
-  color: #7dd3fc;
-  box-shadow: none;
-}
+:global([data-theme="dark"] .section-tabs .tab-btn.active) { background: rgba(45, 58, 82, 0.85); color: #7dd3fc; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
 
 @media screen and (max-width: 500px) {
   .section-tabs {
@@ -532,12 +493,7 @@ main {
     margin-bottom: 18px;
   }
 
-  .tab-btn {
-    min-height: 36px;
-    padding: 0 8px;
-    gap: 6px;
-    font-size: 13px;
-  }
+  .tab-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 38px; padding: 0 12px; border: 0; border-radius: 11px; background: transparent; color: rgba(37, 42, 49, 0.72); cursor: pointer; font-size: 14px; font-weight: 700; line-height: 1; transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, transform 0.2s ease; }
 
   .tab-btn small {
     font-size: 11px;
