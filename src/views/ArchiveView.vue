@@ -161,6 +161,7 @@
                 :content="post.title" 
                 :time="post.date"
                 :category="getCategory(post)"
+                
                 :tags="getTags(post)"
                 highlight
                 :search-keyword="searchQuery"
@@ -170,6 +171,15 @@
             </timeline>
           </div>
         </n-tab-pane>
+             <n-tab-pane name="stats" tab="📊 ">
+                      <PageLoading v-if="loadingArchives" label="统计数据加载中..." compact />
+                      <StatsPanel
+                                 v-else
+                                 :posts-by-year="postsByYear"
+                                 :posts-by-tag="postsByTag"
+                               />
+                    </n-tab-pane>
+        
       </n-tabs>
     </div>
     <Foot></Foot>
@@ -187,6 +197,8 @@ import { SearchOutline } from '@vicons/ionicons5';
 import type { PostMetadata } from "@/types/PostMetadata.ts";
 import Foot from '@/components/Foot.vue';
 import PageLoading from '@/components/PageLoading.vue';
+  import StatsPanel from '@/components/StatsPanel.vue';
+  
 
 const totalPosts = ref(0);
 const postsByYear = ref<Record<string, PostMetadata[]>>({});
