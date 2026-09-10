@@ -1,5 +1,13 @@
 [
   {
+    "id": "sport-2026-09-09",
+    "date": "2026-09-09",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "继续坚持锻炼。",
+    "tags": ["运动", "锻炼"]
+  },
+  {
     "id": "english-video-2026-09-09",
     "date": "2026-09-09",
     "kind": "english-checkin",
