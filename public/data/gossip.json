@@ -1,5 +1,18 @@
 [
   {
+    "id": "english-video-2026-09-11",
+    "date": "2026-09-11",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到2:00。",
+    "video": {
+      "title": "France suffers another museum heist— its 22nd since the Louvre | September 10, 2026",
+      "url": "https://www.youtube.com/watch?v=RGRDrF_E5Pg",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "sport-2026-09-09",
     "date": "2026-09-09",
     "kind": "note",
