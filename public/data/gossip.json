@@ -1,5 +1,13 @@
 [
   {
+    "id": "sport-2026-09-10",
+    "date": "2026-09-10",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "椭圆机30分钟。",
+    "tags": ["运动", "椭圆机"]
+  },
+  {
     "id": "english-video-2026-09-11",
     "date": "2026-09-11",
     "kind": "english-checkin",
