@@ -1,5 +1,18 @@
 [
   {
+    "id": "english-video-2026-09-14",
+    "date": "2026-09-14",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到5:30（总时长11:27）。",
+    "video": {
+      "title": "CNN10 Special Edition: Remembering 9/11, 25 Years Later",
+      "url": "https://www.youtube.com/watch?v=7n6eWN_yl_g",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "sport-2026-09-10",
     "date": "2026-09-10",
     "kind": "note",
