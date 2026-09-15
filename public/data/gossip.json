@@ -1,5 +1,26 @@
 [
   {
+    "id": "english-video-2026-09-15",
+    "date": "2026-09-15",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "听完了这个视频。✅ 视频完结",
+    "video": {
+      "title": "CNN10 Special Edition: Remembering 9/11, 25 Years Later",
+      "url": "https://www.youtube.com/watch?v=7n6eWN_yl_g",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "sport-2026-09-14",
+    "date": "2026-09-14",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "椭圆机继续运动减脂。",
+    "tags": ["运动", "椭圆机", "减脂"]
+  },
+  {
     "id": "english-video-2026-09-14",
     "date": "2026-09-14",
     "kind": "english-checkin",
