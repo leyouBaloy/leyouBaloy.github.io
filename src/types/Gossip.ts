@@ -1,14 +1,16 @@
 export interface GossipVideo {
   title: string;
-  duration: string;
+  /** 视频时长，可缺省；新条目按“听到 x:xx”写在 content 里 */
+  duration?: string;
   url: string;
-  platform: 'YouTube';
+  platform?: string;
 }
 
 export interface GossipItem {
   id: string;
+  /** YYYY-MM-DD */
   date: string;
-  kind?: 'english-checkin';
+  kind?: 'english-checkin' | 'note' | string;
   title?: string;
   content?: string;
   video?: GossipVideo;

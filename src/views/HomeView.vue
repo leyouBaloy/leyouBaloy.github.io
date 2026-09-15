@@ -64,11 +64,19 @@
       <section v-show="!initialLoading && activeSection === 'gossip'" class="gossip-list">
         <PageLoading v-if="gossipLoading" label="碎语加载中..." />
         <template v-else>
-          <GossipCard
-            v-for="item in gossips"
-            :key="item.id"
-            :item="item"
-          />
+          <div v-for="group in gossipGroups" :key="group.key" class="gossip-month">
+            <h2 class="gossip-month-head">
+              <span class="gossip-month-label">{{ group.label }}</span>
+              <span class="gossip-month-count">{{ group.items.length }} 条</span>
+            </h2>
+            <div class="gossip-month-body">
+              <GossipCard
+                v-for="item in group.items"
+                :key="item.id"
+                :item="item"
+              />
+            </div>
+          </div>
         </template>
       </section>
 
@@ -95,7 +103,7 @@
 
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import axios from 'axios';
 import { NDivider, NBackTop} from 'naive-ui';
 import Foot from "@/components/Foot.vue";
@@ -175,8 +183,10 @@ const loadGossip = async () => {
   try {
     gossipLoading.value = true;
     const response = await axios.get<GossipItem[]>('/data/gossip.json');
-    gossips.value = response.data.sort((a, b) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    gossips.value = [...response.data].sort((a, b) => {
+      const diff = new Date(b.date).getTime() - new Date(a.date).getTime();
+      // 同一天的多条记录：用 id 倒序兜底，保证顺序稳定
+      return diff !== 0 ? diff : b.id.localeCompare(a.id);
     });
   } catch (error) {
     console.error('Error loading gossip:', error);
@@ -184,6 +194,30 @@ const loadGossip = async () => {
     gossipLoading.value = false;
   }
 };
+
+/** 按月份分组，供时间轴分组标题使用 */
+const gossipGroups = computed(() => {
+  const groups: { key: string; label: string; items: GossipItem[] }[] = [];
+  const groupMap = new Map<string, { key: string; label: string; items: GossipItem[] }>();
+
+  for (const item of gossips.value) {
+    const key = (item.date ?? '').slice(0, 7);
+    let group = groupMap.get(key);
+    if (!group) {
+      const [year, month] = key.split('-');
+      group = {
+        key,
+        label: year && month ? `${year}年${Number(month)}月` : '未标注日期',
+        items: [],
+      };
+      groupMap.set(key, group);
+      groups.push(group);
+    }
+    group.items.push(item);
+  }
+
+  return groups;
+});
 
 const switchSection = async (section: 'posts' | 'gossip') => {
   activeSection.value = section;
@@ -389,11 +423,57 @@ main {
 .tab-btn.active { background: rgba(255, 255, 255, 0.78); color: #2d96bd; box-shadow: 0 2px 10px rgba(15, 23, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9); }
 
 .gossip-list {
-  display: grid;
-  gap: 12px;
   max-width: 860px;
   margin: 0 auto 20px;
   padding: 0 20px;
+}
+
+.gossip-month + .gossip-month {
+  margin-top: 16px;
+}
+
+.gossip-month-head {
+  position: sticky;
+  top: 54px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 8px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.07);
+}
+
+.gossip-month-label {
+  color: #2d96bd;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.gossip-month-count {
+  color: #8a96a0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gossip-month-body {
+  display: grid;
+  gap: 12px;
+}
+
+/* 每个分组的第一条：时间轴从节点处开始；整页最后一条：到节点处结束 */
+.gossip-list :deep(.gossip-month-body .gossip-card:first-child .gossip-axis::before) {
+  top: 22px;
+}
+
+.gossip-list :deep(.gossip-month:last-child .gossip-month-body .gossip-card:last-child .gossip-axis::before) {
+  bottom: calc(100% - 22px);
 }
 
 /* 瀑布流容器: 相对定位, 手动设置 height */
@@ -479,6 +559,19 @@ main {
   border-color: #2d96bd;
 }
 
+:global([data-theme="dark"] .gossip-month-head) {
+  background: rgba(24, 34, 53, 0.92);
+  box-shadow: 0 8px 22px rgba(2, 6, 23, 0.35);
+}
+
+:global([data-theme="dark"] .gossip-month-label) {
+  color: #7dd3fc;
+}
+
+:global([data-theme="dark"] .gossip-month-count) {
+  color: #94a3b8;
+}
+
 :global([data-theme="dark"] .section-tabs .tab-control) { background: rgba(24, 34, 53, 0.55); border-color: rgba(255, 255, 255, 0.12); box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08); }
 
 :global([data-theme="dark"] .section-tabs .tab-btn) { color: rgba(216, 226, 236, 0.72); }
@@ -500,8 +593,24 @@ main {
   }
 
   .gossip-list {
-    gap: 10px;
     padding: 0 12px;
+  }
+
+  .gossip-month-body {
+    gap: 10px;
+  }
+
+  .gossip-month-head {
+    top: 46px;
+    padding: 6px 10px;
+  }
+
+  .gossip-list :deep(.gossip-month-body .gossip-card:first-child .gossip-axis::before) {
+    top: 18px;
+  }
+
+  .gossip-list :deep(.gossip-month:last-child .gossip-month-body .gossip-card:last-child .gossip-axis::before) {
+    bottom: calc(100% - 18px);
   }
 }
 
