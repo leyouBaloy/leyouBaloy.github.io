@@ -1,5 +1,18 @@
 [
   {
+    "id": "english-video-2026-09-17",
+    "date": "2026-09-17",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "听完了这个视频。✅ 视频完结",
+    "video": {
+      "title": "Make it Make Cents: The Stock Market, Finally Explained | September 15, 2026",
+      "url": "https://www.youtube.com/watch?v=7RTnouLGf-w",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-09-16",
     "date": "2026-09-16",
     "kind": "english-checkin",
