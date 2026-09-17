@@ -64,6 +64,7 @@
       <section v-show="!initialLoading && activeSection === 'gossip'" class="gossip-list">
         <PageLoading v-if="gossipLoading" label="碎语加载中..." />
         <template v-else>
+          <GossipStats :items="gossips" />
           <div v-for="group in gossipGroups" :key="group.key" class="gossip-month">
             <h2 class="gossip-month-head">
               <span class="gossip-month-label">{{ group.label }}</span>
@@ -109,6 +110,7 @@ import { NDivider, NBackTop} from 'naive-ui';
 import Foot from "@/components/Foot.vue";
 import PostCard from "@/components/PostCard.vue";
 import GossipCard from "@/components/GossipCard.vue";
+import GossipStats from "@/components/GossipStats.vue";
 import PageLoading from "@/components/PageLoading.vue";
 import type { PostMetadata } from "@/types/PostMetadata";
 import type { GossipItem } from "@/types/Gossip";

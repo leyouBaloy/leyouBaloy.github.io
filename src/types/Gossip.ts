@@ -16,4 +16,6 @@ export interface GossipItem {
   video?: GossipVideo;
   tags?: string[];
   mood?: string;
+  /** 学习进度：heard=已听到的位置，total=视频总时长，格式 mm:ss / h:mm:ss */
+  progress?: { heard?: string; total?: string };
 }
