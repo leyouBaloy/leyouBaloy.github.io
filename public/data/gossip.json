@@ -1,5 +1,27 @@
 [
   {
+    "id": "english-video-2026-09-18",
+    "date": "2026-09-18",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到5:13（总时长10:17）。",
+    "progress": { "heard": "5:13", "total": "10:17" },
+    "video": {
+      "title": "Puerto Ricans have no water, but are still paying for it | September 16, 2026",
+      "url": "https://www.youtube.com/watch?v=PJzo5ZVWe7U",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "sport-2026-09-17",
+    "date": "2026-09-17",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "椭圆机锻炼，继续坚持。",
+    "tags": ["运动", "椭圆机", "锻炼"]
+  },
+  {
     "id": "english-video-2026-09-17",
     "date": "2026-09-17",
     "kind": "english-checkin",
