@@ -39,27 +39,30 @@
       </div>
 
       <div class="heatmap-body">
-        <div class="heatmap-weekdays">
-          <span>一</span><span></span><span>三</span><span></span><span>五</span><span></span><span>日</span>
-        </div>
-        <div class="heatmap-scroll">
-          <div class="heatmap" :style="{ '--weeks': stats.weeks }">
-            <div class="heatmap-months">
-              <span
-                v-for="m in stats.monthLabels"
-                :key="m.key"
-                :style="{ gridColumn: `${m.start + 1} / span ${m.span}` }"
-              >{{ m.label }}</span>
-            </div>
-            <div class="heatmap-grid">
-              <span
-                v-for="cell in stats.cells"
-                :key="cell.date"
-                class="cell"
-                :class="cell.kind"
-                :title="cell.title"
-              ></span>
-            </div>
+        <div class="heatmap" :style="{ '--weeks': stats.weeks }">
+          <div class="heatmap-months">
+            <span class="heatmap-month-pad" aria-hidden="true"></span>
+            <span
+              v-for="m in stats.monthLabels"
+              :key="m.key"
+              :style="{ gridColumn: `${m.start + 2} / span ${m.span}` }"
+            >{{ m.label }}</span>
+          </div>
+          <div class="heatmap-grid">
+            <span
+              v-for="(label, row) in stats.weekdayLabels"
+              :key="`wd-${row}`"
+              class="heatmap-weekday"
+              :style="{ gridRow: row + 1 }"
+            >{{ label }}</span>
+            <span
+              v-for="(cell, index) in stats.cells"
+              :key="cell.date"
+              class="cell"
+              :class="cell.kind"
+              :title="cell.title"
+              :style="{ gridColumn: Math.floor(index / 7) + 2, gridRow: (index % 7) + 1 }"
+            ></span>
           </div>
         </div>
       </div>
@@ -222,6 +225,7 @@ const stats = computed(() => {
     videos,
     cells,
     monthLabels,
+    weekdayLabels: ['一', '', '三', '', '五', '', '日'],
     weeks: WEEKS,
   };
 });
@@ -348,43 +352,18 @@ const stats = computed(() => {
 }
 
 .heatmap-body {
-  display: flex;
-  gap: 6px;
-  align-items: flex-start;
-}
-
-.heatmap-weekdays {
-  display: grid;
-  grid-template-rows: repeat(7, 1fr);
-  gap: 3px;
-  padding-top: 16px;
-  color: #a3aeb8;
-  font-size: 10px;
-  line-height: 1;
-}
-
-.heatmap-weekdays span {
-  height: 12px;
-  display: flex;
-  align-items: center;
-}
-
-.heatmap-scroll {
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow-x: auto;
-  padding-bottom: 2px;
+  display: block;
 }
 
 .heatmap {
-  min-width: max-content;
+  width: 100%;
 }
 
 .heatmap-months {
   display: grid;
-  grid-template-columns: repeat(var(--weeks), 12px);
+  grid-template-columns: 14px repeat(var(--weeks), minmax(0, 1fr));
   gap: 3px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .heatmap-months span {
@@ -392,19 +371,27 @@ const stats = computed(() => {
   font-size: 10px;
   line-height: 1.2;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .heatmap-grid {
   display: grid;
-  grid-template-rows: repeat(7, 12px);
-  grid-auto-flow: column;
-  grid-auto-columns: 12px;
+  grid-template-columns: 14px repeat(var(--weeks), minmax(0, 1fr));
+  grid-template-rows: repeat(7, auto);
   gap: 3px;
 }
 
+.heatmap-weekday {
+  display: flex;
+  align-items: center;
+  color: #a3aeb8;
+  font-size: 10px;
+  line-height: 1;
+}
+
 .cell {
-  width: 12px;
-  height: 12px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 3px;
   background: var(--cell-empty);
 }
@@ -451,7 +438,7 @@ const stats = computed(() => {
 :global([data-theme="dark"] .heatmap-title),
 :global([data-theme="dark"] .legend-item),
 :global([data-theme="dark"] .heatmap-months span),
-:global([data-theme="dark"] .heatmap-weekdays span) {
+:global([data-theme="dark"] .heatmap-weekday) {
   color: #94a3b8;
 }
 
@@ -474,32 +461,15 @@ const stats = computed(() => {
     font-size: 17px;
   }
 
-  .heatmap {
-    --cell-size: 11px;
-  }
-
-  .heatmap-months {
-    grid-template-columns: repeat(var(--weeks), 11px);
-    gap: 2px;
-  }
-
+  .heatmap-months,
   .heatmap-grid {
-    grid-template-rows: repeat(7, 11px);
-    grid-auto-columns: 11px;
+    grid-template-columns: 10px repeat(var(--weeks), minmax(0, 1fr));
     gap: 2px;
   }
 
-  .cell {
-    width: 11px;
-    height: 11px;
-  }
-
-  .heatmap-weekdays {
-    gap: 2px;
-  }
-
-  .heatmap-weekdays span {
-    height: 11px;
+  .heatmap-months span,
+  .heatmap-weekday {
+    font-size: 9px;
   }
 }
 </style>
