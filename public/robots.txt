@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leyoubaloy.github.io/sitemap.xml
+Sitemap: https://www.imbailey.cn/sitemap.xml

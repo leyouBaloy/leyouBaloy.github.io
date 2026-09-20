@@ -9,7 +9,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const siteUrl = "https://leyoubaloy.github.io";
+const siteUrl = "https://www.imbailey.cn";
 const siteName = "Bailey's Blog";
 const siteDescription =
   "Bailey's Blog，记录技术实践、读书观影、旅行见闻与生活思考。";

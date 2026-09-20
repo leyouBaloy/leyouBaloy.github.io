@@ -27,4 +27,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages # The branch the action should deploy to.
           publish_dir: ./dist # The folder the action should deploy.
-          cname: www.leyoubaloy.xyz
+          cname: www.imbailey.cn

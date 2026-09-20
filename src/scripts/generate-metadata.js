@@ -55,7 +55,7 @@ const generateSlug = (title) => {
 const metadataList = [];
 const postPayloads = [];
 const slugMapping = {}; // slug -> filename
-const siteUrl = 'https://leyoubaloy.github.io';
+const siteUrl = 'https://www.imbailey.cn';
 const staticPageLastmod = '2026-05-08T00:00:00.000Z';
 
 const normalizeList = (value) => {
