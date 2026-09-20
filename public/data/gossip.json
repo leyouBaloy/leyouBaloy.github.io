@@ -1,5 +1,27 @@
 [
   {
+    "id": "english-video-2026-09-20",
+    "date": "2026-09-20",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到3:00（总时长10:06）。整句字幕改完后跟读顺畅太多，真爽！",
+    "progress": { "heard": "3:00", "total": "10:06" },
+    "video": {
+      "title": "Japan has more living 100-year-olds than ever before | September 18, 2026",
+      "url": "https://www.youtube.com/watch?v=KsoZVXiqPgE",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "sport-2026-09-18",
+    "date": "2026-09-18",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "晚上椭圆机锻炼30分钟，继续坚持。",
+    "tags": ["运动", "椭圆机", "锻炼"]
+  },
+  {
     "id": "english-video-2026-09-18",
     "date": "2026-09-18",
     "kind": "english-checkin",
