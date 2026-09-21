@@ -1,5 +1,19 @@
 [
   {
+    "id": "english-video-2026-09-21",
+    "date": "2026-09-21",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "继续听到5:00（总时长10:06）。",
+    "progress": { "heard": "5:00", "total": "10:06" },
+    "video": {
+      "title": "Japan has more living 100-year-olds than ever before | September 18, 2026",
+      "url": "https://www.youtube.com/watch?v=KsoZVXiqPgE",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
     "id": "english-video-2026-09-20",
     "date": "2026-09-20",
     "kind": "english-checkin",
