@@ -1,5 +1,41 @@
 [
   {
+    "id": "english-video-2026-09-23-cat",
+    "date": "2026-09-23",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到2:09（总时长10:10）。",
+    "progress": { "heard": "2:09", "total": "10:10" },
+    "video": {
+      "title": "The first new species of cat to be discovered in more than 100 years | September 23, 2026",
+      "url": "https://www.youtube.com/watch?v=K7IHbN5MMb8",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "english-video-2026-09-23",
+    "date": "2026-09-23",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "把之前没听完的听完了。✅ 视频完结",
+    "progress": { "heard": "10:06", "total": "10:06" },
+    "video": {
+      "title": "Japan has more living 100-year-olds than ever before | September 18, 2026",
+      "url": "https://www.youtube.com/watch?v=KsoZVXiqPgE",
+      "platform": "YouTube"
+    },
+    "tags": ["英语", "听力", "跟读"]
+  },
+  {
+    "id": "sport-2026-09-22",
+    "date": "2026-09-22",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "椭圆机锻炼30分钟，继续坚持。",
+    "tags": ["运动", "椭圆机", "减脂"]
+  },
+  {
     "id": "english-video-2026-09-22",
     "date": "2026-09-22",
     "kind": "english-checkin",
