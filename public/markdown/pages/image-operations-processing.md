@@ -1,6 +1,6 @@
 # 对图像操作
 
-> 发布于：2021-08-29 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/image-operations-processing
+> 发布于：2021-08-29 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/image-operations-processing
 
 # 图像
 

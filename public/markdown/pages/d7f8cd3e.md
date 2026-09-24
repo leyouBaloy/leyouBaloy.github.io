@@ -1,6 +1,6 @@
 # 字符数组的拼接和排序-strcat()-sort()-strlen()
 
-> 发布于：2020-11-07 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/d7f8cd3e
+> 发布于：2020-11-07 | 分类：刷题 | 原文：https://www.imbailey.cn/post/d7f8cd3e
 
 【题目描述】
 

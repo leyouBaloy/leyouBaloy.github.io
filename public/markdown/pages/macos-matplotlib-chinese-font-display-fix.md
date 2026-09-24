@@ -1,6 +1,6 @@
 # macOS下matplotlib无法显示中文字体问题解决
 
-> 发布于：2021-11-12 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/macos-matplotlib-chinese-font-display-fix
+> 发布于：2021-11-12 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/macos-matplotlib-chinese-font-display-fix
 
 网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。
 

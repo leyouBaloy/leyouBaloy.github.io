@@ -1,6 +1,6 @@
 # 《十二公民》观后感
 
-> 发布于：2020-12-21 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/12-citizens-movie-review
+> 发布于：2020-12-21 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/12-citizens-movie-review
 
 今天和同学们看了电影《十二公民》，有感而发。
 

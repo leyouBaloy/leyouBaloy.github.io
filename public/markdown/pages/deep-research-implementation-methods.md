@@ -1,6 +1,6 @@
 # DeepResearch深度搜索实现方法调研
 
-> 发布于：2025-05-09 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/deep-research-implementation-methods
+> 发布于：2025-05-09 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/deep-research-implementation-methods
 
 ## Deep Research 有三个核心能力
 

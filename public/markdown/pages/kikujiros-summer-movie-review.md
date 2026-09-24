@@ -1,6 +1,6 @@
 # 《菊次郎的夏天》观后感
 
-> 发布于：2021-04-05 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/kikujiros-summer-movie-review
+> 发布于：2021-04-05 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/kikujiros-summer-movie-review
 
 话不多说，看看豆瓣评分吧：
 

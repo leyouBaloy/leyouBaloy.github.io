@@ -1,6 +1,6 @@
 # 《学术研究，你的成功之道》
 
-> 发布于：2022-05-07 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/academic-research-your-way-to-success
+> 发布于：2022-05-07 | 分类：笔记 | 原文：https://www.imbailey.cn/post/academic-research-your-way-to-success
 
 ## 格雷准则
 

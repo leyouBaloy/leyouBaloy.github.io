@@ -1,6 +1,6 @@
 # 品酒🍶（古井贡酒-古20）以及小插曲
 
-> 发布于：2024-07-27 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/gujing-gongjiu-gu-20-tasting
+> 发布于：2024-07-27 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/gujing-gongjiu-gu-20-tasting
 
 这个酒在安徽喝的是非常多的，我跟我爸去参加应酬的时候经常喝，但是之前我不认识酒，今天买来尝尝，果然是熟悉的味道。
 

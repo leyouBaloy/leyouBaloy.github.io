@@ -1,6 +1,6 @@
 # 《中国的官办经济》读后感
 
-> 发布于：2020-10-19 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/chinas-state-owned-economy-book-review
+> 发布于：2020-10-19 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/chinas-state-owned-economy-book-review
 
 #### 本书的目录如下：
 

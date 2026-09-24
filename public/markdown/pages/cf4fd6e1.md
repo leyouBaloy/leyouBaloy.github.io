@@ -1,6 +1,6 @@
 # python时间遇到的坑
 
-> 发布于：2021-08-22 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/cf4fd6e1
+> 发布于：2021-08-22 | 分类：笔记 | 原文：https://www.imbailey.cn/post/cf4fd6e1
 
 python中与时间相关的标准库有三个：
 

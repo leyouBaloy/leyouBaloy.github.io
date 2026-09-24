@@ -1,6 +1,6 @@
 # Leetcode435:重叠区间——动态规划、贪心
 
-> 发布于：2022-03-20 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-435-non-overlapping-intervals-dp-greedy
+> 发布于：2022-03-20 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-435-non-overlapping-intervals-dp-greedy
 
 ## 题目
 

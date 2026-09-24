@@ -1,6 +1,6 @@
 # 每日一题--二分法找数组中的数
 
-> 发布于：2020-10-08 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/daily-binary-search-find-number-in-array
+> 发布于：2020-10-08 | 分类：笔记 | 原文：https://www.imbailey.cn/post/daily-binary-search-find-number-in-array
 
 【题目描述】
 

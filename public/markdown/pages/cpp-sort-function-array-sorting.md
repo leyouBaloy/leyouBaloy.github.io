@@ -1,6 +1,6 @@
 # 用sort函数给数组排序
 
-> 发布于：2020-11-01 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/cpp-sort-function-array-sorting
+> 发布于：2020-11-01 | 分类：刷题 | 原文：https://www.imbailey.cn/post/cpp-sort-function-array-sorting
 
 sort函数的调用需要头文件#include <algorithm>
 

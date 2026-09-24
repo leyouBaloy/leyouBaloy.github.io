@@ -1,6 +1,6 @@
 # 《京华烟云》读后有感
 
-> 发布于：2021-06-23 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/moment-in-peking-book-review
+> 发布于：2021-06-23 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/moment-in-peking-book-review
 
 ### 阅读经历
 

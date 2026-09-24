@@ -1,6 +1,6 @@
 # 品酒🍶(古井贡酒-古16)
 
-> 发布于：2024-08-24 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/gujing-gongjiu-gu-16-tasting
+> 发布于：2024-08-24 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/gujing-gongjiu-gu-16-tasting
 
 ## 外观
 

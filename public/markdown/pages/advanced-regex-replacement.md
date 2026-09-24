@@ -1,6 +1,6 @@
 # 使用正则表达式进行高级替换
 
-> 发布于：2022-06-17 | 分类：技能分享, 笔记 | 原文：https://leyoubaloy.github.io/post/advanced-regex-replacement
+> 发布于：2022-06-17 | 分类：技能分享, 笔记 | 原文：https://www.imbailey.cn/post/advanced-regex-replacement
 
 ## 需求
 

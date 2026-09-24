@@ -1,6 +1,6 @@
 # 图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni
 
-> 发布于：2025-06-10 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/chart2data-experiment-compare-chartvlm-qwen-omni
+> 发布于：2025-06-10 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/chart2data-experiment-compare-chartvlm-qwen-omni
 
 ## **ChartVLM**
 

@@ -1,6 +1,6 @@
 # 解锁新技术栈vue+flask前后端分离
 
-> 发布于：2022-05-24 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/vue-flask-frontend-backend-separation
+> 发布于：2022-05-24 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/vue-flask-frontend-backend-separation
 
 ## Vue
 

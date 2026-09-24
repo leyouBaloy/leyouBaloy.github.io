@@ -1,6 +1,6 @@
 # 《失乐园》读后有感
 
-> 发布于：2022-04-15 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/a-lost-paradise-book-review
+> 发布于：2022-04-15 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/a-lost-paradise-book-review
 
 ## 故事简叙
 

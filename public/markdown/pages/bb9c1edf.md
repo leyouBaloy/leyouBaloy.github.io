@@ -1,6 +1,6 @@
 # 87《红楼梦》观之有感
 
-> 发布于：2021-07-14 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/bb9c1edf
+> 发布于：2021-07-14 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/bb9c1edf
 
 ## 87版《红楼梦》
 

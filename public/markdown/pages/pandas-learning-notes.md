@@ -1,6 +1,6 @@
 # Pandas学习笔记
 
-> 发布于：2021-03-09 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/pandas-learning-notes
+> 发布于：2021-03-09 | 分类：笔记 | 原文：https://www.imbailey.cn/post/pandas-learning-notes
 
 ### map()和apply()和applymap()区别
 

@@ -1,6 +1,6 @@
 # NGINX学习笔记
 
-> 发布于：2021-08-02 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/ec606feb
+> 发布于：2021-08-02 | 分类：笔记 | 原文：https://www.imbailey.cn/post/ec606feb
 
 # NGINX
 

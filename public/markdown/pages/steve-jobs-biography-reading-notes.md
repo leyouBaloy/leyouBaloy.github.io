@@ -1,6 +1,6 @@
 # 《史蒂夫·乔布斯传》读书笔记
 
-> 发布于：2021-12-16 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/steve-jobs-biography-reading-notes
+> 发布于：2021-12-16 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/steve-jobs-biography-reading-notes
 
 ### 图书简介
 

@@ -1,6 +1,6 @@
 # 统计字符串中字符出现的个数-int与char类型的转换
 
-> 发布于：2020-11-05 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/count-char-frequency-string-int-char-conversion
+> 发布于：2020-11-05 | 分类：刷题 | 原文：https://www.imbailey.cn/post/count-char-frequency-string-int-char-conversion
 
 【题目描述】
 

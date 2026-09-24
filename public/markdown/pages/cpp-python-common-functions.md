@@ -1,6 +1,6 @@
 # C++和python常用函数
 
-> 发布于：2022-04-08 | 分类：刷题, 笔记 | 原文：https://leyoubaloy.github.io/post/cpp-python-common-functions
+> 发布于：2022-04-08 | 分类：刷题, 笔记 | 原文：https://www.imbailey.cn/post/cpp-python-common-functions
 
 ## c++常用函数
 

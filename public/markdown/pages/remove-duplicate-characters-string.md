@@ -1,6 +1,6 @@
 # 删除重复的字符并重新排列-这个题太jb烦人了
 
-> 发布于：2020-11-07 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/remove-duplicate-characters-string
+> 发布于：2020-11-07 | 分类：刷题 | 原文：https://www.imbailey.cn/post/remove-duplicate-characters-string
 
 【题目描述】
 

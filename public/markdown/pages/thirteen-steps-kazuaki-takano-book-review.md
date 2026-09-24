@@ -1,6 +1,6 @@
 # 《消失的13级台阶》读后感
 
-> 发布于：2021-06-06 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/thirteen-steps-kazuaki-takano-book-review
+> 发布于：2021-06-06 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/thirteen-steps-kazuaki-takano-book-review
 
 我用不到一周的时间读完了这本《消失的13级台阶》，这本书是典型的日系推理小说，作者高野和明用电影式的叙述手法，清晰地讲述了一起跨度长达10年并且牵涉到多起犯罪事件的故事。读完之后，我深感震撼，不仅仅是因为精彩的故事情节和出乎意料的结局，还因为本书揭露了深刻的社会现实问题，生活在阳光下的我们或许从未关注过的关于“死刑”问题。
 

@@ -1,6 +1,6 @@
 # 新加坡访学旅行
 
-> 发布于：2024-08-14 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/singapore-ntu-study-tour-travel
+> 发布于：2024-08-14 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/singapore-ntu-study-tour-travel
 
 读万卷书，行万里路。因为今年学校出了一个境外访学资助政策，所以就申请了为期七天的新加坡南洋理工大学的访学项目。这是我第一次出国，有很多新奇体验，在这里分享一下~
 

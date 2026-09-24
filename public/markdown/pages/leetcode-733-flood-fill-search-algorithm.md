@@ -1,6 +1,6 @@
 # Leetcode733:图像渲染——搜索算法
 
-> 发布于：2022-03-21 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-733-flood-fill-search-algorithm
+> 发布于：2022-03-21 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-733-flood-fill-search-algorithm
 
 ## 题目
 

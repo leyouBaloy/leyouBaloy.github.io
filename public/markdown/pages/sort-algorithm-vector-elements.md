@@ -1,6 +1,6 @@
 # 使用sort算法对向量元素排列
 
-> 发布于：2020-12-28 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/sort-algorithm-vector-elements
+> 发布于：2020-12-28 | 分类：刷题 | 原文：https://www.imbailey.cn/post/sort-algorithm-vector-elements
 
 ```
 #include <bits/stdc++.h>

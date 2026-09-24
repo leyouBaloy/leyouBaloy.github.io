@@ -1,6 +1,6 @@
 # csv库的使用方法
 
-> 发布于：2021-02-25 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/csv-library-usage
+> 发布于：2021-02-25 | 分类：笔记 | 原文：https://www.imbailey.cn/post/csv-library-usage
 
 上一篇我们讲了怎么用 json格式保存数据，这一篇我们来看看如何用 csv模块进行数据读写。
 

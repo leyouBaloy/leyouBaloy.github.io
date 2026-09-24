@@ -1,6 +1,6 @@
 # 深度学习模型图表理解chart2txt-8个模型对比实验
 
-> 发布于：2025-06-10 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/deep-learning-chart-understanding-chart2txt-8-models-comparison
+> 发布于：2025-06-10 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/deep-learning-chart-understanding-chart2txt-8-models-comparison
 
 ## **背景**
 为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法

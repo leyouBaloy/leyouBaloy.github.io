@@ -1,6 +1,6 @@
 # 浏览器不支持getUserMedia
 
-> 发布于：2021-09-23 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/fix-browser-getusermedia-not-supported
+> 发布于：2021-09-23 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/fix-browser-getusermedia-not-supported
 
 现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,[http://localhost](http://localhost)，
 

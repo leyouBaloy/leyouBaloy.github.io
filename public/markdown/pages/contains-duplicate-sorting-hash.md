@@ -1,6 +1,6 @@
 # 存在重复元素——排序、哈希
 
-> 发布于：2022-02-26 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/contains-duplicate-sorting-hash
+> 发布于：2022-02-26 | 分类：刷题 | 原文：https://www.imbailey.cn/post/contains-duplicate-sorting-hash
 
 ## 题目
 > 该题来自：https://leetcode-cn.com/problems/contains-duplicate/

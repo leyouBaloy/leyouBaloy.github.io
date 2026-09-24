@@ -1,6 +1,6 @@
 # Leetcode108:将有序数组转换为二叉搜索树
 
-> 发布于：2022-03-25 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-108-convert-sorted-array-to-binary-search-tree
+> 发布于：2022-03-25 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-108-convert-sorted-array-to-binary-search-tree
 
 ## 题目
 

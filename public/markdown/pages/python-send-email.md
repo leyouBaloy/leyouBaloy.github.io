@@ -1,6 +1,6 @@
 # python发邮件
 
-> 发布于：2021-08-08 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/python-send-email
+> 发布于：2021-08-08 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/python-send-email
 
 ### QQ邮箱设置
 

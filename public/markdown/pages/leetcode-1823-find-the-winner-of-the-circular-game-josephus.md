@@ -1,6 +1,6 @@
 # Leetcode1823:找出游戏的获胜者——约瑟夫环
 
-> 发布于：2022-05-04 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-1823-find-the-winner-of-the-circular-game-josephus
+> 发布于：2022-05-04 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-1823-find-the-winner-of-the-circular-game-josephus
 
 ## 题目
 

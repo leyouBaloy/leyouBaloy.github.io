@@ -1,6 +1,6 @@
 # 在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号
 
-> 发布于：2023-03-16 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/vue-highlightjs-line-numbers-code-highlight
+> 发布于：2023-03-16 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/vue-highlightjs-line-numbers-code-highlight
 
 ## highlight.js
 

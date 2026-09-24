@@ -1,6 +1,6 @@
 # 无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录
 
-> 发布于：2024-11-27 | 分类：笔记, 技能分享 | 原文：https://leyoubaloy.github.io/post/install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu
+> 发布于：2024-11-27 | 分类：笔记, 技能分享 | 原文：https://www.imbailey.cn/post/install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu
 
 ### 无核显主机U盘安装Ubuntu
 

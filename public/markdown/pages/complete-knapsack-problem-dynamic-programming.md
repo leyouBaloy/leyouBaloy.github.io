@@ -1,6 +1,6 @@
 # 完全背包问题——动态规划——这道题解是认真写的qwq
 
-> 发布于：2022-02-23 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/complete-knapsack-problem-dynamic-programming
+> 发布于：2022-02-23 | 分类：刷题 | 原文：https://www.imbailey.cn/post/complete-knapsack-problem-dynamic-programming
 
 > 完全背包问题和01背包问题的区别就是完全背包问题不限制物体的数量。
 >

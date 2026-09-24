@@ -1,6 +1,6 @@
 # langchain-faiss加载pkl文件速度提升
 
-> 发布于：2025-12-14 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/langchain-faiss-load-pkl-speed-up
+> 发布于：2025-12-14 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/langchain-faiss-load-pkl-speed-up
 
 ## 背景
 

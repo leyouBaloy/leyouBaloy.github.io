@@ -1,6 +1,6 @@
 # Leetcode821:字符的最短距离——两次遍历
 
-> 发布于：2022-04-19 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-821-shortest-distance-to-a-character
+> 发布于：2022-04-19 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-821-shortest-distance-to-a-character
 
 ## 题目
 

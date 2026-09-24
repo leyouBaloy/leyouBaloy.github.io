@@ -1,6 +1,6 @@
 # Python-洗牌算法
 
-> 发布于：2020-10-11 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/python-shuffle-algorithm
+> 发布于：2020-10-11 | 分类：刷题 | 原文：https://www.imbailey.cn/post/python-shuffle-algorithm
 
 原理在这[https://www.bilibili.com/video/BV1k7411q7jo](https://www.bilibili.com/video/BV1k7411q7jo)
 

@@ -1,6 +1,6 @@
 # Flask的一些关于线程的特性
 
-> 发布于：2023-07-01 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/flask-thread-features
+> 发布于：2023-07-01 | 分类：笔记 | 原文：https://www.imbailey.cn/post/flask-thread-features
 
 ## 前言
 

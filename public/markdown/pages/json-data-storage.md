@@ -1,6 +1,6 @@
 # json数据存储
 
-> 发布于：2021-02-25 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/json-data-storage
+> 发布于：2021-02-25 | 分类：笔记 | 原文：https://www.imbailey.cn/post/json-data-storage
 
 转载自https://www.jianshu.com/p/0ba2b643c0f2
 

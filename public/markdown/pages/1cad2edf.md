@@ -1,6 +1,6 @@
 # Linux在指定时间区间内的随机时间点执行任务
 
-> 发布于：2022-10-23 | 分类：技能分享, 笔记 | 原文：https://leyoubaloy.github.io/post/1cad2edf
+> 发布于：2022-10-23 | 分类：技能分享, 笔记 | 原文：https://www.imbailey.cn/post/1cad2edf
 
 在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。
 

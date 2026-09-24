@@ -1,6 +1,6 @@
 # 品酒🍶（古井贡酒-古8）
 
-> 发布于：2024-09-19 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/wine-tasting-gujing-gongjiu-gu-8
+> 发布于：2024-09-19 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/wine-tasting-gujing-gongjiu-gu-8
 
 # 古 8
 

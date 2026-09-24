@@ -1,6 +1,6 @@
 # 暑期实习项目-onlinejudge在线测试平台
 
-> 发布于：2021-07-28 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/summer-internship-online-judge-platform
+> 发布于：2021-07-28 | 分类：笔记 | 原文：https://www.imbailey.cn/post/summer-internship-online-judge-platform
 
 ### 展示
 

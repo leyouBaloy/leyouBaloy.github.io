@@ -1,6 +1,6 @@
 # LiveGo——小而美的直播串流软件
 
-> 发布于：2023-01-01 | 分类：技能分享, 笔记 | 原文：https://leyoubaloy.github.io/post/livego-lightweight-live-streaming-software
+> 发布于：2023-01-01 | 分类：技能分享, 笔记 | 原文：https://www.imbailey.cn/post/livego-lightweight-live-streaming-software
 
 近期想跟女朋友一起异地看电影，试了几种方式都不够优雅，
 

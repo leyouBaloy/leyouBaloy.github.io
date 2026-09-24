@@ -1,6 +1,6 @@
 # Leetcode103:二叉树的锯齿形层序遍历
 
-> 发布于：2022-03-27 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-103-binary-tree-zigzag-level-order-traversal
+> 发布于：2022-03-27 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-103-binary-tree-zigzag-level-order-traversal
 
 ## 题目
 

@@ -1,6 +1,6 @@
 # Leetcode977:有序数组的平方——双指针
 
-> 发布于：2022-03-23 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-977-squares-of-a-sorted-array-two-pointers
+> 发布于：2022-03-23 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-977-squares-of-a-sorted-array-two-pointers
 
 ## 题目
 

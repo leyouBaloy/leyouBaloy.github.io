@@ -1,6 +1,6 @@
 # 字符串与数字之间的转换
 
-> 发布于：2021-01-01 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/string-number-conversion
+> 发布于：2021-01-01 | 分类：刷题 | 原文：https://www.imbailey.cn/post/string-number-conversion
 
 方法一（利用<sstream>的stringstream，_**可以是浮点数**_）
 

@@ -1,6 +1,6 @@
 # BeautifulSoup学习笔记
 
-> 发布于：2021-02-14 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/eb083bdf
+> 发布于：2021-02-14 | 分类：笔记 | 原文：https://www.imbailey.cn/post/eb083bdf
 
 发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。
 

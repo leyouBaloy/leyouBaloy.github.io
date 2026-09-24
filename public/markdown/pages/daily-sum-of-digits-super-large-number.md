@@ -1,6 +1,6 @@
 # 每日一题--求超大数的各位数字和
 
-> 发布于：2020-10-07 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/daily-sum-of-digits-super-large-number
+> 发布于：2020-10-07 | 分类：笔记 | 原文：https://www.imbailey.cn/post/daily-sum-of-digits-super-large-number
 
 【题目描述】
 

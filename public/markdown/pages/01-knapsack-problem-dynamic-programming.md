@@ -1,6 +1,6 @@
 # 01背包问题——动态规划
 
-> 发布于：2022-02-22 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/01-knapsack-problem-dynamic-programming
+> 发布于：2022-02-22 | 分类：刷题 | 原文：https://www.imbailey.cn/post/01-knapsack-problem-dynamic-programming
 
 > 题目来自：https://www.acwing.com/problem/search/1/?csrfmiddlewaretoken=UwJf7O4w1mYDi1yfimoQC3A85cwxyluK0ixh0ZlBDLqKKVOlEWEHJVbdE4OlzzVr&search_content=%E8%83%8C%E5%8C%85
 

@@ -1,5 +1,64 @@
 [
   {
+    "title": "Leetcode5:最长回文子串——中心扩展法",
+    "date": "2022-04-17T02:36:32.000Z",
+    "updatedAt": "2022-04-17T02:36:32.000Z",
+    "file": "Leetcode5_最长回文子串——中心扩展法.md",
+    "slug": "leetcode-5-longest-palindromic-substring",
+    "legacySlug": "e5b047df",
+    "aliases": [
+      "e5b047df"
+    ],
+    "excerpt": "题目 https://leetcode cn.com/problems/longest palindromic substring/ 题解 中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题... 这道题需要注意的细节： 回文子串长度既可以是奇数也可以是偶数，如",
+    "tags": [
+      "刷题"
+    ],
+    "img": "",
+    "wordCount": 170,
+    "readingTime": 1,
+    "searchContent": "题目 https://leetcode cn.com/problems/longest palindromic substring/ 题解 中心扩展法，看到这个名字我就知道该怎么做了，然后做了二十分钟....debug总是出问题... 这道题需要注意的细节： 回文子串长度既可以是奇数也可以是偶数，如果是奇数，那么它有一个中心，如果是偶数，则是两个中心。 那么代码思路就是先枚举中心，然后由中心向外扩展，直到不能扩展为止，记录下最大的扩展长度。 优雅的官方题解代码如下： 太优雅了，我感觉这代码水平领先我至少刷一年题。",
+    "totalPages": 24
+  },
+  {
+    "title": "Git撤销版本",
+    "date": "2022-04-16T12:23:57.000Z",
+    "updatedAt": "2022-04-16T12:23:57.000Z",
+    "file": "git撤销版本.md",
+    "slug": "git-undo-commit",
+    "legacySlug": "5753ed33",
+    "aliases": [
+      "5753ed33"
+    ],
+    "excerpt": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行gi",
+    "tags": [
+      "技能分享",
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 167,
+    "readingTime": 1,
+    "searchContent": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行git reset hard ，重置到这个版本。(此时相当于撤回了commit) soft 表示只是改变了HEAD的指向，本地代码不会变化 hard 表示本地代码也重置到此版本 4. 执行 git push origin 分支名 – force 强制提交。 如git push origin master –f 然后看远程仓库，你会惊喜的发现5f6935bcc46d480113f0c49d4b54052d10c5aec0之后的版本都消失啦！"
+  },
+  {
+    "title": "Pandas使用技巧",
+    "date": "2022-04-16T07:42:08.000Z",
+    "updatedAt": "2022-04-16T07:42:08.000Z",
+    "file": "Pandas使用技巧.md",
+    "slug": "pandas-tips",
+    "legacySlug": "7241b9d9",
+    "aliases": [
+      "7241b9d9"
+    ],
+    "excerpt": "read csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行",
+    "tags": [
+      "笔记"
+    ],
+    "img": "",
+    "wordCount": 24,
+    "readingTime": 1,
+    "searchContent": "read csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行"
+  },
+  {
     "title": "Leetcode451:根据字符出现频率排序——桶排序",
     "date": "2022-04-15T10:00:29.000Z",
     "updatedAt": "2022-04-15T10:00:29.000Z",
@@ -16,8 +75,7 @@
     "img": "",
     "wordCount": 453,
     "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/sort characters by frequency/ 题解 思路 用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个大写，0 9数字），所以使用桶排序是最好的选择。 桶排序 假设你对2，5，3三个数字排序，最大的数字是5，所以你拿来五个桶，从头到尾遍历这三个数字。然后把数字放在相同标号的桶里，比如第一个数字是2，就把它放在标号为2的桶里，5就放在标号为5的桶，3就放在标号为3的桶里。最后再把1号到5号桶遍历，空的跳过，就完成了排序。典型的空间换时间，当已知不会消耗很大的空间时，桶排序无非是效率最高的。 具体做法如下： 遍历字符串，统计每个字符出现的频率，同时记录最高频率maxFreq； 创建桶，存储从 11 到 maxFreq 的每个出现频率的字符； 按照出现频率从大到小的顺序遍历桶，对于每个出现频率，获得对应的字符，然后将每个字符按照出现频率拼接到排序后的字符串。 代码： 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/sort characters by frequency/solution/gen ju zi fu chu xian pin lu pai xu by l zmvy/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 时间复杂度：O ( n + k)，其中 n 是字符串 s 的长度， k 是字符串 s 包含的不同字符的个数。 空间复杂度：O ( n + k)",
-    "totalPages": 23
+    "searchContent": "题目 https://leetcode cn.com/problems/sort characters by frequency/ 题解 思路 用一个哈希map先统计每个字符出现的次数，然后再排序，最后拼接字符串。排序的方法多种多样，因为字符是有限的（26个小写，26个大写，0 9数字），所以使用桶排序是最好的选择。 桶排序 假设你对2，5，3三个数字排序，最大的数字是5，所以你拿来五个桶，从头到尾遍历这三个数字。然后把数字放在相同标号的桶里，比如第一个数字是2，就把它放在标号为2的桶里，5就放在标号为5的桶，3就放在标号为3的桶里。最后再把1号到5号桶遍历，空的跳过，就完成了排序。典型的空间换时间，当已知不会消耗很大的空间时，桶排序无非是效率最高的。 具体做法如下： 遍历字符串，统计每个字符出现的频率，同时记录最高频率maxFreq； 创建桶，存储从 11 到 maxFreq 的每个出现频率的字符； 按照出现频率从大到小的顺序遍历桶，对于每个出现频率，获得对应的字符，然后将每个字符按照出现频率拼接到排序后的字符串。 代码： 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/sort characters by frequency/solution/gen ju zi fu chu xian pin lu pai xu by l zmvy/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 时间复杂度：O ( n + k)，其中 n 是字符串 s 的长度， k 是字符串 s 包含的不同字符的个数。 空间复杂度：O ( n + k)"
   },
   {
     "title": "《失乐园》读后有感",
@@ -133,62 +191,5 @@
     "wordCount": 522,
     "readingTime": 2,
     "searchContent": "题目 https://leetcode cn.com/problems/minimum height trees/ 这是一道理论性很强，代码也很有技巧性的“中等”难度题目。 题解 暴力法 献上我的超时代码： 广度优先搜索 有如下结论： 用反证法证明，证明过程挺复杂的。 所以我们就把这题从寻找最短距离变成了寻找最长距离。然后把路径记录下来，路径的中点就是我们要找的根节点。 你不觉得这个结论很奇妙吗？我想到了一团乱的绳子，如果你从中间把这堆绳子拎起来，四周绳子的末梢就会垂下去... 这题代码我分段详解： 首先是第一段代码： 因为后面要在edges里面查找某个节点连接的另一个节点，所以这里第一步先是做了一个初始化，便于后面的查询。最后得到的结果是g[x]=[a,b,c...]，表示标号为x的节点，连接了a,b,c等节点。（在我的代码中也有类似处理，但我用的是字典） 第二段： 这是一个用队列实现的广度优先搜索。vis是记录已搜索过的节点。deque是双向队列（震惊！原来python也是有数据结构的，我才知道😂）。parents记录每个节点的父节点，用于下面找路径。 然后从0开始，找到最远节点x，再从x找最远节点y。那么x，y之间的距离就是最远的（这很奇妙）。 第三段： 在这里要找路径了，这时候parents就派上用场了。如果找到路径长度为奇数，那么正中间那个数就是我们要找的根节点。如果路径长度为偶数，中间的数有两个，那么两个都是我们要找的根节点。 其他解法 这题还有深度优先搜索（跟广度优先搜索差不多），拓扑序列，不断剔除度为1的节点等方法，我太懒了，不想研究了..."
-  },
-  {
-    "title": "Leetcode2:两数相加——链表",
-    "date": "2022-04-05T08:50:12.000Z",
-    "updatedAt": "2022-04-05T08:50:12.000Z",
-    "file": "Leetcode2_两数相加——链表.md",
-    "slug": "leetcode-2-add-two-numbers-linked-list",
-    "legacySlug": "211de655",
-    "aliases": [
-      "211de655"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/add two numbers/ 这道题主要是debug 题解 我自己写的代码： 还用了一个反转链表的函数，属于绕弯形选手😂 评论里给出的代码，我认为是最简洁优雅易懂的（虽然是java，不过其实和c艹差不多： 时间复杂度O(m",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 131,
-    "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/add two numbers/ 这道题主要是debug 题解 我自己写的代码： 还用了一个反转链表的函数，属于绕弯形选手😂 评论里给出的代码，我认为是最简洁优雅易懂的（虽然是java，不过其实和c艹差不多： 时间复杂度O(max(m,n))；空间复杂度O(1)； 感想：这道题看起来很简单，但如果在csp考试中遇到我就完蛋了。因为细节太多，debug比较难。"
-  },
-  {
-    "title": "Leetcode230:二叉搜索树中第K小的元素",
-    "date": "2022-04-04T07:26:44.000Z",
-    "updatedAt": "2022-04-04T07:26:44.000Z",
-    "file": "Leetcode230_二叉搜索树中第K小的元素.md",
-    "slug": "leetcode-230-kth-smallest-element-in-a-bst",
-    "legacySlug": "301ccc07",
-    "aliases": [
-      "301ccc07"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/kth smallest element in a bst/ 这是一道可拓展性很高的题目 题解 中序遍历递归法 最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第k 1个元素。 可是我们只需要第k个元素，不用把所有元素都遍",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 357,
-    "readingTime": 1,
-    "searchContent": "题目 https://leetcode cn.com/problems/kth smallest element in a bst/ 这是一道可拓展性很高的题目 题解 中序遍历递归法 最朴素的想法就是先中序遍历得到递增序列，然后返回序列的第k 1个元素。 可是我们只需要第k个元素，不用把所有元素都遍历完再返回结果，那么如何优化呢？ 那就让它遍历到第k个元素时就终止递归，返回结果呗。但是递归不是想终止就终止的，它会有“惯性”～ 比如下面的代码： 对于k=1，我们想让len(nums) 1时就终止，实际上它一直运行到了nums=3。所以这种解法不够优雅。 中序遍历迭代法 中序遍历还有一个用栈实现的迭代法，其代码如下： 迭代法相比递归法的优势就是随时可以终止，只需加上两句就可以啦。下面是完整代码： 时间复杂度：O(H+k)；空间复杂度：O(H) 记录子树的节点 这个方法适用于频繁地查找第k个最小的值。 作者：LeetCode Solution 链接：https://leetcode cn.com/problems/kth smallest element in a bst/solution/er cha sou suo shu zhong di kxiao de yua 8o07/ 来源：力扣（LeetCode） 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
-  },
-  {
-    "title": "Leetcode450:删除二叉搜索树中的节点",
-    "date": "2022-04-02T02:20:05.000Z",
-    "updatedAt": "2022-04-02T02:20:05.000Z",
-    "file": "Leetcode450_删除二叉搜索树中的节点.md",
-    "slug": "leetcode-450-delete-node-in-a-bst",
-    "legacySlug": "35b60c31",
-    "aliases": [
-      "35b60c31"
-    ],
-    "excerpt": "题目 https://leetcode cn.com/problems/delete node in a bst/ 这道题完全可以当作一个知识点来对待。 题解 思路 众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。 某个节点node的后继节点successor，就是",
-    "tags": [
-      "刷题"
-    ],
-    "img": "",
-    "wordCount": 672,
-    "readingTime": 2,
-    "searchContent": "题目 https://leetcode cn.com/problems/delete node in a bst/ 这道题完全可以当作一个知识点来对待。 题解 思路 众所周知，一颗二叉搜索树的中序遍历是一个递增序列，这是二叉搜索树最基本的性质之一。 某个节点node的后继节点successor，就是中序遍历中仅次于node的后一个节点，是比node大的节点当中最小的节点。node的右子树中最左边那个节点就是successor。 某个节点node的前继节点predecessor，就是中序遍历中稍大于node的前一个节点，是比node小的节点当中最大的节点。node的左子树中最右边那个节点就是successor。 我们要维护这个性质，所以，当删除一个节点时，我们要拿这个节点的后继节点successor或者前继节点predecessor来替换它，然后递归的删除它的后继节点或者前继节点。比如删除[1,2,3,4,5]中的3，我们就拿4来替换它（或者拿2替换）。然后为了删除4，拿5来替换。5后面没有节点了，就直接删除5。 删除的时候可能有三种情况： 1. 要删除节点是叶节点。直接删除就好了。 2. 要删除的节点只有左子树，或者只有右子树。如果是左子树，就找前继节点替换；如果是右子树，就找后继节点替换。 3. 要删除的节点既有左子树又有右子树。前继，后继都可以。一般我们选择后继。 上面的描述比较易于理解，但为了写代码方便，我们稍作改变： 1. 要删除节点是叶节点。直接删除。 2. 要删除的节点有右子树，就拿后继替换。 3. 否则，拿左继替换。 代码 先看下ac的代码吧： 为什么非要优先找后继节点呢？其实你优先找前继节点也可以，把这段代码改成这样： 为什么非要写成root.left = xxx，root.right = xxx呢？ 我把root.right = self.deleteNode(root.right, key)改成self.deleteNode(root.right, key)； 以及后面三处的赋值语句都改成了直接递归，结果只和正确答案差了一点，就是在递归的末端的叶子节点当中root=None没有生效。也就是说叶子节点没有成功删除。 我猜想可能是因为python的引用传递有关，这条赋值语句修改的只是形参而不是实参，所以无效！ 总之递归的代码好难写qwq，孩子根本想不到..."
   }
 ]

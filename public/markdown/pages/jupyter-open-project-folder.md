@@ -1,6 +1,6 @@
 # jupyter打开项目文件夹
 
-> 发布于：2021-01-19 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/jupyter-open-project-folder
+> 发布于：2021-01-19 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/jupyter-open-project-folder
 
 #### 一.添加环境变量
 

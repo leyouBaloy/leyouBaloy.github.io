@@ -1,6 +1,6 @@
 # 字、字节、字长、位等概念区分
 
-> 发布于：2022-10-22 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/difference-between-word-byte-word-length-bit
+> 发布于：2022-10-22 | 分类：笔记 | 原文：https://www.imbailey.cn/post/difference-between-word-byte-word-length-bit
 
 一提到字、字节、字长、位等概念我就做晕车，从来没弄懂过，现在总结如下
 

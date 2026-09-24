@@ -1,6 +1,6 @@
 # 一年前遇到的难题，被AI解决了
 
-> 发布于：2026-06-02 | 分类：技术思考 | 原文：https://leyoubaloy.github.io/post/ai-solved-one-year-old-sse-problem
+> 发布于：2026-06-02 | 分类：技术思考 | 原文：https://www.imbailey.cn/post/ai-solved-one-year-old-sse-problem
 
 一年前实习的时候，mentor 让我做一个 Agent 问答前端。
 

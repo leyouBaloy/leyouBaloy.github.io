@@ -1,6 +1,6 @@
 # 买卖股票的最佳时机——数组、动态规划
 
-> 发布于：2022-03-09 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-121-best-time-to-buy-and-sell-stock
+> 发布于：2022-03-09 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-121-best-time-to-buy-and-sell-stock
 
 ## 题目
 

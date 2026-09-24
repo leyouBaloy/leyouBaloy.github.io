@@ -1,6 +1,6 @@
 # Qt动态添加和删除布局（仿jupyter）
 
-> 发布于：2023-02-02 | 分类：技能分享, 笔记 | 原文：https://leyoubaloy.github.io/post/qt-dynamic-add-remove-layout-jupyter
+> 发布于：2023-02-02 | 分类：技能分享, 笔记 | 原文：https://www.imbailey.cn/post/qt-dynamic-add-remove-layout-jupyter
 
 ## 前言
 

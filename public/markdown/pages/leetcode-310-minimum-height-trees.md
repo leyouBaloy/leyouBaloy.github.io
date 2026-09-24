@@ -1,6 +1,6 @@
 # Leetcode310:最小高度树
 
-> 发布于：2022-04-06 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-310-minimum-height-trees
+> 发布于：2022-04-06 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-310-minimum-height-trees
 
 # 题目
 

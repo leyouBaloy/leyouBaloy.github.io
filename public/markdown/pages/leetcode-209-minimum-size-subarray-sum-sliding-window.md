@@ -1,6 +1,6 @@
 # Leetcode_209长度最小的子数组——滑动窗口
 
-> 发布于：2024-11-21 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-209-minimum-size-subarray-sum-sliding-window
+> 发布于：2024-11-21 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-209-minimum-size-subarray-sum-sliding-window
 
 # Leetcode_209长度最小的子数组
 

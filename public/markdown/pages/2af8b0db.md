@@ -1,6 +1,6 @@
 # 星露谷物语为什么这么好玩？
 
-> 发布于：2022-08-28 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/2af8b0db
+> 发布于：2022-08-28 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/2af8b0db
 
 ### 星露谷物语
 

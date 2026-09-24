@@ -1,6 +1,6 @@
 # 《如何阅读一本书》读后感
 
-> 发布于：2021-04-23 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/how-to-read-a-book-review
+> 发布于：2021-04-23 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/how-to-read-a-book-review
 
 今天是世界读书日，我想给大家推荐一本《如何阅读一本书》。
 

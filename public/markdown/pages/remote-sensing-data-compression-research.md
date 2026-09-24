@@ -1,6 +1,6 @@
 # 调研遥感数据压缩
 
-> 发布于：2024-08-20 | 分类：人工智能, 笔记 | 原文：https://leyoubaloy.github.io/post/remote-sensing-data-compression-research
+> 发布于：2024-08-20 | 分类：人工智能, 笔记 | 原文：https://www.imbailey.cn/post/remote-sensing-data-compression-research
 
 ## 什么是遥感数据压缩？
 遥感图像压缩是指利用特定的算法和技术减少遥感图像数据量的过程，以便更有效地存储和传输数据。这个过程涉及到数据的编码，以减少数据的比特数，同时尽量保持原始图像的重要视觉和分析信息。遥感图像压缩通常分为两类：

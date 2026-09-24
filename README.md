@@ -18,7 +18,8 @@
 ├── public/
 │   ├── markdown/              # Markdown 文章源文件
 │   │   ├── metadata/          # 自动生成的列表、归档、搜索等元数据
-│   │   └── posts/             # 自动生成的文章 JSON payload
+│   │   ├── posts/             # 自动生成的文章 JSON payload
+│   │   └── pages/             # 自动生成的纯 Markdown 导出页
 │   ├── data/                  # 媒体页等静态数据
 │   ├── rss.xml                # 自动生成的 RSS
 │   └── sitemap.xml            # 自动生成的 Sitemap
@@ -37,7 +38,7 @@
 └── vite.config.ts             # Vite 与 SSG 配置
 ```
 
-`public/markdown/metadata`、`public/markdown/posts`、`public/rss.xml` 和 `public/sitemap.xml` 都是由 `src/scripts/generate-metadata.js` 自动生成的派生文件。修改文章后重新执行生成命令即可刷新它们。
+`public/markdown/metadata`、`public/markdown/posts`、`public/markdown/pages`、`public/rss.xml` 和 `public/sitemap.xml` 都是由 `src/scripts/generate-metadata.js` 自动生成的派生文件。修改文章后请显式执行 `yarn blog generate`（或 `node src/scripts/generate-metadata.js` / `prebuild`）刷新它们；`yarn blog server` 默认不会重写这些文件，避免每次启动产生无意义的 git diff。需要时可用 `yarn blog server --regen`。
 
 ## 环境要求
 

@@ -1,6 +1,6 @@
 # 《无人生还》读后有感
 
-> 发布于：2022-04-30 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/and-then-there-were-none-book-review
+> 发布于：2022-04-30 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/and-then-there-were-none-book-review
 
 ## 作者
 

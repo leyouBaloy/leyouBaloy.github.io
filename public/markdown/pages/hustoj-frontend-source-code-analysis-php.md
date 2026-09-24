@@ -1,6 +1,6 @@
 # HUSTOJ前端源代码解析（PHP）
 
-> 发布于：2023-03-09 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/hustoj-frontend-source-code-analysis-php
+> 发布于：2023-03-09 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/hustoj-frontend-source-code-analysis-php
 
 ## 需求
 

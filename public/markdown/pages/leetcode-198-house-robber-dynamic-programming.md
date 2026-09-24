@@ -1,6 +1,6 @@
 # Leetcode198:打家劫舍——动态规划
 
-> 发布于：2022-03-31 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-198-house-robber-dynamic-programming
+> 发布于：2022-03-31 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-198-house-robber-dynamic-programming
 
 ## 题目
 

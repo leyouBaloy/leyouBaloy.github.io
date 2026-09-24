@@ -1,6 +1,6 @@
 # c++比较字典序的三种方法
 
-> 发布于：2020-12-04 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/8c9dbe5e
+> 发布于：2020-12-04 | 分类：刷题 | 原文：https://www.imbailey.cn/post/8c9dbe5e
 
 [比较字符串字典序的三种方法【C++】 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/205953754)
 

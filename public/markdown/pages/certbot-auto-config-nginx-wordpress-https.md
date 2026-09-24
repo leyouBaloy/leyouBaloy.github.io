@@ -1,6 +1,6 @@
 # certbot自动配置nginx给wordpress站点加https
 
-> 发布于：2021-09-08 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/certbot-auto-config-nginx-wordpress-https
+> 发布于：2021-09-08 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/certbot-auto-config-nginx-wordpress-https
 
 # 思路
 

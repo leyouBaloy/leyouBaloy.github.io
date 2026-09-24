@@ -1,6 +1,6 @@
 # 品酒（尊美醇Jameson）
 
-> 发布于：2024-11-04 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/jameson-irish-whiskey-tasting
+> 发布于：2024-11-04 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/jameson-irish-whiskey-tasting
 
 # 尊美醇Jameson
 

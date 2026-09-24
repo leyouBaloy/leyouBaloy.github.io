@@ -1,6 +1,6 @@
 # 《悉达多》——人生就是在不断的体验与感悟
 
-> 发布于：2022-11-12 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/siddhartha-book-review-life-experience
+> 发布于：2022-11-12 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/siddhartha-book-review-life-experience
 
 ## 《悉达多》
 

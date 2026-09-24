@@ -28,14 +28,50 @@ if (!fs.existsSync(normalizedMarkdownDir)) {
   fs.mkdirSync(normalizedMarkdownDir, { recursive: true });
 }
 
-const prepareOutputDir = (dir) => {
-  fs.rmSync(dir, { recursive: true, force: true });
+const ensureOutputDir = (dir) => {
   fs.mkdirSync(dir, { recursive: true });
 };
 
-prepareOutputDir(normalizedOutputDir);
-prepareOutputDir(normalizedPostsOutputDir);
-prepareOutputDir(normalizedMarkdownPagesOutputDir);
+ensureOutputDir(normalizedOutputDir);
+ensureOutputDir(normalizedPostsOutputDir);
+ensureOutputDir(normalizedMarkdownPagesOutputDir);
+
+const writtenFiles = new Set();
+
+const writeTextIfChanged = (filePath, content) => {
+  writtenFiles.add(path.normalize(filePath));
+  if (fs.existsSync(filePath)) {
+    const existing = fs.readFileSync(filePath, 'utf8');
+    if (existing === content) {
+      return false;
+    }
+  }
+  fs.writeFileSync(filePath, content);
+  return true;
+};
+
+const writeJsonIfChanged = (filePath, data) => {
+  return writeTextIfChanged(filePath, JSON.stringify(data, null, 2));
+};
+
+const sortObjectByKey = (obj) => {
+  return Object.keys(obj)
+    .sort((a, b) => a.localeCompare(b))
+    .reduce((acc, key) => {
+      acc[key] = obj[key];
+      return acc;
+    }, {});
+};
+
+const removeStaleGeneratedFiles = (dir, keep) => {
+  if (!fs.existsSync(dir)) return;
+  for (const entry of fs.readdirSync(dir)) {
+    const fullPath = path.normalize(path.join(dir, entry));
+    if (!keep.has(fullPath) && fs.statSync(fullPath).isFile()) {
+      fs.unlinkSync(fullPath);
+    }
+  }
+};
 
 // 对文件名做 md5 hash，取前 8 位
 const hashFilename = (filename) => {
@@ -286,22 +322,20 @@ fs.readdirSync(normalizedMarkdownDir).forEach(file => {
 metadataList.sort((a, b) => new Date(b.date) - new Date(a.date));
 postPayloads.forEach(post => {
   const outputFile = path.join(normalizedPostsOutputDir, `${post.slug}.json`);
-  fs.writeFileSync(outputFile, JSON.stringify(post, null, 2));
-  fs.writeFileSync(
+  writeJsonIfChanged(outputFile, post);
+  writeTextIfChanged(
     path.join(normalizedMarkdownPagesOutputDir, `${post.slug}.md`),
-    buildPostMarkdown(post, { sourceUrl: `${siteUrl}/post/${post.slug}` }),
-    'utf8'
+    buildPostMarkdown(post, { sourceUrl: `${siteUrl}/post/${post.slug}` })
   );
   (post.aliases || []).forEach(alias => {
     const aliasOutputFile = path.join(normalizedPostsOutputDir, `${alias}.json`);
-    fs.writeFileSync(aliasOutputFile, JSON.stringify({
+    writeJsonIfChanged(aliasOutputFile, {
       ...post,
       routeSlug: alias
-    }, null, 2));
-    fs.writeFileSync(
+    });
+    writeTextIfChanged(
       path.join(normalizedMarkdownPagesOutputDir, `${alias}.md`),
-      buildPostMarkdown({ ...post, routeSlug: alias }, { sourceUrl: `${siteUrl}/post/${alias}` }),
-      'utf8'
+      buildPostMarkdown({ ...post, routeSlug: alias }, { sourceUrl: `${siteUrl}/post/${alias}` })
     );
   });
 });
@@ -318,7 +352,7 @@ const chunkSize = 10;
 const totalPages = Math.ceil(metadataList.length / chunkSize);
 
 if (metadataList.length === 0) {
-  fs.writeFileSync(path.join(normalizedOutputDir, 'metadata_1.json'), JSON.stringify([], null, 2));
+  writeJsonIfChanged(path.join(normalizedOutputDir, 'metadata_1.json'), []);
   console.log('Empty metadata chunk generated successfully!');
 }
 
@@ -328,7 +362,7 @@ for (let i = 0; i < metadataList.length; i += chunkSize) {
     chunk[0].totalPages = totalPages; // 在第一个对象中添加总页数字段，用于显示主页下方的页码
   }
   const outputFile = path.join(normalizedOutputDir, `metadata_${Math.floor(i / chunkSize) + 1}.json`);
-  fs.writeFileSync(outputFile, JSON.stringify(chunk, null, 2));
+  writeJsonIfChanged(outputFile, chunk);
   console.log(`Metadata chunk ${Math.floor(i / chunkSize) + 1} generated successfully!`);
 }
 
@@ -481,26 +515,30 @@ ${sitemapUrls}
 </urlset>
 `;
 
-// 输出按年份分类的 JSON 文件
-fs.writeFileSync(path.join(normalizedOutputDir, 'posts_by_year.json'), JSON.stringify(postsByYear, null, 2));
+// 输出按年份分类的 JSON 文件（按年份键排序，避免非确定性顺序）
+writeJsonIfChanged(path.join(normalizedOutputDir, 'posts_by_year.json'), sortObjectByKey(postsByYear));
 console.log('Posts by year JSON file generated successfully!');
 
 // 输出按标签分类的 JSON 文件
-fs.writeFileSync(path.join(normalizedOutputDir, 'posts_by_tag.json'), JSON.stringify(postsByTag, null, 2));
+writeJsonIfChanged(path.join(normalizedOutputDir, 'posts_by_tag.json'), sortObjectByKey(postsByTag));
 console.log('Posts by tag JSON file generated successfully!');
 
-// 输出 slug -> filename 映射文件
-fs.writeFileSync(path.join(normalizedOutputDir, 'slug_mapping.json'), JSON.stringify(slugMapping, null, 2));
+// 输出 slug -> filename 映射文件（按 key 排序，避免 readdir 顺序导致无意义 diff）
+writeJsonIfChanged(path.join(normalizedOutputDir, 'slug_mapping.json'), sortObjectByKey(slugMapping));
 console.log('Slug mapping JSON file generated successfully!');
 
-fs.writeFileSync(path.join(normalizedOutputDir, 'related_by_slug.json'), JSON.stringify(relatedBySlug, null, 2));
+writeJsonIfChanged(path.join(normalizedOutputDir, 'related_by_slug.json'), sortObjectByKey(relatedBySlug));
 console.log('Related posts JSON file generated successfully!');
 
-fs.writeFileSync(path.join(normalizedOutputDir, 'search_index.json'), JSON.stringify(searchIndex, null, 2));
+writeJsonIfChanged(path.join(normalizedOutputDir, 'search_index.json'), searchIndex);
 console.log('Search index JSON file generated successfully!');
 
-fs.writeFileSync(path.join(__dirname, '../../public/rss.xml'), rssFeed);
+writeTextIfChanged(path.join(__dirname, '../../public/rss.xml'), rssFeed);
 console.log('RSS feed generated successfully!');
 
-fs.writeFileSync(path.join(__dirname, '../../public/sitemap.xml'), sitemap);
+writeTextIfChanged(path.join(__dirname, '../../public/sitemap.xml'), sitemap);
 console.log('Sitemap generated successfully!');
+
+removeStaleGeneratedFiles(normalizedOutputDir, writtenFiles);
+removeStaleGeneratedFiles(normalizedPostsOutputDir, writtenFiles);
+removeStaleGeneratedFiles(normalizedMarkdownPagesOutputDir, writtenFiles);

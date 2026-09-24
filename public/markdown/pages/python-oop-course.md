@@ -1,6 +1,6 @@
 # python面向对象课程
 
-> 发布于：2021-02-02 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/python-oop-course
+> 发布于：2021-02-02 | 分类：刷题 | 原文：https://www.imbailey.cn/post/python-oop-course
 
 [https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm\_id\_from=pageDriver](https://www.bilibili.com/video/BV1A4411v7b2?p=34&spm_id_from=pageDriver)
 

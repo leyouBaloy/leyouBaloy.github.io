@@ -1,6 +1,6 @@
 # Leetcode105:从前序与中序遍历序列构造二叉树
 
-> 发布于：2022-03-26 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-105-construct-binary-tree-preorder-inorder
+> 发布于：2022-03-26 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-105-construct-binary-tree-preorder-inorder
 
 ## 题目
 

@@ -1,6 +1,6 @@
 # Leetcode78:子集——递归、回溯——一道困扰我的题
 
-> 发布于：2022-03-29 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-78-subsets-recursion-backtracking
+> 发布于：2022-03-29 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-78-subsets-recursion-backtracking
 
 ## 题目
 

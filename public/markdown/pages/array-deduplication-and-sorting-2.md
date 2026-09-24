@@ -1,6 +1,6 @@
 # 自动去重和排序
 
-> 发布于：2020-10-26 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/array-deduplication-and-sorting-2
+> 发布于：2020-10-26 | 分类：刷题 | 原文：https://www.imbailey.cn/post/array-deduplication-and-sorting-2
 
 【题目描述】
 

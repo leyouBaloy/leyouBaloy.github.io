@@ -1,6 +1,6 @@
 # Vue+flask实现播放任何视频源（包括rtsp摄像头）
 
-> 发布于：2023-04-22 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/vue-flask-play-rtsp-video-stream-camera
+> 发布于：2023-04-22 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/vue-flask-play-rtsp-video-stream-camera
 
 ## 背景
 

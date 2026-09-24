@@ -1,6 +1,6 @@
 # Leetcode994:腐烂的橘子——多源广度优先搜索—有趣的题目
 
-> 发布于：2022-03-22 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-994-rotting-oranges-bfs
+> 发布于：2022-03-22 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-994-rotting-oranges-bfs
 
 ## 题目
 

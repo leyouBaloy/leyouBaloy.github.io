@@ -1,6 +1,6 @@
 # Leetcode455:分发饼干——排序、贪心
 
-> 发布于：2022-03-18 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-455-assign-cookies-sort-greedy
+> 发布于：2022-03-18 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-455-assign-cookies-sort-greedy
 
 ## 题目
 

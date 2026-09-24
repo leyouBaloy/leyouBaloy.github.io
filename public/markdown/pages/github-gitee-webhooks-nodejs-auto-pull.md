@@ -1,6 +1,6 @@
 # gitee/github webhooks+nodejs实现自动拉取代码
 
-> 发布于：2022-01-25 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/github-gitee-webhooks-nodejs-auto-pull
+> 发布于：2022-01-25 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/github-gitee-webhooks-nodejs-auto-pull
 
 ### 需求
 

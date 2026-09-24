@@ -1,6 +1,6 @@
 # matplotlib作热机效率随负载大小变化曲线图
 
-> 发布于：2021-04-02 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/matplotlib-plot-heat-engine-efficiency-curve
+> 发布于：2021-04-02 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/matplotlib-plot-heat-engine-efficiency-curve
 
 大物实验得到的数据，用python的matplotlib很方便处理
 

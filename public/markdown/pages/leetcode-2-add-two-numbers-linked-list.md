@@ -1,6 +1,6 @@
 # Leetcode2:两数相加——链表
 
-> 发布于：2022-04-05 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-2-add-two-numbers-linked-list
+> 发布于：2022-04-05 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-2-add-two-numbers-linked-list
 
 # 题目
 

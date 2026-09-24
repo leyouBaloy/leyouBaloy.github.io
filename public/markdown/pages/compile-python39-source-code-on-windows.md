@@ -1,6 +1,6 @@
 # 如何在Windows上编译Python39源代码
 
-> 发布于：2023-12-10 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/compile-python39-source-code-on-windows
+> 发布于：2023-12-10 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/compile-python39-source-code-on-windows
 
 # 安装Visual Studio 2017
 

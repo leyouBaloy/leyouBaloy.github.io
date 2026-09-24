@@ -1,6 +1,6 @@
 # 如何将语雀文档导出为html（使用语雀API）
 
-> 发布于：2023-03-09 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/export-yuque-document-to-html-api
+> 发布于：2023-03-09 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/export-yuque-document-to-html-api
 
 ## 需求
 

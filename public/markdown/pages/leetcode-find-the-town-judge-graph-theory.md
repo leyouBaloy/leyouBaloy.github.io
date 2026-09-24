@@ -1,6 +1,6 @@
 # 找到小镇的法官——图论入门
 
-> 发布于：2022-02-25 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-find-the-town-judge-graph-theory
+> 发布于：2022-02-25 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-find-the-town-judge-graph-theory
 
 ## 题目
 

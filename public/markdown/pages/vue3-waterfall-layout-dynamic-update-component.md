@@ -1,6 +1,6 @@
 # Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践
 
-> 发布于：2025-01-24 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/vue3-waterfall-layout-dynamic-update-component
+> 发布于：2025-01-24 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/vue3-waterfall-layout-dynamic-update-component
 
 ## 思路
 

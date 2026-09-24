@@ -1,6 +1,6 @@
 # 《写给大家看的设计书》读书笔记
 
-> 发布于：2022-06-14 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/non-designers-design-book-reading-notes
+> 发布于：2022-06-14 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/non-designers-design-book-reading-notes
 
 ## 写给大家看的设计书
 

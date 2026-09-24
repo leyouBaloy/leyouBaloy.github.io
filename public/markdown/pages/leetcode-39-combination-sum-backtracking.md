@@ -1,6 +1,6 @@
 # Leetcode39:组合总和——回溯
 
-> 发布于：2022-05-06 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-39-combination-sum-backtracking
+> 发布于：2022-05-06 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-39-combination-sum-backtracking
 
 ## 题目
 

@@ -1,6 +1,6 @@
 # mac m1 安装sqlserver踩坑经历
 
-> 发布于：2022-03-16 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/mac-m1-install-sql-server
+> 发布于：2022-03-16 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/mac-m1-install-sql-server
 
 ## 为什么安装sqlserver
 

@@ -1,6 +1,6 @@
 # ubuntu安装Python3的曲折之路
 
-> 发布于：2021-10-30 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/ubuntu-install-python3-pyenv
+> 发布于：2021-10-30 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/ubuntu-install-python3-pyenv
 
 ### 思路
 

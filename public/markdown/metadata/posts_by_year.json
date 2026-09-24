@@ -4016,6 +4016,60 @@
   ],
   "2026": [
     {
+      "title": "让 YouTube 自动字幕按整句切分：我把 Language Reactor 的断句问题从根上修掉了",
+      "date": "2026-09-20T08:45:00.000Z",
+      "updatedAt": "2026-09-20T08:45:00.000Z",
+      "file": "youtube-asr-sentence-cues-language-reactor.md",
+      "slug": "youtube-asr-sentence-cues-language-reactor",
+      "legacySlug": "2ac4263e",
+      "aliases": [
+        "2ac4263e"
+      ],
+      "excerpt": "让 YouTube 自动字幕按整句切分：我把 Language Reactor 的断句问题从根上修掉了 我每天用 Edge + Language Reactor 看 CNN10 做精听，习惯一句一句反复听。 但这个流程一直有个很难受的地方： 字幕不是在句子边界断开的 。 经常是这样： 按句子复读的时",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 2083,
+      "readingTime": 6
+    },
+    {
+      "title": "用一台 16GB 显卡，把「我喜欢什么样的视频」教给 4B 视觉模型",
+      "date": "2026-08-29T21:41:00.000Z",
+      "updatedAt": "2026-08-29T21:41:00.000Z",
+      "file": "qwen3-vl-4b-sft-personal-video-preference.md",
+      "slug": "qwen3-vl-4b-sft-personal-video-preference",
+      "legacySlug": "7e29a04e",
+      "aliases": [
+        "7e29a04e"
+      ],
+      "excerpt": "用一台 16GB 显卡，把「我喜欢什么样的视频」教给 4B 视觉模型 这篇是一份实验记录。目标不是做通用内容审核，也不是训练一个公开分类器，而是：在自己的片库里，用已经打过的 1–5 分，让一个小视觉语言模型学会 我的口味 ——看完几张关键帧之后，能给出结构化观察，顺便再补一个分。 先交代清楚：机器",
+      "tags": [
+        "AI实践"
+      ],
+      "img": "/images/qwen3-vl-sft-cover.png",
+      "wordCount": 2308,
+      "readingTime": 6
+    },
+    {
+      "title": "从零开始做 AI 生视频：本地部署 MiniMax H3 与官方 API 的实战经验",
+      "date": "2026-08-09T12:09:10.000Z",
+      "updatedAt": "2026-08-09T12:09:10.000Z",
+      "file": "minimax-h3-local-vs-api-video-generation.md",
+      "slug": "minimax-h3-local-vs-api-video-generation",
+      "legacySlug": "a23ef8a6",
+      "aliases": [
+        "a23ef8a6"
+      ],
+      "excerpt": "从零开始做 AI 生视频：本地部署 MiniMax H3 与官方 API 的实战经验 想用一张情侣自拍做一条“车内聊天、失重悬浮、冲上天空、掠过城市”的 9 秒真人感视频，我原以为难点是写一段足够长的提示词。实际走完一遍才发现：提示词只是一小部分。路线选择、显存与磁盘、参考图、镜头拆分、对白格式、验",
+      "tags": [
+        "AI实践"
+      ],
+      "img": "",
+      "wordCount": 2387,
+      "readingTime": 6
+    },
+    {
       "title": "我让 Agent 跑完西二旗租房：网易大楼周边 147 个小区公寓口碑表",
       "date": "2026-06-03T23:30:00.000Z",
       "updatedAt": "2026-06-03T23:30:00.000Z",

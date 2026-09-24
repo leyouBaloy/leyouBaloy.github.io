@@ -1,6 +1,6 @@
 # 手撕卷积神经网络+反向传播梯度更新
 
-> 发布于：2025-07-13 | 分类：笔记, 技能分享 | 原文：https://leyoubaloy.github.io/post/cnn-backpropagation-gradient-update-from-scratch
+> 发布于：2025-07-13 | 分类：笔记, 技能分享 | 原文：https://www.imbailey.cn/post/cnn-backpropagation-gradient-update-from-scratch
 
 # 手撕卷积神经网络
 

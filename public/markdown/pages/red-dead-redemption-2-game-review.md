@@ -1,6 +1,6 @@
 # 艺术品般的游戏—《荒野大镖客救赎2》
 
-> 发布于：2023-09-19 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/red-dead-redemption-2-game-review
+> 发布于：2023-09-19 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/red-dead-redemption-2-game-review
 
 ## “地表最强游戏公司”
 

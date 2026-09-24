@@ -1,6 +1,6 @@
 # Flask+vue使用jwt验证
 
-> 发布于：2022-05-22 | 分类：技能分享, 笔记 | 原文：https://leyoubaloy.github.io/post/flask-vue-jwt-authentication
+> 发布于：2022-05-22 | 分类：技能分享, 笔记 | 原文：https://www.imbailey.cn/post/flask-vue-jwt-authentication
 
 ## 为什么要使用jwt验证？
 

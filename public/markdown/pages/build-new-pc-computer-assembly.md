@@ -1,6 +1,6 @@
 # 组装一台新的电脑
 
-> 发布于：2023-03-01 | 分类：随笔杂记, 技能分享 | 原文：https://leyoubaloy.github.io/post/build-new-pc-computer-assembly
+> 发布于：2023-03-01 | 分类：随笔杂记, 技能分享 | 原文：https://www.imbailey.cn/post/build-new-pc-computer-assembly
 
 从Windows换到Mac，获得了很多东西：
 

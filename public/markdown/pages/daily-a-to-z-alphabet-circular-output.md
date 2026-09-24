@@ -1,6 +1,6 @@
 # 每日一题--a到z26个字母循环输出
 
-> 发布于：2020-10-10 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/daily-a-to-z-alphabet-circular-output
+> 发布于：2020-10-10 | 分类：刷题 | 原文：https://www.imbailey.cn/post/daily-a-to-z-alphabet-circular-output
 
 题目描述】
 

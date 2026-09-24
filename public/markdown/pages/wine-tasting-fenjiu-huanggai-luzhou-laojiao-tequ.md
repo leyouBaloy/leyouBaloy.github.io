@@ -1,6 +1,6 @@
 # 品酒🍶（汾酒黄盖&泸州老窖特曲经典）
 
-> 发布于：2024-07-23 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/wine-tasting-fenjiu-huanggai-luzhou-laojiao-tequ
+> 发布于：2024-07-23 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/wine-tasting-fenjiu-huanggai-luzhou-laojiao-tequ
 
 最近改论文压力挺大，经常失眠。品点小酒🍶，微醺更容易入睡。
 

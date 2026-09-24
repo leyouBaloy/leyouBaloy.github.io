@@ -1,6 +1,6 @@
 # Leetcode142:环形链表II——快慢指针
 
-> 发布于：2024-10-29 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-142-linked-list-cycle-ii-fast-slow-pointers
+> 发布于：2024-10-29 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-142-linked-list-cycle-ii-fast-slow-pointers
 
 # Leetcode_142环形链表II
 

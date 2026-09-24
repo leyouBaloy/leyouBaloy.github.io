@@ -1,6 +1,6 @@
 # 组织一次成功的班级烧烤经验分享
 
-> 发布于：2022-06-23 | 分类：技能分享, 随笔杂记 | 原文：https://leyoubaloy.github.io/post/class-bbq-team-building-experience-sharing
+> 发布于：2022-06-23 | 分类：技能分享, 随笔杂记 | 原文：https://www.imbailey.cn/post/class-bbq-team-building-experience-sharing
 
 ## 准备物资
 

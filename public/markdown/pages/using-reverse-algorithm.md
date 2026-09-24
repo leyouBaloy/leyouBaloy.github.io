@@ -1,6 +1,6 @@
 # 使用reverse反向排列算法
 
-> 发布于：2020-12-28 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/using-reverse-algorithm
+> 发布于：2020-12-28 | 分类：刷题 | 原文：https://www.imbailey.cn/post/using-reverse-algorithm
 
 ```
 #include <bits/stdc++.h>

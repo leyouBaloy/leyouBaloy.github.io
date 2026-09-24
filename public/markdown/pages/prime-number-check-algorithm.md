@@ -1,6 +1,6 @@
 # 质数判断
 
-> 发布于：2020-12-03 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/prime-number-check-algorithm
+> 发布于：2020-12-03 | 分类：刷题 | 原文：https://www.imbailey.cn/post/prime-number-check-algorithm
 
 质数判断是最简单最基本的算法，虽然我能很快把代码写出来，但是总会有一些小错误，不妨把下面的经典代码记下来
 

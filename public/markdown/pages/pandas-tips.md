@@ -1,6 +1,6 @@
 # Pandas使用技巧
 
-> 发布于：2022-04-16 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/pandas-tips
+> 发布于：2022-04-16 | 分类：笔记 | 原文：https://www.imbailey.cn/post/pandas-tips
 
 ## read_csv()参数
 

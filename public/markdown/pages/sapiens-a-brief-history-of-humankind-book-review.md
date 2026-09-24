@@ -1,6 +1,6 @@
 # 《人类简史》读后有感
 
-> 发布于：2021-08-16 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/sapiens-a-brief-history-of-humankind-book-review
+> 发布于：2021-08-16 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/sapiens-a-brief-history-of-humankind-book-review
 
 ### 一句话概述
 

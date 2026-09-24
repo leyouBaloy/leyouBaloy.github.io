@@ -69,7 +69,7 @@ Commands:
   slug:missing            Add AI slugs to markdown posts that do not have one
   english <youtube-url>   Add an English video check-in
   generate | g            Generate metadata and static files into dist
-  server | s              Generate metadata and start the dev server
+  server | s              Start the Vite dev server (use --regen to refresh metadata first)
   help                    Show this help message
 
 New post options:
@@ -105,6 +105,8 @@ AI slug env:
 Server options:
   --host <host>           Forward host to Vite
   --port <port>           Forward port to Vite
+  --regen                 Regenerate metadata before starting (same as yarn blog generate's metadata step)
+  --generate              Alias of --regen
 
 Examples:
   yarn blog new "我的新文章"
@@ -114,6 +116,7 @@ Examples:
   yarn blog english "https://www.youtube.com/watch?v=..." --duration 6:34
   yarn blog generate
   yarn blog server --port 5173
+  yarn blog server --regen --port 5173
 `;
 
 function printHelp() {
@@ -140,7 +143,7 @@ function parseOptions(input) {
     const key = rawKey.trim();
     const nextValue = input[i + 1];
 
-    if (['draft', 'force', 'ai-slug', 'no-ai-slug', 'dry-run', 'allow-local'].includes(key)) {
+    if (['draft', 'force', 'ai-slug', 'no-ai-slug', 'dry-run', 'allow-local', 'regen', 'generate'].includes(key)) {
       options[key] = true;
       continue;
     }
@@ -901,7 +904,12 @@ async function startServer() {
     viteArgs.push('--port', options.port);
   }
 
-  await generateMetadata();
+  // Metadata is committed derived output. Regenerate only when asked, or via
+  // `yarn blog generate` / prebuild — not on every dev-server restart.
+  if (options.regen || options.generate) {
+    await generateMetadata();
+  }
+
   await run('yarn', ['vite', ...viteArgs]);
 }
 

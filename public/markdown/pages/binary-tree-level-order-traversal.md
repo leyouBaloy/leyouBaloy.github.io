@@ -1,6 +1,6 @@
 # 二叉树的层序遍历——太tm妙啦
 
-> 发布于：2022-03-11 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/binary-tree-level-order-traversal
+> 发布于：2022-03-11 | 分类：刷题 | 原文：https://www.imbailey.cn/post/binary-tree-level-order-traversal
 
 ## 题目
 

@@ -1,6 +1,6 @@
 # SCI论文润色经验分享
 
-> 发布于：2023-12-23 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/sci-paper-editing-experience-sharing
+> 发布于：2023-12-23 | 分类：笔记 | 原文：https://www.imbailey.cn/post/sci-paper-editing-experience-sharing
 
 # 变量符号
 

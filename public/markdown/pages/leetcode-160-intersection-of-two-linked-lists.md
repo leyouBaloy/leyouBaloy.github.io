@@ -1,6 +1,6 @@
 # Leetcode160:相交链表——哈希、双指针
 
-> 发布于：2022-03-16 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-160-intersection-of-two-linked-lists
+> 发布于：2022-03-16 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-160-intersection-of-two-linked-lists
 
 ## 题目
 

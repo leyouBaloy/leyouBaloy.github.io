@@ -1,6 +1,6 @@
 # 品酒🍶（国窖 1573）
 
-> 发布于：2024-08-17 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/wine-tasting-guojiao-1573
+> 发布于：2024-08-17 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/wine-tasting-guojiao-1573
 
 今天品一下国窖 1573，拿泸州老窖特曲做个对比。
 

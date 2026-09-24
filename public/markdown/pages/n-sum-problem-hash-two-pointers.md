@@ -1,6 +1,6 @@
 # 数之和问题归纳——哈希、双指针
 
-> 发布于：2024-11-04 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/n-sum-problem-hash-two-pointers
+> 发布于：2024-11-04 | 分类：刷题 | 原文：https://www.imbailey.cn/post/n-sum-problem-hash-two-pointers
 
 # Leetcode 1: 两数之和
 

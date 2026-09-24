@@ -1,6 +1,6 @@
 # 在word中使用通配符进行高级的查找和替换
 
-> 发布于：2022-06-16 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/word-wildcard-advanced-find-and-replace
+> 发布于：2022-06-16 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/word-wildcard-advanced-find-and-replace
 
 ## 需求
 

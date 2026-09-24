@@ -1,6 +1,6 @@
 # Git撤销版本
 
-> 发布于：2022-04-16 | 分类：技能分享, 笔记 | 原文：https://leyoubaloy.github.io/post/git-undo-commit
+> 发布于：2022-04-16 | 分类：技能分享, 笔记 | 原文：https://www.imbailey.cn/post/git-undo-commit
 
 ## Git如何撤回远程仓库已经提交的版本？
 

@@ -1,6 +1,6 @@
 # Leetcode347:前K个高频元素——优先队列、堆
 
-> 发布于：2022-04-07 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-347-top-k-frequent-elements-priority-queue-heap
+> 发布于：2022-04-07 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-347-top-k-frequent-elements-priority-queue-heap
 
 # 题目
 

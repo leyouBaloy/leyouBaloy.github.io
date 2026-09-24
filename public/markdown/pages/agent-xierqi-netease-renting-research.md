@@ -1,6 +1,6 @@
 # 我让 Agent 跑完西二旗租房：网易大楼周边 147 个小区公寓口碑表
 
-> 发布于：2026-06-03 | 分类：AI | 原文：https://leyoubaloy.github.io/post/agent-xierqi-netease-renting-research
+> 发布于：2026-06-03 | 分类：AI | 原文：https://www.imbailey.cn/post/agent-xierqi-netease-renting-research
 
 最近在看西二旗网易大楼附近的租房选择，最麻烦的不是“有没有房”，而是信息太碎：地图上是一批 POI，租房平台上是一批价格，论坛和问答里又散落着隔音、物业、通勤、周边配套这些真正影响居住体验的细节。
 

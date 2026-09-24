@@ -1,6 +1,6 @@
 # matplotlib学习笔记（四）图中图-次坐标轴-Animation动画
 
-> 发布于：2021-03-03 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/matplotlib-tutorial-4-pip-secondary-axis-animation
+> 发布于：2021-03-03 | 分类：笔记 | 原文：https://www.imbailey.cn/post/matplotlib-tutorial-4-pip-secondary-axis-animation
 
 视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\_id\_from=pageDriver  
 仅用于学习  

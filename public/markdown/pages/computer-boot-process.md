@@ -1,6 +1,6 @@
 # 电脑启动需要经历哪些过程？
 
-> 发布于：2024-11-27 | 分类：笔记, 技能分享 | 原文：https://leyoubaloy.github.io/post/computer-boot-process
+> 发布于：2024-11-27 | 分类：笔记, 技能分享 | 原文：https://www.imbailey.cn/post/computer-boot-process
 
 # 传统BIOS启动流程
 

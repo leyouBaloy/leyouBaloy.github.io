@@ -1,0 +1,76 @@
+{
+  "title": "让 YouTube 自动字幕按整句切分：我把 Language Reactor 的断句问题从根上修掉了",
+  "date": "2026-09-20T08:45:00.000Z",
+  "updatedAt": "2026-09-20T08:45:00.000Z",
+  "file": "youtube-asr-sentence-cues-language-reactor.md",
+  "slug": "youtube-asr-sentence-cues-language-reactor",
+  "legacySlug": "2ac4263e",
+  "aliases": [
+    "2ac4263e"
+  ],
+  "excerpt": "让 YouTube 自动字幕按整句切分：我把 Language Reactor 的断句问题从根上修掉了 我每天用 Edge + Language Reactor 看 CNN10 做精听，习惯一句一句反复听。 但这个流程一直有个很难受的地方： 字幕不是在句子边界断开的 。 经常是这样： 按句子复读的时",
+  "categories": [
+    "技能分享"
+  ],
+  "tags": [
+    "技能分享"
+  ],
+  "img": "",
+  "wordCount": 2083,
+  "readingTime": 6,
+  "body": "# 让 YouTube 自动字幕按整句切分：我把 Language Reactor 的断句问题从根上修掉了\n\n我每天用 Edge + Language Reactor 看 CNN10 做精听，习惯一句一句反复听。\n\n但这个流程一直有个很难受的地方：**字幕不是在句子边界断开的**。\n\n经常是这样：\n\n```text\n...and most policy makers          <- 上一行\nexpect at least one more hike this year.   <- 下一行\n```\n\n按句子复读的时候，你得手动把光标拖回去，或者干脆把两个碎片连在一起听。次数一多，学习节奏全碎了。\n\n搜了一圈，没人给出解法，于是我自己动手把根因挖出来了，顺便做了个扩展。过程挺有意思，记一下。\n\n## 一、先量一下问题有多大\n\n不量化就动手，很容易改错地方。我先把那份字幕**原始数据**抓下来看。\n\nLanguage Reactor 的字幕来自 YouTube 的 `timedtext` 接口，返回 json3 格式。抓法：用 Chrome DevTools Protocol 连上浏览器，开 `Network` 域，然后从响应体里把 json3 拿出来解析。\n\n拿 9 月 18 日那期 CNN10 统计的结果：\n\n```text\n总段数: 456\n总词数: 1444\n平均每段: 6.3 词 / 4.6 秒\n结尾没有终止标点的段: 186 段（约 82%）\n```\n\n也就是说，**YouTube 是按时间切片，不是按句子切片**——大约每 4.5 秒切一刀，切到哪儿算哪儿。\n\n## 二、Language Reactor 到底做了什么\n\n接下来把 Language Reactor 5.1.8 的 `pageScript_lly.min.js` 扒开看。\n\n它拉字幕的方式很朴素：`jQuery.ajax`（底层就是 **XMLHttpRequest**）请求\n\n```text\nhttps://www.youtube.com/api/timedtext?v=...&fmt=json3&c=WEB&pot=...\n```\n\n（`pot` 这个令牌它是从 XHR 的 `open` 调用里顺手截下来的——因为 YouTube 现在对这个接口有校验。）\n\n真正关键的是它对字幕的**解析函数**。在 ASR（自动字幕）分支里，它做的是**两两配对**：\n\n> 相邻两个 cue，如果时间间隔 ≤ 10ms，就合并成一行；否则单独一行。\n\n也就是说，Language Reactor 根本没打算理解句子——它只是把 YouTube 切碎的块**两两粘起来**。\n\n这就解释了为什么断句看起来“有点道理但就是不整”：它只是把碎片两两黏合，恰好半数时候黏对了。\n\n## 三、解法：在字幕进入 Language Reactor 之前重排\n\n既然断句是数据问题，那就别在工具里硬扛，**在数据进入工具之前解决**。\n\n关键发现是：json3 里的每个 event 都带**逐词时间戳**（`segs[].tOffsetMs`）。这意味着我能精确知道“句号落在第几个词上”。\n\n于是改写流程变成三步：\n\n1. 把所有 event 摊平成“词 + 绝对时间”的列表。\n2. 按标点重新组句：`.?!` 结尾断开；带缩写保护（`U.S.`、`Dr.`、`p.m.` 不算句尾）；`>>` 表示换人说话时断开；停顿超过 0.9 秒且下一个词是大写，也视为换句；单句最长 13 秒 / 200 字符兜底。\n3. 重建 json3：**一个 cue = 一整句**，逐词时间戳原样保留。\n\n还有一个必须处理的细节：Language Reactor 那条“间隔 ≤10ms 就两两配对”的规则。\n\n破解方式很土但很有效——**每句结尾故意留 60ms 空隙**。间隔变成 60ms，远超 10ms，它就再也不会把两句粘起来了。\n\n```js\n// 保留 60ms 空隙，等于锁死\"一行一句\"\nvar dur = s.end - s.start;\nif (i + 1 < sents.length) dur = Math.min(dur, sents[i + 1].start - s.start - 60);\n```\n\n顺手还修了一个隐藏 bug：**YouTube 每个 event 的第一个词没有前导空格**，直接拼接会得到 `Wemade it.`。所以重排时还要按词补空格。\n\n## 四、短句不能单独成行\n\n第一版改完：456 段 → 137 行，确实一句一行了。\n\n但用起来立刻发现问题：`I'm Koi Wire.` 这种 2-3 个词的短句，单独占一行非常别扭，眼睛还没落下去就翻页了。\n\n于是加了一条最小长度规则：**不足 4 个词、并且时长不足 1.5 秒的句子，并入下一句**。\n\n改完 456 段 → 124 行，只剩两行是极短的，而且都合理（一行后面紧跟着 `>>` 换人，一行是视频结尾）。\n\n这里也踩了个坑：条件一开始写得糙，导致 `>>` 换人处前面只剩一个词时也被断开，出现了单行单词 `It's`。改成“**只有当前句子已经成立（有标点或词数够）才在换人处断开**”就正常了。\n\n## 五、中英对不上：翻译轨也要一起切\n\n英文修好之后，我打开中文对照，发现**中英错位**了。\n\n原因不复杂：Language Reactor 显示的中文**不是它自己翻的**，而是从 YouTube 的**翻译轨**（URL 里带 `tlang=`）拉下来的，然后按时间轴和英文对齐。\n\n英文被我切成 124 句，中文还是原来的 6 词一段——条数都不等，当然对不上。\n\n修法：**记住英文算出来的句子边界，把翻译轨按同一套边界重切一遍**。为了兼容 YouTube 返回的两种结构（逐词 or 整行），用的是“按时间比例切分”：\n\n- 逐词轨迹：每个词按自己的时间落进对应句子；\n- 整行轨迹：整行按时间长度的重叠比例切给不同的句子。\n\n结果是条数严格相等：**124 ↔ 124，逐条对齐**。\n\n## 六、干脆用自己的翻译\n\n到这一步已经很好用了，但还有个隐患：翻译轨的断句权在 YouTube 手里，质量也一般。\n\n那不如**自己的句子自己翻**。\n\n架构是三层：\n\n```text\n页面脚本(主世界)  →  桥(content script)  →  后台 service worker  →  翻译接口\n   拦到 tlang 请求        页面拿不到 chrome.runtime，得转发      调 API + 本地缓存\n```\n\n这里有个我觉得挺有意思的操作：**拦截到翻译请求后，不发真请求**。\n\n等后台把译文拿回来，我自己给这个 XHR 打上状态：\n\n```js\n// 让 jQuery 以为请求成功结束了，拿到的却是我们的译文\nshape('readyState', 4);\nshape('status', 200);\nshape('responseText', text);\nxhr.dispatchEvent(new Event('readystatechange'));\nxhr.dispatchEvent(new ProgressEvent('load'));\n```\n\n因为译文就是我们按英文句子生成的，**一行对一行，构造上不可能错位**。\n\n翻译源做成可切换的：\n\n1. MyMemory：免费、不用 key，实测 3 句 1.4 秒，质量中等（默认）。\n2. OpenAI 兼容接口：DeepSeek / 中转站 / 本地 Ollama 都行，**一个视频一次请求**，质量最好。\n3. Google 免费端点：我这边的出口 IP 被 Google 风控拦了（返回 `Sorry... automated queries`），基本不可用，留作备选。\n\n译文按「视频 + 语言 + 翻译源 + 句子哈希」缓存在本机，重看不重翻；翻译失败或超时会自动回退到 YouTube 翻译轨，并在右下角弹个徽章说明原因——**不静默失败**是我做工具的基本原则。\n\n## 七、踩坑清单\n\n几个值得单独记下来的坑：\n\n1. **改了扩展文件必须点“重新加载”。** `edge://extensions` 里那张卡片上不点一下，改的文件根本不生效，只刷页面没用。我第一次就是被这个骗了，以为代码没起作用。\n2. **工具自己有内存缓存。** Language Reactor 会把解析过的字幕缓存在内存里，换版本之后必须刷新视频页，否则看到的还是旧结果。\n3. **油猴版做不了自有翻译。** 页面里跨域调翻译接口会被 CORS 拦，没有后台服务就绕不过去，所以自有翻译只能做成扩展。\n4. **别把工具的怪癖当成自己的 bug。** Language Reactor 里偶尔出现的 `…` 是它自己的行为：词与词间隔超过 1.5 秒它就插省略号，跟我的改写无关。\n5. **Node 的 `vm` 里 `window` 是 proxy。** 写测试时发现 `ev.source !== window` 恒为真，把消息全挡了，得写成宽松比较。这类环境的细微差别，不写测试根本发现不了。\n\n## 八、效果\n\n| | 改前 | 改后 |\n| --- | --- | --- |\n| 字幕行数 | 456 段碎片 | 124 句 |\n| 断句位置 | 82% 在句子中间 | 句子边界 |\n| 中英对照 | 按 YouTube 碎块对齐 | 124 对 124 |\n| 词级高亮 / 暂停 / 复读 | 可用 | 可用（时间戳全部保留） |\n\n现在看 CNN10，一句一行，暂停点落在句末，中英对齐，还能挂自己的翻译。\n\n## 写在最后\n\n这次折腾最大的体会是：**遇到工具不好用，先分清是“工具的问题”还是“数据的问题”。**\n\n这里其实是数据的问题——YouTube 的字幕本身就是按时间切的碎块，Language Reactor 只能被动地两两拼。所以最干净的解法不是去改它的渲染逻辑，而是在数据流进它之前，把数据重排成它想要的样子。\n\n而数据能重排的前提，是 json3 里藏着**逐词时间戳**。很多“看起来没救”的问题，答案其实就埋在原始数据里——先去看原始数据长什么样，永远值得。\n\n如果你也在用 Language Reactor 精听，或者有更聪明的断句策略，欢迎留言交流。\n",
+  "html": "<p>我每天用 Edge + Language Reactor 看 CNN10 做精听，习惯一句一句反复听。</p>\n<p>但这个流程一直有个很难受的地方：<strong>字幕不是在句子边界断开的</strong>。</p>\n<p>经常是这样：</p>\n<pre><code class=\"language-text\">...and most policy makers          &lt;- 上一行\nexpect at least one more hike this year.   &lt;- 下一行\n</code></pre>\n<p>按句子复读的时候，你得手动把光标拖回去，或者干脆把两个碎片连在一起听。次数一多，学习节奏全碎了。</p>\n<p>搜了一圈，没人给出解法，于是我自己动手把根因挖出来了，顺便做了个扩展。过程挺有意思，记一下。</p>\n<h2 id=\"一先量一下问题有多大\">一、先量一下问题有多大</h2>\n<p>不量化就动手，很容易改错地方。我先把那份字幕<strong>原始数据</strong>抓下来看。</p>\n<p>Language Reactor 的字幕来自 YouTube 的 <code>timedtext</code> 接口，返回 json3 格式。抓法：用 Chrome DevTools Protocol 连上浏览器，开 <code>Network</code> 域，然后从响应体里把 json3 拿出来解析。</p>\n<p>拿 9 月 18 日那期 CNN10 统计的结果：</p>\n<pre><code class=\"language-text\">总段数: 456\n总词数: 1444\n平均每段: 6.3 词 / 4.6 秒\n结尾没有终止标点的段: 186 段（约 82%）\n</code></pre>\n<p>也就是说，<strong>YouTube 是按时间切片，不是按句子切片</strong>——大约每 4.5 秒切一刀，切到哪儿算哪儿。</p>\n<h2 id=\"二language-reactor-到底做了什么\">二、Language Reactor 到底做了什么</h2>\n<p>接下来把 Language Reactor 5.1.8 的 <code>pageScript_lly.min.js</code> 扒开看。</p>\n<p>它拉字幕的方式很朴素：<code>jQuery.ajax</code>（底层就是 <strong>XMLHttpRequest</strong>）请求</p>\n<pre><code class=\"language-text\">https://www.youtube.com/api/timedtext?v=...&amp;fmt=json3&amp;c=WEB&amp;pot=...\n</code></pre>\n<p>（<code>pot</code> 这个令牌它是从 XHR 的 <code>open</code> 调用里顺手截下来的——因为 YouTube 现在对这个接口有校验。）</p>\n<p>真正关键的是它对字幕的<strong>解析函数</strong>。在 ASR（自动字幕）分支里，它做的是<strong>两两配对</strong>：</p>\n<blockquote>\n<p>相邻两个 cue，如果时间间隔 ≤ 10ms，就合并成一行；否则单独一行。</p>\n</blockquote>\n<p>也就是说，Language Reactor 根本没打算理解句子——它只是把 YouTube 切碎的块<strong>两两粘起来</strong>。</p>\n<p>这就解释了为什么断句看起来“有点道理但就是不整”：它只是把碎片两两黏合，恰好半数时候黏对了。</p>\n<h2 id=\"三解法在字幕进入-language-reactor-之前重排\">三、解法：在字幕进入 Language Reactor 之前重排</h2>\n<p>既然断句是数据问题，那就别在工具里硬扛，<strong>在数据进入工具之前解决</strong>。</p>\n<p>关键发现是：json3 里的每个 event 都带<strong>逐词时间戳</strong>（<code>segs[].tOffsetMs</code>）。这意味着我能精确知道“句号落在第几个词上”。</p>\n<p>于是改写流程变成三步：</p>\n<ol>\n<li>把所有 event 摊平成“词 + 绝对时间”的列表。</li>\n<li>按标点重新组句：<code>.?!</code> 结尾断开；带缩写保护（<code>U.S.</code>、<code>Dr.</code>、<code>p.m.</code> 不算句尾）；<code>&gt;&gt;</code> 表示换人说话时断开；停顿超过 0.9 秒且下一个词是大写，也视为换句；单句最长 13 秒 / 200 字符兜底。</li>\n<li>重建 json3：<strong>一个 cue = 一整句</strong>，逐词时间戳原样保留。</li>\n</ol>\n<p>还有一个必须处理的细节：Language Reactor 那条“间隔 ≤10ms 就两两配对”的规则。</p>\n<p>破解方式很土但很有效——<strong>每句结尾故意留 60ms 空隙</strong>。间隔变成 60ms，远超 10ms，它就再也不会把两句粘起来了。</p>\n<pre><code class=\"language-js\">// 保留 60ms 空隙，等于锁死&quot;一行一句&quot;\nvar dur = s.end - s.start;\nif (i + 1 &lt; sents.length) dur = Math.min(dur, sents[i + 1].start - s.start - 60);\n</code></pre>\n<p>顺手还修了一个隐藏 bug：<strong>YouTube 每个 event 的第一个词没有前导空格</strong>，直接拼接会得到 <code>Wemade it.</code>。所以重排时还要按词补空格。</p>\n<h2 id=\"四短句不能单独成行\">四、短句不能单独成行</h2>\n<p>第一版改完：456 段 → 137 行，确实一句一行了。</p>\n<p>但用起来立刻发现问题：<code>I'm Koi Wire.</code> 这种 2-3 个词的短句，单独占一行非常别扭，眼睛还没落下去就翻页了。</p>\n<p>于是加了一条最小长度规则：<strong>不足 4 个词、并且时长不足 1.5 秒的句子，并入下一句</strong>。</p>\n<p>改完 456 段 → 124 行，只剩两行是极短的，而且都合理（一行后面紧跟着 <code>&gt;&gt;</code> 换人，一行是视频结尾）。</p>\n<p>这里也踩了个坑：条件一开始写得糙，导致 <code>&gt;&gt;</code> 换人处前面只剩一个词时也被断开，出现了单行单词 <code>It's</code>。改成“<strong>只有当前句子已经成立（有标点或词数够）才在换人处断开</strong>”就正常了。</p>\n<h2 id=\"五中英对不上翻译轨也要一起切\">五、中英对不上：翻译轨也要一起切</h2>\n<p>英文修好之后，我打开中文对照，发现<strong>中英错位</strong>了。</p>\n<p>原因不复杂：Language Reactor 显示的中文<strong>不是它自己翻的</strong>，而是从 YouTube 的<strong>翻译轨</strong>（URL 里带 <code>tlang=</code>）拉下来的，然后按时间轴和英文对齐。</p>\n<p>英文被我切成 124 句，中文还是原来的 6 词一段——条数都不等，当然对不上。</p>\n<p>修法：<strong>记住英文算出来的句子边界，把翻译轨按同一套边界重切一遍</strong>。为了兼容 YouTube 返回的两种结构（逐词 or 整行），用的是“按时间比例切分”：</p>\n<ul>\n<li>逐词轨迹：每个词按自己的时间落进对应句子；</li>\n<li>整行轨迹：整行按时间长度的重叠比例切给不同的句子。</li>\n</ul>\n<p>结果是条数严格相等：<strong>124 ↔ 124，逐条对齐</strong>。</p>\n<h2 id=\"六干脆用自己的翻译\">六、干脆用自己的翻译</h2>\n<p>到这一步已经很好用了，但还有个隐患：翻译轨的断句权在 YouTube 手里，质量也一般。</p>\n<p>那不如<strong>自己的句子自己翻</strong>。</p>\n<p>架构是三层：</p>\n<pre><code class=\"language-text\">页面脚本(主世界)  →  桥(content script)  →  后台 service worker  →  翻译接口\n   拦到 tlang 请求        页面拿不到 chrome.runtime，得转发      调 API + 本地缓存\n</code></pre>\n<p>这里有个我觉得挺有意思的操作：<strong>拦截到翻译请求后，不发真请求</strong>。</p>\n<p>等后台把译文拿回来，我自己给这个 XHR 打上状态：</p>\n<pre><code class=\"language-js\">// 让 jQuery 以为请求成功结束了，拿到的却是我们的译文\nshape('readyState', 4);\nshape('status', 200);\nshape('responseText', text);\nxhr.dispatchEvent(new Event('readystatechange'));\nxhr.dispatchEvent(new ProgressEvent('load'));\n</code></pre>\n<p>因为译文就是我们按英文句子生成的，<strong>一行对一行，构造上不可能错位</strong>。</p>\n<p>翻译源做成可切换的：</p>\n<ol>\n<li>MyMemory：免费、不用 key，实测 3 句 1.4 秒，质量中等（默认）。</li>\n<li>OpenAI 兼容接口：DeepSeek / 中转站 / 本地 Ollama 都行，<strong>一个视频一次请求</strong>，质量最好。</li>\n<li>Google 免费端点：我这边的出口 IP 被 Google 风控拦了（返回 <code>Sorry... automated queries</code>），基本不可用，留作备选。</li>\n</ol>\n<p>译文按「视频 + 语言 + 翻译源 + 句子哈希」缓存在本机，重看不重翻；翻译失败或超时会自动回退到 YouTube 翻译轨，并在右下角弹个徽章说明原因——<strong>不静默失败</strong>是我做工具的基本原则。</p>\n<h2 id=\"七踩坑清单\">七、踩坑清单</h2>\n<p>几个值得单独记下来的坑：</p>\n<ol>\n<li><strong>改了扩展文件必须点“重新加载”。</strong> <code>edge://extensions</code> 里那张卡片上不点一下，改的文件根本不生效，只刷页面没用。我第一次就是被这个骗了，以为代码没起作用。</li>\n<li><strong>工具自己有内存缓存。</strong> Language Reactor 会把解析过的字幕缓存在内存里，换版本之后必须刷新视频页，否则看到的还是旧结果。</li>\n<li><strong>油猴版做不了自有翻译。</strong> 页面里跨域调翻译接口会被 CORS 拦，没有后台服务就绕不过去，所以自有翻译只能做成扩展。</li>\n<li><strong>别把工具的怪癖当成自己的 bug。</strong> Language Reactor 里偶尔出现的 <code>…</code> 是它自己的行为：词与词间隔超过 1.5 秒它就插省略号，跟我的改写无关。</li>\n<li><strong>Node 的 <code>vm</code> 里 <code>window</code> 是 proxy。</strong> 写测试时发现 <code>ev.source !== window</code> 恒为真，把消息全挡了，得写成宽松比较。这类环境的细微差别，不写测试根本发现不了。</li>\n</ol>\n<h2 id=\"八效果\">八、效果</h2>\n<table>\n<thead>\n<tr>\n<th></th>\n<th>改前</th>\n<th>改后</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>字幕行数</td>\n<td>456 段碎片</td>\n<td>124 句</td>\n</tr>\n<tr>\n<td>断句位置</td>\n<td>82% 在句子中间</td>\n<td>句子边界</td>\n</tr>\n<tr>\n<td>中英对照</td>\n<td>按 YouTube 碎块对齐</td>\n<td>124 对 124</td>\n</tr>\n<tr>\n<td>词级高亮 / 暂停 / 复读</td>\n<td>可用</td>\n<td>可用（时间戳全部保留）</td>\n</tr>\n</tbody>\n</table>\n<p>现在看 CNN10，一句一行，暂停点落在句末，中英对齐，还能挂自己的翻译。</p>\n<h2 id=\"写在最后\">写在最后</h2>\n<p>这次折腾最大的体会是：<strong>遇到工具不好用，先分清是“工具的问题”还是“数据的问题”。</strong></p>\n<p>这里其实是数据的问题——YouTube 的字幕本身就是按时间切的碎块，Language Reactor 只能被动地两两拼。所以最干净的解法不是去改它的渲染逻辑，而是在数据流进它之前，把数据重排成它想要的样子。</p>\n<p>而数据能重排的前提，是 json3 里藏着<strong>逐词时间戳</strong>。很多“看起来没救”的问题，答案其实就埋在原始数据里——先去看原始数据长什么样，永远值得。</p>\n<p>如果你也在用 Language Reactor 精听，或者有更聪明的断句策略，欢迎留言交流。</p>\n",
+  "headings": [
+    {
+      "level": 1,
+      "text": "让 YouTube 自动字幕按整句切分：我把 Language Reactor 的断句问题从根上修掉了",
+      "id": "让-youtube-自动字幕按整句切分我把-language-reactor-的断句问题从根上修掉了"
+    },
+    {
+      "level": 2,
+      "text": "一、先量一下问题有多大",
+      "id": "一先量一下问题有多大"
+    },
+    {
+      "level": 2,
+      "text": "二、Language Reactor 到底做了什么",
+      "id": "二language-reactor-到底做了什么"
+    },
+    {
+      "level": 2,
+      "text": "三、解法：在字幕进入 Language Reactor 之前重排",
+      "id": "三解法在字幕进入-language-reactor-之前重排"
+    },
+    {
+      "level": 2,
+      "text": "四、短句不能单独成行",
+      "id": "四短句不能单独成行"
+    },
+    {
+      "level": 2,
+      "text": "五、中英对不上：翻译轨也要一起切",
+      "id": "五中英对不上翻译轨也要一起切"
+    },
+    {
+      "level": 2,
+      "text": "六、干脆用自己的翻译",
+      "id": "六干脆用自己的翻译"
+    },
+    {
+      "level": 2,
+      "text": "七、踩坑清单",
+      "id": "七踩坑清单"
+    },
+    {
+      "level": 2,
+      "text": "八、效果",
+      "id": "八效果"
+    },
+    {
+      "level": 2,
+      "text": "写在最后",
+      "id": "写在最后"
+    }
+  ],
+  "hasMath": false
+}

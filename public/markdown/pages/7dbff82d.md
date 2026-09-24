@@ -1,6 +1,6 @@
 # single-agent现阶段明显强于multi-agent
 
-> 发布于：2026-03-25 | 分类：技术思考 | 原文：https://leyoubaloy.github.io/post/7dbff82d
+> 发布于：2026-03-25 | 分类：技术思考 | 原文：https://www.imbailey.cn/post/7dbff82d
 
 multi-agent 系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。
 

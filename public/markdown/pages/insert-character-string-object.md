@@ -1,6 +1,6 @@
 # 给string对象插入字符
 
-> 发布于：2020-12-28 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/insert-character-string-object
+> 发布于：2020-12-28 | 分类：刷题 | 原文：https://www.imbailey.cn/post/insert-character-string-object
 
 ```
 #include <bits/stdc++.h>

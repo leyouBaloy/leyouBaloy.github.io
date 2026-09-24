@@ -1,6 +1,6 @@
 # Leetcode386:字典序排数——dfs、迭代
 
-> 发布于：2022-04-18 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-386-lexicographical-numbers-dfs-iteration
+> 发布于：2022-04-18 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-386-lexicographical-numbers-dfs-iteration
 
 ## 题目
 

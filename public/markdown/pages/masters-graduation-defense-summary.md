@@ -1,6 +1,6 @@
 # 硕士毕业答辩总结
 
-> 发布于：2026-05-22 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/masters-graduation-defense-summary
+> 发布于：2026-05-22 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/masters-graduation-defense-summary
 
 硕士毕业答辩结束之后，心里一下子空下来很多。回头看这一路，从开题、中期、写小论文、改大论文，到送盲审、做PPT、上台答辩，每一个节点在经历的时候都像是一座山，真正翻过去之后，又觉得很多事情其实都有章可循。
 

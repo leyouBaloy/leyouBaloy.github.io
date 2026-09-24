@@ -1,6 +1,6 @@
 # 杨辉三角——数组、动态规划
 
-> 发布于：2022-03-10 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/pascals-triangle-array-dynamic-programming
+> 发布于：2022-03-10 | 分类：刷题 | 原文：https://www.imbailey.cn/post/pascals-triangle-array-dynamic-programming
 
 ## 题目
 

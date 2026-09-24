@@ -1,6 +1,6 @@
 # 绿植盆栽攻略
 
-> 发布于：2024-08-28 | 分类：随笔杂记, 笔记 | 原文：https://leyoubaloy.github.io/post/indoor-green-potted-plant-care-guide
+> 发布于：2024-08-28 | 分类：随笔杂记, 笔记 | 原文：https://www.imbailey.cn/post/indoor-green-potted-plant-care-guide
 
 # 分类
 

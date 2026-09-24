@@ -1,6 +1,6 @@
 # 代码块功能测试
 
-> 发布于：2024-09-14 | 分类：技术测试 | 原文：https://leyoubaloy.github.io/post/code-block-feature-test
+> 发布于：2024-09-14 | 分类：技术测试 | 原文：https://www.imbailey.cn/post/code-block-feature-test
 
 # 代码块 Copy 按钮和高亮功能测试
 

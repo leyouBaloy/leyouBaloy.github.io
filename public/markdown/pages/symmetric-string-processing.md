@@ -1,6 +1,6 @@
 # 对称字符串处理
 
-> 发布于：2020-11-27 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/symmetric-string-processing
+> 发布于：2020-11-27 | 分类：刷题 | 原文：https://www.imbailey.cn/post/symmetric-string-processing
 
 【题目描述】
 

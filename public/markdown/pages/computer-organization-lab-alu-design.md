@@ -1,6 +1,6 @@
 # 计组线上实验-运算器设计
 
-> 发布于：2022-10-29 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/computer-organization-lab-alu-design
+> 发布于：2022-10-29 | 分类：笔记 | 原文：https://www.imbailey.cn/post/computer-organization-lab-alu-design
 
 ## Logisim
 

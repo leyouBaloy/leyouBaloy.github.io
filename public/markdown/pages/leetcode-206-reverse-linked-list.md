@@ -1,6 +1,6 @@
 # Leetcode206:反转链表
 
-> 发布于：2022-03-14 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-206-reverse-linked-list
+> 发布于：2022-03-14 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-206-reverse-linked-list
 
 一件事情只有做了一段时间之后才能找到方向。前段时间随便找了一些题刷，开始逐渐了解数据结构和算法。最近在知乎上看到一篇文章，列举了400道数据结构入门题目，感觉找到了方向。
 

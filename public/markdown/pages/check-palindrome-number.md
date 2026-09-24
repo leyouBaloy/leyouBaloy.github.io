@@ -1,6 +1,6 @@
 # 判断回文数
 
-> 发布于：2020-12-04 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/check-palindrome-number
+> 发布于：2020-12-04 | 分类：刷题 | 原文：https://www.imbailey.cn/post/check-palindrome-number
 
 一开始我尝试自己写，需要用到把int类型转换成string类型，在Python里，这非常简单，一行代码就可以搞定。但是我惊奇的发现，在c++里把int类型转换成string类型真的好麻烦！在百度上查了很久，方法要么不对，要么就是太复杂。果然c++是不适合处理字符串的。
 

@@ -1,6 +1,6 @@
 # 识别字符
 
-> 发布于：2020-10-17 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/identify-characters-repeating-decimals-algorithm
+> 发布于：2020-10-17 | 分类：刷题 | 原文：https://www.imbailey.cn/post/identify-characters-repeating-decimals-algorithm
 
 【题目描述】
 

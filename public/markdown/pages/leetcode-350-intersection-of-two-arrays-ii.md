@@ -1,6 +1,6 @@
 # 两个数组的交集——数组、哈希、双指针
 
-> 发布于：2022-03-06 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-350-intersection-of-two-arrays-ii
+> 发布于：2022-03-06 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-350-intersection-of-two-arrays-ii
 
 ## 题目
 

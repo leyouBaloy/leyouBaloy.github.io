@@ -1,6 +1,6 @@
 # 二叉树的前中后序遍历
 
-> 发布于：2022-03-07 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/binary-tree-preorder-inorder-postorder-traversal
+> 发布于：2022-03-07 | 分类：刷题 | 原文：https://www.imbailey.cn/post/binary-tree-preorder-inorder-postorder-traversal
 
 ## 题目
 

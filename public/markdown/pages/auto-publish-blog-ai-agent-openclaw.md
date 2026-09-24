@@ -1,6 +1,6 @@
 # 自动发布博客
 
-> 发布于：2026-03-11 | 分类：技术教程 | 原文：https://leyoubaloy.github.io/post/auto-publish-blog-ai-agent-openclaw
+> 发布于：2026-03-11 | 分类：技术教程 | 原文：https://www.imbailey.cn/post/auto-publish-blog-ai-agent-openclaw
 
 # 用 AI Skills 实现博客自动发布 🚀
 

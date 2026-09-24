@@ -1,6 +1,6 @@
 # 数值计算方法
 
-> 发布于：2021-12-01 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/numerical-calculation-methods
+> 发布于：2021-12-01 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/numerical-calculation-methods
 
 包含几乎所有课堂上讲的题目
 

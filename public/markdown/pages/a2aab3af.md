@@ -1,6 +1,6 @@
 # 品酒🍶(古井贡酒-古16)
 
-> 发布于：2024-08-24 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/a2aab3af
+> 发布于：2024-08-24 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/a2aab3af
 
 ## 外观
 

@@ -1,6 +1,6 @@
 # 大物大作业-microbit编程小车
 
-> 发布于：2021-06-21 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/microbit-programming-car-physics-project
+> 发布于：2021-06-21 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/microbit-programming-car-physics-project
 
 ### 起因
 

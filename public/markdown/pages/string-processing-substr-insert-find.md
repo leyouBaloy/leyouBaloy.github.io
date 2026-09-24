@@ -1,6 +1,6 @@
 # 字符处理软件-substr-insert-find
 
-> 发布于：2020-12-17 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/string-processing-substr-insert-find
+> 发布于：2020-12-17 | 分类：刷题 | 原文：https://www.imbailey.cn/post/string-processing-substr-insert-find
 
 题目描述
 

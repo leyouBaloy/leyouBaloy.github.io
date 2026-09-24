@@ -1,6 +1,6 @@
 # 结构体排序-sort()-typedef
 
-> 发布于：2020-11-21 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/struct-sorting-sort-typedef-cpp
+> 发布于：2020-11-21 | 分类：刷题 | 原文：https://www.imbailey.cn/post/struct-sorting-sort-typedef-cpp
 
 【题目描述】
 

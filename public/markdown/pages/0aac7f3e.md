@@ -1,6 +1,6 @@
 # 杨辉三角——数组、动态规划
 
-> 发布于：2022-03-10 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/0aac7f3e
+> 发布于：2022-03-10 | 分类：刷题 | 原文：https://www.imbailey.cn/post/0aac7f3e
 
 ## 题目
 

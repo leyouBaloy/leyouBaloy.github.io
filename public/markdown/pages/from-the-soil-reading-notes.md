@@ -1,6 +1,6 @@
 # 《乡土中国》读书笔记
 
-> 发布于：2022-07-01 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/from-the-soil-reading-notes
+> 发布于：2022-07-01 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/from-the-soil-reading-notes
 
 《乡土中国》由费孝通先生的14篇论文组成，其内容是对中国社会基本结构的深入剖析。其中《差序格局》一篇最让我印象深刻。该书并不难读，但若要想全部理解还需花点功夫。在这里我是浅读后浅记一下笔记，防止读完后一无所获。
 

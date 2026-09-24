@@ -1,6 +1,6 @@
 # Leetcode113:路径总和——dfs、回溯
 
-> 发布于：2022-03-30 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-113-path-sum-ii-dfs-backtracking
+> 发布于：2022-03-30 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-113-path-sum-ii-dfs-backtracking
 
 ## 题目
 

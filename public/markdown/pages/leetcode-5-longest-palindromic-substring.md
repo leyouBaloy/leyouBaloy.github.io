@@ -1,6 +1,6 @@
 # Leetcode5:最长回文子串——中心扩展法
 
-> 发布于：2022-04-17 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-5-longest-palindromic-substring
+> 发布于：2022-04-17 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-5-longest-palindromic-substring
 
 ## 题目
 

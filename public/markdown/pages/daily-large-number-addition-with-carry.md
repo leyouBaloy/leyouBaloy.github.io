@@ -1,6 +1,6 @@
 # 每日一题--有进位的加法运算
 
-> 发布于：2020-10-10 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/daily-large-number-addition-with-carry
+> 发布于：2020-10-10 | 分类：刷题 | 原文：https://www.imbailey.cn/post/daily-large-number-addition-with-carry
 
 【题目描述】
 

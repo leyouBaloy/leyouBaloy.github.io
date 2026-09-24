@@ -1,6 +1,6 @@
 # 从wordpress迁移到hugo过程分享
 
-> 发布于：2022-01-28 | 分类：技能分享 | 原文：https://leyoubaloy.github.io/post/eec5cb2f
+> 发布于：2022-01-28 | 分类：技能分享 | 原文：https://www.imbailey.cn/post/eec5cb2f
 
 ### 为什么抛弃wordpress选择hugo
 

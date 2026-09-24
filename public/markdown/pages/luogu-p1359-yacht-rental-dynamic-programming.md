@@ -1,6 +1,6 @@
 # 租用游艇——动态规划
 
-> 发布于：2022-02-21 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/luogu-p1359-yacht-rental-dynamic-programming
+> 发布于：2022-02-21 | 分类：刷题 | 原文：https://www.imbailey.cn/post/luogu-p1359-yacht-rental-dynamic-programming
 
 > 洛谷P1359 租用游艇
 >

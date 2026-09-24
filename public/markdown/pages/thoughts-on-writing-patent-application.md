@@ -1,6 +1,6 @@
 # “专利申请”撰写有感
 
-> 发布于：2021-03-28 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/thoughts-on-writing-patent-application
+> 发布于：2021-03-28 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/thoughts-on-writing-patent-application
 
 从开学开始，我就接到了李昕老师的任务——为我们寒假的成果“一种基于docker和jupyter notebook的复合类型题目在线检测方法”撰写一份“专利申请”，并完成申请。第一作者当然是李昕老师，因为我们的核心代码全是李昕老师写的，第二作者包括我和另外一位贡献较大的成员。申请专利并署名我们既是一种奖励，又是一种考验。
 

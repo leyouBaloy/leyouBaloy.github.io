@@ -1,6 +1,6 @@
 # 每个字母代表一个数字，输出字符串代表的数字之和
 
-> 发布于：2020-11-05 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/letter-to-number-string-sum
+> 发布于：2020-11-05 | 分类：刷题 | 原文：https://www.imbailey.cn/post/letter-to-number-string-sum
 
 【题目描述】
 

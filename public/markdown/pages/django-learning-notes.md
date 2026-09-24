@@ -1,6 +1,6 @@
 # Django学习笔记
 
-> 发布于：2021-03-15 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/django-learning-notes
+> 发布于：2021-03-15 | 分类：笔记 | 原文：https://www.imbailey.cn/post/django-learning-notes
 
 ### 安装虚拟环境
 

@@ -1,6 +1,6 @@
 # 黄山归来不看岳——黄山之旅
 
-> 发布于：2021-10-06 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/huangshan-mountain-trip
+> 发布于：2021-10-06 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/huangshan-mountain-trip
 
 ## 时间
 

@@ -1,6 +1,6 @@
 # requests爬表情包
 
-> 发布于：2020-12-13 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/requests-crawl-memes
+> 发布于：2020-12-13 | 分类：刷题 | 原文：https://www.imbailey.cn/post/requests-crawl-memes
 
 需要的库：
 

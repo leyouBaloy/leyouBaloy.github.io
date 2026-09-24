@@ -1,6 +1,6 @@
 # Python-一元二次方程，保留两位小数
 
-> 发布于：2020-10-19 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/python-quadratic-equation-decimals
+> 发布于：2020-10-19 | 分类：刷题 | 原文：https://www.imbailey.cn/post/python-quadratic-equation-decimals
 
 【问题描述】一元二次方程：ax2+bx+c=0 （a ╪ 0）  
 【输入形式】输入a、b和c的值（有理数）  

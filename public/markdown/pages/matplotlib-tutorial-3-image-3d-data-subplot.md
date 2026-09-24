@@ -1,6 +1,6 @@
 # matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示
 
-> 发布于：2021-02-26 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/matplotlib-tutorial-3-image-3d-data-subplot
+> 发布于：2021-02-26 | 分类：笔记 | 原文：https://www.imbailey.cn/post/matplotlib-tutorial-3-image-3d-data-subplot
 
 视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\_id\_from=pageDriver  
 仅用于学习  

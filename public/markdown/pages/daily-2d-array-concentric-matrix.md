@@ -1,6 +1,6 @@
 # 每日一题--二维数组
 
-> 发布于：2020-10-06 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/daily-2d-array-concentric-matrix
+> 发布于：2020-10-06 | 分类：刷题 | 原文：https://www.imbailey.cn/post/daily-2d-array-concentric-matrix
 
 【题目描述】
 

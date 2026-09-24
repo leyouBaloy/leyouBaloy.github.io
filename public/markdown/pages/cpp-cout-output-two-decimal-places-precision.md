@@ -1,6 +1,6 @@
 # cout输出精确到小数点后两位
 
-> 发布于：2020-11-01 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/cpp-cout-output-two-decimal-places-precision
+> 发布于：2020-11-01 | 分类：刷题 | 原文：https://www.imbailey.cn/post/cpp-cout-output-two-decimal-places-precision
 
 【题目描述】
 

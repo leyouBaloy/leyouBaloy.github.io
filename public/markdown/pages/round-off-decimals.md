@@ -1,6 +1,6 @@
 # 四舍五入小数
 
-> 发布于：2020-11-18 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/round-off-decimals
+> 发布于：2020-11-18 | 分类：刷题 | 原文：https://www.imbailey.cn/post/round-off-decimals
 
 【题目描述】
 

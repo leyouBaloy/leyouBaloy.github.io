@@ -1,6 +1,6 @@
 # Leetcode11:盛水最多的容器——双指针
 
-> 发布于：2022-04-25 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-11-container-with-most-water-two-pointers
+> 发布于：2022-04-25 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-11-container-with-most-water-two-pointers
 
 ## 题目
 

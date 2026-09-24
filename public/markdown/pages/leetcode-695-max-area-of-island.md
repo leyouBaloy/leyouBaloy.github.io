@@ -1,6 +1,6 @@
 # Leetcode695:岛屿的最大面积——中等难度的搜索算法
 
-> 发布于：2022-03-24 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-695-max-area-of-island
+> 发布于：2022-03-24 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-695-max-area-of-island
 
 ## 题目
 

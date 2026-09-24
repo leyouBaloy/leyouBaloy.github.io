@@ -1,6 +1,6 @@
 # 《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴
 
-> 发布于：2022-01-17 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/ashita-mo-koharu-biyori-book-review
+> 发布于：2022-01-17 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/ashita-mo-koharu-biyori-book-review
 
 ### 明天也是小春日和
 

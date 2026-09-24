@@ -1,6 +1,6 @@
 # 三数之和——双指针——好难
 
-> 发布于：2022-03-13 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-15-3sum-two-pointers
+> 发布于：2022-03-13 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-15-3sum-two-pointers
 
 ## 题目
 

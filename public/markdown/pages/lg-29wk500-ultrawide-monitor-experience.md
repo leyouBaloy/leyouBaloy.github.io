@@ -1,6 +1,6 @@
 # 带鱼屏真是太太太爽爽爽啦
 
-> 发布于：2021-07-30 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/lg-29wk500-ultrawide-monitor-experience
+> 发布于：2021-07-30 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/lg-29wk500-ultrawide-monitor-experience
 
 ### 型号LG 29wk500，入门级带鱼屏
 

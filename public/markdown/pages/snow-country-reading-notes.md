@@ -1,6 +1,6 @@
 # 《雪国》读书笔记
 
-> 发布于：2022-02-13 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/snow-country-reading-notes
+> 发布于：2022-02-13 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/snow-country-reading-notes
 
 ## 雪国
 

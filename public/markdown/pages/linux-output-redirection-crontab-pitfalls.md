@@ -1,6 +1,6 @@
 # Linux输出重定向以及crontab的坑
 
-> 发布于：2022-07-13 | 分类：技能分享, 笔记 | 原文：https://leyoubaloy.github.io/post/linux-output-redirection-crontab-pitfalls
+> 发布于：2022-07-13 | 分类：技能分享, 笔记 | 原文：https://www.imbailey.cn/post/linux-output-redirection-crontab-pitfalls
 
 有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑：
 

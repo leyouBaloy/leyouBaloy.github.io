@@ -1,6 +1,6 @@
 # Leetcode450:删除二叉搜索树中的节点
 
-> 发布于：2022-04-02 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-450-delete-node-in-a-bst
+> 发布于：2022-04-02 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-450-delete-node-in-a-bst
 
 ## 题目
 

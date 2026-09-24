@@ -1,6 +1,6 @@
 # Leetcode55:跳跃游戏——贪心
 
-> 发布于：2022-04-01 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-55-jump-game-greedy
+> 发布于：2022-04-01 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-55-jump-game-greedy
 
 ## 题目
 

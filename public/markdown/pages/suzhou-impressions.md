@@ -1,6 +1,6 @@
 # 苏州印象
 
-> 发布于：2023-08-12 | 分类：随笔杂记, 笔记 | 原文：https://leyoubaloy.github.io/post/suzhou-impressions
+> 发布于：2023-08-12 | 分类：随笔杂记, 笔记 | 原文：https://www.imbailey.cn/post/suzhou-impressions
 
 2023年8月3日-5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一座城市的呢？我非常好奇，终于有机会能一探究竟！
 

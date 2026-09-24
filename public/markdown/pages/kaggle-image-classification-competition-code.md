@@ -1,6 +1,6 @@
 # Kaggle图像分类竞赛实战总结详细代码解读
 
-> 发布于：2022-12-29 | 分类：笔记, 技能分享 | 原文：https://leyoubaloy.github.io/post/kaggle-image-classification-competition-code
+> 发布于：2022-12-29 | 分类：笔记, 技能分享 | 原文：https://www.imbailey.cn/post/kaggle-image-classification-competition-code
 
 ## 前言
 

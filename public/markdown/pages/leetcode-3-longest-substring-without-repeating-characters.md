@@ -1,6 +1,6 @@
 # Leetcode3:无重复字符的最长子串——滑动窗口
 
-> 发布于：2022-04-08 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-3-longest-substring-without-repeating-characters
+> 发布于：2022-04-08 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-3-longest-substring-without-repeating-characters
 
 # 题目
 

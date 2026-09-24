@@ -1,6 +1,6 @@
 # 每日一题(2)--很多个数排序问题
 
-> 发布于：2020-10-08 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/number-sorting-problem
+> 发布于：2020-10-08 | 分类：刷题 | 原文：https://www.imbailey.cn/post/number-sorting-problem
 
 【题目描述】
 

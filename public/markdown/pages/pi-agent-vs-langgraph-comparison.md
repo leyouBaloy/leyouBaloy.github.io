@@ -1,6 +1,6 @@
 # 思考：Pi Agent 对比 LangGraph
 
-> 发布于：2026-05-27 | 分类：技术思考 | 原文：https://leyoubaloy.github.io/post/pi-agent-vs-langgraph-comparison
+> 发布于：2026-05-27 | 分类：技术思考 | 原文：https://www.imbailey.cn/post/pi-agent-vs-langgraph-comparison
 
 ![Pi Agent 对比 LangGraph](/images/pi-agent-vs-langgraph-header.png)
 

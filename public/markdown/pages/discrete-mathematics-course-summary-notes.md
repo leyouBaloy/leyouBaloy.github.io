@@ -1,6 +1,6 @@
 # 离散数学结课总结+笔记
 
-> 发布于：2021-05-29 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/discrete-mathematics-course-summary-notes
+> 发布于：2021-05-29 | 分类：笔记 | 原文：https://www.imbailey.cn/post/discrete-mathematics-course-summary-notes
 
 ### 课程时长
 

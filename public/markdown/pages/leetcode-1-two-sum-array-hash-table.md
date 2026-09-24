@@ -1,6 +1,6 @@
 # 由和找到两数——数组、哈希表
 
-> 发布于：2022-03-02 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-1-two-sum-array-hash-table
+> 发布于：2022-03-02 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-1-two-sum-array-hash-table
 
 ## 题目
 

@@ -19,1556 +19,551 @@
       "readingTime": 4
     }
   ],
-  "技术思考": [
+  "AI实践": [
     {
-      "title": "一年前遇到的难题，被AI解决了",
-      "date": "2026-06-02T00:00:00.000Z",
-      "updatedAt": "2026-06-02T00:00:00.000Z",
-      "file": "一年前遇到的难题，被AI解决了.md",
-      "slug": "ai-solved-one-year-old-sse-problem",
-      "legacySlug": "5fdee606",
+      "title": "用一台 16GB 显卡，把「我喜欢什么样的视频」教给 4B 视觉模型",
+      "date": "2026-08-29T21:41:00.000Z",
+      "updatedAt": "2026-08-29T21:41:00.000Z",
+      "file": "qwen3-vl-4b-sft-personal-video-preference.md",
+      "slug": "qwen3-vl-4b-sft-personal-video-preference",
+      "legacySlug": "7e29a04e",
       "aliases": [
-        "5fdee606"
+        "7e29a04e"
       ],
-      "excerpt": "一年前遇到的难题，被AI解决了 一年前实习的时候，mentor 让我做一个 Agent 问答前端。 这个前端本身并不复杂：用户输入一个问题，后端通过 SSE 流式返回 Agent 的执行过程，前端把这些过程一步步渲染出来。比如先展示“开始分析问题”，然后展示“拆分问题”，再展示“搜索资料”，最后展示",
+      "excerpt": "用一台 16GB 显卡，把「我喜欢什么样的视频」教给 4B 视觉模型 这篇是一份实验记录。目标不是做通用内容审核，也不是训练一个公开分类器，而是：在自己的片库里，用已经打过的 1–5 分，让一个小视觉语言模型学会 我的口味 ——看完几张关键帧之后，能给出结构化观察，顺便再补一个分。 先交代清楚：机器",
       "tags": [
-        "技术思考"
+        "AI实践"
       ],
-      "img": "",
-      "wordCount": 2085,
+      "img": "/images/qwen3-vl-sft-cover.png",
+      "wordCount": 2308,
       "readingTime": 6
     },
     {
-      "title": "思考：Pi Agent 对比 LangGraph",
-      "date": "2026-05-27T15:45:25.000Z",
-      "updatedAt": "2026-05-27T15:45:25.000Z",
-      "file": "思考：Pi Agent 对比 LangGraph.md",
-      "slug": "pi-agent-vs-langgraph-comparison",
-      "legacySlug": "d98f4875",
+      "title": "从零开始做 AI 生视频：本地部署 MiniMax H3 与官方 API 的实战经验",
+      "date": "2026-08-09T12:09:10.000Z",
+      "updatedAt": "2026-08-09T12:09:10.000Z",
+      "file": "minimax-h3-local-vs-api-video-generation.md",
+      "slug": "minimax-h3-local-vs-api-video-generation",
+      "legacySlug": "a23ef8a6",
       "aliases": [
-        "d98f4875"
+        "a23ef8a6"
       ],
-      "excerpt": "思考：Pi Agent 对比 LangGraph 最近在思考两类 Agent 的差异：一种是 Pi Agent 这种模型主导的模式，另一种是 LangGraph 这种流程主导的模式。 它们都可以调用 LLM、工具、检索和代码，但核心差别不在“用了什么能力”，而在“下一步由谁决定”。 Pi Agent",
+      "excerpt": "从零开始做 AI 生视频：本地部署 MiniMax H3 与官方 API 的实战经验 想用一张情侣自拍做一条“车内聊天、失重悬浮、冲上天空、掠过城市”的 9 秒真人感视频，我原以为难点是写一段足够长的提示词。实际走完一遍才发现：提示词只是一小部分。路线选择、显存与磁盘、参考图、镜头拆分、对白格式、验",
       "tags": [
-        "技术思考"
-      ],
-      "img": "/images/pi-agent-vs-langgraph-header.png",
-      "wordCount": 1010,
-      "readingTime": 3
-    },
-    {
-      "title": "single-agent现阶段明显强于multi-agent",
-      "date": "2026-03-25T03:44:00.000Z",
-      "updatedAt": "2026-03-25T03:44:00.000Z",
-      "file": "single-agent-vs-multi-agent.md",
-      "slug": "single-agent-better-than-multi-agent",
-      "legacySlug": "7dbff82d",
-      "aliases": [
-        "7dbff82d"
-      ],
-      "excerpt": "single agent现阶段明显强于multi agent multi agent 系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。 反观那些真正跑出来的产品——OpenClaw、",
-      "tags": [
-        "技术思考"
+        "AI实践"
       ],
       "img": "",
-      "wordCount": 852,
-      "readingTime": 3
-    }
-  ],
-  "技术教程": [
-    {
-      "title": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式",
-      "date": "2026-05-31T22:16:51.000Z",
-      "updatedAt": "2026-05-31T22:16:51.000Z",
-      "file": "vane-agent-search-flow-speed-balanced.md",
-      "slug": "vane-agent-search-flow-speed-balanced",
-      "legacySlug": "f7a46744",
-      "aliases": [
-        "f7a46744"
-      ],
-      "excerpt": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式 这篇文档不按代码文件逐项罗列，而是从算法与 Agent 工程设计角度解释 Vane 的搜索问答系统。目标读者可以完全不阅读代码，只通过本文理解系统如何从一个用户问题演进到一个带来源、带中间过程、可流式输出的回答，并能够复刻一",
-      "tags": [
-        "技术教程"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/329e7b332515-vane-agent-search-flow-speed.png",
-      "wordCount": 6444,
-      "readingTime": 17
-    },
-    {
-      "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
-      "date": "2026-03-25T12:53:00.000Z",
-      "updatedAt": "2026-03-25T12:53:00.000Z",
-      "file": "opencode-seven-core-tools.md",
-      "slug": "opencode-7-basic-tools-read-write-edit-multiedit-glob-grep-bash",
-      "legacySlug": "512e708e",
-      "aliases": [
-        "512e708e"
-      ],
-      "excerpt": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash 做 AI 编程助手（或类似工具）的核心，就是怎么让 AI 正确地读写文件、执行命令。本质上，LLM 是个\"脑子里有很多知识但手很短\"的存在——它能推理，但没法直接摸到你的代码。于是需要",
-      "tags": [
-        "技术教程"
-      ],
-      "img": "",
-      "wordCount": 1908,
-      "readingTime": 5
-    },
-    {
-      "title": "自动发布博客",
-      "date": "2026-03-11T14:22:25.000Z",
-      "updatedAt": "2026-03-11T14:22:25.000Z",
-      "file": "自动发布博客.md",
-      "slug": "auto-publish-blog-ai-agent-openclaw",
-      "legacySlug": "2f15163c",
-      "aliases": [
-        "2f15163c"
-      ],
-      "excerpt": "用 AI Skills 实现博客自动发布 🚀 🤖 本文由 AI 自动生成并自动发布 前言 今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。 什么是 Skills？ Sk",
-      "tags": [
-        "技术教程"
-      ],
-      "img": "",
-      "wordCount": 330,
-      "readingTime": 1
-    }
-  ],
-  "随笔杂记": [
-    {
-      "title": "硕士毕业答辩总结",
-      "date": "2026-05-22T02:05:57.000Z",
-      "updatedAt": "2026-05-22T02:05:57.000Z",
-      "file": "硕士毕业答辩总结.md",
-      "slug": "masters-graduation-defense-summary",
-      "legacySlug": "119fbeee",
-      "aliases": [
-        "119fbeee"
-      ],
-      "excerpt": "硕士毕业答辩总结 硕士毕业答辩结束之后，心里一下子空下来很多。回头看这一路，从开题、中期、写小论文、改大论文，到送盲审、做PPT、上台答辩，每一个节点在经历的时候都像是一座山，真正翻过去之后，又觉得很多事情其实都有章可循。 这篇文章算是给自己做一个阶段性复盘，也给后面要毕业的师弟师妹留一点经验。总结",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 2290,
+      "wordCount": 2387,
       "readingTime": 6
-    },
-    {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "file": "RAG图谱实体和边智能合并.md",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
-      "aliases": [
-        "46bbd497"
-      ],
-      "excerpt": "RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple In",
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png",
-      "wordCount": 1642,
-      "readingTime": 5
-    },
-    {
-      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
-      "date": "2025-06-10T08:48:23.000Z",
-      "updatedAt": "2025-06-10T08:48:23.000Z",
-      "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
-      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
-      "legacySlug": "e9dd83c6",
-      "aliases": [
-        "e9dd83c6"
-      ],
-      "excerpt": "背景 为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法 多模态大模型测试 Prompt 测试环境：3090单卡 测试效果 模型 数据1：饼图 数据2：折线图 数据3：流程图 评价 MiniCPM V 2 6 vllm 这张饼图显示了2023年美国艺术类别分布。最大的部分是视",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1749543589300-bf8e1d05-b85e-4da7-b535-e77ac6cdc244.png",
-      "wordCount": 8750,
-      "readingTime": 22
-    },
-    {
-      "title": "品酒🍶——古井贡酒第六代55度",
-      "date": "2024-12-09T14:49:43.000Z",
-      "updatedAt": "2024-12-09T14:49:43.000Z",
-      "file": "品酒-古井贡酒第六代55度.md",
-      "slug": "gujing-gongjiu-6th-gen-55-degree-tasting",
-      "legacySlug": "11baea90",
-      "aliases": [
-        "11baea90"
-      ],
-      "excerpt": "古井贡酒第六代55度 香型：浓香型 度数：55 原料：高粱、大米、小麦、糯米、玉米 产地：安徽亳州 价格：72元/500ml 品鉴感受 闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241209225923467.png",
-      "wordCount": 90,
-      "readingTime": 1
-    },
-    {
-      "title": "品酒（尊美醇Jameson）",
-      "date": "2024-11-04T15:18:54.000Z",
-      "updatedAt": "2024-11-04T15:18:54.000Z",
-      "file": "品酒尊美醇Jameson.md",
-      "slug": "jameson-irish-whiskey-tasting",
-      "legacySlug": "b9f36e78",
-      "aliases": [
-        "b9f36e78"
-      ],
-      "excerpt": "尊美醇Jameson 产地 ：爱尔兰。其最初在都柏林的弓街酿酒厂生产，1975 年 7 月开始转移到爱尔兰科克郡的米德尔顿酿酒厂。 度数 ：40% vol。 酿造工艺 ：采用三重蒸馏工艺。把已发芽与未发芽的大麦放到一起发酵，成品要经过三次蒸馏并在橡木桶中经历 5 7 年以上的熟成，然后还需要加入一定",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png",
-      "wordCount": 460,
-      "readingTime": 2
-    },
-    {
-      "title": "品酒🍶（古井贡酒-古8）",
-      "date": "2024-09-19T15:38:28.000Z",
-      "updatedAt": "2024-09-19T15:38:28.000Z",
-      "file": "品酒（古井贡酒-古8）.md",
-      "slug": "wine-tasting-gujing-gongjiu-gu-8",
-      "legacySlug": "5086af34",
-      "aliases": [
-        "5086af34"
-      ],
-      "excerpt": "古 8 香型：浓香型 原料：水、高粱、大米、小麦、糯米、玉米 酒精度：42 度 产地：安徽亳州 价格：220 元/ 425ml 品尝感受：入口柔，后劲小，感觉像是稀释了的古 16，毕竟是低度酒，喝起来没有那么浓郁，但是古井的窖泥味儿还是很明显的。相比于 42 度的红盖汾酒来说，好喝多了。（虽然它两价",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/WechatIMG374.jpeg",
-      "wordCount": 189,
-      "readingTime": 1
-    },
-    {
-      "title": "绿植盆栽攻略",
-      "date": "2024-08-28T10:24:07.000Z",
-      "updatedAt": "2024-08-28T10:24:07.000Z",
-      "file": "绿植盆栽攻略.md",
-      "slug": "indoor-green-potted-plant-care-guide",
-      "legacySlug": "5953ed50",
-      "aliases": [
-        "5953ed50"
-      ],
-      "excerpt": "分类 以下是常见的绿植盆栽分类： 一、观叶类绿植盆栽 植物类型 ：绿萝、吊兰、龟背竹、发财树、文竹、虎皮兰等。 养护难度 ：总体来说养护难度相对较低。绿萝和吊兰适应能力强，能在不同环境下生长，只要保证适量的水分和散射光即可。龟背竹喜欢温暖湿润的环境，但也比较耐阴。发财树需注意浇水不能过多，否则容易烂",
-      "tags": [
-        "随笔杂记",
-        "笔记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgbbf772ea317555ba7ac144f9318fc7f.jpg",
-      "wordCount": 1404,
-      "readingTime": 4
-    },
-    {
-      "title": "品酒🍶(古井贡酒-古16)",
-      "date": "2024-08-24T14:52:24.000Z",
-      "updatedAt": "2024-08-24T14:52:24.000Z",
-      "file": "品酒(古井贡酒-古16) .md",
-      "slug": "gujing-gongjiu-gu-16-tasting",
-      "legacySlug": "a2aab3af",
-      "aliases": [
-        "a2aab3af"
-      ],
-      "excerpt": "外观 古 16 这个酒属于古井贡酒系列的中端，品质还是不错的，包装非常精美，酒瓶是大红色，喜庆，很适合婚宴使用。 购买经历 家里有几瓶古 16，我一直想拿一瓶尝尝，但我妈死活不让。于是我就想了办法套路我妈，结果她还真收了我的钱，这是我没想到的O.o。 品鉴 原料 ：高粱、大米、小麦、糯米、玉米（还挺",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1724511302687.jpg",
-      "wordCount": 236,
-      "readingTime": 1
-    },
-    {
-      "title": "品酒🍶（高脖绿瓶西凤酒陕西版）",
-      "date": "2024-08-21T23:09:53.000Z",
-      "updatedAt": "2024-08-21T23:09:53.000Z",
-      "file": "品酒（高脖绿瓶西凤酒陕西版）.md",
-      "slug": "wine-tasting-green-bottle-xifengjiu-shaanxi",
-      "legacySlug": "a6894469",
-      "aliases": [
-        "a6894469"
-      ],
-      "excerpt": "今天品一下高脖绿瓶西凤酒，这是凤香型的代表酒。这个酒也是出了名的乱，有陕西版比省外版的好喝，批次早的比批次晚的好喝。我买的版本是 2023 年的陕西版。 原料 ：高粱、大麦、小麦、豌豆。 酒精度 ：55 度。 价格 ：约 50 元/500ml。 闻香 ：闻着像黄盖汾（清香型），有水果香，仔细闻还能闻",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240821232051784.png",
-      "wordCount": 174,
-      "readingTime": 1
-    },
-    {
-      "title": "品酒🍶（国窖 1573）",
-      "date": "2024-08-17T22:01:53.000Z",
-      "updatedAt": "2024-08-17T22:01:53.000Z",
-      "file": "品酒（国窖 1573）.md",
-      "slug": "wine-tasting-guojiao-1573",
-      "legacySlug": "7af852ce",
-      "aliases": [
-        "7af852ce"
-      ],
-      "excerpt": "今天品一下国窖 1573，拿泸州老窖特曲做个对比。 香味 ：国窖 1573 跟泸州老窖特曲的香味基调十分相似，但仔细闻有细微差别，国窖 1573 更加轻盈，丰富，有果香味儿。而特曲的窖泥味儿偏重，会更沉闷一些。 品尝 ：入口之后，国窖的这种轻盈感更加明显。无论是入口还是吞咽，国窖都要比特曲更绵柔、清",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240817222031606.png",
-      "wordCount": 176,
-      "readingTime": 1
-    },
-    {
-      "title": "新加坡访学旅行",
-      "date": "2024-08-14T08:01:42.000Z",
-      "updatedAt": "2024-08-14T08:01:42.000Z",
-      "file": "新加坡访学旅行.md",
-      "slug": "singapore-ntu-study-tour-travel",
-      "legacySlug": "fe7200e4",
-      "aliases": [
-        "fe7200e4"
-      ],
-      "excerpt": "读万卷书，行万里路。因为今年学校出了一个境外访学资助政策，所以就申请了为期七天的新加坡南洋理工大学的访学项目。这是我第一次出国，有很多新奇体验，在这里分享一下 新加坡 新加坡位于东南亚马来半岛南端、马六甲海峡出入口，新加坡岛东西约50公里，南北约26公里，国土面积仅733.1平方千米（2021年）。",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_20240808_192834.jpg",
-      "wordCount": 1833,
-      "readingTime": 5
-    },
-    {
-      "title": "品酒🍶（古井贡酒-古20）以及小插曲",
-      "date": "2024-07-27T23:01:53.000Z",
-      "updatedAt": "2024-07-27T23:01:53.000Z",
-      "file": "品酒（古井贡酒-古20）.md",
-      "slug": "gujing-gongjiu-gu-20-tasting",
-      "legacySlug": "7120d25f",
-      "aliases": [
-        "7120d25f"
-      ],
-      "excerpt": "这个酒在安徽喝的是非常多的，我跟我爸去参加应酬的时候经常喝，但是之前我不认识酒，今天买来尝尝，果然是熟悉的味道。 我买的是小瓶装100ml，80 块钱，瓶子就巴掌大，还送了个小袋子，挺可爱的。 口感：入口非常绵柔，没有任何刺激，入口后的味道非常独特，感觉就像是烟雨江南里微风吹过雨水淋湿泥土再混杂着青",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%8F%A420.jpg",
-      "wordCount": 394,
-      "readingTime": 1
-    },
-    {
-      "title": "品酒🍶（汾酒黄盖&泸州老窖特曲经典）",
-      "date": "2024-07-23T23:18:53.000Z",
-      "updatedAt": "2024-07-23T23:18:53.000Z",
-      "file": "品酒（汾酒黄盖&泸州老窖特曲经典）.md",
-      "slug": "wine-tasting-fenjiu-huanggai-luzhou-laojiao-tequ",
-      "legacySlug": "886209a4",
-      "aliases": [
-        "886209a4"
-      ],
-      "excerpt": "最近改论文压力挺大，经常失眠。品点小酒🍶，微醺更容易入睡。 汾酒黄盖 ：清香型。闻起来有股淡淡的清香（有一点点像山西老陈醋，但是没有那么腻，是很清淡的），喝起来也挺香，吞下之后香味会在嘴巴里回荡一小会儿。整个酒都是比较柔的，喝起来比较舒服，大部分人都能接受。 泸州老窖特曲经典 ：浓香型。闻起来是泸",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%93%81%E9%85%92%E6%B1%BE%E9%85%92%E6%B3%B8%E5%B7%9E%E8%80%81%E7%AA%96.jpg",
-      "wordCount": 181,
-      "readingTime": 1
-    },
-    {
-      "title": "艺术品般的游戏—《荒野大镖客救赎2》",
-      "date": "2023-09-19T08:59:13.000Z",
-      "updatedAt": "2023-09-19T08:59:13.000Z",
-      "file": "艺术品般的游戏—荒野大镖客2救赎.md",
-      "slug": "red-dead-redemption-2-game-review",
-      "legacySlug": "32769736",
-      "aliases": [
-        "32769736"
-      ],
-      "excerpt": "“地表最强游戏公司” 大名鼎鼎的侠盗猎车手系列(GTA, Grand Theft Auto)在游戏界应该无人不知，无人不晓，而由原班人马（R星，Rockstar Games）打造的荒野大镖客系列（RD, Red Dead）的知名度稍差一些。这可能是因为荒野大镖客系列目前仅有3 部作品（GTA系列有 ",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9Cec96892d0905de1851aeaca8df1c310d18f58540.jpg@1256w_708h_!web-article-pic%E2%80%9D%E5%A4%A7.jpeg",
-      "wordCount": 1925,
-      "readingTime": 5
-    },
-    {
-      "title": "苏州印象",
-      "date": "2023-08-12T12:06:07.000Z",
-      "updatedAt": "2023-08-12T12:06:07.000Z",
-      "file": "苏州印象.md",
-      "slug": "suzhou-impressions",
-      "legacySlug": "17a81efd",
-      "aliases": [
-        "17a81efd"
-      ],
-      "excerpt": "2023年8月3日 5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一座城市的呢？我非常好奇，终于有机会能一探究竟！ 从蚌埠坐绿皮火车仅需不到5小时就能到达苏州站（票价62.5），苏州站位于苏州的中心区域——姑苏区（听名字就觉得好",
-      "tags": [
-        "随笔杂记",
-        "笔记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_8237%E2%80%9D%E5%A4%A7.jpeg",
-      "wordCount": 647,
-      "readingTime": 2
-    },
-    {
-      "title": "ChinaVis重庆之旅",
-      "date": "2023-07-31T11:17:10.000Z",
-      "updatedAt": "2023-07-31T11:17:10.000Z",
-      "file": "ChinaVis重庆之旅.md",
-      "slug": "chinavis-chongqing-trip",
-      "legacySlug": "8cb0549f",
-      "aliases": [
-        "8cb0549f"
-      ],
-      "excerpt": "ChinaVis大会于2023年7月21日 24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～ 出发！ 第一次坐飞机，飞机型号是波音737 800，起飞的时候感觉好神奇，在空中的景色也非常美。 重庆火锅 到达重庆的第一顿饭当然是重庆火锅，",
-      "tags": [
-        "随笔杂记",
-        "笔记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7704.jpeg",
-      "wordCount": 705,
-      "readingTime": 2
-    },
-    {
-      "title": "组装一台新的电脑",
-      "date": "2023-03-01T00:57:51.000Z",
-      "updatedAt": "2023-03-01T00:57:51.000Z",
-      "file": "组装一台新的电脑.md",
-      "slug": "build-new-pc-computer-assembly",
-      "legacySlug": "8f9d9179",
-      "aliases": [
-        "8f9d9179"
-      ],
-      "excerpt": "从Windows换到Mac，获得了很多东西： 又轻又薄，续航还长，背出去上课自习非常方便（隔壁背着游戏本的同学都羡慕哭了）； 一块素质极高的屏幕，看文献非常舒服； 优秀的软件生态，在Mac上可以使用很多优质软件，比如Mac版清爽的qq； 优秀的硬件生态，与我的iPhone互联，同步记事本，提醒事项等",
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_3956.jpeg",
-      "wordCount": 622,
-      "readingTime": 2
-    },
-    {
-      "title": "星露谷物语为什么这么好玩？",
-      "date": "2022-08-28T14:35:36.000Z",
-      "updatedAt": "2022-08-28T14:35:36.000Z",
-      "file": "星露谷物语为什么这么好玩？.md",
-      "slug": "why-stardew-valley-is-so-fun",
-      "legacySlug": "2af8b0db",
-      "aliases": [
-        "2af8b0db"
-      ],
-      "excerpt": "星露谷物语 星露谷物语是一款农场模拟经营游戏，但除了种田之外，游戏还包括了钓鱼、挖矿、杀怪、结婚、剧情任务等丰富的游戏内容。初看游戏大小，只有600mb，画面是粗糙的像素，但当你深入品玩这个游戏后，你会被这个游戏庞大的世界观震惊，你真的很难相信，它的作者是个独立开发者。 没有显式的游戏教程 游戏的背",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 740,
-      "readingTime": 2
-    },
-    {
-      "title": "我的第一把客制化键盘",
-      "date": "2022-08-16T07:41:28.000Z",
-      "updatedAt": "2022-08-16T07:41:28.000Z",
-      "file": "我的第一把客制化键盘.md",
-      "slug": "my-first-custom-mechanical-keyboard",
-      "legacySlug": "6f652b2b",
-      "aliases": [
-        "6f652b2b"
-      ],
-      "excerpt": "作为计算机专业的学生和游戏爱好者，每天做的最多的事情就是坐在电脑前面敲键盘，俗话说：“工欲善其事，必先利其器”，要追求更高效的工作方式和游戏体验，打造一把趁手的高端的机械键盘很有必要。 机械键盘和薄膜键盘 不会有人现在还不知道机械键盘和薄膜键盘的区别吧？它们两个架构不同，薄膜键盘是指通过胶碗来完成键",
-      "tags": [
-        "技能分享",
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg",
-      "wordCount": 889,
-      "readingTime": 3
-    },
-    {
-      "title": "组织一次成功的班级烧烤经验分享",
-      "date": "2022-06-23T04:24:27.000Z",
-      "updatedAt": "2022-06-23T04:24:27.000Z",
-      "file": "组织一次成功的班级烧烤经验分享.md",
-      "slug": "class-bbq-team-building-experience-sharing",
-      "legacySlug": "9d897e60",
-      "aliases": [
-        "9d897e60"
-      ],
-      "excerpt": "准备物资 6月22日，班级组织了一次团建，去轰趴馆（一个双层别墅，有烧烤、厨房、KTV、游戏机、投影仪、麻将、台球等等的地方）早上十点到达，晚上五点离开，吃一个中午饭。因为我对这些玩的东西不感兴趣，想自己动手做一做吃的，所以找了几个人一起做烧烤吃。我列出了要买物品的清单，跟小伙伴一起去超市购买。小伙",
-      "tags": [
-        "技能分享",
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/烧烤架子上烤羊肉牛肉土豆封面.png",
-      "wordCount": 467,
-      "readingTime": 2
-    },
-    {
-      "title": "带鱼屏真是太太太爽爽爽啦",
-      "date": "2021-07-30T12:46:02.000Z",
-      "updatedAt": "2021-07-30T12:46:02.000Z",
-      "file": "带鱼屏真是太太太爽爽爽啦.md",
-      "slug": "lg-29wk500-ultrawide-monitor-experience",
-      "legacySlug": "a30a3807",
-      "aliases": [
-        "a30a3807"
-      ],
-      "excerpt": "型号LG 29wk500，入门级带鱼屏 真沉浸感！",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 14,
-      "readingTime": 1
-    },
-    {
-      "title": "大物大作业-microbit编程小车",
-      "date": "2021-06-21T22:49:05.000Z",
-      "updatedAt": "2021-06-21T22:49:05.000Z",
-      "file": "大物大作业-microbit编程小车.md",
-      "slug": "microbit-programming-car-physics-project",
-      "legacySlug": "86bb081c",
-      "aliases": [
-        "86bb081c"
-      ],
-      "excerpt": "起因 做大学物理大作业。张丽红老师给的课题很宽泛，做实物、写小论文都可以。我和何为就寻思着做一辆小车。本来想买树莓派，自己找配件，做一辆智能车，但是时间成本太高，于是就从淘宝上240块钱买了辆青少年编程学习玩具车。 microbit单片机 微软搞的东西，面向青少年学习编程使用。上手十分简单，就真的是",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 437,
-      "readingTime": 2
-    },
-    {
-      "title": "“专利申请”撰写有感",
-      "date": "2021-03-28T20:46:35.000Z",
-      "updatedAt": "2021-03-28T20:46:35.000Z",
-      "file": "“专利申请”撰写有感.md",
-      "slug": "thoughts-on-writing-patent-application",
-      "legacySlug": "3c91c67f",
-      "aliases": [
-        "3c91c67f"
-      ],
-      "excerpt": "从开学开始，我就接到了李昕老师的任务——为我们寒假的成果“一种基于docker和jupyter notebook的复合类型题目在线检测方法”撰写一份“专利申请”，并完成申请。第一作者当然是李昕老师，因为我们的核心代码全是李昕老师写的，第二作者包括我和另外一位贡献较大的成员。申请专利并署名我们既是一种",
-      "tags": [
-        "随笔杂记"
-      ],
-      "img": "",
-      "wordCount": 943,
-      "readingTime": 3
     }
   ],
-  "技能分享": [
+  "书影记录": [
     {
-      "title": "langchain-faiss加载pkl文件速度提升",
-      "date": "2025-12-14T06:19:28.000Z",
-      "updatedAt": "2025-12-14T06:19:28.000Z",
-      "file": "langchain-faiss加载pkl文件速度提升.md",
-      "slug": "langchain-faiss-load-pkl-speed-up",
-      "legacySlug": "506f20a8",
+      "title": "《德米安》读后有感",
+      "date": "2024-05-01T15:49:07.000Z",
+      "updatedAt": "2024-05-01T15:49:07.000Z",
+      "file": "德米安读后有感.md",
+      "slug": "demian-hermann-hesse-book-review",
+      "legacySlug": "e9ae0e15",
       "aliases": [
-        "506f20a8"
+        "e9ae0e15"
       ],
-      "excerpt": "langchain faiss加载pkl文件速度提升 背景 Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。 langchain community.vectorstores中的Faiss写入一个向量库中包含两个文件：index.faiss",
+      "excerpt": "最近读了黑塞的《德米安》，这是一个关于一个少年如何在彷徨时找寻自我的故事。故事的主人公叫辛克莱，他出生于一个宗教家庭，父母都是非常善良纯洁的人，小时候的他也非常懂事乖巧，生活在幸福当中。但是有一天他遇到了校园霸凌，他为这件事情使他非常苦恼，也正是因为这件事情使他觉醒了自我，他开始发现世界不是单纯善良",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 388,
-      "readingTime": 1
+      "wordCount": 941,
+      "readingTime": 3
     },
     {
-      "title": "RAG图谱实体和边智能合并",
-      "date": "2025-07-13T09:25:50.000Z",
-      "updatedAt": "2025-07-13T09:25:50.000Z",
-      "file": "RAG图谱实体和边智能合并.md",
-      "slug": "rag-graph-entity-edge-intelligent-merge",
-      "legacySlug": "46bbd497",
+      "title": "一部接地气的国产法律神剧——第二十条",
+      "date": "2024-02-21T09:30:31.000Z",
+      "updatedAt": "2024-02-21T09:30:31.000Z",
+      "file": "一部接地气的国产法律神剧-第二十条.md",
+      "slug": "article-20-movie-review",
+      "legacySlug": "a94b5eff",
       "aliases": [
-        "46bbd497"
+        "a94b5eff"
       ],
-      "excerpt": "RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple In",
+      "excerpt": "春节假期末期，我和我爸妈一起去电影院观看了《第二十条》，我和我妈都觉得非常好看。《第二十条》是一部国产法律电影，其剧名指的是我国刑法第二十条关于正当防卫和防卫过当的法律条文。从来没有哪一条法律条文像第二十条这样容易引起争议。试想一下，如果一名歹徒要拿刀杀你，你在情急之中找到另外一把凶器并且将他反杀，",
       "tags": [
-        "随笔杂记",
-        "技能分享"
+        "书影记录"
       ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png",
-      "wordCount": 1642,
+      "img": "",
+      "wordCount": 671,
+      "readingTime": 2
+    },
+    {
+      "title": "《置身事内》读书笔记",
+      "date": "2023-12-11T12:55:26.000Z",
+      "updatedAt": "2023-12-11T12:55:26.000Z",
+      "file": "置身事内读书笔记.md",
+      "slug": "zhi-shen-shi-nei-reading-notes",
+      "legacySlug": "1e3d20cb",
+      "aliases": [
+        "1e3d20cb"
+      ],
+      "excerpt": "《置身事内》是复旦大学经济学院副教授兰小欢的科普读物。兰教授写这本书的目的是让更多的国人了解我国的经济政策。过去十年，我国的经济发展可以用“起飞”二字来形容。一提到中国经济，大家都非常自信且乐观的。但是到了疫情结束后的2023年，大家明显感到经济增速放缓了，生活和工作压力变大了。对于我们大学生来说，",
+      "tags": [
+        "书影记录"
+      ],
+      "img": "",
+      "wordCount": 562,
+      "readingTime": 2
+    },
+    {
+      "title": "《1984》读书笔记",
+      "date": "2023-05-01T16:35:22.000Z",
+      "updatedAt": "2023-05-01T16:35:22.000Z",
+      "file": "《1984》读书笔记.md",
+      "slug": "1984-reading-notes",
+      "legacySlug": "72d96981",
+      "aliases": [
+        "72d96981"
+      ],
+      "excerpt": "1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较深入，16世纪文艺复兴时期，英国的莫尔就提出了空想社会主义（马克思的科学社会主义的前身）；后来19世纪英国人率先搞起了资产阶级革命，号称“自由、平等”；到了20",
+      "tags": [
+        "书影记录"
+      ],
+      "img": "",
+      "wordCount": 456,
+      "readingTime": 2
+    },
+    {
+      "title": "《肠子的小心思》——读书笔记",
+      "date": "2023-01-28T09:57:02.000Z",
+      "updatedAt": "2023-01-28T09:57:02.000Z",
+      "file": "《肠子的小心思》——读书笔记.md",
+      "slug": "gut-book-review",
+      "legacySlug": "4bf66344",
+      "aliases": [
+        "4bf66344"
+      ],
+      "excerpt": "我是一个肠胃经常出毛病的人。最近闲逛豆瓣，发现了这本评分高达8.9分的有关肠子的医学科普书籍，赶紧买回来看看它能对我有什么帮助，看完之后果然受益匪浅。作者是德国的一名医学博士，她用幽默风趣的语言向我们揭示了很多藏在科研论文中的关于肠胃的知识，这些知识能够很好的指引我们的饮食、排泄、作息等日常生活习惯",
+      "tags": [
+        "书影记录"
+      ],
+      "img": "",
+      "wordCount": 1249,
+      "readingTime": 4
+    },
+    {
+      "title": "《悉达多》——人生就是在不断的体验与感悟",
+      "date": "2022-11-12T06:20:24.000Z",
+      "updatedAt": "2022-11-12T06:20:24.000Z",
+      "file": "《悉达多》-人生就是在不断的体验与感悟.md",
+      "slug": "siddhartha-book-review-life-experience",
+      "legacySlug": "68349a2c",
+      "aliases": [
+        "68349a2c"
+      ],
+      "excerpt": "《悉达多》 故事的背景发生在印度，青年的悉达多是婆罗门（印度种姓制度中的最高等级）之子，他幼年时勤勉好学，聪慧非凡，长相俊美。大家都爱戴他，认为他一定能成为伟大的贤士。可是悉达多自己却感受不到喜悦，他认为父辈传授给他的知识还远远不够，无法盛满精神的容器，满足他焦渴的灵魂。他感到非常迷茫，灵魂悸动不安",
+      "tags": [
+        "书影记录"
+      ],
+      "img": "",
+      "wordCount": 1727,
       "readingTime": 5
     },
     {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "file": "手撕卷积神经网络反向传播梯度更新.md",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
+      "title": "《乡土中国》读书笔记",
+      "date": "2022-07-01T12:32:23.000Z",
+      "updatedAt": "2022-07-01T12:32:23.000Z",
+      "file": "《乡土中国》读书笔记.md",
+      "slug": "from-the-soil-reading-notes",
+      "legacySlug": "29b4acc1",
       "aliases": [
-        "8912df88"
+        "29b4acc1"
       ],
-      "excerpt": "手撕卷积神经网络 一个简单的卷积神经网络，就4层，分别是InputLayer, conv layer, hidden layer(全连接层 + ReLU激活), output layer 反向传播梯度更新推导 以下是四层网络中每层的反向传播公式（以损失函数 \\( L \\) 为起点，使用偏导数符号）：",
+      "excerpt": "《乡土中国》由费孝通先生的14篇论文组成，其内容是对中国社会基本结构的深入剖析。其中《差序格局》一篇最让我印象深刻。该书并不难读，但若要想全部理解还需花点功夫。在这里我是浅读后浅记一下笔记，防止读完后一无所获。 乡土本色 总体介绍乡土中国 土气（指泥土，我们的民族从泥土里长出来光荣的历史，当然也要受",
       "tags": [
-        "笔记",
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 602,
-      "readingTime": 2
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "file": "手撕Attention.md",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "excerpt": "第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K",
-      "tags": [
-        "笔记",
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 134,
-      "readingTime": 1
-    },
-    {
-      "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
-      "date": "2025-06-10T10:14:29.000Z",
-      "updatedAt": "2025-06-10T10:14:29.000Z",
-      "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
-      "slug": "chart2data-experiment-compare-chartvlm-qwen-omni",
-      "legacySlug": "ff7483e1",
-      "aliases": [
-        "ff7483e1"
-      ],
-      "excerpt": "ChartVLM ChartVLM由两部分组成：图表结构解码器+大语言模型 截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct 显存占用基本保持在2506 MiB 普通图表 原图 识别结果 评价 CSV数据： Category,Percentage Visual A",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/images/d969c3b0_1749549251583-7654c91e-ef01-4bf7-9656-11efa4778806.png",
-      "wordCount": 853,
+      "wordCount": 1041,
       "readingTime": 3
     },
     {
-      "title": "DeepResearch深度搜索实现方法调研",
-      "date": "2025-05-09T14:03:42.000Z",
-      "updatedAt": "2025-05-09T14:03:42.000Z",
-      "file": "DeepResearch深度搜索实现方法调研.md",
-      "slug": "deep-research-implementation-methods",
-      "legacySlug": "47f2a5ec",
+      "title": "《写给大家看的设计书》读书笔记",
+      "date": "2022-06-14T11:19:28.000Z",
+      "updatedAt": "2022-06-14T11:19:28.000Z",
+      "file": "《写给大家看的设计书》读书笔记.md",
+      "slug": "non-designers-design-book-reading-notes",
+      "legacySlug": "76de9d1d",
       "aliases": [
-        "47f2a5ec"
+        "76de9d1d"
       ],
-      "excerpt": "DeepResearch深度搜索实现方法调研 Deep Research 有三个核心能力 + 能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索） + 能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？） + 能力三：对多源的信息进行验",
+      "excerpt": "写给大家看的设计书 本书作者是美国著名设计师Robin Williams，Mac爱好者（因为我也喜欢Mac，所以强调一下这个）。 这是一本写给非设计专业人士看的设计科普类数据，介绍了有关设计的四个基本原则、颜色运用、字体搭配等内容。语言通俗易懂，由易到难，循序渐进，逻辑清晰，有丰富的图片和案例，是一",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png",
-      "wordCount": 1546,
+      "img": "",
+      "wordCount": 707,
+      "readingTime": 2
+    },
+    {
+      "title": "《从零开始的女性主义》读后有感",
+      "date": "2022-05-06T09:32:20.000Z",
+      "updatedAt": "2022-05-06T09:32:20.000Z",
+      "file": "《从零开始的女性主义》读后有感.md",
+      "slug": "feminism-from-zero-reading-notes",
+      "legacySlug": "f230d573",
+      "aliases": [
+        "f230d573"
+      ],
+      "excerpt": "《从零开始的女性主义》 “女性主义”其实就是“女权主义”，只不过后者在大家的印象里有贬义的意味，所以换了一种说法。“女权”这个词在近几年特别火，有很多人抨击，也总有人为它辩护，还有人趁乱在其中捣鬼。那么为什么会产生女权主义呢？它到底是怎样的斗争呢？我很好奇，所以去阅读了这本豆瓣热榜第一名的《从零开始",
+      "tags": [
+        "书影记录"
+      ],
+      "img": "",
+      "wordCount": 1377,
       "readingTime": 4
     },
     {
-      "title": "开源PDF解析工具Marker深度解析",
-      "date": "2025-05-05T14:36:59.000Z",
-      "updatedAt": "2025-05-05T14:36:59.000Z",
-      "file": "开源PDF解析工具Marker深度解析.md",
-      "slug": "open-source-pdf-parser-marker-deep-dive",
-      "legacySlug": "19977fa8",
+      "title": "《无人生还》读后有感",
+      "date": "2022-04-30T09:58:36.000Z",
+      "updatedAt": "2022-04-30T09:58:36.000Z",
+      "file": "《无人生还》读后有感.md",
+      "slug": "and-then-there-were-none-book-review",
+      "legacySlug": "7d1d0e91",
       "aliases": [
-        "19977fa8"
+        "7d1d0e91"
       ],
-      "excerpt": "开源PDF解析工具Marker深度解析 检索增强生成（RAG）系统的第一步就是做 pdf 解析，从复杂多样的 pdf 中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker 和 MinerU。因为 Marker 是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进行解析",
+      "excerpt": "作者 《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写于1939年。 情节 小说是以上帝视角叙述的，开头首先介绍了十位被“欧文”邀请到岛上的客人，他们的背景都截然不同，有法官、医生、警督等等，但他们有个共同的特点",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 2329,
-      "readingTime": 6
-    },
-    {
-      "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
-      "date": "2025-01-24T01:37:25.000Z",
-      "updatedAt": "2025-01-24T01:37:25.000Z",
-      "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
-      "slug": "vue3-waterfall-layout-dynamic-update-component",
-      "legacySlug": "7624b8c1",
-      "aliases": [
-        "7624b8c1"
-      ],
-      "excerpt": "思路 1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）。把需要布局的组件（这里叫做waterfall item）放在瀑布流容器里面渲染出来。使用绝对定位（position: absolute），把它移到屏幕外面，不要占用页面高度，并且设置不可见（visibility:hidden）。 2.渲染",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png",
-      "wordCount": 504,
+      "wordCount": 582,
       "readingTime": 2
     },
     {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "file": "电脑启动需要经历哪些过程？.md",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
+      "title": "《失乐园》读后有感",
+      "date": "2022-04-15T08:38:22.000Z",
+      "updatedAt": "2022-04-15T08:38:22.000Z",
+      "file": "《失乐园》读后有感.md",
+      "slug": "a-lost-paradise-book-review",
+      "legacySlug": "23ee6bf0",
       "aliases": [
-        "4e728164"
+        "23ee6bf0"
       ],
-      "excerpt": "传统BIOS启动流程 1. BIOS BIOS 启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。需要有一个外部储",
+      "excerpt": "故事简叙 久木是一家出版社的编辑，人到中年，事业不会有进一步发展了，对家人的感情也是平平淡淡的，生活只是一日复一日，清闲无聊得很。 一次偶然的工作聚会上，久木认识了凛子，对她产生了兴趣。凛子30岁，正是端庄美丽之时，但她的婚姻生活并不美好，丈夫忙于工作，无论是在感情上还是在性上都不能满足凛子。但凛子",
       "tags": [
-        "笔记",
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 1474,
+      "wordCount": 1237,
       "readingTime": 4
     },
     {
-      "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
-      "date": "2024-11-27T06:47:24.000Z",
-      "updatedAt": "2024-11-27T06:47:24.000Z",
-      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
-      "slug": "install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu",
-      "legacySlug": "024ab30e",
+      "title": "《邓小平时代》——改革开放的总设计师",
+      "date": "2022-03-18T10:32:09.000Z",
+      "updatedAt": "2022-03-18T10:32:09.000Z",
+      "file": "《邓小平时代》——改革开放的总设计师.md",
+      "slug": "deng-xiaoping-era-book-review",
+      "legacySlug": "95f646c6",
       "aliases": [
-        "024ab30e"
+        "95f646c6"
       ],
-      "excerpt": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouv",
+      "excerpt": "邓小平时代 所有中国人都知道，1949年建国时中国是一个落后封闭的社会主义国家（和现在的朝鲜差不多）。但是在80年代，社会主义市场经济取代了计划经济，对外封闭变成了改革开放。90年代，中国经济一路起飞，国际地位迅速提高。直到现在，中国已经成为世界最强的国家之一。 中国是如何崛起的？在大一时，孙运雷老",
       "tags": [
-        "笔记",
-        "技能分享"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png",
-      "wordCount": 521,
-      "readingTime": 2
-    },
-    {
-      "title": "如何在Windows上编译Python39源代码",
-      "date": "2023-12-10T12:51:01.000Z",
-      "updatedAt": "2023-12-10T12:51:01.000Z",
-      "file": "如何在Windows上编译Python39源代码.md",
-      "slug": "compile-python39-source-code-on-windows",
-      "legacySlug": "9fd37d43",
-      "aliases": [
-        "9fd37d43"
-      ],
-      "excerpt": "安装Visual Studio 2017 先下载Visual Studio Installer https://learn.microsoft.com/en us/visualstudio/python/installing python support in visual studio?view=",
-      "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 280,
-      "readingTime": 1
+      "wordCount": 1626,
+      "readingTime": 5
     },
     {
-      "title": "好用的动画制作工具-Keynote",
-      "date": "2023-07-01T02:41:41.000Z",
-      "updatedAt": "2023-07-01T02:41:41.000Z",
-      "file": "好用的动画制作工具-keynote.md",
-      "slug": "keynote-animation-maker-tool",
-      "legacySlug": "3f0c5268",
+      "title": "《雪国》读书笔记",
+      "date": "2022-02-13T15:38:09.000Z",
+      "updatedAt": "2022-02-13T15:38:09.000Z",
+      "file": "《雪国》读书笔记.md",
+      "slug": "snow-country-reading-notes",
+      "legacySlug": "c04d3ca3",
       "aliases": [
-        "3f0c5268"
+        "c04d3ca3"
       ],
-      "excerpt": "Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。 在通用性上，Keynote明显没有PPT那么普及。但是我认为Keynote在动画制作上完胜PPT，如果有足够需求，一定要试一试Keynote。Keynote内置了丰富的动画效果，多试几个，你",
+      "excerpt": "雪国 雪国是远离繁华都市，如世外桃源一般的地方。在小说的开头写道： 穿过县界长长的隧道，便是雪国。 夜空下一片白茫茫。 主人公岛村每年都会独自来雪国度假，在这里他结识了一个叫驹子的姑娘，岛村被驹子的活泼美丽打动，两人情投意合，开始交往。同时另一个叫叶子的姑娘，她纯粹空灵的气质，更让岛村着迷。故事的情",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 207,
-      "readingTime": 1
+      "wordCount": 1876,
+      "readingTime": 5
     },
     {
-      "title": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
-      "date": "2023-04-22T02:40:50.000Z",
-      "updatedAt": "2023-04-22T02:40:50.000Z",
-      "file": "vueflask实现播放任何视频源包括rtsp摄像头.md",
-      "slug": "vue-flask-play-rtsp-video-stream-camera",
-      "legacySlug": "2453b9ad",
+      "title": "《半泽直树》观后有感",
+      "date": "2022-02-01T13:52:23.000Z",
+      "updatedAt": "2022-02-01T13:52:23.000Z",
+      "file": "《半泽直树》观后有感.md",
+      "slug": "hanzawa-naoki-review",
+      "legacySlug": "8c24a0e2",
       "aliases": [
-        "2453b9ad"
+        "8c24a0e2"
       ],
-      "excerpt": "背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。 由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才",
+      "excerpt": "半泽直树 半泽直树是日本电视剧《半泽直树》中的主人公。半泽的家族经营了一家小公司，在半泽年幼时，日本遇到了经济泡沫，公司急需贷款，但银行对此不但见死不救，还落井下石，逼死了半泽的父亲。大学毕业后，半泽竟选择进入银行工作，立志要找到害死父亲的人，并完成复仇。电视剧的主要讲述的，就是半泽如何传奇般的一步",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 453,
-      "readingTime": 2
-    },
-    {
-      "title": "CSS布局基础知识",
-      "date": "2023-03-20T05:32:55.000Z",
-      "updatedAt": "2023-03-20T05:32:55.000Z",
-      "file": "CSS布局基础知识.md",
-      "slug": "css-layout-basics",
-      "legacySlug": "433a59dc",
-      "aliases": [
-        "433a59dc"
-      ],
-      "excerpt": "需求 还是之前的那个需求，我需要做一个静态网页用于展示电子版教材。网页的布局非常重要，我需要一个顶部横向的导航栏，一个能够显示大纲的侧边栏，侧边栏的右边是教材的内容，听起来很简单，不是吗？但我需要再加一个条件，就是这些布局得是响应式的，要能够适应不同尺寸的屏幕，这可就不简单了。举个例子，当屏幕变窄时",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 385,
-      "readingTime": 1
-    },
-    {
-      "title": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
-      "date": "2023-03-16T15:51:26.000Z",
-      "updatedAt": "2023-03-16T15:51:26.000Z",
-      "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md",
-      "slug": "vue-highlightjs-line-numbers-code-highlight",
-      "legacySlug": "61be5727",
-      "aliases": [
-        "61be5727"
-      ],
-      "excerpt": "highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 1. 先引入css文件和js文件 2. 再将你的代码用 包裹 3. 再调用hljs的高亮函数，它的原理是找到所有的code标签，然后通过操作DOM，给你的代码设置高亮样式。 hig",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 367,
-      "readingTime": 1
-    },
-    {
-      "title": "HUSTOJ前端源代码解析（PHP）",
-      "date": "2023-03-09T09:12:10.000Z",
-      "updatedAt": "2023-03-09T09:12:10.000Z",
-      "file": "HUSTOJ前端源代码解析（PHP）.md",
-      "slug": "hustoj-frontend-source-code-analysis-php",
-      "legacySlug": "d09e9297",
-      "aliases": [
-        "d09e9297"
-      ],
-      "excerpt": "需求 老师写了一本c++教材，这本教材的一大特色就是构建了一个有关c++的知识点网络。只有在电子版教材中，这种知识点网络才能真正发挥它的作用（比如点击超链接跳转到指定知识点），而出版社（清华大学出版社）不提供电子版教材的支持，因此我们需要自己搭建一个电子版教材网站。 刚好老师为了给本科生考试，让学长",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 911,
+      "wordCount": 813,
       "readingTime": 3
     },
     {
-      "title": "如何将语雀文档导出为html（使用语雀API）",
-      "date": "2023-03-09T08:12:56.000Z",
-      "updatedAt": "2023-03-09T08:12:56.000Z",
-      "file": "如何将语雀文档导出为html（使用语雀API）.md",
-      "slug": "export-yuque-document-to-html-api",
-      "legacySlug": "0e3ebef4",
+      "title": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴",
+      "date": "2022-01-17T00:11:13.000Z",
+      "updatedAt": "2022-01-17T00:11:13.000Z",
+      "file": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴.md",
+      "slug": "ashita-mo-koharu-biyori-book-review",
+      "legacySlug": "410258c9",
       "aliases": [
-        "0e3ebef4"
+        "410258c9"
       ],
-      "excerpt": "需求 语雀本身是用web端访问的，按理来说，导出为html文件应该是最接近原生文档的观感的，但是却不支持，反倒是可以导出为pdf、markdown、word等格式。 可以用爬虫把文档给爬下来，但是我很不喜欢用爬虫，因为大型网站总是会使用各种反爬技术，这些阻拦会使我爬出的结果不够优雅。 如果优雅的解决",
+      "excerpt": "明天也是小春日和 英子内心一直有一个田园梦，他的丈夫修一是建筑师，年轻时工作十分忙碌，但她始终支持丈夫的志愿。退休后，修一履行他的承诺，带着英子乔迁田野，在这里植树，建屋，耕作。 “小春日和”在日语中意指“晚秋到初冬里阳光和煦的好天气”。本书介绍了相伴走过近六十年的老人，在以自然为友，彼此相伴的每一",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
-      "img": "",
-      "wordCount": 447,
-      "readingTime": 2
-    },
-    {
-      "title": "组装一台新的电脑",
-      "date": "2023-03-01T00:57:51.000Z",
-      "updatedAt": "2023-03-01T00:57:51.000Z",
-      "file": "组装一台新的电脑.md",
-      "slug": "build-new-pc-computer-assembly",
-      "legacySlug": "8f9d9179",
-      "aliases": [
-        "8f9d9179"
-      ],
-      "excerpt": "从Windows换到Mac，获得了很多东西： 又轻又薄，续航还长，背出去上课自习非常方便（隔壁背着游戏本的同学都羡慕哭了）； 一块素质极高的屏幕，看文献非常舒服； 优秀的软件生态，在Mac上可以使用很多优质软件，比如Mac版清爽的qq； 优秀的硬件生态，与我的iPhone互联，同步记事本，提醒事项等",
-      "tags": [
-        "随笔杂记",
-        "技能分享"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_3956.jpeg",
-      "wordCount": 622,
-      "readingTime": 2
-    },
-    {
-      "title": "Qt动态添加和删除布局（仿jupyter）",
-      "date": "2023-02-02T06:14:19.000Z",
-      "updatedAt": "2023-02-02T06:14:19.000Z",
-      "file": "qt动态添加和删除布局（仿jupyter）.md",
-      "slug": "qt-dynamic-add-remove-layout-jupyter",
-      "legacySlug": "65173be9",
-      "aliases": [
-        "65173be9"
-      ],
-      "excerpt": "前言 老师给了一个任务，仿照jupyter notebook中可以动态添加、删除的cell，用c++的qt做一个类似的界面。具体来说，一个cell中有一个输入框，一个输出框，还有四个按钮，分别是运行、添加、删除、清空。此外，为了突出正在编辑的cell，要实现点击到cell的空白部分时，将背景颜色高亮",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 792,
-      "readingTime": 2
-    },
-    {
-      "title": "致动o手柄对比xbox原装手柄使用体验分享",
-      "date": "2023-01-15T00:59:39.000Z",
-      "updatedAt": "2023-01-15T00:59:39.000Z",
-      "file": "致动o手柄对比xbox原装手柄使用体验分享.md",
-      "slug": "zhidong-o-vs-xbox-controller-review",
-      "legacySlug": "8f710610",
-      "aliases": [
-        "8f710610"
-      ],
-      "excerpt": "对于游戏玩家来说，键盘鼠标可能不是最好的控制器（网游，fps玩家除外），拥有一个手柄，会让游戏体验更加舒适。尤其是对于一些需要慢慢品玩的3A大作，或者是需要各种微操的赛车游戏，手柄的体验绝对秒杀键鼠。 Xbox手柄 Xbox手柄是PC平台上最经典的手柄，由微软生产。它兼容性游戏多，做工精良，还很好看",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 1111,
+      "img": "https://cs.aiupc.xyz/img/%E6%98%8E%E5%A4%A9%E4%B9%9F%E6%98%AF%E5%B0%8F%E6%98%A5%E6%97%A5%E5%92%8C1%20(1)%E6%97%8B%E8%BD%AC.jpg",
+      "wordCount": 1089,
       "readingTime": 3
     },
     {
-      "title": "LiveGo——小而美的直播串流软件",
-      "date": "2023-01-01T08:11:53.000Z",
-      "updatedAt": "2023-01-01T08:11:53.000Z",
-      "file": "Livego——小而美的直播串流软件.md",
-      "slug": "livego-lightweight-live-streaming-software",
-      "legacySlug": "18b5f674",
+      "title": "《史蒂夫·乔布斯传》读书笔记",
+      "date": "2021-12-16T22:57:46.000Z",
+      "updatedAt": "2021-12-16T22:57:46.000Z",
+      "file": "《史蒂夫·乔布斯传》读书笔记.md",
+      "slug": "steve-jobs-biography-reading-notes",
+      "legacySlug": "0c6d1bcd",
       "aliases": [
-        "18b5f674"
+        "0c6d1bcd"
       ],
-      "excerpt": "近期想跟女朋友一起异地看电影，试了几种方式都不够优雅， 方式一：用chrome插件，双方同时打开一个视频源，然后通过这个插件能控制两个人的进度条保持一致。 缺点：因为有的视频源是收费的，两个人想一起看得交两份钱，还有的不支持网页播放（需要下载软件），所以这种方式灵活性很差，不好用。 方式二：用腾讯会",
+      "excerpt": "图书简介 《史蒂夫·乔布斯传》是美国作家沃尔特·艾萨克森为苹果公司创始人史蒂夫·乔布斯所作的传记，记录了乔布斯从童年开始，到卸任苹果公司CEO所发生的故事。该书是乔布斯唯一授权的传记，但乔布斯从未干涉艾萨克森的写作，甚至乔布斯从来没有阅读过本书，因此相比于其他名人的传记，本书更加客观真实。它为我们提",
       "tags": [
-        "技能分享",
-        "笔记"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 629,
-      "readingTime": 2
+      "wordCount": 2419,
+      "readingTime": 7
     },
     {
-      "title": "Kaggle图像分类竞赛实战总结详细代码解读",
-      "date": "2022-12-29T04:37:38.000Z",
-      "updatedAt": "2022-12-29T04:37:38.000Z",
-      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md",
-      "slug": "kaggle-image-classification-competition-code",
-      "legacySlug": "92077544",
+      "title": "黄山归来不看岳——黄山之旅",
+      "date": "2021-10-06T08:28:08.000Z",
+      "updatedAt": "2021-10-06T08:28:08.000Z",
+      "file": "黄山归来不看岳——黄山之旅.md",
+      "slug": "huangshan-mountain-trip",
+      "legacySlug": "2812cd66",
       "aliases": [
-        "92077544"
+        "2812cd66"
       ],
-      "excerpt": "前言 我是跟着李沐的动手学深度学习v2视频学习深度学习的，光看不做假把式，所以在学习完第七章 现代卷积神经网络之后，参加了一次李沐发布的Kaggle竞赛。自己动手，从组织数据集开始，到训练，再到推理，把整个流程走了一遍，收获颇丰，感觉学到了很多东西，（完整代码：https://www.kaggle.",
+      "excerpt": "时间 2021年国庆期间，10月3日至5日。 第一站：翡翠谷 翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。 翡翠谷是一条长长的峡谷，一路走进去有很多大大小小的水潭，",
       "tags": [
-        "笔记",
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 1254,
+      "wordCount": 1256,
       "readingTime": 4
     },
     {
-      "title": "Linux在指定时间区间内的随机时间点执行任务",
-      "date": "2022-10-23T15:52:09.000Z",
-      "updatedAt": "2022-10-23T15:52:09.000Z",
-      "file": "Linux在指定时间区间内的随机时间点执行任务.md",
-      "slug": "linux-execute-cron-job-at-random-time-in-interval",
-      "legacySlug": "1cad2edf",
+      "title": "《人类简史》读后有感",
+      "date": "2021-08-16T09:03:38.000Z",
+      "updatedAt": "2021-08-16T09:03:38.000Z",
+      "file": "《人类简史》读后有感.md",
+      "slug": "sapiens-a-brief-history-of-humankind-book-review",
+      "legacySlug": "05810db8",
       "aliases": [
-        "1cad2edf"
+        "05810db8"
       ],
-      "excerpt": "在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。 现在升级需求，比如说我想在6:00到9:00之间，随机找一个时间执行这个任务，怎么做呢？ 思路：我们不能在crontab里指定一个随机的时间（只能指定一个具体的时间），但是我们可以指定一个具体的时间运行sh",
+      "excerpt": "一句话概述 《人类简史》在2012年以希伯来文出版。本书从人类的起源开始谈，谈到人类的认知革命、农业革命、再谈到人类的融合统一、科学革命，最后谈一谈人类的未来。构造了一个横跨人类历史的巨大历史框架。 作者简介 作者是以色列年轻人 尤瓦尔·赫拉利 （出书时不到40岁），现在是牛津大学历史学博士。简史三",
       "tags": [
-        "技能分享",
-        "笔记"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 196,
-      "readingTime": 1
+      "wordCount": 1480,
+      "readingTime": 4
     },
     {
-      "title": "我的第一把客制化键盘",
-      "date": "2022-08-16T07:41:28.000Z",
-      "updatedAt": "2022-08-16T07:41:28.000Z",
-      "file": "我的第一把客制化键盘.md",
-      "slug": "my-first-custom-mechanical-keyboard",
-      "legacySlug": "6f652b2b",
+      "title": "87《红楼梦》观之有感",
+      "date": "2021-07-14T21:56:23.000Z",
+      "updatedAt": "2021-07-14T21:56:23.000Z",
+      "file": "87《红楼梦》观之有感.md",
+      "slug": "87-dream-of-the-red-chamber-review",
+      "legacySlug": "bb9c1edf",
       "aliases": [
-        "6f652b2b"
+        "bb9c1edf"
       ],
-      "excerpt": "作为计算机专业的学生和游戏爱好者，每天做的最多的事情就是坐在电脑前面敲键盘，俗话说：“工欲善其事，必先利其器”，要追求更高效的工作方式和游戏体验，打造一把趁手的高端的机械键盘很有必要。 机械键盘和薄膜键盘 不会有人现在还不知道机械键盘和薄膜键盘的区别吧？它们两个架构不同，薄膜键盘是指通过胶碗来完成键",
+      "excerpt": "87版《红楼梦》 87红楼梦拍得是相当好的。小时候看不懂，不以为然。后来看了新版红楼梦（10版），才知道87版红楼梦是多么经典。导演王扶林拿捏了每一处细节，用高超的手法尽可能地还原了红楼梦原著。为拍摄此剧付出的代价也远高于现代拍摄的古装剧。演员也各个都是颜值天花板，看得好不过瘾！ 看看拍这部剧的投资",
       "tags": [
-        "技能分享",
-        "随笔杂记"
+        "书影记录"
       ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg",
-      "wordCount": 889,
+      "img": "",
+      "wordCount": 2443,
+      "readingTime": 7
+    },
+    {
+      "title": "《京华烟云》读后有感",
+      "date": "2021-06-23T23:42:43.000Z",
+      "updatedAt": "2021-06-23T23:42:43.000Z",
+      "file": "《京华烟云》读后有感.md",
+      "slug": "moment-in-peking-book-review",
+      "legacySlug": "f5d6357f",
+      "aliases": [
+        "f5d6357f"
+      ],
+      "excerpt": "阅读经历 学期初，室友刘桐荐此书，从图书馆借阅，全书600页。初捧读，爱不释手，觉此书为模仿红楼梦所著，多描写封建大家族男女情爱之事。期末，又有闲，再捧读。读罢，忽觉此书内涵之丰富，有深刻历史背景。 此书在文学上的地位虽比不上四大名著之一的《红楼梦》，但绝对算是一本旷世巨著。作为一个普通读者，浅读完",
+      "tags": [
+        "书影记录"
+      ],
+      "img": "",
+      "wordCount": 1794,
+      "readingTime": 5
+    },
+    {
+      "title": "《消失的13级台阶》读后感",
+      "date": "2021-06-06T22:24:13.000Z",
+      "updatedAt": "2021-06-06T22:24:13.000Z",
+      "file": "《消失的13级台阶》读后感.md",
+      "slug": "thirteen-steps-kazuaki-takano-book-review",
+      "legacySlug": "7e8b71ec",
+      "aliases": [
+        "7e8b71ec"
+      ],
+      "excerpt": "我用不到一周的时间读完了这本《消失的13级台阶》，这本书是典型的日系推理小说，作者高野和明用电影式的叙述手法，清晰地讲述了一起跨度长达10年并且牵涉到多起犯罪事件的故事。读完之后，我深感震撼，不仅仅是因为精彩的故事情节和出乎意料的结局，还因为本书揭露了深刻的社会现实问题，生活在阳光下的我们或许从未关",
+      "tags": [
+        "书影记录"
+      ],
+      "img": "",
+      "wordCount": 1009,
       "readingTime": 3
     },
     {
-      "title": "Linux输出重定向以及crontab的坑",
-      "date": "2022-07-13T03:14:42.000Z",
-      "updatedAt": "2022-07-13T03:14:42.000Z",
-      "file": "Linux输出重定向以及crontab的坑.md",
-      "slug": "linux-output-redirection-crontab-pitfalls",
-      "legacySlug": "78bcbc75",
+      "title": "《如何阅读一本书》读后感",
+      "date": "2021-04-23T18:16:55.000Z",
+      "updatedAt": "2021-04-23T18:16:55.000Z",
+      "file": "《如何阅读一本书》读后感.md",
+      "slug": "how-to-read-a-book-review",
+      "legacySlug": "84d3a75c",
       "aliases": [
-        "78bcbc75"
+        "84d3a75c"
       ],
-      "excerpt": "有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑： 编辑crontab 首先执行 编辑cron表达式，注意：每个用户都有自己的crontab，如果想省事的话建议直接 只使用root用户的就好了。 写cr",
+      "excerpt": "今天是世界读书日，我想给大家推荐一本《如何阅读一本书》。 基本介绍 《如何阅读一本书》初版于1940年，1972年又大幅增订改写为新版，是一本有六十多年历史经典名著。作者是美国作家\\[莫提默·J·艾德勒\\]和\\[查尔斯·范多伦\\]，二者都参加过《大英百科全书》的编写工作。 如书名所见，这本书的主题就",
       "tags": [
-        "技能分享",
-        "笔记"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 347,
-      "readingTime": 1
-    },
-    {
-      "title": "组织一次成功的班级烧烤经验分享",
-      "date": "2022-06-23T04:24:27.000Z",
-      "updatedAt": "2022-06-23T04:24:27.000Z",
-      "file": "组织一次成功的班级烧烤经验分享.md",
-      "slug": "class-bbq-team-building-experience-sharing",
-      "legacySlug": "9d897e60",
-      "aliases": [
-        "9d897e60"
-      ],
-      "excerpt": "准备物资 6月22日，班级组织了一次团建，去轰趴馆（一个双层别墅，有烧烤、厨房、KTV、游戏机、投影仪、麻将、台球等等的地方）早上十点到达，晚上五点离开，吃一个中午饭。因为我对这些玩的东西不感兴趣，想自己动手做一做吃的，所以找了几个人一起做烧烤吃。我列出了要买物品的清单，跟小伙伴一起去超市购买。小伙",
-      "tags": [
-        "技能分享",
-        "随笔杂记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/烧烤架子上烤羊肉牛肉土豆封面.png",
-      "wordCount": 467,
-      "readingTime": 2
-    },
-    {
-      "title": "使用正则表达式进行高级替换",
-      "date": "2022-06-17T07:02:15.000Z",
-      "updatedAt": "2022-06-17T07:02:15.000Z",
-      "file": "使用正则表达式进行高级替换.md",
-      "slug": "advanced-regex-replacement",
-      "legacySlug": "17aa354e",
-      "aliases": [
-        "17aa354e"
-      ],
-      "excerpt": "需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： 但是这样渲染出的图片不能居中，也不能缩放，我得把它转换成博客主题的格式： 思路很简单，但不能简单的使用python的replace函数，因为不仅要匹配 ，还要匹配括号里",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 358,
-      "readingTime": 1
-    },
-    {
-      "title": "在word中使用通配符进行高级的查找和替换",
-      "date": "2022-06-16T09:03:05.000Z",
-      "updatedAt": "2022-06-16T09:03:05.000Z",
-      "file": "在word中使用通配符进行高级的查找和替换.md",
-      "slug": "word-wildcard-advanced-find-and-replace",
-      "legacySlug": "2bd79d64",
-      "aliases": [
-        "2bd79d64"
-      ],
-      "excerpt": "需求 一个212页的word文档，包含如下反复出现的单元： 现将其中的 保留，中间省略号部分删除。使用正则表达式可以轻松解决这个问题： 使用上面的正则表达式就能匹配到需要删除的内容，替换成空格就好了。 However, 用编程语言操作word是比较麻烦的，不如使用word自带的查找替换功能。word",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 389,
-      "readingTime": 1
-    },
-    {
-      "title": "解锁新技术栈vue+flask前后端分离",
-      "date": "2022-05-24T15:41:05.000Z",
-      "updatedAt": "2022-05-24T15:41:05.000Z",
-      "file": "解锁新技术栈vue+flask前后端分离.md",
-      "slug": "vue-flask-frontend-backend-separation",
-      "legacySlug": "190a7f91",
-      "aliases": [
-        "190a7f91"
-      ],
-      "excerpt": "Vue 之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档边写了。前端框架逻辑都差不多，一通百通，很开心能掌握这项技术。 我的学习路线： 先了解web基础知识，比如http，get，post请求等等 了解html",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 580,
-      "readingTime": 2
-    },
-    {
-      "title": "Flask+vue使用jwt验证",
-      "date": "2022-05-22T05:00:39.000Z",
-      "updatedAt": "2022-05-22T05:00:39.000Z",
-      "file": "flask+vue使用jwt验证.md",
-      "slug": "flask-vue-jwt-authentication",
-      "legacySlug": "26d4ea53",
-      "aliases": [
-        "26d4ea53"
-      ],
-      "excerpt": "为什么要使用jwt验证？ jwt（json web token）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫（天猫属于淘宝的子网站），那么你需不需要重新登录呢？答案是不用，你会发现天猫。在一个站点登录后，在其它子站点就不需要重复登录，这就是单点登录。 传统的",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 349,
-      "readingTime": 1
-    },
-    {
-      "title": "Git撤销版本",
-      "date": "2022-04-16T12:23:57.000Z",
-      "updatedAt": "2022-04-16T12:23:57.000Z",
-      "file": "git撤销版本.md",
-      "slug": "git-undo-commit",
-      "legacySlug": "5753ed33",
-      "aliases": [
-        "5753ed33"
-      ],
-      "excerpt": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行gi",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 167,
-      "readingTime": 1
-    },
-    {
-      "title": "Roboflow+colab优雅地训练yolov5模型",
-      "date": "2022-03-19T05:37:49.000Z",
-      "updatedAt": "2022-03-19T05:37:49.000Z",
-      "file": "roboflow+colab优雅地训练yolov5模型.md",
-      "slug": "train-yolov5-model-roboflow-colab",
-      "legacySlug": "dbb064f5",
-      "aliases": [
-        "dbb064f5"
-      ],
-      "excerpt": "roboflow roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。 网址：https://roboflow.com/ 提示： 可以免费使用 需要挂代理 套餐一定要选public，选择private后导出数",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 293,
-      "readingTime": 1
-    },
-    {
-      "title": "mac m1 安装sqlserver踩坑经历",
-      "date": "2022-03-16T10:14:14.000Z",
-      "updatedAt": "2022-03-16T10:14:14.000Z",
-      "file": "macm1安装sqlserver踩坑经历.md",
-      "slug": "mac-m1-install-sql-server",
-      "legacySlug": "918eb92e",
-      "aliases": [
-        "918eb92e"
-      ],
-      "excerpt": "为什么安装sqlserver 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。 法一：云数据库（❌ 在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所周知，像阿里云、腾讯云等服务商",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 1157,
+      "wordCount": 1019,
       "readingTime": 3
     },
     {
-      "title": "C语言中值传递、指针传递和引用传递",
-      "date": "2022-03-07T09:15:10.000Z",
-      "updatedAt": "2022-03-07T09:15:10.000Z",
-      "file": "C语言中值传递、指针传递和引用传递.md",
-      "slug": "c-language-pass-by-value-pointer-reference",
-      "legacySlug": "65f5e948",
+      "title": "《菊次郎的夏天》观后感",
+      "date": "2021-04-05T23:25:45.000Z",
+      "updatedAt": "2021-04-05T23:25:45.000Z",
+      "file": "《菊次郎的夏天》观后感.md",
+      "slug": "kikujiros-summer-movie-review",
+      "legacySlug": "a93040b6",
       "aliases": [
-        "65f5e948"
+        "a93040b6"
       ],
-      "excerpt": "2022年我才搞懂这个！ 比较 传递方式 函数定义 函数调用 函数内对a修改的影响 : : : : 值传递 fun(int a) fun(x) 外部x不变 指针传递 fun(int a) fun(&x) 外部x同步更改 引用传递 fun(int &a) fun(x) 外部x同步更改 值传递 值传递是",
+      "excerpt": "话不多说，看看豆瓣评分吧： 8.8分，对于一个喜剧电影来说，算是不可多得的高分了。排名116名，妥妥的经典。豆瓣评分很多人都有争议，但其实我蛮认同豆瓣评分的。在豆瓣上，评分较高的电影往往都不是靠炫酷的特效或者出名的演员，而是看一部电影是否有内涵，有高超的艺术表现力，这和我评判一部电影是不是“好”电影",
       "tags": [
-        "刷题",
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 418,
+      "wordCount": 584,
       "readingTime": 2
     },
     {
-      "title": "Yolov5训练自己的目标检测模型",
-      "date": "2022-02-28T14:34:57.000Z",
-      "updatedAt": "2022-02-28T14:34:57.000Z",
-      "file": "yolov5训练自己的目标检测模型.md",
-      "slug": "yolov5-train-custom-object-detection-model",
-      "legacySlug": "8b193099",
+      "title": "《新喜剧之王》观后感",
+      "date": "2021-02-15T20:18:05.000Z",
+      "updatedAt": "2021-02-15T20:18:05.000Z",
+      "file": "《新喜剧之王》观后感.md",
+      "slug": "the-new-king-of-comedy-review",
+      "legacySlug": "70f77e2f",
       "aliases": [
-        "8b193099"
+        "70f77e2f"
       ],
-      "excerpt": "yolov5训练自己的目标检测模型 yolov5 yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代模型。 项目地址：https://github.com/ultralytics/yolov5 克隆下来之后，用pycharm打开，选择3.8版本的",
+      "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。 剧情 主要讲的就",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 431,
-      "readingTime": 2
+      "wordCount": 987,
+      "readingTime": 3
     },
     {
-      "title": "从wordpress迁移到hugo过程分享",
-      "date": "2022-01-28T07:52:50.000Z",
-      "updatedAt": "2022-01-28T07:52:50.000Z",
-      "file": "从wordpress迁移到hugo过程分享.md",
-      "slug": "migrate-wordpress-to-hugo",
-      "legacySlug": "eec5cb2f",
+      "title": "《华尔街之狼》观后感",
+      "date": "2021-02-11T00:29:07.000Z",
+      "updatedAt": "2021-02-11T00:29:07.000Z",
+      "file": "《华尔街之狼》观后感.md",
+      "slug": "wolf-of-wall-street-movie-review",
+      "legacySlug": "3d41ecc4",
       "aliases": [
-        "eec5cb2f"
+        "3d41ecc4"
       ],
-      "excerpt": "为什么抛弃wordpress选择hugo 不用买服务器了 wordpress经常奔溃，易受攻击 hugo编译速度真tm快 有一款钟爱的hugo主题 文章迁移 文章迁移使用一个hexo插件（你没看错，就是hexo插件）。 首先新建一个hexo博客（用完就可以删了）。 再安装 hexo migrator",
+      "excerpt": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。 剧情 主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。 公司破产后，他也学会了搞传销（果然在大公司里就是能学到",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 389,
-      "readingTime": 1
+      "wordCount": 985,
+      "readingTime": 3
     },
     {
-      "title": "gitee/github webhooks+nodejs实现自动拉取代码",
-      "date": "2022-01-25T20:50:41.000Z",
-      "updatedAt": "2022-01-25T20:50:41.000Z",
-      "file": "gitee webhooks+nodejs实现自动拉取代码.md",
-      "slug": "github-gitee-webhooks-nodejs-auto-pull",
-      "legacySlug": "9992c4b8",
+      "title": "《十二公民》观后感",
+      "date": "2020-12-21T21:58:43.000Z",
+      "updatedAt": "2020-12-21T21:58:43.000Z",
+      "file": "《十二公民》观后感.md",
+      "slug": "12-citizens-movie-review",
+      "legacySlug": "64c15f9f",
       "aliases": [
-        "9992c4b8"
+        "64c15f9f"
       ],
-      "excerpt": "需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都好办，关键是如何让服务器监听webhook发来的请求。 在网上一搜，各路大神各显神通，有用jenkins的，有用php的，还有travis CI…各位大佬，",
+      "excerpt": "今天和同学们看了电影《十二公民》，有感而发。 十二公民讲的主要是十二位职业，性格各不相同的成年人，受到老师的邀请在政法大学的教室里进行模拟陪审，讨论一起凶杀案的嫌疑人是有罪还是无罪的故事。影片的场景非常简单，绝大部分剧情都发生在那间教室里，但是剧情却一波三折，从最初的十一人投票认为有罪，一人认为无罪",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 746,
-      "readingTime": 2
+      "wordCount": 1011,
+      "readingTime": 3
     },
     {
-      "title": "数值计算方法",
-      "date": "2021-12-01T18:31:18.000Z",
-      "updatedAt": "2021-12-01T18:31:18.000Z",
-      "file": "数值计算方法.md",
-      "slug": "numerical-calculation-methods",
-      "legacySlug": "3b6e3bc4",
+      "title": "中国是如何富起来的？",
+      "date": "2020-12-12T12:19:03.000Z",
+      "updatedAt": "2020-12-12T12:19:03.000Z",
+      "file": "中国是如何富起来的？.md",
+      "slug": "how-china-got-rich",
+      "legacySlug": "c2d24b0b",
       "aliases": [
-        "3b6e3bc4"
+        "c2d24b0b"
       ],
-      "excerpt": "包含几乎所有课堂上讲的题目",
+      "excerpt": "我把解放后中国的崛起分为两个阶段，一是1949年至改革开放前（1978年）发展重工业，二是1978年改革开放之后到现在的中国特色社会主义经济。 第一阶段，主要领导人是毛泽东主席，他的伟大之处就在于让中国人民团结起来，组建了强有力的政府，政府的动员能力十分了得，当时人民也非常热血积极，在政府的指挥下完",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 13,
-      "readingTime": 1
+      "wordCount": 1139,
+      "readingTime": 3
     },
     {
-      "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
-      "date": "2021-11-21T09:04:54.000Z",
-      "updatedAt": "2021-11-21T09:04:54.000Z",
-      "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
-      "slug": "github-push-fatal-authentication-failed-solution",
-      "legacySlug": "400b9839",
+      "title": "《中国的官办经济》读后感",
+      "date": "2020-10-19T18:46:23.000Z",
+      "updatedAt": "2020-10-19T18:46:23.000Z",
+      "file": "《中国的官办经济》读后感.md",
+      "slug": "chinas-state-owned-economy-book-review",
+      "legacySlug": "01bdba8e",
       "aliases": [
-        "400b9839"
+        "01bdba8e"
       ],
-      "excerpt": "问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案 看它给的提示，Please see https://github.blog/2020 12 15 token authentication require",
+      "excerpt": "本书的目录如下： （一）中国的官办经济 世界上最怪异的经济 （二）官办进出口：从“十个大庆”到八千亿美元外汇储备 （三）官办经济威力初级分析 （四）官办经济 不懂具体经济的老毛同志 （五）官办经济 中国苏联经济模式进阶分析 （六）官办经济 邓小平比拼戈尔巴乔夫 （七）官办经济 “猫摸”二论体现的实验",
       "tags": [
-        "技能分享"
+        "书影记录"
       ],
       "img": "",
-      "wordCount": 292,
-      "readingTime": 1
-    },
-    {
-      "title": "macOS下matplotlib无法显示中文字体问题解决",
-      "date": "2021-11-12T16:57:43.000Z",
-      "updatedAt": "2021-11-12T16:57:43.000Z",
-      "file": "macOS下matplotlib无法显示中文字体问题解决.md",
-      "slug": "macos-matplotlib-chinese-font-display-fix",
-      "legacySlug": "2031667d",
-      "aliases": [
-        "2031667d"
-      ],
-      "excerpt": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。 后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html 解决方法",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 177,
-      "readingTime": 1
-    },
-    {
-      "title": "ubuntu安装Python3的曲折之路",
-      "date": "2021-10-30T13:58:01.000Z",
-      "updatedAt": "2021-10-30T13:58:01.000Z",
-      "file": "ubuntu安装Python3的曲折之路.md",
-      "slug": "ubuntu-install-python3-pyenv",
-      "legacySlug": "6434a878",
-      "aliases": [
-        "6434a878"
-      ],
-      "excerpt": "思路 先安装Python版本管理器pyenv 再用Pyenv安装Python 安装pyenv 标准安装：找到项目地址pyenv/pyenv: Simple Python version management (github.com) 先git clone，再配环境变量。 作者还提供了一个自动安装的脚",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 429,
-      "readingTime": 2
-    },
-    {
-      "title": "浏览器不支持getUserMedia",
-      "date": "2021-09-23T15:58:12.000Z",
-      "updatedAt": "2021-09-23T15:58:12.000Z",
-      "file": "浏览器不支持getUserMedia.md",
-      "slug": "fix-browser-getusermedia-not-supported",
-      "legacySlug": "2aef21c9",
-      "aliases": [
-        "2aef21c9"
-      ],
-      "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,http://localhost， 解决方法 chrome 地址栏输入：",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 105,
-      "readingTime": 1
-    },
-    {
-      "title": "certbot自动配置nginx给wordpress站点加https",
-      "date": "2021-09-08T22:42:40.000Z",
-      "updatedAt": "2021-09-08T22:42:40.000Z",
-      "file": "certbot自动配置nginx给wordpress站点加https.md",
-      "slug": "certbot-auto-config-nginx-wordpress-https",
-      "legacySlug": "8644ae3a",
-      "aliases": [
-        "8644ae3a"
-      ],
-      "excerpt": "思路 1. 安装snap 2. 安装certbot 3. 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置nginx的时候报错如图 报错的意思就是说，在nginx的配置文件中server",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 288,
-      "readingTime": 1
-    },
-    {
-      "title": "对图像操作",
-      "date": "2021-08-29T21:21:29.000Z",
-      "updatedAt": "2021-08-29T21:21:29.000Z",
-      "file": "对图像操作.md",
-      "slug": "image-operations-processing",
-      "legacySlug": "3bdd31d7",
-      "aliases": [
-        "3bdd31d7"
-      ],
-      "excerpt": "图像 位图（raster graphics)和矢量图（vector graphics) 位图是有像素的，色彩丰富。矢量图放大不会失真。 通道 单通道 灰度图，每个像素点只有一个值表示，如果图像的深度是4 (256 = 2 2 2\\ 2)，那么他的像素值0(黑) 255(白)； 三通道 也就是通过见到",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 772,
-      "readingTime": 2
-    },
-    {
-      "title": "Conda 配置虚拟环境",
-      "date": "2021-08-29T21:20:21.000Z",
-      "updatedAt": "2021-08-29T21:20:21.000Z",
-      "file": "Conda 配置虚拟环境.md",
-      "slug": "conda-virtual-environment-setup",
-      "legacySlug": "bcde8727",
-      "aliases": [
-        "bcde8727"
-      ],
-      "excerpt": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change ke",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 91,
-      "readingTime": 1
-    },
-    {
-      "title": "jupyter-paddle使用docker安装",
-      "date": "2021-08-29T21:19:42.000Z",
-      "updatedAt": "2021-08-29T21:19:42.000Z",
-      "file": "jupyter-paddle使用docker安装.md",
-      "slug": "jupyter-paddle-docker-install",
-      "legacySlug": "30e1e85f",
-      "aliases": [
-        "30e1e85f"
-      ],
-      "excerpt": "安装 参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux docker.html 先安装docker，参考官网 拉取镜像： docker pull registry.bai",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 202,
-      "readingTime": 1
-    },
-    {
-      "title": "python发邮件",
-      "date": "2021-08-08T08:20:29.000Z",
-      "updatedAt": "2021-08-08T08:20:29.000Z",
-      "file": "python发邮件.md",
-      "slug": "python-send-email",
-      "legacySlug": "31ffe735",
-      "aliases": [
-        "31ffe735"
-      ],
-      "excerpt": "QQ邮箱设置 python代码 时间判断",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 12,
-      "readingTime": 1
-    },
-    {
-      "title": "matplotlib作热机效率随负载大小变化曲线图",
-      "date": "2021-04-02T09:28:08.000Z",
-      "updatedAt": "2021-04-02T09:28:08.000Z",
-      "file": "matplotlib作热机效率随负载大小变化曲线图.md",
-      "slug": "matplotlib-plot-heat-engine-efficiency-curve",
-      "legacySlug": "686c4940",
-      "aliases": [
-        "686c4940"
-      ],
-      "excerpt": "大物实验得到的数据，用python的matplotlib很方便处理 数据准备： 画图： 效果",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 26,
-      "readingTime": 1
-    },
-    {
-      "title": "jupyter打开项目文件夹",
-      "date": "2021-01-19T17:52:50.000Z",
-      "updatedAt": "2021-01-19T17:52:50.000Z",
-      "file": "jupyter打开项目文件夹.md",
-      "slug": "jupyter-open-project-folder",
-      "legacySlug": "3e721cb0",
-      "aliases": [
-        "3e721cb0"
-      ],
-      "excerpt": "一.添加环境变量 直接在windows里面搜索“查看高级系统设置”，选择 , ，点开 ，以下三行填入其中： 然后点确定。 在我的电脑里 和 里面都有path，我也不知道该填哪个，索性把两个都填上了，这三个变量我觉得应该也有多余的，反正这个东西我是搞不太清楚的，只是照着网上说的做。 二.打开终端，进入",
-      "tags": [
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 255,
-      "readingTime": 1
+      "wordCount": 1251,
+      "readingTime": 4
     }
   ],
-  "笔记": [
-    {
-      "title": "手撕卷积神经网络+反向传播梯度更新",
-      "date": "2025-07-13T07:24:20.000Z",
-      "updatedAt": "2025-07-13T07:24:20.000Z",
-      "file": "手撕卷积神经网络反向传播梯度更新.md",
-      "slug": "cnn-backpropagation-gradient-update-from-scratch",
-      "legacySlug": "8912df88",
-      "aliases": [
-        "8912df88"
-      ],
-      "excerpt": "手撕卷积神经网络 一个简单的卷积神经网络，就4层，分别是InputLayer, conv layer, hidden layer(全连接层 + ReLU激活), output layer 反向传播梯度更新推导 以下是四层网络中每层的反向传播公式（以损失函数 \\( L \\) 为起点，使用偏导数符号）：",
-      "tags": [
-        "笔记",
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 602,
-      "readingTime": 2
-    },
-    {
-      "title": "手撕Attention",
-      "date": "2025-06-22T08:49:55.000Z",
-      "updatedAt": "2025-06-22T08:49:55.000Z",
-      "file": "手撕Attention.md",
-      "slug": "implement-attention-from-scratch",
-      "legacySlug": "d764f796",
-      "aliases": [
-        "d764f796"
-      ],
-      "excerpt": "第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K",
-      "tags": [
-        "笔记",
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 134,
-      "readingTime": 1
-    },
-    {
-      "title": "电脑启动需要经历哪些过程？",
-      "date": "2024-11-27T06:51:10.000Z",
-      "updatedAt": "2024-11-27T06:51:10.000Z",
-      "file": "电脑启动需要经历哪些过程？.md",
-      "slug": "computer-boot-process",
-      "legacySlug": "4e728164",
-      "aliases": [
-        "4e728164"
-      ],
-      "excerpt": "传统BIOS启动流程 1. BIOS BIOS 启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。需要有一个外部储",
-      "tags": [
-        "笔记",
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 1474,
-      "readingTime": 4
-    },
-    {
-      "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
-      "date": "2024-11-27T06:47:24.000Z",
-      "updatedAt": "2024-11-27T06:47:24.000Z",
-      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
-      "slug": "install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu",
-      "legacySlug": "024ab30e",
-      "aliases": [
-        "024ab30e"
-      ],
-      "excerpt": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouv",
-      "tags": [
-        "笔记",
-        "技能分享"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png",
-      "wordCount": 521,
-      "readingTime": 2
-    },
-    {
-      "title": "高光谱遥感深度学习调研",
-      "date": "2024-11-15T08:36:41.000Z",
-      "updatedAt": "2024-11-15T08:36:41.000Z",
-      "file": "高光谱遥感深度学习调研.md",
-      "slug": "hyperspectral-remote-sensing-deep-learning-survey",
-      "legacySlug": "40c266ad",
-      "aliases": [
-        "40c266ad"
-      ],
-      "excerpt": "高光谱遥感深度学习调研 综述 高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。 Wang C, Liu B, Liu L, et al. A review of deep learning used in the hyperspectral image analysi",
-      "tags": [
-        "笔记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png",
-      "wordCount": 1900,
-      "readingTime": 5
-    },
-    {
-      "title": "绿植盆栽攻略",
-      "date": "2024-08-28T10:24:07.000Z",
-      "updatedAt": "2024-08-28T10:24:07.000Z",
-      "file": "绿植盆栽攻略.md",
-      "slug": "indoor-green-potted-plant-care-guide",
-      "legacySlug": "5953ed50",
-      "aliases": [
-        "5953ed50"
-      ],
-      "excerpt": "分类 以下是常见的绿植盆栽分类： 一、观叶类绿植盆栽 植物类型 ：绿萝、吊兰、龟背竹、发财树、文竹、虎皮兰等。 养护难度 ：总体来说养护难度相对较低。绿萝和吊兰适应能力强，能在不同环境下生长，只要保证适量的水分和散射光即可。龟背竹喜欢温暖湿润的环境，但也比较耐阴。发财树需注意浇水不能过多，否则容易烂",
-      "tags": [
-        "随笔杂记",
-        "笔记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgbbf772ea317555ba7ac144f9318fc7f.jpg",
-      "wordCount": 1404,
-      "readingTime": 4
-    },
+  "人工智能": [
     {
       "title": "调研遥感数据压缩",
       "date": "2024-08-20T16:11:00.000Z",
@@ -1625,684 +620,6 @@
       "img": "",
       "wordCount": 3089,
       "readingTime": 8
-    },
-    {
-      "title": "SCI论文润色经验分享",
-      "date": "2023-12-23T13:39:08.000Z",
-      "updatedAt": "2023-12-23T13:39:08.000Z",
-      "file": "SCI论文润色经验分享.md",
-      "slug": "sci-paper-editing-experience-sharing",
-      "legacySlug": "e736dfef",
-      "aliases": [
-        "e736dfef"
-      ],
-      "excerpt": "变量符号 第一次出现的变量符号需要解释，后面不需再解释。 文章中所有的变量符号要保持一致，不能前后歧义。解决这个问题最好的办法就是在写作时维护一个符号表。如果文章的公式变量较多，强烈建议这么做，否则后面改起来会很痛苦。 所有单字母变量，都要采用斜体。多字母变量和函数，采用正体。对于下标，若下标本身是",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 2456,
-      "readingTime": 7
-    },
-    {
-      "title": "苏州印象",
-      "date": "2023-08-12T12:06:07.000Z",
-      "updatedAt": "2023-08-12T12:06:07.000Z",
-      "file": "苏州印象.md",
-      "slug": "suzhou-impressions",
-      "legacySlug": "17a81efd",
-      "aliases": [
-        "17a81efd"
-      ],
-      "excerpt": "2023年8月3日 5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一座城市的呢？我非常好奇，终于有机会能一探究竟！ 从蚌埠坐绿皮火车仅需不到5小时就能到达苏州站（票价62.5），苏州站位于苏州的中心区域——姑苏区（听名字就觉得好",
-      "tags": [
-        "随笔杂记",
-        "笔记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_8237%E2%80%9D%E5%A4%A7.jpeg",
-      "wordCount": 647,
-      "readingTime": 2
-    },
-    {
-      "title": "ChinaVis重庆之旅",
-      "date": "2023-07-31T11:17:10.000Z",
-      "updatedAt": "2023-07-31T11:17:10.000Z",
-      "file": "ChinaVis重庆之旅.md",
-      "slug": "chinavis-chongqing-trip",
-      "legacySlug": "8cb0549f",
-      "aliases": [
-        "8cb0549f"
-      ],
-      "excerpt": "ChinaVis大会于2023年7月21日 24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～ 出发！ 第一次坐飞机，飞机型号是波音737 800，起飞的时候感觉好神奇，在空中的景色也非常美。 重庆火锅 到达重庆的第一顿饭当然是重庆火锅，",
-      "tags": [
-        "随笔杂记",
-        "笔记"
-      ],
-      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7704.jpeg",
-      "wordCount": 705,
-      "readingTime": 2
-    },
-    {
-      "title": "Flask的一些关于线程的特性",
-      "date": "2023-07-01T02:15:46.000Z",
-      "updatedAt": "2023-07-01T02:15:46.000Z",
-      "file": "Flask的一些关于线程的特性.md",
-      "slug": "flask-thread-features",
-      "legacySlug": "c2de1901",
-      "aliases": [
-        "c2de1901"
-      ],
-      "excerpt": "前言 Flask是我最喜欢用的后端，以为它实在是太简单了，拿来做小型项目速度嗖嗖的。最近做比赛需要将后端通过socket连接到硬件设备，socket是有状态的，有连接数量的限制，所以要格外注意它的状态，Flask的一些特性会改变状态，如果不注意的话会导致很多bug，我踩了很多坑，在这里总结一下。 F",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 435,
-      "readingTime": 2
-    },
-    {
-      "title": "Qt动态添加和删除布局（仿jupyter）",
-      "date": "2023-02-02T06:14:19.000Z",
-      "updatedAt": "2023-02-02T06:14:19.000Z",
-      "file": "qt动态添加和删除布局（仿jupyter）.md",
-      "slug": "qt-dynamic-add-remove-layout-jupyter",
-      "legacySlug": "65173be9",
-      "aliases": [
-        "65173be9"
-      ],
-      "excerpt": "前言 老师给了一个任务，仿照jupyter notebook中可以动态添加、删除的cell，用c++的qt做一个类似的界面。具体来说，一个cell中有一个输入框，一个输出框，还有四个按钮，分别是运行、添加、删除、清空。此外，为了突出正在编辑的cell，要实现点击到cell的空白部分时，将背景颜色高亮",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 792,
-      "readingTime": 2
-    },
-    {
-      "title": "LiveGo——小而美的直播串流软件",
-      "date": "2023-01-01T08:11:53.000Z",
-      "updatedAt": "2023-01-01T08:11:53.000Z",
-      "file": "Livego——小而美的直播串流软件.md",
-      "slug": "livego-lightweight-live-streaming-software",
-      "legacySlug": "18b5f674",
-      "aliases": [
-        "18b5f674"
-      ],
-      "excerpt": "近期想跟女朋友一起异地看电影，试了几种方式都不够优雅， 方式一：用chrome插件，双方同时打开一个视频源，然后通过这个插件能控制两个人的进度条保持一致。 缺点：因为有的视频源是收费的，两个人想一起看得交两份钱，还有的不支持网页播放（需要下载软件），所以这种方式灵活性很差，不好用。 方式二：用腾讯会",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 629,
-      "readingTime": 2
-    },
-    {
-      "title": "Kaggle图像分类竞赛实战总结详细代码解读",
-      "date": "2022-12-29T04:37:38.000Z",
-      "updatedAt": "2022-12-29T04:37:38.000Z",
-      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md",
-      "slug": "kaggle-image-classification-competition-code",
-      "legacySlug": "92077544",
-      "aliases": [
-        "92077544"
-      ],
-      "excerpt": "前言 我是跟着李沐的动手学深度学习v2视频学习深度学习的，光看不做假把式，所以在学习完第七章 现代卷积神经网络之后，参加了一次李沐发布的Kaggle竞赛。自己动手，从组织数据集开始，到训练，再到推理，把整个流程走了一遍，收获颇丰，感觉学到了很多东西，（完整代码：https://www.kaggle.",
-      "tags": [
-        "笔记",
-        "技能分享"
-      ],
-      "img": "",
-      "wordCount": 1254,
-      "readingTime": 4
-    },
-    {
-      "title": "计组线上实验-运算器设计",
-      "date": "2022-10-29T04:58:43.000Z",
-      "updatedAt": "2022-10-29T04:58:43.000Z",
-      "file": "计组线上实验-运算器设计.md",
-      "slug": "computer-organization-lab-alu-design",
-      "legacySlug": "069c1237",
-      "aliases": [
-        "069c1237"
-      ],
-      "excerpt": "Logisim 这个软件还蛮好用的，用java写的，Windows直接按照老师的说明文档装就可以了，Mac从这里下载 https://github.com/laurensk/logisim macos 学习资料： Mooc视频 计算机硬件系统设计 https://www.icourse163.org",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 99,
-      "readingTime": 1
-    },
-    {
-      "title": "Linux在指定时间区间内的随机时间点执行任务",
-      "date": "2022-10-23T15:52:09.000Z",
-      "updatedAt": "2022-10-23T15:52:09.000Z",
-      "file": "Linux在指定时间区间内的随机时间点执行任务.md",
-      "slug": "linux-execute-cron-job-at-random-time-in-interval",
-      "legacySlug": "1cad2edf",
-      "aliases": [
-        "1cad2edf"
-      ],
-      "excerpt": "在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。 现在升级需求，比如说我想在6:00到9:00之间，随机找一个时间执行这个任务，怎么做呢？ 思路：我们不能在crontab里指定一个随机的时间（只能指定一个具体的时间），但是我们可以指定一个具体的时间运行sh",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 196,
-      "readingTime": 1
-    },
-    {
-      "title": "字、字节、字长、位等概念区分",
-      "date": "2022-10-22T01:54:39.000Z",
-      "updatedAt": "2022-10-22T01:54:39.000Z",
-      "file": "字、字节、字长、位等概念区分.md",
-      "slug": "difference-between-word-byte-word-length-bit",
-      "legacySlug": "ef85f195",
-      "aliases": [
-        "ef85f195"
-      ],
-      "excerpt": "一提到字、字节、字长、位等概念我就做晕车，从来没弄懂过，现在总结如下 英文 特点 与其它关系 位 bit 0或1，最基本单位 字节 byte ASCII码中表示一个字符的单位 1字节=8位 字 word 它代表计算机处理指令或数据的二进制数位数，是计算机进行数据存储和数据处理的运算单位。通常称16位",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 814,
-      "readingTime": 3
-    },
-    {
-      "title": "Linux输出重定向以及crontab的坑",
-      "date": "2022-07-13T03:14:42.000Z",
-      "updatedAt": "2022-07-13T03:14:42.000Z",
-      "file": "Linux输出重定向以及crontab的坑.md",
-      "slug": "linux-output-redirection-crontab-pitfalls",
-      "legacySlug": "78bcbc75",
-      "aliases": [
-        "78bcbc75"
-      ],
-      "excerpt": "有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑： 编辑crontab 首先执行 编辑cron表达式，注意：每个用户都有自己的crontab，如果想省事的话建议直接 只使用root用户的就好了。 写cr",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 347,
-      "readingTime": 1
-    },
-    {
-      "title": "使用正则表达式进行高级替换",
-      "date": "2022-06-17T07:02:15.000Z",
-      "updatedAt": "2022-06-17T07:02:15.000Z",
-      "file": "使用正则表达式进行高级替换.md",
-      "slug": "advanced-regex-replacement",
-      "legacySlug": "17aa354e",
-      "aliases": [
-        "17aa354e"
-      ],
-      "excerpt": "需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： 但是这样渲染出的图片不能居中，也不能缩放，我得把它转换成博客主题的格式： 思路很简单，但不能简单的使用python的replace函数，因为不仅要匹配 ，还要匹配括号里",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 358,
-      "readingTime": 1
-    },
-    {
-      "title": "Flask+vue使用jwt验证",
-      "date": "2022-05-22T05:00:39.000Z",
-      "updatedAt": "2022-05-22T05:00:39.000Z",
-      "file": "flask+vue使用jwt验证.md",
-      "slug": "flask-vue-jwt-authentication",
-      "legacySlug": "26d4ea53",
-      "aliases": [
-        "26d4ea53"
-      ],
-      "excerpt": "为什么要使用jwt验证？ jwt（json web token）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫（天猫属于淘宝的子网站），那么你需不需要重新登录呢？答案是不用，你会发现天猫。在一个站点登录后，在其它子站点就不需要重复登录，这就是单点登录。 传统的",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 349,
-      "readingTime": 1
-    },
-    {
-      "title": "《学术研究，你的成功之道》",
-      "date": "2022-05-07T12:12:51.000Z",
-      "updatedAt": "2022-05-07T12:12:51.000Z",
-      "file": "《学术研究，你的成功之道》.md",
-      "slug": "academic-research-your-way-to-success",
-      "legacySlug": "10d7958a",
-      "aliases": [
-        "10d7958a"
-      ],
-      "excerpt": "《学术研究，你的成功之道》 格雷准则 如何判断一个好问题？ 格雷准则是由图灵奖得主Jim Gary, 在1999年图灵奖颁奖典礼上提出的一个好的问题应该具备的几个条件。 1. 有明显的益处； 测试描述简单可以用“电梯描述法”看能否在1分钟之内将问题意义清楚明白的讲出来。 2. 描述简单； 3. 尚且",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 656,
-      "readingTime": 2
-    },
-    {
-      "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
-      "date": "2022-04-20T11:01:29.000Z",
-      "updatedAt": "2022-04-20T11:01:29.000Z",
-      "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
-      "slug": "line-segments-intersect-rapid-rejection-straddle-test",
-      "legacySlug": "519b05f8",
-      "aliases": [
-        "519b05f8"
-      ],
-      "excerpt": "题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法： 第",
-      "tags": [
-        "刷题",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 437,
-      "readingTime": 2
-    },
-    {
-      "title": "Git撤销版本",
-      "date": "2022-04-16T12:23:57.000Z",
-      "updatedAt": "2022-04-16T12:23:57.000Z",
-      "file": "git撤销版本.md",
-      "slug": "git-undo-commit",
-      "legacySlug": "5753ed33",
-      "aliases": [
-        "5753ed33"
-      ],
-      "excerpt": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行gi",
-      "tags": [
-        "技能分享",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 167,
-      "readingTime": 1
-    },
-    {
-      "title": "Pandas使用技巧",
-      "date": "2022-04-16T07:42:08.000Z",
-      "updatedAt": "2022-04-16T07:42:08.000Z",
-      "file": "Pandas使用技巧.md",
-      "slug": "pandas-tips",
-      "legacySlug": "7241b9d9",
-      "aliases": [
-        "7241b9d9"
-      ],
-      "excerpt": "read csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 24,
-      "readingTime": 1
-    },
-    {
-      "title": "C++和python常用函数",
-      "date": "2022-04-08T12:23:24.000Z",
-      "updatedAt": "2022-04-08T12:23:24.000Z",
-      "file": "c++和python常用函数.md",
-      "slug": "cpp-python-common-functions",
-      "legacySlug": "09ec2d90",
-      "aliases": [
-        "09ec2d90"
-      ],
-      "excerpt": "c++常用函数 sort(v.begin(),v.end()) 默认升序 如果要逆序就麻烦了 max element(v.begin(),v.end()) 返回指针，指向最大元素 pair 1. pair p1(1, 2); 定义和初始化 2. 可以用已有对象初始化pair p2(p1); 3. 没",
-      "tags": [
-        "刷题",
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 549,
-      "readingTime": 2
-    },
-    {
-      "title": "python时间遇到的坑",
-      "date": "2021-08-22T15:21:03.000Z",
-      "updatedAt": "2021-08-22T15:21:03.000Z",
-      "file": "python时间遇到的坑.md",
-      "slug": "python-time-datetime-pitfalls",
-      "legacySlug": "cf4fd6e1",
-      "aliases": [
-        "cf4fd6e1"
-      ],
-      "excerpt": "python中与时间相关的标准库有三个： time datetime calendar 吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会 时区坑 查看时间的方式有很多 法一： 在windows上输出2021 08 22 15:04:09.958720，没问题 法二： 本地时间为 : time.s",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 361,
-      "readingTime": 1
-    },
-    {
-      "title": "linux学习笔记",
-      "date": "2021-08-08T11:09:47.000Z",
-      "updatedAt": "2021-08-08T11:09:47.000Z",
-      "file": "linux学习笔记.md",
-      "slug": "linux-study-notes",
-      "legacySlug": "4fa6d037",
-      "aliases": [
-        "4fa6d037"
-      ],
-      "excerpt": "安装python 1）安装依赖包 安装 “Development tools” 软件组： 因为 Python 3.7 源文件使用 zlib 格式打包，所以需要安装 zlib 软件包；Python 3.7 编译安装时需要使用 zlib 的头文件和链接库，所以需要安装 zlib 的头文件和链接库 zli",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 443,
-      "readingTime": 2
-    },
-    {
-      "title": "django笔记进阶",
-      "date": "2021-08-08T11:08:25.000Z",
-      "updatedAt": "2021-08-08T11:08:25.000Z",
-      "file": "django笔记进阶.md",
-      "slug": "django-advanced-notes",
-      "legacySlug": "5b0b5af3",
-      "aliases": [
-        "5b0b5af3"
-      ],
-      "excerpt": "models 写入新数据，返回此条新数据 ` new data = Queue.objects.create( queue dic) 访问新写入数据的id字段 new data.id 查询数据 查询一条数据 student = Student.objects.get(name='django') 查",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 423,
-      "readingTime": 2
-    },
-    {
-      "title": "NGINX学习笔记",
-      "date": "2021-08-02T17:35:49.000Z",
-      "updatedAt": "2021-08-02T17:35:49.000Z",
-      "file": "NGINX学习笔记.md",
-      "slug": "nginx-learning-notes",
-      "legacySlug": "ec606feb",
-      "aliases": [
-        "ec606feb"
-      ],
-      "excerpt": "NGINX nginx常用命令 配置文件 配置文件解释参考： https://blog.csdn.net/tjcyjd/article/details/50695922",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 26,
-      "readingTime": 1
-    },
-    {
-      "title": "暑期实习项目-onlinejudge在线测试平台",
-      "date": "2021-07-28T14:58:29.000Z",
-      "updatedAt": "2021-07-28T14:58:29.000Z",
-      "file": "暑期实习项目-onlinejudge在线测试平台.md",
-      "slug": "summer-internship-online-judge-platform",
-      "legacySlug": "fd8f707c",
-      "aliases": [
-        "fd8f707c"
-      ],
-      "excerpt": "展示 概括来说，就是用django开发的web项目。相当于一个学生管理系统＋评测系统，开发完成后部署。这个项目，在一起参与暑期实习的很多同学看来，应该是很牛很牛的项目了。牛在哪里呢？牛在我们真正把东西做出来，部署好，让每个人打开浏览器就能访问，让大家都能体验到我们做的这个项目是实实在在的，不是只会做",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 703,
-      "readingTime": 2
-    },
-    {
-      "title": "docker笔记",
-      "date": "2021-07-19T20:57:21.000Z",
-      "updatedAt": "2021-07-19T20:57:21.000Z",
-      "file": "docker笔记.md",
-      "slug": "docker-notes",
-      "legacySlug": "86d472e0",
-      "aliases": [
-        "86d472e0"
-      ],
-      "excerpt": "打开docker服务 docker一直在后台运行 ` docker run dit judge:0.2 /bin/bash 复制 docker cp 容器id:容器内路径 目的主机路径 docker cp /root/testPython/test01/ $(docker ps q):/usr/sr",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 247,
-      "readingTime": 1
-    },
-    {
-      "title": "离散数学结课总结+笔记",
-      "date": "2021-05-29T16:23:46.000Z",
-      "updatedAt": "2021-05-29T16:23:46.000Z",
-      "file": "离散数学结课总结+笔记.md",
-      "slug": "discrete-mathematics-course-summary-notes",
-      "legacySlug": "fd13c30b",
-      "aliases": [
-        "fd13c30b"
-      ],
-      "excerpt": "课程时长 离散数学上了大一上，大一下两个学期（貌似是80个学时。 课程目录 总共四个篇章，分别是“集合论”、“数理逻辑”、“抽象代数”、“图论基础”。 课程感悟 这是一门数学课，但是和数学分析、概率论又完全不同。离散数学研究的真的是离散的数学知识，与微积分完全无关。其中各个章节相关性不大，也有部分章",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 280,
-      "readingTime": 1
-    },
-    {
-      "title": "pathlib库",
-      "date": "2021-03-16T10:03:57.000Z",
-      "updatedAt": "2021-03-16T10:03:57.000Z",
-      "file": "pathlib库.md",
-      "slug": "pathlib-library",
-      "legacySlug": "43720991",
-      "aliases": [
-        "43720991"
-      ],
-      "excerpt": "老婆不在家，看点刺激的",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 10,
-      "readingTime": 1
-    },
-    {
-      "title": "Django学习笔记",
-      "date": "2021-03-15T23:02:45.000Z",
-      "updatedAt": "2021-03-15T23:02:45.000Z",
-      "file": "Django学习笔记.md",
-      "slug": "django-learning-notes",
-      "legacySlug": "9570ee75",
-      "aliases": [
-        "9570ee75"
-      ],
-      "excerpt": "安装虚拟环境 在Powershell中执行 安装django 创建django项目 解决报错信息 配置路由urls 在虚拟环境中，且在mysite目录下 在mysite的settings.py里的INSTALLED\\ APPS里添加'misterwu'进行关联 在mysite的urls.py里添加i",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 607,
-      "readingTime": 2
-    },
-    {
-      "title": "Pandas学习笔记",
-      "date": "2021-03-09T11:04:10.000Z",
-      "updatedAt": "2021-03-09T11:04:10.000Z",
-      "file": "Pandas学习笔记.md",
-      "slug": "pandas-learning-notes",
-      "legacySlug": "84a00195",
-      "aliases": [
-        "84a00195"
-      ],
-      "excerpt": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 685,
-      "readingTime": 2
-    },
-    {
-      "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
-      "date": "2021-03-03T20:46:14.000Z",
-      "updatedAt": "2021-03-03T20:46:14.000Z",
-      "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
-      "slug": "matplotlib-tutorial-4-pip-secondary-axis-animation",
-      "legacySlug": "13bf1535",
-      "aliases": [
-        "13bf1535"
-      ],
-      "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 图中图 次坐标轴 Animation动画 我试过了，jupyter notebook根本动不了 又试了pychar",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 68,
-      "readingTime": 1
-    },
-    {
-      "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
-      "date": "2021-02-26T12:06:38.000Z",
-      "updatedAt": "2021-02-26T12:06:38.000Z",
-      "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
-      "slug": "matplotlib-tutorial-3-image-3d-data-subplot",
-      "legacySlug": "10141fce",
-      "aliases": [
-        "10141fce"
-      ],
-      "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 image图片 interpolation参数有这些 3D数据 Subplot 多合一显示 figure1 fig",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 59,
-      "readingTime": 1
-    },
-    {
-      "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
-      "date": "2021-02-25T18:40:44.000Z",
-      "updatedAt": "2021-02-25T18:40:44.000Z",
-      "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
-      "slug": "matplotlib-tutorial-2-legend-annotation-scatter-bar-contour",
-      "legacySlug": "9e6c0b5f",
-      "aliases": [
-        "9e6c0b5f"
-      ],
-      "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\ id\\ from=pageDriver 仅供学习使用 Legend图例 简单省事儿的写法 Annotation标注 坐标轴刻度（tick能见度） Scatter散点图 Bar柱状图",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 83,
-      "readingTime": 1
-    },
-    {
-      "title": "csv库的使用方法",
-      "date": "2021-02-25T11:10:35.000Z",
-      "updatedAt": "2021-02-25T11:10:35.000Z",
-      "file": "csv库的使用方法.md",
-      "slug": "csv-library-usage",
-      "legacySlug": "c9920664",
-      "aliases": [
-        "c9920664"
-      ],
-      "excerpt": "上一篇我们讲了怎么用 json格式保存数据，这一篇我们来看看如何用 csv模块进行数据读写。 一、csv简介 CSV (Comma Separated Values)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。 csv的使用很广",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 958,
-      "readingTime": 3
-    },
-    {
-      "title": "json数据存储",
-      "date": "2021-02-25T11:02:16.000Z",
-      "updatedAt": "2021-02-25T11:02:16.000Z",
-      "file": "json数据存储.md",
-      "slug": "json-data-storage",
-      "legacySlug": "f16cfec5",
-      "aliases": [
-        "f16cfec5"
-      ],
-      "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2 在上一篇文章里我们讲了 xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。 实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件的形",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 808,
-      "readingTime": 3
-    },
-    {
-      "title": "matplotlib学习笔记（一）基本语法,figure,坐标轴",
-      "date": "2021-02-23T10:48:54.000Z",
-      "updatedAt": "2021-02-23T10:48:54.000Z",
-      "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
-      "slug": "matplotlib-tutorial-1-basic-syntax-figure-axis",
-      "legacySlug": "5c2f0a26",
-      "aliases": [
-        "5c2f0a26"
-      ],
-      "excerpt": "学习视频地址：https://www.bilibili.com/video/BV1Jx411L7LU? github地址：https://github.com/MorvanZhou/tutorials/tree/master/matplotlibTUT 基本语法 一个figure就是一张图片 这里有",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 68,
-      "readingTime": 1
-    },
-    {
-      "title": "BeautifulSoup学习笔记",
-      "date": "2021-02-14T19:08:15.000Z",
-      "updatedAt": "2021-02-14T19:08:15.000Z",
-      "file": "BeautifulSoup学习笔记.md",
-      "slug": "beautifulsoup-python-study-notes",
-      "legacySlug": "eb083bdf",
-      "aliases": [
-        "eb083bdf"
-      ],
-      "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。 https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044 导入 from bs4 import BeautifulSoup 导入模块 soup",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 295,
-      "readingTime": 1
-    },
-    {
-      "title": "每日一题--二分法找数组中的数",
-      "date": "2020-10-08T20:04:22.000Z",
-      "updatedAt": "2020-10-08T20:04:22.000Z",
-      "file": "每日一题--二分法找数组中的数.md",
-      "slug": "daily-binary-search-find-number-in-array",
-      "legacySlug": "22820229",
-      "aliases": [
-        "22820229"
-      ],
-      "excerpt": "【题目描述】 公司举办年会，为了活跃气氛，设置了摇奖环节。参加聚会的每位员工都有一张带有号码的抽奖券。现在，主持人从小到大依次公布 n 个不同的获奖号码，小唐看着自己抽奖券上的号码 win，无比紧张。 【输入格式】 第一行一个正整数n（2<n≤100），表示有n个获奖号码。 第二行包含n个正整数，之",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 292,
-      "readingTime": 1
-    },
-    {
-      "title": "每日一题--求超大数的各位数字和",
-      "date": "2020-10-07T19:04:32.000Z",
-      "updatedAt": "2020-10-07T19:04:32.000Z",
-      "file": "每日一题--求超大数的各位数字和.md",
-      "slug": "daily-sum-of-digits-super-large-number",
-      "legacySlug": "7bc52da3",
-      "aliases": [
-        "7bc52da3"
-      ],
-      "excerpt": "【题目描述】 输入一个正整数 n，求各位上的数字和。 【输入格式】 一行，包含一个正整数 n，n 最多 200 位。 【输出格式】 一行，一个整数，表示正整数 n 的各位数字之和。 利用字符数组储存这个超大数 如果a\\[\\]是一个字符数组的话，a\\[i\\] '0'就是a\\[i\\]这个字符和‘0’这个",
-      "tags": [
-        "笔记"
-      ],
-      "img": "",
-      "wordCount": 131,
-      "readingTime": 1
     }
   ],
   "刷题": [
@@ -4056,6 +2373,118 @@
       "readingTime": 1
     }
   ],
+  "技术思考": [
+    {
+      "title": "一年前遇到的难题，被AI解决了",
+      "date": "2026-06-02T00:00:00.000Z",
+      "updatedAt": "2026-06-02T00:00:00.000Z",
+      "file": "一年前遇到的难题，被AI解决了.md",
+      "slug": "ai-solved-one-year-old-sse-problem",
+      "legacySlug": "5fdee606",
+      "aliases": [
+        "5fdee606"
+      ],
+      "excerpt": "一年前遇到的难题，被AI解决了 一年前实习的时候，mentor 让我做一个 Agent 问答前端。 这个前端本身并不复杂：用户输入一个问题，后端通过 SSE 流式返回 Agent 的执行过程，前端把这些过程一步步渲染出来。比如先展示“开始分析问题”，然后展示“拆分问题”，再展示“搜索资料”，最后展示",
+      "tags": [
+        "技术思考"
+      ],
+      "img": "",
+      "wordCount": 2085,
+      "readingTime": 6
+    },
+    {
+      "title": "思考：Pi Agent 对比 LangGraph",
+      "date": "2026-05-27T15:45:25.000Z",
+      "updatedAt": "2026-05-27T15:45:25.000Z",
+      "file": "思考：Pi Agent 对比 LangGraph.md",
+      "slug": "pi-agent-vs-langgraph-comparison",
+      "legacySlug": "d98f4875",
+      "aliases": [
+        "d98f4875"
+      ],
+      "excerpt": "思考：Pi Agent 对比 LangGraph 最近在思考两类 Agent 的差异：一种是 Pi Agent 这种模型主导的模式，另一种是 LangGraph 这种流程主导的模式。 它们都可以调用 LLM、工具、检索和代码，但核心差别不在“用了什么能力”，而在“下一步由谁决定”。 Pi Agent",
+      "tags": [
+        "技术思考"
+      ],
+      "img": "/images/pi-agent-vs-langgraph-header.png",
+      "wordCount": 1010,
+      "readingTime": 3
+    },
+    {
+      "title": "single-agent现阶段明显强于multi-agent",
+      "date": "2026-03-25T03:44:00.000Z",
+      "updatedAt": "2026-03-25T03:44:00.000Z",
+      "file": "single-agent-vs-multi-agent.md",
+      "slug": "single-agent-better-than-multi-agent",
+      "legacySlug": "7dbff82d",
+      "aliases": [
+        "7dbff82d"
+      ],
+      "excerpt": "single agent现阶段明显强于multi agent multi agent 系统，刚开始在行业内被吹得天花乱坠，听上去确实很美好——模拟人类的组织架构，各司其职，流水线作业。但冷静下来看，过了这么长时间，市面上并没有出现真正意义上的爆款产品。 反观那些真正跑出来的产品——OpenClaw、",
+      "tags": [
+        "技术思考"
+      ],
+      "img": "",
+      "wordCount": 852,
+      "readingTime": 3
+    }
+  ],
+  "技术教程": [
+    {
+      "title": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式",
+      "date": "2026-05-31T22:16:51.000Z",
+      "updatedAt": "2026-05-31T22:16:51.000Z",
+      "file": "vane-agent-search-flow-speed-balanced.md",
+      "slug": "vane-agent-search-flow-speed-balanced",
+      "legacySlug": "f7a46744",
+      "aliases": [
+        "f7a46744"
+      ],
+      "excerpt": "Vane Agent 搜索流程分析：Speed 与 Balanced 模式 这篇文档不按代码文件逐项罗列，而是从算法与 Agent 工程设计角度解释 Vane 的搜索问答系统。目标读者可以完全不阅读代码，只通过本文理解系统如何从一个用户问题演进到一个带来源、带中间过程、可流式输出的回答，并能够复刻一",
+      "tags": [
+        "技术教程"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/329e7b332515-vane-agent-search-flow-speed.png",
+      "wordCount": 6444,
+      "readingTime": 17
+    },
+    {
+      "title": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash",
+      "date": "2026-03-25T12:53:00.000Z",
+      "updatedAt": "2026-03-25T12:53:00.000Z",
+      "file": "opencode-seven-core-tools.md",
+      "slug": "opencode-7-basic-tools-read-write-edit-multiedit-glob-grep-bash",
+      "legacySlug": "512e708e",
+      "aliases": [
+        "512e708e"
+      ],
+      "excerpt": "opencode的7个基础工具——read、write、edit、multiedit、glob、grep、bash 做 AI 编程助手（或类似工具）的核心，就是怎么让 AI 正确地读写文件、执行命令。本质上，LLM 是个\"脑子里有很多知识但手很短\"的存在——它能推理，但没法直接摸到你的代码。于是需要",
+      "tags": [
+        "技术教程"
+      ],
+      "img": "",
+      "wordCount": 1908,
+      "readingTime": 5
+    },
+    {
+      "title": "自动发布博客",
+      "date": "2026-03-11T14:22:25.000Z",
+      "updatedAt": "2026-03-11T14:22:25.000Z",
+      "file": "自动发布博客.md",
+      "slug": "auto-publish-blog-ai-agent-openclaw",
+      "legacySlug": "2f15163c",
+      "aliases": [
+        "2f15163c"
+      ],
+      "excerpt": "用 AI Skills 实现博客自动发布 🚀 🤖 本文由 AI 自动生成并自动发布 前言 今天来介绍一个超酷的技术 —— 通过 AI Agent (OpenClaw) 的 Skills 功能实现博客的自动化发布！只需一句指令，AI 就能帮你完成从写作到发布的全流程。 什么是 Skills？ Sk",
+      "tags": [
+        "技术教程"
+      ],
+      "img": "",
+      "wordCount": 330,
+      "readingTime": 1
+    }
+  ],
   "技术测试": [
     {
       "title": "代码块功能测试",
@@ -4076,7 +2505,1039 @@
       "readingTime": 1
     }
   ],
-  "人工智能": [
+  "技能分享": [
+    {
+      "title": "让 YouTube 自动字幕按整句切分：我把 Language Reactor 的断句问题从根上修掉了",
+      "date": "2026-09-20T08:45:00.000Z",
+      "updatedAt": "2026-09-20T08:45:00.000Z",
+      "file": "youtube-asr-sentence-cues-language-reactor.md",
+      "slug": "youtube-asr-sentence-cues-language-reactor",
+      "legacySlug": "2ac4263e",
+      "aliases": [
+        "2ac4263e"
+      ],
+      "excerpt": "让 YouTube 自动字幕按整句切分：我把 Language Reactor 的断句问题从根上修掉了 我每天用 Edge + Language Reactor 看 CNN10 做精听，习惯一句一句反复听。 但这个流程一直有个很难受的地方： 字幕不是在句子边界断开的 。 经常是这样： 按句子复读的时",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 2083,
+      "readingTime": 6
+    },
+    {
+      "title": "langchain-faiss加载pkl文件速度提升",
+      "date": "2025-12-14T06:19:28.000Z",
+      "updatedAt": "2025-12-14T06:19:28.000Z",
+      "file": "langchain-faiss加载pkl文件速度提升.md",
+      "slug": "langchain-faiss-load-pkl-speed-up",
+      "legacySlug": "506f20a8",
+      "aliases": [
+        "506f20a8"
+      ],
+      "excerpt": "langchain faiss加载pkl文件速度提升 背景 Faiss是一个非常好用的本地向量检索库，它常和langchain一起使用，也被内置于langchain中。 langchain community.vectorstores中的Faiss写入一个向量库中包含两个文件：index.faiss",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 388,
+      "readingTime": 1
+    },
+    {
+      "title": "RAG图谱实体和边智能合并",
+      "date": "2025-07-13T09:25:50.000Z",
+      "updatedAt": "2025-07-13T09:25:50.000Z",
+      "file": "RAG图谱实体和边智能合并.md",
+      "slug": "rag-graph-entity-edge-intelligent-merge",
+      "legacySlug": "46bbd497",
+      "aliases": [
+        "46bbd497"
+      ],
+      "excerpt": "RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple In",
+      "tags": [
+        "随笔杂记",
+        "技能分享"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png",
+      "wordCount": 1642,
+      "readingTime": 5
+    },
+    {
+      "title": "手撕卷积神经网络+反向传播梯度更新",
+      "date": "2025-07-13T07:24:20.000Z",
+      "updatedAt": "2025-07-13T07:24:20.000Z",
+      "file": "手撕卷积神经网络反向传播梯度更新.md",
+      "slug": "cnn-backpropagation-gradient-update-from-scratch",
+      "legacySlug": "8912df88",
+      "aliases": [
+        "8912df88"
+      ],
+      "excerpt": "手撕卷积神经网络 一个简单的卷积神经网络，就4层，分别是InputLayer, conv layer, hidden layer(全连接层 + ReLU激活), output layer 反向传播梯度更新推导 以下是四层网络中每层的反向传播公式（以损失函数 \\( L \\) 为起点，使用偏导数符号）：",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 602,
+      "readingTime": 2
+    },
+    {
+      "title": "手撕Attention",
+      "date": "2025-06-22T08:49:55.000Z",
+      "updatedAt": "2025-06-22T08:49:55.000Z",
+      "file": "手撕Attention.md",
+      "slug": "implement-attention-from-scratch",
+      "legacySlug": "d764f796",
+      "aliases": [
+        "d764f796"
+      ],
+      "excerpt": "第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 134,
+      "readingTime": 1
+    },
+    {
+      "title": "图表生成数据（Chart2data）实验——对比ChartVLM和Qwen-Omni",
+      "date": "2025-06-10T10:14:29.000Z",
+      "updatedAt": "2025-06-10T10:14:29.000Z",
+      "file": "图表生成数据Chart2data实验——对比ChartVLM和Qwen-Omni.md",
+      "slug": "chart2data-experiment-compare-chartvlm-qwen-omni",
+      "legacySlug": "ff7483e1",
+      "aliases": [
+        "ff7483e1"
+      ],
+      "excerpt": "ChartVLM ChartVLM由两部分组成：图表结构解码器+大语言模型 截取了ChartVLM中的第一部分图表结构解码器，它的原生模型是pix2struct 显存占用基本保持在2506 MiB 普通图表 原图 识别结果 评价 CSV数据： Category,Percentage Visual A",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/images/d969c3b0_1749549251583-7654c91e-ef01-4bf7-9656-11efa4778806.png",
+      "wordCount": 853,
+      "readingTime": 3
+    },
+    {
+      "title": "DeepResearch深度搜索实现方法调研",
+      "date": "2025-05-09T14:03:42.000Z",
+      "updatedAt": "2025-05-09T14:03:42.000Z",
+      "file": "DeepResearch深度搜索实现方法调研.md",
+      "slug": "deep-research-implementation-methods",
+      "legacySlug": "47f2a5ec",
+      "aliases": [
+        "47f2a5ec"
+      ],
+      "excerpt": "DeepResearch深度搜索实现方法调研 Deep Research 有三个核心能力 + 能力一：自主规划解决问题的搜索路径（生成子问题，queries，检索） + 能力二：在探索路径时动态调整搜索方向（刘亦菲最好的一部电影是什么？如何定义好？已有信息是否足够？） + 能力三：对多源的信息进行验",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1744781657908-de6c2c87-c905-4772-964a-a7ca6a4da129.png",
+      "wordCount": 1546,
+      "readingTime": 4
+    },
+    {
+      "title": "开源PDF解析工具Marker深度解析",
+      "date": "2025-05-05T14:36:59.000Z",
+      "updatedAt": "2025-05-05T14:36:59.000Z",
+      "file": "开源PDF解析工具Marker深度解析.md",
+      "slug": "open-source-pdf-parser-marker-deep-dive",
+      "legacySlug": "19977fa8",
+      "aliases": [
+        "19977fa8"
+      ],
+      "excerpt": "开源PDF解析工具Marker深度解析 检索增强生成（RAG）系统的第一步就是做 pdf 解析，从复杂多样的 pdf 中提取出干净准确的文本内容。现有的最优秀的开源工具有两个：Marker 和 MinerU。因为 Marker 是个人开发者做的，文档不完善，所以这里基于我个人的理解对它的代码进行解析",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 2329,
+      "readingTime": 6
+    },
+    {
+      "title": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践",
+      "date": "2025-01-24T01:37:25.000Z",
+      "updatedAt": "2025-01-24T01:37:25.000Z",
+      "file": "Vue3实现小红书瀑布流布局任意组件动态更新页面方法实践.md",
+      "slug": "vue3-waterfall-layout-dynamic-update-component",
+      "legacySlug": "7624b8c1",
+      "aliases": [
+        "7624b8c1"
+      ],
+      "excerpt": "思路 1.首先定义一个瀑布流容器，它的高度暂定（后面会更新）。把需要布局的组件（这里叫做waterfall item）放在瀑布流容器里面渲染出来。使用绝对定位（position: absolute），把它移到屏幕外面，不要占用页面高度，并且设置不可见（visibility:hidden）。 2.渲染",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20250124101620483.png",
+      "wordCount": 504,
+      "readingTime": 2
+    },
+    {
+      "title": "电脑启动需要经历哪些过程？",
+      "date": "2024-11-27T06:51:10.000Z",
+      "updatedAt": "2024-11-27T06:51:10.000Z",
+      "file": "电脑启动需要经历哪些过程？.md",
+      "slug": "computer-boot-process",
+      "legacySlug": "4e728164",
+      "aliases": [
+        "4e728164"
+      ],
+      "excerpt": "传统BIOS启动流程 1. BIOS BIOS 启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。需要有一个外部储",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 1474,
+      "readingTime": 4
+    },
+    {
+      "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
+      "date": "2024-11-27T06:47:24.000Z",
+      "updatedAt": "2024-11-27T06:47:24.000Z",
+      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
+      "slug": "install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu",
+      "legacySlug": "024ab30e",
+      "aliases": [
+        "024ab30e"
+      ],
+      "excerpt": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouv",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png",
+      "wordCount": 521,
+      "readingTime": 2
+    },
+    {
+      "title": "如何在Windows上编译Python39源代码",
+      "date": "2023-12-10T12:51:01.000Z",
+      "updatedAt": "2023-12-10T12:51:01.000Z",
+      "file": "如何在Windows上编译Python39源代码.md",
+      "slug": "compile-python39-source-code-on-windows",
+      "legacySlug": "9fd37d43",
+      "aliases": [
+        "9fd37d43"
+      ],
+      "excerpt": "安装Visual Studio 2017 先下载Visual Studio Installer https://learn.microsoft.com/en us/visualstudio/python/installing python support in visual studio?view=",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 280,
+      "readingTime": 1
+    },
+    {
+      "title": "好用的动画制作工具-Keynote",
+      "date": "2023-07-01T02:41:41.000Z",
+      "updatedAt": "2023-07-01T02:41:41.000Z",
+      "file": "好用的动画制作工具-keynote.md",
+      "slug": "keynote-animation-maker-tool",
+      "legacySlug": "3f0c5268",
+      "aliases": [
+        "3f0c5268"
+      ],
+      "excerpt": "Keynote是苹果电脑自带的幻灯片制作和播放工具，类似于Windows上的PowerPoint（PPT）。 在通用性上，Keynote明显没有PPT那么普及。但是我认为Keynote在动画制作上完胜PPT，如果有足够需求，一定要试一试Keynote。Keynote内置了丰富的动画效果，多试几个，你",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 207,
+      "readingTime": 1
+    },
+    {
+      "title": "Vue+flask实现播放任何视频源（包括rtsp摄像头）",
+      "date": "2023-04-22T02:40:50.000Z",
+      "updatedAt": "2023-04-22T02:40:50.000Z",
+      "file": "vueflask实现播放任何视频源包括rtsp摄像头.md",
+      "slug": "vue-flask-play-rtsp-video-stream-camera",
+      "legacySlug": "2453b9ad",
+      "aliases": [
+        "2453b9ad"
+      ],
+      "excerpt": "背景 最近跟几位同学做一个物联网竞赛，需要在web端直播摄像头内容。做视频直播是非常复杂的，但我们的要求很低，只要能在局域网内实现直播摄像头就可以了。安全性、性能、带宽什么的统统不考虑。 由于我们买的摄像头（海康）只能推rtsp流，没有任何一个web播放器能够支持这种格式，所以rtsp需要转码之后才",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 453,
+      "readingTime": 2
+    },
+    {
+      "title": "CSS布局基础知识",
+      "date": "2023-03-20T05:32:55.000Z",
+      "updatedAt": "2023-03-20T05:32:55.000Z",
+      "file": "CSS布局基础知识.md",
+      "slug": "css-layout-basics",
+      "legacySlug": "433a59dc",
+      "aliases": [
+        "433a59dc"
+      ],
+      "excerpt": "需求 还是之前的那个需求，我需要做一个静态网页用于展示电子版教材。网页的布局非常重要，我需要一个顶部横向的导航栏，一个能够显示大纲的侧边栏，侧边栏的右边是教材的内容，听起来很简单，不是吗？但我需要再加一个条件，就是这些布局得是响应式的，要能够适应不同尺寸的屏幕，这可就不简单了。举个例子，当屏幕变窄时",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 385,
+      "readingTime": 1
+    },
+    {
+      "title": "在vue中使用highlightjs-line-numbersjs实现代码高亮并且增加行号",
+      "date": "2023-03-16T15:51:26.000Z",
+      "updatedAt": "2023-03-16T15:51:26.000Z",
+      "file": "在vue中使用hilightjs-line-numbers实现代码高亮并且增加行号.md",
+      "slug": "vue-highlightjs-line-numbers-code-highlight",
+      "legacySlug": "61be5727",
+      "aliases": [
+        "61be5727"
+      ],
+      "excerpt": "highlight.js 实现代码高亮是很容易的，有很多库都支持，比较有名的是highlightjs，它的使用方法是： 1. 先引入css文件和js文件 2. 再将你的代码用 包裹 3. 再调用hljs的高亮函数，它的原理是找到所有的code标签，然后通过操作DOM，给你的代码设置高亮样式。 hig",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 367,
+      "readingTime": 1
+    },
+    {
+      "title": "HUSTOJ前端源代码解析（PHP）",
+      "date": "2023-03-09T09:12:10.000Z",
+      "updatedAt": "2023-03-09T09:12:10.000Z",
+      "file": "HUSTOJ前端源代码解析（PHP）.md",
+      "slug": "hustoj-frontend-source-code-analysis-php",
+      "legacySlug": "d09e9297",
+      "aliases": [
+        "d09e9297"
+      ],
+      "excerpt": "需求 老师写了一本c++教材，这本教材的一大特色就是构建了一个有关c++的知识点网络。只有在电子版教材中，这种知识点网络才能真正发挥它的作用（比如点击超链接跳转到指定知识点），而出版社（清华大学出版社）不提供电子版教材的支持，因此我们需要自己搭建一个电子版教材网站。 刚好老师为了给本科生考试，让学长",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 911,
+      "readingTime": 3
+    },
+    {
+      "title": "如何将语雀文档导出为html（使用语雀API）",
+      "date": "2023-03-09T08:12:56.000Z",
+      "updatedAt": "2023-03-09T08:12:56.000Z",
+      "file": "如何将语雀文档导出为html（使用语雀API）.md",
+      "slug": "export-yuque-document-to-html-api",
+      "legacySlug": "0e3ebef4",
+      "aliases": [
+        "0e3ebef4"
+      ],
+      "excerpt": "需求 语雀本身是用web端访问的，按理来说，导出为html文件应该是最接近原生文档的观感的，但是却不支持，反倒是可以导出为pdf、markdown、word等格式。 可以用爬虫把文档给爬下来，但是我很不喜欢用爬虫，因为大型网站总是会使用各种反爬技术，这些阻拦会使我爬出的结果不够优雅。 如果优雅的解决",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 447,
+      "readingTime": 2
+    },
+    {
+      "title": "组装一台新的电脑",
+      "date": "2023-03-01T00:57:51.000Z",
+      "updatedAt": "2023-03-01T00:57:51.000Z",
+      "file": "组装一台新的电脑.md",
+      "slug": "build-new-pc-computer-assembly",
+      "legacySlug": "8f9d9179",
+      "aliases": [
+        "8f9d9179"
+      ],
+      "excerpt": "从Windows换到Mac，获得了很多东西： 又轻又薄，续航还长，背出去上课自习非常方便（隔壁背着游戏本的同学都羡慕哭了）； 一块素质极高的屏幕，看文献非常舒服； 优秀的软件生态，在Mac上可以使用很多优质软件，比如Mac版清爽的qq； 优秀的硬件生态，与我的iPhone互联，同步记事本，提醒事项等",
+      "tags": [
+        "随笔杂记",
+        "技能分享"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_3956.jpeg",
+      "wordCount": 622,
+      "readingTime": 2
+    },
+    {
+      "title": "Qt动态添加和删除布局（仿jupyter）",
+      "date": "2023-02-02T06:14:19.000Z",
+      "updatedAt": "2023-02-02T06:14:19.000Z",
+      "file": "qt动态添加和删除布局（仿jupyter）.md",
+      "slug": "qt-dynamic-add-remove-layout-jupyter",
+      "legacySlug": "65173be9",
+      "aliases": [
+        "65173be9"
+      ],
+      "excerpt": "前言 老师给了一个任务，仿照jupyter notebook中可以动态添加、删除的cell，用c++的qt做一个类似的界面。具体来说，一个cell中有一个输入框，一个输出框，还有四个按钮，分别是运行、添加、删除、清空。此外，为了突出正在编辑的cell，要实现点击到cell的空白部分时，将背景颜色高亮",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 792,
+      "readingTime": 2
+    },
+    {
+      "title": "致动o手柄对比xbox原装手柄使用体验分享",
+      "date": "2023-01-15T00:59:39.000Z",
+      "updatedAt": "2023-01-15T00:59:39.000Z",
+      "file": "致动o手柄对比xbox原装手柄使用体验分享.md",
+      "slug": "zhidong-o-vs-xbox-controller-review",
+      "legacySlug": "8f710610",
+      "aliases": [
+        "8f710610"
+      ],
+      "excerpt": "对于游戏玩家来说，键盘鼠标可能不是最好的控制器（网游，fps玩家除外），拥有一个手柄，会让游戏体验更加舒适。尤其是对于一些需要慢慢品玩的3A大作，或者是需要各种微操的赛车游戏，手柄的体验绝对秒杀键鼠。 Xbox手柄 Xbox手柄是PC平台上最经典的手柄，由微软生产。它兼容性游戏多，做工精良，还很好看",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 1111,
+      "readingTime": 3
+    },
+    {
+      "title": "LiveGo——小而美的直播串流软件",
+      "date": "2023-01-01T08:11:53.000Z",
+      "updatedAt": "2023-01-01T08:11:53.000Z",
+      "file": "Livego——小而美的直播串流软件.md",
+      "slug": "livego-lightweight-live-streaming-software",
+      "legacySlug": "18b5f674",
+      "aliases": [
+        "18b5f674"
+      ],
+      "excerpt": "近期想跟女朋友一起异地看电影，试了几种方式都不够优雅， 方式一：用chrome插件，双方同时打开一个视频源，然后通过这个插件能控制两个人的进度条保持一致。 缺点：因为有的视频源是收费的，两个人想一起看得交两份钱，还有的不支持网页播放（需要下载软件），所以这种方式灵活性很差，不好用。 方式二：用腾讯会",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 629,
+      "readingTime": 2
+    },
+    {
+      "title": "Kaggle图像分类竞赛实战总结详细代码解读",
+      "date": "2022-12-29T04:37:38.000Z",
+      "updatedAt": "2022-12-29T04:37:38.000Z",
+      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md",
+      "slug": "kaggle-image-classification-competition-code",
+      "legacySlug": "92077544",
+      "aliases": [
+        "92077544"
+      ],
+      "excerpt": "前言 我是跟着李沐的动手学深度学习v2视频学习深度学习的，光看不做假把式，所以在学习完第七章 现代卷积神经网络之后，参加了一次李沐发布的Kaggle竞赛。自己动手，从组织数据集开始，到训练，再到推理，把整个流程走了一遍，收获颇丰，感觉学到了很多东西，（完整代码：https://www.kaggle.",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 1254,
+      "readingTime": 4
+    },
+    {
+      "title": "Linux在指定时间区间内的随机时间点执行任务",
+      "date": "2022-10-23T15:52:09.000Z",
+      "updatedAt": "2022-10-23T15:52:09.000Z",
+      "file": "Linux在指定时间区间内的随机时间点执行任务.md",
+      "slug": "linux-execute-cron-job-at-random-time-in-interval",
+      "legacySlug": "1cad2edf",
+      "aliases": [
+        "1cad2edf"
+      ],
+      "excerpt": "在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。 现在升级需求，比如说我想在6:00到9:00之间，随机找一个时间执行这个任务，怎么做呢？ 思路：我们不能在crontab里指定一个随机的时间（只能指定一个具体的时间），但是我们可以指定一个具体的时间运行sh",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 196,
+      "readingTime": 1
+    },
+    {
+      "title": "我的第一把客制化键盘",
+      "date": "2022-08-16T07:41:28.000Z",
+      "updatedAt": "2022-08-16T07:41:28.000Z",
+      "file": "我的第一把客制化键盘.md",
+      "slug": "my-first-custom-mechanical-keyboard",
+      "legacySlug": "6f652b2b",
+      "aliases": [
+        "6f652b2b"
+      ],
+      "excerpt": "作为计算机专业的学生和游戏爱好者，每天做的最多的事情就是坐在电脑前面敲键盘，俗话说：“工欲善其事，必先利其器”，要追求更高效的工作方式和游戏体验，打造一把趁手的高端的机械键盘很有必要。 机械键盘和薄膜键盘 不会有人现在还不知道机械键盘和薄膜键盘的区别吧？它们两个架构不同，薄膜键盘是指通过胶碗来完成键",
+      "tags": [
+        "技能分享",
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg",
+      "wordCount": 889,
+      "readingTime": 3
+    },
+    {
+      "title": "Linux输出重定向以及crontab的坑",
+      "date": "2022-07-13T03:14:42.000Z",
+      "updatedAt": "2022-07-13T03:14:42.000Z",
+      "file": "Linux输出重定向以及crontab的坑.md",
+      "slug": "linux-output-redirection-crontab-pitfalls",
+      "legacySlug": "78bcbc75",
+      "aliases": [
+        "78bcbc75"
+      ],
+      "excerpt": "有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑： 编辑crontab 首先执行 编辑cron表达式，注意：每个用户都有自己的crontab，如果想省事的话建议直接 只使用root用户的就好了。 写cr",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 347,
+      "readingTime": 1
+    },
+    {
+      "title": "组织一次成功的班级烧烤经验分享",
+      "date": "2022-06-23T04:24:27.000Z",
+      "updatedAt": "2022-06-23T04:24:27.000Z",
+      "file": "组织一次成功的班级烧烤经验分享.md",
+      "slug": "class-bbq-team-building-experience-sharing",
+      "legacySlug": "9d897e60",
+      "aliases": [
+        "9d897e60"
+      ],
+      "excerpt": "准备物资 6月22日，班级组织了一次团建，去轰趴馆（一个双层别墅，有烧烤、厨房、KTV、游戏机、投影仪、麻将、台球等等的地方）早上十点到达，晚上五点离开，吃一个中午饭。因为我对这些玩的东西不感兴趣，想自己动手做一做吃的，所以找了几个人一起做烧烤吃。我列出了要买物品的清单，跟小伙伴一起去超市购买。小伙",
+      "tags": [
+        "技能分享",
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/烧烤架子上烤羊肉牛肉土豆封面.png",
+      "wordCount": 467,
+      "readingTime": 2
+    },
+    {
+      "title": "使用正则表达式进行高级替换",
+      "date": "2022-06-17T07:02:15.000Z",
+      "updatedAt": "2022-06-17T07:02:15.000Z",
+      "file": "使用正则表达式进行高级替换.md",
+      "slug": "advanced-regex-replacement",
+      "legacySlug": "17aa354e",
+      "aliases": [
+        "17aa354e"
+      ],
+      "excerpt": "需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： 但是这样渲染出的图片不能居中，也不能缩放，我得把它转换成博客主题的格式： 思路很简单，但不能简单的使用python的replace函数，因为不仅要匹配 ，还要匹配括号里",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 358,
+      "readingTime": 1
+    },
+    {
+      "title": "在word中使用通配符进行高级的查找和替换",
+      "date": "2022-06-16T09:03:05.000Z",
+      "updatedAt": "2022-06-16T09:03:05.000Z",
+      "file": "在word中使用通配符进行高级的查找和替换.md",
+      "slug": "word-wildcard-advanced-find-and-replace",
+      "legacySlug": "2bd79d64",
+      "aliases": [
+        "2bd79d64"
+      ],
+      "excerpt": "需求 一个212页的word文档，包含如下反复出现的单元： 现将其中的 保留，中间省略号部分删除。使用正则表达式可以轻松解决这个问题： 使用上面的正则表达式就能匹配到需要删除的内容，替换成空格就好了。 However, 用编程语言操作word是比较麻烦的，不如使用word自带的查找替换功能。word",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 389,
+      "readingTime": 1
+    },
+    {
+      "title": "解锁新技术栈vue+flask前后端分离",
+      "date": "2022-05-24T15:41:05.000Z",
+      "updatedAt": "2022-05-24T15:41:05.000Z",
+      "file": "解锁新技术栈vue+flask前后端分离.md",
+      "slug": "vue-flask-frontend-backend-separation",
+      "legacySlug": "190a7f91",
+      "aliases": [
+        "190a7f91"
+      ],
+      "excerpt": "Vue 之前有小程序开发基础，上手Vue稍微容易一点，但也走了很长一段路。学习框架，理解逻辑是最重要的，一旦理解了逻辑，写代码就可以听着歌边查文档边写了。前端框架逻辑都差不多，一通百通，很开心能掌握这项技术。 我的学习路线： 先了解web基础知识，比如http，get，post请求等等 了解html",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 580,
+      "readingTime": 2
+    },
+    {
+      "title": "Flask+vue使用jwt验证",
+      "date": "2022-05-22T05:00:39.000Z",
+      "updatedAt": "2022-05-22T05:00:39.000Z",
+      "file": "flask+vue使用jwt验证.md",
+      "slug": "flask-vue-jwt-authentication",
+      "legacySlug": "26d4ea53",
+      "aliases": [
+        "26d4ea53"
+      ],
+      "excerpt": "为什么要使用jwt验证？ jwt（json web token）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫（天猫属于淘宝的子网站），那么你需不需要重新登录呢？答案是不用，你会发现天猫。在一个站点登录后，在其它子站点就不需要重复登录，这就是单点登录。 传统的",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 349,
+      "readingTime": 1
+    },
+    {
+      "title": "Git撤销版本",
+      "date": "2022-04-16T12:23:57.000Z",
+      "updatedAt": "2022-04-16T12:23:57.000Z",
+      "file": "git撤销版本.md",
+      "slug": "git-undo-commit",
+      "legacySlug": "5753ed33",
+      "aliases": [
+        "5753ed33"
+      ],
+      "excerpt": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行gi",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 167,
+      "readingTime": 1
+    },
+    {
+      "title": "Roboflow+colab优雅地训练yolov5模型",
+      "date": "2022-03-19T05:37:49.000Z",
+      "updatedAt": "2022-03-19T05:37:49.000Z",
+      "file": "roboflow+colab优雅地训练yolov5模型.md",
+      "slug": "train-yolov5-model-roboflow-colab",
+      "legacySlug": "dbb064f5",
+      "aliases": [
+        "dbb064f5"
+      ],
+      "excerpt": "roboflow roboflow是一个支持数据集在线打标，在线导出的网站。除此之外它还支持可多人合作、数据增强，版本控制等功能。是我用过最好用的数据集处理平台。 网址：https://roboflow.com/ 提示： 可以免费使用 需要挂代理 套餐一定要选public，选择private后导出数",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 293,
+      "readingTime": 1
+    },
+    {
+      "title": "mac m1 安装sqlserver踩坑经历",
+      "date": "2022-03-16T10:14:14.000Z",
+      "updatedAt": "2022-03-16T10:14:14.000Z",
+      "file": "macm1安装sqlserver踩坑经历.md",
+      "slug": "mac-m1-install-sql-server",
+      "legacySlug": "918eb92e",
+      "aliases": [
+        "918eb92e"
+      ],
+      "excerpt": "为什么安装sqlserver 上数据库系统概论需要用到数据库，按道理来说应该使用开源的mysql，但老师说因为学校用的是sqlserver，我们考试也用这个，所以我也就得用。 法一：云数据库（❌ 在mac上直接安装微软的产品，想都别想～所以我首先把注意力放在了云上。众所周知，像阿里云、腾讯云等服务商",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 1157,
+      "readingTime": 3
+    },
+    {
+      "title": "C语言中值传递、指针传递和引用传递",
+      "date": "2022-03-07T09:15:10.000Z",
+      "updatedAt": "2022-03-07T09:15:10.000Z",
+      "file": "C语言中值传递、指针传递和引用传递.md",
+      "slug": "c-language-pass-by-value-pointer-reference",
+      "legacySlug": "65f5e948",
+      "aliases": [
+        "65f5e948"
+      ],
+      "excerpt": "2022年我才搞懂这个！ 比较 传递方式 函数定义 函数调用 函数内对a修改的影响 : : : : 值传递 fun(int a) fun(x) 外部x不变 指针传递 fun(int a) fun(&x) 外部x同步更改 引用传递 fun(int &a) fun(x) 外部x同步更改 值传递 值传递是",
+      "tags": [
+        "刷题",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 418,
+      "readingTime": 2
+    },
+    {
+      "title": "Yolov5训练自己的目标检测模型",
+      "date": "2022-02-28T14:34:57.000Z",
+      "updatedAt": "2022-02-28T14:34:57.000Z",
+      "file": "yolov5训练自己的目标检测模型.md",
+      "slug": "yolov5-train-custom-object-detection-model",
+      "legacySlug": "8b193099",
+      "aliases": [
+        "8b193099"
+      ],
+      "excerpt": "yolov5训练自己的目标检测模型 yolov5 yolo是当前最火的目标检测模型之一，效果很好速度很快，也很适合小白上手。yolov5是yolo的第五代模型。 项目地址：https://github.com/ultralytics/yolov5 克隆下来之后，用pycharm打开，选择3.8版本的",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 431,
+      "readingTime": 2
+    },
+    {
+      "title": "从wordpress迁移到hugo过程分享",
+      "date": "2022-01-28T07:52:50.000Z",
+      "updatedAt": "2022-01-28T07:52:50.000Z",
+      "file": "从wordpress迁移到hugo过程分享.md",
+      "slug": "migrate-wordpress-to-hugo",
+      "legacySlug": "eec5cb2f",
+      "aliases": [
+        "eec5cb2f"
+      ],
+      "excerpt": "为什么抛弃wordpress选择hugo 不用买服务器了 wordpress经常奔溃，易受攻击 hugo编译速度真tm快 有一款钟爱的hugo主题 文章迁移 文章迁移使用一个hexo插件（你没看错，就是hexo插件）。 首先新建一个hexo博客（用完就可以删了）。 再安装 hexo migrator",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 389,
+      "readingTime": 1
+    },
+    {
+      "title": "gitee/github webhooks+nodejs实现自动拉取代码",
+      "date": "2022-01-25T20:50:41.000Z",
+      "updatedAt": "2022-01-25T20:50:41.000Z",
+      "file": "gitee webhooks+nodejs实现自动拉取代码.md",
+      "slug": "github-gitee-webhooks-nodejs-auto-pull",
+      "legacySlug": "9992c4b8",
+      "aliases": [
+        "9992c4b8"
+      ],
+      "excerpt": "需求 很简单，就是想在gitee上一提交代码，服务器就自动执行一个sh脚本。脚本的内容就是把代码拉取下来。gitee webhook和sh脚本都好办，关键是如何让服务器监听webhook发来的请求。 在网上一搜，各路大神各显神通，有用jenkins的，有用php的，还有travis CI…各位大佬，",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 746,
+      "readingTime": 2
+    },
+    {
+      "title": "数值计算方法",
+      "date": "2021-12-01T18:31:18.000Z",
+      "updatedAt": "2021-12-01T18:31:18.000Z",
+      "file": "数值计算方法.md",
+      "slug": "numerical-calculation-methods",
+      "legacySlug": "3b6e3bc4",
+      "aliases": [
+        "3b6e3bc4"
+      ],
+      "excerpt": "包含几乎所有课堂上讲的题目",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 13,
+      "readingTime": 1
+    },
+    {
+      "title": "github推送出现fatal:\"XXX\" 鉴权失败解决方案",
+      "date": "2021-11-21T09:04:54.000Z",
+      "updatedAt": "2021-11-21T09:04:54.000Z",
+      "file": "github推送出现fatal__XXX_ 鉴权失败解决方案.md",
+      "slug": "github-push-fatal-authentication-failed-solution",
+      "legacySlug": "400b9839",
+      "aliases": [
+        "400b9839"
+      ],
+      "excerpt": "问题描述 如图，有一天在push的时候要求输入Username和Password，输入了GitHub登录名和密码后，提示“鉴权失败”。 解决方案 看它给的提示，Please see https://github.blog/2020 12 15 token authentication require",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 292,
+      "readingTime": 1
+    },
+    {
+      "title": "macOS下matplotlib无法显示中文字体问题解决",
+      "date": "2021-11-12T16:57:43.000Z",
+      "updatedAt": "2021-11-12T16:57:43.000Z",
+      "file": "macOS下matplotlib无法显示中文字体问题解决.md",
+      "slug": "macos-matplotlib-chinese-font-display-fix",
+      "legacySlug": "2031667d",
+      "aliases": [
+        "2031667d"
+      ],
+      "excerpt": "网上教程大多都是说下载微软雅黑字体到系统文件夹，然后更改matplotlib的配置文件。实际操作过程发现更改系统文件夹需要权限，而且matplotlib的配置文件也和网上说的不一样。 后来参考了：https://www.cnblogs.com/cymwill/p/10554916.html 解决方法",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 177,
+      "readingTime": 1
+    },
+    {
+      "title": "ubuntu安装Python3的曲折之路",
+      "date": "2021-10-30T13:58:01.000Z",
+      "updatedAt": "2021-10-30T13:58:01.000Z",
+      "file": "ubuntu安装Python3的曲折之路.md",
+      "slug": "ubuntu-install-python3-pyenv",
+      "legacySlug": "6434a878",
+      "aliases": [
+        "6434a878"
+      ],
+      "excerpt": "思路 先安装Python版本管理器pyenv 再用Pyenv安装Python 安装pyenv 标准安装：找到项目地址pyenv/pyenv: Simple Python version management (github.com) 先git clone，再配环境变量。 作者还提供了一个自动安装的脚",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 429,
+      "readingTime": 2
+    },
+    {
+      "title": "浏览器不支持getUserMedia",
+      "date": "2021-09-23T15:58:12.000Z",
+      "updatedAt": "2021-09-23T15:58:12.000Z",
+      "file": "浏览器不支持getUserMedia.md",
+      "slug": "fix-browser-getusermedia-not-supported",
+      "legacySlug": "2aef21c9",
+      "aliases": [
+        "2aef21c9"
+      ],
+      "excerpt": "现在主流浏览器的安全机制就是对非https和localhost的ip拒绝调用摄像头和麦克风。在设置里无法直接更改权限。 其实这是因为浏览器不支持http：IP开头的路径，认为这个路径不安全 浏览器只支持file:,https:,http://localhost， 解决方法 chrome 地址栏输入：",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 105,
+      "readingTime": 1
+    },
+    {
+      "title": "certbot自动配置nginx给wordpress站点加https",
+      "date": "2021-09-08T22:42:40.000Z",
+      "updatedAt": "2021-09-08T22:42:40.000Z",
+      "file": "certbot自动配置nginx给wordpress站点加https.md",
+      "slug": "certbot-auto-config-nginx-wordpress-https",
+      "legacySlug": "8644ae3a",
+      "aliases": [
+        "8644ae3a"
+      ],
+      "excerpt": "思路 1. 安装snap 2. 安装certbot 3. 自动配置nginx 完事儿了，确实很方便。具体执行语句访问 https://certbot.eff.org/ 按下图选择环境后就能看到所有执行语句 踩过的坑 配置nginx的时候报错如图 报错的意思就是说，在nginx的配置文件中server",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 288,
+      "readingTime": 1
+    },
+    {
+      "title": "对图像操作",
+      "date": "2021-08-29T21:21:29.000Z",
+      "updatedAt": "2021-08-29T21:21:29.000Z",
+      "file": "对图像操作.md",
+      "slug": "image-operations-processing",
+      "legacySlug": "3bdd31d7",
+      "aliases": [
+        "3bdd31d7"
+      ],
+      "excerpt": "图像 位图（raster graphics)和矢量图（vector graphics) 位图是有像素的，色彩丰富。矢量图放大不会失真。 通道 单通道 灰度图，每个像素点只有一个值表示，如果图像的深度是4 (256 = 2 2 2\\ 2)，那么他的像素值0(黑) 255(白)； 三通道 也就是通过见到",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 772,
+      "readingTime": 2
+    },
+    {
+      "title": "Conda 配置虚拟环境",
+      "date": "2021-08-29T21:20:21.000Z",
+      "updatedAt": "2021-08-29T21:20:21.000Z",
+      "file": "Conda 配置虚拟环境.md",
+      "slug": "conda-virtual-environment-setup",
+      "legacySlug": "bcde8727",
+      "aliases": [
+        "bcde8727"
+      ],
+      "excerpt": "创建虚拟环境 进入虚拟环境 退出虚拟环境 删除虚拟环境 查看环境下已有安装包 查看已有虚拟环境 jupyter notebook使用虚拟环境 安装一个库 往kernel里写入虚拟环境 虚拟环境里没有notebook，安装一下 启动 在Notebook里更换环境： Kernel = Change ke",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 91,
+      "readingTime": 1
+    },
+    {
+      "title": "jupyter-paddle使用docker安装",
+      "date": "2021-08-29T21:19:42.000Z",
+      "updatedAt": "2021-08-29T21:19:42.000Z",
+      "file": "jupyter-paddle使用docker安装.md",
+      "slug": "jupyter-paddle-docker-install",
+      "legacySlug": "30e1e85f",
+      "aliases": [
+        "30e1e85f"
+      ],
+      "excerpt": "安装 参考地址：paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/docker/linux docker.html 先安装docker，参考官网 拉取镜像： docker pull registry.bai",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 202,
+      "readingTime": 1
+    },
+    {
+      "title": "python发邮件",
+      "date": "2021-08-08T08:20:29.000Z",
+      "updatedAt": "2021-08-08T08:20:29.000Z",
+      "file": "python发邮件.md",
+      "slug": "python-send-email",
+      "legacySlug": "31ffe735",
+      "aliases": [
+        "31ffe735"
+      ],
+      "excerpt": "QQ邮箱设置 python代码 时间判断",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 12,
+      "readingTime": 1
+    },
+    {
+      "title": "matplotlib作热机效率随负载大小变化曲线图",
+      "date": "2021-04-02T09:28:08.000Z",
+      "updatedAt": "2021-04-02T09:28:08.000Z",
+      "file": "matplotlib作热机效率随负载大小变化曲线图.md",
+      "slug": "matplotlib-plot-heat-engine-efficiency-curve",
+      "legacySlug": "686c4940",
+      "aliases": [
+        "686c4940"
+      ],
+      "excerpt": "大物实验得到的数据，用python的matplotlib很方便处理 数据准备： 画图： 效果",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 26,
+      "readingTime": 1
+    },
+    {
+      "title": "jupyter打开项目文件夹",
+      "date": "2021-01-19T17:52:50.000Z",
+      "updatedAt": "2021-01-19T17:52:50.000Z",
+      "file": "jupyter打开项目文件夹.md",
+      "slug": "jupyter-open-project-folder",
+      "legacySlug": "3e721cb0",
+      "aliases": [
+        "3e721cb0"
+      ],
+      "excerpt": "一.添加环境变量 直接在windows里面搜索“查看高级系统设置”，选择 , ，点开 ，以下三行填入其中： 然后点确定。 在我的电脑里 和 里面都有path，我也不知道该填哪个，索性把两个都填上了，这三个变量我觉得应该也有多余的，反正这个东西我是搞不太清楚的，只是照着网上说的做。 二.打开终端，进入",
+      "tags": [
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 255,
+      "readingTime": 1
+    }
+  ],
+  "笔记": [
+    {
+      "title": "手撕卷积神经网络+反向传播梯度更新",
+      "date": "2025-07-13T07:24:20.000Z",
+      "updatedAt": "2025-07-13T07:24:20.000Z",
+      "file": "手撕卷积神经网络反向传播梯度更新.md",
+      "slug": "cnn-backpropagation-gradient-update-from-scratch",
+      "legacySlug": "8912df88",
+      "aliases": [
+        "8912df88"
+      ],
+      "excerpt": "手撕卷积神经网络 一个简单的卷积神经网络，就4层，分别是InputLayer, conv layer, hidden layer(全连接层 + ReLU激活), output layer 反向传播梯度更新推导 以下是四层网络中每层的反向传播公式（以损失函数 \\( L \\) 为起点，使用偏导数符号）：",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 602,
+      "readingTime": 2
+    },
+    {
+      "title": "手撕Attention",
+      "date": "2025-06-22T08:49:55.000Z",
+      "updatedAt": "2025-06-22T08:49:55.000Z",
+      "file": "手撕Attention.md",
+      "slug": "implement-attention-from-scratch",
+      "legacySlug": "d764f796",
+      "aliases": [
+        "d764f796"
+      ],
+      "excerpt": "第一重境界 最简单的计算 Attention(Q, K, V) = softmax(Q K.T/sqrt(hidden dim)) V 第二重境界 用一个大矩阵同时生成Q, K, V 第三重境界 attention mask作用：把短句子多余的部分mask掉 attention mask作用于Q K",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 134,
+      "readingTime": 1
+    },
+    {
+      "title": "电脑启动需要经历哪些过程？",
+      "date": "2024-11-27T06:51:10.000Z",
+      "updatedAt": "2024-11-27T06:51:10.000Z",
+      "file": "电脑启动需要经历哪些过程？.md",
+      "slug": "computer-boot-process",
+      "legacySlug": "4e728164",
+      "aliases": [
+        "4e728164"
+      ],
+      "excerpt": "传统BIOS启动流程 1. BIOS BIOS 启动，BIOS程序是烧进主板自带的ROM里的，所以无硬盘也可以启动。BIOS先进行自检，检查内存、显卡、磁盘等关键设备是否存在功能异常，会有蜂鸣器汇报错误，无错误自检飞快结束。 硬件自检完成后，BIOS把控制权转交给下一阶段的启动程序。需要有一个外部储",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 1474,
+      "readingTime": 4
+    },
+    {
+      "title": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录",
+      "date": "2024-11-27T06:47:24.000Z",
+      "updatedAt": "2024-11-27T06:47:24.000Z",
+      "file": "无核显主机U盘安装Ubuntu和N卡驱动和cuda-toolkit踩坑记录.md",
+      "slug": "install-ubuntu-nvidia-driver-cuda-toolkit-no-igpu",
+      "legacySlug": "024ab30e",
+      "aliases": [
+        "024ab30e"
+      ],
+      "excerpt": "无核显主机U盘安装Ubuntu 先用Runfus（开源软件）制作启动盘，插到电脑上，进BIOS后选择U盘启动，选择安装Ubuntu，安装过程中需要指定安装在哪个磁盘，是否需要分区等等。安装好了之后会提示拔掉U盘进入系统，之后画面会卡在这个界面。 原因是nouveau这个倒霉驱动跟N卡不适配。nouv",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgimage-20241127151604083.png",
+      "wordCount": 521,
+      "readingTime": 2
+    },
+    {
+      "title": "高光谱遥感深度学习调研",
+      "date": "2024-11-15T08:36:41.000Z",
+      "updatedAt": "2024-11-15T08:36:41.000Z",
+      "file": "高光谱遥感深度学习调研.md",
+      "slug": "hyperspectral-remote-sensing-deep-learning-survey",
+      "legacySlug": "40c266ad",
+      "aliases": [
+        "40c266ad"
+      ],
+      "excerpt": "高光谱遥感深度学习调研 综述 高光谱深度学习只有小综述，没有大综述。小综述里面场景分类、目标检测的综述比较多。 Wang C, Liu B, Liu L, et al. A review of deep learning used in the hyperspectral image analysi",
+      "tags": [
+        "笔记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1729854855957-ef23736e-2dd6-42b8-b70f-31b974dea298.png",
+      "wordCount": 1900,
+      "readingTime": 5
+    },
+    {
+      "title": "绿植盆栽攻略",
+      "date": "2024-08-28T10:24:07.000Z",
+      "updatedAt": "2024-08-28T10:24:07.000Z",
+      "file": "绿植盆栽攻略.md",
+      "slug": "indoor-green-potted-plant-care-guide",
+      "legacySlug": "5953ed50",
+      "aliases": [
+        "5953ed50"
+      ],
+      "excerpt": "分类 以下是常见的绿植盆栽分类： 一、观叶类绿植盆栽 植物类型 ：绿萝、吊兰、龟背竹、发财树、文竹、虎皮兰等。 养护难度 ：总体来说养护难度相对较低。绿萝和吊兰适应能力强，能在不同环境下生长，只要保证适量的水分和散射光即可。龟背竹喜欢温暖湿润的环境，但也比较耐阴。发财树需注意浇水不能过多，否则容易烂",
+      "tags": [
+        "随笔杂记",
+        "笔记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgbbf772ea317555ba7ac144f9318fc7f.jpg",
+      "wordCount": 1404,
+      "readingTime": 4
+    },
     {
       "title": "调研遥感数据压缩",
       "date": "2024-08-20T16:11:00.000Z",
@@ -4133,512 +3594,1107 @@
       "img": "",
       "wordCount": 3089,
       "readingTime": 8
+    },
+    {
+      "title": "SCI论文润色经验分享",
+      "date": "2023-12-23T13:39:08.000Z",
+      "updatedAt": "2023-12-23T13:39:08.000Z",
+      "file": "SCI论文润色经验分享.md",
+      "slug": "sci-paper-editing-experience-sharing",
+      "legacySlug": "e736dfef",
+      "aliases": [
+        "e736dfef"
+      ],
+      "excerpt": "变量符号 第一次出现的变量符号需要解释，后面不需再解释。 文章中所有的变量符号要保持一致，不能前后歧义。解决这个问题最好的办法就是在写作时维护一个符号表。如果文章的公式变量较多，强烈建议这么做，否则后面改起来会很痛苦。 所有单字母变量，都要采用斜体。多字母变量和函数，采用正体。对于下标，若下标本身是",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 2456,
+      "readingTime": 7
+    },
+    {
+      "title": "苏州印象",
+      "date": "2023-08-12T12:06:07.000Z",
+      "updatedAt": "2023-08-12T12:06:07.000Z",
+      "file": "苏州印象.md",
+      "slug": "suzhou-impressions",
+      "legacySlug": "17a81efd",
+      "aliases": [
+        "17a81efd"
+      ],
+      "excerpt": "2023年8月3日 5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一座城市的呢？我非常好奇，终于有机会能一探究竟！ 从蚌埠坐绿皮火车仅需不到5小时就能到达苏州站（票价62.5），苏州站位于苏州的中心区域——姑苏区（听名字就觉得好",
+      "tags": [
+        "随笔杂记",
+        "笔记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_8237%E2%80%9D%E5%A4%A7.jpeg",
+      "wordCount": 647,
+      "readingTime": 2
+    },
+    {
+      "title": "ChinaVis重庆之旅",
+      "date": "2023-07-31T11:17:10.000Z",
+      "updatedAt": "2023-07-31T11:17:10.000Z",
+      "file": "ChinaVis重庆之旅.md",
+      "slug": "chinavis-chongqing-trip",
+      "legacySlug": "8cb0549f",
+      "aliases": [
+        "8cb0549f"
+      ],
+      "excerpt": "ChinaVis大会于2023年7月21日 24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～ 出发！ 第一次坐飞机，飞机型号是波音737 800，起飞的时候感觉好神奇，在空中的景色也非常美。 重庆火锅 到达重庆的第一顿饭当然是重庆火锅，",
+      "tags": [
+        "随笔杂记",
+        "笔记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7704.jpeg",
+      "wordCount": 705,
+      "readingTime": 2
+    },
+    {
+      "title": "Flask的一些关于线程的特性",
+      "date": "2023-07-01T02:15:46.000Z",
+      "updatedAt": "2023-07-01T02:15:46.000Z",
+      "file": "Flask的一些关于线程的特性.md",
+      "slug": "flask-thread-features",
+      "legacySlug": "c2de1901",
+      "aliases": [
+        "c2de1901"
+      ],
+      "excerpt": "前言 Flask是我最喜欢用的后端，以为它实在是太简单了，拿来做小型项目速度嗖嗖的。最近做比赛需要将后端通过socket连接到硬件设备，socket是有状态的，有连接数量的限制，所以要格外注意它的状态，Flask的一些特性会改变状态，如果不注意的话会导致很多bug，我踩了很多坑，在这里总结一下。 F",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 435,
+      "readingTime": 2
+    },
+    {
+      "title": "Qt动态添加和删除布局（仿jupyter）",
+      "date": "2023-02-02T06:14:19.000Z",
+      "updatedAt": "2023-02-02T06:14:19.000Z",
+      "file": "qt动态添加和删除布局（仿jupyter）.md",
+      "slug": "qt-dynamic-add-remove-layout-jupyter",
+      "legacySlug": "65173be9",
+      "aliases": [
+        "65173be9"
+      ],
+      "excerpt": "前言 老师给了一个任务，仿照jupyter notebook中可以动态添加、删除的cell，用c++的qt做一个类似的界面。具体来说，一个cell中有一个输入框，一个输出框，还有四个按钮，分别是运行、添加、删除、清空。此外，为了突出正在编辑的cell，要实现点击到cell的空白部分时，将背景颜色高亮",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 792,
+      "readingTime": 2
+    },
+    {
+      "title": "LiveGo——小而美的直播串流软件",
+      "date": "2023-01-01T08:11:53.000Z",
+      "updatedAt": "2023-01-01T08:11:53.000Z",
+      "file": "Livego——小而美的直播串流软件.md",
+      "slug": "livego-lightweight-live-streaming-software",
+      "legacySlug": "18b5f674",
+      "aliases": [
+        "18b5f674"
+      ],
+      "excerpt": "近期想跟女朋友一起异地看电影，试了几种方式都不够优雅， 方式一：用chrome插件，双方同时打开一个视频源，然后通过这个插件能控制两个人的进度条保持一致。 缺点：因为有的视频源是收费的，两个人想一起看得交两份钱，还有的不支持网页播放（需要下载软件），所以这种方式灵活性很差，不好用。 方式二：用腾讯会",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 629,
+      "readingTime": 2
+    },
+    {
+      "title": "Kaggle图像分类竞赛实战总结详细代码解读",
+      "date": "2022-12-29T04:37:38.000Z",
+      "updatedAt": "2022-12-29T04:37:38.000Z",
+      "file": "Kaggle图像分类竞赛实战总结详细代码解读.md",
+      "slug": "kaggle-image-classification-competition-code",
+      "legacySlug": "92077544",
+      "aliases": [
+        "92077544"
+      ],
+      "excerpt": "前言 我是跟着李沐的动手学深度学习v2视频学习深度学习的，光看不做假把式，所以在学习完第七章 现代卷积神经网络之后，参加了一次李沐发布的Kaggle竞赛。自己动手，从组织数据集开始，到训练，再到推理，把整个流程走了一遍，收获颇丰，感觉学到了很多东西，（完整代码：https://www.kaggle.",
+      "tags": [
+        "笔记",
+        "技能分享"
+      ],
+      "img": "",
+      "wordCount": 1254,
+      "readingTime": 4
+    },
+    {
+      "title": "计组线上实验-运算器设计",
+      "date": "2022-10-29T04:58:43.000Z",
+      "updatedAt": "2022-10-29T04:58:43.000Z",
+      "file": "计组线上实验-运算器设计.md",
+      "slug": "computer-organization-lab-alu-design",
+      "legacySlug": "069c1237",
+      "aliases": [
+        "069c1237"
+      ],
+      "excerpt": "Logisim 这个软件还蛮好用的，用java写的，Windows直接按照老师的说明文档装就可以了，Mac从这里下载 https://github.com/laurensk/logisim macos 学习资料： Mooc视频 计算机硬件系统设计 https://www.icourse163.org",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 99,
+      "readingTime": 1
+    },
+    {
+      "title": "Linux在指定时间区间内的随机时间点执行任务",
+      "date": "2022-10-23T15:52:09.000Z",
+      "updatedAt": "2022-10-23T15:52:09.000Z",
+      "file": "Linux在指定时间区间内的随机时间点执行任务.md",
+      "slug": "linux-execute-cron-job-at-random-time-in-interval",
+      "legacySlug": "1cad2edf",
+      "aliases": [
+        "1cad2edf"
+      ],
+      "excerpt": "在Linux上如果你有一个定时任务需要执行，只需要在crontab中设置一个触发器就可以啦。 现在升级需求，比如说我想在6:00到9:00之间，随机找一个时间执行这个任务，怎么做呢？ 思路：我们不能在crontab里指定一个随机的时间（只能指定一个具体的时间），但是我们可以指定一个具体的时间运行sh",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 196,
+      "readingTime": 1
+    },
+    {
+      "title": "字、字节、字长、位等概念区分",
+      "date": "2022-10-22T01:54:39.000Z",
+      "updatedAt": "2022-10-22T01:54:39.000Z",
+      "file": "字、字节、字长、位等概念区分.md",
+      "slug": "difference-between-word-byte-word-length-bit",
+      "legacySlug": "ef85f195",
+      "aliases": [
+        "ef85f195"
+      ],
+      "excerpt": "一提到字、字节、字长、位等概念我就做晕车，从来没弄懂过，现在总结如下 英文 特点 与其它关系 位 bit 0或1，最基本单位 字节 byte ASCII码中表示一个字符的单位 1字节=8位 字 word 它代表计算机处理指令或数据的二进制数位数，是计算机进行数据存储和数据处理的运算单位。通常称16位",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 814,
+      "readingTime": 3
+    },
+    {
+      "title": "Linux输出重定向以及crontab的坑",
+      "date": "2022-07-13T03:14:42.000Z",
+      "updatedAt": "2022-07-13T03:14:42.000Z",
+      "file": "Linux输出重定向以及crontab的坑.md",
+      "slug": "linux-output-redirection-crontab-pitfalls",
+      "legacySlug": "78bcbc75",
+      "aliases": [
+        "78bcbc75"
+      ],
+      "excerpt": "有一个python脚本，需要每天定时执行。我想使用crontab解决，但是无论怎样都不生效，最后问了专业人士（我表哥）才解决。下面分享一下踩过的坑： 编辑crontab 首先执行 编辑cron表达式，注意：每个用户都有自己的crontab，如果想省事的话建议直接 只使用root用户的就好了。 写cr",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 347,
+      "readingTime": 1
+    },
+    {
+      "title": "使用正则表达式进行高级替换",
+      "date": "2022-06-17T07:02:15.000Z",
+      "updatedAt": "2022-06-17T07:02:15.000Z",
+      "file": "使用正则表达式进行高级替换.md",
+      "slug": "advanced-regex-replacement",
+      "legacySlug": "17aa354e",
+      "aliases": [
+        "17aa354e"
+      ],
+      "excerpt": "需求 最近跟正则表达式杠上了。有这样一个需求，我的博客文章是用typora写的，markdown格式的语法插入图片的表达是这样的： 但是这样渲染出的图片不能居中，也不能缩放，我得把它转换成博客主题的格式： 思路很简单，但不能简单的使用python的replace函数，因为不仅要匹配 ，还要匹配括号里",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 358,
+      "readingTime": 1
+    },
+    {
+      "title": "Flask+vue使用jwt验证",
+      "date": "2022-05-22T05:00:39.000Z",
+      "updatedAt": "2022-05-22T05:00:39.000Z",
+      "file": "flask+vue使用jwt验证.md",
+      "slug": "flask-vue-jwt-authentication",
+      "legacySlug": "26d4ea53",
+      "aliases": [
+        "26d4ea53"
+      ],
+      "excerpt": "为什么要使用jwt验证？ jwt（json web token）主要用来解决单点登录（SSO）问题。设想一个场景，你在淘宝登录了你的账号，然后打开天猫（天猫属于淘宝的子网站），那么你需不需要重新登录呢？答案是不用，你会发现天猫。在一个站点登录后，在其它子站点就不需要重复登录，这就是单点登录。 传统的",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 349,
+      "readingTime": 1
+    },
+    {
+      "title": "《学术研究，你的成功之道》",
+      "date": "2022-05-07T12:12:51.000Z",
+      "updatedAt": "2022-05-07T12:12:51.000Z",
+      "file": "《学术研究，你的成功之道》.md",
+      "slug": "academic-research-your-way-to-success",
+      "legacySlug": "10d7958a",
+      "aliases": [
+        "10d7958a"
+      ],
+      "excerpt": "《学术研究，你的成功之道》 格雷准则 如何判断一个好问题？ 格雷准则是由图灵奖得主Jim Gary, 在1999年图灵奖颁奖典礼上提出的一个好的问题应该具备的几个条件。 1. 有明显的益处； 测试描述简单可以用“电梯描述法”看能否在1分钟之内将问题意义清楚明白的讲出来。 2. 描述简单； 3. 尚且",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 656,
+      "readingTime": 2
+    },
+    {
+      "title": "判断两条线段是否相交——快速排斥实验和跨立实验",
+      "date": "2022-04-20T11:01:29.000Z",
+      "updatedAt": "2022-04-20T11:01:29.000Z",
+      "file": "判断两条线段是否相交——快速排斥实验和跨立实验.md",
+      "slug": "line-segments-intersect-rapid-rejection-straddle-test",
+      "legacySlug": "519b05f8",
+      "aliases": [
+        "519b05f8"
+      ],
+      "excerpt": "题目 题目：在二维坐标系中，给你两条线段的四个端点坐标，问如何判断两条线段是否相交？ 初步分析：我们知道，对于直线来说不平行就相交，非常好判断。但是对于线段来说，有共线相交，共线不相交，不共线相交，不共线不相交等情况。我们要找到一个优雅的办法，把所有的情况都能考虑到。下面介绍两步就能判断的方法： 第",
+      "tags": [
+        "刷题",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 437,
+      "readingTime": 2
+    },
+    {
+      "title": "Git撤销版本",
+      "date": "2022-04-16T12:23:57.000Z",
+      "updatedAt": "2022-04-16T12:23:57.000Z",
+      "file": "git撤销版本.md",
+      "slug": "git-undo-commit",
+      "legacySlug": "5753ed33",
+      "aliases": [
+        "5753ed33"
+      ],
+      "excerpt": "Git如何撤回远程仓库已经提交的版本？ 1. 不能直接在像gitee, github这样的远程仓库上直接操作。所以先把项目clone下来。 2. 执行 git log查看日志，获取需要回退的版本号 ，如5f6935bcc46d480113f0c49d4b54052d10c5aec0。 3. 执行gi",
+      "tags": [
+        "技能分享",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 167,
+      "readingTime": 1
+    },
+    {
+      "title": "Pandas使用技巧",
+      "date": "2022-04-16T07:42:08.000Z",
+      "updatedAt": "2022-04-16T07:42:08.000Z",
+      "file": "Pandas使用技巧.md",
+      "slug": "pandas-tips",
+      "legacySlug": "7241b9d9",
+      "aliases": [
+        "7241b9d9"
+      ],
+      "excerpt": "read csv()参数 header header=None 读取时不设置表头 drop() df.drop(0) 删除第一行",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 24,
+      "readingTime": 1
+    },
+    {
+      "title": "C++和python常用函数",
+      "date": "2022-04-08T12:23:24.000Z",
+      "updatedAt": "2022-04-08T12:23:24.000Z",
+      "file": "c++和python常用函数.md",
+      "slug": "cpp-python-common-functions",
+      "legacySlug": "09ec2d90",
+      "aliases": [
+        "09ec2d90"
+      ],
+      "excerpt": "c++常用函数 sort(v.begin(),v.end()) 默认升序 如果要逆序就麻烦了 max element(v.begin(),v.end()) 返回指针，指向最大元素 pair 1. pair p1(1, 2); 定义和初始化 2. 可以用已有对象初始化pair p2(p1); 3. 没",
+      "tags": [
+        "刷题",
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 549,
+      "readingTime": 2
+    },
+    {
+      "title": "python时间遇到的坑",
+      "date": "2021-08-22T15:21:03.000Z",
+      "updatedAt": "2021-08-22T15:21:03.000Z",
+      "file": "python时间遇到的坑.md",
+      "slug": "python-time-datetime-pitfalls",
+      "legacySlug": "cf4fd6e1",
+      "aliases": [
+        "cf4fd6e1"
+      ],
+      "excerpt": "python中与时间相关的标准库有三个： time datetime calendar 吐槽：真tm傻逼，时间也要用三个库？搞得我现在都不会 时区坑 查看时间的方式有很多 法一： 在windows上输出2021 08 22 15:04:09.958720，没问题 法二： 本地时间为 : time.s",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 361,
+      "readingTime": 1
+    },
+    {
+      "title": "linux学习笔记",
+      "date": "2021-08-08T11:09:47.000Z",
+      "updatedAt": "2021-08-08T11:09:47.000Z",
+      "file": "linux学习笔记.md",
+      "slug": "linux-study-notes",
+      "legacySlug": "4fa6d037",
+      "aliases": [
+        "4fa6d037"
+      ],
+      "excerpt": "安装python 1）安装依赖包 安装 “Development tools” 软件组： 因为 Python 3.7 源文件使用 zlib 格式打包，所以需要安装 zlib 软件包；Python 3.7 编译安装时需要使用 zlib 的头文件和链接库，所以需要安装 zlib 的头文件和链接库 zli",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 443,
+      "readingTime": 2
+    },
+    {
+      "title": "django笔记进阶",
+      "date": "2021-08-08T11:08:25.000Z",
+      "updatedAt": "2021-08-08T11:08:25.000Z",
+      "file": "django笔记进阶.md",
+      "slug": "django-advanced-notes",
+      "legacySlug": "5b0b5af3",
+      "aliases": [
+        "5b0b5af3"
+      ],
+      "excerpt": "models 写入新数据，返回此条新数据 ` new data = Queue.objects.create( queue dic) 访问新写入数据的id字段 new data.id 查询数据 查询一条数据 student = Student.objects.get(name='django') 查",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 423,
+      "readingTime": 2
+    },
+    {
+      "title": "NGINX学习笔记",
+      "date": "2021-08-02T17:35:49.000Z",
+      "updatedAt": "2021-08-02T17:35:49.000Z",
+      "file": "NGINX学习笔记.md",
+      "slug": "nginx-learning-notes",
+      "legacySlug": "ec606feb",
+      "aliases": [
+        "ec606feb"
+      ],
+      "excerpt": "NGINX nginx常用命令 配置文件 配置文件解释参考： https://blog.csdn.net/tjcyjd/article/details/50695922",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 26,
+      "readingTime": 1
+    },
+    {
+      "title": "暑期实习项目-onlinejudge在线测试平台",
+      "date": "2021-07-28T14:58:29.000Z",
+      "updatedAt": "2021-07-28T14:58:29.000Z",
+      "file": "暑期实习项目-onlinejudge在线测试平台.md",
+      "slug": "summer-internship-online-judge-platform",
+      "legacySlug": "fd8f707c",
+      "aliases": [
+        "fd8f707c"
+      ],
+      "excerpt": "展示 概括来说，就是用django开发的web项目。相当于一个学生管理系统＋评测系统，开发完成后部署。这个项目，在一起参与暑期实习的很多同学看来，应该是很牛很牛的项目了。牛在哪里呢？牛在我们真正把东西做出来，部署好，让每个人打开浏览器就能访问，让大家都能体验到我们做的这个项目是实实在在的，不是只会做",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 703,
+      "readingTime": 2
+    },
+    {
+      "title": "docker笔记",
+      "date": "2021-07-19T20:57:21.000Z",
+      "updatedAt": "2021-07-19T20:57:21.000Z",
+      "file": "docker笔记.md",
+      "slug": "docker-notes",
+      "legacySlug": "86d472e0",
+      "aliases": [
+        "86d472e0"
+      ],
+      "excerpt": "打开docker服务 docker一直在后台运行 ` docker run dit judge:0.2 /bin/bash 复制 docker cp 容器id:容器内路径 目的主机路径 docker cp /root/testPython/test01/ $(docker ps q):/usr/sr",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 247,
+      "readingTime": 1
+    },
+    {
+      "title": "离散数学结课总结+笔记",
+      "date": "2021-05-29T16:23:46.000Z",
+      "updatedAt": "2021-05-29T16:23:46.000Z",
+      "file": "离散数学结课总结+笔记.md",
+      "slug": "discrete-mathematics-course-summary-notes",
+      "legacySlug": "fd13c30b",
+      "aliases": [
+        "fd13c30b"
+      ],
+      "excerpt": "课程时长 离散数学上了大一上，大一下两个学期（貌似是80个学时。 课程目录 总共四个篇章，分别是“集合论”、“数理逻辑”、“抽象代数”、“图论基础”。 课程感悟 这是一门数学课，但是和数学分析、概率论又完全不同。离散数学研究的真的是离散的数学知识，与微积分完全无关。其中各个章节相关性不大，也有部分章",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 280,
+      "readingTime": 1
+    },
+    {
+      "title": "pathlib库",
+      "date": "2021-03-16T10:03:57.000Z",
+      "updatedAt": "2021-03-16T10:03:57.000Z",
+      "file": "pathlib库.md",
+      "slug": "pathlib-library",
+      "legacySlug": "43720991",
+      "aliases": [
+        "43720991"
+      ],
+      "excerpt": "老婆不在家，看点刺激的",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 10,
+      "readingTime": 1
+    },
+    {
+      "title": "Django学习笔记",
+      "date": "2021-03-15T23:02:45.000Z",
+      "updatedAt": "2021-03-15T23:02:45.000Z",
+      "file": "Django学习笔记.md",
+      "slug": "django-learning-notes",
+      "legacySlug": "9570ee75",
+      "aliases": [
+        "9570ee75"
+      ],
+      "excerpt": "安装虚拟环境 在Powershell中执行 安装django 创建django项目 解决报错信息 配置路由urls 在虚拟环境中，且在mysite目录下 在mysite的settings.py里的INSTALLED\\ APPS里添加'misterwu'进行关联 在mysite的urls.py里添加i",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 607,
+      "readingTime": 2
+    },
+    {
+      "title": "Pandas学习笔记",
+      "date": "2021-03-09T11:04:10.000Z",
+      "updatedAt": "2021-03-09T11:04:10.000Z",
+      "file": "Pandas学习笔记.md",
+      "slug": "pandas-learning-notes",
+      "legacySlug": "84a00195",
+      "aliases": [
+        "84a00195"
+      ],
+      "excerpt": "map()和apply()和applymap()区别 map()是Series对象的一个函数，DataFrame中没有map()，map()的功能是将一个自定义函数作用于Series对象的每个元素。 apply()函数的功能是将一个自定义函数作用于DataFrame的行或者列 applymap()函",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 685,
+      "readingTime": 2
+    },
+    {
+      "title": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画",
+      "date": "2021-03-03T20:46:14.000Z",
+      "updatedAt": "2021-03-03T20:46:14.000Z",
+      "file": "matplotlib学习笔记（四）图中图-次坐标轴-Animation动画.md",
+      "slug": "matplotlib-tutorial-4-pip-secondary-axis-animation",
+      "legacySlug": "13bf1535",
+      "aliases": [
+        "13bf1535"
+      ],
+      "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 图中图 次坐标轴 Animation动画 我试过了，jupyter notebook根本动不了 又试了pychar",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 68,
+      "readingTime": 1
+    },
+    {
+      "title": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示",
+      "date": "2021-02-26T12:06:38.000Z",
+      "updatedAt": "2021-02-26T12:06:38.000Z",
+      "file": "matplotlib学习笔记（三）image图片-3D数据-Subplot 多合一显示-Subplot分格显示.md",
+      "slug": "matplotlib-tutorial-3-image-3d-data-subplot",
+      "legacySlug": "10141fce",
+      "aliases": [
+        "10141fce"
+      ],
+      "excerpt": "视频地址：https://www.bilibili.com/video/BV1Jx411L7LU?p=13&spm\\ id\\ from=pageDriver 仅用于学习 感谢莫烦up主 image图片 interpolation参数有这些 3D数据 Subplot 多合一显示 figure1 fig",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 59,
+      "readingTime": 1
+    },
+    {
+      "title": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图",
+      "date": "2021-02-25T18:40:44.000Z",
+      "updatedAt": "2021-02-25T18:40:44.000Z",
+      "file": "matplotlib学习笔记（二）Legend图例-Annotation标注-tick能见度-Scatter散点图-Bar柱状图-Contours等高线图.md",
+      "slug": "matplotlib-tutorial-2-legend-annotation-scatter-bar-contour",
+      "legacySlug": "9e6c0b5f",
+      "aliases": [
+        "9e6c0b5f"
+      ],
+      "excerpt": "内容均来源于：https://www.bilibili.com/video/BV1Jx411L7LU?p=9&spm\\ id\\ from=pageDriver 仅供学习使用 Legend图例 简单省事儿的写法 Annotation标注 坐标轴刻度（tick能见度） Scatter散点图 Bar柱状图",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 83,
+      "readingTime": 1
+    },
+    {
+      "title": "csv库的使用方法",
+      "date": "2021-02-25T11:10:35.000Z",
+      "updatedAt": "2021-02-25T11:10:35.000Z",
+      "file": "csv库的使用方法.md",
+      "slug": "csv-library-usage",
+      "legacySlug": "c9920664",
+      "aliases": [
+        "c9920664"
+      ],
+      "excerpt": "上一篇我们讲了怎么用 json格式保存数据，这一篇我们来看看如何用 csv模块进行数据读写。 一、csv简介 CSV (Comma Separated Values)，即逗号分隔值（也称字符分隔值，因为分隔符可以不是逗号），是一种常用的文本格式，用来存储表格数据，包括数字或者字符。 csv的使用很广",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 958,
+      "readingTime": 3
+    },
+    {
+      "title": "json数据存储",
+      "date": "2021-02-25T11:02:16.000Z",
+      "updatedAt": "2021-02-25T11:02:16.000Z",
+      "file": "json数据存储.md",
+      "slug": "json-data-storage",
+      "legacySlug": "f16cfec5",
+      "aliases": [
+        "f16cfec5"
+      ],
+      "excerpt": "转载自https://www.jianshu.com/p/0ba2b643c0f2 在上一篇文章里我们讲了 xpath写法的问题还以爬取我的文章信息写了示例，但是在上一篇中我们只是爬取并打印了信息，并没有对信息进行保存。 实际应用中爬取到的信息肯定是需要保存到本地的。保存信息的方式有数据库和文件的形",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 808,
+      "readingTime": 3
+    },
+    {
+      "title": "matplotlib学习笔记（一）基本语法,figure,坐标轴",
+      "date": "2021-02-23T10:48:54.000Z",
+      "updatedAt": "2021-02-23T10:48:54.000Z",
+      "file": "matplotlib学习笔记（一）基本语法,figure,坐标轴.md",
+      "slug": "matplotlib-tutorial-1-basic-syntax-figure-axis",
+      "legacySlug": "5c2f0a26",
+      "aliases": [
+        "5c2f0a26"
+      ],
+      "excerpt": "学习视频地址：https://www.bilibili.com/video/BV1Jx411L7LU? github地址：https://github.com/MorvanZhou/tutorials/tree/master/matplotlibTUT 基本语法 一个figure就是一张图片 这里有",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 68,
+      "readingTime": 1
+    },
+    {
+      "title": "BeautifulSoup学习笔记",
+      "date": "2021-02-14T19:08:15.000Z",
+      "updatedAt": "2021-02-14T19:08:15.000Z",
+      "file": "BeautifulSoup学习笔记.md",
+      "slug": "beautifulsoup-python-study-notes",
+      "legacySlug": "eb083bdf",
+      "aliases": [
+        "eb083bdf"
+      ],
+      "excerpt": "发现宝藏视频和宝藏up主，讲的内容正是我的疑惑点。 https://www.bilibili.com/video/BV1Pg4y1z7Lr?from=search&seid=13958657789515093044 导入 from bs4 import BeautifulSoup 导入模块 soup",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 295,
+      "readingTime": 1
+    },
+    {
+      "title": "每日一题--二分法找数组中的数",
+      "date": "2020-10-08T20:04:22.000Z",
+      "updatedAt": "2020-10-08T20:04:22.000Z",
+      "file": "每日一题--二分法找数组中的数.md",
+      "slug": "daily-binary-search-find-number-in-array",
+      "legacySlug": "22820229",
+      "aliases": [
+        "22820229"
+      ],
+      "excerpt": "【题目描述】 公司举办年会，为了活跃气氛，设置了摇奖环节。参加聚会的每位员工都有一张带有号码的抽奖券。现在，主持人从小到大依次公布 n 个不同的获奖号码，小唐看着自己抽奖券上的号码 win，无比紧张。 【输入格式】 第一行一个正整数n（2<n≤100），表示有n个获奖号码。 第二行包含n个正整数，之",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 292,
+      "readingTime": 1
+    },
+    {
+      "title": "每日一题--求超大数的各位数字和",
+      "date": "2020-10-07T19:04:32.000Z",
+      "updatedAt": "2020-10-07T19:04:32.000Z",
+      "file": "每日一题--求超大数的各位数字和.md",
+      "slug": "daily-sum-of-digits-super-large-number",
+      "legacySlug": "7bc52da3",
+      "aliases": [
+        "7bc52da3"
+      ],
+      "excerpt": "【题目描述】 输入一个正整数 n，求各位上的数字和。 【输入格式】 一行，包含一个正整数 n，n 最多 200 位。 【输出格式】 一行，一个整数，表示正整数 n 的各位数字之和。 利用字符数组储存这个超大数 如果a\\[\\]是一个字符数组的话，a\\[i\\] '0'就是a\\[i\\]这个字符和‘0’这个",
+      "tags": [
+        "笔记"
+      ],
+      "img": "",
+      "wordCount": 131,
+      "readingTime": 1
     }
   ],
-  "书影记录": [
+  "随笔杂记": [
     {
-      "title": "《德米安》读后有感",
-      "date": "2024-05-01T15:49:07.000Z",
-      "updatedAt": "2024-05-01T15:49:07.000Z",
-      "file": "德米安读后有感.md",
-      "slug": "demian-hermann-hesse-book-review",
-      "legacySlug": "e9ae0e15",
+      "title": "硕士毕业答辩总结",
+      "date": "2026-05-22T02:05:57.000Z",
+      "updatedAt": "2026-05-22T02:05:57.000Z",
+      "file": "硕士毕业答辩总结.md",
+      "slug": "masters-graduation-defense-summary",
+      "legacySlug": "119fbeee",
       "aliases": [
-        "e9ae0e15"
+        "119fbeee"
       ],
-      "excerpt": "最近读了黑塞的《德米安》，这是一个关于一个少年如何在彷徨时找寻自我的故事。故事的主人公叫辛克莱，他出生于一个宗教家庭，父母都是非常善良纯洁的人，小时候的他也非常懂事乖巧，生活在幸福当中。但是有一天他遇到了校园霸凌，他为这件事情使他非常苦恼，也正是因为这件事情使他觉醒了自我，他开始发现世界不是单纯善良",
+      "excerpt": "硕士毕业答辩总结 硕士毕业答辩结束之后，心里一下子空下来很多。回头看这一路，从开题、中期、写小论文、改大论文，到送盲审、做PPT、上台答辩，每一个节点在经历的时候都像是一座山，真正翻过去之后，又觉得很多事情其实都有章可循。 这篇文章算是给自己做一个阶段性复盘，也给后面要毕业的师弟师妹留一点经验。总结",
       "tags": [
-        "书影记录"
+        "随笔杂记"
       ],
       "img": "",
-      "wordCount": 941,
-      "readingTime": 3
+      "wordCount": 2290,
+      "readingTime": 6
     },
     {
-      "title": "一部接地气的国产法律神剧——第二十条",
-      "date": "2024-02-21T09:30:31.000Z",
-      "updatedAt": "2024-02-21T09:30:31.000Z",
-      "file": "一部接地气的国产法律神剧-第二十条.md",
-      "slug": "article-20-movie-review",
-      "legacySlug": "a94b5eff",
+      "title": "RAG图谱实体和边智能合并",
+      "date": "2025-07-13T09:25:50.000Z",
+      "updatedAt": "2025-07-13T09:25:50.000Z",
+      "file": "RAG图谱实体和边智能合并.md",
+      "slug": "rag-graph-entity-edge-intelligent-merge",
+      "legacySlug": "46bbd497",
       "aliases": [
-        "a94b5eff"
+        "46bbd497"
       ],
-      "excerpt": "春节假期末期，我和我爸妈一起去电影院观看了《第二十条》，我和我妈都觉得非常好看。《第二十条》是一部国产法律电影，其剧名指的是我国刑法第二十条关于正当防卫和防卫过当的法律条文。从来没有哪一条法律条文像第二十条这样容易引起争议。试想一下，如果一名歹徒要拿刀杀你，你在情急之中找到另外一把凶器并且将他反杀，",
+      "excerpt": "RAG图谱实体和边智能合并 调研 graphRAG 方法：精确字符匹配 对具有相同title和type的实体进行合并，直接将description相加 对具有相同source和target的边进行合并，直接将description相加 优点：速度快 缺点：精度低，比如“苹果公司”和“Apple In",
       "tags": [
-        "书影记录"
+        "随笔杂记",
+        "技能分享"
       ],
-      "img": "",
-      "wordCount": 671,
-      "readingTime": 2
-    },
-    {
-      "title": "《置身事内》读书笔记",
-      "date": "2023-12-11T12:55:26.000Z",
-      "updatedAt": "2023-12-11T12:55:26.000Z",
-      "file": "置身事内读书笔记.md",
-      "slug": "zhi-shen-shi-nei-reading-notes",
-      "legacySlug": "1e3d20cb",
-      "aliases": [
-        "1e3d20cb"
-      ],
-      "excerpt": "《置身事内》是复旦大学经济学院副教授兰小欢的科普读物。兰教授写这本书的目的是让更多的国人了解我国的经济政策。过去十年，我国的经济发展可以用“起飞”二字来形容。一提到中国经济，大家都非常自信且乐观的。但是到了疫情结束后的2023年，大家明显感到经济增速放缓了，生活和工作压力变大了。对于我们大学生来说，",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 562,
-      "readingTime": 2
-    },
-    {
-      "title": "《1984》读书笔记",
-      "date": "2023-05-01T16:35:22.000Z",
-      "updatedAt": "2023-05-01T16:35:22.000Z",
-      "file": "《1984》读书笔记.md",
-      "slug": "1984-reading-notes",
-      "legacySlug": "72d96981",
-      "aliases": [
-        "72d96981"
-      ],
-      "excerpt": "1984的作者是英国社会评论家乔治奥威尔，这个人比较擅长写政治寓言，他的另一本《动物农场》我也读过。英国人在社会形态这个问题上的思考真是比较深入，16世纪文艺复兴时期，英国的莫尔就提出了空想社会主义（马克思的科学社会主义的前身）；后来19世纪英国人率先搞起了资产阶级革命，号称“自由、平等”；到了20",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 456,
-      "readingTime": 2
-    },
-    {
-      "title": "《肠子的小心思》——读书笔记",
-      "date": "2023-01-28T09:57:02.000Z",
-      "updatedAt": "2023-01-28T09:57:02.000Z",
-      "file": "《肠子的小心思》——读书笔记.md",
-      "slug": "gut-book-review",
-      "legacySlug": "4bf66344",
-      "aliases": [
-        "4bf66344"
-      ],
-      "excerpt": "我是一个肠胃经常出毛病的人。最近闲逛豆瓣，发现了这本评分高达8.9分的有关肠子的医学科普书籍，赶紧买回来看看它能对我有什么帮助，看完之后果然受益匪浅。作者是德国的一名医学博士，她用幽默风趣的语言向我们揭示了很多藏在科研论文中的关于肠胃的知识，这些知识能够很好的指引我们的饮食、排泄、作息等日常生活习惯",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1249,
-      "readingTime": 4
-    },
-    {
-      "title": "《悉达多》——人生就是在不断的体验与感悟",
-      "date": "2022-11-12T06:20:24.000Z",
-      "updatedAt": "2022-11-12T06:20:24.000Z",
-      "file": "《悉达多》-人生就是在不断的体验与感悟.md",
-      "slug": "siddhartha-book-review-life-experience",
-      "legacySlug": "68349a2c",
-      "aliases": [
-        "68349a2c"
-      ],
-      "excerpt": "《悉达多》 故事的背景发生在印度，青年的悉达多是婆罗门（印度种姓制度中的最高等级）之子，他幼年时勤勉好学，聪慧非凡，长相俊美。大家都爱戴他，认为他一定能成为伟大的贤士。可是悉达多自己却感受不到喜悦，他认为父辈传授给他的知识还远远不够，无法盛满精神的容器，满足他焦渴的灵魂。他感到非常迷茫，灵魂悸动不安",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1727,
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1752398862313-32e9ba22-ac09-48bc-a806-3c72d70f97b0.png",
+      "wordCount": 1642,
       "readingTime": 5
     },
     {
-      "title": "《乡土中国》读书笔记",
-      "date": "2022-07-01T12:32:23.000Z",
-      "updatedAt": "2022-07-01T12:32:23.000Z",
-      "file": "《乡土中国》读书笔记.md",
-      "slug": "from-the-soil-reading-notes",
-      "legacySlug": "29b4acc1",
+      "title": "深度学习模型图表理解chart2txt-8个模型对比实验",
+      "date": "2025-06-10T08:48:23.000Z",
+      "updatedAt": "2025-06-10T08:48:23.000Z",
+      "file": "深度学习模型图表理解chart2txt-8个模型对比实验.md",
+      "slug": "deep-learning-chart-understanding-chart2txt-8-models-comparison",
+      "legacySlug": "e9dd83c6",
       "aliases": [
-        "29b4acc1"
+        "e9dd83c6"
       ],
-      "excerpt": "《乡土中国》由费孝通先生的14篇论文组成，其内容是对中国社会基本结构的深入剖析。其中《差序格局》一篇最让我印象深刻。该书并不难读，但若要想全部理解还需花点功夫。在这里我是浅读后浅记一下笔记，防止读完后一无所获。 乡土本色 总体介绍乡土中国 土气（指泥土，我们的民族从泥土里长出来光荣的历史，当然也要受",
+      "excerpt": "背景 为了实现RAG图表理解，测试多模态大模型和一些最新的chart2txt方法 多模态大模型测试 Prompt 测试环境：3090单卡 测试效果 模型 数据1：饼图 数据2：折线图 数据3：流程图 评价 MiniCPM V 2 6 vllm 这张饼图显示了2023年美国艺术类别分布。最大的部分是视",
       "tags": [
-        "书影记录"
+        "随笔杂记"
       ],
-      "img": "",
-      "wordCount": 1041,
-      "readingTime": 3
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//img1749543589300-bf8e1d05-b85e-4da7-b535-e77ac6cdc244.png",
+      "wordCount": 8750,
+      "readingTime": 22
     },
     {
-      "title": "《写给大家看的设计书》读书笔记",
-      "date": "2022-06-14T11:19:28.000Z",
-      "updatedAt": "2022-06-14T11:19:28.000Z",
-      "file": "《写给大家看的设计书》读书笔记.md",
-      "slug": "non-designers-design-book-reading-notes",
-      "legacySlug": "76de9d1d",
+      "title": "品酒🍶——古井贡酒第六代55度",
+      "date": "2024-12-09T14:49:43.000Z",
+      "updatedAt": "2024-12-09T14:49:43.000Z",
+      "file": "品酒-古井贡酒第六代55度.md",
+      "slug": "gujing-gongjiu-6th-gen-55-degree-tasting",
+      "legacySlug": "11baea90",
       "aliases": [
-        "76de9d1d"
+        "11baea90"
       ],
-      "excerpt": "写给大家看的设计书 本书作者是美国著名设计师Robin Williams，Mac爱好者（因为我也喜欢Mac，所以强调一下这个）。 这是一本写给非设计专业人士看的设计科普类数据，介绍了有关设计的四个基本原则、颜色运用、字体搭配等内容。语言通俗易懂，由易到难，循序渐进，逻辑清晰，有丰富的图片和案例，是一",
+      "excerpt": "古井贡酒第六代55度 香型：浓香型 度数：55 原料：高粱、大米、小麦、糯米、玉米 产地：安徽亳州 价格：72元/500ml 品鉴感受 闻起来清香中带有一点寒气。入口微甜，后调偏烈，窖泥味有，但很淡，吞咽时有点辣，感觉酒精味比较重，不是很喜欢。",
       "tags": [
-        "书影记录"
+        "随笔杂记"
       ],
-      "img": "",
-      "wordCount": 707,
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241209225923467.png",
+      "wordCount": 90,
+      "readingTime": 1
+    },
+    {
+      "title": "品酒（尊美醇Jameson）",
+      "date": "2024-11-04T15:18:54.000Z",
+      "updatedAt": "2024-11-04T15:18:54.000Z",
+      "file": "品酒尊美醇Jameson.md",
+      "slug": "jameson-irish-whiskey-tasting",
+      "legacySlug": "b9f36e78",
+      "aliases": [
+        "b9f36e78"
+      ],
+      "excerpt": "尊美醇Jameson 产地 ：爱尔兰。其最初在都柏林的弓街酿酒厂生产，1975 年 7 月开始转移到爱尔兰科克郡的米德尔顿酿酒厂。 度数 ：40% vol。 酿造工艺 ：采用三重蒸馏工艺。把已发芽与未发芽的大麦放到一起发酵，成品要经过三次蒸馏并在橡木桶中经历 5 7 年以上的熟成，然后还需要加入一定",
+      "tags": [
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20241104232932122.png",
+      "wordCount": 460,
       "readingTime": 2
     },
     {
-      "title": "《从零开始的女性主义》读后有感",
-      "date": "2022-05-06T09:32:20.000Z",
-      "updatedAt": "2022-05-06T09:32:20.000Z",
-      "file": "《从零开始的女性主义》读后有感.md",
-      "slug": "feminism-from-zero-reading-notes",
-      "legacySlug": "f230d573",
+      "title": "品酒🍶（古井贡酒-古8）",
+      "date": "2024-09-19T15:38:28.000Z",
+      "updatedAt": "2024-09-19T15:38:28.000Z",
+      "file": "品酒（古井贡酒-古8）.md",
+      "slug": "wine-tasting-gujing-gongjiu-gu-8",
+      "legacySlug": "5086af34",
       "aliases": [
-        "f230d573"
+        "5086af34"
       ],
-      "excerpt": "《从零开始的女性主义》 “女性主义”其实就是“女权主义”，只不过后者在大家的印象里有贬义的意味，所以换了一种说法。“女权”这个词在近几年特别火，有很多人抨击，也总有人为它辩护，还有人趁乱在其中捣鬼。那么为什么会产生女权主义呢？它到底是怎样的斗争呢？我很好奇，所以去阅读了这本豆瓣热榜第一名的《从零开始",
+      "excerpt": "古 8 香型：浓香型 原料：水、高粱、大米、小麦、糯米、玉米 酒精度：42 度 产地：安徽亳州 价格：220 元/ 425ml 品尝感受：入口柔，后劲小，感觉像是稀释了的古 16，毕竟是低度酒，喝起来没有那么浓郁，但是古井的窖泥味儿还是很明显的。相比于 42 度的红盖汾酒来说，好喝多了。（虽然它两价",
       "tags": [
-        "书影记录"
+        "随笔杂记"
       ],
-      "img": "",
-      "wordCount": 1377,
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/WechatIMG374.jpeg",
+      "wordCount": 189,
+      "readingTime": 1
+    },
+    {
+      "title": "绿植盆栽攻略",
+      "date": "2024-08-28T10:24:07.000Z",
+      "updatedAt": "2024-08-28T10:24:07.000Z",
+      "file": "绿植盆栽攻略.md",
+      "slug": "indoor-green-potted-plant-care-guide",
+      "legacySlug": "5953ed50",
+      "aliases": [
+        "5953ed50"
+      ],
+      "excerpt": "分类 以下是常见的绿植盆栽分类： 一、观叶类绿植盆栽 植物类型 ：绿萝、吊兰、龟背竹、发财树、文竹、虎皮兰等。 养护难度 ：总体来说养护难度相对较低。绿萝和吊兰适应能力强，能在不同环境下生长，只要保证适量的水分和散射光即可。龟背竹喜欢温暖湿润的环境，但也比较耐阴。发财树需注意浇水不能过多，否则容易烂",
+      "tags": [
+        "随笔杂记",
+        "笔记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com//imgbbf772ea317555ba7ac144f9318fc7f.jpg",
+      "wordCount": 1404,
       "readingTime": 4
     },
     {
-      "title": "《无人生还》读后有感",
-      "date": "2022-04-30T09:58:36.000Z",
-      "updatedAt": "2022-04-30T09:58:36.000Z",
-      "file": "《无人生还》读后有感.md",
-      "slug": "and-then-there-were-none-book-review",
-      "legacySlug": "7d1d0e91",
+      "title": "品酒🍶(古井贡酒-古16)",
+      "date": "2024-08-24T14:52:24.000Z",
+      "updatedAt": "2024-08-24T14:52:24.000Z",
+      "file": "品酒(古井贡酒-古16) .md",
+      "slug": "gujing-gongjiu-gu-16-tasting",
+      "legacySlug": "a2aab3af",
       "aliases": [
-        "7d1d0e91"
+        "a2aab3af"
       ],
-      "excerpt": "作者 《无人生还》是英国作家女侦探小说家阿加莎·克里斯蒂，其一生写过80部推理小说，可谓著作等身，被誉为举世公认的侦探小说女王。《无人生还》写于1939年。 情节 小说是以上帝视角叙述的，开头首先介绍了十位被“欧文”邀请到岛上的客人，他们的背景都截然不同，有法官、医生、警督等等，但他们有个共同的特点",
+      "excerpt": "外观 古 16 这个酒属于古井贡酒系列的中端，品质还是不错的，包装非常精美，酒瓶是大红色，喜庆，很适合婚宴使用。 购买经历 家里有几瓶古 16，我一直想拿一瓶尝尝，但我妈死活不让。于是我就想了办法套路我妈，结果她还真收了我的钱，这是我没想到的O.o。 品鉴 原料 ：高粱、大米、小麦、糯米、玉米（还挺",
       "tags": [
-        "书影记录"
+        "随笔杂记"
       ],
-      "img": "",
-      "wordCount": 582,
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/1724511302687.jpg",
+      "wordCount": 236,
+      "readingTime": 1
+    },
+    {
+      "title": "品酒🍶（高脖绿瓶西凤酒陕西版）",
+      "date": "2024-08-21T23:09:53.000Z",
+      "updatedAt": "2024-08-21T23:09:53.000Z",
+      "file": "品酒（高脖绿瓶西凤酒陕西版）.md",
+      "slug": "wine-tasting-green-bottle-xifengjiu-shaanxi",
+      "legacySlug": "a6894469",
+      "aliases": [
+        "a6894469"
+      ],
+      "excerpt": "今天品一下高脖绿瓶西凤酒，这是凤香型的代表酒。这个酒也是出了名的乱，有陕西版比省外版的好喝，批次早的比批次晚的好喝。我买的版本是 2023 年的陕西版。 原料 ：高粱、大麦、小麦、豌豆。 酒精度 ：55 度。 价格 ：约 50 元/500ml。 闻香 ：闻着像黄盖汾（清香型），有水果香，仔细闻还能闻",
+      "tags": [
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240821232051784.png",
+      "wordCount": 174,
+      "readingTime": 1
+    },
+    {
+      "title": "品酒🍶（国窖 1573）",
+      "date": "2024-08-17T22:01:53.000Z",
+      "updatedAt": "2024-08-17T22:01:53.000Z",
+      "file": "品酒（国窖 1573）.md",
+      "slug": "wine-tasting-guojiao-1573",
+      "legacySlug": "7af852ce",
+      "aliases": [
+        "7af852ce"
+      ],
+      "excerpt": "今天品一下国窖 1573，拿泸州老窖特曲做个对比。 香味 ：国窖 1573 跟泸州老窖特曲的香味基调十分相似，但仔细闻有细微差别，国窖 1573 更加轻盈，丰富，有果香味儿。而特曲的窖泥味儿偏重，会更沉闷一些。 品尝 ：入口之后，国窖的这种轻盈感更加明显。无论是入口还是吞咽，国窖都要比特曲更绵柔、清",
+      "tags": [
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/image-20240817222031606.png",
+      "wordCount": 176,
+      "readingTime": 1
+    },
+    {
+      "title": "新加坡访学旅行",
+      "date": "2024-08-14T08:01:42.000Z",
+      "updatedAt": "2024-08-14T08:01:42.000Z",
+      "file": "新加坡访学旅行.md",
+      "slug": "singapore-ntu-study-tour-travel",
+      "legacySlug": "fe7200e4",
+      "aliases": [
+        "fe7200e4"
+      ],
+      "excerpt": "读万卷书，行万里路。因为今年学校出了一个境外访学资助政策，所以就申请了为期七天的新加坡南洋理工大学的访学项目。这是我第一次出国，有很多新奇体验，在这里分享一下 新加坡 新加坡位于东南亚马来半岛南端、马六甲海峡出入口，新加坡岛东西约50公里，南北约26公里，国土面积仅733.1平方千米（2021年）。",
+      "tags": [
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_20240808_192834.jpg",
+      "wordCount": 1833,
+      "readingTime": 5
+    },
+    {
+      "title": "品酒🍶（古井贡酒-古20）以及小插曲",
+      "date": "2024-07-27T23:01:53.000Z",
+      "updatedAt": "2024-07-27T23:01:53.000Z",
+      "file": "品酒（古井贡酒-古20）.md",
+      "slug": "gujing-gongjiu-gu-20-tasting",
+      "legacySlug": "7120d25f",
+      "aliases": [
+        "7120d25f"
+      ],
+      "excerpt": "这个酒在安徽喝的是非常多的，我跟我爸去参加应酬的时候经常喝，但是之前我不认识酒，今天买来尝尝，果然是熟悉的味道。 我买的是小瓶装100ml，80 块钱，瓶子就巴掌大，还送了个小袋子，挺可爱的。 口感：入口非常绵柔，没有任何刺激，入口后的味道非常独特，感觉就像是烟雨江南里微风吹过雨水淋湿泥土再混杂着青",
+      "tags": [
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%8F%A420.jpg",
+      "wordCount": 394,
+      "readingTime": 1
+    },
+    {
+      "title": "品酒🍶（汾酒黄盖&泸州老窖特曲经典）",
+      "date": "2024-07-23T23:18:53.000Z",
+      "updatedAt": "2024-07-23T23:18:53.000Z",
+      "file": "品酒（汾酒黄盖&泸州老窖特曲经典）.md",
+      "slug": "wine-tasting-fenjiu-huanggai-luzhou-laojiao-tequ",
+      "legacySlug": "886209a4",
+      "aliases": [
+        "886209a4"
+      ],
+      "excerpt": "最近改论文压力挺大，经常失眠。品点小酒🍶，微醺更容易入睡。 汾酒黄盖 ：清香型。闻起来有股淡淡的清香（有一点点像山西老陈醋，但是没有那么腻，是很清淡的），喝起来也挺香，吞下之后香味会在嘴巴里回荡一小会儿。整个酒都是比较柔的，喝起来比较舒服，大部分人都能接受。 泸州老窖特曲经典 ：浓香型。闻起来是泸",
+      "tags": [
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E5%93%81%E9%85%92%E6%B1%BE%E9%85%92%E6%B3%B8%E5%B7%9E%E8%80%81%E7%AA%96.jpg",
+      "wordCount": 181,
+      "readingTime": 1
+    },
+    {
+      "title": "艺术品般的游戏—《荒野大镖客救赎2》",
+      "date": "2023-09-19T08:59:13.000Z",
+      "updatedAt": "2023-09-19T08:59:13.000Z",
+      "file": "艺术品般的游戏—荒野大镖客2救赎.md",
+      "slug": "red-dead-redemption-2-game-review",
+      "legacySlug": "32769736",
+      "aliases": [
+        "32769736"
+      ],
+      "excerpt": "“地表最强游戏公司” 大名鼎鼎的侠盗猎车手系列(GTA, Grand Theft Auto)在游戏界应该无人不知，无人不晓，而由原班人马（R星，Rockstar Games）打造的荒野大镖客系列（RD, Red Dead）的知名度稍差一些。这可能是因为荒野大镖客系列目前仅有3 部作品（GTA系列有 ",
+      "tags": [
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9Cec96892d0905de1851aeaca8df1c310d18f58540.jpg@1256w_708h_!web-article-pic%E2%80%9D%E5%A4%A7.jpeg",
+      "wordCount": 1925,
+      "readingTime": 5
+    },
+    {
+      "title": "苏州印象",
+      "date": "2023-08-12T12:06:07.000Z",
+      "updatedAt": "2023-08-12T12:06:07.000Z",
+      "file": "苏州印象.md",
+      "slug": "suzhou-impressions",
+      "legacySlug": "17a81efd",
+      "aliases": [
+        "17a81efd"
+      ],
+      "excerpt": "2023年8月3日 5日，我来苏州啦。一提到苏州，我首先想到的是美丽的江南水乡，然后又想到了昆山的各种现代化工厂，科技与人文是如何交织在这一座城市的呢？我非常好奇，终于有机会能一探究竟！ 从蚌埠坐绿皮火车仅需不到5小时就能到达苏州站（票价62.5），苏州站位于苏州的中心区域——姑苏区（听名字就觉得好",
+      "tags": [
+        "随笔杂记",
+        "笔记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/%E2%80%9CIMG_8237%E2%80%9D%E5%A4%A7.jpeg",
+      "wordCount": 647,
       "readingTime": 2
     },
     {
-      "title": "《失乐园》读后有感",
-      "date": "2022-04-15T08:38:22.000Z",
-      "updatedAt": "2022-04-15T08:38:22.000Z",
-      "file": "《失乐园》读后有感.md",
-      "slug": "a-lost-paradise-book-review",
-      "legacySlug": "23ee6bf0",
+      "title": "ChinaVis重庆之旅",
+      "date": "2023-07-31T11:17:10.000Z",
+      "updatedAt": "2023-07-31T11:17:10.000Z",
+      "file": "ChinaVis重庆之旅.md",
+      "slug": "chinavis-chongqing-trip",
+      "legacySlug": "8cb0549f",
       "aliases": [
-        "23ee6bf0"
+        "8cb0549f"
       ],
-      "excerpt": "故事简叙 久木是一家出版社的编辑，人到中年，事业不会有进一步发展了，对家人的感情也是平平淡淡的，生活只是一日复一日，清闲无聊得很。 一次偶然的工作聚会上，久木认识了凛子，对她产生了兴趣。凛子30岁，正是端庄美丽之时，但她的婚姻生活并不美好，丈夫忙于工作，无论是在感情上还是在性上都不能满足凛子。但凛子",
+      "excerpt": "ChinaVis大会于2023年7月21日 24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～ 出发！ 第一次坐飞机，飞机型号是波音737 800，起飞的时候感觉好神奇，在空中的景色也非常美。 重庆火锅 到达重庆的第一顿饭当然是重庆火锅，",
       "tags": [
-        "书影记录"
+        "随笔杂记",
+        "笔记"
       ],
-      "img": "",
-      "wordCount": 1237,
-      "readingTime": 4
-    },
-    {
-      "title": "《邓小平时代》——改革开放的总设计师",
-      "date": "2022-03-18T10:32:09.000Z",
-      "updatedAt": "2022-03-18T10:32:09.000Z",
-      "file": "《邓小平时代》——改革开放的总设计师.md",
-      "slug": "deng-xiaoping-era-book-review",
-      "legacySlug": "95f646c6",
-      "aliases": [
-        "95f646c6"
-      ],
-      "excerpt": "邓小平时代 所有中国人都知道，1949年建国时中国是一个落后封闭的社会主义国家（和现在的朝鲜差不多）。但是在80年代，社会主义市场经济取代了计划经济，对外封闭变成了改革开放。90年代，中国经济一路起飞，国际地位迅速提高。直到现在，中国已经成为世界最强的国家之一。 中国是如何崛起的？在大一时，孙运雷老",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1626,
-      "readingTime": 5
-    },
-    {
-      "title": "《雪国》读书笔记",
-      "date": "2022-02-13T15:38:09.000Z",
-      "updatedAt": "2022-02-13T15:38:09.000Z",
-      "file": "《雪国》读书笔记.md",
-      "slug": "snow-country-reading-notes",
-      "legacySlug": "c04d3ca3",
-      "aliases": [
-        "c04d3ca3"
-      ],
-      "excerpt": "雪国 雪国是远离繁华都市，如世外桃源一般的地方。在小说的开头写道： 穿过县界长长的隧道，便是雪国。 夜空下一片白茫茫。 主人公岛村每年都会独自来雪国度假，在这里他结识了一个叫驹子的姑娘，岛村被驹子的活泼美丽打动，两人情投意合，开始交往。同时另一个叫叶子的姑娘，她纯粹空灵的气质，更让岛村着迷。故事的情",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1876,
-      "readingTime": 5
-    },
-    {
-      "title": "《半泽直树》观后有感",
-      "date": "2022-02-01T13:52:23.000Z",
-      "updatedAt": "2022-02-01T13:52:23.000Z",
-      "file": "《半泽直树》观后有感.md",
-      "slug": "hanzawa-naoki-review",
-      "legacySlug": "8c24a0e2",
-      "aliases": [
-        "8c24a0e2"
-      ],
-      "excerpt": "半泽直树 半泽直树是日本电视剧《半泽直树》中的主人公。半泽的家族经营了一家小公司，在半泽年幼时，日本遇到了经济泡沫，公司急需贷款，但银行对此不但见死不救，还落井下石，逼死了半泽的父亲。大学毕业后，半泽竟选择进入银行工作，立志要找到害死父亲的人，并完成复仇。电视剧的主要讲述的，就是半泽如何传奇般的一步",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 813,
-      "readingTime": 3
-    },
-    {
-      "title": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴",
-      "date": "2022-01-17T00:11:13.000Z",
-      "updatedAt": "2022-01-17T00:11:13.000Z",
-      "file": "《明天也是小春日和》：那并不耀眼的初冬暖阳，恰似你日复一日最长情的陪伴.md",
-      "slug": "ashita-mo-koharu-biyori-book-review",
-      "legacySlug": "410258c9",
-      "aliases": [
-        "410258c9"
-      ],
-      "excerpt": "明天也是小春日和 英子内心一直有一个田园梦，他的丈夫修一是建筑师，年轻时工作十分忙碌，但她始终支持丈夫的志愿。退休后，修一履行他的承诺，带着英子乔迁田野，在这里植树，建屋，耕作。 “小春日和”在日语中意指“晚秋到初冬里阳光和煦的好天气”。本书介绍了相伴走过近六十年的老人，在以自然为友，彼此相伴的每一",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "https://cs.aiupc.xyz/img/%E6%98%8E%E5%A4%A9%E4%B9%9F%E6%98%AF%E5%B0%8F%E6%98%A5%E6%97%A5%E5%92%8C1%20(1)%E6%97%8B%E8%BD%AC.jpg",
-      "wordCount": 1089,
-      "readingTime": 3
-    },
-    {
-      "title": "《史蒂夫·乔布斯传》读书笔记",
-      "date": "2021-12-16T22:57:46.000Z",
-      "updatedAt": "2021-12-16T22:57:46.000Z",
-      "file": "《史蒂夫·乔布斯传》读书笔记.md",
-      "slug": "steve-jobs-biography-reading-notes",
-      "legacySlug": "0c6d1bcd",
-      "aliases": [
-        "0c6d1bcd"
-      ],
-      "excerpt": "图书简介 《史蒂夫·乔布斯传》是美国作家沃尔特·艾萨克森为苹果公司创始人史蒂夫·乔布斯所作的传记，记录了乔布斯从童年开始，到卸任苹果公司CEO所发生的故事。该书是乔布斯唯一授权的传记，但乔布斯从未干涉艾萨克森的写作，甚至乔布斯从来没有阅读过本书，因此相比于其他名人的传记，本书更加客观真实。它为我们提",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 2419,
-      "readingTime": 7
-    },
-    {
-      "title": "黄山归来不看岳——黄山之旅",
-      "date": "2021-10-06T08:28:08.000Z",
-      "updatedAt": "2021-10-06T08:28:08.000Z",
-      "file": "黄山归来不看岳——黄山之旅.md",
-      "slug": "huangshan-mountain-trip",
-      "legacySlug": "2812cd66",
-      "aliases": [
-        "2812cd66"
-      ],
-      "excerpt": "时间 2021年国庆期间，10月3日至5日。 第一站：翡翠谷 翡翠谷是一个很经典的景点。据说是1988年有36位来自上海的青年男女邂逅于这条峡谷，当时景区尚未开发，他们一路上互相搀扶，克服重重困难，最后有10队成了情侣，所以翡翠谷又名情人谷。 翡翠谷是一条长长的峡谷，一路走进去有很多大大小小的水潭，",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1256,
-      "readingTime": 4
-    },
-    {
-      "title": "《人类简史》读后有感",
-      "date": "2021-08-16T09:03:38.000Z",
-      "updatedAt": "2021-08-16T09:03:38.000Z",
-      "file": "《人类简史》读后有感.md",
-      "slug": "sapiens-a-brief-history-of-humankind-book-review",
-      "legacySlug": "05810db8",
-      "aliases": [
-        "05810db8"
-      ],
-      "excerpt": "一句话概述 《人类简史》在2012年以希伯来文出版。本书从人类的起源开始谈，谈到人类的认知革命、农业革命、再谈到人类的融合统一、科学革命，最后谈一谈人类的未来。构造了一个横跨人类历史的巨大历史框架。 作者简介 作者是以色列年轻人 尤瓦尔·赫拉利 （出书时不到40岁），现在是牛津大学历史学博士。简史三",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1480,
-      "readingTime": 4
-    },
-    {
-      "title": "87《红楼梦》观之有感",
-      "date": "2021-07-14T21:56:23.000Z",
-      "updatedAt": "2021-07-14T21:56:23.000Z",
-      "file": "87《红楼梦》观之有感.md",
-      "slug": "87-dream-of-the-red-chamber-review",
-      "legacySlug": "bb9c1edf",
-      "aliases": [
-        "bb9c1edf"
-      ],
-      "excerpt": "87版《红楼梦》 87红楼梦拍得是相当好的。小时候看不懂，不以为然。后来看了新版红楼梦（10版），才知道87版红楼梦是多么经典。导演王扶林拿捏了每一处细节，用高超的手法尽可能地还原了红楼梦原著。为拍摄此剧付出的代价也远高于现代拍摄的古装剧。演员也各个都是颜值天花板，看得好不过瘾！ 看看拍这部剧的投资",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 2443,
-      "readingTime": 7
-    },
-    {
-      "title": "《京华烟云》读后有感",
-      "date": "2021-06-23T23:42:43.000Z",
-      "updatedAt": "2021-06-23T23:42:43.000Z",
-      "file": "《京华烟云》读后有感.md",
-      "slug": "moment-in-peking-book-review",
-      "legacySlug": "f5d6357f",
-      "aliases": [
-        "f5d6357f"
-      ],
-      "excerpt": "阅读经历 学期初，室友刘桐荐此书，从图书馆借阅，全书600页。初捧读，爱不释手，觉此书为模仿红楼梦所著，多描写封建大家族男女情爱之事。期末，又有闲，再捧读。读罢，忽觉此书内涵之丰富，有深刻历史背景。 此书在文学上的地位虽比不上四大名著之一的《红楼梦》，但绝对算是一本旷世巨著。作为一个普通读者，浅读完",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1794,
-      "readingTime": 5
-    },
-    {
-      "title": "《消失的13级台阶》读后感",
-      "date": "2021-06-06T22:24:13.000Z",
-      "updatedAt": "2021-06-06T22:24:13.000Z",
-      "file": "《消失的13级台阶》读后感.md",
-      "slug": "thirteen-steps-kazuaki-takano-book-review",
-      "legacySlug": "7e8b71ec",
-      "aliases": [
-        "7e8b71ec"
-      ],
-      "excerpt": "我用不到一周的时间读完了这本《消失的13级台阶》，这本书是典型的日系推理小说，作者高野和明用电影式的叙述手法，清晰地讲述了一起跨度长达10年并且牵涉到多起犯罪事件的故事。读完之后，我深感震撼，不仅仅是因为精彩的故事情节和出乎意料的结局，还因为本书揭露了深刻的社会现实问题，生活在阳光下的我们或许从未关",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1009,
-      "readingTime": 3
-    },
-    {
-      "title": "《如何阅读一本书》读后感",
-      "date": "2021-04-23T18:16:55.000Z",
-      "updatedAt": "2021-04-23T18:16:55.000Z",
-      "file": "《如何阅读一本书》读后感.md",
-      "slug": "how-to-read-a-book-review",
-      "legacySlug": "84d3a75c",
-      "aliases": [
-        "84d3a75c"
-      ],
-      "excerpt": "今天是世界读书日，我想给大家推荐一本《如何阅读一本书》。 基本介绍 《如何阅读一本书》初版于1940年，1972年又大幅增订改写为新版，是一本有六十多年历史经典名著。作者是美国作家\\[莫提默·J·艾德勒\\]和\\[查尔斯·范多伦\\]，二者都参加过《大英百科全书》的编写工作。 如书名所见，这本书的主题就",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 1019,
-      "readingTime": 3
-    },
-    {
-      "title": "《菊次郎的夏天》观后感",
-      "date": "2021-04-05T23:25:45.000Z",
-      "updatedAt": "2021-04-05T23:25:45.000Z",
-      "file": "《菊次郎的夏天》观后感.md",
-      "slug": "kikujiros-summer-movie-review",
-      "legacySlug": "a93040b6",
-      "aliases": [
-        "a93040b6"
-      ],
-      "excerpt": "话不多说，看看豆瓣评分吧： 8.8分，对于一个喜剧电影来说，算是不可多得的高分了。排名116名，妥妥的经典。豆瓣评分很多人都有争议，但其实我蛮认同豆瓣评分的。在豆瓣上，评分较高的电影往往都不是靠炫酷的特效或者出名的演员，而是看一部电影是否有内涵，有高超的艺术表现力，这和我评判一部电影是不是“好”电影",
-      "tags": [
-        "书影记录"
-      ],
-      "img": "",
-      "wordCount": 584,
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_7704.jpeg",
+      "wordCount": 705,
       "readingTime": 2
     },
     {
-      "title": "《新喜剧之王》观后感",
-      "date": "2021-02-15T20:18:05.000Z",
-      "updatedAt": "2021-02-15T20:18:05.000Z",
-      "file": "《新喜剧之王》观后感.md",
-      "slug": "the-new-king-of-comedy-review",
-      "legacySlug": "70f77e2f",
+      "title": "组装一台新的电脑",
+      "date": "2023-03-01T00:57:51.000Z",
+      "updatedAt": "2023-03-01T00:57:51.000Z",
+      "file": "组装一台新的电脑.md",
+      "slug": "build-new-pc-computer-assembly",
+      "legacySlug": "8f9d9179",
       "aliases": [
-        "70f77e2f"
+        "8f9d9179"
       ],
-      "excerpt": "《喜剧之王》是一部周星驰导演的经典电影，但我仅仅有所耳闻，并没有看过全片。去年春节时，周星驰导演的《新喜剧之王》上映，当时我在准备高考，所以没有任何关注，也不知道这部电影被网友称为烂片。直到今天，我在b站找电影看时偶然发现了这部电影，就凭这部电影是周星驰导演，我果断觉得点进去看看。 剧情 主要讲的就",
+      "excerpt": "从Windows换到Mac，获得了很多东西： 又轻又薄，续航还长，背出去上课自习非常方便（隔壁背着游戏本的同学都羡慕哭了）； 一块素质极高的屏幕，看文献非常舒服； 优秀的软件生态，在Mac上可以使用很多优质软件，比如Mac版清爽的qq； 优秀的硬件生态，与我的iPhone互联，同步记事本，提醒事项等",
       "tags": [
-        "书影记录"
+        "随笔杂记",
+        "技能分享"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_3956.jpeg",
+      "wordCount": 622,
+      "readingTime": 2
+    },
+    {
+      "title": "星露谷物语为什么这么好玩？",
+      "date": "2022-08-28T14:35:36.000Z",
+      "updatedAt": "2022-08-28T14:35:36.000Z",
+      "file": "星露谷物语为什么这么好玩？.md",
+      "slug": "why-stardew-valley-is-so-fun",
+      "legacySlug": "2af8b0db",
+      "aliases": [
+        "2af8b0db"
+      ],
+      "excerpt": "星露谷物语 星露谷物语是一款农场模拟经营游戏，但除了种田之外，游戏还包括了钓鱼、挖矿、杀怪、结婚、剧情任务等丰富的游戏内容。初看游戏大小，只有600mb，画面是粗糙的像素，但当你深入品玩这个游戏后，你会被这个游戏庞大的世界观震惊，你真的很难相信，它的作者是个独立开发者。 没有显式的游戏教程 游戏的背",
+      "tags": [
+        "随笔杂记"
       ],
       "img": "",
-      "wordCount": 987,
+      "wordCount": 740,
+      "readingTime": 2
+    },
+    {
+      "title": "我的第一把客制化键盘",
+      "date": "2022-08-16T07:41:28.000Z",
+      "updatedAt": "2022-08-16T07:41:28.000Z",
+      "file": "我的第一把客制化键盘.md",
+      "slug": "my-first-custom-mechanical-keyboard",
+      "legacySlug": "6f652b2b",
+      "aliases": [
+        "6f652b2b"
+      ],
+      "excerpt": "作为计算机专业的学生和游戏爱好者，每天做的最多的事情就是坐在电脑前面敲键盘，俗话说：“工欲善其事，必先利其器”，要追求更高效的工作方式和游戏体验，打造一把趁手的高端的机械键盘很有必要。 机械键盘和薄膜键盘 不会有人现在还不知道机械键盘和薄膜键盘的区别吧？它们两个架构不同，薄膜键盘是指通过胶碗来完成键",
+      "tags": [
+        "技能分享",
+        "随笔杂记"
+      ],
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/IMG_2795.jpeg",
+      "wordCount": 889,
       "readingTime": 3
     },
     {
-      "title": "《华尔街之狼》观后感",
-      "date": "2021-02-11T00:29:07.000Z",
-      "updatedAt": "2021-02-11T00:29:07.000Z",
-      "file": "《华尔街之狼》观后感.md",
-      "slug": "wolf-of-wall-street-movie-review",
-      "legacySlug": "3d41ecc4",
+      "title": "组织一次成功的班级烧烤经验分享",
+      "date": "2022-06-23T04:24:27.000Z",
+      "updatedAt": "2022-06-23T04:24:27.000Z",
+      "file": "组织一次成功的班级烧烤经验分享.md",
+      "slug": "class-bbq-team-building-experience-sharing",
+      "legacySlug": "9d897e60",
       "aliases": [
-        "3d41ecc4"
+        "9d897e60"
       ],
-      "excerpt": "14年的电影，男主是莱昂纳多·迪卡普里奥。晚上12:05分看完这部三个小时的电影，到凌晨4点我都没有睡着觉。 剧情 主要讲的就是一个年轻人去华尔街当股票经理，结果倒霉的是，上班第一天就遇到金融危机。幸运的是，还遇到了人生导师，教他吸大麻打飞机。 公司破产后，他也学会了搞传销（果然在大公司里就是能学到",
+      "excerpt": "准备物资 6月22日，班级组织了一次团建，去轰趴馆（一个双层别墅，有烧烤、厨房、KTV、游戏机、投影仪、麻将、台球等等的地方）早上十点到达，晚上五点离开，吃一个中午饭。因为我对这些玩的东西不感兴趣，想自己动手做一做吃的，所以找了几个人一起做烧烤吃。我列出了要买物品的清单，跟小伙伴一起去超市购买。小伙",
       "tags": [
-        "书影记录"
+        "技能分享",
+        "随笔杂记"
       ],
-      "img": "",
-      "wordCount": 985,
-      "readingTime": 3
+      "img": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/img/烧烤架子上烤羊肉牛肉土豆封面.png",
+      "wordCount": 467,
+      "readingTime": 2
     },
     {
-      "title": "《十二公民》观后感",
-      "date": "2020-12-21T21:58:43.000Z",
-      "updatedAt": "2020-12-21T21:58:43.000Z",
-      "file": "《十二公民》观后感.md",
-      "slug": "12-citizens-movie-review",
-      "legacySlug": "64c15f9f",
+      "title": "带鱼屏真是太太太爽爽爽啦",
+      "date": "2021-07-30T12:46:02.000Z",
+      "updatedAt": "2021-07-30T12:46:02.000Z",
+      "file": "带鱼屏真是太太太爽爽爽啦.md",
+      "slug": "lg-29wk500-ultrawide-monitor-experience",
+      "legacySlug": "a30a3807",
       "aliases": [
-        "64c15f9f"
+        "a30a3807"
       ],
-      "excerpt": "今天和同学们看了电影《十二公民》，有感而发。 十二公民讲的主要是十二位职业，性格各不相同的成年人，受到老师的邀请在政法大学的教室里进行模拟陪审，讨论一起凶杀案的嫌疑人是有罪还是无罪的故事。影片的场景非常简单，绝大部分剧情都发生在那间教室里，但是剧情却一波三折，从最初的十一人投票认为有罪，一人认为无罪",
+      "excerpt": "型号LG 29wk500，入门级带鱼屏 真沉浸感！",
       "tags": [
-        "书影记录"
+        "随笔杂记"
       ],
       "img": "",
-      "wordCount": 1011,
-      "readingTime": 3
+      "wordCount": 14,
+      "readingTime": 1
     },
     {
-      "title": "中国是如何富起来的？",
-      "date": "2020-12-12T12:19:03.000Z",
-      "updatedAt": "2020-12-12T12:19:03.000Z",
-      "file": "中国是如何富起来的？.md",
-      "slug": "how-china-got-rich",
-      "legacySlug": "c2d24b0b",
+      "title": "大物大作业-microbit编程小车",
+      "date": "2021-06-21T22:49:05.000Z",
+      "updatedAt": "2021-06-21T22:49:05.000Z",
+      "file": "大物大作业-microbit编程小车.md",
+      "slug": "microbit-programming-car-physics-project",
+      "legacySlug": "86bb081c",
       "aliases": [
-        "c2d24b0b"
+        "86bb081c"
       ],
-      "excerpt": "我把解放后中国的崛起分为两个阶段，一是1949年至改革开放前（1978年）发展重工业，二是1978年改革开放之后到现在的中国特色社会主义经济。 第一阶段，主要领导人是毛泽东主席，他的伟大之处就在于让中国人民团结起来，组建了强有力的政府，政府的动员能力十分了得，当时人民也非常热血积极，在政府的指挥下完",
+      "excerpt": "起因 做大学物理大作业。张丽红老师给的课题很宽泛，做实物、写小论文都可以。我和何为就寻思着做一辆小车。本来想买树莓派，自己找配件，做一辆智能车，但是时间成本太高，于是就从淘宝上240块钱买了辆青少年编程学习玩具车。 microbit单片机 微软搞的东西，面向青少年学习编程使用。上手十分简单，就真的是",
       "tags": [
-        "书影记录"
+        "随笔杂记"
       ],
       "img": "",
-      "wordCount": 1139,
-      "readingTime": 3
+      "wordCount": 437,
+      "readingTime": 2
     },
     {
-      "title": "《中国的官办经济》读后感",
-      "date": "2020-10-19T18:46:23.000Z",
-      "updatedAt": "2020-10-19T18:46:23.000Z",
-      "file": "《中国的官办经济》读后感.md",
-      "slug": "chinas-state-owned-economy-book-review",
-      "legacySlug": "01bdba8e",
+      "title": "“专利申请”撰写有感",
+      "date": "2021-03-28T20:46:35.000Z",
+      "updatedAt": "2021-03-28T20:46:35.000Z",
+      "file": "“专利申请”撰写有感.md",
+      "slug": "thoughts-on-writing-patent-application",
+      "legacySlug": "3c91c67f",
       "aliases": [
-        "01bdba8e"
+        "3c91c67f"
       ],
-      "excerpt": "本书的目录如下： （一）中国的官办经济 世界上最怪异的经济 （二）官办进出口：从“十个大庆”到八千亿美元外汇储备 （三）官办经济威力初级分析 （四）官办经济 不懂具体经济的老毛同志 （五）官办经济 中国苏联经济模式进阶分析 （六）官办经济 邓小平比拼戈尔巴乔夫 （七）官办经济 “猫摸”二论体现的实验",
+      "excerpt": "从开学开始，我就接到了李昕老师的任务——为我们寒假的成果“一种基于docker和jupyter notebook的复合类型题目在线检测方法”撰写一份“专利申请”，并完成申请。第一作者当然是李昕老师，因为我们的核心代码全是李昕老师写的，第二作者包括我和另外一位贡献较大的成员。申请专利并署名我们既是一种",
       "tags": [
-        "书影记录"
+        "随笔杂记"
       ],
       "img": "",
-      "wordCount": 1251,
-      "readingTime": 4
+      "wordCount": 943,
+      "readingTime": 3
     }
   ]
 }

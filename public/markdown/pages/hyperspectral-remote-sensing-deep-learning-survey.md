@@ -1,6 +1,6 @@
 # 高光谱遥感深度学习调研
 
-> 发布于：2024-11-15 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/hyperspectral-remote-sensing-deep-learning-survey
+> 发布于：2024-11-15 | 分类：笔记 | 原文：https://www.imbailey.cn/post/hyperspectral-remote-sensing-deep-learning-survey
 
 ### 综述
 

@@ -1,6 +1,6 @@
 # 最大子数组和——动态规划、分治
 
-> 发布于：2022-02-28 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/maximum-subarray-sum-dp-divide-conquer
+> 发布于：2022-02-28 | 分类：刷题 | 原文：https://www.imbailey.cn/post/maximum-subarray-sum-dp-divide-conquer
 
 ## 题目
 

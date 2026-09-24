@@ -1,6 +1,6 @@
 # 品酒🍶——古井贡酒第六代55度
 
-> 发布于：2024-12-09 | 分类：随笔杂记 | 原文：https://leyoubaloy.github.io/post/gujing-gongjiu-6th-gen-55-degree-tasting
+> 发布于：2024-12-09 | 分类：随笔杂记 | 原文：https://www.imbailey.cn/post/gujing-gongjiu-6th-gen-55-degree-tasting
 
 ## 古井贡酒第六代55度
 

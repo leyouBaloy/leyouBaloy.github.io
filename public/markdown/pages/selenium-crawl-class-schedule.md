@@ -1,6 +1,6 @@
 # selenium爬教务处课表
 
-> 发布于：2020-11-16 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/selenium-crawl-class-schedule
+> 发布于：2020-11-16 | 分类：刷题 | 原文：https://www.imbailey.cn/post/selenium-crawl-class-schedule
 
 ```
 from selenium import webdriver

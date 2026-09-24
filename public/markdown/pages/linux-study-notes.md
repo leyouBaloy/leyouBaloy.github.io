@@ -1,6 +1,6 @@
 # linux学习笔记
 
-> 发布于：2021-08-08 | 分类：笔记 | 原文：https://leyoubaloy.github.io/post/linux-study-notes
+> 发布于：2021-08-08 | 分类：笔记 | 原文：https://www.imbailey.cn/post/linux-study-notes
 
 ### 安装python
 

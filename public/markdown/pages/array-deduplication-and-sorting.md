@@ -1,6 +1,6 @@
 # 每日一题-数组去重和排序
 
-> 发布于：2020-10-24 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/array-deduplication-and-sorting
+> 发布于：2020-10-24 | 分类：刷题 | 原文：https://www.imbailey.cn/post/array-deduplication-and-sorting
 
 【题目描述】
 

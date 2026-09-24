@@ -1,6 +1,6 @@
 # RAG图谱实体和边智能合并
 
-> 发布于：2025-07-13 | 分类：随笔杂记, 技能分享 | 原文：https://leyoubaloy.github.io/post/rag-graph-entity-edge-intelligent-merge
+> 发布于：2025-07-13 | 分类：随笔杂记, 技能分享 | 原文：https://www.imbailey.cn/post/rag-graph-entity-edge-intelligent-merge
 
 ## 调研
 

@@ -1,6 +1,6 @@
 # Leetcode16:最接近的三数之和——排序、双指针
 
-> 发布于：2022-04-26 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-16-3sum-closest-sort-two-pointers
+> 发布于：2022-04-26 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-16-3sum-closest-sort-two-pointers
 
 ## 题目
 

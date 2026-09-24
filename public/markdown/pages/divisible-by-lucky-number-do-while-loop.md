@@ -1,6 +1,6 @@
 # 判断n能否被幸运数整除-do while循环应用
 
-> 发布于：2020-10-27 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/divisible-by-lucky-number-do-while-loop
+> 发布于：2020-10-27 | 分类：刷题 | 原文：https://www.imbailey.cn/post/divisible-by-lucky-number-do-while-loop
 
 【题目描述】
 

@@ -1,6 +1,6 @@
 # ChinaVis重庆之旅
 
-> 发布于：2023-07-31 | 分类：随笔杂记, 笔记 | 原文：https://leyoubaloy.github.io/post/chinavis-chongqing-trip
+> 发布于：2023-07-31 | 分类：随笔杂记, 笔记 | 原文：https://www.imbailey.cn/post/chinavis-chongqing-trip
 
 ChinaVis大会于2023年7月21日-24日在重庆召开，老师带着我们可视化组一起参会，近距离聆听各位大佬的报告让我大开眼界，同时公费旅游也真是爽歪歪～
 

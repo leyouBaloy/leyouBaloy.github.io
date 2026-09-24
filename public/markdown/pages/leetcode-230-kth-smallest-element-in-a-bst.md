@@ -1,6 +1,6 @@
 # Leetcode230:二叉搜索树中第K小的元素
 
-> 发布于：2022-04-04 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-230-kth-smallest-element-in-a-bst
+> 发布于：2022-04-04 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-230-kth-smallest-element-in-a-bst
 
 # 题目
 

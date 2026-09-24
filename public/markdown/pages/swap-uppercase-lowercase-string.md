@@ -1,6 +1,6 @@
 # 大小写字母互换-输入与输出字符串
 
-> 发布于：2020-11-02 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/swap-uppercase-lowercase-string
+> 发布于：2020-11-02 | 分类：刷题 | 原文：https://www.imbailey.cn/post/swap-uppercase-lowercase-string
 
 【题目描述】
 

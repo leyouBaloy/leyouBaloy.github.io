@@ -1,6 +1,6 @@
 # Leetcode560:和为K的子数组——前缀和、哈希表
 
-> 发布于：2022-04-09 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-560-subarray-sum-equals-k
+> 发布于：2022-04-09 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-560-subarray-sum-equals-k
 
 ## 题目
 

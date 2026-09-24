@@ -1,6 +1,6 @@
 # Leetcode451:根据字符出现频率排序——桶排序
 
-> 发布于：2022-04-15 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-451-sort-characters-by-frequency-bucket-sort
+> 发布于：2022-04-15 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-451-sort-characters-by-frequency-bucket-sort
 
 ## 题目
 

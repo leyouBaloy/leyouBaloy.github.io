@@ -1,6 +1,6 @@
 # 《从零开始的女性主义》读后有感
 
-> 发布于：2022-05-06 | 分类：书影记录 | 原文：https://leyoubaloy.github.io/post/feminism-from-zero-reading-notes
+> 发布于：2022-05-06 | 分类：书影记录 | 原文：https://www.imbailey.cn/post/feminism-from-zero-reading-notes
 
 ## 《从零开始的女性主义》
 

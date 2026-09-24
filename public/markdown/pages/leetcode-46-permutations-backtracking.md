@@ -1,6 +1,6 @@
 # Leetcode46:全排列——交换、回溯
 
-> 发布于：2022-04-29 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-46-permutations-backtracking
+> 发布于：2022-04-29 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-46-permutations-backtracking
 
 ## 题目
 

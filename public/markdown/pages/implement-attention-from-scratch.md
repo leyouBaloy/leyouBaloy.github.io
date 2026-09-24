@@ -1,6 +1,6 @@
 # 手撕Attention
 
-> 发布于：2025-06-22 | 分类：笔记, 技能分享 | 原文：https://leyoubaloy.github.io/post/implement-attention-from-scratch
+> 发布于：2025-06-22 | 分类：笔记, 技能分享 | 原文：https://www.imbailey.cn/post/implement-attention-from-scratch
 
 ### 第一重境界
 最简单的计算 Attention(Q, K, V) = softmax(Q*K.T/sqrt(hidden_dim))*V

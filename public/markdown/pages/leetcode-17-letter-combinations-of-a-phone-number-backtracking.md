@@ -1,6 +1,6 @@
 # Leetcode17:电话号码的字母组合——回溯
 
-> 发布于：2022-04-27 | 分类：刷题 | 原文：https://leyoubaloy.github.io/post/leetcode-17-letter-combinations-of-a-phone-number-backtracking
+> 发布于：2022-04-27 | 分类：刷题 | 原文：https://www.imbailey.cn/post/leetcode-17-letter-combinations-of-a-phone-number-backtracking
 
 ## 题目
 
