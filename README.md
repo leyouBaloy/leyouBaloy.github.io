@@ -8,7 +8,7 @@
 
 - Markdown 写作，支持 frontmatter、代码块、数学公式和目录提取。
 - 预生成文章元数据，首页、归档、标签和搜索都直接读取 JSON。
-- Vite SSG 静态生成，适合部署到 GitHub Pages、Vercel、Nginx 等静态托管环境。
+- Vite SSG 静态生成；线上由 Vercel 自动拉取 `master` 构建部署，也可自行部署到 Nginx 等静态托管。
 - 内置博客 CLI，命令风格向 Hexo 靠齐，支持新建文章、生成静态文件和启动本地服务。
 
 ## 目录结构
@@ -155,7 +155,7 @@ yarn blog server
 yarn blog s --port 3000
 ```
 
-该命令会先刷新文章元数据，再启动 Vite 开发服务。也可以直接使用：
+默认不会重写元数据；需要时加 `--regen`。也可以直接使用：
 
 ```sh
 yarn dev
@@ -234,11 +234,15 @@ img:
 
 ## 构建与部署
 
+线上站点 [www.imbailey.cn](https://www.imbailey.cn/) 由 **Vercel** 连接本仓库的 `master` 分支自动构建发布；推送后无需再走 GitHub Pages / Actions 部署。
+
+本地完整构建：
+
 ```sh
 yarn blog generate
 ```
 
-生成后的 `dist` 是完整静态站点，可部署到任意静态托管服务。Vite SSG 会根据 `public/markdown/metadata/slug_mapping.json` 自动生成所有文章详情页。
+生成后的 `dist` 是完整静态站点。Vite SSG 会根据 `public/markdown/metadata/slug_mapping.json` 自动生成所有文章详情页。本仓库不再维护 GitHub Pages 工作流；仓库级 Actions 保持关闭，避免与 Vercel 抢同一自定义域名。
 
 ## 空白站点模板
 
