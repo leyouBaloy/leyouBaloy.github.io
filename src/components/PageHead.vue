@@ -556,48 +556,23 @@ onBeforeUnmount(() => {
   margin: 0 auto;
 }
 
-/* 移动端适配：压矮头图，少滚一截再进内容 */
+/* 移动端适配 */
 @media (max-width: 768px) {
   .bg {
-    height: 300px;
-    --header-height: 300px;
-    --orbit-center-y: 86px;
-    --planet-size: 100px;
-    --orbit-size: 210px;
+    height: 500px;
+    --header-height: 500px;
+    --orbit-center-y: 145px;
+    --planet-size: 153px;
+    --orbit-size: 330px;
   }
 
-  .space_field.mother .planet {
-    border-width: 7px;
-  }
-
-  .space_field.satellite .planet {
-    width: 34px;
-    height: 34px;
-    border-width: 5px;
-  }
-
-  .name { font-size: 22px; letter-spacing: 1px; }
-  .zym { font-size: 13px; padding: 0 12px; margin-bottom: 8px; }
-  .social-icon { width: 32px; height: 32px; }
-  .social-icon svg { width: 17px; height: 17px; }
-  .social-links { gap: 10px; }
-  .control-panel { width: 200px; right: 10px; top: 56px; }
-  .control-toggle { width: 34px; height: 34px; font-size: 15px; right: 10px; top: 12px; }
-  .header-content { top: 148px; width: min(94%, 420px); }
-  .nav-shell { bottom: 12px; width: calc(100% - 16px); }
-}
-
-@media (max-width: 520px) {
-  .bg {
-    height: 280px;
-    --header-height: 280px;
-    --orbit-center-y: 78px;
-    --planet-size: 88px;
-    --orbit-size: 186px;
-  }
-
-  .header-content { top: 136px; }
-  .name { font-size: 20px; }
-  .zym { font-size: 12px; }
+  .name { font-size: 26px; }
+  .zym { font-size: 14px; padding: 0 15px; }
+  .social-icon { width: 36px; height: 36px; }
+  .social-icon svg { width: 19px; height: 19px; }
+  .control-panel { width: 200px; right: 10px; }
+  .control-toggle { width: 36px; height: 36px; font-size: 16px; right: 10px; }
+  .header-content { top: 238px; }
+  .nav-shell { bottom: 18px; width: calc(100% - 20px); }
 }
 </style>
