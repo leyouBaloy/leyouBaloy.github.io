@@ -526,6 +526,25 @@ h1 {
   font-size: 14px;
 }
 
+/* 暗色模式：归档页搜索/年份区块 */
+:global([data-theme="dark"] .xz),
+:global([data-theme="dark"] .hint) {
+  color: #9ca3af;
+}
+
+:global([data-theme="dark"] .year-title),
+:global([data-theme="dark"] .tag-title) {
+  background: linear-gradient(135deg, #1f2937 0%, #273449 100%);
+  color: #e5e7eb;
+  border-left-color: #818cf8;
+}
+
+:global([data-theme="dark"] .year-count),
+:global([data-theme="dark"] .tag-count) {
+  background: #374151;
+  color: #9ca3af;
+}
+
 /* 移动端适配 */
 @media (max-width: 768px) {
   h1 {

@@ -26,5 +26,9 @@
     width: 2px;
     background-color: #d3d3d3;
   }
+
+  :global([data-theme="dark"] .timeline::before) {
+    background-color: #4b5563;
+  }
   </style>
   

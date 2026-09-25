@@ -173,14 +173,29 @@
     -webkit-box-decoration-break: clone;
   }
 
+  :global([data-theme="dark"] .timeline-item-content .title) {
+    color: #e5e7eb;
+  }
+
+  :global([data-theme="dark"] .timeline-item-content time) {
+    color: #9ca3af;
+  }
+
   :global([data-theme="dark"] .timeline-item-content .excerpt) {
     color: #9ca3af;
   }
 
+  :global([data-theme="dark"] .timeline-item-content .tag) {
+    background: #374151;
+    color: #d1d5db;
+  }
+
+  /* Softer amber highlight for dark mode — less harsh than bright yellow */
   :global([data-theme="dark"] .timeline-item-content .title mark.search-hit),
   :global([data-theme="dark"] .timeline-item-content .excerpt mark.search-hit) {
-    background: rgba(250, 204, 21, 0.38);
-    color: #fef9c3;
+    background: rgba(251, 191, 36, 0.22);
+    color: #fde68a;
+    box-shadow: inset 0 0 0 1px rgba(251, 191, 36, 0.28);
   }
   
   .tags {
@@ -226,5 +241,10 @@
     background-color: #667eea;
     border-color: #667eea;
     transform: scale(1.2);
+  }
+
+  :global([data-theme="dark"] .timeline-item .circle) {
+    background-color: #1f2937;
+    border-color: #4b5563;
   }
   </style>
