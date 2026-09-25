@@ -2,14 +2,14 @@
     <div class="timeline-item" @click="handleClick">
       <div class="timeline-item-content">
         <time>{{ time }}</time>
-        <div class="title">{{ content }}</div>
-        <p v-if="excerpt" class="excerpt">{{ excerpt }}</p>
+        <div class="title" v-html="highlightedTitle"></div>
+        <p v-if="excerpt" class="excerpt" v-html="highlightedExcerpt"></p>
         <div class="tags" v-if="tags && tags.length > 0">
           <span 
             v-for="tag in tags" 
             :key="tag" 
             class="tag"
-            :class="{ 'highlight': highlight && searchKeyword && tag.toLowerCase().includes(searchKeyword.toLowerCase()) }"
+            :class="{ 'highlight': shouldHighlightTag(tag) }"
           >
             {{ tag }}
           </span>
@@ -20,6 +20,41 @@
   </template>
   
   <script>
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function highlightText(text, keyword, enabled) {
+    const source = text == null ? '' : String(text);
+    if (!enabled || !keyword || !String(keyword).trim()) {
+      return escapeHtml(source);
+    }
+
+    const query = String(keyword).trim();
+    const lowerSource = source.toLowerCase();
+    const lowerQuery = query.toLowerCase();
+    let html = '';
+    let cursor = 0;
+
+    while (cursor < source.length) {
+      const index = lowerSource.indexOf(lowerQuery, cursor);
+      if (index === -1) {
+        html += escapeHtml(source.slice(cursor));
+        break;
+      }
+      html += escapeHtml(source.slice(cursor, index));
+      html += `<mark class="search-hit">${escapeHtml(source.slice(index, index + query.length))}</mark>`;
+      cursor = index + query.length;
+    }
+
+    return html;
+  }
+
   export default {
     name: 'TimelineItem',
     props: {
@@ -52,9 +87,21 @@
         default: ''
       }
     },
+    computed: {
+      highlightedTitle() {
+        return highlightText(this.content, this.searchKeyword, this.highlight);
+      },
+      highlightedExcerpt() {
+        return highlightText(this.excerpt, this.searchKeyword, this.highlight);
+      }
+    },
     methods: {
       handleClick() {
         this.$emit('click');
+      },
+      shouldHighlightTag(tag) {
+        if (!this.highlight || !this.searchKeyword) return false;
+        return String(tag).toLowerCase().includes(String(this.searchKeyword).trim().toLowerCase());
       }
     }
   }
@@ -116,8 +163,24 @@
     line-height: 1.6;
   }
 
+  .title :deep(mark.search-hit),
+  .excerpt :deep(mark.search-hit) {
+    padding: 0 2px;
+    border-radius: 3px;
+    color: inherit;
+    background: rgba(250, 204, 21, 0.55);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
   :global([data-theme="dark"] .timeline-item-content .excerpt) {
     color: #9ca3af;
+  }
+
+  :global([data-theme="dark"] .timeline-item-content .title mark.search-hit),
+  :global([data-theme="dark"] .timeline-item-content .excerpt mark.search-hit) {
+    background: rgba(250, 204, 21, 0.38);
+    color: #fef9c3;
   }
   
   .tags {
@@ -143,16 +206,6 @@
   .tag.highlight {
     background: #667eea;
     color: white;
-    animation: pulse 1s ease infinite;
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
   }
   
   .circle {
@@ -175,4 +228,3 @@
     transform: scale(1.2);
   }
   </style>
-  

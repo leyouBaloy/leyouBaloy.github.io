@@ -46,6 +46,9 @@
                 :time="post.date"
                 :category="getCategory(post)"
                 :tags="getTags(post)"
+                :highlight="!!searchQuery.trim()"
+                :search-keyword="searchQuery"
+                :excerpt="searchQuery.trim() ? getSearchSnippet(post) : ''"
                 @click="router.push(`/post/${post.slug}`)" 
               />
             </timeline>
