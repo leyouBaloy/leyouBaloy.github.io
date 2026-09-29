@@ -1,5 +1,26 @@
 [
   {
+    "id": "english-video-2026-09-29",
+    "date": "2026-09-29",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到1:28（总时长10:38）。",
+    "progress": {
+      "heard": "1:28",
+      "total": "10:38"
+    },
+    "video": {
+      "title": "Panda Diplomacy: Two new bears arrive in the US in a rare loan from China | September 29, 2026",
+      "url": "https://www.youtube.com/watch?v=K7RX7P9PCU0",
+      "platform": "YouTube"
+    },
+    "tags": [
+      "英语",
+      "听力",
+      "跟读"
+    ]
+  },
+  {
     "id": "sport-2026-09-24",
     "date": "2026-09-24",
     "kind": "note",
