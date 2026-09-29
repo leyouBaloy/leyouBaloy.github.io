@@ -480,9 +480,9 @@ const rssItems = metadataList.slice(0, 50).map(post => {
 const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>Bailey's Blog</title>
+  <title>Bailey 的技术博客</title>
   <link>${siteUrl}</link>
-  <description>读万卷书，行万里路</description>
+  <description>分享 Agent 工程、AI 应用与前端实践笔记，覆盖模型微调、RAG、自动化工作流与真实项目踩坑。</description>
   <language>zh-CN</language>
   <lastBuildDate>${feedLastBuildDate.toUTCString()}</lastBuildDate>
 ${rssItems}
@@ -491,17 +491,14 @@ ${rssItems}
 `;
 
 const staticPages = ['', '/archive', '/media', '/about', '/resume'];
+const staticLastmod = feedLastBuildDate.toISOString();
 const sitemapUrls = [
   ...staticPages.map(page => ({
     loc: `${siteUrl}${page}`,
-    lastmod: staticPageLastmod
+    lastmod: staticLastmod
   })),
   ...metadataList.map(post => ({
     loc: `${siteUrl}/post/${post.slug}`,
-    lastmod: new Date(post.updatedAt || post.date).toISOString()
-  })),
-  ...metadataList.map(post => ({
-    loc: `${siteUrl}/markdown/pages/${post.slug}.md`,
     lastmod: new Date(post.updatedAt || post.date).toISOString()
   }))
 ].map(item => `  <url>

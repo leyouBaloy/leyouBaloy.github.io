@@ -10,9 +10,12 @@ import vue from "@vitejs/plugin-vue";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const siteUrl = "https://www.imbailey.cn";
-const siteName = "Bailey's Blog";
+const siteName = "Bailey 的技术博客";
 const siteDescription =
-  "Bailey's Blog，记录技术实践、读书观影、旅行见闻与生活思考。";
+  "分享 Agent 工程、AI 应用与前端实践笔记，覆盖模型微调、RAG、自动化工作流与真实项目踩坑。";
+const defaultOgImage = `${siteUrl}/og-default.png`;
+const homeTitle = "Bailey 的技术博客｜Agent / AI / 前端实践";
+const rssTitle = "Bailey 的技术博客";
 
 interface PostSeo {
   title: string;
@@ -39,23 +42,23 @@ interface SeoMeta {
 
 const staticPageMeta: Record<string, { title: string; description: string }> = {
   "/": {
-    title: siteName,
+    title: homeTitle,
     description: siteDescription,
   },
   "/archive": {
-    title: `归档 | ${siteName}`,
-    description: "按时间、标签和关键词浏览 Bailey's Blog 的全部文章。",
+    title: `归档｜${siteName}`,
+    description: "按时间、标签与关键词浏览 Bailey 的技术博客全部文章，涵盖 Agent、AI 与前端实践。",
   },
   "/media": {
-    title: `见闻录 | ${siteName}`,
-    description: "Bailey 的旅行、观影、读书和生活见闻记录。",
+    title: `见闻录｜${siteName}`,
+    description: "Bailey 的旅行、观影、读书与生活见闻短记。",
   },
   "/about": {
-    title: `关于 | ${siteName}`,
-    description: "关于 Bailey 的个人介绍、经历与联系方式。",
+    title: `关于｜${siteName}`,
+    description: "关于 Bailey：Agent / AI / 前端方向的技术实践者，个人经历与联系方式。",
   },
   "/resume": {
-    title: `简历 | ${siteName}`,
+    title: `简历｜${siteName}`,
     description: "Bailey 的个人简历与项目经历。",
   },
 };
@@ -127,14 +130,14 @@ const getSeoMeta = (route: string): SeoMeta => {
     if (post) {
       const canonicalRoute = `/post/${post.slug}`;
       return {
-        title: `${post.title} | ${siteName}`,
+        title: `${post.title}｜${siteName}`,
         description: stripControlWhitespace(post.excerpt || siteDescription).slice(
           0,
           160
         ),
         url: absoluteUrl(canonicalRoute),
         type: "article",
-        image: absoluteAssetUrl(post.img),
+        image: absoluteAssetUrl(post.img) || defaultOgImage,
         publishedTime: post.date,
         modifiedTime: post.updatedAt || post.date,
         tags: post.tags || [],
@@ -148,6 +151,7 @@ const getSeoMeta = (route: string): SeoMeta => {
     description: staticMeta.description,
     url: absoluteUrl(normalizedRoute),
     type: "website",
+    image: defaultOgImage,
   };
 };
 
@@ -156,7 +160,7 @@ const buildStructuredData = (meta: SeoMeta) => {
     return {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      headline: meta.title.replace(` | ${siteName}`, ""),
+      headline: meta.title.replace(`｜${siteName}`, "").replace(` | ${siteName}`, ""),
       description: meta.description,
       url: meta.url,
       mainEntityOfPage: meta.url,
@@ -171,7 +175,7 @@ const buildStructuredData = (meta: SeoMeta) => {
         "@type": "Person",
         name: "Bailey",
       },
-      image: meta.image,
+      image: meta.image || defaultOgImage,
       keywords: meta.tags?.join(", "),
     };
   }
@@ -180,9 +184,11 @@ const buildStructuredData = (meta: SeoMeta) => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: siteName,
+    alternateName: homeTitle,
     description: meta.description,
     url: siteUrl,
     inLanguage: "zh-CN",
+    image: meta.image || defaultOgImage,
   };
 };
 
@@ -192,11 +198,10 @@ const injectSeoMeta = (html: string, route: string) => {
     /</g,
     "\\u003c"
   );
-  const imageMeta = meta.image
-    ? `
-    <meta property="og:image" content="${escapeHtml(meta.image)}">
-    <meta name="twitter:image" content="${escapeHtml(meta.image)}">`
-    : "";
+  const imageUrl = meta.image || defaultOgImage;
+  const imageMeta = `
+    <meta property="og:image" content="${escapeHtml(imageUrl)}">
+    <meta name="twitter:image" content="${escapeHtml(imageUrl)}">`;
   const articleMeta =
     meta.type === "article"
       ? `
@@ -216,14 +221,16 @@ const injectSeoMeta = (html: string, route: string) => {
   const seoHead = `
     <meta name="description" content="${escapeHtml(meta.description)}">
     <link rel="canonical" href="${escapeHtml(meta.url)}">
+    <link rel="alternate" type="application/rss+xml" title="${escapeHtml(
+      rssTitle
+    )}" href="${escapeHtml(`${siteUrl}/rss.xml`)}">
     <meta property="og:site_name" content="${escapeHtml(siteName)}">
+    <meta property="og:locale" content="zh_CN">
     <meta property="og:type" content="${meta.type}">
     <meta property="og:title" content="${escapeHtml(meta.title)}">
     <meta property="og:description" content="${escapeHtml(meta.description)}">
     <meta property="og:url" content="${escapeHtml(meta.url)}">${imageMeta}${articleMeta}
-    <meta name="twitter:card" content="${
-      meta.image ? "summary_large_image" : "summary"
-    }">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeHtml(meta.title)}">
     <meta name="twitter:description" content="${escapeHtml(meta.description)}">
     <script type="application/ld+json">${structuredData}</script>`;

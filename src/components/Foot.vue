@@ -3,6 +3,7 @@
     <div class="footer-container">
         <div class="jump">
             <a href="https://www.travellings.cn/go.html" target="_blank"> <img src="https://www.travellings.cn/assets/logo.gif" alt="" style="width:auto;height:32px;" title="开往-友链接力"></a>
+            <a class="rss-link" href="/rss.xml" title="订阅 RSS">订阅 RSS</a>
         </div>
         <div class="icp"><a href="https://beian.miit.gov.cn" target="_blank">鲁ICP备2024110354号</a></div>
         
@@ -46,7 +47,26 @@ import { NDivider } from 'naive-ui'
     gap: 20px;
 }
 
+.rss-link {
+    text-decoration: none;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rss-link:hover {
+    text-decoration: underline;
+}
+
 .footer-container img {
     max-width: 150px;
+}
+
+:global([data-theme="dark"]) .icp a {
+    color: #e5e7eb;
+}
+
+:global([data-theme="dark"]) .rss-link {
+    color: #a5b4fc;
 }
 </style>

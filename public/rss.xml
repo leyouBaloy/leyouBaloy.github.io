@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>Bailey's Blog</title>
+  <title>Bailey 的技术博客</title>
   <link>https://www.imbailey.cn</link>
-  <description>读万卷书，行万里路</description>
+  <description>分享 Agent 工程、AI 应用与前端实践笔记，覆盖模型微调、RAG、自动化工作流与真实项目踩坑。</description>
   <language>zh-CN</language>
   <lastBuildDate>Sun, 20 Sep 2026 08:45:00 GMT</lastBuildDate>
   <item>
