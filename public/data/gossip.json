@@ -1,5 +1,36 @@
 [
   {
+    "id": "note-2026-10-08-back-to-work",
+    "date": "2026-10-08",
+    "kind": "note",
+    "title": "开工第一天",
+    "content": "中秋国庆假期结束的第一天，开始加油工作吧💪",
+    "tags": [
+      "生活"
+    ]
+  },
+  {
+    "id": "english-video-2026-10-08-aquarium",
+    "date": "2026-10-08",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到2:02（总时长10:09）。",
+    "progress": {
+      "heard": "2:02",
+      "total": "10:09"
+    },
+    "video": {
+      "title": "CNN10 Special Edition: Dive behind the scenes at one of the world's largest aquariums",
+      "url": "https://www.youtube.com/watch?v=xJjjDgSXukU",
+      "platform": "YouTube"
+    },
+    "tags": [
+      "英语",
+      "听力",
+      "跟读"
+    ]
+  },
+  {
     "id": "english-video-2026-09-29",
     "date": "2026-09-29",
     "kind": "english-checkin",
