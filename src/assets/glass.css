@@ -169,3 +169,35 @@ html[data-theme="dark"] .toc-wrapper { background: var(--glass-bg-strong); }
 @media (prefers-reduced-transparency: reduce) {
   .glass, html .post-card, html .toc-wrapper, html .related-card { background: var(--glass-bg-fallback); }
 }
+
+/* ---- Decorative background (BgDecor.vue) ---- */
+.site-shell { position: relative; z-index: 1; }
+.bg-decor {
+  --blob-a: rgba(99, 132, 255, 0.38);
+  --blob-b: rgba(168, 120, 255, 0.32);
+  --blob-c: rgba(45, 150, 189, 0.28);
+  --grain-opacity: 0.06;
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none; overflow: hidden; contain: strict;
+}
+[data-theme="dark"] .bg-decor {
+  --blob-a: rgba(67, 56, 202, 0.30);
+  --blob-b: rgba(126, 34, 206, 0.22);
+  --blob-c: rgba(14, 116, 144, 0.20);
+  --grain-opacity: 0.08;
+}
+.bg-blob {
+  position: absolute; width: 46vw; height: 46vw; max-width: 720px; max-height: 720px;
+  border-radius: 50%; filter: blur(80px); will-change: transform;
+}
+.bg-blob--a { background: radial-gradient(circle, var(--blob-a), transparent 70%); top: -10vh; left: -18vw; animation: bg-drift-a 38s ease-in-out infinite alternate; }
+.bg-blob--b { background: radial-gradient(circle, var(--blob-b), transparent 70%); top: 30vh; right: -20vw; animation: bg-drift-b 46s ease-in-out infinite alternate; }
+.bg-blob--c { background: radial-gradient(circle, var(--blob-c), transparent 70%); bottom: -22vh; left: -10vw; width: 36vw; height: 36vw; animation: bg-drift-c 54s ease-in-out infinite alternate; }
+.bg-grain {
+  position: absolute; inset: 0; opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@keyframes bg-drift-a { to { transform: translate3d(6vw, 8vh, 0) scale(1.08); } }
+@keyframes bg-drift-b { to { transform: translate3d(-5vw, -10vh, 0) scale(0.94); } }
+@keyframes bg-drift-c { to { transform: translate3d(8vw, -6vh, 0) scale(1.1); } }
+@media (prefers-reduced-motion: reduce) { .bg-blob { animation: none; } }

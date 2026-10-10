@@ -6,6 +6,7 @@ import { computed, ref, onMounted, onUnmounted } from 'vue';
 import { NIcon } from 'naive-ui';
 import { MoonOutline, SunnyOutline } from '@vicons/ionicons5';
 import PageHead from "@/components/PageHead.vue";
+import BgDecor from "@/components/BgDecor.vue";
 
 const route = useRoute()
 inject();
@@ -60,6 +61,7 @@ const applyTheme = () => {
 </script>
 
 <template>
+  <BgDecor />
   <div class="site-shell">
     <PageHead v-if="showPageHead" />
 
