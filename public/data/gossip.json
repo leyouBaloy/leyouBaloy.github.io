@@ -1,5 +1,38 @@
 [
   {
+    "id": "english-video-2026-10-10-aquarium",
+    "date": "2026-10-10",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "继续听，听到6:42（总时长10:09）。",
+    "progress": {
+      "heard": "6:42",
+      "total": "10:09"
+    },
+    "video": {
+      "title": "CNN10 Special Edition: Dive behind the scenes at one of the world's largest aquariums",
+      "url": "https://www.youtube.com/watch?v=xJjjDgSXukU",
+      "platform": "YouTube"
+    },
+    "tags": [
+      "英语",
+      "听力",
+      "跟读"
+    ]
+  },
+  {
+    "id": "sport-2026-10-09",
+    "date": "2026-10-09",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "椭圆机锻炼30分钟，继续坚持。",
+    "tags": [
+      "运动",
+      "椭圆机",
+      "减脂"
+    ]
+  },
+  {
     "id": "english-video-2026-10-09-aquarium",
     "date": "2026-10-09",
     "kind": "english-checkin",
