@@ -3,6 +3,7 @@ import { createPinia } from "pinia";
 // import naive from "naive-ui";
 
 import App from "./App.vue";
+import "./assets/glass.css";
 import { routes } from "./router";
 
 export const createApp = ViteSSG(

@@ -179,10 +179,12 @@ defineExpose({ hideToc });
   top: 100px;
   width: 220px;
   max-height: calc(100vh - 140px);
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--glass-bg-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow), var(--glass-highlight);
+  border: 1px solid var(--glass-border);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -206,7 +208,7 @@ defineExpose({ hideToc });
   width: 24px;
   height: 24px;
   border: none;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--accent);
   color: white;
   border-radius: 0 10px 0 8px;
   cursor: pointer;
@@ -321,7 +323,7 @@ defineExpose({ hideToc });
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--accent);
   color: white;
   border: none;
   cursor: pointer;
@@ -340,7 +342,7 @@ defineExpose({ hideToc });
 
 /* 暗色模式 */
 [data-theme="dark"] .toc-wrapper {
-  background: #1f1f1f;
+  background: var(--glass-bg-strong);
   border-color: rgba(255, 255, 255, 0.08);
 }
 

@@ -1,0 +1,171 @@
+/* =========================================================
+ * Liquid Glass design system (统一玻璃拟态设计令牌)
+ * ========================================================= */
+:root {
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+
+  --glass-bg: rgba(255, 255, 255, 0.52);
+  --glass-bg-strong: rgba(255, 255, 255, 0.72);
+  --glass-bg-fallback: rgba(255, 255, 255, 0.94);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 28px rgba(15, 23, 42, 0.10), 0 1px 2px rgba(15, 23, 42, 0.06);
+  --glass-shadow-hover: 0 16px 40px rgba(15, 23, 42, 0.16), 0 2px 6px rgba(15, 23, 42, 0.08);
+  --glass-blur: blur(20px) saturate(180%);
+  --glass-text: #1f2937;
+  --glass-text-muted: #556270;
+  --accent: #2d96bd;
+
+  --page-bg:
+    radial-gradient(1200px 600px at 10% -10%, rgba(125, 211, 252, 0.55), transparent 60%),
+    radial-gradient(900px 500px at 100% 20%, rgba(196, 181, 253, 0.50), transparent 60%),
+    radial-gradient(800px 600px at 0% 100%, rgba(253, 186, 116, 0.35), transparent 60%),
+    linear-gradient(180deg, #eef3f8 0%, #e8edf5 100%);
+}
+
+[data-theme="dark"] {
+  --glass-bg: rgba(24, 32, 52, 0.55);
+  --glass-bg-strong: rgba(30, 41, 64, 0.75);
+  --glass-bg-fallback: rgba(22, 30, 48, 0.96);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.10), inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+  --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --glass-shadow-hover: 0 18px 44px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --glass-text: #e5edf7;
+  --glass-text-muted: #b6c3d1;
+  --accent: #7dd3fc;
+
+  --page-bg:
+    radial-gradient(1200px 600px at 10% -10%, rgba(56, 189, 248, 0.20), transparent 60%),
+    radial-gradient(900px 500px at 100% 20%, rgba(139, 92, 246, 0.22), transparent 60%),
+    radial-gradient(800px 600px at 0% 100%, rgba(236, 72, 153, 0.12), transparent 60%),
+    linear-gradient(180deg, #0b1020 0%, #0f172a 100%);
+}
+
+html body,
+html[data-theme="dark"] body {
+  background: var(--page-bg);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* 页面主体不再是纯白底板，让玻璃能透出背景 */
+html main,
+html[data-theme="dark"] main {
+  background-color: transparent;
+}
+
+/* 通用工具类 */
+.glass,
+html .post-card,
+html .toc-wrapper,
+html .toc-fab,
+html .back-button,
+html .related-card,
+html .comment-placeholder,
+html .article-notice,
+html .share-btn,
+html .llm-copy,
+html .llm-menu,
+html .tab-control,
+html .gossip-month-head,
+html .dark-toggle,
+html .n-back-top {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-highlight);
+  color: var(--glass-text);
+}
+
+.glass-strong,
+html .toc-wrapper,
+html .llm-menu,
+html .gossip-month-head {
+  background: var(--glass-bg-strong);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass,
+  html .post-card,
+  html .toc-wrapper,
+  html .toc-fab,
+  html .back-button,
+  html .related-card,
+  html .comment-placeholder,
+  html .article-notice,
+  html .share-btn,
+  html .llm-copy,
+  html .llm-menu,
+  html .tab-control,
+  html .gossip-month-head,
+  html .dark-toggle,
+  html .n-back-top {
+    background: var(--glass-bg-fallback);
+  }
+}
+
+/* 统一圆角 */
+html .post-card,
+html .toc-wrapper { border-radius: var(--radius-lg); }
+html .related-card,
+html .comment-placeholder,
+html .article-notice,
+html .tab-control,
+html .gossip-month-head { border-radius: var(--radius-md); }
+html .share-btn,
+html .llm-copy,
+html .back-button { border-radius: var(--radius-pill); }
+html .llm-menu { border-radius: var(--radius-md); }
+
+/* 统一悬浮反馈 */
+html .post-card,
+html .related-card,
+html .share-btn,
+html .back-button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+html .post-card:hover,
+html .related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow-hover), var(--glass-highlight);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--glass-border));
+}
+html .share-btn:hover,
+html .back-button:hover { background: var(--glass-bg-strong); color: var(--accent); }
+
+/* llm-copy 内部按钮不再重复叠层 */
+html .llm-copy .share-btn,
+html .llm-copy button { background: transparent; border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+/* 卡片内文字对比度 */
+html .post-card .content,
+html .post-card .time,
+html .post-card .tag,
+html .related-meta { color: var(--glass-text-muted); }
+html .post-card .title,
+html .related-title { color: var(--glass-text); }
+html .post-card .title:hover { color: var(--accent); }
+
+/* 暗色模式下旧的实色覆盖统一改为玻璃 */
+html[data-theme="dark"] .post-card,
+html[data-theme="dark"] .post-card:hover,
+html[data-theme="dark"] .toc-wrapper,
+html[data-theme="dark"] .related-card {
+  background: var(--glass-bg);
+}
+html[data-theme="dark"] .toc-wrapper { background: var(--glass-bg-strong); }
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass, html .post-card, html .toc-wrapper, html .related-card { background: var(--glass-bg-fallback); }
+}

@@ -62,22 +62,15 @@
     height: auto;
     -webkit-column-break-inside: avoid;
     break-inside: avoid;
-    background: #fff;
-    /* 卡片阴影 */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* 边框线 */
-    border: 0.1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glass-shadow), var(--glass-highlight);
+    padding: var(--space-5);
 }
 
-/* 悬浮放大 */
-.wrapper:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
 
 .container {
     width: 100%;
@@ -94,7 +87,7 @@
     /* 取消下划线 */
     text-decoration: none;
     font-weight: 800;
-    color: black;
+    color: var(--glass-text);
     /* 装饰线 */
   text-decoration: underline;
   text-decoration-color: #2d96bd;
@@ -190,17 +183,6 @@
     &:hover {
         transform: scale(1.01);
     }
-}
-
-:global([data-theme="dark"] .post-card) {
-    background: #182235;
-    border-color: rgba(148, 163, 184, 0.24);
-    box-shadow: 0 10px 28px rgba(2, 6, 23, 0.18);
-}
-
-:global([data-theme="dark"] .post-card:hover) {
-    box-shadow: 0 16px 34px rgba(2, 6, 23, 0.35);
-    border-color: rgba(56, 189, 248, 0.38);
 }
 
 :global([data-theme="dark"] .post-card .title) {

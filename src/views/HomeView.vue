@@ -39,27 +39,22 @@
         </div>
       </div>
 
-      <!-- 桌面端：绝对定位瀑布流 -->
-      <div v-show="!initialLoading && activeSection === 'posts' && !isMobile" class="waterfall-container" ref="waterfallWrapper" :style="{ height: wrapperHeight + 'px' }">
-    <div
-      v-for="(post, index) in posts"
-      :key="post.title"
-      class="waterfall-item"
-    >
-      <div class="waterfall-card">
-        <PostCard
-          :title="post.title"
-          :content="post.excerpt"
-          :time="new Date(post.date).toLocaleDateString()"
-          :tag="post.tags ? post.tags.join(', ') : '未分类'"
-          :img="post.img"
-          :path="`/post/${post.slug}`"
-          :id="post.title"
-          @imageLoaded="onImageLoaded"
-        />
+      <!-- 桌面端：双列瀑布流（纯 CSS 布局，按估算高度贪心分列，不再绝对定位） -->
+      <div v-show="!initialLoading && activeSection === 'posts' && !isMobile" class="waterfall-container">
+        <div v-for="(col, ci) in columns" :key="ci" class="waterfall-col">
+          <PostCard
+            v-for="post in col"
+            :key="post.title"
+            :title="post.title"
+            :content="post.excerpt"
+            :time="new Date(post.date).toLocaleDateString()"
+            :tag="post.tags ? post.tags.join(', ') : '未分类'"
+            :img="post.img"
+            :path="`/post/${post.slug}`"
+            :id="post.title"
+          />
+        </div>
       </div>
-    </div>
-  </div>
 
       <section v-show="!initialLoading && activeSection === 'gossip'" class="gossip-list">
         <PageLoading v-if="gossipLoading" label="碎语加载中..." />
@@ -104,7 +99,7 @@
 
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount, nextTick } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import axios from 'axios';
 import { NDivider, NBackTop} from 'naive-ui';
 import Foot from "@/components/Foot.vue";
@@ -135,22 +130,17 @@ const gossipLoading = ref(false);
 const loadMoreTrigger = ref<HTMLElement | null>(null);
 let observer: IntersectionObserver | null = null;
 
-// 瀑布流容器引用
-const waterfallWrapper = ref<HTMLElement | null>(null);
-// 瀑布流容器高度
-const wrapperHeight = ref(0);
-
-// 一些瀑布流配置属性
-const gutter = 20;       // 卡片之间的间距
-const cols = ref(2);     // 列数（可根据响应式需求调整）
-const colWidth = ref(0); // 每列宽度，或你可以动态计算
-// const offsetX = ref(0);  // x 偏移（如果需要居中或其他对齐）
-const hasAroundGutter = ref(true);
-const animationCancel = ref(false);   // 是否取消动画
-const posDuration = ref(300);         // 位置动画时长 (ms)
-
-// 记录每列当前 Y 高度
-const posY = ref<number[]>([]);
+/** 双列分配：按估算高度（有图卡片更高）贪心放入较短的一列，保持阅读顺序大致从上到下 */
+const columns = computed(() => {
+  const cols: PostMetadata[][] = [[], []];
+  const h = [0, 0];
+  for (const post of posts.value) {
+    const i = h[0] <= h[1] ? 0 : 1;
+    cols[i].push(post);
+    h[i] += 1 + (post.img ? 1.6 : 0) + Math.min((post.excerpt?.length || 0) / 120, 1.2);
+  }
+  return cols;
+});
 
 /** 加载文章数据 */
 const loadMarkdownMetadata = async () => {
@@ -165,9 +155,6 @@ const loadMarkdownMetadata = async () => {
       if (numPage.value === 1) {
         initialLoading.value = false;
       }
-      await nextTick();
-      updateColWidth();
-      layoutHandle(); // 布局
     }
   } catch (error) {
     console.error('Error loading metadata:', error);
@@ -229,108 +216,7 @@ const switchSection = async (section: 'posts' | 'gossip') => {
     return;
   }
 
-  await nextTick();
-  updateColWidth();
-  layoutHandle();
 };
-
-/** 布局函数：参考 useLayout.ts 的思路 */
-const layoutHandle = async (): Promise<boolean> => {
-  return new Promise((resolve) => {
-    // 初始化 posY
-    initY();
-
-    // 获取 .waterfall-item DOM 列表
-    const items: HTMLElement[] = [];
-    if (waterfallWrapper.value) {
-      waterfallWrapper.value.childNodes.forEach((el: any) => {
-        if (el.className === 'waterfall-item') items.push(el);
-      });
-    }
-    if (!items.length) return false;
-
-    // 遍历每个卡片
-    for (let i = 0; i < items.length; i++) {
-      const curItem = items[i] as HTMLElement;
-      const style = curItem.style;
-
-      // 最小列
-      const minY = Math.min(...posY.value);
-      const minYIndex = posY.value.indexOf(minY);
-
-      // 计算 X
-      const curX = getX(minYIndex);
-
-      // 设置 transform
-      style.transform = `translate3d(${Math.floor(curX)}px, ${Math.floor(minY)}px, 0)`;
-      style.width = `${colWidth.value}px`;
-      style.visibility = 'visible';
-
-      // 测量高度
-      const { height } = curItem.getBoundingClientRect();
-      // 输出卡片标题和高度
-      // console.log(`Card "${i}" height: ${height}`);
-      // 更新列高
-      posY.value[minYIndex] += height;
-
-      // 入场动画（可选）
-      if (!animationCancel.value) {
-        addAnimation(curItem, () => {
-          const time = posDuration.value / 1000;
-          style.transition = `transform ${time}s`;
-        });
-      }
-    }
-
-    // 容器高度 = 最长列
-    wrapperHeight.value = Math.max(...posY.value);
-
-    // 等待动画结束
-    setTimeout(() => {
-      resolve(true);
-    }, posDuration.value);
-  });
-};
-
-// 图片加载完成后再次布局（可加防抖）
-let timer: number | null = null;
-function onImageLoaded() {
-  if (timer) clearTimeout(timer);
-  timer = setTimeout(() => {
-    layoutHandle();
-  }, 100); // 防抖 100ms
-}
-
-/** 初始化 posY */
-const initY = () => {
-  posY.value = new Array(cols.value).fill(hasAroundGutter.value ? gutter : 0);
-};
-
-/** 计算给定列的 X 坐标 */
-const getX = (index: number): number => {
-  const count = hasAroundGutter.value ? index + 1 : index;
-  return gutter * count + colWidth.value * index;
-};
-
-/** 简单的动画函数，给卡片添加class或行内属性 */
-function addAnimation(item: HTMLElement, callback?: () => void) {
-  // 也可以从 item.firstChild 取到实际卡片 DOM
-  // 并添加动画class
-  // 这里为简单演示
-  const content = item.firstChild as HTMLElement;
-  if (content) {
-    // 添加一系列动画class/属性
-    content.classList.add('animate__animated', 'animate__fadeIn'); 
-    // etc.
-
-    // 回调
-    if (callback) {
-      setTimeout(() => {
-        callback();
-      }, 300); // 300ms or 你自己的计算
-    }
-  }
-}
 
 /** 加载下一页 */
 const loadNextPage = async () => {
@@ -348,24 +234,9 @@ const handleIntersect = async (entries: IntersectionObserverEntry[]) => {
   }
 };
 
-// 定义函数: colWidth = containerWidth - 3 * gutter
-function updateColWidth() {
-  const container = waterfallWrapper.value;
-  if (!container) return;
-
-  // 父容器的实际宽度
-  const containerWidth = container.clientWidth;
-  // 计算后赋值
-  colWidth.value = (containerWidth - 3 * gutter)/2;
-}
-
 onMounted(() => {
   checkIsMobile();
-  updateColWidth();
   window.addEventListener('resize', checkIsMobile);
-  // 监听 window 尺寸变化，或父容器变化
-  window.addEventListener('resize', updateColWidth);
-  window.addEventListener('resize', layoutHandle);
 
   // 设置无限滚动 observer
   if (loadMoreTrigger.value) {
@@ -386,9 +257,7 @@ onBeforeUnmount(() => {
     observer.disconnect();
   }
   window.removeEventListener('resize', checkIsMobile);
-  window.removeEventListener('resize', updateColWidth);
-  window.removeEventListener('resize', layoutHandle);
-  if (timer) clearTimeout(timer);
+
 });
 </script>
 
@@ -478,33 +347,27 @@ main {
   bottom: calc(100% - 22px);
 }
 
-/* 瀑布流容器: 相对定位, 手动设置 height */
+.post-wrapper {
+  padding: 0 var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* 瀑布流容器：两列 flex，各列自然堆叠，卡片永不重叠 */
 .waterfall-container {
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
   max-width: 900px;
   margin: 0 auto;
-  overflow: hidden; /* optional: hide overflow if needed */
+  padding: 0 var(--space-5) var(--space-5);
 }
 
-/* 每个item: 初始离屏(0,3000px), hidden */
-.waterfall-item {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate3d(0, 3000px, 0);
-  visibility: hidden;
-  /* 让容器不被空白占位的 trick */
-}
-
-/* 你的 PostCard 外层 */
-.waterfall-card {
-  background: #fff;
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
-  /* etc. */
-}
-
-:global([data-theme="dark"] .waterfall-card) {
-  background: #182235;
+.waterfall-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
 }
 
 /* 移动端：不再用瀑布流 */
@@ -535,7 +398,7 @@ main {
   border: 1px solid transparent;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--radius-pill);
   margin-bottom: 10px;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }

@@ -233,18 +233,9 @@ main {
   color: #e5edf7;
 }
 
-[data-theme="dark"] .post-card,
 [data-theme="dark"] .media-card,
 [data-theme="dark"] .about-section,
 [data-theme="dark"] .site-intro {
-  background-color: #1f2937;
-}
-
-[data-theme="dark"] .post-card:hover {
-  background-color: #374151;
-}
-
-[data-theme="dark"] .waterfall-card {
   background-color: #1f2937;
 }
 
