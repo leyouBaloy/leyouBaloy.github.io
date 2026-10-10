@@ -2,6 +2,7 @@ import { ViteSSG } from "vite-ssg";
 import { createPinia } from "pinia";
 // import naive from "naive-ui";
 
+import "./styles/glass.css";
 import App from "./App.vue";
 import { routes } from "./router";
 
