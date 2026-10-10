@@ -319,8 +319,13 @@ html:root[data-theme="dark"] .giscus { background: transparent; }
 }
 
 /* Dark-mode legibility for Naive segment tabs + back-to-top */
-html:root[data-theme="dark"] .archive-tabs .n-tabs-tab { color: var(--glass-text-muted); }
-html:root[data-theme="dark"] .archive-tabs .n-tabs-tab--active { color: #1f2937; }
+html:root[data-theme="dark"] .archive-tabs.n-tabs {
+  --n-tab-text-color-segment: var(--glass-text-muted) !important;
+  --n-tab-text-color-hover-segment: var(--glass-text) !important;
+  --n-tab-text-color-active: #1f2937 !important;
+}
+html:root[data-theme="dark"] .archive-tabs .n-tabs-tab:not(.n-tabs-tab--active),
+html:root[data-theme="dark"] .archive-tabs .n-tabs-tab:not(.n-tabs-tab--active) .n-tabs-tab__label { color: var(--glass-text-muted) !important; }
 html:root .n-back-top {
   background: var(--glass-bg-strong);
   -webkit-backdrop-filter: var(--glass-filter);
