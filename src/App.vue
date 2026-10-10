@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 import { SpeedInsights } from "@vercel/speed-insights/vue"
 import { inject } from '@vercel/analytics';
 import { computed, ref, onMounted, onUnmounted } from 'vue';
-import { NIcon, NConfigProvider, darkTheme } from 'naive-ui';
+import { NIcon, NConfigProvider } from 'naive-ui';
 import type { GlobalThemeOverrides } from 'naive-ui';
 import { MoonOutline, SunnyOutline } from '@vicons/ionicons5';
 import PageHead from "@/components/PageHead.vue";
@@ -11,21 +11,22 @@ import PageHead from "@/components/PageHead.vue";
 const route = useRoute()
 
 // Naive UI overrides aligned with Liquid Glass tokens (src/styles/glass.css)
-const glassOverrides = computed<GlobalThemeOverrides>(() => ({
+// Static on purpose: swapping provider theme at mount stalled the page-switch transition in dark mode.
+const glassOverrides: GlobalThemeOverrides = {
   common: {
     borderRadius: '12px',
     borderRadiusSmall: '8px',
-    primaryColor: isDark.value ? '#8ea2ff' : '#4f5fd6',
-    primaryColorHover: isDark.value ? '#a5b4ff' : '#6370e0',
-    primaryColorPressed: isDark.value ? '#7a8ef0' : '#4050c4',
-    primaryColorSuppl: isDark.value ? '#a5b4ff' : '#6370e0',
+    primaryColor: '#4f5fd6',
+    primaryColorHover: '#6370e0',
+    primaryColorPressed: '#4050c4',
+    primaryColorSuppl: '#6370e0',
   },
   Button: { borderRadiusMedium: '999px', borderRadiusSmall: '999px', borderRadiusLarge: '999px', borderRadiusTiny: '999px' },
   Input: { borderRadius: '999px' },
   Tag: { borderRadius: '999px' },
   Tabs: { tabBorderRadius: '999px' },
   Card: { borderRadius: '18px' },
-}));
+};
 inject();
 
 // 暗色模式
@@ -78,7 +79,7 @@ const applyTheme = () => {
 </script>
 
 <template>
-  <n-config-provider :theme="isDark ? darkTheme : null" :theme-overrides="glassOverrides" abstract>
+  <n-config-provider :theme-overrides="glassOverrides" abstract>
   <div class="site-shell">
     <PageHead v-if="showPageHead" />
 
