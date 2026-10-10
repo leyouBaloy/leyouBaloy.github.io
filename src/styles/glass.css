@@ -334,3 +334,22 @@ html:root .n-back-top {
   box-shadow: var(--glass-highlight), var(--shadow-md);
 }
 html:root[data-theme="dark"] .n-back-top { color: var(--glass-text); }
+
+/* Home tab bar: stick just below the floating glass nav so it is never covered */
+html:root .section-tabs {
+  position: sticky;
+  top: calc(var(--nav-float-h, 48px) + var(--space-2) + var(--space-3));
+  z-index: 900;
+  scroll-margin-top: calc(var(--nav-float-h, 48px) + var(--space-5));
+}
+html:root .section-tabs .tab-control { background: var(--glass-bg-strong); }
+@media (max-width: 520px) {
+  :root { --nav-float-h: 44px; }
+}
+
+/* About page dark mode: no lighter section band, readable intro text */
+html:root[data-theme="dark"] .about-section { background: transparent; }
+html:root[data-theme="dark"] .intro-text,
+html:root[data-theme="dark"] .guestbook-tip { color: #c7d0dd; }
+html:root[data-theme="dark"] .site-intro p { color: #d5dce6; }
+html:root[data-theme="dark"] .site-intro a { color: #a5b4ff; }
