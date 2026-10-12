@@ -36,6 +36,14 @@ export const routes = [
     component: pageComponent(() => import("../views/MediaView.vue")),
   },
   {
+    path: "/links",
+    name: "links",
+    meta: {
+      showPageHead: true,
+    },
+    component: pageComponent(() => import("../views/LinksView.vue")),
+  },
+  {
     path: "/about",
     name: "AboutView",
     meta: {

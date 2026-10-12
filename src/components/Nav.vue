@@ -56,7 +56,7 @@
 import { ref, shallowRef, defineProps } from 'vue';
 import { NIcon } from 'naive-ui';
 import { useRoute } from 'vue-router';
-import { Home, Archive, Person, Train, Book } from '@vicons/ionicons5';
+import { Home, Archive, Person, Train, Book, Link } from '@vicons/ionicons5';
 
 const props = defineProps({
   // fixed: Boolean,
@@ -69,6 +69,7 @@ const navItems = shallowRef([
   { name: '主页', path: '/', icon: Home },
   { name: '归档', path: '/archive', icon: Archive },
   { name: '见闻录', path: '/media', icon: Book },
+  { name: '友链', path: '/links', icon: Link },
   { name: '关于', path: '/about', icon: Person },
 ]);
 
