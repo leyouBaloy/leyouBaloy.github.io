@@ -1,5 +1,38 @@
 [
   {
+    "id": "english-video-2026-10-12-mosquito",
+    "date": "2026-10-12",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到2:22（总时长10:31）。",
+    "progress": {
+      "heard": "2:22",
+      "total": "10:31"
+    },
+    "video": {
+      "title": "Meet the team working to outsmart the world's deadliest animal | October 8, 2026",
+      "url": "https://www.youtube.com/watch?v=cKoPl6VV3p0",
+      "platform": "YouTube"
+    },
+    "tags": [
+      "英语",
+      "听力",
+      "跟读"
+    ]
+  },
+  {
+    "id": "sport-2026-10-11-hiking",
+    "date": "2026-10-11",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "去爬了香山，户外锻炼。",
+    "tags": [
+      "运动",
+      "爬山",
+      "徒步"
+    ]
+  },
+  {
     "id": "sport-2026-10-10",
     "date": "2026-10-10",
     "kind": "note",
