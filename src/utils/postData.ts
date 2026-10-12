@@ -64,3 +64,18 @@ export const getRelatedBySlug = async (): Promise<Record<string, RelatedPost[]>>
   }
   return getCachedJson<Record<string, RelatedPost[]>>(`/${path}`);
 };
+
+/**
+ * 读取 public 目录下的 JSON：SSG 构建时直接读磁盘，客户端走网络请求。
+ * 用于让首页/归档/见闻录等页面在静态 HTML 中包含真实内容。
+ */
+export const fetchPublicJson = async <T>(url: string): Promise<T> => {
+  if (import.meta.env.SSR) {
+    return readPublicJson<T>(url.replace(/^\//, ''));
+  }
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.status}`);
+  }
+  return response.json() as Promise<T>;
+};

@@ -81,9 +81,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, onServerPrefetch } from 'vue';
+import { fetchPublicJson } from '@/utils/postData';
 import { useRouter } from 'vue-router';
-import axios from 'axios';
 import { NBackTop } from 'naive-ui';
 import Foot from "@/components/Foot.vue";
 import PageLoading from "@/components/PageLoading.vue";
@@ -170,8 +170,7 @@ const goToPost = (item: MediaItem) => {
 const loadMediaData = async () => {
   try {
     loadingMedia.value = true;
-    const response = await axios.get<MediaData>('/data/media.json');
-    mediaData.value = response.data;
+    mediaData.value = await fetchPublicJson<MediaData>('/data/media.json');
     if (!getTabCount(activeTab.value)) {
       activeTab.value = availableTabs.value[0]?.key || 'reading';
     }
@@ -181,6 +180,8 @@ const loadMediaData = async () => {
     loadingMedia.value = false;
   }
 };
+
+onServerPrefetch(() => loadMediaData());
 
 onMounted(() => {
   loadMediaData();

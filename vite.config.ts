@@ -243,6 +243,7 @@ const injectSeoMeta = (html: string, route: string) => {
       ""
     )
     .replace(/<link rel="canonical" href="[\s\S]*?">\s*/g, "")
+    .replace(/<meta (?:property="og:[^"]*"|name="twitter:[^"]*") content="[^"]*">\s*/g, "")
     .replace(/<\/head>/, `${seoHead}</head>`);
 };
 

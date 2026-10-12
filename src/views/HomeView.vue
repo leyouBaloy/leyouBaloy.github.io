@@ -99,7 +99,8 @@
 
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount, onServerPrefetch } from 'vue';
+import { fetchPublicJson } from '@/utils/postData';
 import axios from 'axios';
 import { NDivider, NBackTop} from 'naive-ui';
 import Foot from "@/components/Foot.vue";
@@ -146,11 +147,11 @@ const columns = computed(() => {
 const loadMarkdownMetadata = async () => {
   try {
     loading.value = true;
-    const response = await axios.get<PostMetadata[]>(`/markdown/metadata/metadata_${numPage.value}.json`);
-    if (response.data.length) {
-      posts.value.push(...response.data);
-      if ((response.data[0] as any).totalPages) {
-        pageCount.value = (response.data[0] as any).totalPages;
+    const data = await fetchPublicJson<PostMetadata[]>(`/markdown/metadata/metadata_${numPage.value}.json`);
+    if (data.length) {
+      posts.value.push(...data);
+      if ((data[0] as any).totalPages) {
+        pageCount.value = (data[0] as any).totalPages;
       }
       if (numPage.value === 1) {
         initialLoading.value = false;
@@ -233,6 +234,8 @@ const handleIntersect = async (entries: IntersectionObserverEntry[]) => {
     await loadNextPage();
   }
 };
+
+onServerPrefetch(() => loadMarkdownMetadata());
 
 onMounted(() => {
   checkIsMobile();

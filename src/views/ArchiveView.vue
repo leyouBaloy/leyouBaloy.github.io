@@ -190,9 +190,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, onServerPrefetch, computed } from 'vue';
+import { fetchPublicJson } from '@/utils/postData';
 import { useRouter } from 'vue-router';
-import axios from 'axios';
 import Timeline from "@/components/Timeline.vue";
 import TimelineItem from "@/components/TimelineItem.vue";
 import { NTabs, NTabPane, NEmpty, NButton, NInput, NIcon, NTag } from "naive-ui";
@@ -345,11 +345,14 @@ const handleSearch = (value: string) => {
 const loadArchivesData = async () => {
   try {
     loadingArchives.value = true;
-    const [postsByYearResponse, postsByTagResponse, searchIndexResponse] = await Promise.all([
-      axios.get<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_year.json'),
-      axios.get<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_tag.json'),
-      axios.get<PostMetadata[]>('/markdown/metadata/search_index.json'),
+    const [postsByYearData, postsByTagData, searchIndexData] = await Promise.all([
+      fetchPublicJson<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_year.json'),
+      fetchPublicJson<Record<string, PostMetadata[]>>('/markdown/metadata/posts_by_tag.json'),
+      fetchPublicJson<PostMetadata[]>('/markdown/metadata/search_index.json'),
     ]);
+    const postsByYearResponse = { data: postsByYearData };
+    const postsByTagResponse = { data: postsByTagData };
+    const searchIndexResponse = { data: searchIndexData };
 
     postsByYear.value = postsByYearResponse.data;
     postsByTag.value = postsByTagResponse.data;
@@ -371,6 +374,8 @@ const loadArchivesData = async () => {
     loadingArchives.value = false;
   }
 };
+
+onServerPrefetch(() => loadArchivesData());
 
 onMounted(() => {
   loadArchivesData();
