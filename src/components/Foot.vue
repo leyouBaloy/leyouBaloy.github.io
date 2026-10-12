@@ -18,7 +18,7 @@
                 <img class="dark-only" src="https://www.foreverblog.cn/assets/images/site-v10/logo-dark.png" alt="十年之约">
             </a>
         </div>
-        <!-- TODO: 萌ICP备 placeholder, e.g. <a href="https://icp.gov.moe/?keyword=XXXXXXXX" target="_blank" rel="noopener">萌ICP备XXXXXXXX号</a> -->
+        <div class="icp"><a href="https://icp.gov.moe/?keyword=20260283" target="_blank" rel="noopener">萌ICP备20260283号</a></div>
         <div class="icp"><a href="https://beian.miit.gov.cn" target="_blank">鲁ICP备2024110354号</a></div>
         
     </div>
