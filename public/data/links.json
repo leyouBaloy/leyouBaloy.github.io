@@ -4,5 +4,53 @@
     "url": "https://www.travellings.cn/go.html",
     "avatar": "https://www.travellings.cn/assets/logo.gif",
     "desc": "友链接力，随机前往一个开往成员站点"
+  },
+  {
+    "name": "XBSTACK",
+    "url": "https://www.xbstack.com/",
+    "avatar": "https://www.xbstack.com/favicon/logo.png",
+    "desc": "AI、Agent、MCP、独立开发与工程实践"
+  },
+  {
+    "name": "Honesty",
+    "url": "https://blog.hehouhui.cn",
+    "avatar": "https://www.hehouhui.cn/images/avatar.jpeg",
+    "desc": "一个普通的干饭人🍚"
+  },
+  {
+    "name": "cocolia小窝",
+    "url": "https://cocolia.fun",
+    "avatar": "https://cocolia.fun/icon.png",
+    "desc": "记录我们的故事"
+  },
+  {
+    "name": "欧雷流",
+    "url": "https://ourai.ws/",
+    "avatar": "https://ourai.ws/assets/avatars/ourai-100px-3bcaa1cb0c7fa0547d15622572d74a8bbc98a5f62e4920ecddb72ca95e505d17.jpg",
+    "desc": "我叫欧雷，是一个出生于上世纪 80 年代的理想主义叛逆青年。喜欢日本，热爱咖啡，善于总结。这里有我对技术和语言的研究，也有对世界和生活的思考。"
+  },
+  {
+    "name": "UsubeniFantasy",
+    "url": "https://ssshooter.com",
+    "avatar": "https://ssshooter.com/logo.png",
+    "desc": "Write like you're running out of time."
+  },
+  {
+    "name": "iMaeGoo's Blog",
+    "url": "https://www.imaegoo.com",
+    "avatar": "https://cdn.jsdelivr.net/npm/imaegoo/avatar.jpg",
+    "desc": "虹墨空间站"
+  },
+  {
+    "name": "白云苍狗",
+    "url": "https://www.imalun.com",
+    "avatar": "https://www.imalun.com/images/avatar.jpg?v=2",
+    "desc": "醒，亦在人间；梦，亦在人间。"
+  },
+  {
+    "name": "HCLonely Blog",
+    "url": "https://blog.hclonely.com/",
+    "avatar": "https://cdn.jsdelivr.net/gh/HCLonely/blog.hclonely.com@latest/img/avatar.jpg",
+    "desc": "一个懒人的博客"
   }
 ]
