@@ -79,27 +79,33 @@ const showDropdown = ref(false);
 
 // 检查当前路由是否匹配
 const isActive = (path) => {
-  return route.path === path;
+  const current = route.path.replace(/\/+$/, '') || '/';
+  if (path === '/') return current === '/';
+  return current === path || current.startsWith(path + '/');
 };
 
 </script>
 
 <style scoped>
 .nav {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  width: 100%;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
-  padding: 12px 16px;
-  font-size: 17px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 6px 8px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease; /* 添加过渡效果 */
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
   overflow: visible;
 }
 
@@ -111,15 +117,13 @@ const isActive = (path) => {
   position: fixed;
   top: 0;
   left: 50%;
-  width: min(900px, 100%);
+  top: 8px;
   transform: translateX(-50%);
   z-index: 1000;
 }
 
 .nav-blur {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
-  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.72);
 }
 
 .nav-item {
@@ -128,24 +132,30 @@ const isActive = (path) => {
   justify-content: center;
   gap: 5px;
   min-width: 0;
-  min-height: 24px;
-  padding: 0 10px;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  cursor: pointer;
   text-decoration: none;
   color: #333;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
   white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .nav-item :deep(.n-icon) {
   flex: 0 0 auto;
 }
 
-.nav-item:hover {
-  color: #2d96bd;
+@media (hover: hover) {
+  .nav-item:not(.active):hover {
+    color: #2d96bd;
+  }
 }
 
 .nav-item.active {
   color: #2d96bd;
+  background-color: rgba(45, 150, 189, 0.12);
 }
 
 /* 过渡动画 */
@@ -223,13 +233,14 @@ a {
   color: #dbeafe;
 }
 
-:global([data-theme="dark"] .nav-item:hover),
+:global([data-theme="dark"] .nav-item:not(.active):hover),
 :global([data-theme="dark"] .dropdown-item:hover) {
   color: #7dd3fc;
 }
 
 :global([data-theme="dark"] .nav-item.active) {
   color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.14);
 }
 
 :global([data-theme="dark"] .dropdown-menu) {
@@ -244,16 +255,20 @@ a {
 
 @media (max-width: 520px) {
   .nav {
-    gap: 0;
-    padding: 9px 6px;
-    font-size: 13px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 18px;
   }
 
   .nav-item {
-    min-width: 0;
     width: 100%;
-    gap: 3px;
-    padding: 0 3px;
+    gap: 4px;
+    padding: 0 6px;
+    min-height: 32px;
   }
 
   .nav-item :deep(.n-icon) {
@@ -261,8 +276,8 @@ a {
   }
 
   .nav-fix-top {
-    top: 0;
-    width: 100%;
+    top: 4px;
+    width: calc(100% - 8px);
   }
 
   .dropdown-menu {
