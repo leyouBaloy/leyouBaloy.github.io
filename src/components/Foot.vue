@@ -6,9 +6,8 @@
             <a class="rss-link" href="/rss.xml" title="订阅 RSS">订阅 RSS</a>
         </div>
         <div class="webring">
-            <a href="https://www.boyouquan.com/home" title="博友圈" target="_blank" rel="noopener">
-                <img class="light-only" src="https://www.boyouquan.com/assets/images/sites/logo/logo.svg" alt="博友圈">
-                <img class="dark-only" src="https://www.boyouquan.com/assets/images/sites/logo/logo-dark.svg" alt="博友圈">
+            <a href="https://www.boyouquan.com/certificates/www.imbailey.cn" title="正在博友圈履约中" target="_blank" rel="noopener">
+                <img src="https://www.boyouquan.com/images/logo/performance.svg?domainName=www.imbailey.cn" alt="正在博友圈履约中" style="height:26px;max-width:none;">
             </a>
             <a href="https://blogscn.fun/" title="BLOGS·CN" target="_blank" rel="noopener">
                 <img src="https://photo.xiangming.site/img/blogscn.png" alt="本站已加入BLOGS·CN">
