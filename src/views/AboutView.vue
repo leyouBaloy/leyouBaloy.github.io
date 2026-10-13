@@ -90,7 +90,7 @@
       <section class="about-section">
         <h1 class="section-title">留言板 📋</h1>
         <p class="guestbook-tip">有问题或者建议？欢迎留言~</p>
-        <div class="comment" ref="scriptContainer"></div>
+        <div class="comment" ><GlassComments term="about" /></div>
       </section>
 
       <Foot></Foot>
@@ -101,34 +101,9 @@
 
 <script setup>
 import InfoCards from "@/components/InfoCards.vue";
-import { onMounted, nextTick, ref } from "vue";
 import Foot from "@/components/Foot.vue";
+import GlassComments from "@/components/GlassComments.vue";
 
-const scriptContainer = ref(null);
-
-onMounted(async () => {
-  const script = document.createElement('script');
-  script.src = "https://giscus.app/client.js";
-  script.dataset.repo = "leyoubaloy/leyoubaloy.github.io";
-  script.dataset.repoId = "R_kgDOGv-zPA";
-  script.dataset.category = "Announcements";
-  script.dataset.categoryId = "DIC_kwDOGv-zPM4ChJ8X";
-  script.dataset.mapping = "pathname";
-  script.dataset.strict = "0";
-  script.dataset.reactionsEnabled = "1";
-  script.dataset.emitMetadata = "0";
-  script.dataset.inputPosition = "bottom";
-  script.dataset.theme = "preferred_color_scheme";
-  script.dataset.lang = "zh-CN";
-  script.crossOrigin = "anonymous";
-  script.async = true;
-  
-  await nextTick();
-  
-  if (scriptContainer.value) {
-    scriptContainer.value.appendChild(script);
-  }
-});
 </script>
 
 <style scoped>
