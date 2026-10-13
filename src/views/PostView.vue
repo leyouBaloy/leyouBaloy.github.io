@@ -64,7 +64,9 @@
           {{ commentState === 'error' ? '重试加载评论' : '立即加载评论' }}
         </button>
       </div>
-      <div class="comment" ref="scriptContainer"></div>
+      <div class="comment" ref="scriptContainer">
+        <GlassComments v-if="commentState === 'ready'" :key="postSlug" :term="`post/${postSlug}`" />
+      </div>
     </section>
   <Foot></Foot>
   </main>
@@ -75,6 +77,7 @@
 import { computed, nextTick, onMounted, onServerPrefetch, onUnmounted, ref, watch } from 'vue';
 import MarkdownRenderer from '../components/MarkdownRenderer.vue';
 import TableOfContents from '../components/TableOfContents.vue';
+import GlassComments from '../components/GlassComments.vue';
 import Nav from "@/components/Nav.vue";
 import { useRoute, useRouter } from 'vue-router';
 import Foot from "@/components/Foot.vue";
@@ -113,7 +116,7 @@ const commentTitle = computed(() => {
 });
 
 const commentDescription = computed(() => {
-  if (commentState.value === 'loading') return '正在连接 Giscus，页面主体内容不会被阻塞。';
+  if (commentState.value === 'loading') return '正在加载评论，页面主体内容不会被阻塞。';
   if (commentState.value === 'error') return '可能是 GitHub 或网络暂时不可达，可以稍后重试。';
   return '滑到评论区附近时会自动加载，也可以现在手动打开。';
 });
@@ -158,31 +161,8 @@ const loadGiscus = () => {
   const container = scriptContainer.value;
   if (!container || container.dataset.loaded === 'true') return;
   container.dataset.loaded = 'true';
-  commentState.value = 'loading';
-  const script = document.createElement('script');
-  script.src = "https://giscus.app/client.js";
-  script.dataset.repo = "leyoubaloy/leyoubaloy.github.io";
-  script.dataset.repoId = "R_kgDOGv-zPA";
-  script.dataset.category = "Announcements";
-  script.dataset.categoryId = "DIC_kwDOGv-zPM4ChJ8X";
-  script.dataset.mapping = "pathname";
-  script.dataset.strict = "0";
-  script.dataset.reactionsEnabled = "1";
-  script.dataset.emitMetadata = "0";
-  script.dataset.inputPosition = "bottom";
-  script.dataset.theme = "preferred_color_scheme";
-  script.dataset.lang = "zh-CN";
-  script.crossOrigin = "anonymous";
-  script.async = true;
-  script.onload = () => {
-    commentState.value = 'ready';
-  };
-  script.onerror = () => {
-    commentState.value = 'error';
-    delete container.dataset.loaded;
-  };
-
-  container.appendChild(script);
+  // GlassComments mounts once ready and handles its own loading / error states.
+  commentState.value = 'ready';
 };
 
 const loadGiscusNow = () => {
@@ -217,7 +197,6 @@ const cleanupGiscusLazyLoad = () => {
 const resetGiscus = () => {
   cleanupGiscusLazyLoad();
   if (scriptContainer.value) {
-    scriptContainer.value.innerHTML = '';
     delete scriptContainer.value.dataset.loaded;
   }
   commentState.value = 'waiting';

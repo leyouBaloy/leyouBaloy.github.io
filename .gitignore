@@ -38,3 +38,4 @@ coverage
 .vite-ssg-temp/*
 
 .venv
+public/comments-snapshot.json
