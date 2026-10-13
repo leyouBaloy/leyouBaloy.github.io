@@ -11,18 +11,6 @@
         <n-icon size="17" :component="item.icon"></n-icon>
         <span>{{ item.name }}</span>
       </router-link>
-      
-      <div class="nav-item dropdown" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false">
-        <n-icon size="17" :component="Train"></n-icon>
-        <span>开往</span>
-        <div v-show="showDropdown" class="dropdown-menu">
-          <a href="https://www.travellings.cn/go.html" target="_blank" class="dropdown-item">
-            <n-icon size="17" :component="Train"></n-icon>
-            <span>开往</span>
-          </a>
-        </div>
-      </div>
-      
     </nav>
   </transition>
 
@@ -38,25 +26,15 @@
         <n-icon size="17" :component="item.icon"></n-icon>
         <span>{{ item.name }}</span>
       </router-link>
-      <div class="nav-item dropdown" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false">
-        <n-icon size="17" :component="Train"></n-icon>
-        <span>开往</span>
-        <div v-show="showDropdown" class="dropdown-menu">
-          <a href="https://www.travellings.cn/go.html" target="_blank" class="dropdown-item">
-            <n-icon size="17" :component="Train"></n-icon>
-            <span>开往</span>
-          </a>
-        </div>
-      </div>
     </nav>
   </transition>
 </template>
 
 <script setup>
-import { ref, shallowRef, defineProps } from 'vue';
+import { shallowRef, defineProps } from 'vue';
 import { NIcon } from 'naive-ui';
 import { useRoute } from 'vue-router';
-import { Home, Archive, Person, Train, Book, Link } from '@vicons/ionicons5';
+import { Home, Archive, Person, Book, Link } from '@vicons/ionicons5';
 
 const props = defineProps({
   // fixed: Boolean,
@@ -74,7 +52,6 @@ const navItems = shallowRef([
 ]);
 
 const route = useRoute();
-const showDropdown = ref(false);
 
 
 // 检查当前路由是否匹配
@@ -179,45 +156,6 @@ a {
   transition: color 0.3s ease;
 }
 
-.dropdown {
-  position: relative;
-}
-
-.dropdown::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: max(100%, 100px);
-  height: 12px;
-}
-
-.dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: calc(100% + 12px);
-  right: 0;
-  background-color: rgba(248, 249, 250, 0.96);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 10px 0;
-  z-index: 1000;
-  min-width: 100px;
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #333;
-}
-
-.dropdown-item:hover {
-  background-color: #e9ecef;
-}
-
 :global([data-theme="dark"] .nav) {
   background-color: rgba(24, 34, 53, 0.86);
   border: 1px solid rgba(148, 163, 184, 0.20);
@@ -228,13 +166,11 @@ a {
   background-color: rgba(15, 23, 42, 0.92);
 }
 
-:global([data-theme="dark"] .nav-item),
-:global([data-theme="dark"] .dropdown-item) {
+:global([data-theme="dark"] .nav-item) {
   color: #dbeafe;
 }
 
-:global([data-theme="dark"] .nav-item:not(.active):hover),
-:global([data-theme="dark"] .dropdown-item:hover) {
+:global([data-theme="dark"] .nav-item:not(.active):hover) {
   color: #7dd3fc;
 }
 
@@ -243,20 +179,10 @@ a {
   background-color: rgba(56, 189, 248, 0.14);
 }
 
-:global([data-theme="dark"] .dropdown-menu) {
-  background-color: rgba(15, 23, 42, 0.96);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.35);
-}
-
-:global([data-theme="dark"] .dropdown-item:hover) {
-  background-color: rgba(56, 189, 248, 0.12);
-}
-
 @media (max-width: 520px) {
   .nav {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 4px;
     width: 100%;
     padding: 6px;
@@ -278,10 +204,6 @@ a {
   .nav-fix-top {
     top: 4px;
     width: calc(100% - 8px);
-  }
-
-  .dropdown-menu {
-    min-width: 88px;
   }
 }
 
