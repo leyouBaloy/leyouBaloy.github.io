@@ -11,7 +11,18 @@
         <n-icon size="17" :component="item.icon"></n-icon>
         <span>{{ item.name }}</span>
       </router-link>
-      <a class="nav-travel" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力" aria-label="开往">🚇</a>
+      <a class="nav-travel" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力" aria-label="开往">
+        <svg class="nav-travel-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <rect x="4.5" y="3.5" width="15" height="13.5" rx="3.2" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 3.5V2.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <rect x="7" y="6.2" width="4.2" height="3.6" rx="0.9" fill="currentColor" fill-opacity="0.5"/>
+          <rect x="12.8" y="6.2" width="4.2" height="3.6" rx="0.9" fill="currentColor" fill-opacity="0.5"/>
+          <path d="M7.2 12.4h9.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.75"/>
+          <path d="M8.2 17v2.2M15.8 17v2.2M6.5 19.2h11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="9.2" cy="20.2" r="1.15" fill="currentColor"/>
+          <circle cx="14.8" cy="20.2" r="1.15" fill="currentColor"/>
+        </svg>
+      </a>
     </nav>
   </transition>
 
@@ -27,7 +38,18 @@
         <n-icon size="17" :component="item.icon"></n-icon>
         <span>{{ item.name }}</span>
       </router-link>
-      <a class="nav-travel" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力" aria-label="开往">🚇</a>
+      <a class="nav-travel" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力" aria-label="开往">
+        <svg class="nav-travel-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <rect x="4.5" y="3.5" width="15" height="13.5" rx="3.2" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 3.5V2.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <rect x="7" y="6.2" width="4.2" height="3.6" rx="0.9" fill="currentColor" fill-opacity="0.5"/>
+          <rect x="12.8" y="6.2" width="4.2" height="3.6" rx="0.9" fill="currentColor" fill-opacity="0.5"/>
+          <path d="M7.2 12.4h9.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.75"/>
+          <path d="M8.2 17v2.2M15.8 17v2.2M6.5 19.2h11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="9.2" cy="20.2" r="1.15" fill="currentColor"/>
+          <circle cx="14.8" cy="20.2" r="1.15" fill="currentColor"/>
+        </svg>
+      </a>
     </nav>
   </transition>
 </template>
@@ -187,20 +209,37 @@ a {
   height: 34px;
   justify-content: center;
   border-radius: 999px;
-  font-size: 17px;
-  line-height: 1;
-  opacity: 0.85;
-  transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  color: #333;
+  opacity: 0.88;
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-travel-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.55));
 }
 @media (hover: hover) {
   .nav-travel:hover {
     opacity: 1;
-    background-color: rgba(45, 150, 189, 0.10);
+    color: #2d96bd;
+    background-color: rgba(45, 150, 189, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
     transform: translateY(-1px);
+    filter: brightness(1.08);
   }
 }
+:global([data-theme="dark"] .nav-travel) {
+  color: #dbeafe;
+}
+:global([data-theme="dark"] .nav-travel .nav-travel-icon) {
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.12));
+}
 :global([data-theme="dark"] .nav-travel:hover) {
+  color: #7dd3fc;
   background-color: rgba(56, 189, 248, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 520px) {
@@ -224,7 +263,11 @@ a {
   .nav-travel {
     width: 28px;
     height: 32px;
-    font-size: 15px;
+  }
+
+  .nav-travel-icon {
+    width: 16px;
+    height: 16px;
   }
 
   .nav-item :deep(.n-icon) {
