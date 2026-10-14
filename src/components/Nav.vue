@@ -11,6 +11,7 @@
         <n-icon size="17" :component="item.icon"></n-icon>
         <span>{{ item.name }}</span>
       </router-link>
+      <a class="nav-travel" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力" aria-label="开往">🚇</a>
     </nav>
   </transition>
 
@@ -26,6 +27,7 @@
         <n-icon size="17" :component="item.icon"></n-icon>
         <span>{{ item.name }}</span>
       </router-link>
+      <a class="nav-travel" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力" aria-label="开往">🚇</a>
     </nav>
   </transition>
 </template>
@@ -179,10 +181,32 @@ a {
   background-color: rgba(56, 189, 248, 0.14);
 }
 
+.nav-travel {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 17px;
+  line-height: 1;
+  opacity: 0.85;
+  transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+@media (hover: hover) {
+  .nav-travel:hover {
+    opacity: 1;
+    background-color: rgba(45, 150, 189, 0.10);
+    transform: translateY(-1px);
+  }
+}
+:global([data-theme="dark"] .nav-travel:hover) {
+  background-color: rgba(56, 189, 248, 0.14);
+}
+
 @media (max-width: 520px) {
   .nav {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr)) auto;
     gap: 4px;
     width: 100%;
     padding: 6px;
@@ -195,6 +219,12 @@ a {
     gap: 4px;
     padding: 0 6px;
     min-height: 32px;
+  }
+
+  .nav-travel {
+    width: 28px;
+    height: 32px;
+    font-size: 15px;
   }
 
   .nav-item :deep(.n-icon) {
