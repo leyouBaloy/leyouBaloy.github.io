@@ -1,5 +1,26 @@
 [
   {
+    "id": "english-video-2026-10-19-avs",
+    "date": "2026-10-19",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "继续听，听到3:23（总时长10:09）。",
+    "progress": {
+      "heard": "3:23",
+      "total": "10:09"
+    },
+    "video": {
+      "title": "CNN10 Encore: The Future of AVs— Self-Driving Cars Explained | October 12, 2026",
+      "url": "https://www.youtube.com/watch?v=f0PG6SX3eJk",
+      "platform": "YouTube"
+    },
+    "tags": [
+      "英语",
+      "听力",
+      "跟读"
+    ]
+  },
+  {
     "id": "sport-2026-10-16",
     "date": "2026-10-16",
     "kind": "note",
