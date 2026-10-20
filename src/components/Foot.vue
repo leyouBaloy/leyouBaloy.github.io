@@ -16,6 +16,10 @@
                 <img class="light-only" src="https://www.foreverblog.cn/assets/images/site-v10/logo-light.png" alt="十年之约">
                 <img class="dark-only" src="https://www.foreverblog.cn/assets/images/site-v10/logo-dark.png" alt="十年之约">
             </a>
+            <a href="https://boke.lu/" title="博客录" target="_blank" rel="noopener">
+                <img class="light-only" src="https://boke.lu/%E5%8D%9A%E5%AE%A2%E5%BD%95logo%E5%9B%9B%E7%89%88%E5%8A%A0%E5%AE%BD%E7%89%881-70k.png" alt="博客录">
+                <img class="dark-only" src="https://boke.lu/%E5%8D%9A%E5%AE%A2%E5%BD%95logo%E5%9B%9B%E7%89%88%E5%8A%A0%E5%AE%BD%E7%89%88%E7%99%BD1-70k.png" alt="博客录">
+            </a>
         </div>
         <div class="icp"><a href="https://icp.gov.moe/?keyword=20260283" target="_blank" rel="noopener">萌ICP备20260283号</a></div>
         <div class="icp"><a href="https://beian.miit.gov.cn" target="_blank">鲁ICP备2024110354号</a></div>
