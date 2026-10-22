@@ -1,5 +1,26 @@
 [
   {
+    "id": "english-video-2026-10-22-ai-hub",
+    "date": "2026-10-22",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到2:26（总时长10:00）。",
+    "progress": {
+      "heard": "2:26",
+      "total": "10:00"
+    },
+    "video": {
+      "title": "This city is one of the world’s most important A.I. hubs | October 16, 2026",
+      "url": "https://www.youtube.com/watch?v=b52A9dTozYA",
+      "platform": "YouTube"
+    },
+    "tags": [
+      "英语",
+      "听力",
+      "跟读"
+    ]
+  },
+  {
     "id": "english-video-2026-10-21-avs",
     "date": "2026-10-21",
     "kind": "english-checkin",
