@@ -1,5 +1,60 @@
 [
   {
+    "id": "english-video-2026-10-26-ai-hub",
+    "date": "2026-10-26",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "把剩下的听完了。✅ 视频完结",
+    "progress": {
+      "heard": "10:00",
+      "total": "10:00"
+    },
+    "video": {
+      "title": "This city is one of the world’s most important A.I. hubs | October 16, 2026",
+      "url": "https://www.youtube.com/watch?v=b52A9dTozYA",
+      "platform": "YouTube"
+    },
+    "tags": [
+      "英语",
+      "听力",
+      "跟读"
+    ]
+  },
+  {
+    "id": "sport-2026-10-25",
+    "date": "2026-10-25",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "走路12000步。",
+    "tags": [
+      "运动",
+      "步行"
+    ]
+  },
+  {
+    "id": "sport-2026-10-24",
+    "date": "2026-10-24",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "爬坡 + 力量训练。",
+    "tags": [
+      "运动",
+      "爬坡",
+      "力量训练"
+    ]
+  },
+  {
+    "id": "sport-2026-10-23",
+    "date": "2026-10-23",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "力量训练。",
+    "tags": [
+      "运动",
+      "力量训练"
+    ]
+  },
+  {
     "id": "english-video-2026-10-23-ai-hub",
     "date": "2026-10-23",
     "kind": "english-checkin",
