@@ -1,5 +1,38 @@
 [
   {
+    "id": "english-video-2026-10-27-chips",
+    "date": "2026-10-27",
+    "kind": "english-checkin",
+    "title": "今日英语打卡",
+    "content": "新视频，听到2:13（总时长10:09）。",
+    "progress": {
+      "heard": "2:13",
+      "total": "10:09"
+    },
+    "video": {
+      "title": "These tiny computer chips could help data centers waste less power | October 26, 2026",
+      "url": "https://www.youtube.com/watch?v=of3yDEfCDuE",
+      "platform": "YouTube"
+    },
+    "tags": [
+      "英语",
+      "听力",
+      "跟读"
+    ]
+  },
+  {
+    "id": "sport-2026-10-26",
+    "date": "2026-10-26",
+    "kind": "note",
+    "title": "运动打卡",
+    "content": "椭圆机锻炼30分钟，继续坚持。",
+    "tags": [
+      "运动",
+      "椭圆机",
+      "减脂"
+    ]
+  },
+  {
     "id": "english-video-2026-10-26-ai-hub",
     "date": "2026-10-26",
     "kind": "english-checkin",
